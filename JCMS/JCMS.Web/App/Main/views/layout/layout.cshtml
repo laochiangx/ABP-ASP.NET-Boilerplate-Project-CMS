@@ -1,0 +1,79 @@
+﻿@using System.Threading
+@using System.Web.Optimization
+@using Abp.Configuration
+@using Abp.Timing
+@using Abp.Web.Mvc.Extensions
+@using JCMS.Configuration
+@{
+    Layout = null;
+    SetAntiForgeryCookie();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>JCMS</title>
+
+    <link rel="shortcut icon" href="~/favicon.ico">
+
+    @Styles.Render("~/Bundles/App/vendor/css")
+    @Styles.Render("~/Bundles/App/Main/css")
+
+    <script type="text/javascript">
+        //This is used to get the application's root path from javascript. It's useful if you're running application in a virtual directory under IIS.
+        var abp = abp || {}; abp.appPath = '@ApplicationPath';
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="@Url.Content("~/Scripts/others/html5shiv.js")"></script>
+        <script src="@Url.Content("~/Scripts/others/respond.min.js")"></script>
+    <![endif]-->
+    @Scripts.Render("~/Bundles/App/vendor/js")
+
+    <script>
+        //Localizing momentjs
+        moment.locale('@Thread.CurrentThread.CurrentUICulture.Name');
+    </script>
+
+    <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
+    <script src="~/api/AbpServiceProxies/GetAll?v=@(Clock.Now.Ticks)"></script>
+    <script src="~/api/AbpServiceProxies/GetAll?type=angular&v=@(Clock.Now.Ticks)"></script>
+    <script src="~/AbpScripts/GetScripts?v=@(Clock.Now.Ticks)" type="text/javascript"></script>
+
+    <!-- SignalR scripts -->
+    <script src="~/signalr/hubs"></script>
+    @Html.IncludeScript("~/Abp/Framework/scripts/libs/abp.signalr.js")
+
+    @Scripts.Render("~/Bundles/App/Main/js")
+
+</head>
+<body class="theme-red" ng-app="app">
+    <div class="overlay"></div>
+
+
+    <div ng-controller="app.views.layout as vm">
+        <div ng-include="'/App/Main/views/layout/topbar.cshtml'" onload="vm.activateTopBar()"></div>
+        <section>
+            <aside id="leftsidebar" class="sidebar">
+                <div ng-include="'/App/Main/views/layout/sidebar-user-area.cshtml'" onload="vm.activateLeftSideBar()"></div>
+                <div ng-include="'/App/Main/views/layout/sidebar-nav.cshtml'"></div>
+                <div ng-include="'/App/Main/views/layout/sidebar-footer.cshtml'"></div>
+            </aside>
+
+            <div ng-include="'/App/Main/views/layout/right-sidebar.cshtml'" onload="vm.activateRightSideBar()"></div>
+        </section>
+
+        <section class="content">
+            <div class="container-fluid">
+                <div ui-view></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

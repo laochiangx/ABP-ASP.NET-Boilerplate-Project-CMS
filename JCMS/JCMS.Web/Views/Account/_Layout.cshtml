@@ -1,0 +1,71 @@
+﻿@using System.Threading
+@using System.Web.Optimization
+@using Abp.Timing
+@using JCMS
+@using JCMS.Web.Helpers
+@{
+    SetAntiForgeryCookie();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="~/favicon.ico">
+
+    <title>JCMS</title>
+
+    @Styles.Render("~/Bundles/account-vendor/css")
+
+    <!-- View specific styles -->
+    @RenderSection("styles", required: false)
+
+    <script type="text/javascript">
+        //This is used to get the application's root path from javascript. It's useful if you're running application in a virtual directory under IIS.
+        var abp = abp || {}; abp.appPath = '@ApplicationPath';
+    </script>
+
+</head>
+<body class="login-page">
+    <div class="login-box">
+        <div class="logo">
+            <a href="javascript:void(0);">CMS权限管理系统</a>
+        </div>
+
+        @if (ViewBag.IsMultiTenancyEnabled)
+        {
+            @Html.Action("TenantChange", "Account")
+        }
+
+        @RenderBody()
+
+        @Html.Action("_AccountLanguages", "Account")
+
+        <div class="row">
+            <div class="col-xs-12 text-center" style="color: #e9e9e9">
+                <small>&copy; @DateTime.Now.Year JCMS. <b>Version </b> @AppVersionHelper.Version [@AppVersionHelper.ReleaseDate.ToString("yyyyMMdd")]</small>
+            </div>
+        </div>
+
+    </div>
+
+    @Scripts.Render("~/Bundles/account-vendor/js/bottom")
+
+    <script>
+        //Localizing momentjs
+        moment.locale('@Thread.CurrentThread.CurrentUICulture.Name');
+    </script>
+
+    <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
+    <script src="~/api/AbpServiceProxies/GetAll?v=@(Clock.Now.Ticks)"></script>
+    <script src="~/AbpScripts/GetScripts?v=@(Clock.Now.Ticks)" type="text/javascript"></script>
+
+    <!-- View specific scripts -->
+    @RenderSection("scripts", required: false)
+    @Html.PartialViewScripts()
+</body>
+</html>

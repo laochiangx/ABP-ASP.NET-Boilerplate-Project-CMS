@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abp.Web</name>
+    </assembly>
+    <members>
+        <member name="M:Abp.Auditing.WebClientInfoProvider.#ctor">
+            <summary>
+            Creates a new <see cref="T:Abp.Auditing.WebClientInfoProvider"/>.
+            </summary>
+        </member>
+        <member name="T:Abp.Configuration.Startup.AbpWebConfigurationExtensions">
+            <summary>
+            Defines extension methods to <see cref="T:Abp.Configuration.Startup.IModuleConfigurations"/> to allow to configure ABP Web module.
+            </summary>
+        </member>
+        <member name="M:Abp.Configuration.Startup.AbpWebConfigurationExtensions.AbpWeb(Abp.Configuration.Startup.IModuleConfigurations)">
+            <summary>
+            Used to configure ABP Web module.
+            </summary>
+        </member>
+        <member name="T:Abp.Web.AbpWebApplication`1">
+            <summary>
+            This class is used to simplify starting of ABP system using <see cref="P:Abp.Web.AbpWebApplication`1.AbpBootstrapper"/> class..
+            Inherit from this class in global.asax instead of <see cref="T:System.Web.HttpApplication"/> to be able to start ABP system.
+            </summary>
+            <typeparam name="TStartupModule">Startup module of the application which depends on other used modules. Should be derived from <see cref="T:Abp.Modules.AbpModule"/>.</typeparam>
+        </member>
+        <member name="P:Abp.Web.AbpWebApplication`1.AbpBootstrapper">
+            <summary>
+            Gets a reference to the <see cref="P:Abp.Web.AbpWebApplication`1.AbpBootstrapper"/> instance.
+            </summary>
+        </member>
+        <member name="T:Abp.Web.AbpWebModule">
+            <summary>
+            This module is used to use ABP in ASP.NET web applications.
+            </summary>
+        </member>
+        <member name="M:Abp.Web.AbpWebModule.PreInitialize">
+            <inheritdoc/>
+        </member>
+        <member name="M:Abp.Web.AbpWebModule.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="P:Abp.Web.Configuration.IAbpWebLocalizationConfiguration.CookieName">
+            <summary>
+            Default: "Abp.Localization.CultureName".
+            </summary>
+        </member>
+        <member name="T:Abp.Web.Security.AntiForgery.IAbpAntiForgeryWebConfiguration">
+            <summary>
+            Common configuration shared between ASP.NET MVC and ASP.NET Web API.
+            </summary>
+        </member>
+        <member name="P:Abp.Web.Security.AntiForgery.IAbpAntiForgeryWebConfiguration.IsEnabled">
+            <summary>
+            Used to enable/disable Anti Forgery token security mechanism of ABP.
+            Default: true (enabled).
+            </summary>
+        </member>
+        <member name="P:Abp.Web.Security.AntiForgery.IAbpAntiForgeryWebConfiguration.IgnoredHttpVerbs">
+            <summary>
+            A list of ignored HTTP verbs for Anti Forgery token validation.
+            Default list: Get, Head, Options, Trace.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abp.AutoMapper</name>
+    </assembly>
+    <members>
+        <member name="T:Abp.AutoMapper.AbpAutoMapperConfigurationExtensions">
+            <summary>
+            Defines extension methods to <see cref="T:Abp.Configuration.Startup.IModuleConfigurations"/> to allow to configure Abp.AutoMapper module.
+            </summary>
+        </member>
+        <member name="M:Abp.AutoMapper.AbpAutoMapperConfigurationExtensions.AbpAutoMapper(Abp.Configuration.Startup.IModuleConfigurations)">
+            <summary>
+            Used to configure Abp.AutoMapper module.
+            </summary>
+        </member>
+        <member name="M:Abp.AutoMapper.AutoMapExtensions.MapTo``1(System.Object)">
+            <summary>
+            Converts an object to another using AutoMapper library. Creates a new object of <typeparamref name="TDestination"/>.
+            There must be a mapping between objects before calling this method.
+            </summary>
+            <typeparam name="TDestination">Type of the destination object</typeparam>
+            <param name="source">Source object</param>
+        </member>
+        <member name="M:Abp.AutoMapper.AutoMapExtensions.MapTo``2(``0,``1)">
+            <summary>
+            Execute a mapping from the source object to the existing destination object
+            There must be a mapping between objects before calling this method.
+            </summary>
+            <typeparam name="TSource">Source type</typeparam>
+            <typeparam name="TDestination">Destination type</typeparam>
+            <param name="source">Source object</param>
+            <param name="destination">Destination object</param>
+            <returns></returns>
+        </member>
+        <member name="P:Abp.AutoMapper.IAbpAutoMapperConfiguration.UseStaticMapper">
+            <summary>
+            Use static <see cref="P:AutoMapper.Mapper.Instance"/>.
+            Default: true.
+            </summary>
+        </member>
+    </members>
+</doc>

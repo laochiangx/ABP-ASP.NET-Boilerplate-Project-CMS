@@ -1,0 +1,337 @@
+DEBUG 2017-08-14 19:51:44,540 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-08-14 19:51:44,553 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-08-14 19:51:44,558 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Web.JCMSWebModule, JCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,560 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSDataModule, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,560 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,560 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,561 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,561 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,561 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,561 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,561 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSCoreModule, JCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,562 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSApplicationModule, JCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,562 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,562 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Api.JCMSWebApiModule, JCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,562 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,562 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,562 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,562 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,563 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:44,566 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-08-14 19:51:44,678 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 19:51:44,678 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 19:51:44,678 [1    ] o.Configuration.LanguageManagementConfig - Converted JCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 19:51:44,678 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 19:51:44,973 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: JCMS.EntityFramework.JCMSDbContext, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 19:51:46,369 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-08-14 19:51:46,379 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-08-14 19:51:46,397 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-08-14 19:51:46,400 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: JCMS
+DEBUG 2017-08-14 19:51:46,401 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-08-14 19:51:46,480 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-08-14 19:51:46,538 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-08-14 19:51:46,538 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-08-14 19:51:46,541 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-08-14 19:51:46,541 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.CreateUserDto
+DEBUG 2017-08-14 19:51:46,541 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-08-14 19:51:46,541 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UserDto
+DEBUG 2017-08-14 19:51:46,541 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-08-14 19:51:46,541 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.PermissionDto
+DEBUG 2017-08-14 19:51:46,541 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.RoleDto
+DEBUG 2017-08-14 19:51:46,541 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-08-14 19:51:46,541 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-08-14 19:51:46,541 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-08-14 19:51:46,542 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-08-14 19:51:46,542 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-08-14 19:51:47,955 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-08-14 19:51:47,955 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-08-14 19:51:47,956 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-08-14 19:51:47,957 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-08-14 19:51:47,957 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-08-14 19:51:47,958 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+WARN  2017-08-14 19:51:51,062 [8    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+WARN  2017-08-14 19:52:58,583 [8    ] JCMS.Web.Controllers.AccountController   - 登录失败!
+Abp.UI.UserFriendlyException: 登录失败!
+   在 JCMS.Web.Controllers.AccountController.<GetLoginResultAsync>d__14.MoveNext() 位置 C:\Users\jiangcy\Desktop\JCMS\JCMS.Web\Controllers\AccountController.cs:行号 135
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 JCMS.Web.Controllers.AccountController.<Login>d__13.MoveNext() 位置 C:\Users\jiangcy\Desktop\JCMS\JCMS.Web\Controllers\AccountController.cs:行号 105
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeAsynchronousActionMethod>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2017-08-14 19:53:09,212 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e91096fb-b58b-4f2f-9007-608e96fc1f9b","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-08-14T19:53:09.2030375+08:00","Properties":{}}
+DEBUG 2017-08-14 19:53:09,255 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e91096fb-b58b-4f2f-9007-608e96fc1f9b
+WARN  2017-08-14 19:53:16,761 [9    ] naries.DictionaryBasedLocalizationSource - Can not find 'Refresh' in localization source 'JCMS'!
+DEBUG 2017-08-14 19:55:04,812 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e91096fb-b58b-4f2f-9007-608e96fc1f9b
+WARN  2017-08-14 19:55:05,636 [31   ] naries.DictionaryBasedLocalizationSource - Can not find 'Refresh' in localization source 'JCMS'!
+DEBUG 2017-08-14 19:55:05,782 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"29057a69-6077-489b-9295-88ccc9695c78","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-08-14T19:55:05.7828464+08:00","Properties":{}}
+DEBUG 2017-08-14 19:55:05,794 [32   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 29057a69-6077-489b-9295-88ccc9695c78
+DEBUG 2017-08-14 19:55:36,138 [31   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"f3685018-0e82-4202-b026-d03820da210c","IpAddress":"::1","TenantId":null,"UserId":3,"ConnectTime":"2017-08-14T19:55:36.1384099+08:00","Properties":{}}
+DEBUG 2017-08-14 19:55:36,143 [33   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: f3685018-0e82-4202-b026-d03820da210c
+DEBUG 2017-08-14 19:55:49,309 [31   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"0960afeb-f0d1-444b-a3cf-8559d87543fd","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-08-14T19:55:49.3092116+08:00","Properties":{}}
+DEBUG 2017-08-14 19:55:49,314 [34   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 0960afeb-f0d1-444b-a3cf-8559d87543fd
+DEBUG 2017-08-14 19:55:59,338 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 29057a69-6077-489b-9295-88ccc9695c78
+DEBUG 2017-08-14 19:56:19,362 [17   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: f3685018-0e82-4202-b026-d03820da210c
+DEBUG 2017-08-14 21:01:26,780 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-08-14 21:01:26,938 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-08-14 21:01:26,943 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Web.JCMSWebModule, JCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,944 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSDataModule, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,944 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,945 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,945 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,945 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,945 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,945 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,945 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSCoreModule, JCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,946 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSApplicationModule, JCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,946 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,946 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Api.JCMSWebApiModule, JCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,946 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,946 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,946 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,946 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,946 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:26,949 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-08-14 21:01:27,218 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 21:01:27,218 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 21:01:27,218 [1    ] o.Configuration.LanguageManagementConfig - Converted JCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 21:01:27,218 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 21:01:27,496 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: JCMS.EntityFramework.JCMSDbContext, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:01:28,005 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-08-14 21:01:28,013 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-08-14 21:01:28,018 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-08-14 21:01:28,021 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: JCMS
+DEBUG 2017-08-14 21:01:28,023 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-08-14 21:01:28,098 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-08-14 21:01:28,151 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-08-14 21:01:28,151 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-08-14 21:01:28,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-08-14 21:01:28,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.CreateUserDto
+DEBUG 2017-08-14 21:01:28,155 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-08-14 21:01:28,156 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UserDto
+DEBUG 2017-08-14 21:01:28,156 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-08-14 21:01:28,156 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.PermissionDto
+DEBUG 2017-08-14 21:01:28,156 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.RoleDto
+DEBUG 2017-08-14 21:01:28,156 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-08-14 21:01:28,156 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-08-14 21:01:28,156 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-08-14 21:01:28,156 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-08-14 21:01:28,156 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-08-14 21:01:29,433 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-08-14 21:01:29,434 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-08-14 21:01:29,435 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-08-14 21:01:29,436 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-08-14 21:01:29,436 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-08-14 21:01:29,437 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-08-14 21:09:36,699 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-08-14 21:09:36,714 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-08-14 21:09:36,722 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Web.JCMSWebModule, JCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,724 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSDataModule, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,724 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,724 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,724 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,724 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSCoreModule, JCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSApplicationModule, JCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Api.JCMSWebApiModule, JCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,726 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,726 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,726 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,726 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:36,728 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-08-14 21:09:36,841 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 21:09:36,841 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 21:09:36,841 [1    ] o.Configuration.LanguageManagementConfig - Converted JCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 21:09:36,841 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 21:09:37,136 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: JCMS.EntityFramework.JCMSDbContext, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:09:38,246 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-08-14 21:09:38,255 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-08-14 21:09:38,260 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-08-14 21:09:38,262 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: JCMS
+DEBUG 2017-08-14 21:09:38,264 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-08-14 21:09:38,335 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-08-14 21:09:38,382 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-08-14 21:09:38,382 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-08-14 21:09:38,384 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-08-14 21:09:38,384 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.CreateUserDto
+DEBUG 2017-08-14 21:09:38,385 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-08-14 21:09:38,385 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UserDto
+DEBUG 2017-08-14 21:09:38,385 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-08-14 21:09:38,385 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.PermissionDto
+DEBUG 2017-08-14 21:09:38,385 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.RoleDto
+DEBUG 2017-08-14 21:09:38,385 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-08-14 21:09:38,385 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-08-14 21:09:38,385 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-08-14 21:09:38,385 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-08-14 21:09:38,385 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-08-14 21:09:39,722 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-08-14 21:09:39,723 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-08-14 21:09:39,724 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-08-14 21:09:39,725 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-08-14 21:09:39,726 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-08-14 21:09:39,726 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-08-14 21:20:34,611 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-08-14 21:20:34,623 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-08-14 21:20:34,629 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Web.JCMSWebModule, JCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,630 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSDataModule, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,630 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,631 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,631 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,631 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,631 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,631 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,631 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSCoreModule, JCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,631 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSApplicationModule, JCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Api.JCMSWebApiModule, JCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,632 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,633 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:34,635 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-08-14 21:20:34,739 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 21:20:34,740 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 21:20:34,740 [1    ] o.Configuration.LanguageManagementConfig - Converted JCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 21:20:34,740 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-14 21:20:35,025 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: JCMS.EntityFramework.JCMSDbContext, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-14 21:20:36,199 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-08-14 21:20:36,206 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-08-14 21:20:36,225 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-08-14 21:20:36,228 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: JCMS
+DEBUG 2017-08-14 21:20:36,229 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-08-14 21:20:36,292 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-08-14 21:20:36,338 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-08-14 21:20:36,338 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-08-14 21:20:36,340 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-08-14 21:20:36,340 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.CreateUserDto
+DEBUG 2017-08-14 21:20:36,340 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-08-14 21:20:36,340 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UserDto
+DEBUG 2017-08-14 21:20:36,340 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-08-14 21:20:36,340 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.PermissionDto
+DEBUG 2017-08-14 21:20:36,340 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.RoleDto
+DEBUG 2017-08-14 21:20:36,340 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-08-14 21:20:36,340 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-08-14 21:20:36,341 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-08-14 21:20:36,341 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-08-14 21:20:36,341 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-08-14 21:20:37,691 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-08-14 21:20:37,693 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-08-14 21:20:37,694 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-08-14 21:20:37,695 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-08-14 21:20:37,697 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-08-14 21:20:37,699 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+WARN  2017-08-14 21:20:39,299 [9    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+DEBUG 2017-08-14 21:26:37,305 [50   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"33522097-42d9-47e6-967f-9870d0009500","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-08-14T21:26:37.2986901+08:00","Properties":{}}
+DEBUG 2017-08-14 21:26:37,341 [50   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 33522097-42d9-47e6-967f-9870d0009500
+DEBUG 2017-08-14 21:28:04,937 [57   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"ea3c34d7-a49e-43a0-adb2-ef5c345e388b","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-08-14T21:28:04.9371752+08:00","Properties":{}}
+DEBUG 2017-08-14 21:28:04,945 [19   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: ea3c34d7-a49e-43a0-adb2-ef5c345e388b
+DEBUG 2017-08-14 21:28:32,177 [38   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 33522097-42d9-47e6-967f-9870d0009500

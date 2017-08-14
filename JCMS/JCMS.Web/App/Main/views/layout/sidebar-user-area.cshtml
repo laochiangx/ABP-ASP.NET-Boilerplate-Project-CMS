@@ -1,0 +1,15 @@
+﻿<div class="user-info" ng-controller="app.views.layout.sidebarUserArea as vm">
+    <div class="image">
+        <img src="/images/user.png" width="48" height="48" alt="User" />
+    </div>
+    <div class="info-container">
+        <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{vm.getShownUserName()}}</div>
+        <div class="email">{{vm.userEmailAddress}}</div>
+        <div class="btn-group user-helper-dropdown">
+            <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+            <ul class="dropdown-menu pull-right">
+                <li><a href="@Url.Action("Logout","Account")"><i class="material-icons">input</i>@L("Logout")</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

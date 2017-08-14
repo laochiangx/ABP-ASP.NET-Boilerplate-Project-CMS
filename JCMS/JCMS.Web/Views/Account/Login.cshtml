@@ -1,0 +1,64 @@
+﻿@using Abp.Web.Mvc.Extensions
+@model JCMS.Web.Models.Account.LoginFormViewModel
+@section Styles
+{
+    @Html.IncludeStyle("~/Views/Account/Login.css")
+}
+@section Scripts
+{
+    @Html.IncludeScript("~/Views/Account/Login.js")
+}
+<style type="text/css">
+
+    body {
+        background: url(../../images/bg1.jpg) no-repeat 0px 0px;
+        font-family: 'Open Sans', sans-serif;
+        background-size: cover;
+        min-height: 1050px;
+    }
+
+</style>
+
+<div class="card">
+    <div class="body" >
+        <form id="LoginForm" method="POST" asp-action="Login">
+            <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+            <input type="hidden" name="returnUrlHash" />
+            <h4 class="text-center">@L("LogIn")</h4>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="material-icons">person</i>
+                </span>
+                <div class="form-line">
+                    <input type="text" class="form-control" name="UsernameOrEmailAddress" placeholder="@L("UserNameOrEmail")" required autofocus maxlength="100">
+                </div>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">
+                    <i class="material-icons">lock</i>
+                </span>
+                <div class="form-line">
+                    <input type="password" class="form-control" name="Password" placeholder="@L("Password")" required maxlength="100">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 p-t-5">
+                    <input type="checkbox" name="RememberMe" id="rememberme" class="filled-in chk-col-pink" value="true">
+                    <label for="rememberme">@L("RememberMe")</label>
+                </div>
+                <div class="col-xs-4">
+                    <button id="LoginButton" class="btn btn-block bg-pink waves-effect" type="submit">@L("LogIn")</button>
+                </div>
+            </div>
+            @if (Model.IsSelfRegistrationAllowed)
+            {
+                <div class="row m-t-15 m-b--20">
+                    <div class="col-xs-12">
+                        <a href="@Url.Action("Register", "Account")">@L("Register")</a>
+                    </div>
+                </div>
+            }
+        </form>
+
+    </div>
+</div>

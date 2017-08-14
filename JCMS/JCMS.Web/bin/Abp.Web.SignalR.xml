@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abp.Web.SignalR</name>
+    </assembly>
+    <members>
+        <member name="T:Abp.Web.SignalR.AbpSignalRContractResolver">
+            <summary>
+            Uses CamelCasePropertyNamesContractResolver instead of DefaultContractResolver for SignalR communication. 
+            </summary>
+        </member>
+        <member name="P:Abp.Web.SignalR.AbpSignalRContractResolver.IgnoredAssemblies">
+            <summary>
+            List of ignored assemblies.
+            It contains only the SignalR's own assembly.
+            If you don't want that your assembly's types are automatically camel cased while sending to the client, then add it to this list.
+            </summary>
+        </member>
+        <member name="M:Abp.Web.SignalR.AbpSignalRContractResolver.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Abp.Web.SignalR.AbpSignalRContractResolver"/> class.
+            </summary>
+        </member>
+        <member name="T:Abp.Web.SignalR.AbpWebSignalRModule">
+            <summary>
+            ABP SignalR integration module.
+            </summary>
+        </member>
+        <member name="M:Abp.Web.SignalR.AbpWebSignalRModule.PreInitialize">
+            <inheritdoc/>
+        </member>
+        <member name="M:Abp.Web.SignalR.AbpWebSignalRModule.Initialize">
+            <inheritdoc/>
+        </member>
+        <member name="T:Abp.Web.SignalR.Hubs.AbpCommonHub">
+            <summary>
+            Common Hub of ABP.
+            </summary>
+        </member>
+        <member name="P:Abp.Web.SignalR.Hubs.AbpCommonHub.Logger">
+            <summary>
+            Reference to the logger.
+            </summary>
+        </member>
+        <member name="P:Abp.Web.SignalR.Hubs.AbpCommonHub.AbpSession">
+            <summary>
+            Reference to the session.
+            </summary>
+        </member>
+        <member name="M:Abp.Web.SignalR.Hubs.AbpCommonHub.#ctor(Abp.RealTime.IOnlineClientManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Abp.Web.SignalR.Hubs.AbpCommonHub"/> class.
+            </summary>
+        </member>
+        <member name="T:Abp.Web.SignalR.Notifications.SignalRRealTimeNotifier">
+            <summary>
+            Implements <see cref="T:Abp.Notifications.IRealTimeNotifier"/> to send notifications via SignalR.
+            </summary>
+        </member>
+        <member name="P:Abp.Web.SignalR.Notifications.SignalRRealTimeNotifier.Logger">
+            <summary>
+            Reference to the logger.
+            </summary>
+        </member>
+        <member name="M:Abp.Web.SignalR.Notifications.SignalRRealTimeNotifier.#ctor(Abp.RealTime.IOnlineClientManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Abp.Web.SignalR.Notifications.SignalRRealTimeNotifier"/> class.
+            </summary>
+        </member>
+        <member name="M:Abp.Web.SignalR.Notifications.SignalRRealTimeNotifier.SendNotificationsAsync(Abp.Notifications.UserNotification[])">
+            <inheritdoc/>
+        </member>
+        <member name="T:Abp.Web.SignalR.WindsorDependencyResolver">
+            <summary>
+            Replaces <see cref="T:Microsoft.AspNet.SignalR.DefaultDependencyResolver"/> to resolve dependencies from Castle Windsor (<see cref="T:Castle.Windsor.IWindsorContainer"/>).
+            </summary>
+        </member>
+        <member name="M:Abp.Web.SignalR.WindsorDependencyResolver.#ctor(Castle.Windsor.IWindsorContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Abp.Web.SignalR.WindsorDependencyResolver"/> class.
+            </summary>
+            <param name="windsorContainer">The windsor container.</param>
+        </member>
+    </members>
+</doc>

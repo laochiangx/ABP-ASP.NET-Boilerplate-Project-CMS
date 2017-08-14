@@ -1,0 +1,962 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NMemory</name>
+    </assembly>
+    <members>
+        <member name="T:NMemory.Constraints.IConstraint">
+            <summary>
+                Defines functionality for constraint against database entities.
+            </summary>
+            <typeparam name="TEntity"> The type of the entity. </typeparam>
+        </member>
+        <member name="T:NMemory.Constraints.IConstraint`1">
+            <summary>
+                Defines functionality for constraint against database entities.
+            </summary>
+            <typeparam name="TEntity"> The type of the entity. </typeparam>
+        </member>
+        <member name="M:NMemory.Constraints.IConstraint`1.Apply(`0,NMemory.Execution.IExecutionContext)">
+            <summary>
+                Apply the constraint on an entity.
+            </summary>
+            <param name="entity"> The entity to apply the constraint on. </param>
+            <param name="context"> The execution context. </param>
+        </member>
+        <member name="T:NMemory.Execution.Optimization.JoinGroup">
+            <summary>
+            Provides factory method for <see cref="!:GroupJoin&lt;TOuter, TInner&gt;"/> in order to
+            achieve type impeance.
+            </summary>
+        </member>
+        <member name="T:NMemory.Execution.Optimization.Rewriters.IndexAccessRewriter">
+            <summary>
+            Rewrites constant->member index access expression to constant expression.
+            </summary>
+        </member>
+        <member name="T:NMemory.Execution.Optimization.Rewriters.OuterJoinLogicalRewriter">
+            <summary>
+            Searches for SelectMany based outer join calls and replaces it with GroupJoin call
+            </summary>
+        </member>
+        <member name="T:NMemory.Execution.Optimization.Rewriters.InnerJoinLogicalRewriter">
+            <summary>
+            Searches for SelectMany based inner join calls and replaces it with Join call
+            </summary>
+        </member>
+        <member name="T:NMemory.Execution.Optimization.Rewriters.QueryableRewriter">
+            <summary>
+            Represents an expression rewriter that replaces <see cref="!:System.Queryable"/> 
+            extension method calls with corresponding <see cref="!:System.Enumerable"/>  
+            extension method calls
+            </summary>
+        </member>
+        <member name="M:NMemory.Execution.Optimization.Rewriters.QueryableRewriter.FindGenericType(System.Type,System.Type)">
+            <summary>
+            Finds the concrete type of the specified generic type definition.
+            For example, if definition is IEnumerable&gt;&lt;, than the type IList&gt;string&lt;>
+            returns IEnumerable&gt;string&lt;
+            </summary>
+            <param name="definition">The generic type definition.</param>
+            <param name="type">The type.</param>
+            <returns>The generic type of the definition.</returns>
+        </member>
+        <member name="T:NMemory.Execution.Optimization.Rewriters.TableAccessRewriter">
+            <summary>
+            Rewrites all kind of table access expression to constant expression.
+            </summary>
+        </member>
+        <member name="T:NMemory.Database">
+            <summary>
+            Represents an NMemory database instance.
+            </summary>
+        </member>
+        <member name="M:NMemory.Database.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NMemory.Database"/> class.
+            </summary>
+        </member>
+        <member name="M:NMemory.Database.#ctor(NMemory.Modularity.IDatabaseComponentFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NMemory.Database"/> class with the specified database engine factory..
+            </summary>
+            <param name="databaseComponentFactory">The database component factory.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="databaseComponentFactory"/> is null.</exception>
+        </member>
+        <member name="P:NMemory.Database.StoredProcedures">
+            <summary>
+            Gets the collection of stored procedures contained by the database
+            </summary>
+        </member>
+        <member name="P:NMemory.Database.Tables">
+            <summary>
+            Gets the collection of tables contained by the database.
+            </summary>
+            <value>
+            A collection of tables.
+            </value>
+        </member>
+        <member name="P:NMemory.Database.DatabaseEngine">
+            <summary>
+            Gets the database engine.
+            </summary>
+            <value>
+            The database engine.
+            </value>
+        </member>
+        <member name="F:NMemory.Exceptions.ErrorCode.GenericError">
+            <summary>
+            The generic error
+            </summary>
+        </member>
+        <member name="F:NMemory.Exceptions.ErrorCode.ExistingKeyFound">
+            <summary>
+            The existing key found
+            </summary>
+        </member>
+        <member name="F:NMemory.Exceptions.ErrorCode.TransactionHasAlreadyStarted">
+            <summary>
+            The transaction has already started
+            </summary>
+        </member>
+        <member name="F:NMemory.Exceptions.ErrorCode.RelationError">
+            <summary>
+            Relation error
+            </summary>
+        </member>
+        <member name="P:NMemory.Indexes.Index`2.SupportsIntervalSearch">
+            <summary>
+            Gets a value that indicates whether the index structure supports interval search.
+            </summary>
+        </member>
+        <member name="T:NMemory.Modularity.IDatabaseComponentFactory">
+            <summary>
+            Provides functionality to instantiate the components of a database engine.
+            </summary>
+        </member>
+        <member name="M:NMemory.Modularity.IDatabaseComponentFactory.CreateConcurrencyManager">
+            <summary>
+            Creates a concurrency manager that handles the concurrent access of transactions.
+            </summary>
+            <returns>A concurrency manager.</returns>
+        </member>
+        <member name="M:NMemory.Modularity.IDatabaseComponentFactory.CreateQueryCompiler">
+            <summary>
+            Creates a query compiler that optimizes and compiles database queries.
+            </summary>
+            <returns>A query compiler.</returns>
+        </member>
+        <member name="M:NMemory.Modularity.IDatabaseComponentFactory.CreateQueryExecutor">
+            <summary>
+            Creates a query executor that executes compiled queries.
+            </summary>
+            <returns>A query executor.</returns>
+        </member>
+        <member name="M:NMemory.Modularity.IDatabaseComponentFactory.CreateTransactionHandler">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NMemory.Modularity.IDatabaseComponentFactory.CreateLoggingPort">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NMemory.Modularity.IDatabaseComponentFactory.CreateServiceProvider">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:NMemory.StoredProcedures.StoredProcedure`1">
+            <summary>
+                Represents a stored procedure that returns with a result set.
+            </summary>
+            <typeparam name="T">
+                The type of the result set elements.
+            </typeparam>
+        </member>
+        <member name="T:NMemory.Concurrency.DeadlockManagementStrategy">
+            <summary>
+            Specifies the strategy of deadlock management
+            </summary>
+        </member>
+        <member name="F:NMemory.Concurrency.DeadlockManagementStrategy.DeadlockDetection">
+            <summary>
+            Deadlock detection
+            </summary>
+        </member>
+        <member name="F:NMemory.Concurrency.DeadlockManagementStrategy.DeadlockPrevention">
+            <summary>
+            Deadlock prevention
+            </summary>
+        </member>
+        <member name="T:NMemory.Concurrency.Locks.ILockFactory">
+            <summary>
+            Represents a factory that is able to instantiate <c>ILock</c> objects
+            </summary>
+        </member>
+        <member name="T:NMemory.Tables.ConstraintCollection`1">
+            <summary>
+                Represents a collection of contraints.
+            </summary>
+            <typeparam name="T"> 
+                The type of the entity the constraints are applied on. 
+            </typeparam>
+        </member>
+        <member name="M:NMemory.Tables.ConstraintCollection`1.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="!:ContraintCollection&lt;T&gt;"/> class.
+            </summary>
+        </member>
+        <member name="M:NMemory.Tables.ConstraintCollection`1.Apply(`0,NMemory.Execution.IExecutionContext)">
+            <summary>
+                Applys all contraints on the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+            <param name="context"> The execution context. </param>
+        </member>
+        <member name="M:NMemory.Tables.ConstraintCollection`1.Add(NMemory.Constraints.IConstraint{`0})">
+            <summary>
+                Adds a table constraint.
+            </summary>
+            <param name="constraint">
+                The constraint. Note that you must not share this constraint instance across 
+                multiple tables.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.ConstraintCollection`1.Add(NMemory.Constraints.IConstraintFactory{`0})">
+            <summary>
+                Adds a table constraint.
+            </summary>
+            <param name="constraintFactory"> 
+                The constraint factory that instantiates a dedicated constraint instance for
+                this table.
+                </param>
+        </member>
+        <member name="T:NMemory.Tables.DefaultTable`2">
+            <summary>
+                Represents a database table.
+            </summary>
+            <typeparam name="TEntity">
+                The type of the entities contained by the table
+            </typeparam>
+            <typeparam name="TPrimaryKey">
+                The type of the primary key of the entities.
+            </typeparam>
+        </member>
+        <member name="T:NMemory.Tables.Table`2">
+            <summary>
+                Represents a database table.
+            </summary>
+            <typeparam name="TEntity">
+                The type of the entities contained by the table
+            </typeparam>
+            <typeparam name="TPrimaryKey">
+                The type of the primary key of the entities.
+            </typeparam>
+        </member>
+        <member name="T:NMemory.Tables.ITable`2">
+            <summary>
+                Defines an interface for database tables.
+            </summary>
+            <typeparam name="TEntity">
+                The type of the entities contained by the table.
+            </typeparam>
+            <typeparam name="TPrimaryKey">
+                The type of the primary key of the entities.
+            </typeparam>
+        </member>
+        <member name="T:NMemory.Tables.ITable`1">
+            <summary>
+                Defines an interface for database tables.
+            </summary>
+            <typeparam name="TEntity">
+                The type of the entities contained by the table.
+            </typeparam>
+        </member>
+        <member name="T:NMemory.Tables.ITable">
+            <summary>
+                Defines an interface for database tables.
+            </summary>
+        </member>
+        <member name="P:NMemory.Tables.ITable.Database">
+            <summary>
+                Gets the database that contains the table.
+            </summary>
+        </member>
+        <member name="P:NMemory.Tables.ITable.EntityType">
+            <summary>
+                Gets the type of the entities contained in the table.
+            </summary>
+        </member>
+        <member name="P:NMemory.Tables.ITable.PrimaryKeyIndex">
+            <summary>
+                Gets the primary key index of the table.
+            </summary>
+        </member>
+        <member name="P:NMemory.Tables.ITable.Indexes">
+            <summary>
+                Gets the indexes of the table.
+            </summary>
+        </member>
+        <member name="E:NMemory.Tables.ITable.IndexChanged">
+            <summary>
+                Occurs when the indexes of the table are changed.
+            </summary>
+        </member>
+        <member name="P:NMemory.Tables.ITable.Count">
+            <summary>
+                Gets the number of entities contained in the table.
+            </summary>
+        </member>
+        <member name="M:NMemory.Tables.ITable`1.Insert(`0)">
+            <summary>
+                Inserts a new entity into the table.
+            </summary>
+            <param name="entity">
+                An entity that contains the property values of the new entity.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.ITable`1.Insert(`0,NMemory.Transactions.Transaction)">
+            <summary>
+                Inserts a new entity into the table.
+            </summary>
+            <param name="entity">
+                An entity that contains the property values of the new entity.
+            </param>
+            <param name="entity">
+                The transaction within which the insert operation executes.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.ITable`1.Update(`0)">
+            <summary>
+                Updates the properties of the specified entity contained by the table.
+            </summary>
+            <param name="entity">
+                An entity that contains the primary key of the entity to be updated and the new
+                property values.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.ITable`1.Update(`0,NMemory.Transactions.Transaction)">
+            <summary>
+                Updates the properties of the specified contained by the table.
+            </summary>
+            <param name="entity">
+                An entity that contains the primary key of the entity to be updated and the new
+                property values.
+            </param>
+            <param name="entity">
+                The transaction within which the update operation executes.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.ITable`1.Delete(`0)">
+            <summary>
+                Deletes an entity from the table.
+            </summary>
+            <param name="entity">
+                An entity that contains the primary key of the entity to be deleted.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.ITable`1.Delete(`0,NMemory.Transactions.Transaction)">
+            <summary>
+                Deletes an entity from the table.
+            </summary>
+            <param name="entity">
+                An entity that contains the primary key of the entity to be deleted.
+            </param>
+            <param name="entity">
+                The transaction within which the delete operation executes.
+            </param>
+        </member>
+        <member name="P:NMemory.Tables.ITable`1.PrimaryKeyIndex">
+            <summary>
+                Gets the primary key index of the table.
+            </summary>
+        </member>
+        <member name="P:NMemory.Tables.ITable`1.Contraints">
+            <summary>
+                Gets the collection of contraints registered to table.
+            </summary>
+            <value>
+                The contraints.
+            </value>
+        </member>
+        <member name="M:NMemory.Tables.ITable`2.Update(`1,`0)">
+            <summary>
+                Updates the properties of the specified entity contained by the table.
+            </summary>
+            <param name="key">
+                The primary key of the entity to be updated.
+            </param>
+            <param name="entity">
+                An entity that contains the new property values.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.ITable`2.Update(`1,`0,NMemory.Transactions.Transaction)">
+            <summary>
+                Updates the properties of the specified entity contained by the table.
+            </summary>
+            <param name="key">
+                The primary key of the entity to be updated.
+            </param>
+            <param name="entity">
+                An entity that contains the new property values.
+            </param>
+            <param name="entity">
+                The transaction within which the update operation is executed.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.ITable`2.Delete(`1)">
+            <summary>
+                Deletes an entity from the table.
+            </summary>
+            <param name="key">
+                The primary key of the entity to be deleted.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.ITable`2.Delete(`1,NMemory.Transactions.Transaction)">
+            <summary>
+                Deletes an entity from the table.
+            </summary>
+            <param name="key">
+                The primary key of the entity to be deleted.
+            </param>
+            <param name="entity">
+                The transaction within which the update operation is executed.
+            </param>
+        </member>
+        <member name="P:NMemory.Tables.ITable`2.PrimaryKeyIndex">
+            <summary>
+                Gets the primary key index of the table.
+            </summary>
+        </member>
+        <member name="T:NMemory.Tables.IBulkTable`1">
+            <summary>
+            Defines bulk operations for a table.
+            </summary>
+            <typeparam name="TEntity">The type of the entities contained by the table.</typeparam>
+        </member>
+        <member name="M:NMemory.Tables.IBulkTable`1.Update(NMemory.Linq.TableQuery{`0},System.Linq.Expressions.Expression{System.Func{`0,`0}},NMemory.Transactions.Transaction)">
+            <summary>
+            Updates the entities.
+            </summary>
+            <param name="query">A query expression that represents the entities to be updated.</param>
+            <param name="updater">An expression that represents the update logic.</param>
+            <param name="transaction">The transaction within which the update operation is executed.</param>
+            <returns>The updated entities</returns>
+        </member>
+        <member name="M:NMemory.Tables.IBulkTable`1.Delete(NMemory.Linq.TableQuery{`0},NMemory.Transactions.Transaction)">
+            <summary>
+            Deletes entities.
+            </summary>
+            <param name="query">The query that represents the entities to be deleted.</param>
+            <param name="transaction">The transaction within which the delete operation is executed.</param>
+            <returns>The count of the deleted entities.</returns>
+        </member>
+        <member name="M:NMemory.Tables.IReflectionTable.Insert(System.Object)">
+            <summary>
+            Inserts a new entity into the table.
+            </summary>
+            <param name="entity">An entity that contains the property values of the new entity.</param>
+        </member>
+        <member name="M:NMemory.Tables.IReflectionTable.Update(System.Object)">
+            <summary>
+            Updates the properties of an entity contained by the table.
+            </summary>
+            <param name="entity">An entity that contains the primary key of the entity to be updated and the new property values.</param>
+        </member>
+        <member name="M:NMemory.Tables.IReflectionTable.Delete(System.Object)">
+            <summary>
+            Deletes an entity from the table.
+            </summary>
+            <param name="entity">An entity that contains the primary key of the entity to be deleted.</param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.#ctor(NMemory.Modularity.IDatabase,NMemory.Indexes.IKeyInfo{`0,`1},NMemory.Tables.IdentitySpecification{`0})">
+            <summary>
+                Initializes a new instance of the <see cref="T:NMemory.Tables.Table`2"/> 
+                class.
+            </summary>
+            <param name="database"> The database. </param>
+            <param name="primaryKey"> The primary key. </param>
+            <param name="identitySpecification"> The identity specification. </param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.#ctor">
+            <summary>
+                Prevents a default instance of the <see cref="!:Table&lt;TPrimaryKey&gt;"/> class from
+                being created.
+            </summary>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.Insert(`0)">
+            <summary>
+                Inserts the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.Insert(`0,NMemory.Transactions.Transaction)">
+            <summary>
+                Inserts the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+            <param name="transaction"> The transaction. </param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.InsertCore(`0,NMemory.Transactions.Transaction)">
+            <summary>
+                Core implementation of an entity insert.
+            </summary>
+            <param name="entity">
+                The entity that contains the primary key of the entity to be deleted.
+            </param>
+            <param name="transaction">
+                The transaction within which the update operation executes.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.Update(`0)">
+            <summary>
+                Updates the properties of the specified entity contained by the table.
+            </summary>
+            <param name="entity">
+                An entity that contains the primary key of the entity to be updated and the new
+                property values.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.Update(`0,NMemory.Transactions.Transaction)">
+            <summary>
+                Updates the properties of the specified contained by the table.
+            </summary>
+            <param name="entity">
+                An entity that contains the primary key of the entity to be updated and the new
+                property values.
+            </param>
+            <param name="entity">
+                The transaction within which the update operation executes.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.Update(`1,`0)">
+            <summary>
+                Updates the properties of the specified entity contained by the table.
+            </summary>
+            <param name="key">
+                The primary key of the entity to be updated.
+            </param>
+            <param name="entity">
+                An entity that contains the new property values.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.Update(`1,`0,NMemory.Transactions.Transaction)">
+            <summary>
+                Updates the properties of the specified entity contained by the table.
+            </summary>
+            <param name="key">
+                The primary key of the entity to be updated.
+            </param>
+            <param name="entity">
+                An entity that contains the new property values.
+            </param>
+            <param name="entity">
+                The transaction within which the update operation is executed.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.NMemory#Tables#IBulkTable{TEntity}#Update(NMemory.Linq.TableQuery{`0},System.Linq.Expressions.Expression{System.Func{`0,`0}},NMemory.Transactions.Transaction)">
+            <summary>
+                Updates the entities.
+            </summary>
+            <param name="query">
+                The query expression that represents the entities to be updated.
+            </param>
+            <param name="updater">
+                The expression that represents the update logic.
+            </param>
+            <param name="transaction">
+                The transaction within which the update operation is executed.
+            </param>
+            <returns>
+                The updated entities.
+            </returns>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.UpdateCore(System.Linq.Expressions.Expression,NMemory.Execution.IUpdater{`0},NMemory.Transactions.Transaction)">
+            <summary>
+                Core implementation of a bulk entity update.
+            </summary>
+            <param name="expression">
+                The query expression that represents the entities to be updated.
+            </param>
+            <param name="updater">
+                The updater.
+            </param>
+            <param name="transaction">
+                The transaction within which the update operation is executed.
+            </param>
+            <returns> The updated entities. </returns>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.Delete(`0)">
+            <summary>
+                Deletes an entity from the table.
+            </summary>
+            <param name="entity">
+                An entity that contains the primary key of the entity to be deleted.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.Delete(`0,NMemory.Transactions.Transaction)">
+            <summary>
+                Deletes an entity from the table.
+            </summary>
+            <param name="key">
+                The primary key of the entity to be deleted.
+            </param>
+            <param name="entity">
+                The transaction within which the update operation is executed.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.Delete(`1)">
+            <summary>
+                Deletes an entity from the table.
+            </summary>
+            <param name="key">
+                The primary key of the entity to be deleted.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.Delete(`1,NMemory.Transactions.Transaction)">
+            <summary>
+                Deletes an entity from the table.
+            </summary>
+            <param name="key">
+                The primary key of the entity to be deleted.
+            </param>
+            <param name="entity">
+                The transaction within which the update operation is executed.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.NMemory#Tables#IBulkTable{TEntity}#Delete(NMemory.Linq.TableQuery{`0},NMemory.Transactions.Transaction)">
+            <summary>
+                Deletes entities.
+            </summary>
+            <param name="query">
+                The query that represents the entities to be deleted.
+            </param>
+            <param name="transaction">
+                The transaction within which the delete operation is executed.
+            </param>
+            <returns>
+                The count of the deleted entities.
+            </returns>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.DeleteCore(System.Linq.Expressions.Expression,NMemory.Transactions.Transaction)">
+            <summary>
+                Core implementation of a bulk entity delete.
+            </summary>
+            <param name="expression">
+                A query expression that represents the entities to be deleted.
+            </param>
+            <param name="transaction">
+                The transaction within which the delete operation is executed.
+            </param>
+            <returns>
+                The count of deleted entities.
+            </returns>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.CreateIndex``1(NMemory.Indexes.IIndexFactory,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+                Creates a new index.
+            </summary>
+            <typeparam name="TKey">
+                The type of the index key.
+            </typeparam>
+            <param name="indexFactory">
+                The index factory.
+            </param>
+            <param name="keySelector">
+                The expression representing the definition of the index key.
+            </param>
+            <returns>
+                The index.
+            </returns>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.CreateIndex``1(NMemory.Indexes.IIndexFactory,NMemory.Indexes.IKeyInfo{`0,``0})">
+            <summary>
+                Creates a new index.
+            </summary>
+            <typeparam name="TKey"> The type of the index key. </typeparam>
+            <param name="indexFactory"> The index factory. </param>
+            <param name="keyInfo"> The definition of the index key. </param>
+            <returns> The index. </returns>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.CreateUniqueIndex``1(NMemory.Indexes.IIndexFactory,System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+                Creates a new unique index.
+            </summary>
+            <typeparam name="TUniqueKey">
+                The type of the unique index key.
+            </typeparam>
+            <param name="indexFactory">
+                The index factory.
+            </param>
+            <param name="key">
+                The expression representing the definition of the index key.
+            </param>
+            <returns>
+                The unique index. 
+            </returns>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.CreateUniqueIndex``1(NMemory.Indexes.IIndexFactory,NMemory.Indexes.IKeyInfo{`0,``0})">
+            <summary>
+                Creates a new unique index.
+            </summary>
+            <typeparam name="TUniqueKey">
+                The type of the unqiue index key.
+            </typeparam>
+            <param name="indexFactory">
+                The index factory.
+            </param>
+            <param name="keyInfo">
+                The definition of the index key
+            </param>
+            <returns> The unique index. </returns>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.NMemory#Tables#IReflectionTable#Update(System.Object)">
+            <summary>
+            Updates the properties of an entity contained by the table.
+            </summary>
+            <param name="entity">An entity that contains the primary key of the entity to be updated and the new property values.</param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.NMemory#Tables#IReflectionTable#Insert(System.Object)">
+            <summary>
+            Inserts a new entity into the table.
+            </summary>
+            <param name="entity">An entity that contains the property values of the new entity.</param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.NMemory#Tables#IReflectionTable#Delete(System.Object)">
+            <summary>
+            Deletes an entity from the table.
+            </summary>
+            <param name="entity">An entity that contains the primary key of the entity to be deleted.</param>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.ToString">
+            <summary>
+                Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>
+                A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:NMemory.Tables.Table`2.CreateStoredEntity">
+            <summary>
+                Creates an entity that is meant to be stored in the table.
+            </summary>
+            <returns>
+                The entity.
+            </returns>
+        </member>
+        <member name="E:NMemory.Tables.Table`2.IndexChanged">
+            <summary>
+            Occurs when the indexes of the table are changed.
+            </summary>
+        </member>
+        <member name="P:NMemory.Tables.Table`2.Count">
+            <summary>
+            Gets the number of entities contained by the table.
+            </summary>
+        </member>
+        <member name="P:NMemory.Tables.Table`2.Indexes">
+            <summary>
+                Gets the indexes of the table.
+            </summary>
+        </member>
+        <member name="P:NMemory.Tables.Table`2.PrimaryKeyIndex">
+            <summary>
+                Gets the primary key index of the table.
+            </summary>
+        </member>
+        <member name="P:NMemory.Tables.Table`2.NMemory#Tables#ITable{TEntity}#PrimaryKeyIndex">
+            <summary>
+                Gets the index of the primary key.
+            </summary>
+            <value>
+                The index of the primary key.
+            </value>
+        </member>
+        <member name="P:NMemory.Tables.Table`2.NMemory#Tables#ITable#PrimaryKeyIndex">
+            <summary>
+                Gets the index of the primary key.
+            </summary>
+            <value>
+                The index of the primary key.
+            </value>
+        </member>
+        <member name="M:NMemory.Tables.DefaultTable`2.#ctor">
+            <summary>
+                Prevents a default instance of the <see cref="!:DefaultTable&lt;TPrimaryKey&gt;"/> 
+                class from being created.
+            </summary>
+        </member>
+        <member name="M:NMemory.Tables.DefaultTable`2.InsertCore(`0,NMemory.Transactions.Transaction)">
+            <summary>
+                Core implementation of an entity insert.
+            </summary>
+            <param name="entity">
+                The entity that contains the primary key of the entity to be deleted.
+            </param>
+            <param name="transaction">
+                The transaction within which the update operation executes.
+            </param>
+        </member>
+        <member name="M:NMemory.Tables.DefaultTable`2.UpdateCore(System.Linq.Expressions.Expression,NMemory.Execution.IUpdater{`0},NMemory.Transactions.Transaction)">
+            <summary>
+                Core implementation of a bulk entity update.
+            </summary>
+            <param name="expression">
+                A query expression that represents the entities to be updated.
+            </param>
+            <param name="updater">
+                An expression that represents the update mechanism.
+            </param>
+            <param name="transaction">
+                The transaction within which the update operation is executed.
+            </param>
+            <returns>
+                The updated entities.
+            </returns>
+        </member>
+        <member name="M:NMemory.Tables.DefaultTable`2.DeleteCore(System.Linq.Expressions.Expression,NMemory.Transactions.Transaction)">
+            <summary>
+                Core implementation of an entity delete.
+            </summary>
+            <param name="key">
+                The primary key of the entity to be deleted.
+            </param>
+            <param name="transaction">
+                The transaction within which the delete operation is executed.
+            </param>
+        </member>
+        <member name="T:NMemory.Tables.Relation`4">
+            <summary>
+                Represents a relation between two database tables.
+            </summary>
+            <typeparam name="TPrimary">
+                The type of the entities of the referred table.
+            </typeparam>
+            <typeparam name="TPrimaryKey">
+                The type of the primary key.
+            </typeparam>
+            <typeparam name="TForeign">
+                The type of the entities of the referring table.
+            </typeparam>
+            <typeparam name="TForeignKey">
+                The type of the foreign key.
+            </typeparam>
+        </member>
+        <member name="T:NMemory.Tables.RelationOptions">
+            <summary>
+                Represents options of a relation.
+            </summary>
+        </member>
+        <member name="M:NMemory.Tables.RelationOptions.#ctor(System.Boolean)">
+            <summary>
+                Initializes a new instance of the <see cref="T:NMemory.Tables.RelationOptions"/> class.
+            </summary>
+            <param name="cascadedDeletion">
+                if set to <c>true</c> cascaded deletion will be enabled
+            </param>
+        </member>
+        <member name="P:NMemory.Tables.RelationOptions.CascadedDeletion">
+            <summary>
+                Gets a value that indicates whether the deletion of a referred (primary) entity
+                should result in the deletion of the referring (foreign) entities.
+            </summary>
+            <value>
+              <c>true</c> if enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:NMemory.Tables.TableCollection">
+            <summary>
+                Represents a collection of the tables of the database.
+            </summary>
+        </member>
+        <member name="M:NMemory.Tables.TableCollection.GetAllTables">
+            <summary>
+                Returns all database tables.
+            </summary>
+            <returns> A list of the tables. </returns>
+        </member>
+        <member name="M:NMemory.Tables.TableCollection.GetAllRelations">
+            <summary>
+                Returns all database table relations.
+            </summary>
+            <returns> A list of the table relations. </returns>
+        </member>
+        <member name="M:NMemory.Tables.TableCollection.Create``2(System.Linq.Expressions.Expression{System.Func{``0,``1}},NMemory.Tables.IdentitySpecification{``0})">
+            <summary>
+                Initializes a database table.
+            </summary>
+            <typeparam name="TEntity">
+                Specifies the type of the entities of the table.
+            </typeparam>
+            <typeparam name="TPrimaryKey">
+                Specifies the type of the primary key of the entities.
+            </typeparam>
+            <param name="primaryKey">
+                An expression that represents the primary key of the entities.
+            </param>
+            <param name="identitySpecification">
+                An IdentitySpecification to set an identity field.
+            </param>
+            <returns>
+                An Table that represents the defined table object.
+            </returns>
+        </member>
+        <member name="M:NMemory.Tables.TableCollection.Create``2(NMemory.Indexes.IKeyInfo{``0,``1},NMemory.Tables.IdentitySpecification{``0})">
+            <summary>
+                Initializes a database table.
+            </summary>
+            <typeparam name="TEntity">
+                Specifies the type of the entities of the table.
+             </typeparam>
+            <typeparam name="TPrimaryKey">
+                Specifies the type of the primary key of the entities.
+             </typeparam>
+            <param name="primaryKey">
+                An IKeyInfo object that represents the primary key of the entities.
+            </param>
+            <param name="identitySpecification">
+                An IdentitySpecification to set an identity field.
+            </param>
+            <returns>
+                The table.
+            </returns>
+        </member>
+        <member name="M:NMemory.Tables.TableCollection.CreateRelation``4(NMemory.Indexes.IUniqueIndex{``0,``1},NMemory.Indexes.IIndex{``2,``3},System.Func{``3,``1},System.Func{``1,``3},NMemory.Tables.RelationOptions)">
+            <summary>
+                Creates a relation between two tables.
+            </summary>
+            <typeparam name="TPrimary">
+                The type of the entities of the primary table.
+            </typeparam>
+            <typeparam name="TPrimaryKey">
+                The type of the primary key of the entities of the primary table.
+            </typeparam>
+            <typeparam name="TForeign">
+                The type of the entities of the foreign table.
+            </typeparam>
+            <typeparam name="TForeignKey">
+                Type type of the foreign key of the foreign table.
+            </typeparam>
+            <param name="primaryIndex">
+                An IIndex that specifies the primary key.
+            </param>
+            <param name="foreignIndex">
+                An IIndex that specifies the foreign key.
+            </param>
+            <param name="convertForeignToPrimary">
+                A function to convert a foreign key to the corresponding primary key.
+            </param>
+            <param name="convertPrimaryToForeign">
+                A function to convert a primary key to the corresponding foreign key.
+            </param>
+            <returns>
+                The relation.
+            </returns>
+        </member>
+    </members>
+</doc>

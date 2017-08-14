@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<localizationDictionary culture="vi">
+  <texts>
+    <text name="HomePage" value="Trang chủ" />
+    <text name="About" value="Giới thiệu" />
+    <text name="WellcomeMessage" value="Chào mừng đến với ABPnetcore!" />
+
+    <text name="FormIsNotValidMessage" value="Mẫu là không hợp lệ. Vui lòng kiểm tra và sửa lỗi." />
+    <text name="TenantNameCanNotBeEmpty" value="Tên tenant không được để trống" />
+
+    <text name="InvalidUserNameOrPassword" value="Sai tên đăng nhập hoặc mật khẩu" />
+    <text name="ThereIsNoTenantDefinedWithName{0}" value="Không tìm thấy tenant {0}" />
+    <text name="TenantIsNotActive" value="Tenant {0} không hoạt động." />
+    <text name="UserIsNotActiveAndCanNotLogin" value="Người dùng {0} không hoạt động và không thể đăng nhập." />
+    <text name="PleaseEnterLoginInformation" value="Vui lòng nhập thông tin người dùng" />
+    <text name="TenancyName" value="Tenancy name" />
+    <text name="UserNameOrEmail" value="Tên đăng nhập hoặc email" />
+    <text name="Password" value="Password" />
+    <text name="RememberMe" value="Ghi nhớ tài khoản" />
+    <text name="LogIn" value="Đăng nhập" />
+
+    <text name="LoginFailed" value="Đăng nhập thất bại!" />
+
+    <text name="NameSurname" value="Tên họ" />
+    <text name="UserName" value="Tên tài khoản" />
+    <text name="Name" value="Tên" />
+    <text name="Surname" value="Tên đệm" />
+    <text name="EmailAddress" value="Địa chỉ email" />
+
+    <text name="Tenants" value="Tenants" />
+    <text name="SavedSuccessfully" value="Lưu thành công" />
+    <text name="CreateNewTenant" value="Tạo mới tenant" />
+    <text name="AdminEmailAddress" value="Admin email address" />
+    <text name="Save" value="Save" />
+    <text name="Cancel" value="Cancel" />
+    <text name="TenantName_Regex_Description" value="Tên tenant phải có ít nhất 2 ký tự, bắt đầu bằng chữ cái và tiếp tục với chữ, số, dấu gạch ngang hoặc gạch dưới." />
+    <text name="DefaultPasswordIs" value="Mật khẩu mặc định là {0}" />
+    <text name="CanBeEmptyToLoginAsHost" value="Can be empty to login as host." />
+    <text name="Register" value="Đăng ký" />
+    <text name="OrLoginWith" value="Or login with" />
+    <text name="WaitingForActivationMessage" value="Tài khoản của bạn đang đợi kích hoạt." />
+    <text name="TenantSelection" value="Tenant Selection" />
+    <text name="TenantSelection_Detail" value="Vui lòng chọn một tenant." />
+    <text name="Logout" value="Logout" />
+
+    <text name="RegisterFormUserNameInvalidMessage">Please dont enter an email address for username.</text>
+
+    <text name="DatabaseConnectionString" value="Database connection string" />
+    <text name="Users" value="Users" />
+    <text name="IsActive" value="Is active" />
+    <text name="FullName" value="Tên đầy đủ" />
+    <text name="CreateNewUser" value="Tạo mới người dùng" />
+    <text name="Yes" value="Yes" />
+    <text name="No" value="No" />
+    <text name="Optional" value="Optional" />
+  </texts>
+</localizationDictionary>

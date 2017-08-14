@@ -1,0 +1,128 @@
+﻿@*<aside id="rightsidebar" class="right-sidebar" ng-controller="app.views.layout.rightSidebar as vm">
+    <ul class="nav nav-tabs tab-nav-right" role="tablist">
+        <li role="presentation" class="active"><a href="#skins" data-toggle="tab">SKINS</a></li>
+        <li role="presentation"><a href="#settings" data-toggle="tab">SETTINGS</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
+            <ul class="demo-choose-skin">
+                <li ng-repeat="theme in vm.themes" ng-class="{'active': vm.selectedThemeCssClass == theme.cssClass}" ng-click="vm.setTheme(theme)">
+                    <div class="{{theme.cssClass}}"></div>
+                    <span>{{theme.name}}</span>
+                </li>
+            </ul>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="settings">
+            <div class="demo-settings">
+                <p>GENERAL SETTINGS</p>
+                <ul class="setting-list">
+                    <li>
+                        <span>Report Panel Usage</span>
+                        <div class="switch">
+                            <label><input type="checkbox" checked><span class="lever"></span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Email Redirect</span>
+                        <div class="switch">
+                            <label><input type="checkbox"><span class="lever"></span></label>
+                        </div>
+                    </li>
+                </ul>
+                <p>SYSTEM SETTINGS</p>
+                <ul class="setting-list">
+                    <li>
+                        <span>Notifications</span>
+                        <div class="switch">
+                            <label><input type="checkbox" checked><span class="lever"></span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Auto Updates</span>
+                        <div class="switch">
+                            <label><input type="checkbox" checked><span class="lever"></span></label>
+                        </div>
+                    </li>
+                </ul>
+                <p>ACCOUNT SETTINGS</p>
+                <ul class="setting-list">
+                    <li>
+                        <span>Offline</span>
+                        <div class="switch">
+                            <label><input type="checkbox"><span class="lever"></span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Location Permission</span>
+                        <div class="switch">
+                            <label><input type="checkbox" checked><span class="lever"></span></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</aside>*@
+
+
+<aside id="rightsidebar" class="right-sidebar" ng-controller="app.views.layout.rightSidebar as vm">
+    <uib-tabset class="tab-container tabbable-line">
+        <uib-tab heading="SKINS">
+            <ul class="demo-choose-skin">
+                <li ng-repeat="theme in vm.themes" ng-class="{'active': vm.selectedThemeCssClass == theme.cssClass}" ng-click="vm.setTheme(theme)">
+                    <div class="{{theme.cssClass}}"></div>
+                    <span>{{theme.name}}</span>
+                </li>
+            </ul>
+        </uib-tab>
+        <uib-tab heading="SETTINGS" tab-id="settings">
+            <div class="demo-settings">
+                <p>GENERAL SETTINGS</p>
+                <ul class="setting-list">
+                    <li>
+                        <span>Report Panel Usage</span>
+                        <div class="switch">
+                            <label><input type="checkbox" checked><span class="lever"></span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Email Redirect</span>
+                        <div class="switch">
+                            <label><input type="checkbox"><span class="lever"></span></label>
+                        </div>
+                    </li>
+                </ul>
+                <p>SYSTEM SETTINGS</p>
+                <ul class="setting-list">
+                    <li>
+                        <span>Notifications</span>
+                        <div class="switch">
+                            <label><input type="checkbox" checked><span class="lever"></span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Auto Updates</span>
+                        <div class="switch">
+                            <label><input type="checkbox" checked><span class="lever"></span></label>
+                        </div>
+                    </li>
+                </ul>
+                <p>ACCOUNT SETTINGS</p>
+                <ul class="setting-list">
+                    <li>
+                        <span>Offline</span>
+                        <div class="switch">
+                            <label><input type="checkbox"><span class="lever"></span></label>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Location Permission</span>
+                        <div class="switch">
+                            <label><input type="checkbox" checked><span class="lever"></span></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</aside>

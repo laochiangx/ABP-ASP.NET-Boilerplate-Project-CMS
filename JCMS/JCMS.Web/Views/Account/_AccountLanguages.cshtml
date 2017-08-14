@@ -1,0 +1,12 @@
+﻿@model JCMS.Web.Models.LanguageSelectionViewModel
+@if (Model.Languages.Count > 1)
+{
+    <div class="language-switch-area">
+        @foreach (var languageInfo in Model.Languages)
+        {
+            <a href="@(ApplicationPath)AbpLocalization/ChangeCulture?cultureName=@(languageInfo.Name)&returnUrl=@(Request.Url)">
+                <span class="language-icon @(languageInfo == Model.CurrentLanguage ? "language-icon-current" : "")" title="@languageInfo.DisplayName"><i class="@languageInfo.Icon"></i></span>
+            </a>
+        }
+    </div>
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localizationDictionary culture="zh-CN">
+  <texts>
+    <text name="HomePage" value="主页" />
+    <text name="About" value="关于我们" />
+    <text name="WellcomeMessage" value="欢迎使用 JCMS!" />
+
+    <text name="FormIsNotValidMessage" value="部分输入信息不符合要求,请检查并改正." />
+    <text name="TenantNameCanNotBeEmpty" value="租户名不能为空" />
+
+    <text name="InvalidUserNameOrPassword" value="用户名或密码无效" />
+    <text name="ThereIsNoTenantDefinedWithName{0}" value="租户 {0}不存在" />
+    <text name="TenantIsNotActive" value="租户 {0} 未激活." />
+    <text name="UserIsNotActiveAndCanNotLogin" value="用户 {0} 未激活,不能登录." />
+    <text name="UserEmailIsNotConfirmedAndCanNotLogin">你的邮箱地址未确认.不能登录</text>
+    <text name="UserLockedOutMessage">该用户帐户已经被锁定.请稍后重试.</text>
+    <text name="PleaseEnterLoginInformation" value="请输入登录信息" />
+    <text name="TenancyName" value="租户名称" />
+    <text name="UserNameOrEmail" value="用户名或邮箱地址" />
+    <text name="Password" value="密码" />
+    <text name="RememberMe" value="记住我" />
+    <text name="LogIn" value="登录" />
+
+    <text name="LoginFailed" value="登录失败!" />
+
+    <text name="NameSurname" value="名 姓" />
+    <text name="UserName" value="用户名" />
+    <text name="Name" value="名" />
+    <text name="Surname" value="姓" />
+    <text name="EmailAddress" value="邮箱地址" />
+
+    <text name="Tenants" value="租户" />
+    <text name="SavedSuccessfully" value="保存成功" />
+    <text name="CreateNewTenant" value="创建新租户" />
+    <text name="AdminEmailAddress" value="管理员邮箱地址" />
+    <text name="Save" value="保存" />
+    <text name="Cancel" value="取消" />
+    <text name="TenantName_Regex_Description" value="租户名至少2个字符,以字母开头后跟字母,数字,横线或下划线." />
+    <text name="DefaultPasswordIs" value="默认密码为 {0}" />
+    <text name="CanBeEmptyToLoginAsHost" value="留空以主租户登录." />
+    <text name="Register" value="注册" />
+    <text name="OrLoginWith" value="其他登录方式" />
+    <text name="WaitingForActivationMessage" value="你的帐户正在等待管理员激活." />
+    <text name="TenantSelection" value="租户选择" />
+    <text name="TenantSelection_Detail" value="请选择其中一个租户." />
+    <text name="Logout" value="注销" />
+
+    <text name="RegisterFormUserNameInvalidMessage">请不要在用户名中输入邮箱地址.</text>
+
+    <text name="DatabaseConnectionString" value="数据库连接串" />
+    <text name="Users" value="用户" />
+    <text name="IsActive" value="是否激活" />
+    <text name="FullName" value="姓名" />
+    <text name="CreateNewUser" value="创建新用户" />
+    <text name="Yes" value="是" />
+    <text name="No" value="否" />
+    <text name="Optional" value="可选的" />
+  </texts>
+</localizationDictionary>

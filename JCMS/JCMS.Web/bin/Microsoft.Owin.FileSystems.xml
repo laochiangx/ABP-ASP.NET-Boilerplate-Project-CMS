@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Owin.FileSystems</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Owin.FileSystems.EmbeddedResourceFileSystem">
+            <summary>
+            Looks up files using embedded resources in the specified assembly.
+            This file system is case sensitive.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Owin.FileSystems.IFileSystem">
+            <summary>
+            A file system abstraction
+            </summary>
+        </member>
+        <member name="M:Microsoft.Owin.FileSystems.IFileSystem.TryGetFileInfo(System.String,Microsoft.Owin.FileSystems.IFileInfo@)">
+            <summary>
+            Locate a file at the given path
+            </summary>
+            <param name="subpath">The path that identifies the file</param>
+            <param name="fileInfo">The discovered file if any</param>
+            <returns>True if a file was located at the given path</returns>
+        </member>
+        <member name="M:Microsoft.Owin.FileSystems.IFileSystem.TryGetDirectoryContents(System.String,System.Collections.Generic.IEnumerable{Microsoft.Owin.FileSystems.IFileInfo}@)">
+            <summary>
+            Enumerate a directory at the given path, if any
+            </summary>
+            <param name="subpath">The path that identifies the directory</param>
+            <param name="contents">The contents if any</param>
+            <returns>True if a directory was located at the given path</returns>
+        </member>
+        <member name="M:Microsoft.Owin.FileSystems.EmbeddedResourceFileSystem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Owin.FileSystems.EmbeddedResourceFileSystem"/> class using the calling
+            assembly and empty base namespace.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Owin.FileSystems.EmbeddedResourceFileSystem.#ctor(System.Reflection.Assembly)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Owin.FileSystems.EmbeddedResourceFileSystem"/> class using the specified
+            assembly and empty base namespace.
+            </summary>
+            <param name="assembly"></param>
+        </member>
+        <member name="M:Microsoft.Owin.FileSystems.EmbeddedResourceFileSystem.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Owin.FileSystems.EmbeddedResourceFileSystem"/> class using the calling
+            assembly and specified base namespace.
+            </summary>
+            <param name="baseNamespace">The base namespace that contains the embedded resources.</param>
+        </member>
+        <member name="M:Microsoft.Owin.FileSystems.EmbeddedResourceFileSystem.#ctor(System.Reflection.Assembly,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Owin.FileSystems.EmbeddedResourceFileSystem"/> class using the specified
+            assembly and base namespace.
+            </summary>
+            <param name="assembly">The assembly that contains the embedded resources.</param>
+            <param name="baseNamespace">The base namespace that contains the embedded resources.</param>
+        </member>
+        <member name="M:Microsoft.Owin.FileSystems.EmbeddedResourceFileSystem.TryGetFileInfo(System.String,Microsoft.Owin.FileSystems.IFileInfo@)">
+            <summary>
+            Locate a file at the given path
+            </summary>
+            <param name="subpath">The path that identifies the file</param>
+            <param name="fileInfo">The discovered file if any</param>
+            <returns>True if a file was located at the given path</returns>
+        </member>
+        <member name="M:Microsoft.Owin.FileSystems.EmbeddedResourceFileSystem.TryGetDirectoryContents(System.String,System.Collections.Generic.IEnumerable{Microsoft.Owin.FileSystems.IFileInfo}@)">
+            <summary>
+            Enumerate a directory at the given path, if any.
+            This file system uses a flat directory structure. Everything under the base namespace is considered to be one directory.
+            </summary>
+            <param name="subpath">The path that identifies the directory</param>
+            <param name="contents">The contents if any</param>
+            <returns>True if a directory was located at the given path</returns>
+        </member>
+        <member name="T:Microsoft.Owin.FileSystems.IFileInfo">
+            <summary>
+            Represents a file in the given file system.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Owin.FileSystems.IFileInfo.CreateReadStream">
+            <summary>
+            Return file contents as readonly stream. Caller should dispose stream when complete.
+            </summary>
+            <returns>The file stream</returns>
+        </member>
+        <member name="P:Microsoft.Owin.FileSystems.IFileInfo.Length">
+            <summary>
+            The length of the file in bytes, or -1 for a directory info
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.FileSystems.IFileInfo.PhysicalPath">
+            <summary>
+            The path to the file, including the file name.  Return null if the file is not directly accessible.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.FileSystems.IFileInfo.Name">
+            <summary>
+            The name of the file
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.FileSystems.IFileInfo.LastModified">
+            <summary>
+            When the file was last modified
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.FileSystems.IFileInfo.IsDirectory">
+            <summary>
+            True for the case TryGetDirectoryContents has enumerated a sub-directory
+            </summary>
+        </member>
+        <member name="T:Microsoft.Owin.FileSystems.PhysicalFileSystem">
+            <summary>
+            Looks up files using the on-disk file system
+            </summary>
+        </member>
+        <member name="M:Microsoft.Owin.FileSystems.PhysicalFileSystem.#ctor(System.String)">
+            <summary>
+            Creates a new instance of a PhysicalFileSystem at the given root directory.
+            </summary>
+            <param name="root">The root directory</param>
+        </member>
+        <member name="M:Microsoft.Owin.FileSystems.PhysicalFileSystem.TryGetFileInfo(System.String,Microsoft.Owin.FileSystems.IFileInfo@)">
+            <summary>
+            Locate a file at the given path by directly mapping path segments to physical directories.
+            </summary>
+            <param name="subpath">A path under the root directory</param>
+            <param name="fileInfo">The discovered file, if any</param>
+            <returns>True if a file was discovered at the given path</returns>
+        </member>
+        <member name="M:Microsoft.Owin.FileSystems.PhysicalFileSystem.TryGetDirectoryContents(System.String,System.Collections.Generic.IEnumerable{Microsoft.Owin.FileSystems.IFileInfo}@)">
+            <summary>
+            Enumerate a directory at the given path, if any.
+            </summary>
+            <param name="subpath">A path under the root directory</param>
+            <param name="contents">The discovered directories, if any</param>
+            <returns>True if a directory was discovered at the given path</returns>
+        </member>
+        <member name="P:Microsoft.Owin.FileSystems.PhysicalFileSystem.Root">
+            <summary>
+            The root directory for this instance.
+            </summary>
+        </member>
+    </members>
+</doc>

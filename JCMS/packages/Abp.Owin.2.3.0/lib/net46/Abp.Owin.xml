@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abp.Owin</name>
+    </assembly>
+    <members>
+        <member name="T:Abp.Owin.AbpOwinExtensions">
+            <summary>
+            OWIN extension methods for ABP.
+            </summary>
+        </member>
+        <member name="M:Abp.Owin.AbpOwinExtensions.UseAbp(Owin.IAppBuilder)">
+            <summary>
+            This should be called as the first line for OWIN based applications for ABP framework.
+            </summary>
+            <param name="app">The application.</param>
+        </member>
+        <member name="M:Abp.Owin.AbpOwinExtensions.UseAbp``1(Owin.IAppBuilder)">
+            <summary>
+            Use this extension method if you don't initialize ABP in other way.
+            Otherwise, use <see cref="M:Abp.Owin.AbpOwinExtensions.UseAbp(Owin.IAppBuilder)"/>.
+            </summary>
+            <param name="app">The application.</param>
+            <typeparam name="TStartupModule">The type of the startup module.</typeparam>
+        </member>
+        <member name="M:Abp.Owin.AbpOwinExtensions.UseAbp``1(Owin.IAppBuilder,System.Action{Abp.AbpBootstrapper},System.Action{Abp.Owin.AbpOwinOptions})">
+            <summary>
+            Use this extension method if you don't initialize ABP in other way.
+            Otherwise, use <see cref="M:Abp.Owin.AbpOwinExtensions.UseAbp(Owin.IAppBuilder)"/>.
+            </summary>
+            <typeparam name="TStartupModule">The type of the startup module.</typeparam>
+        </member>
+        <member name="T:Abp.Owin.AbpOwinModule">
+            <summary>
+            OWIN integration module for ABP.
+            </summary>
+        </member>
+        <member name="P:Abp.Owin.AbpOwinOptions.UseEmbeddedFiles">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
+    </members>
+</doc>
