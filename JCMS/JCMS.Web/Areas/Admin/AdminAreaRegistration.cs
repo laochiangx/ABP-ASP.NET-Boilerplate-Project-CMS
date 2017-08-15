@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace JCmsErp.Web.Areas.Admin
+namespace JCMS.Web.Areas.Admin
 {
     public class AdminAreaRegistration : AreaRegistration 
     {

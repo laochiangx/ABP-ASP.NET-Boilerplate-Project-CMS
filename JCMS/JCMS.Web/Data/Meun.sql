@@ -13,6 +13,7 @@ CREATE TABLE [dbo].[Modules](
 	[Description] [nvarchar](100) NULL,
 	[Enabled] [bit] NOT NULL,
 	[UpdateDate] [datetime] NOT NULL,
+	[TenantId] [nvarchar](20)  NULL,
  CONSTRAINT [PK_dbo.Modules] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

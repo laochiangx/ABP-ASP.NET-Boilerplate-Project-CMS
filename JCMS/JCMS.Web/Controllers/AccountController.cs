@@ -295,6 +295,9 @@ namespace JCMS.Web.Controllers
                     {
                         await SignInAsync(loginResult.User, loginResult.Identity);
                         return Redirect(Url.Action("Index", "Home"));
+                      
+
+                       //return Redirect(Url.Action("/Admin/UserInfo/Index"));
                     }
 
                     Logger.Warn("New registered user could not be login. This should not be normally. login result: " + loginResult.Result);

@@ -12,7 +12,8 @@ namespace JCMS.Migrations
 
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled =false;
+            //AutomaticMigrationDataLossAllowed = false;
             ContextKey = "JCMS";
         }
 

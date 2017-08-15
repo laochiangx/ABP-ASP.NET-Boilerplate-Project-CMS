@@ -1,10 +1,10 @@
-﻿using JCmsErp.Meuns;
+﻿using JCms.Meuns;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace JCmsErp.Web.Areas.Common.Models
+namespace JCMS.Web.Areas.Common.Models
 {
     public class MeunViewModel
     {
