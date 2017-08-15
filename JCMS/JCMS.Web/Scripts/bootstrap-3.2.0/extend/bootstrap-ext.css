@@ -1,0 +1,186 @@
+.ext-sidenav
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ext-sidebar .nav > li > a
+{
+    display: block;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+}
+
+.ext-sidebar .nav > li > a:hover, .ext-sidebar .nav > li > a:focus
+{
+    padding-left: 19px;
+    color: #563d7c;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #563d7c;
+}
+
+.ext-panel-header
+{
+    margin-top: 8px;
+    font-weight: bold;
+    margin-bottom: -8px;
+    height: 24px;
+}
+
+.ext-page-header
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    height: 24px;
+}
+
+.ext-nav
+{
+    margin-bottom: 10px;
+}
+
+.ext-checkbox
+{
+    padding-right: 210px;
+}
+
+.ext-m-4
+{
+    margin-right: 4px;
+}
+
+.ext-pagination
+{
+    margin-top: -20px;
+}
+
+.w5c-error
+{
+    color: #b94a48;
+}
+
+.ext-sidebar .nav > .active > a, .ext-sidebar .nav > .active:hover > a, .ext-sidebar .nav > .active:focus > a
+{
+    padding-left: 18px;
+    font-weight: 700;
+    color: #563d7c;
+    background-color: transparent;
+    border-left: 2px solid #563d7c;
+}
+
+.ext-list-group-item
+{
+    border-left-color: transparent;
+}
+
+.ext-lesson-list
+{
+    background-color: #fff;
+}
+
+.ext-title
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ext-tabs
+{
+    margin: 2px;
+}
+
+.ext-lesson-content-audio-body
+{
+    text-align: center;
+    margin-top: 180px;
+}
+
+.ext-lesson-content-scorm-body
+{
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+    min-height: 100%;
+    background: none repeat scroll 0 0 #fff;
+}
+
+.ext-scorm-body
+{
+    margin: 0;
+}
+
+.ext-copy-text
+{
+    padding: 10px;
+}
+
+.ext-font
+{
+    font-size: 18px;
+    padding: 15px;
+}
+
+.ext-panel-body
+{
+    position: relative;
+    overflow: hidden;
+    max-height: 460px;
+}
+
+.ext-dashboard-content
+{
+    right: 424px;
+}
+
+.ext-lesson-content-testpaper-body
+{
+    margin: 100px auto;
+    text-align: center;
+    width: 50%;
+    background: none repeat scroll 0 0 #fff;
+    padding: 10px;
+}
+
+.ext-header
+{
+    margin-bottom: 20px;
+}
+
+.ext-margin-bottom
+{
+    margin-bottom: 15px;
+}
+
+.ext-margin-right
+{
+    margin-right: 5px;
+}
+
+.ic
+{
+    margin-right: 8px;
+}
+
+.ext-over {
+    background-color: #E2FADD;
+}
+
+.ext-span-top {
+    margin-top: 8px;
+}
+
+.ext-span-r 
+{
+    margin-right: 10px;
+}
+
+
+div{ 
+word-wrap: break-word; 
+word-break: normal; 
+}

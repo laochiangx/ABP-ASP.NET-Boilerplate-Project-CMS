@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abp.TestBase</name>
+    </assembly>
+    <members>
+        <member name="T:Abp.TestBase.AbpIntegratedTestBase`1">
+            <summary>
+            This is the base class for all tests integrated to ABP.
+            </summary>
+        </member>
+        <member name="P:Abp.TestBase.AbpIntegratedTestBase`1.LocalIocManager">
+            <summary>
+            Local <see cref="T:Abp.Dependency.IIocManager"/> used for this test.
+            </summary>
+        </member>
+        <member name="P:Abp.TestBase.AbpIntegratedTestBase`1.AbpSession">
+            <summary>
+            Gets Session object. Can be used to change current user and tenant in tests.
+            </summary>
+        </member>
+        <member name="M:Abp.TestBase.AbpIntegratedTestBase`1.PreInitialize">
+            <summary>
+            This method can be overrided to replace some services with fakes.
+            </summary>
+        </member>
+        <member name="M:Abp.TestBase.AbpIntegratedTestBase`1.PostInitialize">
+            <summary>
+            This method can be overrided to replace some services with fakes.
+            </summary>
+        </member>
+        <member name="M:Abp.TestBase.AbpIntegratedTestBase`1.Resolve``1">
+            <summary>
+            A shortcut to resolve an object from <see cref="P:Abp.TestBase.AbpIntegratedTestBase`1.LocalIocManager"/>.
+            Also registers <typeparamref name="T"/> as transient if it's not registered before.
+            </summary>
+            <typeparam name="T">Type of the object to get</typeparam>
+            <returns>The object instance</returns>
+        </member>
+        <member name="M:Abp.TestBase.AbpIntegratedTestBase`1.Resolve``1(System.Object)">
+            <summary>
+            A shortcut to resolve an object from <see cref="P:Abp.TestBase.AbpIntegratedTestBase`1.LocalIocManager"/>.
+            Also registers <typeparamref name="T"/> as transient if it's not registered before.
+            </summary>
+            <typeparam name="T">Type of the object to get</typeparam>
+            <param name="argumentsAsAnonymousType">Constructor arguments</param>
+            <returns>The object instance</returns>
+        </member>
+        <member name="M:Abp.TestBase.AbpIntegratedTestBase`1.Resolve(System.Type)">
+            <summary>
+            A shortcut to resolve an object from <see cref="P:Abp.TestBase.AbpIntegratedTestBase`1.LocalIocManager"/>.
+            Also registers <paramref name="type"/> as transient if it's not registered before.
+            </summary>
+            <param name="type">Type of the object to get</param>
+            <returns>The object instance</returns>
+        </member>
+        <member name="M:Abp.TestBase.AbpIntegratedTestBase`1.Resolve(System.Type,System.Object)">
+            <summary>
+            A shortcut to resolve an object from <see cref="P:Abp.TestBase.AbpIntegratedTestBase`1.LocalIocManager"/>.
+            Also registers <paramref name="type"/> as transient if it's not registered before.
+            </summary>
+            <param name="type">Type of the object to get</param>
+            <param name="argumentsAsAnonymousType">Constructor arguments</param>
+            <returns>The object instance</returns>
+        </member>
+        <member name="M:Abp.TestBase.AbpIntegratedTestBase`1.EnsureClassRegistered(System.Type,Abp.Dependency.DependencyLifeStyle)">
+            <summary>
+            Registers given type if it's not registered before.
+            </summary>
+            <param name="type">Type to check and register</param>
+            <param name="lifeStyle">Lifestyle</param>
+        </member>
+    </members>
+</doc>

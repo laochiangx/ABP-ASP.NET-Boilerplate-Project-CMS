@@ -1,0 +1,69 @@
+﻿
+
+
+@{
+    ViewBag.Title = "InitDataBase";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JCmsErp安装程序</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/Scripts/bootstrap-3.2.0/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Scripts/bootstrap-3.2.0/css/install.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="install-container">
+        <div class="paper">
+            <div class="paper-heading">
+                <h1>
+                    <span class="brand">JCmsErp</span> <span class="text-muted">安装向导</span>
+                </h1>
+            </div>
+            <div class="paper-body">
+                <div class="actions">
+                    <button id="btnInit" class="btn btn-default">
+                        初始化数据
+                    </button>
+                    <div id="info">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script type="text/javascript">
+        $("#btnInit").click(function () {
+            $(this).attr("disabled", "disabled");
+            $(this).next().text("正在初始化数据......");
+
+            var btnInit = $(this).next();
+            var lbTip = $(this).next();
+            $.ajax({
+                url: '/Home/CheckDatabase',
+                success: function (data) {
+                    if (data.success) {
+                       // $.messager.alert('提示', '操作成功！请重启站点！');
+                        window.location = "/Account/Login";
+                    } else {
+                        alert('操作失败！请查看日志！');
+                    }
+                },
+                error: function () {
+                    alert('初始化数据失败！');
+                },
+                complete: function () {
+                    $.messager.progress('close');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
