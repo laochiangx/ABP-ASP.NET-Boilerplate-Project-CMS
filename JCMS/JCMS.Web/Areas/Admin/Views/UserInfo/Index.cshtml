@@ -119,31 +119,32 @@
                 var actionUrl = "@Url.Action("Create")";
                 var UserName = $("#txt_Surname").val();
                 var Email = $("#txt_Name").val();
-                var Phone = $("#txt_UserName").val();
+                var Name = $("#txt_UserName").val();
                 var isnull = $("#txt_isDeleted").val();
                 var isDeleted = true;
                 if (isnull=="") {
                     isDeleted = false;
                 }
                 var Id = $("#id").val() == "" ? 0 : $("#id").val();
-                debugger;
                 $.ajax({
                     type: 'post',
                     dataType: "Json",
                     url: actionUrl,
-                    data: { Id: Id, UserName: UserName, Email: Email, Phone: Phone, isDeleted: isDeleted },
+                    data: { id:Id,UserName: UserName, EmailAddress: Email, Name: Name, Surname: "test", Password:"123456" },
+                   // async: false,
                     beforeSend: function (XMLHttpRequest) {
                     },
                     success: function (data, textStatus) { //请求成功后处理函数。
                         toastr.warning('操作成功!');
                         var actionUrl = "@Url.Action("GetUsersList")";
-                        m_pagerow = 0;
+                         var m_pagerow = 0;
                         $("#tb_departments").bootstrapTable('refresh', { url: actionUrl });
                     },
                     error: function (XMLHttpRequest, textStatus, errorThrown) {
                     }
                 });
-                });
+            });
+
             //编辑角色
             $("#btn_edit").click(function () {
                 debugger;
@@ -156,16 +157,17 @@
                     toastr.warning('请选择有效数据');
                     return;
                 }
-                $("#id").val(arrselections[0].Id);
+                $("#id").val(arrselections[0].id);
                 $("#txt_Surname").val(arrselections[0].UserName);
                 $("#txt_Name").val(arrselections[0].EmailAddress);
-                $("#txt_UserName").val(arrselections[0].Phone);
+                $("#txt_UserName").val(arrselections[0].Name);
                 $("#txt_isDeleted").val(arrselections[0].Id);
 
                 $("#myModalLabel").text("修改");
                 $('#myModal').modal();
                 //ShowModal(actionUrl, param, "编辑角色");
             });
+
             //删除角色
             $("#btn_delete").click(function () {
                 var actionUrl = "@Url.Action("DelUserById")";
@@ -178,14 +180,14 @@
                     toastr.warning('请选择有效数据');
                     return;
                 }
-                var Id = arrselections[0].Id;
                 debugger;
+                var Id = arrselections[0].id;
                 $.ajax({
                     type: 'post',
                     dataType: "Json",
                     url: actionUrl,
                     data: { Id: Id },
-                    async: false,
+                   // async: false,
                     beforeSend: function (XMLHttpRequest) {
                     },
                     success: function (data, textStatus) { //请求成功后处理函数。
@@ -198,6 +200,7 @@
                     }
                 });
             });
+
             //权限授权
             $("#btn_authorize").click(function () {
                 var arrselections = $("#tb_departments").bootstrapTable('getSelections');
@@ -332,15 +335,15 @@
                     <div class="form-group">
                         <label for="txt_departmentname">姓名</label>
                         <input type="text" name="id" class="form-control" id="id" placeholder="id" style="display:none">
-                        <input type="text" name="txt_departmentname" class="form-control" id="txt_Surname" placeholder="真实姓名">
+                        <input type="text" name="txt_departmentname" class="form-control" id="txt_Surname" placeholder="姓名">
                     </div>
                     <div class="form-group">
                         <label for="txt_parentdepartment">邮箱</label>
-                        <input type="text" name="txt_parentdepartment" class="form-control" id="txt_Name" placeholder="姓名">
+                        <input type="text" name="txt_parentdepartment" class="form-control" id="txt_Name" placeholder="邮箱">
                     </div>
                     <div class="form-group">
-                        <label for="txt_departmentlevel">手机</label>
-                        <input type="text" name="txt_departmentlevel" class="form-control" id="txt_UserName" placeholder="部门级别">
+                        <label for="txt_departmentlevel">真实姓名</label>
+                        <input type="text" name="txt_departmentlevel" class="form-control" id="txt_UserName" placeholder="真实姓名">
                     </div>
                     <div class="form-group">
                         <label for="txt_departmentlevel">是否启用</label>

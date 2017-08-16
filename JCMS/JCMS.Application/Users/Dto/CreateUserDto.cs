@@ -3,12 +3,16 @@ using Abp.Auditing;
 using Abp.Authorization.Users;
 using Abp.AutoMapper;
 using JCMS.Authorization.Users;
+using System;
 
 namespace JCMS.Users.Dto
 {
+    [Serializable]
     [AutoMapTo(typeof(User))]
     public class CreateUserDto
     {
+         public int id { get; set; }
+
         [Required]
         [StringLength(AbpUserBase.MaxUserNameLength)]
         public string UserName { get; set; }

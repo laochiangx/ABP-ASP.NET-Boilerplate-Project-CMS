@@ -15,6 +15,8 @@ using JCMS.Roles.Dto;
 using JCMS.Users.Dto;
 using Microsoft.AspNet.Identity;
 using Abp.AutoMapper;
+using Abp.Domain.Uow;
+using System;
 
 namespace JCMS.Users
 {
@@ -25,6 +27,7 @@ namespace JCMS.Users
         private readonly RoleManager _roleManager;
         private readonly IRepository<Role> _roleRepository;
         private readonly IRepository<User, long> _userRepository;
+        private readonly IUnitOfWorkManager _unitOfWorkManager;
 
         public UserAppService(
             IRepository<User, long> repository, 
@@ -149,6 +152,56 @@ namespace JCMS.Users
                            Name = s.Name
                        };
             return userlist=data.ToList();
+        }
+        /// <summary>
+        /// 创建用户
+        /// </summary>
+        /// <param name="userdto"></param>
+        /// <returns></returns>
+        public bool  CreateUser(CreateUserDto userdto)
+        {
+            try
+            {
+
+                User user = new User();
+                user = userdto.MapTo<User>();
+                _userRepository.InsertOrUpdateAsync(user);
+            }
+            catch (Exception ex)
+            {
+                var msg = ex.Message;
+                return false;
+            }
+            return true;
+        }
+        /// <summary>
+        /// 删除用户
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public string DelUser(string id)
+        {
+
+            string Start = "ok";
+            try
+            {
+                var userEntity = _userRepository.Get(int.Parse(id));
+                if (userEntity == null)
+                {
+                    return Start = "你删除的对象不存在";
+                }
+                else
+                {
+                    User user = _userRepository.Get(int.Parse(id));
+                    _userRepository.DeleteAsync(user);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return Start = ex.Message;
+            }
+            return Start;
         }
     }
 }

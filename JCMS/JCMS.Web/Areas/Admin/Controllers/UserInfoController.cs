@@ -46,6 +46,24 @@ namespace JCMS.Web.Areas.Admin.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
 
         }
+   
+        [DisableAbpAntiForgeryTokenValidation]
+        [HttpPost]
+        [DontWrapResult]
+        public ActionResult Create(CreateUserDto userdto)
+        {
+            var result = _UserAppService.CreateUser(userdto);
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        [DisableAbpAntiForgeryTokenValidation]
+        [HttpPost]
+        [DontWrapResult]
+        public ActionResult DelUserById(string Id)
+        {
+            var result = _UserAppService.DelUser(Id);
+            return Json(result);
+        }
 
     }
 }
