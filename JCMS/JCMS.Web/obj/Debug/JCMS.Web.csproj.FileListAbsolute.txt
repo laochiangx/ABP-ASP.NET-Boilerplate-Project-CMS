@@ -222,7 +222,10 @@ G:\JCMS\JCMS.Web\bin\System.Web.WebPages.Deployment.dll
 G:\JCMS\JCMS.Web\bin\System.Web.WebPages.dll
 G:\JCMS\JCMS.Web\bin\System.Web.WebPages.Razor.dll
 G:\JCMS\JCMS.Web\bin\WebGrease.dll
+G:\JCMS\JCMS.Web\bin\WebActivatorEx.dll
+G:\JCMS\JCMS.Web\bin\Swashbuckle.Core.dll
 G:\JCMS\JCMS.Web\bin\JCMS.Application.pdb
+G:\JCMS\JCMS.Web\bin\JCMS.Application.xml
 G:\JCMS\JCMS.Web\bin\JCMS.Application.dll.config
 G:\JCMS\JCMS.Web\bin\JCMS.Core.pdb
 G:\JCMS\JCMS.Web\bin\JCMS.Core.dll.config

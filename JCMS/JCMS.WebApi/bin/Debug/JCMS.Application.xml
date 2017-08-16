@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JCMS.Application</name>
+    </assembly>
+    <members>
+        <member name="T:JCMS.JCMSAppServiceBase">
+            <summary>
+            Derive your application services from this class.
+            </summary>
+        </member>
+        <member name="M:JCMS.Users.UserAppService.GetAllList">
+            <summary>
+            获取用户详情
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCms.Meuns.MeunDto">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="P:JCms.Meuns.MeunDto.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:JCms.Meuns.MeunDto.ParentId">
+            <summary>
+            父模块Id
+            </summary>
+        </member>
+        <member name="P:JCms.Meuns.MeunDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:JCms.Meuns.MeunDto.LinkUrl">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:JCms.Meuns.MeunDto.IsMenu">
+            <summary>
+            是否是菜单
+            </summary>
+        </member>
+        <member name="P:JCms.Meuns.MeunDto.Code">
+            <summary>
+            模块编号
+            </summary>
+        </member>
+        <member name="P:JCms.Meuns.MeunDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JCms.Meuns.MeunDto.Enabled">
+            <summary>
+            是否激活
+            </summary>
+        </member>
+    </members>
+</doc>

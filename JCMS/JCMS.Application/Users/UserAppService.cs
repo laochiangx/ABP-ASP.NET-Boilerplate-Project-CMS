@@ -14,6 +14,7 @@ using JCMS.Authorization.Users;
 using JCMS.Roles.Dto;
 using JCMS.Users.Dto;
 using Microsoft.AspNet.Identity;
+using Abp.AutoMapper;
 
 namespace JCMS.Users
 {
@@ -23,17 +24,19 @@ namespace JCMS.Users
         private readonly UserManager _userManager;
         private readonly RoleManager _roleManager;
         private readonly IRepository<Role> _roleRepository;
+        private readonly IRepository<User, long> _userRepository;
 
         public UserAppService(
             IRepository<User, long> repository, 
             UserManager userManager, 
-            IRepository<Role> roleRepository, 
+            IRepository<Role> roleRepository, IRepository<User, long> userRepository,
             RoleManager roleManager)
             : base(repository)
         {
             _userManager = userManager;
             _roleRepository = roleRepository;
             _roleManager = roleManager;
+            _userRepository = userRepository;
         }
 
         public override async Task<UserDto> Get(EntityDto<long> input)
@@ -127,6 +130,25 @@ namespace JCMS.Users
         protected virtual void CheckErrors(IdentityResult identityResult)
         {
             identityResult.CheckErrors(LocalizationManager);
+        }
+        /// <summary>
+        /// 获取用户详情
+        /// </summary>
+        /// <returns></returns>
+        public List<UserDto> GetAllList()
+        {
+            List<UserDto>  userlist = new List<UserDto>();
+            var data = from s in _userRepository.GetAll()
+                       select new UserDto()
+                       {
+                           id = s.Id.ToString(),
+                           UserName = s.UserName,
+                           Surname = s.Surname,
+                           EmailAddress = s.EmailAddress,
+                           CreationTime = s.CreationTime,
+                           Name = s.Name
+                       };
+            return userlist=data.ToList();
         }
     }
 }

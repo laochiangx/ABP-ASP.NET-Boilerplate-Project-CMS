@@ -52,6 +52,7 @@ C:\Users\jiangcy\Desktop\JCMS\JCMS.Application\obj\Debug\JCMS.Application.pdb
 G:\JCMS\JCMS.Application\bin\Debug\JCMS.Application.dll.config
 G:\JCMS\JCMS.Application\bin\Debug\JCMS.Application.dll
 G:\JCMS\JCMS.Application\bin\Debug\JCMS.Application.pdb
+G:\JCMS\JCMS.Application\bin\Debug\JCMS.Application.xml
 G:\JCMS\JCMS.Application\bin\Debug\Abp.AutoMapper.dll
 G:\JCMS\JCMS.Application\bin\Debug\Abp.dll
 G:\JCMS\JCMS.Application\bin\Debug\Abp.Zero.Common.dll

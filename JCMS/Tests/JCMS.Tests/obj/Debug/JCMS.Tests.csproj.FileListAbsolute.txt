@@ -41,6 +41,7 @@ G:\JCMS\Tests\JCMS.Tests\bin\Debug\xunit.assert.dll
 G:\JCMS\Tests\JCMS.Tests\bin\Debug\xunit.core.dll
 G:\JCMS\Tests\JCMS.Tests\bin\Debug\xunit.execution.desktop.dll
 G:\JCMS\Tests\JCMS.Tests\bin\Debug\JCMS.Application.pdb
+G:\JCMS\Tests\JCMS.Tests\bin\Debug\JCMS.Application.xml
 G:\JCMS\Tests\JCMS.Tests\bin\Debug\JCMS.Application.dll.config
 G:\JCMS\Tests\JCMS.Tests\bin\Debug\JCMS.Core.pdb
 G:\JCMS\Tests\JCMS.Tests\bin\Debug\JCMS.Core.dll.config
