@@ -11,7 +11,7 @@ namespace JCMS.Users.Dto
     [AutoMapTo(typeof(User))]
     public class CreateUserDto
     {
-         public int id { get; set; }
+        // public long id { get; set; }
 
         [Required]
         [StringLength(AbpUserBase.MaxUserNameLength)]

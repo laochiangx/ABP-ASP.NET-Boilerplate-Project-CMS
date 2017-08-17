@@ -9,44 +9,22 @@
             Derive your application services from this class.
             </summary>
         </member>
+        <member name="M:JCMS.Roles.RoleAppService.GetAllList">
+            <summary>
+            获取角色详情
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:JCMS.Users.IUserAppService.GetAllList">
             <summary>
             获取用户
             </summary>
             <returns></returns>
         </member>
-        <member name="M:JCMS.Users.IUserAppService.CreateUser(JCMS.Users.Dto.CreateUserDto)">
-            <summary>
-            创建用户
-            </summary>
-            <param name="userdto"></param>
-            <returns></returns>
-        </member>
-        <member name="M:JCMS.Users.IUserAppService.DelUser(System.String)">
-            <summary>
-            删除用户
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
         <member name="M:JCMS.Users.UserAppService.GetAllList">
             <summary>
             获取用户详情
             </summary>
-            <returns></returns>
-        </member>
-        <member name="M:JCMS.Users.UserAppService.CreateUser(JCMS.Users.Dto.CreateUserDto)">
-            <summary>
-            创建用户
-            </summary>
-            <param name="userdto"></param>
-            <returns></returns>
-        </member>
-        <member name="M:JCMS.Users.UserAppService.DelUser(System.String)">
-            <summary>
-            删除用户
-            </summary>
-            <param name="id"></param>
             <returns></returns>
         </member>
         <member name="T:JCms.Meuns.MeunDto">

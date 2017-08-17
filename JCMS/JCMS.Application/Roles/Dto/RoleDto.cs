@@ -4,12 +4,14 @@ using Abp.Application.Services.Dto;
 using Abp.Authorization.Roles;
 using Abp.AutoMapper;
 using JCMS.Authorization.Roles;
+using System;
 
 namespace JCMS.Roles.Dto
 {
     [AutoMapFrom(typeof(Role)), AutoMapTo(typeof(Role))]
     public class RoleDto : EntityDto<int>
     {
+        public long id { get; set; }
         [Required]
         [StringLength(AbpRoleBase.MaxNameLength)]
         public string Name { get; set; }
@@ -24,5 +26,8 @@ namespace JCMS.Roles.Dto
         public bool IsStatic { get; set; }
 
         public List<string> Permissions { get; set; }
+
+        public DateTime CreationTime { get; set; }
+
     }
 }

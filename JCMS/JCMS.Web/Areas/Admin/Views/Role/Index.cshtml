@@ -3,10 +3,14 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Common/Views/Layout/_Layout.cshtml";
 }
+
 <meta name="viewport" content="width=device-width" />
 <script type="text/javascript">
 
     $(function () {
+
+
+
         //1.初始化Table
         var oTable = new TableInit();
         oTable.Init();
@@ -51,17 +55,17 @@
                 columns: [{
                     checkbox: true
                 }, {
-                    field: 'UserName',
-                    title: '姓名'
-                }, {
-                    field: 'EmailAddress',
-                    title: '邮箱'
-                }, {
-                    field: 'Surname',
-                    title: '真是姓名'
-                }, {
                      field: 'Name',
-                    title: '角色'
+                    title: '角色名称'
+                }, {
+                    field: 'DisplayName',
+                    title: '描述'
+                }, {
+                     field: 'CreationTime',
+                    title: '创建时间'
+                }, {
+                     field: 'IsStatic',
+                    title: '是否启用'
                 }, ]
             });
         };
@@ -96,10 +100,8 @@
             //新增角色
             $("#btn_add").click(function () {
                 $("#id").val("");
-                $("#txt_Surname").val("");
                 $("#txt_Name").val("");
-                $("#txt_UserName").val("");
-                $("#txt_isDeleted").val("");
+                $("#txt_DisplayName").val("");
                 $("#myModalLabel").text("新增");
                 $('#myModal').modal();
             });
@@ -107,12 +109,13 @@
             $("#btn_submit").click(function () {
 
                 var Id = $("#id").val() == "" ? 0 : $("#id").val();
-                var Url = "/api/services/app/user/Update";
+                var Url = "/api/services/app/role/Update";
                 var ajaxtype = "put";
                 if ($("#id").val() == "") {
-                    Url = "/api/services/app/user/Create";
+                    Url = "/api/services/app/role/Create";
                     ajaxtype = "post";
                 }
+                debugger;
                 var careteorUpdatePerson = function (person, ajaxtype) {
                     return abp.ajax({
                         url: Url,
@@ -124,11 +127,9 @@
 
                 var newPerson = {
                      "id": $("#id").val(),
-                     "UserName": $("#txt_Surname").val(),
-                     "EmailAddress" : $("#txt_Name").val(),
-                     "Name": $("#txt_UserName").val(),
-                     "Surname": "test",
-                     "Password": "123456"
+                     "Name": $("#txt_Name").val(),
+                     "DisplayName": $("#txt_DisplayName").val(),
+                     "IsStatic": $("input[type='chekIsStatic']").is(':checked') ? true : false
                 };
 
                 careteorUpdatePerson(newPerson, ajaxtype).done(function (data) {
@@ -149,22 +150,20 @@
                     toastr.warning('请选择有效数据');
                     return;
                 }
+                debugger;
                 $("#id").val(arrselections[0].id);
-                $("#txt_Surname").val(arrselections[0].UserName);
-                $("#txt_Name").val(arrselections[0].EmailAddress);
-                $("#txt_UserName").val(arrselections[0].Name);
-                $("#txt_isDeleted").val(arrselections[0].Id);
-
+                $("#txt_Name").val(arrselections[0].Name);
+                $("#txt_DisplayName").val(arrselections[0].DisplayName);
+                if (!arrselections[0].IsStatic) {
+                    $("#chekIsStatic").attr("checked", false);
+                }
                 $("#myModalLabel").text("修改");
-                $('#myModal').modal();       
+                $('#myModal').modal();
             });
 
-
-            //通常我们使用ajax会按照如下写法，做一个简单的封装来重用ajax，此处框架可以帮你生成简单的调用方法
             var deletePerson = function (person) {
                 return abp.ajax({
-                  //  url: abp.appPath + '/api/services/app/user/Delete',
-                    url:'/api/services/app/user/Delete',
+                    url:'/api/services/app/role/Delete',
                     type: 'delete',
                     async: false,
                     data: JSON.stringify(person)
@@ -185,7 +184,6 @@
                 var newPerson = {
                     "id": Id
                 };
-              //直接调用方法，如何生成上面的调用方法可以参考源码中的Abp.Web.Api项目中/ WebApi/ Controllers/ Scripting/ jQuery下的实现
                 deletePerson(newPerson).done(function (data) {
                         toastr.warning('操作成功!');
                         var actionUrl = "@Url.Action("GetUsersList")";
@@ -260,6 +258,9 @@
 
 
 </script>
+
+
+
 <section class="content-header">
     <h1>
         用户明细
@@ -324,23 +325,23 @@
                 <div class="modal-body">
 
                     <div class="form-group">
-                        <label for="txt_departmentname">姓名</label>
+                        <label for="txt_departmentname">角色名称</label>
                         <input type="text" name="id" class="form-control" id="id" placeholder="id" style="display:none">
-                        <input type="text" name="txt_departmentname" class="form-control" id="txt_Surname" placeholder="姓名">
+                        <input type="text" name="txt_departmentname" class="form-control" id="txt_Name" placeholder="角色名称">
                     </div>
                     <div class="form-group">
-                        <label for="txt_parentdepartment">邮箱</label>
-                        <input type="text" name="txt_parentdepartment" class="form-control" id="txt_Name" placeholder="邮箱">
+                        <label for="txt_parentdepartment">角色描述</label>
+                        <input type="text" name="txt_parentdepartment" class="form-control" id="txt_DisplayName" placeholder="角色描述">
                     </div>
-                    <div class="form-group">
-                        <label for="txt_departmentlevel">真实姓名</label>
-                        <input type="text" name="txt_departmentlevel" class="form-control" id="txt_UserName" placeholder="真实姓名">
-                    </div>
+                    @*<div class="form-group">
+                        <label for="txt_departmentlevel">创建时间</label>
+                        <input type="text" name="txt_departmentlevel" class="form-control" id="txt_CreationTime" placeholder="创建时间">
+                    </div>*@
                     <div class="form-group">
                         <label for="txt_departmentlevel">是否启用</label>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" checked="checked">
+                                <input type="checkbox" id="chekIsStatic" checked="checked">
                             </label>
                         </div>
                     </div>
@@ -354,5 +355,4 @@
     </div>
 
 </section>
-
 

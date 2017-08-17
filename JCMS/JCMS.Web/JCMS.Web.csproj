@@ -3797,6 +3797,7 @@
     <Content Include="Areas\Common\Views\Layout\_MainFooter.cshtml" />
     <Content Include="Areas\Common\Views\Layout\_MainHeader.cshtml" />
     <Content Include="Areas\Admin\Views\UserInfo\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Role\Index.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -4728,6 +4729,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\RoleController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserInfoController.cs" />
     <Compile Include="Areas\Common\CommonAreaRegistration.cs" />
     <Compile Include="Areas\Common\Controllers\LayoutController.cs" />

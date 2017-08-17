@@ -41,63 +41,63 @@ namespace JCMS.Roles
             _roleRepository = roleRepository;
         }
 
-        public override async Task<RoleDto> Create(CreateRoleDto input)
-        {
-            CheckCreatePermission();
+        //public override async Task<RoleDto> Create(CreateRoleDto input)
+        //{
+        //    CheckCreatePermission();
 
-            var role = ObjectMapper.Map<Role>(input);
+        //    var role = ObjectMapper.Map<Role>(input);
 
-            CheckErrors(await _roleManager.CreateAsync(role));
+        //    CheckErrors(await _roleManager.CreateAsync(role));
 
-            var grantedPermissions = PermissionManager
-                .GetAllPermissions()
-                .Where(p => input.Permissions.Contains(p.Name))
-                .ToList();
+        //    var grantedPermissions = PermissionManager
+        //        .GetAllPermissions()
+        //        .Where(p => input.Permissions.Contains(p.Name))
+        //        .ToList();
 
-            await _roleManager.SetGrantedPermissionsAsync(role, grantedPermissions);
+        //    await _roleManager.SetGrantedPermissionsAsync(role, grantedPermissions);
 
-            return MapToEntityDto(role);
-        }
+        //    return MapToEntityDto(role);
+        //}
 
-        public override async Task<RoleDto> Update(RoleDto input)
-        {
-            CheckUpdatePermission();
+        //public override async Task<RoleDto> Update(RoleDto input)
+        //{
+        //    CheckUpdatePermission();
 
-            var role = await _roleManager.GetRoleByIdAsync(input.Id);
+        //    var role = await _roleManager.GetRoleByIdAsync(input.Id);
 
-            ObjectMapper.Map(input, role);
+        //    ObjectMapper.Map(input, role);
 
-            CheckErrors(await _roleManager.UpdateAsync(role));
+        //    CheckErrors(await _roleManager.UpdateAsync(role));
 
-            var grantedPermissions = PermissionManager
-                .GetAllPermissions()
-                .Where(p => input.Permissions.Contains(p.Name))
-                .ToList();
+        //    var grantedPermissions = PermissionManager
+        //        .GetAllPermissions()
+        //        .Where(p => input.Permissions.Contains(p.Name))
+        //        .ToList();
 
-            await _roleManager.SetGrantedPermissionsAsync(role, grantedPermissions);
+        //    await _roleManager.SetGrantedPermissionsAsync(role, grantedPermissions);
 
-            return MapToEntityDto(role);
-        }
+        //    return MapToEntityDto(role);
+        //}
 
-        public override async Task Delete(EntityDto<int> input)
-        {
-            CheckDeletePermission();
+        //public override async Task Delete(EntityDto<int> input)
+        //{
+        //    CheckDeletePermission();
 
-            var role = await _roleManager.FindByIdAsync(input.Id);
-            if (role.IsStatic)
-            {
-                throw new UserFriendlyException("CannotDeleteAStaticRole");
-            }
+        //    var role = await _roleManager.FindByIdAsync(input.Id);
+        //    if (role.IsStatic)
+        //    {
+        //        throw new UserFriendlyException("CannotDeleteAStaticRole");
+        //    }
 
-            var users = await GetUsersInRoleAsync(role.Name);
+        //    var users = await GetUsersInRoleAsync(role.Name);
 
-            foreach (var user in users)
-            {
-                CheckErrors(await _userManager.RemoveFromRoleAsync(user, role.Name));
-            }
+        //    foreach (var user in users)
+        //    {
+        //        CheckErrors(await _userManager.RemoveFromRoleAsync(user, role.Name));
+        //    }
 
-            CheckErrors(await _roleManager.DeleteAsync(role));
-        }
+        //    CheckErrors(await _roleManager.DeleteAsync(role));
+        //}
 
         private Task<List<long>> GetUsersInRoleAsync(string roleName)
         {
@@ -139,5 +139,24 @@ namespace JCMS.Roles
         {
             identityResult.CheckErrors(LocalizationManager);
         }
+        /// <summary>
+        /// 获取角色详情
+        /// </summary>
+        /// <returns></returns>
+        public List<RoleDto> GetAllList()
+        {
+            List<RoleDto> userlist = new List<RoleDto>();
+            var data = from s in _roleRepository.GetAll()
+                       select new RoleDto()
+                       {
+                           id = s.Id,
+                           DisplayName = s.DisplayName,//描述
+                           Name = s.Name,
+                           IsStatic = s.IsStatic,//是否启用
+                           CreationTime = s.CreationTime,
+                       };
+            return userlist = data.ToList();
+        }
+
     }
 }

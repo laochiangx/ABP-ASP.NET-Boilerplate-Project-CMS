@@ -50,52 +50,52 @@ namespace JCMS.Users
             return user;
         }
 
-        public override async Task<UserDto> Create(CreateUserDto input)
-        {
-            CheckCreatePermission();
+        //public override async Task<UserDto> Create(CreateUserDto input)
+        //{
+        //    CheckCreatePermission();
 
-            var user = ObjectMapper.Map<User>(input);
+        //    var user = ObjectMapper.Map<User>(input);
 
-            user.TenantId = AbpSession.TenantId;
-            user.Password = new PasswordHasher().HashPassword(input.Password);
-            user.IsEmailConfirmed = true;
+        //    user.TenantId = AbpSession.TenantId;
+        //    user.Password = new PasswordHasher().HashPassword(input.Password);
+        //    user.IsEmailConfirmed = true;
 
-            //Assign roles
-            user.Roles = new Collection<UserRole>();
-            foreach (var roleName in input.RoleNames)
-            {
-                var role = await _roleManager.GetRoleByNameAsync(roleName);
-                user.Roles.Add(new UserRole(AbpSession.TenantId, user.Id, role.Id));
-            }
+        //    //Assign roles
+        //    user.Roles = new Collection<UserRole>();
+        //    foreach (var roleName in input.RoleNames)
+        //    {
+        //        var role = await _roleManager.GetRoleByNameAsync(roleName);
+        //        user.Roles.Add(new UserRole(AbpSession.TenantId, user.Id, role.Id));
+        //    }
 
-            CheckErrors(await _userManager.CreateAsync(user));
+        //    CheckErrors(await _userManager.CreateAsync(user));
 
-            return MapToEntityDto(user);
-        }
+        //    return MapToEntityDto(user);
+        //}
 
-        public override async Task<UserDto> Update(UpdateUserDto input)
-        {
-            CheckUpdatePermission();
+        //public override async Task<UserDto> Update(UpdateUserDto input)
+        //{
+        //    CheckUpdatePermission();
 
-            var user = await _userManager.GetUserByIdAsync(input.Id);
+        //    var user = await _userManager.GetUserByIdAsync(input.Id);
 
-            MapToEntity(input, user);
+        //    MapToEntity(input, user);
 
-            CheckErrors(await _userManager.UpdateAsync(user));
+        //    CheckErrors(await _userManager.UpdateAsync(user));
 
-            if (input.RoleNames != null)
-            {
-                CheckErrors(await _userManager.SetRoles(user, input.RoleNames));
-            }
+        //    if (input.RoleNames != null)
+        //    {
+        //        CheckErrors(await _userManager.SetRoles(user, input.RoleNames));
+        //    }
 
-            return await Get(input);
-        }
+        //    return await Get(input);
+        //}
 
-        public override async Task Delete(EntityDto<long> input)
-        {
-            var user = await _userManager.GetUserByIdAsync(input.Id);
-            await _userManager.DeleteAsync(user);
-        }
+        //public override async Task Delete(EntityDto<long> input)
+        //{
+        //    var user = await _userManager.GetUserByIdAsync(input.Id);
+        //    await _userManager.DeleteAsync(user);
+        //}
 
         public async Task<ListResultDto<RoleDto>> GetRoles()
         {
@@ -140,7 +140,7 @@ namespace JCMS.Users
         /// <returns></returns>
         public List<UserDto> GetAllList()
         {
-            List<UserDto>  userlist = new List<UserDto>();
+            List<UserDto> userlist = new List<UserDto>();
             var data = from s in _userRepository.GetAll()
                        select new UserDto()
                        {
@@ -151,57 +151,7 @@ namespace JCMS.Users
                            CreationTime = s.CreationTime,
                            Name = s.Name
                        };
-            return userlist=data.ToList();
-        }
-        /// <summary>
-        /// 创建用户
-        /// </summary>
-        /// <param name="userdto"></param>
-        /// <returns></returns>
-        public bool  CreateUser(CreateUserDto userdto)
-        {
-            try
-            {
-
-                User user = new User();
-                user = userdto.MapTo<User>();
-                _userRepository.InsertOrUpdateAsync(user);
-            }
-            catch (Exception ex)
-            {
-                var msg = ex.Message;
-                return false;
-            }
-            return true;
-        }
-        /// <summary>
-        /// 删除用户
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public string DelUser(string id)
-        {
-
-            string Start = "ok";
-            try
-            {
-                var userEntity = _userRepository.Get(int.Parse(id));
-                if (userEntity == null)
-                {
-                    return Start = "你删除的对象不存在";
-                }
-                else
-                {
-                    User user = _userRepository.Get(int.Parse(id));
-                    _userRepository.DeleteAsync(user);
-                }
-            }
-            catch (Exception ex)
-            {
-
-                return Start = ex.Message;
-            }
-            return Start;
+            return userlist = data.ToList();
         }
     }
 }
