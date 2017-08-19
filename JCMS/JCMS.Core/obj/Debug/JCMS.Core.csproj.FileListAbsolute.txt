@@ -83,3 +83,4 @@ G:\JCMS\JCMS.Core\bin\Debug\System.Collections.Immutable.xml
 G:\JCMS\JCMS.Core\bin\Debug\System.Linq.Dynamic.Core.xml
 G:\JCMS\JCMS.Core\obj\Debug\JCMS.Core.dll
 G:\JCMS\JCMS.Core\obj\Debug\JCMS.Core.pdb
+G:\JCMS\JCMS.Core\obj\Debug\JCMS.Core.csprojResolveAssemblyReference.cache

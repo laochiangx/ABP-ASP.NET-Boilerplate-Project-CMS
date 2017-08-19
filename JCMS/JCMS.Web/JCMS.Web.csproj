@@ -3302,6 +3302,15 @@
     <Content Include="Scripts\Content\bootstrap\bootstrap.min.css" />
     <Content Include="Scripts\Content\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\Content\bootstrap\ui-bootstrap-csp.css" />
+    <Content Include="Content\cpts_174_ddb\css\style.css" />
+    <Content Include="Content\cpts_174_ddb\images\adm.png" />
+    <Content Include="Content\cpts_174_ddb\images\avtar.png" />
+    <Content Include="Content\cpts_174_ddb\images\bg1.jpg" />
+    <Content Include="Content\cpts_174_ddb\images\close.png" />
+    <Content Include="Content\cpts_174_ddb\images\key.png" />
+    <Content Include="Content\cpts_174_ddb\images\pass.png" />
+    <Content Include="Content\cpts_174_ddb\index.html" />
+    <Content Include="Content\cpts_174_ddb\说明.txt" />
     <Content Include="Scripts\Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scripts\Content\Site.css" />
     <Content Include="Scripts\Custom\ModalForm.js" />
@@ -4863,6 +4872,7 @@
     <Content Include="Views\Account\_Layout.less" />
     <Content Include="Views\Home\InitDataBase.cshtml" />
     <Content Include="Scripts\Toastr\toastr.js.map" />
+    <Content Include="Views\Home\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

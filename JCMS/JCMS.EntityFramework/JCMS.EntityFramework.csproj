@@ -143,6 +143,10 @@
     <Compile Include="Migrations\201708150813116_add_Person.Designer.cs">
       <DependentUpon>201708150813116_add_Person.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708190955404_changetable .cs" />
+    <Compile Include="Migrations\201708190955404_changetable .Designer.cs">
+      <DependentUpon>201708190955404_changetable .cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="JCMSDataModule.cs" />
@@ -171,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708150813116_add_Person.resx">
       <DependentUpon>201708150813116_add_Person.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708190955404_changetable .resx">
+      <DependentUpon>201708190955404_changetable .cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

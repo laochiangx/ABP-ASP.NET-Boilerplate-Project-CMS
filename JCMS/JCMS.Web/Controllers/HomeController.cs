@@ -5,13 +5,23 @@ using System.Collections.Generic;
 using System.IO;
 using System;
 using System.Linq;
+using Abp.Web.Security.AntiForgery;
+using Abp.Web.Models;
 
 namespace JCMS.Web.Controllers
 {
-    [AbpMvcAuthorize]
     public class HomeController : JCMSControllerBase
     {
         private JCMSDbContext db = ContextFactory.GetCurrentContext();
+
+        [DisableAbpAntiForgeryTokenValidation]
+        [HttpGet]
+        [DontWrapResult]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
         public ActionResult Index()
         {
             // return View("~/App/Main/views/layout/layout.cshtml"); //Layout of the angular application.
@@ -65,5 +75,7 @@ namespace JCMS.Web.Controllers
 
             return Json(new { success = success }, JsonRequestBehavior.AllowGet);
         }
+
+      
     }
 }

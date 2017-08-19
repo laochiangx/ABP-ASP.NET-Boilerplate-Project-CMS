@@ -1,4 +1,5 @@
-﻿using Abp.AutoMapper;
+﻿using Abp.Application.Services.Dto;
+using Abp.AutoMapper;
 using Abp.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace JCms.Meuns
     /// </summary>
     [Serializable]
     [AutoMapFrom(typeof(Meun))]
-    public class MeunDto
+    public class MeunDto : EntityDto<int>
     {  /// <summary>
        /// id
        /// </summary>

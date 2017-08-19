@@ -21,7 +21,7 @@ namespace JCMS.Web
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString("/Account/Login")
+                LoginPath = new PathString("/Home/Login")
             });
 
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);

@@ -56,7 +56,7 @@ namespace JCMS.EntityFramework
         [DisableAuditing]
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.ChangeAbpTablePrefix<Tenant, Role, User>("", "ABP");
+            modelBuilder.ChangeAbpTablePrefix<Tenant, Role, User>("", "");
             modelBuilder.Configurations.Add(new ModulesCfg());
 
             base.OnModelCreating(modelBuilder);
