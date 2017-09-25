@@ -1,4 +1,3 @@
-# JCMS
 ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统
 
 博客园地址：http://www.cnblogs.com/anyushengcms/p/7325126.html
