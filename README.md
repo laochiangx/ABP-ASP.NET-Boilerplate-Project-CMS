@@ -33,3 +33,50 @@ ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统
 11,ABP+AdminLTE+Bootstrap Table权限管理系统第十一节--bootstrap table之用户管理列表
 
 12，ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十二节--小结,Bootstrap Table之角色管理
+
+运用到的服务端技术:
+
+ABP（ASP.NET BolierPlate ProJect）
+Module-Zero
+ASP.NET MVC
+ASP.NET Web API
+ASP.NET Identity Framework (and social login extensions)
+ASP.NET Web Optimization Framework
+ASP.NET Web Pages
+SignalR
+EntityFramework
+EntityFramework.DynamicFilters
+Castle Windsor
+AutoMapper
+HangFire
+Log4Net
+xUnit
+Swashbuckle
+StackExchange.Redis
+SharpZipLib
+System.Linq.Dynamic
+客户端:(前端是用的AdminLTE,Bootstrap  table.是开源的,不涉及版权)
+
+Twitter Bootstrap
+Bootstrap Hover Dropdown
+Bootstrap Date Range Picker
+Bootstrap Switch
+Bootstrap Select
+Bootstrap table
+jQuery
+jQuery UI
+jQuery BlockUI
+jQuery Validation
+jQuery Ajax Forms
+Js Cookie
+Modernizr
+Moment.js
+Moment.js Timezone
+Underscore.js
+JsTree
+Respondjs
+Font-Awesome
+SpinJs
+SweetAlert
+Toastr
+AdminLTE
