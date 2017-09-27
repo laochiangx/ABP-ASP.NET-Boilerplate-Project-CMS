@@ -2104,3 +2104,582 @@ Abp.UI.UserFriendlyException: 登录失败!
    在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+DEBUG 2017-08-26 14:17:07,587 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-08-26 14:17:07,626 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-08-26 14:17:07,630 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Web.JCMSWebModule, JCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,634 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSDataModule, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,634 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,634 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,634 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,634 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,634 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,634 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,635 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSCoreModule, JCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,635 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSApplicationModule, JCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,635 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,635 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Api.JCMSWebApiModule, JCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,635 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,635 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,635 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,635 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,635 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:07,638 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-08-26 14:17:07,771 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-26 14:17:07,771 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-26 14:17:07,771 [1    ] o.Configuration.LanguageManagementConfig - Converted JCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-26 14:17:07,771 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-26 14:17:08,017 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: JCMS.EntityFramework.JCMSDbContext, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 14:17:09,192 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-08-26 14:17:09,199 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-08-26 14:17:09,203 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-08-26 14:17:09,205 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: JCMS
+DEBUG 2017-08-26 14:17:09,206 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-08-26 14:17:09,274 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-08-26 14:17:09,322 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2017-08-26 14:17:09,322 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCms.Meuns.MeunDto
+DEBUG 2017-08-26 14:17:09,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-08-26 14:17:09,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-08-26 14:17:09,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.CreateUserDto
+DEBUG 2017-08-26 14:17:09,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-08-26 14:17:09,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UserDto
+DEBUG 2017-08-26 14:17:09,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-08-26 14:17:09,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.PermissionDto
+DEBUG 2017-08-26 14:17:09,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.RoleDto
+DEBUG 2017-08-26 14:17:09,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-08-26 14:17:09,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-08-26 14:17:09,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-08-26 14:17:09,325 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-08-26 14:17:09,325 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-08-26 14:17:10,569 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCms.Meuns.IMeunService' with service name 'app/meunService'.
+DEBUG 2017-08-26 14:17:10,570 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-08-26 14:17:10,571 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-08-26 14:17:10,572 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-08-26 14:17:10,572 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-08-26 14:17:10,573 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Meuns.IModulesService' with service name 'app/modulesService'.
+DEBUG 2017-08-26 14:17:10,574 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-08-26 14:17:10,574 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+WARN  2017-08-26 14:17:45,515 [8    ] eas.Admin.Controllers.UserInfoController - 当前用户没有登录到系统！
+Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   在 Abp.Authorization.AuthorizationInterceptor.Intercept(IInvocation invocation)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Auditing.AuditingInterceptor.PerformSyncAuditing(IInvocation invocation, AuditInfo auditInfo)
+   在 Abp.Auditing.AuditingInterceptor.Intercept(IInvocation invocation)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.UserAppServiceProxy.GetAllList()
+   在 JCMS.Web.Areas.Admin.Controllers.UserInfoController.GetUsersList() 位置 G:\JCMS\JCMS.Web\Areas\Admin\Controllers\UserInfoController.cs:行号 41
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+WARN  2017-08-26 14:17:58,770 [8    ] eas.Admin.Controllers.UserInfoController - 当前用户没有登录到系统！
+Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   在 Abp.Authorization.AuthorizationInterceptor.Intercept(IInvocation invocation)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Auditing.AuditingInterceptor.PerformSyncAuditing(IInvocation invocation, AuditInfo auditInfo)
+   在 Abp.Auditing.AuditingInterceptor.Intercept(IInvocation invocation)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.UserAppServiceProxy.GetAllList()
+   在 JCMS.Web.Areas.Admin.Controllers.UserInfoController.GetUsersList() 位置 G:\JCMS\JCMS.Web\Areas\Admin\Controllers\UserInfoController.cs:行号 41
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+WARN  2017-08-26 16:21:43,120 [126  ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2017-08-26 16:21:43,122 [126  ] nHandling.AbpApiExceptionFilterAttribute - There are 2 validation errors:
+WARN  2017-08-26 16:21:43,122 [126  ] nHandling.AbpApiExceptionFilterAttribute - Name 字段是必需的。 (input.children[0].Name)
+WARN  2017-08-26 16:21:43,122 [126  ] nHandling.AbpApiExceptionFilterAttribute - LinkUrl 字段是必需的。 (input.children[0].LinkUrl)
+WARN  2017-08-26 16:21:43,156 [126  ] naries.DictionaryBasedLocalizationSource - Can not find 'ValidationNarrativeTitle' in localization source 'AbpWeb'!
+WARN  2017-08-26 16:21:52,500 [86   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2017-08-26 16:21:52,500 [86   ] nHandling.AbpApiExceptionFilterAttribute - There are 2 validation errors:
+WARN  2017-08-26 16:21:52,500 [86   ] nHandling.AbpApiExceptionFilterAttribute - Name 字段是必需的。 (input.children[0].Name)
+WARN  2017-08-26 16:21:52,500 [86   ] nHandling.AbpApiExceptionFilterAttribute - LinkUrl 字段是必需的。 (input.children[0].LinkUrl)
+WARN  2017-08-26 16:21:52,501 [86   ] naries.DictionaryBasedLocalizationSource - Can not find 'ValidationNarrativeTitle' in localization source 'AbpWeb'!
+WARN  2017-08-26 16:23:34,588 [87   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2017-08-26 16:23:34,589 [87   ] nHandling.AbpApiExceptionFilterAttribute - There are 2 validation errors:
+WARN  2017-08-26 16:23:34,589 [87   ] nHandling.AbpApiExceptionFilterAttribute - Name 字段是必需的。 (input.children[0].Name)
+WARN  2017-08-26 16:23:34,589 [87   ] nHandling.AbpApiExceptionFilterAttribute - LinkUrl 字段是必需的。 (input.children[0].LinkUrl)
+WARN  2017-08-26 16:23:34,590 [87   ] naries.DictionaryBasedLocalizationSource - Can not find 'ValidationNarrativeTitle' in localization source 'AbpWeb'!
+WARN  2017-08-26 16:24:44,394 [98   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2017-08-26 16:24:44,395 [98   ] nHandling.AbpApiExceptionFilterAttribute - There are 2 validation errors:
+WARN  2017-08-26 16:24:44,395 [98   ] nHandling.AbpApiExceptionFilterAttribute - Name 字段是必需的。 (input.children[0].Name)
+WARN  2017-08-26 16:24:44,395 [98   ] nHandling.AbpApiExceptionFilterAttribute - LinkUrl 字段是必需的。 (input.children[0].LinkUrl)
+WARN  2017-08-26 16:24:44,395 [98   ] naries.DictionaryBasedLocalizationSource - Can not find 'ValidationNarrativeTitle' in localization source 'AbpWeb'!
+WARN  2017-08-26 16:34:27,547 [88   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'JCMS'!
+WARN  2017-08-26 16:45:15,429 [129  ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'JCMS'!
+DEBUG 2017-08-26 18:07:22,430 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-08-26 18:07:22,444 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-08-26 18:07:22,450 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Web.JCMSWebModule, JCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,451 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSDataModule, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,451 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,452 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSCoreModule, JCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSApplicationModule, JCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Api.JCMSWebApiModule, JCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,463 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,463 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,463 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:22,467 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-08-26 18:07:22,607 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-26 18:07:22,607 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-26 18:07:22,607 [1    ] o.Configuration.LanguageManagementConfig - Converted JCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-26 18:07:22,607 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-08-26 18:07:22,931 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: JCMS.EntityFramework.JCMSDbContext, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-08-26 18:07:23,528 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-08-26 18:07:23,540 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-08-26 18:07:23,544 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-08-26 18:07:23,548 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: JCMS
+DEBUG 2017-08-26 18:07:23,550 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-08-26 18:07:23,628 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-08-26 18:07:23,694 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2017-08-26 18:07:23,694 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCms.Meuns.MeunDto
+DEBUG 2017-08-26 18:07:23,697 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-08-26 18:07:23,697 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-08-26 18:07:23,697 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.CreateUserDto
+DEBUG 2017-08-26 18:07:23,697 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-08-26 18:07:23,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UserDto
+DEBUG 2017-08-26 18:07:23,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-08-26 18:07:23,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.PermissionDto
+DEBUG 2017-08-26 18:07:23,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.RoleDto
+DEBUG 2017-08-26 18:07:23,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-08-26 18:07:23,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-08-26 18:07:23,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-08-26 18:07:23,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-08-26 18:07:23,698 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-08-26 18:07:25,250 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCms.Meuns.IMeunService' with service name 'app/meunService'.
+DEBUG 2017-08-26 18:07:25,251 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-08-26 18:07:25,253 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-08-26 18:07:25,254 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-08-26 18:07:25,255 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-08-26 18:07:25,256 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Meuns.IModulesService' with service name 'app/modulesService'.
+DEBUG 2017-08-26 18:07:25,257 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-08-26 18:07:25,257 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+WARN  2017-08-26 18:08:21,591 [15   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2017-08-26 18:08:21,594 [15   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2017-08-26 18:08:21,594 [15   ] nHandling.AbpApiExceptionFilterAttribute - EmailAddress 字段不是有效的电子邮件地址。 (input.EmailAddress)
+WARN  2017-08-26 18:08:21,797 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'ValidationNarrativeTitle' in localization source 'AbpWeb'!
+WARN  2017-08-26 18:10:13,164 [44   ] nHandling.AbpApiExceptionFilterAttribute - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   在 Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   在 Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+WARN  2017-08-26 18:10:13,164 [44   ] nHandling.AbpApiExceptionFilterAttribute - There are 1 validation errors:
+WARN  2017-08-26 18:10:13,164 [44   ] nHandling.AbpApiExceptionFilterAttribute - EmailAddress 字段不是有效的电子邮件地址。 (input.EmailAddress)
+WARN  2017-08-26 18:10:13,165 [44   ] naries.DictionaryBasedLocalizationSource - Can not find 'ValidationNarrativeTitle' in localization source 'AbpWeb'!
+WARN  2017-08-26 18:18:22,018 [31   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'JCMS'!
+WARN  2017-08-26 18:18:31,230 [39   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'JCMS'!
+WARN  2017-08-26 18:19:20,235 [27   ] naries.DictionaryBasedLocalizationSource - Can not find 'Roles' in localization source 'JCMS'!
+DEBUG 2017-09-27 19:12:28,533 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-09-27 19:12:28,568 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-09-27 19:12:28,573 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Web.JCMSWebModule, JCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,638 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSDataModule, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSCoreModule, JCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSApplicationModule, JCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Api.JCMSWebApiModule, JCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:28,642 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-09-27 19:12:28,786 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-27 19:12:28,786 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-27 19:12:28,786 [1    ] o.Configuration.LanguageManagementConfig - Converted JCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-27 19:12:28,786 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-27 19:12:29,073 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: JCMS.EntityFramework.JCMSDbContext, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:12:30,875 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-09-27 19:12:30,883 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-09-27 19:12:30,979 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-09-27 19:12:30,981 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: JCMS
+DEBUG 2017-09-27 19:12:30,981 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-09-27 19:12:31,058 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-09-27 19:12:31,106 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2017-09-27 19:12:31,106 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCms.Meuns.MeunDto
+DEBUG 2017-09-27 19:12:31,109 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-09-27 19:12:31,109 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-09-27 19:12:31,109 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.CreateUserDto
+DEBUG 2017-09-27 19:12:31,109 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-09-27 19:12:31,109 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UserDto
+DEBUG 2017-09-27 19:12:31,109 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-09-27 19:12:31,109 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.PermissionDto
+DEBUG 2017-09-27 19:12:31,109 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.RoleDto
+DEBUG 2017-09-27 19:12:31,110 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-09-27 19:12:31,110 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-09-27 19:12:31,110 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-09-27 19:12:31,110 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-09-27 19:12:31,110 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-09-27 19:12:32,392 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCms.Meuns.IMeunService' with service name 'app/meunService'.
+DEBUG 2017-09-27 19:12:32,393 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-09-27 19:12:32,394 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-09-27 19:12:32,395 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-09-27 19:12:32,396 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-09-27 19:12:32,397 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Meuns.IModulesService' with service name 'app/modulesService'.
+DEBUG 2017-09-27 19:12:32,399 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-09-27 19:12:32,400 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+WARN  2017-09-27 19:13:00,834 [10   ] eas.Admin.Controllers.UserInfoController - 当前用户没有登录到系统！
+Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   在 Abp.Authorization.AuthorizationInterceptor.Intercept(IInvocation invocation)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Auditing.AuditingInterceptor.PerformSyncAuditing(IInvocation invocation, AuditInfo auditInfo)
+   在 Abp.Auditing.AuditingInterceptor.Intercept(IInvocation invocation)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.UserAppServiceProxy.GetAllList()
+   在 JCMS.Web.Areas.Admin.Controllers.UserInfoController.GetUsersList() 位置 G:\JCMS\JCMS.Web\Areas\Admin\Controllers\UserInfoController.cs:行号 41
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2017-09-27 19:16:38,076 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-09-27 19:16:38,090 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-09-27 19:16:38,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Web.JCMSWebModule, JCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,098 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSDataModule, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,098 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,098 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSCoreModule, JCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,099 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.JCMSApplicationModule, JCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: JCMS.Api.JCMSWebApiModule, JCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,100 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,101 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:38,104 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-09-27 19:16:38,241 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-27 19:16:38,241 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-27 19:16:38,241 [1    ] o.Configuration.LanguageManagementConfig - Converted JCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-27 19:16:38,241 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-09-27 19:16:38,539 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: JCMS.EntityFramework.JCMSDbContext, JCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-09-27 19:16:39,114 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-09-27 19:16:39,123 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-09-27 19:16:39,128 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-09-27 19:16:39,132 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: JCMS
+DEBUG 2017-09-27 19:16:39,133 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-09-27 19:16:39,215 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-09-27 19:16:39,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 14 classes define auto mapping attributes
+DEBUG 2017-09-27 19:16:39,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCms.Meuns.MeunDto
+DEBUG 2017-09-27 19:16:39,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-09-27 19:16:39,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-09-27 19:16:39,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.CreateUserDto
+DEBUG 2017-09-27 19:16:39,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-09-27 19:16:39,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Users.Dto.UserDto
+DEBUG 2017-09-27 19:16:39,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-09-27 19:16:39,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.PermissionDto
+DEBUG 2017-09-27 19:16:39,285 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Roles.Dto.RoleDto
+DEBUG 2017-09-27 19:16:39,286 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-09-27 19:16:39,286 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-09-27 19:16:39,286 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-09-27 19:16:39,286 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-09-27 19:16:39,286 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - JCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-09-27 19:16:40,862 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCms.Meuns.IMeunService' with service name 'app/meunService'.
+DEBUG 2017-09-27 19:16:40,863 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-09-27 19:16:40,864 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-09-27 19:16:40,865 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-09-27 19:16:40,866 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-09-27 19:16:40,866 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Meuns.IModulesService' with service name 'app/modulesService'.
+DEBUG 2017-09-27 19:16:40,867 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-09-27 19:16:40,868 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'JCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.

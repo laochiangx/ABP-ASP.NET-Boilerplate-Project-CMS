@@ -1,0 +1,120 @@
+﻿
+@using Abp.Web.Mvc.Extensions
+@{
+    ViewBag.Title = "Index";
+}
+<title>登录</title>
+<link rel="shortcut icon" href="~/Content/cpts_174_ddb/images/avtar.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<meta name="keywords" content="abp AdminLT" />
+<link href="~/Content/cpts_174_ddb/css/style.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery-2.2.0.js"></script>
+<script src="~/Scripts/jquery-2.2.0.min.js"></script>
+<link href="~/Scripts/sweetalert/sweet-alert.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert/sweet-alert.js"></script>
+<script src="~/Scripts/sweetalert/sweet-alert.min.js"></script>
+<script src="~/Abp/Framework/scripts/libs/abp.sweet-alert.js"></script>
+
+
+<script src="~/lib/blockUI/jquery.blockUI.js"></script>
+<script src="~/Abp/Framework/scripts/libs/abp.blockUI.js"></script>
+<script src="~/lib/spin.js/spin.js"></script>
+<script src="~/lib/spin.js/jquery.spin.js"></script>
+<script src="~/Abp/Framework/scripts/libs/abp.spin.js"></script>
+
+
+<body>
+    <script>
+        $(document).ready(function (c) {
+            $('.close').on('click', function (c) {
+                $('.login-form').fadeOut('slow', function (c) {
+                    $('.login-form').remove();
+                });
+            });
+        });
+    </script>
+    <script>
+
+        function login() {
+            if ($("#userName").val() == "" || $("#userName").val() == "请输入登录名") {
+                abp.message.error('请输入用户名!', '用户名不能为空');
+                return;
+            }
+            if ($("#password").val() == "" || $("#password").val() == "请输入密码") {
+                abp.message.confirm(
+                    '请输入密码.', //确认提示
+                    '确定?',//确认提示（可选参数）
+                    function (isConfirmed) {
+                        if (isConfirmed) {
+                            //...delete user 点击确认后执行
+                        }
+                    }
+                );
+                return;
+            } 
+            if ($("#userName").val() != "" && $("#password").val() != "") {
+
+
+                  abp.ui.block($('#login'));
+                  var url = "/Account/Login";
+                var login = function (para, ajaxtype,posturl) {
+                    return abp.ajax({
+                        url: posturl,
+                        type: ajaxtype,
+                        async: false,
+                        data: JSON.stringify(para)
+                    });
+                };
+
+                var loginModel = {
+                    "tenancyName": "",
+                    "usernameOrEmailAddress": $("#userName").val(),
+                    "password": $("#password").val()
+                };
+
+               
+                abp.ui.setBusy(
+                    $('#login'),
+                    login(loginModel, "post", url).done(function (data) {
+                        abp.auth.setToken("Bearer " + data);
+                       window.location.href = "/admin/userinfo/index"
+                    })
+                    //login(loginModel, "post","/account/login").done(function (data) {
+                    //    abp.auth.setToken("Bearer "+data);
+                    //    window.location.href = "/admin/userinfo/index"
+                    //})
+                );
+            }
+        }
+    </script>
+
+    <div id="login" class="login-form" style="margin-top:150px;">
+        <div class="head-info">
+            <label style="margin-left:70px;"> 登录</label>
+            <label class="lbl-1"> </label>
+            <label class="lbl-2"> </label>
+            <label class="lbl-3"> </label>
+        </div>
+        <div class="clear"> </div>
+        <div class="avtar">
+            <img src="~/Content/cpts_174_ddb/images/avtar.png" />
+        </div>
+        <form id="fm" method="post">
+            <input type="text" id="userName" value="请输入登录名" class="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入登录名';}">
+            <div class="key">
+                <input type="password" id="password" value="请输入密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入密码';}">
+            </div>
+        </form>
+        <div class="signin">
+            <input type="submit" value="登录" onclick="login()">
+        </div>
+    </div>
+    <div class="copy-rights">
+
+    </div>
+
+</body>
+
+

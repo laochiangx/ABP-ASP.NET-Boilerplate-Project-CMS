@@ -120,7 +120,7 @@ G:\JCMS\JCMS.EntityFramework\bin\Debug\System.Linq.Dynamic.Core.xml
 G:\JCMS\JCMS.EntityFramework\obj\Debug\JCMS.EntityFramework.csprojResolveAssemblyReference.cache
 G:\JCMS\JCMS.EntityFramework\obj\Debug\JCMS.Migrations.Initial_Migration.resources
 G:\JCMS\JCMS.EntityFramework\obj\Debug\JCMS.Migrations.add_Person.resources
+G:\JCMS\JCMS.EntityFramework\obj\Debug\JCMS.Migrations.changetable.resources
 G:\JCMS\JCMS.EntityFramework\obj\Debug\JCMS.EntityFramework.csproj.GenerateResource.Cache
 G:\JCMS\JCMS.EntityFramework\obj\Debug\JCMS.EntityFramework.dll
 G:\JCMS\JCMS.EntityFramework\obj\Debug\JCMS.EntityFramework.pdb
-G:\JCMS\JCMS.EntityFramework\obj\Debug\JCMS.Migrations.changetable.resources
