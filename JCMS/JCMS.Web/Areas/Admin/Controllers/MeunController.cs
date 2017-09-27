@@ -2,6 +2,7 @@
 using Abp.Web.Models;
 using Abp.Web.Security.AntiForgery;
 using JCms.Meuns;
+using JCMS.Meuns;
 using JCMS.Web.Controllers;
 using System;
 using System.Collections.Generic;
@@ -13,9 +14,9 @@ namespace JCMS.Web.Areas.Admin.Controllers
 {
     public class MeunController : JCMSControllerBase
     {
-        private readonly IMeunService _iMeunService;
+        private readonly IModulesService _iMeunService;
 
-        public MeunController(IMeunService iMeunService)
+        public MeunController(IModulesService iMeunService)
         {
             _iMeunService = iMeunService;
         }

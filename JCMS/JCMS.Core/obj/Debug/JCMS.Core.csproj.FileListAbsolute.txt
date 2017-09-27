@@ -84,3 +84,45 @@ G:\JCMS\JCMS.Core\bin\Debug\System.Linq.Dynamic.Core.xml
 G:\JCMS\JCMS.Core\obj\Debug\JCMS.Core.dll
 G:\JCMS\JCMS.Core\obj\Debug\JCMS.Core.pdb
 G:\JCMS\JCMS.Core\obj\Debug\JCMS.Core.csprojResolveAssemblyReference.cache
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\JCMS.Core.dll.config
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\JCMS.Core.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\JCMS.Core.pdb
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Abp.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Abp.Zero.Common.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Abp.Zero.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Castle.Core.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Castle.Facilities.Logging.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Castle.Windsor.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\JetBrains.Annotations.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Microsoft.Threading.Tasks.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Newtonsoft.Json.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Nito.AsyncEx.Concurrent.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Nito.AsyncEx.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Nito.AsyncEx.Enlightenment.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\System.Collections.Immutable.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\System.Linq.Dynamic.Core.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Abp.pdb
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Abp.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Abp.Zero.pdb
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Abp.Zero.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Abp.Zero.Common.pdb
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Abp.Zero.Common.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Castle.Core.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Castle.Facilities.Logging.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Castle.Windsor.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\JetBrains.Annotations.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Microsoft.Threading.Tasks.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Newtonsoft.Json.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Nito.AsyncEx.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Nito.AsyncEx.Concurrent.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\Nito.AsyncEx.Enlightenment.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\System.Collections.Immutable.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\bin\Debug\System.Linq.Dynamic.Core.xml
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\obj\Debug\JCMS.Core.dll
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\JCMS.Core\obj\Debug\JCMS.Core.pdb
