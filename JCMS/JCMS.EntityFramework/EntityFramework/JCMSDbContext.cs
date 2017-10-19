@@ -10,6 +10,7 @@ using System.Data.Entity.ModelConfiguration.Configuration;
 using JCms.Meuns;
 using Abp.Auditing;
 using JCMS.Meuns;
+using JCMS.Permissionse;
 
 namespace JCMS.EntityFramework
 {
@@ -25,6 +26,8 @@ namespace JCMS.EntityFramework
          */
 
         public virtual IDbSet<Meun> Modules { get; set; }
+
+      //  public virtual IDbSet<Permissions> Permissionss { get; set; }
         public JCMSDbContext()
             : base("Default")
         {

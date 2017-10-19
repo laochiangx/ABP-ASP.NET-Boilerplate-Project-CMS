@@ -3,6 +3,8 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Common/Views/Layout/_Layout.cshtml";
 }
+
+
 <meta name="viewport" content="width=device-width" />
 <script type="text/javascript">
 
@@ -19,7 +21,7 @@
         oButtonInit.Init();
 
     });
-   var Url = "@Url.Action("GetUsersListAsync")";
+   var Url = "@Url.Action("GetUsersList")";
    // var Url = "/api/services/app/user/GetAll()";
     var TableInit = function () {
         var oTableInit = new Object();
@@ -57,43 +59,23 @@
                      field: 'Name',
                     title: '角色名称'
                 }, {
-                        field: 'LinkUrl',
-                    title: '链接地址'
+                        field: 'id',
+                    title: '描述'
                 }, {
-                        field: 'ParentId',
-                    title: '父级Id'
+                     field: 'CreationTime',
+                     title: '创建时间',
+                     formatter: function (date) {
+                         var pa = /.*\((.*)\)/;
+                         var unixtime = date.match(pa)[1].substring(0, 10);
+                         return getTime(unixtime);
+                     }
                 }, {
-                        field: 'Code',
-                        title: '编码'
-                },{
-                        field: 'IsMenu',
-                    title: ' 是否是菜单'
-                },
-                  {
-                      field: 'Enabled',
-                    title: '是否启动'
-                },{
-                      field: 'UpdateDate',
-                      title: '创建时间',
-                      formatter: function (date) {
-                          var pa = /.*\((.*)\)/;
-                          var unixtime = date.match(pa)[1].substring(0, 10);
-                          return getTime(unixtime);
-                      }
-                },]
+                        field: 'IsGranted',
+                    title: '是否启用'
+                }, ]
             });
         };
 
-        function ChangeDateFormat(val) {
-            if (val != null) {
-                var date = new Date(parseInt(val.replace("/Date(", "").replace(")/", ""), 10));
-                //月份为0-11，所以+1，月份小于10时补个0
-                var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
-                var currentDate = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
-                return date.getFullYear() + "-" + month + "-" + currentDate;
-            }
-            return "";
-        }
         function getTime(/** timestamp=0 **/) {
             var ts = arguments[0] || 0;
             var t, y, m, d, h, i, s;
@@ -104,7 +86,7 @@
             h = t.getHours();
             i = t.getMinutes();
             s = t.getSeconds();
-            // 可根据需要在这里定义时间格式  
+            // 可根据需要在这里定义时间格式
             return y + '-' + (m < 10 ? '0' + m : m) + '-' + (d < 10 ? '0' + d : d) + ' ' + (h < 10 ? '0' + h : h) + ':' + (i < 10 ? '0' + i : i) + ':' + (s < 10 ? '0' + s : s);
         }
 
@@ -393,5 +375,4 @@
     </div>
 
 </section>
-
 

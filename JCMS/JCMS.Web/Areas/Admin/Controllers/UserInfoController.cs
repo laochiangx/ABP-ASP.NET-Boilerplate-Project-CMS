@@ -41,7 +41,7 @@ namespace JCMS.Web.Areas.Admin.Controllers
             Userlist = _UserAppService.GetAllList();
             int totaldata = Userlist.Count();
             Userlist = Userlist.Skip(int.Parse(pageNumber) * int.Parse(pageSize)).Take(int.Parse(pageSize)).ToList();
-            var result = new { total = totaldata, rows = Userlist };
+            var result = new { total = 10, rows = Userlist };
             return Json(result, JsonRequestBehavior.AllowGet);
         }
     }

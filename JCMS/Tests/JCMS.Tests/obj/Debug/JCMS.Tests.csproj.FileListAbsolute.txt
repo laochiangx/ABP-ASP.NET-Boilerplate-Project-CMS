@@ -92,9 +92,9 @@ G:\JCMS\Tests\JCMS.Tests\bin\Debug\xunit.execution.desktop.xml
 G:\JCMS\Tests\JCMS.Tests\obj\Debug\JCMS.Tests.csprojResolveAssemblyReference.cache
 G:\JCMS\Tests\JCMS.Tests\obj\Debug\JCMS.Tests.dll
 G:\JCMS\Tests\JCMS.Tests\obj\Debug\JCMS.Tests.pdb
+G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\Tests\JCMS.Tests\bin\Debug\xunit.abstractions.dll
 G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\Tests\JCMS.Tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
 G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\Tests\JCMS.Tests\bin\Debug\xunit.runner.utility.desktop.dll
-G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\Tests\JCMS.Tests\bin\Debug\xunit.abstractions.dll
 G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\Tests\JCMS.Tests\bin\Debug\JCMS.Tests.dll.config
 G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\Tests\JCMS.Tests\bin\Debug\JCMS.Tests.dll
 G:\ABP\新建文件夹 (2)\ABP-ASP.NET-Boilerplate-Project-CMS\JCMS\Tests\JCMS.Tests\bin\Debug\JCMS.Tests.pdb

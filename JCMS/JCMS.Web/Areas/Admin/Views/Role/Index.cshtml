@@ -62,13 +62,32 @@
                     title: '描述'
                 }, {
                      field: 'CreationTime',
-                    title: '创建时间'
+                     title: '创建时间',
+                     formatter: function (date) {
+                         var pa = /.*\((.*)\)/;
+                         var unixtime = date.match(pa)[1].substring(0, 10);
+                         return getTime(unixtime);
+                     }
                 }, {
                      field: 'IsStatic',
                     title: '是否启用'
                 }, ]
             });
         };
+
+        function getTime(/** timestamp=0 **/) {
+            var ts = arguments[0] || 0;
+            var t, y, m, d, h, i, s;
+            t = ts ? new Date(ts * 1000) : new Date();
+            y = t.getFullYear();
+            m = t.getMonth() + 1;
+            d = t.getDate();
+            h = t.getHours();
+            i = t.getMinutes();
+            s = t.getSeconds();
+            // 可根据需要在这里定义时间格式  
+            return y + '-' + (m < 10 ? '0' + m : m) + '-' + (d < 10 ? '0' + d : d) + ' ' + (h < 10 ? '0' + h : h) + ':' + (i < 10 ? '0' + i : i) + ':' + (s < 10 ? '0' + s : s);
+        }
 
         //得到查询的参数
         oTableInit.queryParams = function (params) {
