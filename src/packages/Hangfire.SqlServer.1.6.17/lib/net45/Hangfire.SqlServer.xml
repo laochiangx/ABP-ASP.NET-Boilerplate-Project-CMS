@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hangfire.SqlServer</name>
+    </assembly>
+    <members>
+        <member name="T:Hangfire.SqlServer.SqlServerMonitoringApi.SafeDictionary`2">
+            <summary>
+            Overloaded dictionary that doesn't throw if given an invalid key
+            Fixes issues such as https://github.com/HangfireIO/Hangfire/issues/871
+            </summary>
+        </member>
+        <member name="M:Hangfire.SqlServer.SqlServerStorage.#ctor(System.String,Hangfire.SqlServer.SqlServerStorageOptions)">
+            <summary>
+            Initializes SqlServerStorage from the provided SqlServerStorageOptions and either the provided connection
+            string or the connection string with provided name pulled from the application config file.       
+            </summary>
+            <param name="nameOrConnectionString">Either a SQL Server connection string or the name of 
+            a SQL Server connection string located in the connectionStrings node in the application config</param>
+            <param name="options"></param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="nameOrConnectionString"/> argument is null.</exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="options"/> argument is null.</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="nameOrConnectionString"/> argument is neither 
+            a valid SQL Server connection string nor the name of a connection string in the application
+            config file.</exception>
+        </member>
+        <member name="M:Hangfire.SqlServer.SqlServerStorage.#ctor(System.Data.Common.DbConnection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Hangfire.SqlServer.SqlServerStorage"/> class with
+            explicit instance of the <see cref="T:System.Data.Common.DbConnection"/> class that will be used
+            to query the data.
+            </summary>
+        </member>
+        <member name="M:Hangfire.SqlServer.SqlServerStorage.#ctor(System.Data.Common.DbConnection,Hangfire.SqlServer.SqlServerStorageOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Hangfire.SqlServer.SqlServerStorage"/> class with
+            explicit instance of the <see cref="T:System.Data.Common.DbConnection"/> class that will be used
+            to query the data, with the given options.
+            </summary>
+        </member>
+        <member name="M:Hangfire.SqlServer.SqlServerBootstrapperConfigurationExtensions.UseSqlServerStorage(Hangfire.IBootstrapperConfiguration,System.String)">
+            <summary>
+            Tells the bootstrapper to use SQL Server as a job storage,
+            that can be accessed using the given connection string or 
+            its name.
+            </summary>
+            <param name="configuration">Configuration</param>
+            <param name="nameOrConnectionString">Connection string or its name</param>
+        </member>
+        <member name="M:Hangfire.SqlServer.SqlServerBootstrapperConfigurationExtensions.UseSqlServerStorage(Hangfire.IBootstrapperConfiguration,System.String,Hangfire.SqlServer.SqlServerStorageOptions)">
+            <summary>
+            Tells the bootstrapper to use SQL Server as a job storage
+            with the given options, that can be accessed using the specified
+            connection string or its name.
+            </summary>
+            <param name="configuration">Configuration</param>
+            <param name="nameOrConnectionString">Connection string or its name</param>
+            <param name="options">Advanced options</param>
+        </member>
+    </members>
+</doc>

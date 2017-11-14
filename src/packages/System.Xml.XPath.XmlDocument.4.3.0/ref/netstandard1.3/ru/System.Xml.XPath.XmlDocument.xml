@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Xml.XPath.XmlDocument</name>
+  </assembly>
+  <members>
+    <member name="T:System.Xml.XmlDocumentXPathExtensions"></member>
+    <member name="M:System.Xml.XmlDocumentXPathExtensions.CreateNavigator(System.Xml.XmlDocument)"></member>
+    <member name="M:System.Xml.XmlDocumentXPathExtensions.CreateNavigator(System.Xml.XmlDocument,System.Xml.XmlNode)"></member>
+    <member name="M:System.Xml.XmlDocumentXPathExtensions.CreateNavigator(System.Xml.XmlNode)"></member>
+    <member name="M:System.Xml.XmlDocumentXPathExtensions.SelectNodes(System.Xml.XmlNode,System.String)"></member>
+    <member name="M:System.Xml.XmlDocumentXPathExtensions.SelectNodes(System.Xml.XmlNode,System.String,System.Xml.XmlNamespaceManager)"></member>
+    <member name="M:System.Xml.XmlDocumentXPathExtensions.SelectSingleNode(System.Xml.XmlNode,System.String)"></member>
+    <member name="M:System.Xml.XmlDocumentXPathExtensions.SelectSingleNode(System.Xml.XmlNode,System.String,System.Xml.XmlNamespaceManager)"></member>
+    <member name="M:System.Xml.XmlDocumentXPathExtensions.ToXPathNavigable(System.Xml.XmlNode)"></member>
+  </members>
+</doc>

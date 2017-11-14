@@ -1,0 +1,1477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Xml.XmlDocument</name>
+  </assembly>
+  <members>
+    <member name="T:System.Xml.XmlAttribute">
+      <summary>属性を表します。属性に対する有効値および既定値は、文書型定義 (DTD : Document Type Definition) またはスキーマで定義されます。</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlAttribute" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="prefix">名前空間プレフィックス。</param>
+      <param name="localName">属性のローカル名。</param>
+      <param name="namespaceURI">名前空間 URI (Uniform Resource Identifier)。</param>
+      <param name="doc">親 XML ドキュメント。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.AppendChild(System.Xml.XmlNode)">
+      <summary>このノードの子ノードのリストの末尾に、指定したノードを追加します。</summary>
+      <returns>追加された <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="newChild">追加する <see cref="T:System.Xml.XmlNode" />。</param>
+      <exception cref="T:System.InvalidOperationException">このノードは、<paramref name="newChild" /> ノードの型の子ノードが許可されない型です。<paramref name="newChild" /> がこのノードの先祖です。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> は、このノードを作成したドキュメントとは異なるドキュメントから作成されました。このノードは読み取り専用です。</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.BaseURI">
+      <summary>ノードのベース URI (Uniform Resource Identifier) を取得します。</summary>
+      <returns>ノードの読み込み元の場所。ノードにベース URI がない場合は String.Empty。属性ノードのベース URI は、その所有者要素と同じです。属性ノードに所有者要素がない場合、BaseURI は String.Empty を返します。</returns>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.CloneNode(System.Boolean)">
+      <summary>このノードの複製を作成します。</summary>
+      <returns>複製されたノード。</returns>
+      <param name="deep">指定したノードの下にあるサブツリーのクローンを順次作成していく場合は true。指定したノードだけのクローンを作成する場合は false。</param>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.InnerText">
+      <summary>ノードとすべての子の連結された値を設定します。</summary>
+      <returns>ノードとすべての子の連結された値。属性ノードの場合、このプロパティは <see cref="P:System.Xml.XmlAttribute.Value" /> プロパティと同じ機能を持ちます。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.InnerXml">
+      <summary>属性の値を設定します。</summary>
+      <returns>属性値。</returns>
+      <exception cref="T:System.Xml.XmlException">このプロパティを設定したときに指定した XML は、整形式ではありません。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>指定したノードを指定した参照ノードの直後に挿入します。</summary>
+      <returns>挿入された <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="newChild">挿入する <see cref="T:System.Xml.XmlNode" />。</param>
+      <param name="refChild">参照ノードである <see cref="T:System.Xml.XmlNode" />。<paramref name="newChild" /> は、<paramref name="refChild" /> の後に配置されます。</param>
+      <exception cref="T:System.InvalidOperationException">このノードは、<paramref name="newChild" /> ノードの型の子ノードが許可されない型です。<paramref name="newChild" /> がこのノードの先祖です。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> は、このノードを作成したドキュメントとは異なるドキュメントから作成されました。<paramref name="refChild" /> がこのノードの子ではありません。このノードは読み取り専用です。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>指定したノードを指定した参照ノードの直前に挿入します。</summary>
+      <returns>挿入された <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="newChild">挿入する <see cref="T:System.Xml.XmlNode" />。</param>
+      <param name="refChild">参照ノードである <see cref="T:System.Xml.XmlNode" />。<paramref name="newChild" /> は、このノードの前に配置されます。</param>
+      <exception cref="T:System.InvalidOperationException">現在のノードは、<paramref name="newChild" /> ノードの型の子ノードが許可されない型です。<paramref name="newChild" /> がこのノードの先祖です。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> は、このノードを作成したドキュメントとは異なるドキュメントから作成されました。<paramref name="refChild" /> がこのノードの子ではありません。このノードは読み取り専用です。</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.LocalName">
+      <summary>ノードのローカル名を取得します。</summary>
+      <returns>プリフィックスを削除した属性ノードの名前。次の例 &lt;book bk:genre= 'novel'&gt; では、属性の LocalName は genre です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Name">
+      <summary>ノードの限定名を取得します。</summary>
+      <returns>属性ノードの限定名。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.NamespaceURI">
+      <summary>このノードの名前空間 URI を取得します。</summary>
+      <returns>このノードの名前空間 URI。属性に明示的に名前空間が指定されていない場合、このプロパティは String.Empty を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.NodeType">
+      <summary>現在のノードの種類を取得します。</summary>
+      <returns>XmlAttribute ノードのノード型は XmlNodeType.Attribute です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.OwnerDocument">
+      <summary>このノードが属する <see cref="T:System.Xml.XmlDocument" /> を取得します。</summary>
+      <returns>このノードが所属する XML ドキュメント。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.OwnerElement">
+      <summary>属性が属する <see cref="T:System.Xml.XmlElement" /> を取得します。</summary>
+      <returns>属性が属している XmlElement。この属性が XmlElement の一部でない場合は null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.ParentNode">
+      <summary>このノードの親を取得します。XmlAttribute ノードの場合、このプロパティは常に null を返します。</summary>
+      <returns>XmlAttribute ノードの場合、このプロパティは常に null を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Prefix">
+      <summary>このノードの名前空間プリフィックスを取得または設定します。</summary>
+      <returns>このノードの名前空間プリフィックス。プリフィックスがない場合、このプロパティは String.Empty を返します。</returns>
+      <exception cref="T:System.ArgumentException">このノードは読み取り専用です。</exception>
+      <exception cref="T:System.Xml.XmlException">指定したプレフィックスに無効な文字が含まれています。指定されたプリフィックスの書式が正しくありません。このノードの namespaceURI が null です。指定したプリフィックスが "xml" であり、このノードの namespaceURI が "http://www.w3.org/XML/1998/namespace" と異なっています。このノードが属性で、指定したプリフィックスが "xmlns" であり、このノードの namespaceURI が "http://www.w3.org/2000/xmlns/" と異なっています。このノードが属性で、このノードの qualifiedName が "xmlns" [Namespaces] です。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.PrependChild(System.Xml.XmlNode)">
+      <summary>このノードの子ノードのリストの先頭に、指定したノードを追加します。</summary>
+      <returns>追加された <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="newChild">追加する <see cref="T:System.Xml.XmlNode" />。そのノードが <see cref="T:System.Xml.XmlDocumentFragment" /> の場合は、ドキュメント フラグメントの内容全体がこのノードの子リストに移動されます。</param>
+      <exception cref="T:System.InvalidOperationException">このノードは、<paramref name="newChild" /> ノードの型の子ノードが許可されない型です。<paramref name="newChild" /> がこのノードの先祖です。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> は、このノードを作成したドキュメントとは異なるドキュメントから作成されました。このノードは読み取り専用です。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.RemoveChild(System.Xml.XmlNode)">
+      <summary>指定した子ノードを削除します。</summary>
+      <returns>削除された <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="oldChild">削除する <see cref="T:System.Xml.XmlNode" />。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="oldChild" /> がこのノードの子ではありません。または、このノードが読み取り専用です。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>指定した子ノードを、新たに指定された子ノードで置き換えます。</summary>
+      <returns>置き換えられた <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="newChild">新しい子 <see cref="T:System.Xml.XmlNode" />。</param>
+      <param name="oldChild">置き換える <see cref="T:System.Xml.XmlNode" />。</param>
+      <exception cref="T:System.InvalidOperationException">このノードは、<paramref name="newChild" /> ノードの型の子ノードが許可されない型です。<paramref name="newChild" /> がこのノードの先祖です。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> は、このノードを作成したドキュメントとは異なるドキュメントから作成されました。このノードは読み取り専用です。<paramref name="oldChild" /> がこのノードの子ではありません。</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Specified">
+      <summary>属性値が明示的に設定されたかどうかを示す値を取得します。</summary>
+      <returns>元のインスタンス ドキュメントでこの属性に明示的に値が指定された場合は true。それ以外の場合は false。false の値は、属性の値が DTD に由来していることを示します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Value">
+      <summary>ノードの値を取得または設定します。</summary>
+      <returns>返される値は、ノードの <see cref="P:System.Xml.XmlNode.NodeType" /> によって異なります。XmlAttribute ノードの場合、このプロパティは属性の値です。</returns>
+      <exception cref="T:System.ArgumentException">ノードが読み取り専用であり、set 操作が呼び出されます。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>ノードのすべての子を、指定した <see cref="T:System.Xml.XmlWriter" /> に保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.WriteTo(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> にノードを保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlAttributeCollection">
+      <summary>名前またはインデックスによってアクセスできる属性のコレクションを表します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Append(System.Xml.XmlAttribute)">
+      <summary>指定した属性をコレクション内の最後のノードとして挿入します。</summary>
+      <returns>コレクションの末尾に追加する XmlAttribute。</returns>
+      <param name="node">挿入する <see cref="T:System.Xml.XmlAttribute" />。</param>
+      <exception cref="T:System.ArgumentException">このコレクションを作成したドキュメントと異なるドキュメントから <paramref name="node" /> が作成されました。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)">
+      <summary>このコレクション内のすべての <see cref="T:System.Xml.XmlAttribute" /> オブジェクトを、指定した配列にコピーします。</summary>
+      <param name="array">このコレクションからコピーされたオブジェクトのコピー先の配列。</param>
+      <param name="index">配列内のコピー開始位置を示すインデックス。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.InsertAfter(System.Xml.XmlAttribute,System.Xml.XmlAttribute)">
+      <summary>指定した属性を、指定した参照属性の直後に挿入します。</summary>
+      <returns>コレクションに挿入する XmlAttribute。</returns>
+      <param name="newNode">挿入する <see cref="T:System.Xml.XmlAttribute" />。</param>
+      <param name="refNode">参照属性である <see cref="T:System.Xml.XmlAttribute" />。<paramref name="newNode" /> は、<paramref name="refNode" /> の後に配置されます。</param>
+      <exception cref="T:System.ArgumentException">このコレクションを作成したドキュメントと異なるドキュメントから <paramref name="newNode" /> が作成されました。または、<paramref name="refNode" /> がこのコレクションのメンバーではありません。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.InsertBefore(System.Xml.XmlAttribute,System.Xml.XmlAttribute)">
+      <summary>指定した属性を、指定した参照属性の直前に挿入します。</summary>
+      <returns>コレクションに挿入する XmlAttribute。</returns>
+      <param name="newNode">挿入する <see cref="T:System.Xml.XmlAttribute" />。</param>
+      <param name="refNode">参照属性である <see cref="T:System.Xml.XmlAttribute" />。<paramref name="newNode" /> は <paramref name="refNode" /> の前に配置されます。</param>
+      <exception cref="T:System.ArgumentException">このコレクションを作成したドキュメントと異なるドキュメントから <paramref name="newNode" /> が作成されました。または、<paramref name="refNode" /> がこのコレクションのメンバーではありません。</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.Int32)">
+      <summary>指定したインデックスの属性を取得します。</summary>
+      <returns>指定されたインデックスにある <see cref="T:System.Xml.XmlAttribute" />。</returns>
+      <param name="i">属性のインデックス。</param>
+      <exception cref="T:System.IndexOutOfRangeException">範囲外に渡されるインデックス。</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.String)">
+      <summary>指定した名前の属性を取得します。</summary>
+      <returns>指定した名前を持つ <see cref="T:System.Xml.XmlAttribute" />。属性の名前が存在しない場合、このプロパティは null を返します。</returns>
+      <param name="name">属性の限定名。</param>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.String,System.String)">
+      <summary>指定したローカル名および名前空間 URI (Uniform Resource Identifier) の属性を取得します。</summary>
+      <returns>指定したローカル名および名前空間 URI の <see cref="T:System.Xml.XmlAttribute" />。属性の名前が存在しない場合、このプロパティは null を返します。</returns>
+      <param name="localName">属性のローカル名。</param>
+      <param name="namespaceURI">属性の名前空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Prepend(System.Xml.XmlAttribute)">
+      <summary>指定した属性をコレクション内の最初のノードとして挿入します。</summary>
+      <returns>コレクションに追加する XmlAttribute。</returns>
+      <param name="node">挿入する <see cref="T:System.Xml.XmlAttribute" />。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Remove(System.Xml.XmlAttribute)">
+      <summary>指定した属性をコレクションから削除します。</summary>
+      <returns>削除されたノード。ノードがコレクション内で見つからない場合は null。</returns>
+      <param name="node">削除する <see cref="T:System.Xml.XmlAttribute" />。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.RemoveAll">
+      <summary>コレクションからすべての属性を削除します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.RemoveAt(System.Int32)">
+      <summary>コレクション内の指定したインデックスに対応する属性を削除します。</summary>
+      <returns>指定したインデックスに属性がない場合、null が返されます。</returns>
+      <param name="i">削除するノードのインデックス。最初のノードのインデックスは 0 です。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.SetNamedItem(System.Xml.XmlNode)">
+      <summary>
+        <see cref="P:System.Xml.XmlNode.Name" /> プロパティを使用して <see cref="T:System.Xml.XmlNode" /> を追加します。</summary>
+      <returns>
+        <paramref name="node" /> によって同じ名前の既存のノードが置換される場合は、古いノードが返されます。それ以外の場合は、追加されたノードが返されます。</returns>
+      <param name="node">このコレクションに格納する属性ノード。このノードは、ノードの名前を使用すると後からアクセスできます。その名前のノードが既にコレクションに存在している場合は、新しいノードと置き換えられます。それ以外の場合は、ノードがコレクションの末尾に追加されます。</param>
+      <exception cref="T:System.ArgumentException">このコレクションを作成した XML ドキュメントと異なる <see cref="T:System.Xml.XmlDocument" /> から <paramref name="node" /> が作成されました。この XmlAttributeCollection は読み取り専用です。</exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="node" /> は、既に別の <see cref="T:System.Xml.XmlElement" /> オブジェクトの属性である <see cref="T:System.Xml.XmlAttribute" /> です。その他の要素の属性を再利用するには、再利用する XmlAttribute オブジェクトのクローンを作成する必要があります。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>このメンバーの説明については、<see cref="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)" /> のトピックを参照してください。</summary>
+      <param name="array">このコレクションからコピーされたオブジェクトのコピー先の配列。</param>
+      <param name="index">配列内のコピー開始位置を示すインデックス。</param>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#Count">
+      <summary>このメンバーの説明については、<see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.Count" /> のトピックを参照してください。</summary>
+      <returns>属性の数が格納されている int を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#IsSynchronized">
+      <summary>このメンバーの説明については、<see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.IsSynchronized" /> のトピックを参照してください。</summary>
+      <returns>コレクションの同期がとられている場合は true を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#SyncRoot">
+      <summary>このメンバーの説明については、<see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.SyncRoot" /> のトピックを参照してください。</summary>
+      <returns>コレクションのルートである <see cref="T:System.Object" /> を返します。</returns>
+    </member>
+    <member name="T:System.Xml.XmlCDataSection">
+      <summary>CDATA セクションを表します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlCDataSection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="data">文字データを格納している <see cref="T:System.String" />。</param>
+      <param name="doc">
+        <see cref="T:System.Xml.XmlDocument" /> オブジェクト。</param>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.CloneNode(System.Boolean)">
+      <summary>このノードの複製を作成します。</summary>
+      <returns>クローンとして作成されたノード。</returns>
+      <param name="deep">指定したノードの下にあるサブツリーのクローンを順次作成していく場合は true。指定したノードだけのクローンを作成する場合は false。CDATA ノードには子がないため、パラメーターの設定に関係なく、クローンとして作成されたノードには常にデータ コンテンツが含まれます。</param>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.LocalName">
+      <summary>ノードのローカル名を取得します。</summary>
+      <returns>CDATA ノードの場合、ローカル名は #cdata-section です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.Name">
+      <summary>ノードの限定名を取得します。</summary>
+      <returns>CDATA ノードの場合、名前は #cdata-section です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.NodeType">
+      <summary>現在のノードの種類を取得します。</summary>
+      <returns>ノード型。CDATA ノードの場合、値は XmlNodeType.CDATA です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.ParentNode"></member>
+    <member name="P:System.Xml.XmlCDataSection.PreviousText">
+      <summary>このノードの直前にあるテキスト ノードを取得します。</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> を返します。</returns>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>ノードの子を、指定した <see cref="T:System.Xml.XmlWriter" /> に保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.WriteTo(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> にノードを保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlCharacterData">
+      <summary>複数のクラスで使用する、テキスト操作メソッドを提供します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlCharacterData" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="data">ドキュメントに追加される文字データが格納されている文字列。</param>
+      <param name="doc">文字データを格納する <see cref="T:System.Xml.XmlDocument" />。</param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.AppendData(System.String)">
+      <summary>指定した文字列をノードの文字データの末尾に追加します。</summary>
+      <param name="strData">既存の文字列に挿入する文字列。</param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Data">
+      <summary>ノードのデータを格納します。</summary>
+      <returns>ノードのデータ。</returns>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.DeleteData(System.Int32,System.Int32)">
+      <summary>ノードから文字の範囲を削除します。</summary>
+      <param name="offset">削除を開始する、文字列内の位置。</param>
+      <param name="count">削除する文字数。</param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.InsertData(System.Int32,System.String)">
+      <summary>指定した文字オフセット位置に指定した文字列を挿入します。</summary>
+      <param name="offset">指定した文字列データを挿入する、文字列内の位置。</param>
+      <param name="strData">既存の文字列に挿入される文字列データ。</param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Length">
+      <summary>文字単位でデータの長さを取得します。</summary>
+      <returns>
+        <see cref="P:System.Xml.XmlCharacterData.Data" /> プロパティに格納されている文字列の長さ (文字単位)。長さは 0、つまり CharacterData ノードが空の場合があります。</returns>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.ReplaceData(System.Int32,System.Int32,System.String)">
+      <summary>指定したオフセットを開始位置として、指定した数の文字を指定した文字列に置き換えます。</summary>
+      <param name="offset">置換を開始する、文字列内の位置。</param>
+      <param name="count">置換する文字数。</param>
+      <param name="strData">古い文字列データを置換する新しいデータ。</param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.Substring(System.Int32,System.Int32)">
+      <summary>指定した範囲から、完全な文字列の部分文字列を取得します。</summary>
+      <returns>指定した範囲に対応している部分文字列。</returns>
+      <param name="offset">取得を開始する、文字列内の位置。オフセットが 0 の場合は、データの先頭が開始点になることを示します。</param>
+      <param name="count">取得する文字数。</param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Value">
+      <summary>ノードの値を取得または設定します。</summary>
+      <returns>ノードの値。</returns>
+      <exception cref="T:System.ArgumentException">ノードが読み取り専用です。</exception>
+    </member>
+    <member name="T:System.Xml.XmlComment">
+      <summary>XML コメントの内容を表します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlComment.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlComment" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="comment">コメント要素の内容。</param>
+      <param name="doc">親 XML ドキュメント。</param>
+    </member>
+    <member name="M:System.Xml.XmlComment.CloneNode(System.Boolean)">
+      <summary>このノードの複製を作成します。</summary>
+      <returns>クローンとして作成されたノード。</returns>
+      <param name="deep">指定したノードの下にあるサブツリーのクローンを順次作成していく場合は true。指定したノードだけのクローンを作成する場合は false。コメント ノードには子がないため、パラメーターの設定に関係なく、クローンとして作成されたノードには、常にテキスト コンテンツが含まれます。</param>
+    </member>
+    <member name="P:System.Xml.XmlComment.LocalName">
+      <summary>ノードのローカル名を取得します。</summary>
+      <returns>コメント ノードの場合、この値は #comment です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlComment.Name">
+      <summary>ノードの限定名を取得します。</summary>
+      <returns>コメント ノードの場合、この値は #comment です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlComment.NodeType">
+      <summary>現在のノードの種類を取得します。</summary>
+      <returns>コメント ノードの場合、この値は XmlNodeType.Comment です。</returns>
+    </member>
+    <member name="M:System.Xml.XmlComment.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>ノードのすべての子を、指定した <see cref="T:System.Xml.XmlWriter" /> に保存します。コメント ノードには子がないため、このメソッドによる影響はありません。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlComment.WriteTo(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> にノードを保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlDeclaration">
+      <summary>XML 宣言ノード &lt;?xml version='1.0' ...?&gt; を表します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlDeclaration" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="version">XML バージョン。<see cref="P:System.Xml.XmlDeclaration.Version" /> プロパティのトピックを参照してください。</param>
+      <param name="encoding">エンコーディング スキーム。<see cref="P:System.Xml.XmlDeclaration.Encoding" /> プロパティのトピックを参照してください。</param>
+      <param name="standalone">XML ドキュメントが外部 DTD に依存するかどうかを示します。<see cref="P:System.Xml.XmlDeclaration.Standalone" /> プロパティのトピックを参照してください。</param>
+      <param name="doc">親 XML ドキュメント。</param>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.CloneNode(System.Boolean)">
+      <summary>このノードの複製を作成します。</summary>
+      <returns>クローンとして作成されたノード。</returns>
+      <param name="deep">指定したノードの下にあるサブツリーのクローンを順次作成していく場合は true。指定したノードだけのクローンを作成する場合は false。XmlDeclaration ノードには子がないため、パラメーターの設定に関係なく、クローンとして作成されたノードには、常にデータ値が含まれます。</param>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Encoding">
+      <summary>XML ドキュメントのエンコーディング レベルを取得または設定します。</summary>
+      <returns>有効な文字エンコーディング名。通常サポートされている XML の文字エンコーディング名を次に示します。[カテゴリ]エンコーディング名UnicodeUTF-8、UTF-16ISO 10646ISO-10646-UCS-2、ISO-10646-UCS-4ISO 8859ISO-8859-n ("n" は 1 から 9 までの数字)JIS X-0208-1997ISO-2022-JP、Shift_JIS、EUC-JPこの値は省略可能です。値が設定されていない場合は、このプロパティが String.Empty を返します。エンコーディング属性が含まれていない場合は、ドキュメントが書き込まれたり保存されるときに、UTF-8 エンコーディングであると見なされます。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.InnerText">
+      <summary>XmlDeclaration の連結している値を取得または設定します。</summary>
+      <returns>XmlDeclaration の連結している値。つまり &lt;?xml と ?&gt; の間のすべての値。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.LocalName">
+      <summary>ノードのローカル名を取得します。</summary>
+      <returns>XmlDeclaration ノードの場合、ローカル名は xml です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Name">
+      <summary>ノードの限定名を取得します。</summary>
+      <returns>XmlDeclaration ノードの場合、名前は xml です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.NodeType">
+      <summary>現在のノードの種類を取得します。</summary>
+      <returns>XmlDeclaration ノードの場合、この値は XmlNodeType.XmlDeclaration です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Standalone">
+      <summary>スタンドアロン属性の値を取得または設定します。</summary>
+      <returns>XML ドキュメントで必要なすべてのエンティティ宣言がドキュメント内に格納されている場合、有効値は yes です。外部の文書型宣言 (DTD : Document Type Definition) が必要な場合は no です。XML 宣言内にスタンドアロン属性が存在しない場合、このプロパティは String.Empty を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Value">
+      <summary>XmlDeclaration の値を取得または設定します。</summary>
+      <returns>XmlDeclaration の内容。つまり &lt;?xml と ?&gt; の間のすべて。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Version">
+      <summary>ドキュメントの XML バージョンを取得します。</summary>
+      <returns>値は常に 1.0 です。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>ノードの子を、指定した <see cref="T:System.Xml.XmlWriter" /> に保存します。XmlDeclaration ノードには子がないため、このメソッドによる影響はありません。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.WriteTo(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> にノードを保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlDocument">
+      <summary>XML ドキュメントを表します。詳細については、「Remarks」を参照してください。</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor">
+      <summary>
+        <see cref="T:System.Xml.XmlDocument" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor(System.Xml.XmlImplementation)">
+      <summary>指定した XmlDocument を使用して、<see cref="T:System.Xml.XmlImplementation" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="imp">使用する XmlImplementation。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor(System.Xml.XmlNameTable)">
+      <summary>指定した XmlDocument を使用して、<see cref="T:System.Xml.XmlNameTable" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="nt">使用する XmlNameTable。</param>
+    </member>
+    <member name="P:System.Xml.XmlDocument.BaseURI">
+      <summary>現在のノードのベース URI を取得します。</summary>
+      <returns>読み込まれたノードの読み込み元の場所。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CloneNode(System.Boolean)">
+      <summary>このノードの複製を作成します。</summary>
+      <returns>クローンとして作成された XmlDocument ノード。</returns>
+      <param name="deep">指定したノードの下にあるサブツリーのクローンを順次作成していく場合は true。指定したノードだけのクローンを作成する場合は false。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String)">
+      <summary>指定した <see cref="P:System.Xml.XmlDocument.Name" /> を使用して <see cref="T:System.Xml.XmlAttribute" /> を作成します。</summary>
+      <returns>新しい XmlAttribute。</returns>
+      <param name="name">属性の限定名。名前にコロンが含まれている場合は、名前のうち最初のコロンの前にある部分が <see cref="P:System.Xml.XmlNode.Prefix" /> プロパティに反映され、最初のコロンの後ろの部分が <see cref="P:System.Xml.XmlDocument.LocalName" /> プロパティに反映されます。プリフィックスが xmlns などの認識された組み込みプリフィックスでない限り、<see cref="P:System.Xml.XmlNode.NamespaceURI" /> は空のままです。この場合、NamespaceURI の値は http://www.w3.org/2000/xmlns/ です。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String,System.String)">
+      <summary>指定した限定名と <see cref="P:System.Xml.XmlNode.NamespaceURI" /> を使用して <see cref="T:System.Xml.XmlAttribute" /> を作成します。</summary>
+      <returns>新しい XmlAttribute。</returns>
+      <param name="qualifiedName">属性の限定名。名前にコロンが含まれている場合は、名前のうちコロンの前にある部分が <see cref="P:System.Xml.XmlNode.Prefix" /> プロパティに反映され、コロンの後ろの部分が <see cref="P:System.Xml.XmlDocument.LocalName" /> プロパティに反映されます。</param>
+      <param name="namespaceURI">属性の namespaceURI。限定名に xmlns というプリフィックスが含まれている場合、このパラメーターは http://www.w3.org/2000/xmlns/ である必要があります。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String,System.String,System.String)">
+      <summary>指定した <see cref="P:System.Xml.XmlNode.Prefix" />、<see cref="P:System.Xml.XmlDocument.LocalName" />、および <see cref="P:System.Xml.XmlNode.NamespaceURI" /> を使用して、<see cref="T:System.Xml.XmlAttribute" /> を作成します。</summary>
+      <returns>新しい XmlAttribute。</returns>
+      <param name="prefix">属性のプリフィックス (存在する場合)。String.Empty と null は等価です。</param>
+      <param name="localName">属性のローカル名。</param>
+      <param name="namespaceURI">属性の名前空間 URI (存在する場合)。String.Empty と null は等価です。<paramref name="prefix" /> が xmlns の場合、このパラメーターは http://www.w3.org/2000/xmlns/ である必要があります。それ以外の場合は、例外がスローされます。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateCDataSection(System.String)">
+      <summary>指定されたデータを格納している <see cref="T:System.Xml.XmlCDataSection" /> を作成します。</summary>
+      <returns>新しい XmlCDataSection。</returns>
+      <param name="data">新しい XmlCDataSection の内容。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateComment(System.String)">
+      <summary>指定されたデータを格納している <see cref="T:System.Xml.XmlComment" /> を作成します。</summary>
+      <returns>新しい XmlComment。</returns>
+      <param name="data">新しい XmlComment の内容。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateDocumentFragment">
+      <summary>
+        <see cref="T:System.Xml.XmlDocumentFragment" /> を作成します。</summary>
+      <returns>新しい XmlDocumentFragment。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String)">
+      <summary>指定した名前を使用して要素を作成します。</summary>
+      <returns>新しい XmlElement。</returns>
+      <param name="name">要素の限定名。名前にコロンが含まれている場合は、名前のうちコロンの前にある部分が <see cref="P:System.Xml.XmlNode.Prefix" /> プロパティに反映され、コロンの後ろの部分が <see cref="P:System.Xml.XmlDocument.LocalName" /> プロパティに反映されます。限定名に 'xmlns' というプリフィックスを含めることはできません。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String,System.String)">
+      <summary>限定名と <see cref="P:System.Xml.XmlNode.NamespaceURI" /> を使用して <see cref="T:System.Xml.XmlElement" /> を作成します。</summary>
+      <returns>新しい XmlElement。</returns>
+      <param name="qualifiedName">要素の限定名。名前にコロンが含まれている場合は、名前のうちコロンの前にある部分が <see cref="P:System.Xml.XmlNode.Prefix" /> プロパティに反映され、コロンの後ろの部分が <see cref="P:System.Xml.XmlDocument.LocalName" /> プロパティに反映されます。限定名に 'xmlns' というプリフィックスを含めることはできません。</param>
+      <param name="namespaceURI">要素の名前空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String,System.String,System.String)">
+      <summary>指定した <see cref="P:System.Xml.XmlNode.Prefix" />、<see cref="P:System.Xml.XmlDocument.LocalName" />、および <see cref="P:System.Xml.XmlNode.NamespaceURI" /> を使用して、要素を作成します。</summary>
+      <returns>新しい <see cref="T:System.Xml.XmlElement" />。</returns>
+      <param name="prefix">新しい要素のプリフィックス (存在する場合)。String.Empty と null は等価です。</param>
+      <param name="localName">新しい要素のローカル名。</param>
+      <param name="namespaceURI">新しい要素の名前空間 URI (存在する場合)。String.Empty と null は等価です。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.String,System.String,System.String)">
+      <summary>指定したノード型、<see cref="P:System.Xml.XmlDocument.Name" />、および <see cref="P:System.Xml.XmlNode.NamespaceURI" /> を使用して、<see cref="T:System.Xml.XmlNode" /> を作成します。</summary>
+      <returns>新しい XmlNode。</returns>
+      <param name="nodeTypeString">新しいノードの <see cref="T:System.Xml.XmlNodeType" /> の文字列バージョン。このパラメーターは、次の表に示す一覧の値のいずれかである必要があります。</param>
+      <param name="name">新しいノードの限定名。名前にコロンが含まれている場合は、解析結果は <see cref="P:System.Xml.XmlNode.Prefix" /> コンポーネントと <see cref="P:System.Xml.XmlDocument.LocalName" /> コンポーネントになります。</param>
+      <param name="namespaceURI">新しいノードの名前空間 URI。</param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name; or <paramref name="nodeTypeString" /> is not one of the strings listed below. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.Xml.XmlNodeType,System.String,System.String)">
+      <summary>指定した <see cref="T:System.Xml.XmlNodeType" />、<see cref="P:System.Xml.XmlDocument.Name" />、および <see cref="P:System.Xml.XmlNode.NamespaceURI" /> を使用して、<see cref="T:System.Xml.XmlNode" /> を作成します。</summary>
+      <returns>新しい XmlNode。</returns>
+      <param name="type">新しいノードの XmlNodeType。</param>
+      <param name="name">新しいノードの限定名。名前にコロンが含まれている場合は、解析結果は <see cref="P:System.Xml.XmlNode.Prefix" /> コンポーネントと <see cref="P:System.Xml.XmlDocument.LocalName" /> コンポーネントになります。</param>
+      <param name="namespaceURI">新しいノードの名前空間 URI。</param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.Xml.XmlNodeType,System.String,System.String,System.String)">
+      <summary>指定した <see cref="T:System.Xml.XmlNodeType" />、<see cref="P:System.Xml.XmlNode.Prefix" />、<see cref="P:System.Xml.XmlDocument.Name" />、および <see cref="P:System.Xml.XmlNode.NamespaceURI" /> を使用して、<see cref="T:System.Xml.XmlNode" /> を作成します。</summary>
+      <returns>新しい XmlNode。</returns>
+      <param name="type">新しいノードの XmlNodeType。</param>
+      <param name="prefix">新しいノードのプリフィックス。</param>
+      <param name="name">新しいノードのローカル名。</param>
+      <param name="namespaceURI">新しいノードの名前空間 URI。</param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateProcessingInstruction(System.String,System.String)">
+      <summary>指定した名前とデータを使用して <see cref="T:System.Xml.XmlProcessingInstruction" /> を作成します。</summary>
+      <returns>新しい XmlProcessingInstruction。</returns>
+      <param name="target">処理命令の名前。</param>
+      <param name="data">処理命令のデータ。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateSignificantWhitespace(System.String)">
+      <summary>
+        <see cref="T:System.Xml.XmlSignificantWhitespace" /> ノードを作成します。</summary>
+      <returns>新しい XmlSignificantWhitespace ノード。</returns>
+      <param name="text">文字列には、&amp;#20;、&amp;#10;、&amp;#13;、および &amp;#9; の文字だけを含める必要があります。 </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateTextNode(System.String)">
+      <summary>指定したテキストを使用して、<see cref="T:System.Xml.XmlText" /> を作成します。</summary>
+      <returns>新しい XmlText ノード。</returns>
+      <param name="text">Text ノードのテキスト。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateWhitespace(System.String)">
+      <summary>
+        <see cref="T:System.Xml.XmlWhitespace" /> ノードを作成します。</summary>
+      <returns>新しい XmlWhitespace ノード。</returns>
+      <param name="text">文字列には、&amp;#20;、&amp;#10;、&amp;#13;、および &amp;#9; の文字だけを含める必要があります。 </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateXmlDeclaration(System.String,System.String,System.String)">
+      <summary>指定した値を使用して、<see cref="T:System.Xml.XmlDeclaration" /> ノードを作成します。</summary>
+      <returns>新しい XmlDeclaration ノード。</returns>
+      <param name="version">バージョンは "1.0" にする必要があります。</param>
+      <param name="encoding">エンコーディング属性の値。これは、<see cref="T:System.Xml.XmlDocument" /> をファイルまたはストリームに保存するときに使用するエンコーディングです。したがって、<see cref="T:System.Text.Encoding" /> クラスでサポートされる文字列に設定する必要があります。それ以外の場合、<see cref="M:System.Xml.XmlDocument.Save(System.String)" /> は失敗します。この値が null または String.Empty の場合は、Save メソッドが XML 宣言にエンコーディング属性を書き込まないため、既定のエンコーディング UTF-8 が使用されます。メモ : XmlDocument が <see cref="T:System.IO.TextWriter" /> または <see cref="T:System.Xml.XmlTextWriter" /> に保存される場合、このエンコーディング値は破棄されます。代わりに、TextWriter または XmlTextWriter のエンコーディングが使用されます。これにより、正しいエンコーディングを使用して、書き込まれた XML を読み戻すことができます。</param>
+      <param name="standalone">この値は、"yes" または "no" のいずれかにする必要があります。この値が null または String.Empty の場合、Save メソッドは XML 宣言にスタンドアロン属性を書き込みません。</param>
+      <exception cref="T:System.ArgumentException">The values of <paramref name="version" /> or <paramref name="standalone" /> are something other than the ones specified above. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.DocumentElement">
+      <summary>ドキュメントのルート <see cref="T:System.Xml.XmlElement" /> を取得します。</summary>
+      <returns>XML ドキュメント ツリーのルートを表す XmlElement。ルートが存在しない場合は、null が返されます。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.GetElementsByTagName(System.String)">
+      <summary>指定した <see cref="P:System.Xml.XmlDocument.Name" /> に一致するすべての子孫の要素のリストを格納している <see cref="T:System.Xml.XmlNodeList" /> を返します。</summary>
+      <returns>一致しているすべてのノードのリストを格納している <see cref="T:System.Xml.XmlNodeList" />。<paramref name="name" /> と一致するノードがない場合、返されるコレクションは空になります。</returns>
+      <param name="name">一致する限定名。一致するノードの Name プロパティに一致します。特殊値の "*" は、すべてのタグに一致します。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.GetElementsByTagName(System.String,System.String)">
+      <summary>指定した <see cref="P:System.Xml.XmlDocument.LocalName" /> および <see cref="P:System.Xml.XmlNode.NamespaceURI" /> に一致するすべての子孫の要素のリストを格納している <see cref="T:System.Xml.XmlNodeList" /> を返します。</summary>
+      <returns>一致しているすべてのノードのリストを格納している <see cref="T:System.Xml.XmlNodeList" />。指定した <paramref name="localName" /> および <paramref name="namespaceURI" /> と一致するノードがない場合、返されるコレクションは空になります。</returns>
+      <param name="localName">一致する LocalName。特殊値の "*" は、すべてのタグに一致します。</param>
+      <param name="namespaceURI">一致する NamespaceURI。</param>
+    </member>
+    <member name="P:System.Xml.XmlDocument.Implementation">
+      <summary>現在のドキュメントの <see cref="T:System.Xml.XmlImplementation" /> オブジェクトを取得します。</summary>
+      <returns>現在のドキュメントの XmlImplementation オブジェクト。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.ImportNode(System.Xml.XmlNode,System.Boolean)">
+      <summary>別のドキュメントから現在のドキュメントにノードをインポートします。</summary>
+      <returns>インポートされた <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="node">インポートしているノード。</param>
+      <param name="deep">詳細クローンを実行する場合は true。それ以外の場合は false。</param>
+      <exception cref="T:System.InvalidOperationException">Calling this method on a node type which cannot be imported. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.InnerText">
+      <summary>常に <see cref="T:System.InvalidOperationException" /> をスローします。</summary>
+      <returns>ノードとそのすべての子ノードの値。</returns>
+      <exception cref="T:System.InvalidOperationException">In all cases.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.InnerXml">
+      <summary>現在のノードの子を表すマークアップを取得または設定します。</summary>
+      <returns>現在のノードの子のマークアップ。</returns>
+      <exception cref="T:System.Xml.XmlException">The XML specified when setting this property is not well-formed. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.IsReadOnly">
+      <summary>現在のノードが読み取り専用かどうかを示す値を取得します。</summary>
+      <returns>現在のノードが読み取り専用の場合は true。それ以外の場合は false。XmlDocument ノードは常に false を返します。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.IO.Stream)">
+      <summary>指定したストリームから XML ドキュメントを読み込みます。</summary>
+      <param name="inStream">読み込む XML ドキュメントが含まれているストリーム。</param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, a <see cref="T:System.IO.FileNotFoundException" /> is raised.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.IO.TextReader)">
+      <summary>指定した <see cref="T:System.IO.TextReader" /> から XML ドキュメントを読み込みます。</summary>
+      <param name="txtReader">XML データをドキュメントに送るために使用する TextReader。</param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.Xml.XmlReader)">
+      <summary>指定した <see cref="T:System.Xml.XmlReader" /> から XML ドキュメントを読み込みます。</summary>
+      <param name="reader">XML データをドキュメントに送るために使用する XmlReader。</param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.LoadXml(System.String)">
+      <summary>指定した文字列から XML ドキュメントを読み込みます。</summary>
+      <param name="xml">読み込む XML ドキュメントを格納している文字列。</param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.LocalName">
+      <summary>ノードのローカル名を取得します。</summary>
+      <returns>XmlDocument ノードの場合、ローカル名は #document です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.Name">
+      <summary>ノードの限定名を取得します。</summary>
+      <returns>XmlDocument ノードの場合、名前は #document です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.NameTable">
+      <summary>この実装に関連付けられている <see cref="T:System.Xml.XmlNameTable" /> を取得します。</summary>
+      <returns>ドキュメント内の最小単位に分割された文字列を取得できる XmlNameTable。</returns>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeChanged">
+      <summary>このドキュメントに属するノードの <see cref="P:System.Xml.XmlNode.Value" /> が変更されると発生します。</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeChanging">
+      <summary>このドキュメントに属するノードの <see cref="P:System.Xml.XmlNode.Value" /> が変更される直前に発生します。</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeInserted">
+      <summary>このドキュメントに属するノードが別のノードに挿入されると発生します。</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeInserting">
+      <summary>このドキュメントに属するノードが別のノードに挿入される直前に発生します。</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeRemoved">
+      <summary>このドキュメントに属するノードが親から削除されると発生します。</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeRemoving">
+      <summary>このドキュメントに属するノードがドキュメントから削除される直前に発生します。</summary>
+    </member>
+    <member name="P:System.Xml.XmlDocument.NodeType">
+      <summary>現在のノードの種類を取得します。</summary>
+      <returns>ノード型。XmlDocument ノードの場合、この値は XmlNodeType.Document です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.OwnerDocument">
+      <summary>現在のノードが属する <see cref="T:System.Xml.XmlDocument" /> を取得します。</summary>
+      <returns>XmlDocument ノード (<see cref="P:System.Xml.XmlDocument.NodeType" /> が XmlNodeType.Document に等しい) の場合、このプロパティは常に null を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.ParentNode">
+      <summary>このノードの親ノード (親を持つノードの場合) を取得します。</summary>
+      <returns>常に null を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.PreserveWhitespace">
+      <summary>要素のコンテンツにある空白を保存するかどうかを示す値を取得または設定します。</summary>
+      <returns>空白を保存する場合は true。それ以外の場合は false。既定値は、false です。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.ReadNode(System.Xml.XmlReader)">
+      <summary>
+        <see cref="T:System.Xml.XmlReader" /> 内の情報に基づいて、<see cref="T:System.Xml.XmlNode" /> オブジェクトを作成します。リーダーは、ノードまたは属性に配置されている必要があります。</summary>
+      <returns>新しい XmlNode。ノードがそれ以上存在しない場合は null。</returns>
+      <param name="reader">XML ソース。 </param>
+      <exception cref="T:System.NullReferenceException">The reader is positioned on a node type that does not translate to a valid DOM node (for example, EndElement or EndEntity). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.IO.Stream)">
+      <summary>指定したストリームに XML ドキュメントを保存します。</summary>
+      <param name="outStream">保存先のストリーム。</param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.IO.TextWriter)">
+      <summary>指定した <see cref="T:System.IO.TextWriter" /> に XML ドキュメントを保存します。</summary>
+      <param name="writer">保存先の TextWriter。</param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> に XML ドキュメントを保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> に XmlDocument ノードのすべての子を保存します。</summary>
+      <param name="xw">保存先の XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.WriteTo(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> に XmlDocument ノードを保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlDocumentFragment">
+      <summary>ツリー挿入操作に使用できる、簡易オブジェクトを表します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.#ctor(System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlDocumentFragment" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="ownerDocument">フラグメントのソースである XML ドキュメント。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.CloneNode(System.Boolean)">
+      <summary>このノードの複製を作成します。</summary>
+      <returns>クローンとして作成されたノード。</returns>
+      <param name="deep">指定したノードの下にあるサブツリーのクローンを順次作成していく場合は true。指定したノードだけのクローンを作成する場合は false。</param>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.InnerXml">
+      <summary>このノードの子を表すマークアップを取得または設定します。</summary>
+      <returns>このノードの子のマークアップ。</returns>
+      <exception cref="T:System.Xml.XmlException">このプロパティを設定したときに指定した XML は、整形式ではありません。</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.LocalName">
+      <summary>ノードのローカル名を取得します。</summary>
+      <returns>XmlDocumentFragment ノードの場合、ローカル名は #document-fragment です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.Name">
+      <summary>ノードの限定名を取得します。</summary>
+      <returns>XmlDocumentFragment の場合、名前は #document-fragment です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.NodeType">
+      <summary>現在のノードの種類を取得します。</summary>
+      <returns>XmlDocumentFragment ノードの場合、この値は XmlNodeType.DocumentFragment です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.OwnerDocument">
+      <summary>このノードが属する <see cref="T:System.Xml.XmlDocument" /> を取得します。</summary>
+      <returns>このノードが属する XmlDocument。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.ParentNode">
+      <summary>このノードの親 (親を持つノードの場合) を取得します。</summary>
+      <returns>このノードの親。XmlDocumentFragment ノードの場合、このプロパティは常に null です。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>ノードのすべての子を、指定した <see cref="T:System.Xml.XmlWriter" /> に保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.WriteTo(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> にノードを保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlElement">
+      <summary>要素を表します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlElement" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="prefix">名前空間プリフィックス。<see cref="P:System.Xml.XmlElement.Prefix" /> プロパティのトピックを参照してください。</param>
+      <param name="localName">ローカル名。<see cref="P:System.Xml.XmlElement.LocalName" /> プロパティのトピックを参照してください。</param>
+      <param name="namespaceURI">名前空間 URI。<see cref="P:System.Xml.XmlElement.NamespaceURI" /> プロパティのトピックを参照してください。</param>
+      <param name="doc">親 XML ドキュメント。</param>
+    </member>
+    <member name="P:System.Xml.XmlElement.Attributes">
+      <summary>このノードの属性のリストを格納している <see cref="T:System.Xml.XmlAttributeCollection" /> を取得します。</summary>
+      <returns>このノードの属性のリストを格納している <see cref="T:System.Xml.XmlAttributeCollection" />。</returns>
+    </member>
+    <member name="M:System.Xml.XmlElement.CloneNode(System.Boolean)">
+      <summary>このノードの複製を作成します。</summary>
+      <returns>クローンとして作成されたノード。</returns>
+      <param name="deep">指定したノードの下にあるサブツリーのクローンを再帰的に作成する場合は true。指定したノードだけ (および、そのノードが XmlElement の場合はその属性) のクローンを作成する場合は false。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttribute(System.String)">
+      <summary>指定した名前の属性の値を返します。</summary>
+      <returns>指定した属性の値。一致する属性が見つからない場合、属性に指定した値または既定値がない場合は、空の文字列を返します。</returns>
+      <param name="name">取得する属性の名前。これは限定名です。一致するノードの Name プロパティに一致します。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttribute(System.String,System.String)">
+      <summary>指定したローカル名および名前空間 URI の属性の値を返します。</summary>
+      <returns>指定した属性の値。一致する属性が見つからない場合、属性に指定した値または既定値がない場合は、空の文字列を返します。</returns>
+      <param name="localName">取得する属性のローカル名。</param>
+      <param name="namespaceURI">取得する属性の名前空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttributeNode(System.String)">
+      <summary>指定した名前の XmlAttribute を返します。</summary>
+      <returns>指定した XmlAttribute。一致する属性が見つからなかった場合は null。</returns>
+      <param name="name">取得する属性の名前。これは限定名です。一致するノードの Name プロパティに一致します。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttributeNode(System.String,System.String)">
+      <summary>指定したローカル名および名前空間 URI の <see cref="T:System.Xml.XmlAttribute" /> を返します。</summary>
+      <returns>指定した XmlAttribute。一致する属性が見つからなかった場合は null。</returns>
+      <param name="localName">属性のローカル名。</param>
+      <param name="namespaceURI">属性の名前空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetElementsByTagName(System.String)">
+      <summary>指定した <see cref="P:System.Xml.XmlElement.Name" /> に一致するすべての子孫の要素のリストを格納している <see cref="T:System.Xml.XmlNodeList" /> を返します。</summary>
+      <returns>一致しているすべてのノードのリストを格納している <see cref="T:System.Xml.XmlNodeList" />。リストが表示され、一致するノードがない場合は空です。</returns>
+      <param name="name">一致する名前タグ。これは限定名です。一致するノードの Name プロパティに一致します。アスタリスク (*) は、すべてのタグに一致する特殊値です。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetElementsByTagName(System.String,System.String)">
+      <summary>指定した <see cref="P:System.Xml.XmlElement.LocalName" /> および <see cref="P:System.Xml.XmlElement.NamespaceURI" /> に一致するすべての子孫の要素のリストを格納している <see cref="T:System.Xml.XmlNodeList" /> を返します。</summary>
+      <returns>一致しているすべてのノードのリストを格納している <see cref="T:System.Xml.XmlNodeList" />。リストが表示され、一致するノードがない場合は空です。</returns>
+      <param name="localName">一致するローカル名。アスタリスク (*) は、すべてのタグに一致する特殊値です。</param>
+      <param name="namespaceURI">一致する名前空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.HasAttribute(System.String)">
+      <summary>現在のノードに指定した名前の属性があるかどうかを確認します。</summary>
+      <returns>現在のノードに指定した属性がある場合は true。それ以外の場合は false。</returns>
+      <param name="name">検索する属性の名前。これは限定名です。一致するノードの Name プロパティに一致します。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.HasAttribute(System.String,System.String)">
+      <summary>指定したローカル名および名前空間 URI の属性が現在のノードにあるかどうかを確認します。</summary>
+      <returns>現在のノードに指定した属性がある場合は true。それ以外の場合は false。</returns>
+      <param name="localName">検索する属性のローカル名。</param>
+      <param name="namespaceURI">検索する属性の名前空間 URI。</param>
+    </member>
+    <member name="P:System.Xml.XmlElement.HasAttributes">
+      <summary>現在のノードが属性を持っているかどうかを示す boolean 値を取得します。</summary>
+      <returns>現在のノードが属性を持っている場合は true。それ以外の場合は false。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.InnerText">
+      <summary>ノードとそのすべての子の連結している値を取得または設定します。</summary>
+      <returns>ノードとすべての子の連結された値。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.InnerXml">
+      <summary>このノードの子だけを表すマークアップを取得または設定します。</summary>
+      <returns>このノードの子のマークアップ。</returns>
+      <exception cref="T:System.Xml.XmlException">このプロパティを設定したときに指定した XML は、整形式ではありません。</exception>
+    </member>
+    <member name="P:System.Xml.XmlElement.IsEmpty">
+      <summary>要素のタグ形式を取得または設定します。</summary>
+      <returns>要素が短いタグ形式 "&lt;item/&gt;" でシリアル化される場合は true を返します。長い形式 "&lt;item&gt;&lt;/item&gt;" の場合は false を返します。このプロパティを設定する場合、true に設定すると、要素の子が削除され、要素は短いタグ形式でシリアル化されます。false に設定した場合は、要素に内容があるかどうかにかかわらず、プロパティの値は変更されます。要素が空の場合は、長い形式でシリアル化されます。このプロパティは、DOM (Document Object Model) に対する Microsoft 拡張機能です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.LocalName">
+      <summary>現在のノードのローカル名を取得します。</summary>
+      <returns>プリフィックスを削除した現在のノードの名前。たとえば、LocalName は要素 &lt;bk:book&gt; の book です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.Name">
+      <summary>ノードの限定名を取得します。</summary>
+      <returns>ノードの限定名。XmlElement ノードの場合、これは要素のタグ名です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NamespaceURI">
+      <summary>このノードの名前空間 URI を取得します。</summary>
+      <returns>このノードの名前空間 URI。名前空間 URI がない場合、このプロパティは String.Empty を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NextSibling">
+      <summary>この要素の直後の <see cref="T:System.Xml.XmlNode" /> を取得します。</summary>
+      <returns>この要素の直後の XmlNode。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NodeType">
+      <summary>現在のノードの種類を取得します。</summary>
+      <returns>ノード型。XmlElement ノードの場合、この値は XmlNodeType.Element です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.OwnerDocument">
+      <summary>このノードが属する <see cref="T:System.Xml.XmlDocument" /> を取得します。</summary>
+      <returns>この要素が属する XmlDocument。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.ParentNode"></member>
+    <member name="P:System.Xml.XmlElement.Prefix">
+      <summary>このノードの名前空間プリフィックスを取得または設定します。</summary>
+      <returns>このノードの名前空間プリフィックス。プリフィックスがない場合、このプロパティは String.Empty を返します。</returns>
+      <exception cref="T:System.ArgumentException">このノードは読み取り専用です。</exception>
+      <exception cref="T:System.Xml.XmlException">指定したプレフィックスに無効な文字が含まれています。指定されたプリフィックスの書式が正しくありません。このノードの namespaceURI が null です。指定したプリフィックスが "xml" で、このノードの namespaceURI が http://www.w3.org/XML/1998/namespace と異なっています。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAll">
+      <summary>現在のノードのすべての指定した属性および子を削除します。既定の属性は削除されません。</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAllAttributes">
+      <summary>要素からすべての指定した属性を削除します。既定の属性は削除されません。</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttribute(System.String)">
+      <summary>名前によって属性を削除します。</summary>
+      <param name="name">削除する属性の名前。これは限定名です。一致するノードの Name プロパティに一致します。</param>
+      <exception cref="T:System.ArgumentException">ノードが読み取り専用です。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttribute(System.String,System.String)">
+      <summary>指定したローカル名および名前空間 URI の属性を削除します。削除された属性に既定値がある場合は、すぐに置き換えられます。</summary>
+      <param name="localName">削除する属性のローカル名。</param>
+      <param name="namespaceURI">削除する属性の名前空間 URI。</param>
+      <exception cref="T:System.ArgumentException">ノードが読み取り専用です。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeAt(System.Int32)">
+      <summary>指定したインデックスの属性ノードを要素から削除します。削除された属性に既定値がある場合は、すぐに置き換えられます。</summary>
+      <returns>削除された属性ノード。指定したインデックス位置にノードがない場合は null。</returns>
+      <param name="i">削除するノードのインデックス。最初のノードのインデックスは 0 です。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeNode(System.String,System.String)">
+      <summary>ローカル名および名前空間 URI で指定された <see cref="T:System.Xml.XmlAttribute" /> を削除します。削除された属性に既定値がある場合は、すぐに置き換えられます。</summary>
+      <returns>削除された XmlAttribute。XmlElement に一致する属性ノードがない場合は null。</returns>
+      <param name="localName">属性のローカル名。</param>
+      <param name="namespaceURI">属性の名前空間 URI。</param>
+      <exception cref="T:System.ArgumentException">このノードは読み取り専用です。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeNode(System.Xml.XmlAttribute)">
+      <summary>指定した <see cref="T:System.Xml.XmlAttribute" /> を削除します。</summary>
+      <returns>削除された XmlAttribute。<paramref name="oldAttr" /> が XmlElement の属性ノードでない場合は null。</returns>
+      <param name="oldAttr">削除する XmlAttribute ノード。削除された属性に既定値がある場合は、すぐに置き換えられます。</param>
+      <exception cref="T:System.ArgumentException">このノードは読み取り専用です。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttribute(System.String,System.String)">
+      <summary>指定した名前の属性の値を設定します。</summary>
+      <param name="name">作成または変更する属性の名前。これは限定名です。名前にコロンが含まれている場合、その名前はプリフィックスとローカル名コンポーネントに解析されます。</param>
+      <param name="value">属性に設定する値。</param>
+      <exception cref="T:System.Xml.XmlException">指定した名前に無効な文字が含まれています。</exception>
+      <exception cref="T:System.ArgumentException">ノードが読み取り専用です。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttribute(System.String,System.String,System.String)">
+      <summary>指定したローカル名および名前空間 URI の属性の値を設定します。</summary>
+      <returns>属性値。</returns>
+      <param name="localName">属性のローカル名。</param>
+      <param name="namespaceURI">属性の名前空間 URI。</param>
+      <param name="value">属性に設定する値。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttributeNode(System.String,System.String)">
+      <summary>指定した <see cref="T:System.Xml.XmlAttribute" /> を追加します。</summary>
+      <returns>追加する XmlAttribute。</returns>
+      <param name="localName">属性のローカル名。</param>
+      <param name="namespaceURI">属性の名前空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttributeNode(System.Xml.XmlAttribute)">
+      <summary>指定した <see cref="T:System.Xml.XmlAttribute" /> を追加します。</summary>
+      <returns>属性によって同じ名前の既存の属性が置換される場合は、古い XmlAttribute が返されます。それ以外の場合は、null が返されます。</returns>
+      <param name="newAttr">この要素の属性コレクションに追加する XmlAttribute ノード。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newAttr" /> は、このノードを作成したドキュメントとは異なるドキュメントから作成されました。または、このノードが読み取り専用です。</exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="newAttr" /> は、既に別の XmlElement オブジェクトの属性になっています。XmlAttribute ノードのクローンを明示的に作成し、それらのクローンを他の XmlElement オブジェクトで再利用する必要があります。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>ノードのすべての子を、指定した <see cref="T:System.Xml.XmlWriter" /> に保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.WriteTo(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> に現在のノードを保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlImplementation">
+      <summary>
+        <see cref="T:System.Xml.XmlDocument" /> オブジェクトのセットのコンテキストを定義します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.#ctor">
+      <summary>
+        <see cref="T:System.Xml.XmlImplementation" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.#ctor(System.Xml.XmlNameTable)">
+      <summary>
+        <see cref="T:System.Xml.XmlNameTable" /> を指定して、<see cref="T:System.Xml.XmlImplementation" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="nt">
+        <see cref="T:System.Xml.XmlNameTable" /> オブジェクト。</param>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.CreateDocument">
+      <summary>新しい <see cref="T:System.Xml.XmlDocument" /> を作成します。</summary>
+      <returns>新しい XmlDocument オブジェクト。</returns>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.HasFeature(System.String,System.String)">
+      <summary>DOM (Document Object Model) 実装が特定の機能を実装するかどうかをテストします。</summary>
+      <returns>指定したバージョンでその機能が実装される場合は true。それ以外の場合は false。HasFeature が true を返す組み合わせを次の表に示します。strFeaturestrVersionXML1.0XML2.0</returns>
+      <param name="strFeature">テスト対象の機能のパッケージ名。この名前は大文字と小文字を区別しません。</param>
+      <param name="strVersion">これは、テストする対象のパッケージ名のバージョン番号です。バージョンを指定しない場合 (null)、機能のいずれかのバージョンがサポートされていれば、このメソッドは true を返します。</param>
+    </member>
+    <member name="T:System.Xml.XmlLinkedNode">
+      <summary>このノードの直前または直後のノードを取得します。</summary>
+    </member>
+    <member name="P:System.Xml.XmlLinkedNode.NextSibling">
+      <summary>このノードの直後のノードを取得します。</summary>
+      <returns>このノードの直後の <see cref="T:System.Xml.XmlNode" />。直後のノードが存在しない場合は null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlLinkedNode.PreviousSibling">
+      <summary>このノードの直前のノードを取得します。</summary>
+      <returns>直前の <see cref="T:System.Xml.XmlNode" />。直前のノードが存在しない場合は null。</returns>
+    </member>
+    <member name="T:System.Xml.XmlNamedNodeMap">
+      <summary>名前またはインデックスによってアクセスできるノードのコレクションを表します。</summary>
+    </member>
+    <member name="P:System.Xml.XmlNamedNodeMap.Count">
+      <summary>XmlNamedNodeMap 内のノードの数を取得します。</summary>
+      <returns>ノードの数。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetEnumerator">
+      <summary>XmlNamedNodeMap 内のノードのコレクションに対する "foreach" スタイルの反復をサポートします。</summary>
+      <returns>列挙子オブジェクト。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String)">
+      <summary>名前で指定した <see cref="T:System.Xml.XmlNode" /> を取得します。</summary>
+      <returns>指定した名前の XmlNode。一致するノードが見つからない場合は null。</returns>
+      <param name="name">取得するノードの限定名。一致するノードの <see cref="P:System.Xml.XmlNode.Name" /> プロパティに一致します。</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String,System.String)">
+      <summary>一致する <see cref="P:System.Xml.XmlNode.LocalName" /> および <see cref="P:System.Xml.XmlNode.NamespaceURI" /> を持つノードを取得します。</summary>
+      <returns>一致するローカル名および名前空間 URI を持つ <see cref="T:System.Xml.XmlNode" />。一致するノードが見つからなかった場合は null。</returns>
+      <param name="localName">取得するノードのローカル名。</param>
+      <param name="namespaceURI">取得するノードの名前空間 URI (Uniform Resource Identifier)。</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.Item(System.Int32)">
+      <summary>XmlNamedNodeMap 内の指定したインデックス位置にあるノードを取得します。</summary>
+      <returns>指定されたインデックスにある <see cref="T:System.Xml.XmlNode" />。<paramref name="index" /> が 0 未満か、<see cref="P:System.Xml.XmlNamedNodeMap.Count" /> プロパティ以上の場合は、null が返されます。</returns>
+      <param name="index">XmlNamedNodeMap から取得するノードのインデックス位置。インデックスは 0 から始まるため、最初のノードのインデックスは 0 で、最後のノードのインデックスは <see cref="P:System.Xml.XmlNamedNodeMap.Count" /> -1 になります。</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String)">
+      <summary>ノードを XmlNamedNodeMap から削除します。</summary>
+      <returns>この XmlNamedNodeMap から削除した XmlNode。一致するノードが見つからなかった場合は null。</returns>
+      <param name="name">削除するノードの限定名。名前は、一致するノードの <see cref="P:System.Xml.XmlNode.Name" /> プロパティに一致します。</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String,System.String)">
+      <summary>一致する <see cref="P:System.Xml.XmlNode.LocalName" /> および <see cref="P:System.Xml.XmlNode.NamespaceURI" /> を持つノードを削除します。</summary>
+      <returns>削除した <see cref="T:System.Xml.XmlNode" />。一致するノードが見つからなかった場合は null。</returns>
+      <param name="localName">削除するノードのローカル名。</param>
+      <param name="namespaceURI">削除するノードの名前空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.SetNamedItem(System.Xml.XmlNode)">
+      <summary>
+        <see cref="T:System.Xml.XmlNode" /> をその <see cref="P:System.Xml.XmlNode.Name" /> プロパティを使用して追加します。</summary>
+      <returns>
+        <paramref name="node" /> によって同じ名前の既存のノードが置換される場合、古いノードが返されます。それ以外の場合は null が返されます。</returns>
+      <param name="node">XmlNamedNodeMap に格納する XmlNode。その名前のノードが既にマップに存在している場合は、新しいノードに置き換えられます。</param>
+      <exception cref="T:System.ArgumentException">XmlNamedNodeMap を作成したものとは異なる <see cref="T:System.Xml.XmlDocument" /> から <paramref name="node" /> が作成されました。または、XmlNamedNodeMap が読み取り専用です。</exception>
+    </member>
+    <member name="T:System.Xml.XmlNode">
+      <summary>XML ドキュメント内の単一のノードを表します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlNode.AppendChild(System.Xml.XmlNode)">
+      <summary>このノードの子ノードのリストの末尾に、指定したノードを追加します。</summary>
+      <returns>追加されたノード。</returns>
+      <param name="newChild">追加するノード。追加するノードのすべての内容が、指定した場所に移動します。</param>
+      <exception cref="T:System.InvalidOperationException">このノードは、<paramref name="newChild" /> ノードの型の子ノードが許可されない型です。<paramref name="newChild" /> がこのノードの先祖です。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> は、このノードを作成したドキュメントとは異なるドキュメントから作成されました。このノードは読み取り専用です。</exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.Attributes">
+      <summary>このノードの属性を格納している <see cref="T:System.Xml.XmlAttributeCollection" /> を取得します。</summary>
+      <returns>ノードの属性を格納している XmlAttributeCollection。XmlNodeType.Element 型のノードの場合は、ノードの属性が返されます。それ以外の場合は、null を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.BaseURI">
+      <summary>現在のノードのベース URI を取得します。</summary>
+      <returns>ノードの読み込み元の場所。ノードにベース URI がない場合は String.Empty。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.ChildNodes">
+      <summary>ノードのすべての子ノードを取得します。</summary>
+      <returns>ノードのすべての子ノードを格納しているオブジェクト。子ノードがない場合、このプロパティは空の <see cref="T:System.Xml.XmlNodeList" /> を返します。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.CloneNode(System.Boolean)">
+      <summary>派生クラスでオーバーライドされた場合は、ノードの複製を作成します。</summary>
+      <returns>クローンとして作成されたノード。</returns>
+      <param name="deep">指定したノードの下にあるサブツリーのクローンを順次作成していく場合は true。指定したノードだけのクローンを作成する場合は false。</param>
+      <exception cref="T:System.InvalidOperationException">クローンを作成できないノード型でこのメソッドを呼び出しています。</exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.FirstChild">
+      <summary>ノードの最初の子を取得します。</summary>
+      <returns>ノードの最初の子。そのようなノードがない場合は、null が返されます。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetEnumerator">
+      <summary>現在のノード内の子ノードを反復処理する列挙子を取得します。</summary>
+      <returns>現在のノードの子ノードを反復処理するために使用できる <see cref="T:System.Collections.IEnumerator" /> オブジェクト。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetNamespaceOfPrefix(System.String)">
+      <summary>現在のノードのスコープ内にある指定したプレフィックスに対する最も近い xmlns 宣言を検索し、宣言内の名前空間 URI を返します。</summary>
+      <returns>指定したプリフィックスの名前空間 URI。</returns>
+      <param name="prefix">検索対象の名前空間 URI を持つプレフィックス。</param>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetPrefixOfNamespace(System.String)">
+      <summary>現在のノードのスコープ内にある指定した名前空間 URI に対する最も近い xmlns 宣言を検索し、宣言で定義されているプレフィックスを返します。</summary>
+      <returns>指定した名前空間 URI のプリフィックス。</returns>
+      <param name="namespaceURI">検索対象のプリフィックスを持つ名前空間 URI。</param>
+    </member>
+    <member name="P:System.Xml.XmlNode.HasChildNodes">
+      <summary>このノードに子ノードがあるかどうかを示す値を取得します。</summary>
+      <returns>ノードが子ノードを持っている場合は true。それ以外の場合は false。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.InnerText">
+      <summary>ノードとそのすべての子の連結された値を取得または設定します。</summary>
+      <returns>ノードとそのすべての子の連結された値。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.InnerXml">
+      <summary>このノードの子ノードだけを表すマークアップを取得または設定します。</summary>
+      <returns>このノードの子ノードのマークアップ。メモInnerXml は既定の属性を返しません。</returns>
+      <exception cref="T:System.InvalidOperationException">子ノードを持つことができないノードでこのプロパティを設定します。</exception>
+      <exception cref="T:System.Xml.XmlException">このプロパティを設定したときに指定した XML は、整形式ではありません。</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>指定したノードを指定した参照ノードの直後に挿入します。</summary>
+      <returns>挿入されるノード。</returns>
+      <param name="newChild">挿入する XmlNode。</param>
+      <param name="refChild">参照ノードである XmlNode。<paramref name="newNode" /> は、<paramref name="refNode" /> の後に配置されます。</param>
+      <exception cref="T:System.InvalidOperationException">このノードは、<paramref name="newChild" /> ノードの型の子ノードが許可されない型です。<paramref name="newChild" /> がこのノードの先祖です。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> は、このノードを作成したドキュメントとは異なるドキュメントから作成されました。<paramref name="refChild" /> がこのノードの子ではありません。このノードは読み取り専用です。</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>指定したノードを指定した参照ノードの直前に挿入します。</summary>
+      <returns>挿入されるノード。</returns>
+      <param name="newChild">挿入する XmlNode。</param>
+      <param name="refChild">参照ノードである XmlNode。<paramref name="newChild" /> は、このノードの前に配置されます。</param>
+      <exception cref="T:System.InvalidOperationException">現在のノードは、<paramref name="newChild" /> ノードの型の子ノードが許可されない型です。<paramref name="newChild" /> がこのノードの先祖です。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> は、このノードを作成したドキュメントとは異なるドキュメントから作成されました。<paramref name="refChild" /> がこのノードの子ではありません。このノードは読み取り専用です。</exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.IsReadOnly">
+      <summary>ノードが読み取り専用かどうかを示す値を取得します。</summary>
+      <returns>ノードが読み取り専用の場合は true。それ以外の場合は false。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Item(System.String)">
+      <summary>指定した <see cref="P:System.Xml.XmlNode.Name" /> の最初の子要素を取得します。</summary>
+      <returns>指定した名前と一致する最初の <see cref="T:System.Xml.XmlElement" />。一致するものがない場合は、null 参照 (Visual Basic の場合は Nothing) が返されます。</returns>
+      <param name="name">取得する要素の限定名。</param>
+    </member>
+    <member name="P:System.Xml.XmlNode.Item(System.String,System.String)">
+      <summary>指定した <see cref="P:System.Xml.XmlNode.LocalName" /> および <see cref="P:System.Xml.XmlNode.NamespaceURI" /> の最初の子要素を取得します。</summary>
+      <returns>
+        <paramref name="localname" /> および <paramref name="ns" /> が一致する最初の <see cref="T:System.Xml.XmlElement" />。.一致するものがない場合は、null 参照 (Visual Basic の場合は Nothing) が返されます。</returns>
+      <param name="localname">要素のローカル名。</param>
+      <param name="ns">要素の名前空間 URI。</param>
+    </member>
+    <member name="P:System.Xml.XmlNode.LastChild">
+      <summary>ノードの最後の子を取得します。</summary>
+      <returns>ノードの最後の子。そのようなノードがない場合は、null が返されます。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.LocalName">
+      <summary>派生クラスでオーバーライドされた場合は、ノードのローカル名を取得します。</summary>
+      <returns>プリフィックスが削除されたノードの名前。たとえば、LocalName は要素 &lt;bk:book&gt; の book です。返される名前は、ノードの <see cref="P:System.Xml.XmlNode.NodeType" /> によって異なります。種類名前属性属性のローカル名。CDATA#cdata-sectionコメント#commentDocument#documentDocumentFragment#document-fragmentDocumentTypeドキュメントの種類の名前。要素要素のローカル名。Entityエンティティの名前。EntityReference参照されたエンティティの名前。Notation表記名。ProcessingInstruction処理命令の対象。Text#textWhitespace#whitespaceSignificantWhitespace#significant-whitespaceXmlDeclaration#xml-declaration</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Name">
+      <summary>派生クラスでオーバーライドされた場合は、ノードの修飾名を取得します。</summary>
+      <returns>ノードの限定名。返される名前は、ノードの <see cref="P:System.Xml.XmlNode.NodeType" /> によって異なります。種類名前属性属性の限定名。CDATA#cdata-sectionコメント#commentDocument#documentDocumentFragment#document-fragmentDocumentTypeドキュメントの種類の名前。要素要素の限定名。Entityエンティティの名前。EntityReference参照されたエンティティの名前。Notation表記名。ProcessingInstruction処理命令の対象。Text#textWhitespace#whitespaceSignificantWhitespace#significant-whitespaceXmlDeclaration#xml-declaration</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NamespaceURI">
+      <summary>このノードの名前空間 URI を取得します。</summary>
+      <returns>このノードの名前空間 URI。名前空間 URI がない場合、このプロパティは String.Empty を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NextSibling">
+      <summary>このノードの直後のノードを取得します。</summary>
+      <returns>次の XmlNode。次のノードがない場合は、null が返されます。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NodeType">
+      <summary>派生クラスでオーバーライドされている場合は、現在のノードの型を取得します。</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNodeType" /> 値のいずれか。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.Normalize">
+      <summary>この XmlNode の一番下のサブツリーまで含め、すべての XmlText ノードをマークアップ (タグ、コメント、処理命令、CDATA セクション、およびエンティティ参照) だけが XmlText ノードを区分する "通常の" 書式にします。したがって、隣接する XmlText ノードはありません。</summary>
+    </member>
+    <member name="P:System.Xml.XmlNode.OuterXml">
+      <summary>このノードとそのすべての子ノードを格納しているマークアップを取得します。</summary>
+      <returns>このノードとそのすべての子ノードを格納しているマークアップ。メモOuterXml は既定の属性を返しません。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.OwnerDocument">
+      <summary>このノードが属する <see cref="T:System.Xml.XmlDocument" /> を取得します。</summary>
+      <returns>このノードが属する <see cref="T:System.Xml.XmlDocument" />。ノードが <see cref="T:System.Xml.XmlDocument" /> (NodeType が XmlNodeType.Document と等しい) の場合、このプロパティは null を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.ParentNode">
+      <summary>このノードの親 (親を持つノードの場合) を取得します。</summary>
+      <returns>現在のノードの親である XmlNode。ノードが作成された直後でまだツリーに追加されていない場合、またはツリーから削除された場合、親は null です。他のすべてのノードについては、返される値はノードの <see cref="P:System.Xml.XmlNode.NodeType" /> によって異なります。ParentNode プロパティの有効な戻り値を次の表に示します。ノード型ParentNode の戻り値。Attribute、Document、DocumentFragment、Entity、Notationnull を返します。これらのノードには親がありません。CDATACDATA セクションを含む要素またはエンティティ参照を返します。コメントコメントを含む要素、エンティティ参照、ドキュメントの種類、またはドキュメントを返します。DocumentTypeドキュメント ノードを返します。要素要素の親ノードを返します。要素がツリーにおいてルート ノードである場合、親はドキュメント ノードです。EntityReferenceエンティティ参照を含む要素、属性、またはエンティティ参照を返します。ProcessingInstruction処理命令を含むドキュメント、要素、ドキュメントの種類、またはエンティティ参照を返します。Textテキスト ノードを含む親要素、属性、またはエンティティ参照を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Prefix">
+      <summary>このノードの名前空間プリフィックスを取得または設定します。</summary>
+      <returns>このノードの名前空間プリフィックス。たとえば、プリフィックスは要素 &lt;bk:book&gt; の bk です。プリフィックスがない場合、このプロパティは String.Empty を返します。</returns>
+      <exception cref="T:System.ArgumentException">このノードは読み取り専用です。</exception>
+      <exception cref="T:System.Xml.XmlException">指定したプレフィックスに無効な文字が含まれています。指定されたプリフィックスの書式が正しくありません。指定したプリフィックスが "xml" であり、このノードの namespaceURI が "http://www.w3.org/XML/1998/namespace" と異なっています。このノードが属性で、指定したプリフィックスが "xmlns" で、このノードの namespaceURI が "http://www.w3.org/2000/xmlns/ " と異なります。このノードが属性で、このノードの qualifiedName が "xmlns" です。</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.PrependChild(System.Xml.XmlNode)">
+      <summary>このノードの子ノードのリストの先頭に、指定したノードを追加します。</summary>
+      <returns>追加されたノード。</returns>
+      <param name="newChild">追加するノード。追加するノードのすべての内容が、指定した場所に移動します。</param>
+      <exception cref="T:System.InvalidOperationException">このノードは、<paramref name="newChild" /> ノードの型の子ノードが許可されない型です。<paramref name="newChild" /> がこのノードの先祖です。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> は、このノードを作成したドキュメントとは異なるドキュメントから作成されました。このノードは読み取り専用です。</exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.PreviousSibling">
+      <summary>このノードの直前のノードを取得します。</summary>
+      <returns>直前の XmlNode。直前のノードがない場合は、null が返されます。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.PreviousText">
+      <summary>このノードの直前にあるテキスト ノードを取得します。</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> を返します。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.RemoveAll">
+      <summary>現在のノードのすべての子ノードと属性の両方、またはそのいずれかを削除します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)">
+      <summary>指定した子ノードを削除します。</summary>
+      <returns>削除されたノード。</returns>
+      <param name="oldChild">削除されるノード。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="oldChild" /> がこのノードの子ではありません。または、このノードが読み取り専用です。</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>子ノード <paramref name="oldChild" /> を <paramref name="newChild" /> ノードに置き換えます。</summary>
+      <returns>置き換えられたノード。</returns>
+      <param name="newChild">子リストに入れる新しいノード。</param>
+      <param name="oldChild">リスト内の置換されるノード。</param>
+      <exception cref="T:System.InvalidOperationException">このノードは、<paramref name="newChild" /> ノードの型の子ノードが許可されない型です。<paramref name="newChild" /> がこのノードの先祖です。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> は、このノードを作成したドキュメントとは異なるドキュメントから作成されました。このノードは読み取り専用です。<paramref name="oldChild" /> がこのノードの子ではありません。</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.Supports(System.String,System.String)">
+      <summary>DOM 実装が特定の機能を実装するかどうかをテストします。</summary>
+      <returns>指定したバージョンでその機能が実装される場合は true。それ以外の場合は false。true を返す組み合わせを次の表に示します。機能バージョンXML1.0 XML2.0 </returns>
+      <param name="feature">テスト対象の機能のパッケージ名。この名前は大文字と小文字を区別しません。</param>
+      <param name="version">テストする対象のパッケージ名のバージョン番号。バージョンを指定しない場合、つまりバージョンが null の場合は、いずれかのバージョンの機能がサポートされていれば、メソッドは true を返します。</param>
+    </member>
+    <member name="M:System.Xml.XmlNode.System#Collections#IEnumerable#GetEnumerator">
+      <summary>このメンバーの説明については、<see cref="M:System.Xml.XmlNode.GetEnumerator" /> のトピックを参照してください。</summary>
+      <returns>コレクションの列挙子を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Value">
+      <summary>ノードの値を取得または設定します。</summary>
+      <returns>返される値は、ノードの <see cref="P:System.Xml.XmlNode.NodeType" /> によって異なります。種類値属性属性の値。CDATASectionCDATA セクションの内容。コメントコメントの内容。Document null. DocumentFragment null. DocumentType null. 要素 null.<see cref="P:System.Xml.XmlElement.InnerText" /> プロパティまたは <see cref="P:System.Xml.XmlElement.InnerXml" /> プロパティを使用すると、要素ノードの値にアクセスできます。Entity null. EntityReference null. Notation null. ProcessingInstructionターゲットを含まない全体の内容。Textテキスト ノードの内容。SignificantWhitespace空白文字。空白は、1 つ以上の空白文字、キャリッジ リターン、ライン フィード、またはタブによって構成できます。Whitespace空白文字。空白は、1 つ以上の空白文字、キャリッジ リターン、ライン フィード、またはタブによって構成できます。XmlDeclaration宣言の内容。つまり &lt;?xml と ?&gt; の間のすべて。</returns>
+      <exception cref="T:System.ArgumentException">読み取り専用のノードの値を設定します。</exception>
+      <exception cref="T:System.InvalidOperationException">値がないと想定されているノード (Element ノードなど) の値を設定します。</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>派生クラスでオーバーライドされた場合は、指定した <see cref="T:System.Xml.XmlWriter" /> にノードのすべての子ノードを保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)">
+      <summary>派生クラスでオーバーライドされた場合は、指定した <see cref="T:System.Xml.XmlWriter" /> に現在のノードを保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedAction">
+      <summary>ノード変更の型を指定します。</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Change">
+      <summary>ノード値が変更されています。</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Insert">
+      <summary>ノードがツリーに挿入されています。</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Remove">
+      <summary>ノードがツリーから削除されています。</summary>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedEventArgs">
+      <summary>
+        <see cref="E:System.Xml.XmlDocument.NodeChanged" />、<see cref="E:System.Xml.XmlDocument.NodeChanging" />、<see cref="E:System.Xml.XmlDocument.NodeInserted" />、<see cref="E:System.Xml.XmlDocument.NodeInserting" />、<see cref="E:System.Xml.XmlDocument.NodeRemoved" />、<see cref="E:System.Xml.XmlDocument.NodeRemoving" /> の各イベントのデータを提供します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeChangedEventArgs.#ctor(System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.String,System.Xml.XmlNodeChangedAction)">
+      <summary>
+        <see cref="T:System.Xml.XmlNodeChangedEventArgs" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="node">イベントを生成した <see cref="T:System.Xml.XmlNode" />。</param>
+      <param name="oldParent">イベントを生成した <see cref="T:System.Xml.XmlNode" /> の以前の親 <see cref="T:System.Xml.XmlNode" />。</param>
+      <param name="newParent">イベントを生成した <see cref="T:System.Xml.XmlNode" /> の新しい親 <see cref="T:System.Xml.XmlNode" />。</param>
+      <param name="oldValue">イベントを生成した <see cref="T:System.Xml.XmlNode" /> の以前の値。</param>
+      <param name="newValue">イベントを生成した <see cref="T:System.Xml.XmlNode" /> の新しい値。</param>
+      <param name="action">
+        <see cref="T:System.Xml.XmlNodeChangedAction" />。</param>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.Action">
+      <summary>発生しているノード変更イベントの型を示す値を取得します。</summary>
+      <returns>ノード変更イベントを記述する XmlNodeChangedAction 値。XmlNodeChangedAction 値説明Insertノードが挿入されたか、これから挿入されます。削除ノードが削除されたか、これから削除されます。変更ノードが変更されたか、これから変更されます。メモAction 値は、イベントがいつ発生したか、つまり発生前であるか発生後であるかを区別しません。イベント ハンドラーを個別に作成して、両方のインスタンスを処理できます。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.NewParent">
+      <summary>操作を完了した後の <see cref="P:System.Xml.XmlNode.ParentNode" /> の値を取得します。</summary>
+      <returns>操作を完了した後の ParentNode の値。ノードが削除されている場合、このプロパティは null を返します。メモ属性ノードの場合、このプロパティは <see cref="P:System.Xml.XmlAttribute.OwnerElement" /> を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.NewValue">
+      <summary>ノードの新しい値を取得します。</summary>
+      <returns>ノードの新しい値。ノードが属性ノードでもテキスト ノードでもない場合、またはノードが削除されている場合、このプロパティは null を返します。<see cref="E:System.Xml.XmlDocument.NodeChanging" /> イベントで呼び出された場合、NewValue は変更が成功したときにノードの値を返します。<see cref="E:System.Xml.XmlDocument.NodeChanged" /> イベントで呼び出された場合、NewValue はノードの現在の値を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.Node">
+      <summary>追加、削除、または変更されている <see cref="T:System.Xml.XmlNode" /> を取得します。</summary>
+      <returns>追加、削除、または変更されている XmlNode。このプロパティは null を返しません。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.OldParent">
+      <summary>操作を開始する前の <see cref="P:System.Xml.XmlNode.ParentNode" /> の値を取得します。</summary>
+      <returns>操作を開始する前の ParentNode の値。ノードに親がなかった場合、このプロパティは null を返します。メモ属性ノードの場合、このプロパティは <see cref="P:System.Xml.XmlAttribute.OwnerElement" /> を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.OldValue">
+      <summary>ノードの元の値を取得します。</summary>
+      <returns>ノードの元の値。ノードが属性ノードでもテキスト ノードでもない場合、またはノードが挿入されている場合、このプロパティは null を返します。<see cref="E:System.Xml.XmlDocument.NodeChanging" /> イベントで呼び出された場合、OldValue は変更が成功したときに置き換えられるノードの現在の値を返します。<see cref="E:System.Xml.XmlDocument.NodeChanged" /> イベントで呼び出された場合、OldValue は変更前のノードの値を返します。</returns>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedEventHandler">
+      <summary>
+        <see cref="E:System.Xml.XmlDocument.NodeChanged" />、<see cref="E:System.Xml.XmlDocument.NodeChanging" />、<see cref="E:System.Xml.XmlDocument.NodeInserted" />、<see cref="E:System.Xml.XmlDocument.NodeInserting" />、<see cref="E:System.Xml.XmlDocument.NodeRemoved" />、および <see cref="E:System.Xml.XmlDocument.NodeRemoving" /> のイベントを処理するメソッドを表します。</summary>
+      <param name="sender">イベントのソース。</param>
+      <param name="e">イベント データを格納している <see cref="T:System.Xml.XmlNodeChangedEventArgs" />。 </param>
+    </member>
+    <member name="T:System.Xml.XmlNodeList">
+      <summary>順序の付いたノードのコレクションを表します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.#ctor">
+      <summary>
+        <see cref="T:System.Xml.XmlNodeList" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="P:System.Xml.XmlNodeList.Count">
+      <summary>XmlNodeList 内のノードの数を取得します。</summary>
+      <returns>XmlNodeList に含まれるノードの数。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.GetEnumerator">
+      <summary>ノードを反復処理する列挙子を取得します。</summary>
+      <returns>ノードのコレクションを反復処理するために使用される列挙子。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.Item(System.Int32)">
+      <summary>指定したインデックス位置にあるノードを取得します。</summary>
+      <returns>コレクション内の指定したインデックスに関連付けられている <see cref="T:System.Xml.XmlNode" />。<paramref name="index" /> がリスト内のノード数以上の場合は、null を返します。</returns>
+      <param name="index">ノードのリストの 0 から始まるインデックス番号。</param>
+    </member>
+    <member name="P:System.Xml.XmlNodeList.ItemOf(System.Int32)">
+      <summary>指定したインデックス位置にあるノードを取得します。</summary>
+      <returns>コレクション内の指定したインデックスに関連付けられている <see cref="T:System.Xml.XmlNode" />。インデックスがリスト内のノード数以上の場合は、null を返します。</returns>
+      <param name="i">ノードのリストの 0 から始まるインデックス番号。</param>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.PrivateDisposeNodeList">
+      <summary>ノード リスト内のリソースをプライベートに破棄します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.System#IDisposable#Dispose">
+      <summary>
+        <see cref="T:System.Xml.XmlNodeList" /> クラスによって使用されているすべてのリソースを解放します。</summary>
+    </member>
+    <member name="T:System.Xml.XmlProcessingInstruction">
+      <summary>XML がプロセッサ固有の情報をドキュメントのテキストに保持するために定義する処理命令を表します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.#ctor(System.String,System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlProcessingInstruction" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="target">処理命令の対象。<see cref="P:System.Xml.XmlProcessingInstruction.Target" /> プロパティに関するトピックを参照してください。</param>
+      <param name="data">命令の内容。<see cref="P:System.Xml.XmlProcessingInstruction.Data" /> プロパティに関するトピックを参照してください。</param>
+      <param name="doc">親 XML ドキュメント。</param>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.CloneNode(System.Boolean)">
+      <summary>このノードの複製を作成します。</summary>
+      <returns>複製されたノード。</returns>
+      <param name="deep">
+指定したノードの下にあるサブツリーのクローンを順次作成していく場合は true。指定したノードだけのクローンを作成する場合は false。</param>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Data">
+      <summary>対象を含まない、処理命令の内容を取得または設定します。</summary>
+      <returns>対象を含まない、処理命令の内容。</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.InnerText">
+      <summary>ノードとそのすべての子の連結している値を取得または設定します。</summary>
+      <returns>ノードとすべての子の連結された値。</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.LocalName">
+      <summary>ノードのローカル名を取得します。</summary>
+      <returns>処理命令ノードの場合、このプロパティは処理命令の対象を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Name">
+      <summary>ノードの限定名を取得します。</summary>
+      <returns>処理命令ノードの場合、このプロパティは処理命令の対象を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.NodeType">
+      <summary>現在のノードの種類を取得します。</summary>
+      <returns>XmlProcessingInstruction ノードの場合、この値は XmlNodeType.ProcessingInstruction です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Target">
+      <summary>処理命令の対象を取得します。</summary>
+      <returns>処理命令の対象。</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Value">
+      <summary>ノードの値を取得または設定します。</summary>
+      <returns>対象を含まない処理命令の全内容。</returns>
+      <exception cref="T:System.ArgumentException">Node is read-only. </exception>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>ノードのすべての子を、指定した <see cref="T:System.Xml.XmlWriter" /> に保存します。ProcessingInstruction ノードには子がないため、このメソッドによる影響はありません。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.WriteTo(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> にノードを保存します。</summary>
+      <param name="w">保存先の XmlWriter。 </param>
+    </member>
+    <member name="T:System.Xml.XmlSignificantWhitespace">
+      <summary>混合コンテンツ ノードのマークアップ間にある空白、または xml:space= 'preserve' スコープ内の空白を表します。これは有意の空白とも呼ばれます。</summary>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlSignificantWhitespace" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="strData">ノードの空白文字。</param>
+      <param name="doc">
+        <see cref="T:System.Xml.XmlDocument" /> オブジェクト。</param>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.CloneNode(System.Boolean)">
+      <summary>このノードの複製を作成します。</summary>
+      <returns>クローンとして作成されたノード。</returns>
+      <param name="deep">指定したノードの下にあるサブツリーのクローンを順次作成していく場合は true。指定したノードだけのクローンを作成する場合は false。有意の空白ノードの場合、クローンとして作成されたノードには、パラメーターの設定に関係なく、常にデータ値が含まれます。</param>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.LocalName">
+      <summary>ノードのローカル名を取得します。</summary>
+      <returns>XmlSignificantWhitespace ノードの場合、このプロパティは #significant-whitespace を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.Name">
+      <summary>ノードの限定名を取得します。</summary>
+      <returns>XmlSignificantWhitespace ノードの場合、このプロパティは #significant-whitespace を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.NodeType">
+      <summary>現在のノードの種類を取得します。</summary>
+      <returns>XmlSignificantWhitespace ノードの場合、この値は XmlNodeType.SignificantWhitespace です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.ParentNode">
+      <summary>現在のノードの親を取得します。</summary>
+      <returns>現在のノードの <see cref="T:System.Xml.XmlNode" /> 親ノード。</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.PreviousText">
+      <summary>このノードの直前にあるテキスト ノードを取得します。</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.Value">
+      <summary>ノードの値を取得または設定します。</summary>
+      <returns>ノードで検出された空白文字。</returns>
+      <exception cref="T:System.ArgumentException">Value が無効な空白文字に設定されています。</exception>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>ノードのすべての子を、指定した <see cref="T:System.Xml.XmlWriter" /> に保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.WriteTo(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> にノードを保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlText">
+      <summary>要素または属性のテキストの内容を表します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlText.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlText" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="strData">ノードの内容。<see cref="P:System.Xml.XmlText.Value" /> プロパティに関するトピックを参照してください。</param>
+      <param name="doc">親 XML ドキュメント。</param>
+    </member>
+    <member name="M:System.Xml.XmlText.CloneNode(System.Boolean)">
+      <summary>このノードの複製を作成します。</summary>
+      <returns>クローンとして作成されたノード。</returns>
+      <param name="deep">指定したノードの下にあるサブツリーのクローンを順次作成していく場合は true。指定したノードだけのクローンを作成する場合は false。</param>
+    </member>
+    <member name="P:System.Xml.XmlText.LocalName">
+      <summary>ノードのローカル名を取得します。</summary>
+      <returns>テキスト ノードの場合、このプロパティは #text を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.Name">
+      <summary>ノードの限定名を取得します。</summary>
+      <returns>テキスト ノードの場合、このプロパティは #text を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.NodeType">
+      <summary>現在のノードの種類を取得します。</summary>
+      <returns>テキスト ノードの場合、この値は XmlNodeType.Text です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.ParentNode"></member>
+    <member name="P:System.Xml.XmlText.PreviousText">
+      <summary>このノードの直前にあるテキスト ノードを取得します。</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> を返します。</returns>
+    </member>
+    <member name="M:System.Xml.XmlText.SplitText(System.Int32)">
+      <summary>指定したオフセット位置でノードを 2 つのノードに分割し、両方とも兄弟としてツリーに保持します。</summary>
+      <returns>新しいノード。</returns>
+      <param name="offset">ノードを分割する位置のオフセット。</param>
+    </member>
+    <member name="P:System.Xml.XmlText.Value">
+      <summary>ノードの値を取得または設定します。</summary>
+      <returns>テキスト ノードの内容。</returns>
+    </member>
+    <member name="M:System.Xml.XmlText.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>ノードのすべての子を、指定した <see cref="T:System.Xml.XmlWriter" /> に保存します。XmlText ノードには子がないため、このメソッドによる影響はありません。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlText.WriteTo(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> にノードを保存します。</summary>
+      <param name="w">保存先の XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlWhitespace">
+      <summary>要素の内容の中にある空白を表します。</summary>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlWhitespace" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="strData">ノードの空白文字。</param>
+      <param name="doc">
+        <see cref="T:System.Xml.XmlDocument" /> オブジェクト。</param>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.CloneNode(System.Boolean)">
+      <summary>このノードの複製を作成します。</summary>
+      <returns>クローンとして作成されたノード。</returns>
+      <param name="deep">指定したノードの下にあるサブツリーのクローンを順次作成していく場合は true。指定したノードだけのクローンを作成する場合は false。空白ノードの場合、クローンとして作成されたノードには、パラメーターの設定に関係なく、常にデータ値が含まれます。</param>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.LocalName">
+      <summary>ノードのローカル名を取得します。</summary>
+      <returns>XmlWhitespace ノードの場合、このプロパティは #whitespace を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.Name">
+      <summary>ノードの限定名を取得します。</summary>
+      <returns>XmlWhitespace ノードの場合、このプロパティは #whitespace を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.NodeType">
+      <summary>ノードの種類を取得します。</summary>
+      <returns>XmlWhitespace ノードの場合、値は <see cref="F:System.Xml.XmlNodeType.Whitespace" /> です。</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.ParentNode">
+      <summary>現在のノードの親を取得します。</summary>
+      <returns>現在のノードの <see cref="T:System.Xml.XmlNode" /> 親ノード。</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.PreviousText">
+      <summary>このノードの直前にあるテキスト ノードを取得します。</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> を返します。</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.Value">
+      <summary>ノードの値を取得または設定します。</summary>
+      <returns>ノードで検出された空白文字。</returns>
+      <exception cref="T:System.ArgumentException">
+        <see cref="P:System.Xml.XmlWhitespace.Value" /> が無効な空白文字に設定されています。</exception>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>ノードのすべての子を、指定した <see cref="T:System.Xml.XmlWriter" /> に保存します。</summary>
+      <param name="w">保存先の <see cref="T:System.Xml.XmlWriter" />。</param>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.WriteTo(System.Xml.XmlWriter)">
+      <summary>指定した <see cref="T:System.Xml.XmlWriter" /> にノードを保存します。</summary>
+      <param name="w">保存先の <see cref="T:System.Xml.XmlWriter" />。</param>
+    </member>
+  </members>
+</doc>

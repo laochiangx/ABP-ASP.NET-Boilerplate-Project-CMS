@@ -1,0 +1,1456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Xml.XmlDocument</name>
+  </assembly>
+  <members>
+    <member name="T:System.Xml.XmlAttribute">
+      <summary>表示屬性 (Attribute)。屬性的有效和預設值是在文件類型定義 (DTD) 或結構描述中定義。</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>初始化 <see cref="T:System.Xml.XmlAttribute" /> 類別的新執行個體。</summary>
+      <param name="prefix">命名空間前置字元。</param>
+      <param name="localName">屬性的區域名稱。</param>
+      <param name="namespaceURI">命名空間的統一資源識別元 (URI)。</param>
+      <param name="doc">父代 XML 文件。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.AppendChild(System.Xml.XmlNode)">
+      <summary>將指定的節點加入至這個節點之子節點清單的結尾。</summary>
+      <returns>所加入的 <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="newChild">要相加的 <see cref="T:System.Xml.XmlNode" />。</param>
+      <exception cref="T:System.InvalidOperationException">這個節點的型別不允許 <paramref name="newChild" /> 節點型別的子節點。<paramref name="newChild" /> 是這個節點的上階。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> 由不同於建立這個節點的另一份文件所建立。這個節點是唯讀的。</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.BaseURI">
+      <summary>取得節點的基底統一資源識別元 (URI)。</summary>
+      <returns>載入節點的來源位置；如果節點沒有基底 URI，則為 String.Empty。屬性節點的基底 URI 與其擁有人項目的相同。如果屬性節點沒有擁有人項目，BaseURI 會傳回 String.Empty。</returns>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.CloneNode(System.Boolean)">
+      <summary>建立這個節點的複本。</summary>
+      <returns>複製的節點。</returns>
+      <param name="deep">若要在指定的節點下遞迴地複製子樹狀結構，則為 true，若只要複製節點本身，則為 false。</param>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.InnerText">
+      <summary>設定節點的串連值和其所有的子節點。</summary>
+      <returns>節點的串連值和其所有的子節點。在屬性節點方面，這個屬性的功能與 <see cref="P:System.Xml.XmlAttribute.Value" /> 屬性相同。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.InnerXml">
+      <summary>設定屬性值。</summary>
+      <returns>屬性值。</returns>
+      <exception cref="T:System.Xml.XmlException">在設定語式不正確的屬性時所指定的 XML。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>在指定的參考節點之後，立即插入指定的節點。</summary>
+      <returns>所插入的 <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="newChild">要插入的 <see cref="T:System.Xml.XmlNode" />。</param>
+      <param name="refChild">
+        <see cref="T:System.Xml.XmlNode" /> 為參考節點。<paramref name="newChild" /> 會置於 <paramref name="refChild" /> 之後。</param>
+      <exception cref="T:System.InvalidOperationException">這個節點的型別不允許 <paramref name="newChild" /> 節點型別的子節點。<paramref name="newChild" /> 是這個節點的上階。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> 由不同於建立這個節點的另一份文件所建立。<paramref name="refChild" /> 不是這個節點的子節點。這個節點是唯讀的。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>在指定的參考節點之前，立即插入指定的節點。</summary>
+      <returns>所插入的 <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="newChild">要插入的 <see cref="T:System.Xml.XmlNode" />。</param>
+      <param name="refChild">
+        <see cref="T:System.Xml.XmlNode" /> 為參考節點。<paramref name="newChild" /> 會置於這個節點之前。</param>
+      <exception cref="T:System.InvalidOperationException">目前這種型別的節點不允許 <paramref name="newChild" /> 節點型別的子節點。<paramref name="newChild" /> 是這個節點的上階。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> 由不同於建立這個節點的另一份文件所建立。<paramref name="refChild" /> 不是這個節點的子節點。這個節點是唯讀的。</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.LocalName">
+      <summary>取得節點的區域名稱。</summary>
+      <returns>已移除前置詞的屬性節點名稱。在以下範例 &lt;book bk:genre= 'novel'&gt; 中，屬性的 LocalName 為 genre。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Name">
+      <summary>取得節點的完整名稱。</summary>
+      <returns>屬性節點的限定名稱 (Qualified Name)。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.NamespaceURI">
+      <summary>取得這個節點的命名空間 URI。</summary>
+      <returns>這個節點的命名空間 URI。如果屬性並未明確指定命名空間，這個屬性會傳回 String.Empty。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.NodeType">
+      <summary>取得目前節點的型別。</summary>
+      <returns>XmlAttribute 節點的節點型別是 XmlNodeType.Attribute。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.OwnerDocument">
+      <summary>取得這個節點所屬的 <see cref="T:System.Xml.XmlDocument" />。</summary>
+      <returns>這個節點所屬的 XML 文件。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.OwnerElement">
+      <summary>取得屬性所屬的 <see cref="T:System.Xml.XmlElement" />。</summary>
+      <returns>屬性所屬的 XmlElement；如果這個屬性不是 XmlElement 的一部分，則為 null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.ParentNode">
+      <summary>取得這個節點的父代 (Parent)。對於 XmlAttribute 節點，這個屬性永遠傳回 null。</summary>
+      <returns>對於 XmlAttribute 節點，這個屬性永遠傳回 null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Prefix">
+      <summary>取得或設定這個節點的命名空間前置詞。</summary>
+      <returns>這個節點的命名空間前置詞。如果沒有前置詞，則這個屬性傳回 String.Empty。</returns>
+      <exception cref="T:System.ArgumentException">這個節點是唯讀的。</exception>
+      <exception cref="T:System.Xml.XmlException">指定的前置詞包含無效的字元。指定的前置詞不正確。這個節點的 namespaceURI 為 null。指定的前置詞為 "xml"，而這個節點的 namespaceURI 與 "http://www.w3.org/XML/1998/namespace" 不同。這個節點是一個屬性，指定的前置詞為 "xmlns"，而這個節點的 namespaceURI 與 "http://www.w3.org/2000/xmlns/" 不同。這個節點是一個屬性，其 qualifiedName 為 "xmlns" [Namespaces]。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.PrependChild(System.Xml.XmlNode)">
+      <summary>將指定的節點加入至這個節點之子節點清單的開頭。</summary>
+      <returns>所加入的 <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="newChild">要相加的 <see cref="T:System.Xml.XmlNode" />。如果是 <see cref="T:System.Xml.XmlDocumentFragment" />，則文件片段的整個內容都會移入這個節點的子節點清單中。</param>
+      <exception cref="T:System.InvalidOperationException">這個節點的型別不允許 <paramref name="newChild" /> 節點型別的子節點。<paramref name="newChild" /> 是這個節點的上階。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> 由不同於建立這個節點的另一份文件所建立。這個節點是唯讀的。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.RemoveChild(System.Xml.XmlNode)">
+      <summary>移除指定的子節點。</summary>
+      <returns>所移除的 <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="oldChild">要移除的 <see cref="T:System.Xml.XmlNode" />。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="oldChild" /> 不是這個節點的子節點。或者這個節點是唯讀的。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>用指定的新子節點取代指定的子節點。</summary>
+      <returns>所取代的 <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="newChild">新的子 <see cref="T:System.Xml.XmlNode" />。</param>
+      <param name="oldChild">要取代的 <see cref="T:System.Xml.XmlNode" />。</param>
+      <exception cref="T:System.InvalidOperationException">這個節點的型別不允許 <paramref name="newChild" /> 節點型別的子節點。<paramref name="newChild" /> 是這個節點的上階。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> 由不同於建立這個節點的另一份文件所建立。這個節點是唯讀的。<paramref name="oldChild" /> 不是這個節點的子節點。</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Specified">
+      <summary>取得值，表示是否明確設定屬性值。</summary>
+      <returns>如果在原始執行個體文件中明確指定了這個屬性的值，則為 true，否則為 false。false 值指示屬性的值是來自 DTD。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Value">
+      <summary>取得或設定節點的值。</summary>
+      <returns>傳回值需視節點的 <see cref="P:System.Xml.XmlNode.NodeType" /> 而定。至於 XmlAttribute 節點，這個屬性 (Property) 是屬性 (Attribute) 的值。</returns>
+      <exception cref="T:System.ArgumentException">節點為唯讀，並會呼叫設定作業。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>將節點的所有子系儲存到指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.WriteTo(System.Xml.XmlWriter)">
+      <summary>將節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlAttributeCollection">
+      <summary>表示可用名稱或索引存取的屬性 (Attribute) 集合。</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Append(System.Xml.XmlAttribute)">
+      <summary>插入指定的屬性做為集合的最後一個節點。</summary>
+      <returns>XmlAttribute，要附加到集合中。</returns>
+      <param name="node">要插入的 <see cref="T:System.Xml.XmlAttribute" />。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="node" /> 由不同於建立這個集合的另一個文件所建立。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)">
+      <summary>從這個集合中複製所有 <see cref="T:System.Xml.XmlAttribute" /> 物件至指定的陣列中。</summary>
+      <param name="array">陣列，是從這個集合所複製的物件的目的端。</param>
+      <param name="index">在複製開始的所在陣列中的索引。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.InsertAfter(System.Xml.XmlAttribute,System.Xml.XmlAttribute)">
+      <summary>在指定的參考屬性之後，立即插入指定的屬性。</summary>
+      <returns>要插入至集合的 XmlAttribute。</returns>
+      <param name="newNode">要插入的 <see cref="T:System.Xml.XmlAttribute" />。</param>
+      <param name="refNode">
+        <see cref="T:System.Xml.XmlAttribute" /> 是參考屬性。<paramref name="newNode" /> 會置於 <paramref name="refNode" /> 之後。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newNode" /> 由不同於建立這個集合的另一個文件所建立。或者 <paramref name="refNode" /> 並非這個集合的成員。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.InsertBefore(System.Xml.XmlAttribute,System.Xml.XmlAttribute)">
+      <summary>在指定的參考屬性之前，立即插入指定的屬性。</summary>
+      <returns>要插入至集合的 XmlAttribute。</returns>
+      <param name="newNode">要插入的 <see cref="T:System.Xml.XmlAttribute" />。</param>
+      <param name="refNode">
+        <see cref="T:System.Xml.XmlAttribute" /> 是參考屬性。<paramref name="newNode" /> 會置於 <paramref name="refNode" /> 之前。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newNode" /> 由不同於建立這個集合的另一個文件所建立。或者 <paramref name="refNode" /> 並非這個集合的成員。</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.Int32)">
+      <summary>取得具有指定索引的屬性。</summary>
+      <returns>在指定索引處的 <see cref="T:System.Xml.XmlAttribute" />。</returns>
+      <param name="i">屬性的索引。</param>
+      <exception cref="T:System.IndexOutOfRangeException">傳入的索引超出範圍。</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.String)">
+      <summary>取得具有指定名稱的屬性。</summary>
+      <returns>具有指定名稱的 <see cref="T:System.Xml.XmlAttribute" />。如果屬性 (attribute) 不存在，這個屬性 (property) 會傳回 null。</returns>
+      <param name="name">屬性的限定名稱 (Qualified Name)。</param>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.String,System.String)">
+      <summary>取得指定的區域名稱和命名空間統一資源識別元 (URI) 之屬性。</summary>
+      <returns>具有指定的區域名稱和命名空間 URI 的 <see cref="T:System.Xml.XmlAttribute" />。如果屬性 (attribute) 不存在，這個屬性 (property) 會傳回 null。</returns>
+      <param name="localName">屬性的區域名稱。</param>
+      <param name="namespaceURI">屬性的命名空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Prepend(System.Xml.XmlAttribute)">
+      <summary>插入指定的屬性做為集合的第一個節點。</summary>
+      <returns>要加入至集合中的 XmlAttribute。</returns>
+      <param name="node">要插入的 <see cref="T:System.Xml.XmlAttribute" />。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Remove(System.Xml.XmlAttribute)">
+      <summary>從集合中移除指定的屬性。</summary>
+      <returns>這個節點將會移除，如果集合中找不到這個節點，則為 null。</returns>
+      <param name="node">要移除的 <see cref="T:System.Xml.XmlAttribute" />。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.RemoveAll">
+      <summary>從集合移除所有的屬性。</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.RemoveAt(System.Int32)">
+      <summary>從集合中移除對應指定索引的屬性。</summary>
+      <returns>如果在指定的索引處並無屬性，則傳回 null。</returns>
+      <param name="i">要移除的節點的索引。第一個節點的索引為 0。</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.SetNamedItem(System.Xml.XmlNode)">
+      <summary>使用其 <see cref="P:System.Xml.XmlNode.Name" /> 屬性加入 <see cref="T:System.Xml.XmlNode" />。</summary>
+      <returns>如果 <paramref name="node" /> 取代同名的現有節點，則傳回舊節點；否則傳回所加入的節點。</returns>
+      <param name="node">儲存在這個集合中的屬性節點。這個節點稍後可用節點名稱來存取。如果集合中已經有這個名稱的節點，它將會被新的節點取代；否則，這個節點就會附加在集合的結尾。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="node" /> 由不同於建立這個集合的另一個 <see cref="T:System.Xml.XmlDocument" /> 所建立。這個 XmlAttributeCollection 是唯讀的。</exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="node" /> 是已經成為另一個 <see cref="T:System.Xml.XmlElement" /> 物件屬性的 <see cref="T:System.Xml.XmlAttribute" />。若要重複使用其他項目中的屬性，您必須複製 (Clone) 想要重複使用的 XmlAttribute 物件。</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>如需這個成員的說明，請參閱 <see cref="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)" />。</summary>
+      <param name="array">陣列，是從這個集合所複製的物件的目的端。</param>
+      <param name="index">在複製開始的所在陣列中的索引。</param>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#Count">
+      <summary>如需這個成員的說明，請參閱 <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.Count" />。</summary>
+      <returns>傳回包含屬性計數的 int。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#IsSynchronized">
+      <summary>如需這個成員的說明，請參閱 <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.IsSynchronized" />。</summary>
+      <returns>如果已同步處理集合，則傳回 true。</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#SyncRoot">
+      <summary>如需這個成員的說明，請參閱 <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.SyncRoot" />。</summary>
+      <returns>傳回 <see cref="T:System.Object" />，它是集合的根。</returns>
+    </member>
+    <member name="T:System.Xml.XmlCDataSection">
+      <summary>表示 CDATA 區段。</summary>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>初始化 <see cref="T:System.Xml.XmlCDataSection" /> 類別的新執行個體。</summary>
+      <param name="data">包含字元資料的 <see cref="T:System.String" />。</param>
+      <param name="doc">
+        <see cref="T:System.Xml.XmlDocument" /> 物件</param>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.CloneNode(System.Boolean)">
+      <summary>建立這個節點的複本。</summary>
+      <returns>複製的節點。</returns>
+      <param name="deep">若要在指定的節點下遞迴地複製子樹狀結構，則為 true，若只要複製節點本身，則為 false。因為 CDATA 節點沒有子系，所以無論參數設定為何，所複製的節點永遠會包含資料內容。</param>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.LocalName">
+      <summary>取得節點的區域名稱。</summary>
+      <returns>對於 CDATA 節點，其區域名稱為 #cdata-section。</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.Name">
+      <summary>取得節點的限定名稱。</summary>
+      <returns>對於 CDATA 節點，其名稱為 #cdata-section。</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.NodeType">
+      <summary>取得目前節點的類型。</summary>
+      <returns>節點類型。對於 CDATA 節點，其值為 XmlNodeType.CDATA。</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.ParentNode"></member>
+    <member name="P:System.Xml.XmlCDataSection.PreviousText">
+      <summary>取得這個節點的前置文字節點。</summary>
+      <returns>傳回 <see cref="T:System.Xml.XmlNode" />。</returns>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>將節點的子系儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.WriteTo(System.Xml.XmlWriter)">
+      <summary>將節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlCharacterData">
+      <summary>提供許多類別使用的文字管理方法。</summary>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>初始化 <see cref="T:System.Xml.XmlCharacterData" /> 類別的新執行個體。</summary>
+      <param name="data">字串，包含要加入至文件的字元資料。</param>
+      <param name="doc">要包含字元資料的 <see cref="T:System.Xml.XmlDocument" />。</param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.AppendData(System.String)">
+      <summary>將指定的字串附加至節點字元資料的結尾。</summary>
+      <param name="strData">要插入現有字串中的字串。</param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Data">
+      <summary>包含節點的資料。</summary>
+      <returns>節點的資料。</returns>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.DeleteData(System.Int32,System.Int32)">
+      <summary>從節點移除字元範圍。</summary>
+      <param name="offset">字串中要開始刪除的位置。</param>
+      <param name="count">要刪除的字元數。</param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.InsertData(System.Int32,System.String)">
+      <summary>在指定的字元位移處插入指定的字串。</summary>
+      <param name="offset">字串中要插入提供的字串資料的位置。</param>
+      <param name="strData">要插入現有字串中的字串資料。</param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Length">
+      <summary>取得資料的長度，以字元為單位。</summary>
+      <returns>
+        <see cref="P:System.Xml.XmlCharacterData.Data" /> 屬性中字串的長度 (以字元為單位)。長度可能是零，也就是 CharacterData 節點可能是空的。</returns>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.ReplaceData(System.Int32,System.Int32,System.String)">
+      <summary>從指定的位移處開始，以指定的字串取代指定的字元數。</summary>
+      <param name="offset">字串中要開始取代的位置。</param>
+      <param name="count">要取代的字元數。</param>
+      <param name="strData">取代舊字串資料的新資料。</param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.Substring(System.Int32,System.Int32)">
+      <summary>從指定的範圍擷取完整字串中的一個子字串。</summary>
+      <returns>對應至指定範圍的子字串。</returns>
+      <param name="offset">字串中要開始擷取的位置。零位移指示起點就在資料的開頭。</param>
+      <param name="count">要擷取的字元數。</param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Value">
+      <summary>取得或設定節點的值。</summary>
+      <returns>節點的值。</returns>
+      <exception cref="T:System.ArgumentException">節點是唯讀的。</exception>
+    </member>
+    <member name="T:System.Xml.XmlComment">
+      <summary>表示 XML 註解的內容。</summary>
+    </member>
+    <member name="M:System.Xml.XmlComment.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>初始化 <see cref="T:System.Xml.XmlComment" /> 類別的新執行個體。</summary>
+      <param name="comment">註解項目的內容。</param>
+      <param name="doc">父代 XML 文件。</param>
+    </member>
+    <member name="M:System.Xml.XmlComment.CloneNode(System.Boolean)">
+      <summary>建立這個節點的複本。</summary>
+      <returns>複製的節點。</returns>
+      <param name="deep">若要在指定的節點下遞迴地複製子樹狀結構，則為 true，若只要複製節點本身，則為 false。因為註解節點沒有子系，所以無論參數設定為何，所複製的節點永遠會包含文字內容。</param>
+    </member>
+    <member name="P:System.Xml.XmlComment.LocalName">
+      <summary>取得節點的區域名稱。</summary>
+      <returns>對於註解節點，其值為 #comment。</returns>
+    </member>
+    <member name="P:System.Xml.XmlComment.Name">
+      <summary>取得節點的完整名稱。</summary>
+      <returns>對於註解節點，其值為 #comment。</returns>
+    </member>
+    <member name="P:System.Xml.XmlComment.NodeType">
+      <summary>取得目前節點的型別。</summary>
+      <returns>對於註解節點，其值為 XmlNodeType.Comment。</returns>
+    </member>
+    <member name="M:System.Xml.XmlComment.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>將節點的所有子系儲存到指定的 <see cref="T:System.Xml.XmlWriter" />。因為註解節點沒有子系，所以這個方法不會有任何效果。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlComment.WriteTo(System.Xml.XmlWriter)">
+      <summary>將節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlDeclaration">
+      <summary>表示 XML 宣告節點 &lt;?xml version='1.0'...?&gt;。</summary>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>初始化 <see cref="T:System.Xml.XmlDeclaration" /> 類別的新執行個體。</summary>
+      <param name="version">XML 版本；請參閱 <see cref="P:System.Xml.XmlDeclaration.Version" /> 屬性。</param>
+      <param name="encoding">編碼配置；請參閱 <see cref="P:System.Xml.XmlDeclaration.Encoding" /> 屬性。</param>
+      <param name="standalone">表示 XML 文件是否取決於外部 DTD；請參閱 <see cref="P:System.Xml.XmlDeclaration.Standalone" /> 屬性。</param>
+      <param name="doc">父代 XML 文件。</param>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.CloneNode(System.Boolean)">
+      <summary>建立這個節點的複本。</summary>
+      <returns>複製的節點。</returns>
+      <param name="deep">若要在指定的節點下遞迴地複製子樹狀結構，則為 true，若只要複製節點本身，則為 false。因為 XmlDeclaration 節點沒有子系，所以無論參數設定為何，所複製的節點永遠會包含資料值。</param>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Encoding">
+      <summary>取得或設定 XML 文件的編碼方式層級。</summary>
+      <returns>有效的字元編碼名稱。最常支援的 XML 字元編碼名稱如下：分類編碼名稱UnicodeUTF-8、UTF-16ISO 10646ISO-10646-UCS-2, ISO-10646-UCS-4ISO 8859ISO-8859-n (其中 "n" 可以是 1 到 9 的數字)JIS X-0208-1997ISO-2022-JP, Shift_JIS, EUC-JP這個值是選擇性的。如果沒有設定值，這個屬性會傳回 String.Empty。如果未包含編碼方式屬性，在文件被寫入或儲存時會假設為 UTF-8 編碼方式。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.InnerText">
+      <summary>取得或設定 XmlDeclaration 的串聯值。</summary>
+      <returns>XmlDeclaration 的結合值 (亦即，介於 &lt;?xml 與 ?&gt; 之間的所有內容)。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.LocalName">
+      <summary>取得節點的區域名稱。</summary>
+      <returns>對於 XmlDeclaration 節點，其區域名稱為 xml。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Name">
+      <summary>取得節點的完整名稱。</summary>
+      <returns>對於 XmlDeclaration 節點，其名稱為 xml。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.NodeType">
+      <summary>取得目前節點的型別。</summary>
+      <returns>如果是 XmlDeclaration 節點，則這個值會是 XmlNodeType.XmlDeclaration。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Standalone">
+      <summary>取得或設定獨立屬性的值。</summary>
+      <returns>如果 XML 文件所需的所有實體宣告都包含在文件中，其有效值為 yes；如果需要外部文件類型定義 (DTD)，則有效值為 no。如果在 XML 宣告中沒有獨立屬性，這個屬性會傳回 String.Empty。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Value">
+      <summary>取得或設定 XmlDeclaration 的值。</summary>
+      <returns>XmlDeclaration 的內容 (亦即，介於 &lt;?xml 與 ?&gt; 之間的所有資料)。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Version">
+      <summary>取得文件的 XML 版本。</summary>
+      <returns>這個值一定是 1.0。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>將節點的子系儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。因為 XmlDeclaration 節點並沒有子系，所以這個方法不會有任何效果。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.WriteTo(System.Xml.XmlWriter)">
+      <summary>將節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlDocument">
+      <summary>表示 XML 文件。如需詳細資訊，請參閱 Remarks 一節。</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor">
+      <summary>初始化 <see cref="T:System.Xml.XmlDocument" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor(System.Xml.XmlImplementation)">
+      <summary>使用指定的 XmlDocument 初始化 <see cref="T:System.Xml.XmlImplementation" /> 類別的新執行個體。</summary>
+      <param name="imp">要使用的 XmlImplementation。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor(System.Xml.XmlNameTable)">
+      <summary>使用指定的 XmlDocument 初始化 <see cref="T:System.Xml.XmlNameTable" /> 類別的新執行個體。</summary>
+      <param name="nt">要使用的 XmlNameTable。</param>
+    </member>
+    <member name="P:System.Xml.XmlDocument.BaseURI">
+      <summary>取得目前節點的基底 (Base) URI。</summary>
+      <returns>節點載入的位置。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CloneNode(System.Boolean)">
+      <summary>建立這個節點的複本。</summary>
+      <returns>複製的 XmlDocument 節點。</returns>
+      <param name="deep">若要在指定的節點下遞迴地複製子樹狀結構，則為 true；若只要複製節點本身，則為 false。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String)">
+      <summary>建立具有指定 <see cref="P:System.Xml.XmlDocument.Name" /> 的 <see cref="T:System.Xml.XmlAttribute" />。</summary>
+      <returns>新的 XmlAttribute。</returns>
+      <param name="name">屬性的限定名稱 (Qualified Name)。如果名稱包含冒號，<see cref="P:System.Xml.XmlNode.Prefix" /> 屬性會反映第一個冒號之前的名稱部分，而 <see cref="P:System.Xml.XmlDocument.LocalName" /> 屬性會反映第一個冒號之後的名稱部分。除非前置詞能夠辨認為內建前置詞 (例如 xmlns)，否則 <see cref="P:System.Xml.XmlNode.NamespaceURI" /> 會保持空白。在此案例中，NamespaceURI 的值為 http://www.w3.org/2000/xmlns/。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String,System.String)">
+      <summary>建立具有指定限定名稱和 <see cref="P:System.Xml.XmlNode.NamespaceURI" /> 的 <see cref="T:System.Xml.XmlAttribute" />。</summary>
+      <returns>新的 XmlAttribute。</returns>
+      <param name="qualifiedName">屬性的限定名稱 (Qualified Name)。如果名稱包含冒號，<see cref="P:System.Xml.XmlNode.Prefix" /> 屬性會反映冒號前面的名稱部分，而  <see cref="P:System.Xml.XmlDocument.LocalName" /> 屬性會反映冒號後面的名稱部分。</param>
+      <param name="namespaceURI">屬性的命名空間 URI。如果限定名稱包含 xmlns 前置詞，這個參數必須是 http://www.w3.org/2000/xmlns/。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String,System.String,System.String)">
+      <summary>建立具有指定 <see cref="P:System.Xml.XmlNode.Prefix" />、<see cref="P:System.Xml.XmlDocument.LocalName" /> 和 <see cref="P:System.Xml.XmlNode.NamespaceURI" /> 的 <see cref="T:System.Xml.XmlAttribute" />。</summary>
+      <returns>新的 XmlAttribute。</returns>
+      <param name="prefix">屬性的前置詞 (如有此項)。String.Empty 與 null 相等。</param>
+      <param name="localName">屬性的本機名稱。</param>
+      <param name="namespaceURI">屬性的命名空間 URI (如有此項)。String.Empty 與 null 相等。如果 <paramref name="prefix" /> 為 xmlns，這個參數必須是 http://www.w3.org/2000/xmlns/，否則會擲回例外狀況。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateCDataSection(System.String)">
+      <summary>建立包含指定資料的 <see cref="T:System.Xml.XmlCDataSection" />。</summary>
+      <returns>新的 XmlCDataSection。</returns>
+      <param name="data">新 XmlCDataSection 的內容。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateComment(System.String)">
+      <summary>建立包含指定資料的 <see cref="T:System.Xml.XmlComment" />。</summary>
+      <returns>新的 XmlComment。</returns>
+      <param name="data">新 XmlComment 的內容。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateDocumentFragment">
+      <summary>建立 <see cref="T:System.Xml.XmlDocumentFragment" />。</summary>
+      <returns>新的 XmlDocumentFragment。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String)">
+      <summary>建立具有指定名稱的項目。</summary>
+      <returns>新的 XmlElement。</returns>
+      <param name="name">項目的限定名稱。如果名稱包含冒號，<see cref="P:System.Xml.XmlNode.Prefix" /> 屬性會反映冒號之前的名稱部分，而 <see cref="P:System.Xml.XmlDocument.LocalName" /> 屬性會反映冒號之後的名稱部分。限定名稱不能包含 'xmlns' 前置詞。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String,System.String)">
+      <summary>建立具有限定名稱和 <see cref="P:System.Xml.XmlNode.NamespaceURI" /> 的 <see cref="T:System.Xml.XmlElement" />。</summary>
+      <returns>新的 XmlElement。</returns>
+      <param name="qualifiedName">項目的限定名稱。如果名稱包含冒號，<see cref="P:System.Xml.XmlNode.Prefix" /> 屬性會反映冒號前面的名稱部分，而  <see cref="P:System.Xml.XmlDocument.LocalName" /> 屬性會反映冒號後面的名稱部分。限定名稱不能包含 'xmlns' 前置詞。</param>
+      <param name="namespaceURI">項目的命名空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String,System.String,System.String)">
+      <summary>建立具有指定之 <see cref="P:System.Xml.XmlNode.Prefix" />、<see cref="P:System.Xml.XmlDocument.LocalName" /> 和 <see cref="P:System.Xml.XmlNode.NamespaceURI" /> 的元素。</summary>
+      <returns>新的 <see cref="T:System.Xml.XmlElement" />。</returns>
+      <param name="prefix">新項目的前置詞 (如有此項)。String.Empty 與 null 相等。</param>
+      <param name="localName">新項目的本機名稱。</param>
+      <param name="namespaceURI">新項目的命名空間 URI (如有此項)。String.Empty 與 null 相等。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.String,System.String,System.String)">
+      <summary>建立具有指定節點類型、<see cref="P:System.Xml.XmlDocument.Name" /> 和 <see cref="P:System.Xml.XmlNode.NamespaceURI" /> 的 <see cref="T:System.Xml.XmlNode" />。</summary>
+      <returns>新的 XmlNode。</returns>
+      <param name="nodeTypeString">新節點的 <see cref="T:System.Xml.XmlNodeType" /> 的字串版本。這個參數必須是下表中所列的其中一個值。</param>
+      <param name="name">新節點的限定名稱。如果名稱包含冒號，將會剖析為 <see cref="P:System.Xml.XmlNode.Prefix" /> 和 <see cref="P:System.Xml.XmlDocument.LocalName" /> 元件。</param>
+      <param name="namespaceURI">新節點的命名空間 URI。</param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name; or <paramref name="nodeTypeString" /> is not one of the strings listed below. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.Xml.XmlNodeType,System.String,System.String)">
+      <summary>建立具有指定的 <see cref="T:System.Xml.XmlNodeType" />、<see cref="P:System.Xml.XmlDocument.Name" /> 和 <see cref="P:System.Xml.XmlNode.NamespaceURI" /> 的 <see cref="T:System.Xml.XmlNode" />。</summary>
+      <returns>新的 XmlNode。</returns>
+      <param name="type">新節點的 XmlNodeType。</param>
+      <param name="name">新節點的限定名稱。如果名稱包含冒號，將會剖析為 <see cref="P:System.Xml.XmlNode.Prefix" /> 和 <see cref="P:System.Xml.XmlDocument.LocalName" /> 元件。</param>
+      <param name="namespaceURI">新節點的命名空間 URI。</param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.Xml.XmlNodeType,System.String,System.String,System.String)">
+      <summary>建立具有指定之 <see cref="T:System.Xml.XmlNodeType" />、<see cref="P:System.Xml.XmlNode.Prefix" />、<see cref="P:System.Xml.XmlDocument.Name" /> 和 <see cref="P:System.Xml.XmlNode.NamespaceURI" /> 的 <see cref="T:System.Xml.XmlNode" />。</summary>
+      <returns>新的 XmlNode。</returns>
+      <param name="type">新節點的 XmlNodeType。</param>
+      <param name="prefix">新節點的前置詞。</param>
+      <param name="name">新節點的區域名稱。</param>
+      <param name="namespaceURI">新節點的命名空間 URI。</param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateProcessingInstruction(System.String,System.String)">
+      <summary>建立具有指定名稱和資料的 <see cref="T:System.Xml.XmlProcessingInstruction" />。</summary>
+      <returns>新的 XmlProcessingInstruction。</returns>
+      <param name="target">處理指示的名稱。</param>
+      <param name="data">處理指示的資料。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateSignificantWhitespace(System.String)">
+      <summary>建立 <see cref="T:System.Xml.XmlSignificantWhitespace" /> 節點。</summary>
+      <returns>一個新的 XmlSignificantWhitespace 節點。</returns>
+      <param name="text">字串必須只包含下列字元 &amp;#20;、&amp;#10;、&amp;#13; 和 &amp;#9; </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateTextNode(System.String)">
+      <summary>建立具有指定文字的 <see cref="T:System.Xml.XmlText" />。</summary>
+      <returns>新的 XmlText 節點。</returns>
+      <param name="text">Text 節點的文字。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateWhitespace(System.String)">
+      <summary>建立 <see cref="T:System.Xml.XmlWhitespace" /> 節點。</summary>
+      <returns>新的 XmlWhitespace 節點。</returns>
+      <param name="text">字串必須只包含下列字元 &amp;#20;、&amp;#10;、&amp;#13; 和 &amp;#9; </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateXmlDeclaration(System.String,System.String,System.String)">
+      <summary>建立具有指定值的 <see cref="T:System.Xml.XmlDeclaration" /> 節點。</summary>
+      <returns>新的  XmlDeclaration 節點。</returns>
+      <param name="version">版本必須是 "1.0"。</param>
+      <param name="encoding">編碼屬性的值。這是在您將 <see cref="T:System.Xml.XmlDocument" /> 儲存至檔案或資料流時使用的編碼方式，因此，必須設定為 <see cref="T:System.Text.Encoding" /> 類別支援的字串，否則 <see cref="M:System.Xml.XmlDocument.Save(System.String)" /> 會失敗。如果這是 null 或 String.Empty，Save 方法不會在 XML 宣告上寫入編碼屬性，因此會使用預設編碼方式 UTF-8。注意：如果 XmlDocument 儲存至 <see cref="T:System.IO.TextWriter" /> 或 <see cref="T:System.Xml.XmlTextWriter" />，則會捨棄這個編碼值。改用 TextWriter 或 XmlTextWriter 的編碼方式。這可以確保寫出的 XML 可以使用正碼的編碼方式讀回。</param>
+      <param name="standalone">值必須為「是」或「否」。如果這是 null 或 String.Empty，Save 方法不會在 XML 宣告上寫入獨立屬性。</param>
+      <exception cref="T:System.ArgumentException">The values of <paramref name="version" /> or <paramref name="standalone" /> are something other than the ones specified above. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.DocumentElement">
+      <summary>取得文件的根 <see cref="T:System.Xml.XmlElement" />。</summary>
+      <returns>表示 XML 文件樹狀結構之根的 XmlElement。如果有根，會傳回 null。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.GetElementsByTagName(System.String)">
+      <summary>傳回 <see cref="T:System.Xml.XmlNodeList" />，其中包含符合指定 <see cref="P:System.Xml.XmlDocument.Name" /> 之所有子代 (Descendant) 項目的清單。</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNodeList" />，包含所有符合節點的清單。如果沒有節點符合 <paramref name="name" />，就會傳回空的集合。</returns>
+      <param name="name">要相符的限定名稱。它會與符合節點的 Name 屬性比對。特殊值 "*" 與所有標記相符。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.GetElementsByTagName(System.String,System.String)">
+      <summary>傳回 <see cref="T:System.Xml.XmlNodeList" />，其中包含符合指定之 <see cref="P:System.Xml.XmlDocument.LocalName" /> 和 <see cref="P:System.Xml.XmlNode.NamespaceURI" /> 的所有子代元素的清單。</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNodeList" />，包含所有符合節點的清單。如果沒有節點符合指定的 <paramref name="localName" /> 及 <paramref name="namespaceURI" />，就會傳回空的集合。</returns>
+      <param name="localName">要相符的 LocalName。特殊值 "*" 與所有標記相符。</param>
+      <param name="namespaceURI">要比對的 NamespaceURI。</param>
+    </member>
+    <member name="P:System.Xml.XmlDocument.Implementation">
+      <summary>取得目前文件的 <see cref="T:System.Xml.XmlImplementation" /> 物件。</summary>
+      <returns>目前文件的 XmlImplementation 物件。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.ImportNode(System.Xml.XmlNode,System.Boolean)">
+      <summary>從其他文件匯入節點至目前的文件。</summary>
+      <returns>匯入的 <see cref="T:System.Xml.XmlNode" />。</returns>
+      <param name="node">匯入的節點。</param>
+      <param name="deep">true 以執行深層複製；否則為 false。</param>
+      <exception cref="T:System.InvalidOperationException">Calling this method on a node type which cannot be imported. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.InnerText">
+      <summary>在所有情況下都擲回 <see cref="T:System.InvalidOperationException" />。</summary>
+      <returns>節點和其所有子節點的值。</returns>
+      <exception cref="T:System.InvalidOperationException">In all cases.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.InnerXml">
+      <summary>取得或設定表示目前節點子系的標記。</summary>
+      <returns>目前節點子系的標記。</returns>
+      <exception cref="T:System.Xml.XmlException">The XML specified when setting this property is not well-formed. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.IsReadOnly">
+      <summary>取得值，指示目前節點是否為唯讀。</summary>
+      <returns>如果目前節點為唯讀，則為 true；否則為 false。XmlDocument 節點永遠傳回 false。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.IO.Stream)">
+      <summary>從指定的資料流載入 XML 文件。</summary>
+      <param name="inStream">包含要載入之 XML 文件的資料流。</param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, a <see cref="T:System.IO.FileNotFoundException" /> is raised.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.IO.TextReader)">
+      <summary>從指定的 <see cref="T:System.IO.TextReader" /> 載入 XML 文件。</summary>
+      <param name="txtReader">用於將 XML 資料送入文件中的 TextReader。</param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.Xml.XmlReader)">
+      <summary>從指定的 <see cref="T:System.Xml.XmlReader" /> 載入 XML 文件。</summary>
+      <param name="reader">用於將 XML 資料送入文件中的 XmlReader。</param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.LoadXml(System.String)">
+      <summary>從指定的字串載入 XML 文件。</summary>
+      <param name="xml">包含要載入之 XML 文件的字串。</param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.LocalName">
+      <summary>取得節點的區域名稱。</summary>
+      <returns>對於 XmlDocument 節點，區域名稱為 #document。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.Name">
+      <summary>取得節點的限定名稱。</summary>
+      <returns>對於  XmlDocument 節點，名稱為 #document。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.NameTable">
+      <summary>取得與這個實作關聯的 <see cref="T:System.Xml.XmlNameTable" />。</summary>
+      <returns>XmlNameTable，可讓您取得文件中字串之擷取版本。</returns>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeChanged">
+      <summary>發生於屬於這份文件之節點的 <see cref="P:System.Xml.XmlNode.Value" /> 變更時。</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeChanging">
+      <summary>發生於屬於這份文件之節點的 <see cref="P:System.Xml.XmlNode.Value" /> 即將變更時。</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeInserted">
+      <summary>發生於屬於這份文件的節點插入另一個節點時。</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeInserting">
+      <summary>發生於屬於這份文件的節點將要插入另一個節點時。</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeRemoved">
+      <summary>發生於屬於這份文件的節點從其父代 (Parent) 移除時。</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeRemoving">
+      <summary>發生於屬於這份文件的節點即將從文件中移除時。</summary>
+    </member>
+    <member name="P:System.Xml.XmlDocument.NodeType">
+      <summary>取得目前節點的類型。</summary>
+      <returns>節點類型。對於 XmlDocument 節點，此值為 XmlNodeType.Document。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.OwnerDocument">
+      <summary>取得目前節點所屬的 <see cref="T:System.Xml.XmlDocument" />。</summary>
+      <returns>對於 XmlDocument 節點 (<see cref="P:System.Xml.XmlDocument.NodeType" /> 等於 XmlNodeType.Document)，此屬性一律會傳回 null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.ParentNode">
+      <summary>取得這個節點的父節點 (針對可以具有父代的節點而言)。</summary>
+      <returns>一律傳回 null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.PreserveWhitespace">
+      <summary>取得或設定值，指出是否要保留項目內容中的空白字元。</summary>
+      <returns>若要保留空白字元，則為 true；否則為 false。預設為 false。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.ReadNode(System.Xml.XmlReader)">
+      <summary>根據 <see cref="T:System.Xml.XmlReader" /> 中的資訊建立一個 <see cref="T:System.Xml.XmlNode" /> 物件。讀取器必須定位在節點或屬性上。</summary>
+      <returns>新的 XmlNode；如果沒有其他節點，則為 null。</returns>
+      <param name="reader">XML 來源。 </param>
+      <exception cref="T:System.NullReferenceException">The reader is positioned on a node type that does not translate to a valid DOM node (for example, EndElement or EndEntity). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.IO.Stream)">
+      <summary>將 XML 文件儲存至指定的資料流。</summary>
+      <param name="outStream">要在其中儲存的資料流。</param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.IO.TextWriter)">
+      <summary>將 XML 文件儲存至指定的 <see cref="T:System.IO.TextWriter" />。</summary>
+      <param name="writer">要儲存的目標 TextWriter。</param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.Xml.XmlWriter)">
+      <summary>將 XML 文件儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目標 XmlWriter。</param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>將 XmlDocument 節點的所有子系儲存到指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="xw">要儲存的目標 XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.WriteTo(System.Xml.XmlWriter)">
+      <summary>將 XmlDocument 節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目標 XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlDocumentFragment">
+      <summary>表示適用於樹狀結構插入作業的輕量物件。</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.#ctor(System.Xml.XmlDocument)">
+      <summary>初始化 <see cref="T:System.Xml.XmlDocumentFragment" /> 類別的新執行個體。</summary>
+      <param name="ownerDocument">片段來源的 XML 文件。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.CloneNode(System.Boolean)">
+      <summary>建立這個節點的複本。</summary>
+      <returns>複製的節點。</returns>
+      <param name="deep">若要在指定的節點下遞迴地複製子樹狀結構，則為 true，若只要複製節點本身，則為 false。</param>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.InnerXml">
+      <summary>取得或設定表示這個節點的子節點的標記。</summary>
+      <returns>這個節點的子節點的標記。</returns>
+      <exception cref="T:System.Xml.XmlException">在設定語式不正確的屬性時所指定的 XML。</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.LocalName">
+      <summary>取得節點的區域名稱。</summary>
+      <returns>對於 XmlDocumentFragment 節點，其區域名稱為 #document-fragment。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.Name">
+      <summary>取得節點的完整名稱。</summary>
+      <returns>對於 XmlDocumentFragment，其名稱為 #document-fragment。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.NodeType">
+      <summary>取得目前節點的型別。</summary>
+      <returns>對於 XmlDocumentFragment 節點，其值為 XmlNodeType.DocumentFragment。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.OwnerDocument">
+      <summary>取得這個節點所屬的 <see cref="T:System.Xml.XmlDocument" />。</summary>
+      <returns>這個節點所屬的 XmlDocument。</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.ParentNode">
+      <summary>取得這個節點的父代 (對於具有父代的節點而言)。</summary>
+      <returns>這個節點的父代。對於 XmlDocumentFragment 節點，這個屬性必定為 null。</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>將節點的所有子系儲存到指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.WriteTo(System.Xml.XmlWriter)">
+      <summary>將節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlElement">
+      <summary>表示項目。</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>初始化 <see cref="T:System.Xml.XmlElement" /> 類別的新執行個體。</summary>
+      <param name="prefix">命名空間前置字元；請參閱 <see cref="P:System.Xml.XmlElement.Prefix" /> 屬性。</param>
+      <param name="localName">本機名稱；請參閱 <see cref="P:System.Xml.XmlElement.LocalName" /> 屬性。</param>
+      <param name="namespaceURI">命名空間 URI；請參閱 <see cref="P:System.Xml.XmlElement.NamespaceURI" /> 屬性。</param>
+      <param name="doc">父代 XML 文件。</param>
+    </member>
+    <member name="P:System.Xml.XmlElement.Attributes">
+      <summary>取得包含這個節點之屬性 (Attribute) 清單的 <see cref="T:System.Xml.XmlAttributeCollection" />。</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlAttributeCollection" />，包含這個節點的屬性清單。</returns>
+    </member>
+    <member name="M:System.Xml.XmlElement.CloneNode(System.Boolean)">
+      <summary>建立這個節點的複本。</summary>
+      <returns>複製的節點。</returns>
+      <param name="deep">true 會遞迴複製 (Clone) 指定節點下的子樹狀結構；false 只會複製節點本身 (如果節點是 XmlElement，還包含其屬性)。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttribute(System.String)">
+      <summary>傳回具有指定名稱之屬性的值。</summary>
+      <returns>指定的屬性值。如果找不到相符的屬性，或者屬性沒有指定的或預設的值，會傳回空字串。</returns>
+      <param name="name">要擷取的屬性的名稱。這是限定名稱。它會與符合節點的 Name 屬性相符。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttribute(System.String,System.String)">
+      <summary>傳回具有指定區域名稱和命名空間 URI 之屬性的值。</summary>
+      <returns>指定的屬性值。如果找不到相符的屬性，或者屬性沒有指定的或預設的值，會傳回空字串。</returns>
+      <param name="localName">要擷取的屬性的區域名稱。</param>
+      <param name="namespaceURI">要擷取的屬性的命名空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttributeNode(System.String)">
+      <summary>傳回具有指定名稱的 XmlAttribute。</summary>
+      <returns>指定的 XmlAttribute；如果找不到相符的屬性，則為 null。</returns>
+      <param name="name">要擷取的屬性的名稱。這是限定名稱。它會與符合節點的 Name 屬性相符。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttributeNode(System.String,System.String)">
+      <summary>傳回具有指定區域名稱和命名空間 URI 的 <see cref="T:System.Xml.XmlAttribute" />。</summary>
+      <returns>指定的 XmlAttribute；如果找不到相符的屬性，則為 null。</returns>
+      <param name="localName">屬性的區域名稱。</param>
+      <param name="namespaceURI">屬性的命名空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetElementsByTagName(System.String)">
+      <summary>傳回 <see cref="T:System.Xml.XmlNodeList" />，其中包含符合指定之 <see cref="P:System.Xml.XmlElement.Name" /> 的所有子代項目清單。</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNodeList" />，包含所有符合節點的清單。如果沒有符合的節點，清單是空的。</returns>
+      <param name="name">要相符的名稱標記。這是限定名稱。它會與符合節點的 Name 屬性相符。星號 (*) 是與所有標記相符的特殊值。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetElementsByTagName(System.String,System.String)">
+      <summary>傳回 <see cref="T:System.Xml.XmlNodeList" />，其中包含與指定的 <see cref="P:System.Xml.XmlElement.LocalName" /> 和 <see cref="P:System.Xml.XmlElement.NamespaceURI" /> 相符之所有子代項目清單。</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNodeList" />，包含所有符合節點的清單。如果沒有符合的節點，清單是空的。</returns>
+      <param name="localName">要相符的區域名稱。星號 (*) 是與所有標記相符的特殊值。</param>
+      <param name="namespaceURI">要相符的命名空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.HasAttribute(System.String)">
+      <summary>判斷目前的節點是否有具有指定名稱的屬性。</summary>
+      <returns>如果目前節點有指定的屬性，則為 true，否則為 false。</returns>
+      <param name="name">要尋找的屬性的名稱。這是限定名稱。它會與符合節點的 Name 屬性相符。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.HasAttribute(System.String,System.String)">
+      <summary>判斷目前的節點是否有具有指定區域名稱和命名空間 URI 的屬性。</summary>
+      <returns>如果目前節點有指定的屬性，則為 true，否則為 false。</returns>
+      <param name="localName">要尋找的屬性的區域名稱。</param>
+      <param name="namespaceURI">要尋找的屬性的命名空間 URI。</param>
+    </member>
+    <member name="P:System.Xml.XmlElement.HasAttributes">
+      <summary>取得 boolean 值，表示目前節點是否有屬性。</summary>
+      <returns>如果目前節點擁有屬性，則為 true，否則為 false。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.InnerText">
+      <summary>取得或設定節點的串連值和其所有的子節點。</summary>
+      <returns>節點的串連值和其所有的子節點。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.InnerXml">
+      <summary>取得或設定標記，表示這個節點的子節點。</summary>
+      <returns>這個節點的子節點的標記。</returns>
+      <exception cref="T:System.Xml.XmlException">在設定語式不正確的屬性時所指定的 XML。</exception>
+    </member>
+    <member name="P:System.Xml.XmlElement.IsEmpty">
+      <summary>取得或設定項目的標記格式。</summary>
+      <returns>如果項目要以短標記格式 "&lt;item/&gt;" 序列化，會傳回 true；如果以長格式 "&lt;item&gt;&lt;/item&gt;" 序列化，會傳回 false。設定這個屬性時，如果設定為 true，會移除項目的子系，並且以短標記格式序列化項目。如果設定為 false，會變更屬性的值 (不論項目是否有內容)；如果項目是空的，將會以長格式序列化。這個屬性是擴充至文件物件模型 (DOM) 的 Microsoft 擴充部分。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.LocalName">
+      <summary>取得目前節點的區域名稱。</summary>
+      <returns>目前節點名稱的前置詞被移除。例如，LocalName 是項目 &lt;bk:book&gt; 的書本。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.Name">
+      <summary>取得節點的完整名稱。</summary>
+      <returns>節點的限定名稱。對於 XmlElement 節點，這是項目的標記名稱。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NamespaceURI">
+      <summary>取得這個節點的命名空間 URI。</summary>
+      <returns>這個節點的命名空間 URI。如果沒有命名空間 URI，則這個屬性傳回 String.Empty。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NextSibling">
+      <summary>取得緊接在這個項目之後的 <see cref="T:System.Xml.XmlNode" />。</summary>
+      <returns>緊接在這個項目之後的 XmlNode。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NodeType">
+      <summary>取得目前節點的型別。</summary>
+      <returns>節點型別。對於 XmlElement 節點，這個值為 XmlNodeType.Element。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.OwnerDocument">
+      <summary>取得這個節點所屬的 <see cref="T:System.Xml.XmlDocument" />。</summary>
+      <returns>這個項目所屬的 XmlDocument。</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.ParentNode"></member>
+    <member name="P:System.Xml.XmlElement.Prefix">
+      <summary>取得或設定這個節點的命名空間前置詞。</summary>
+      <returns>這個節點的命名空間前置詞。如果沒有前置詞，則這個屬性傳回 String.Empty。</returns>
+      <exception cref="T:System.ArgumentException">這個節點是唯讀的。</exception>
+      <exception cref="T:System.Xml.XmlException">指定的前置詞包含無效的字元。指定的前置詞不正確。這個節點的 namespaceURI 為 null。指定的前置詞為「xml」，而這個節點的 namespaceURI 與 http://www.w3.org/XML/1998/namespace 不同。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAll">
+      <summary>移除目前節點所有指定的屬性和子系。預設屬性不會移除。</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAllAttributes">
+      <summary>移除項目中所有指定的屬性。預設屬性不會移除。</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttribute(System.String)">
+      <summary>依照名稱移除屬性。</summary>
+      <param name="name">所要移除屬性 (Attribute) 的名稱。這是一個限定名稱。它會與符合節點的 Name 屬性相符。</param>
+      <exception cref="T:System.ArgumentException">這個節點是唯讀的。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttribute(System.String,System.String)">
+      <summary>移除具有指定區域名稱和命名空間 URI 的屬性 (如果移除的屬性具有預設值，會立即被取代)。</summary>
+      <param name="localName">要移除的屬性的區域名稱。</param>
+      <param name="namespaceURI">要移除的屬性的命名空間 URI。</param>
+      <exception cref="T:System.ArgumentException">這個節點是唯讀的。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeAt(System.Int32)">
+      <summary>移除項目中具有指定索引的屬性節點 (如果移除的屬性具有預設值，會立即被取代)。</summary>
+      <returns>移除的屬性節點；如果指定的索引中沒有節點，則為 null。</returns>
+      <param name="i">要移除的節點的索引。第一個節點的索引為 0。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeNode(System.String,System.String)">
+      <summary>移除區域名稱和命名空間 URI 指定的 <see cref="T:System.Xml.XmlAttribute" /> (如果移除的屬性具有預設值，會立即被取代)。</summary>
+      <returns>移除的 XmlAttribute；如果 XmlElement 沒有相符的屬性節點，則為 null。</returns>
+      <param name="localName">屬性的區域名稱。</param>
+      <param name="namespaceURI">屬性的命名空間 URI。</param>
+      <exception cref="T:System.ArgumentException">這個節點是唯讀的。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeNode(System.Xml.XmlAttribute)">
+      <summary>移除指定的 <see cref="T:System.Xml.XmlAttribute" />。</summary>
+      <returns>移除的 XmlAttribute；如果 <paramref name="oldAttr" /> 不是 XmlElement 的屬性節點，則為 null。</returns>
+      <param name="oldAttr">要移除的 XmlAttribute 節點。如果移除的屬性具預設值，會立即被取代。</param>
+      <exception cref="T:System.ArgumentException">這個節點是唯讀的。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttribute(System.String,System.String)">
+      <summary>設定具有指定名稱之屬性的值。</summary>
+      <param name="name">要建立或變更的屬性的名稱。這是限定名稱。如果名稱包含冒號，將會剖析為前置詞和區域名稱元件。</param>
+      <param name="value">要為屬性設定的值。</param>
+      <exception cref="T:System.Xml.XmlException">指定的名稱包含無效的字元。</exception>
+      <exception cref="T:System.ArgumentException">這個節點是唯讀的。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttribute(System.String,System.String,System.String)">
+      <summary>設定具有指定區域名稱和命名空間 URI 之屬性的值。</summary>
+      <returns>屬性值。</returns>
+      <param name="localName">屬性的區域名稱。</param>
+      <param name="namespaceURI">屬性的命名空間 URI。</param>
+      <param name="value">要為屬性設定的值。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttributeNode(System.String,System.String)">
+      <summary>加入指定的 <see cref="T:System.Xml.XmlAttribute" />。</summary>
+      <returns>要相加的 XmlAttribute。</returns>
+      <param name="localName">屬性的區域名稱。</param>
+      <param name="namespaceURI">屬性的命名空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttributeNode(System.Xml.XmlAttribute)">
+      <summary>加入指定的 <see cref="T:System.Xml.XmlAttribute" />。</summary>
+      <returns>如果這個屬性取代相同名稱的現有屬性，會傳回舊的 XmlAttribute；否則會傳回 null。</returns>
+      <param name="newAttr">要加入這個項目屬性集合中的 XmlAttribute 節點。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newAttr" /> 由不同於建立這個節點的另一份文件所建立。或者這個節點是唯讀的。</exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="newAttr" /> 已經是其他 XmlElement 物件的屬性。您必須明確複製 XmlAttribute 節點，以便在其他 XmlElement 物件中重複使用這些節點。</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>將節點的所有子系儲存到指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.WriteTo(System.Xml.XmlWriter)">
+      <summary>將目前的節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlImplementation">
+      <summary>定義一組 <see cref="T:System.Xml.XmlDocument" /> 物件的內容。</summary>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.#ctor">
+      <summary>初始化 <see cref="T:System.Xml.XmlImplementation" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.#ctor(System.Xml.XmlNameTable)">
+      <summary>使用指定的 <see cref="T:System.Xml.XmlNameTable" />，初始化 <see cref="T:System.Xml.XmlImplementation" /> 類別的新執行個體。</summary>
+      <param name="nt">
+        <see cref="T:System.Xml.XmlNameTable" /> 物件。</param>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.CreateDocument">
+      <summary>建立新的 <see cref="T:System.Xml.XmlDocument" />。</summary>
+      <returns>新的 XmlDocument 物件。</returns>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.HasFeature(System.String,System.String)">
+      <summary>測試文件物件模型 (DOM) 實作是否實作指定的功能。</summary>
+      <returns>如果在指定的版本實作這個功能，則為 true，否則為 false。下表顯示會使 HasFeature 傳回 true 的組合。strFeaturestrVersionXML1.0XML2.0</returns>
+      <param name="strFeature">要測試的功能的套件 (Package) 名稱。這個名稱並不區分大小寫。</param>
+      <param name="strVersion">這是要測試的套件名稱的版本編號。如果尚未指定版本 (null)，則支援這個功能的任何版本都會讓這個方法傳回 true。</param>
+    </member>
+    <member name="T:System.Xml.XmlLinkedNode">
+      <summary>取得這個節點的前置或後置節點。</summary>
+    </member>
+    <member name="P:System.Xml.XmlLinkedNode.NextSibling">
+      <summary>取得這個節點的後置節點。</summary>
+      <returns>這個節點的後置 <see cref="T:System.Xml.XmlNode" />，如果這個節點不存在，則為 null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlLinkedNode.PreviousSibling">
+      <summary>取得這個節點的前置節點。</summary>
+      <returns>前置的 <see cref="T:System.Xml.XmlNode" />，如果這個節點不存在，則為 null。</returns>
+    </member>
+    <member name="T:System.Xml.XmlNamedNodeMap">
+      <summary>表示可用名稱或索引存取的節點集合。</summary>
+    </member>
+    <member name="P:System.Xml.XmlNamedNodeMap.Count">
+      <summary>取得 XmlNamedNodeMap 中的節點數目。</summary>
+      <returns>節點的數目。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetEnumerator">
+      <summary>提供 XmlNamedNodeMap 中節點集合上「foreach」樣式重複的支援。</summary>
+      <returns>列舉程式物件。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String)">
+      <summary>依指定名稱來擷取 <see cref="T:System.Xml.XmlNode" />。</summary>
+      <returns>具有指定名稱的 XmlNode；如果找不到符合的節點，則為 null。</returns>
+      <param name="name">要擷取的節點的限定名稱 (Qualified Name)。它會與符合節點的 <see cref="P:System.Xml.XmlNode.Name" /> 屬性相符。</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String,System.String)">
+      <summary>擷取具有符合的 <see cref="P:System.Xml.XmlNode.LocalName" /> 和 <see cref="P:System.Xml.XmlNode.NamespaceURI" /> 的節點。</summary>
+      <returns>具有符合的區域名稱與命名空間 (Namespace) URI 的 <see cref="T:System.Xml.XmlNode" />；如果找不到符合的節點，則為 null。</returns>
+      <param name="localName">要擷取的節點的區域名稱。</param>
+      <param name="namespaceURI">取得要擷取之節點的命名空間統一資源識別元 (URI)。</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.Item(System.Int32)">
+      <summary>擷取 XmlNamedNodeMap 中位於指定索引的節點。</summary>
+      <returns>在指定索引處的 <see cref="T:System.Xml.XmlNode" />。如果 <paramref name="index" /> 小於 0 或大於等於 <see cref="P:System.Xml.XmlNamedNodeMap.Count" /> 屬性，則傳回 null。</returns>
+      <param name="index">從 XmlNamedNodeMap 擷取的節點的索引位置。索引是以零起始的；因此第一個節點的索引為 0，最後一個節點的索引為 <see cref="P:System.Xml.XmlNamedNodeMap.Count" /> -1。</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String)">
+      <summary>從 XmlNamedNodeMap 移除節點。</summary>
+      <returns>從這個 XmlNamedNodeMap 移除 XmlNode；如果找不到符合的節點，則為 null。</returns>
+      <param name="name">要移除的節點的限定名稱。它會與符合節點的 <see cref="P:System.Xml.XmlNode.Name" /> 屬性相符。</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String,System.String)">
+      <summary>移除具有符合的 <see cref="P:System.Xml.XmlNode.LocalName" /> 和 <see cref="P:System.Xml.XmlNode.NamespaceURI" /> 的節點。</summary>
+      <returns>移除 <see cref="T:System.Xml.XmlNode" />；如果找不到符合的節點，則為 null。</returns>
+      <param name="localName">要移除的節點的區域名稱。</param>
+      <param name="namespaceURI">要移除的節點的命名空間 URI。</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.SetNamedItem(System.Xml.XmlNode)">
+      <summary>使用其 <see cref="P:System.Xml.XmlNode.Name" /> 屬性加入 <see cref="T:System.Xml.XmlNode" />。</summary>
+      <returns>如果 <paramref name="node" /> 取代同名的現有節點，則傳回舊節點；否則傳回 null。</returns>
+      <param name="node">儲存在 XmlNamedNodeMap 中的 XmlNode。如果具有該名稱的節點已經在對應中，就會以新節點取代。</param>
+      <exception cref="T:System.ArgumentException">從不同於建立 XmlNamedNodeMap 的 <see cref="T:System.Xml.XmlDocument" /> 來建立 <paramref name="node" />；否則 XmlNamedNodeMap 為唯讀。</exception>
+    </member>
+    <member name="T:System.Xml.XmlNode">
+      <summary>表示 XML 文件中的單一節點。</summary>
+    </member>
+    <member name="M:System.Xml.XmlNode.AppendChild(System.Xml.XmlNode)">
+      <summary>將指定的節點加入這個節點之子節點清單的結尾。</summary>
+      <returns>已加入的節點。</returns>
+      <param name="newChild">要加入的節點。要加入之節點的所有內容會移入指定的位置。</param>
+      <exception cref="T:System.InvalidOperationException">這個節點的型別不允許 <paramref name="newChild" /> 節點型別的子節點。<paramref name="newChild" /> 是這個節點的上階。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> 由不同於建立這個節點的另一份文件所建立。這個節點是唯讀的。</exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.Attributes">
+      <summary>取得包含這個節點屬性 (Attribute) 的 <see cref="T:System.Xml.XmlAttributeCollection" />。</summary>
+      <returns>XmlAttributeCollection，包含這個節點的屬性。如果這個節點的類型為 XmlNodeType.Element，則傳回這個節點的屬性。否則，這個函式會傳回 null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.BaseURI">
+      <summary>取得目前節點的基底 (Base) URI。</summary>
+      <returns>節點載入的位置；如果節點沒有基底 URI，則為 String.Empty。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.ChildNodes">
+      <summary>取得節點的所有子節點。</summary>
+      <returns>物件，包含節點的所有子節點。如果沒有子節點，這個屬性傳回空的 <see cref="T:System.Xml.XmlNodeList" />。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.CloneNode(System.Boolean)">
+      <summary>在衍生類別中覆寫時，建立節點的複本。</summary>
+      <returns>複製的節點。</returns>
+      <param name="deep">若要在指定的節點下遞迴地複製子樹狀結構，則為 true，若只要複製節點本身，則為 false。</param>
+      <exception cref="T:System.InvalidOperationException">在無法複製的節點型別上，呼叫這個方法。</exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.FirstChild">
+      <summary>取得節點的第一個子節點。</summary>
+      <returns>節點的第一個子節點。如果沒有這種節點，則會傳回 null。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetEnumerator">
+      <summary>取得逐一查看目前節點中子節點的列舉程式。</summary>
+      <returns>
+        <see cref="T:System.Collections.IEnumerator" /> 物件，可用來逐一查看目前節點中的子節點。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetNamespaceOfPrefix(System.String)">
+      <summary>查閱目前節點範圍內指定前置詞最接近的 xmlns 宣告，並傳回宣告中的命名空間 URI。</summary>
+      <returns>指定前置詞的命名空間 URI。</returns>
+      <param name="prefix">您要尋找其命名空間 URI 的前置詞。</param>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetPrefixOfNamespace(System.String)">
+      <summary>查閱目前節點範圍內指定命名空間 URI 最接近的 xmlns 宣告，並傳回宣告中所定義的前置詞。</summary>
+      <returns>指定命名空間 URI 的前置詞。</returns>
+      <param name="namespaceURI">您要尋找其前置詞的命名空間 URI。</param>
+    </member>
+    <member name="P:System.Xml.XmlNode.HasChildNodes">
+      <summary>取得值，指出這個節點是否有子節點。</summary>
+      <returns>如果該節點有子節點，則為 true，否則為 false。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.InnerText">
+      <summary>取得或設定節點和其所有子節點的串連值。</summary>
+      <returns>節點和其所有子節點的串連值。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.InnerXml">
+      <summary>取得或設定只表示這個節點之子節點的標記。</summary>
+      <returns>這個節點之子節點的標記。注意事項InnerXml 不會傳回預設的屬性。</returns>
+      <exception cref="T:System.InvalidOperationException">在不能有子節點的節點上，設定這個屬性。</exception>
+      <exception cref="T:System.Xml.XmlException">在設定語式不正確的屬性時所指定的 XML。</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>在指定的參考節點之後，插入指定的節點。</summary>
+      <returns>要插入的節點。</returns>
+      <param name="newChild">要插入的 XmlNode。</param>
+      <param name="refChild">XmlNode 為參考節點。<paramref name="newNode" /> 會置於 <paramref name="refNode" /> 之後。</param>
+      <exception cref="T:System.InvalidOperationException">這個節點的型別不允許 <paramref name="newChild" /> 節點型別的子節點。<paramref name="newChild" /> 是這個節點的上階。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> 由不同於建立這個節點的另一份文件所建立。<paramref name="refChild" /> 不是這個節點的子節點。這個節點是唯讀的。</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>在指定的參考節點之前，插入指定的節點。</summary>
+      <returns>要插入的節點。</returns>
+      <param name="newChild">要插入的 XmlNode。</param>
+      <param name="refChild">XmlNode 為參考節點。<paramref name="newChild" /> 會置於這個節點之前。</param>
+      <exception cref="T:System.InvalidOperationException">目前這種型別的節點不允許 <paramref name="newChild" /> 節點型別的子節點。<paramref name="newChild" /> 是這個節點的上階。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> 由不同於建立這個節點的另一份文件所建立。<paramref name="refChild" /> 不是這個節點的子節點。這個節點是唯讀的。</exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.IsReadOnly">
+      <summary>取得值，表示節點是否為唯讀。</summary>
+      <returns>如果節點是唯讀，則為 true，否則為 false。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Item(System.String)">
+      <summary>取得具有指定的 <see cref="P:System.Xml.XmlNode.Name" /> 的第一個子項目。</summary>
+      <returns>符合指定名稱的第一個 <see cref="T:System.Xml.XmlElement" />。如果沒有相符項目，則傳回 null 參考 (在 Visual Basic 中為 Nothing)。</returns>
+      <param name="name">要擷取的項目的限定名稱 (Qualified Name)。</param>
+    </member>
+    <member name="P:System.Xml.XmlNode.Item(System.String,System.String)">
+      <summary>取得具有指定的 <see cref="P:System.Xml.XmlNode.LocalName" /> 與 <see cref="P:System.Xml.XmlNode.NamespaceURI" /> 的第一個子項目。</summary>
+      <returns>具有符合的 <paramref name="localname" /> 與 <paramref name="ns" /> 的第一個 <see cref="T:System.Xml.XmlElement" />。.如果沒有相符項目，則傳回 null 參考 (在 Visual Basic 中為 Nothing)。</returns>
+      <param name="localname">項目的本機名稱。</param>
+      <param name="ns">項目的命名空間 URI。</param>
+    </member>
+    <member name="P:System.Xml.XmlNode.LastChild">
+      <summary>取得節點的最後一個子節點。</summary>
+      <returns>節點的最後一個子節點。如果沒有這種節點，則會傳回 null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.LocalName">
+      <summary>在衍生類別中覆寫時，取得節點的區域名稱。</summary>
+      <returns>移除前置詞的節點名稱。例如，LocalName 是項目 &lt;bk:book&gt; 的書本。傳回的名稱需視節點的 <see cref="P:System.Xml.XmlNode.NodeType" /> 而定。類型名稱屬性屬性的本機名稱。CDATA#cdata-section註解#comment文件#documentDocumentFragment#document-fragmentDocumentType文件類型名稱。項目項目的本機名稱。實體實體的名稱。EntityReference所參考的實體名稱。Notation標記法名稱。ProcessingInstruction處理指示的目標。Text#textWhitespace#whitespaceSignificantWhitespace#significant-whitespaceXmlDeclaration#xml-declaration</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Name">
+      <summary>在衍生類別中覆寫時，取得節點的限定名稱。</summary>
+      <returns>節點的限定名稱。傳回的名稱需視節點的 <see cref="P:System.Xml.XmlNode.NodeType" /> 而定。類型名稱屬性屬性的限定名稱 (Qualified Name)。CDATA#cdata-section註解#comment文件#documentDocumentFragment#document-fragmentDocumentType文件類型名稱。項目項目的限定名稱。實體實體的名稱。EntityReference所參考的實體名稱。Notation標記法名稱。ProcessingInstruction處理指示的目標。Text#textWhitespace#whitespaceSignificantWhitespace#significant-whitespaceXmlDeclaration#xml-declaration</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NamespaceURI">
+      <summary>取得這個節點的命名空間 URI。</summary>
+      <returns>這個節點的命名空間 URI。如果沒有命名空間 URI，則這個屬性傳回 String.Empty。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NextSibling">
+      <summary>取得這個節點的後置節點。</summary>
+      <returns>下一個 XmlNode。如果沒有前置節點，就會傳回 null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NodeType">
+      <summary>在衍生類別中覆寫時，取得目前節點的類型。</summary>
+      <returns>其中一個 <see cref="T:System.Xml.XmlNodeType" /> 值。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.Normalize">
+      <summary>使這個 XmlNode 之下子樹狀結構的整個深度中所有 XmlText 節點成為「一般」形式，其中只用標記 (Markup) (亦即標記 (Tag)、註解、處理指示、CDATA 區段與實體參考) 來分隔 XmlText 節點，也就是說，沒有相鄰的 XmlText 節點。</summary>
+    </member>
+    <member name="P:System.Xml.XmlNode.OuterXml">
+      <summary>取得包含這個節點和其所有子節點的標記。</summary>
+      <returns>包含這個節點和其所有子節點的標記。注意事項OuterXml 不會傳回預設的屬性。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.OwnerDocument">
+      <summary>取得這個節點所屬的 <see cref="T:System.Xml.XmlDocument" />。</summary>
+      <returns>這個節點所屬的 <see cref="T:System.Xml.XmlDocument" />。如果這個節點是 <see cref="T:System.Xml.XmlDocument" /> (NodeType 等於 XmlNodeType.Document)，則這個屬性傳回 null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.ParentNode">
+      <summary>取得這個節點的父代 (對於具有父代的節點而言)。</summary>
+      <returns>目前節點的父代的 XmlNode。如果剛剛建立節點而尚未加入至樹狀結構中，或者已經從樹狀結構中移除，則父代為 null。對於其他所有節點，傳回的值視節點的 <see cref="P:System.Xml.XmlNode.NodeType" /> 而定。下表描述 ParentNode 屬性的可能傳回值。NodeTypeParentNode 的傳回值Attribute、Document、DocumentFragment、Entity、Notation傳回 null；這些節點沒有父代。CDATA傳回包含 CDATA 區段的項目或實體參考。註解傳回項目、實體參考、文件類型或包含註解的文件。DocumentType傳回文件節點。項目傳回項目的父代節點。如果此項目是樹狀結構的根節點，則父代是文件節點。EntityReference傳回項目、屬性或包含實體參考的實體參考。ProcessingInstruction傳回文件、項目、文件類型或包含處理指示的實體參考。Text傳回父代項目、屬性或包含文字節點的實體參考。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Prefix">
+      <summary>取得或設定這個節點的命名空間前置詞。</summary>
+      <returns>這個節點的命名空間前置詞。例如，項目 &lt;bk:book&gt; 的 Prefix 是 bk。如果沒有前置詞，則這個屬性會傳回 String.Empty。</returns>
+      <exception cref="T:System.ArgumentException">這個節點是唯讀的。</exception>
+      <exception cref="T:System.Xml.XmlException">指定的前置詞包含無效的字元。指定的前置詞不正確。指定的前置詞是 "xml"，而這個節點的命名空間 URI 不同於 http://www.w3.org/XML/1998/namespace。這個節點是一個屬性，指定的前置詞為「xmlns」，而這個節點的 namespaceURI 與「http://www.w3.org/2000/xmlns/」不同。這個節點是屬性，這個節點的 qualifiedName 是「xmlns」。</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.PrependChild(System.Xml.XmlNode)">
+      <summary>將指定的節點加入這個節點之子節點清單的開頭。</summary>
+      <returns>已加入的節點。</returns>
+      <param name="newChild">要加入的節點。要加入之節點的所有內容會移入指定的位置。</param>
+      <exception cref="T:System.InvalidOperationException">這個節點的型別不允許 <paramref name="newChild" /> 節點型別的子節點。<paramref name="newChild" /> 是這個節點的上階。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> 由不同於建立這個節點的另一份文件所建立。這個節點是唯讀的。</exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.PreviousSibling">
+      <summary>取得這個節點的前置節點。</summary>
+      <returns>前置的 XmlNode。如果沒有前置節點，就會傳回 null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.PreviousText">
+      <summary>取得這個節點的前置文字節點。</summary>
+      <returns>傳回 <see cref="T:System.Xml.XmlNode" />。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.RemoveAll">
+      <summary>移除目前節點的所有子節點和/或屬性。</summary>
+    </member>
+    <member name="M:System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)">
+      <summary>移除指定的子節點。</summary>
+      <returns>移除的節點。</returns>
+      <param name="oldChild">要移除的節點。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="oldChild" /> 不是這個節點的子節點。或者這個節點是唯讀的。</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>將子節點 <paramref name="oldChild" /> 用 <paramref name="newChild" /> 節點取代。</summary>
+      <returns>被取代的節點。</returns>
+      <param name="newChild">要放入子節點清單中的新節點。</param>
+      <param name="oldChild">清單中要被取代的節點。</param>
+      <exception cref="T:System.InvalidOperationException">這個節點的型別不允許 <paramref name="newChild" /> 節點型別的子節點。<paramref name="newChild" /> 是這個節點的上階。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> 由不同於建立這個節點的另一份文件所建立。這個節點是唯讀的。<paramref name="oldChild" /> 不是這個節點的子節點。</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.Supports(System.String,System.String)">
+      <summary>測試 DOM 實作 (Implementation) 是否實作特定功能。</summary>
+      <returns>如果在指定的版本實作這個功能，則為 true，否則為 false。下表說明傳回 true 的組合。功能版本XML1.0 XML2.0 </returns>
+      <param name="feature">要測試的功能套件 (Package) 名稱。這個名稱並不區分大小寫。</param>
+      <param name="version">要測試的封裝名稱版本編號。如果沒有指定版本 (null)，則支援任何版本的功能，將使這個方法傳回 true。</param>
+    </member>
+    <member name="M:System.Xml.XmlNode.System#Collections#IEnumerable#GetEnumerator">
+      <summary>如需這個成員的說明，請參閱 <see cref="M:System.Xml.XmlNode.GetEnumerator" />。</summary>
+      <returns>傳回集合的列舉程式。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Value">
+      <summary>取得或設定節點的值。</summary>
+      <returns>傳回值需視節點的 <see cref="P:System.Xml.XmlNode.NodeType" /> 而定：類型值屬性屬性的值。CDATASectionCDATA 區段的內容。註解註解的內容。文件 null. DocumentFragment null. DocumentType null. 項目 null.您可以使用 <see cref="P:System.Xml.XmlElement.InnerText" /> 或 <see cref="P:System.Xml.XmlElement.InnerXml" /> 屬性，存取項目節點的值。實體 null. EntityReference null. Notation null. ProcessingInstruction除了目標之外的完整內容。Text文字節點的內容。SignificantWhitespace空白字元。空白字元可以包含一或多個空字元、歸位字元、換行字元或定位字元。Whitespace空白字元。空白字元可以包含一或多個空字元、歸位字元、換行字元或定位字元。XmlDeclaration宣告的內容 (亦即 &lt;?xml 與 ?&gt; 之間的所有內容)。</returns>
+      <exception cref="T:System.ArgumentException">設定唯讀節點的值。</exception>
+      <exception cref="T:System.InvalidOperationException">設定不應該有值的節點值 (例如，Element 節點)。</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>在衍生類別中覆寫時，將節點的所有子節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)">
+      <summary>在衍生類別中覆寫時，將目前節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedAction">
+      <summary>指定節點變更的型別。</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Change">
+      <summary>要變更的節點值。</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Insert">
+      <summary>要插入樹狀結構中的節點。</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Remove">
+      <summary>要從樹狀結構移除的節點。</summary>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedEventArgs">
+      <summary>將資料提供給 <see cref="E:System.Xml.XmlDocument.NodeChanged" />、<see cref="E:System.Xml.XmlDocument.NodeChanging" />、<see cref="E:System.Xml.XmlDocument.NodeInserted" />、<see cref="E:System.Xml.XmlDocument.NodeInserting" />、<see cref="E:System.Xml.XmlDocument.NodeRemoved" /> 和 <see cref="E:System.Xml.XmlDocument.NodeRemoving" />。</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeChangedEventArgs.#ctor(System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.String,System.Xml.XmlNodeChangedAction)">
+      <summary>初始化 <see cref="T:System.Xml.XmlNodeChangedEventArgs" /> 類別的新執行個體。</summary>
+      <param name="node">產生事件的 <see cref="T:System.Xml.XmlNode" />。</param>
+      <param name="oldParent">產生事件之 <see cref="T:System.Xml.XmlNode" /> 的 <see cref="T:System.Xml.XmlNode" /> 舊父代。</param>
+      <param name="newParent">產生事件之 <see cref="T:System.Xml.XmlNode" /> 的 <see cref="T:System.Xml.XmlNode" /> 新父代。</param>
+      <param name="oldValue">產生事件之 <see cref="T:System.Xml.XmlNode" /> 的舊值。</param>
+      <param name="newValue">產生事件之 <see cref="T:System.Xml.XmlNode" /> 的新值。</param>
+      <param name="action">
+        <see cref="T:System.Xml.XmlNodeChangedAction" />。</param>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.Action">
+      <summary>取得值，表示發生何種節點變更型別。</summary>
+      <returns>XmlNodeChangedAction 值，說明節點變更事件。XmlNodeChangedAction 值說明Insert已經插入或將插入的節點。移除已經移除或將移除的節點。變更已經變更或將變更的節點。注意事項Action 值在發生事件期間 (之前或之後) 沒有差異。您可以建立個別事件處理常式以處理這兩個執行個體。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.NewParent">
+      <summary>完成作業之後取得 <see cref="P:System.Xml.XmlNode.ParentNode" /> 值。</summary>
+      <returns>完成作業之後的 ParentNode 值。若是要移除的節點，這個屬性傳回 null。注意事項對於屬性節點，這個屬性傳回 <see cref="P:System.Xml.XmlAttribute.OwnerElement" />。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.NewValue">
+      <summary>取得節點的新值。</summary>
+      <returns>節點的新值。如果節點既不是屬性也不是文字節點，或正在移除節點，則這個屬性會傳回 null。如果在 <see cref="E:System.Xml.XmlDocument.NodeChanging" /> 事件中呼叫屬性，則在順利變更時，NewValue 會傳回節點的值。如果在 <see cref="E:System.Xml.XmlDocument.NodeChanged" /> 事件中呼叫屬性，NewValue 會傳回節點目前的值。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.Node">
+      <summary>取得要加入、移除或變更的 <see cref="T:System.Xml.XmlNode" />。</summary>
+      <returns>要加入、移除或變更的 XmlNode，這個屬性絕不會傳回 null。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.OldParent">
+      <summary>取得作業開始之前的 <see cref="P:System.Xml.XmlNode.ParentNode" /> 值。</summary>
+      <returns>作業開始之前的 ParentNode 值。如果節點沒有父代，這個屬性傳回 null。注意事項對於屬性節點，這個屬性傳回 <see cref="P:System.Xml.XmlAttribute.OwnerElement" />。</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.OldValue">
+      <summary>取得節點的原始值。</summary>
+      <returns>節點的原始值。如果節點既不是屬性也不是文字節點，或正在插入節點，則這個屬性會傳回 null。如果在 <see cref="E:System.Xml.XmlDocument.NodeChanging" /> 事件中呼叫屬性，則在順利變更時，OldValue 會傳回節點目前的值 (將取代成新值)。如果在 <see cref="E:System.Xml.XmlDocument.NodeChanged" /> 事件中呼叫屬性，OldValue 會傳回節點變更前的值。</returns>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedEventHandler">
+      <summary>表示處理 <see cref="E:System.Xml.XmlDocument.NodeChanged" />、<see cref="E:System.Xml.XmlDocument.NodeChanging" />、<see cref="E:System.Xml.XmlDocument.NodeInserted" />、<see cref="E:System.Xml.XmlDocument.NodeInserting" />、<see cref="E:System.Xml.XmlDocument.NodeRemoved" /> 和 <see cref="E:System.Xml.XmlDocument.NodeRemoving" /> 事件的方法。</summary>
+      <param name="sender">事件的來源。</param>
+      <param name="e">
+        <see cref="T:System.Xml.XmlNodeChangedEventArgs" />，包含事件資料。 </param>
+    </member>
+    <member name="T:System.Xml.XmlNodeList">
+      <summary>表示排序的節點集合。</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.#ctor">
+      <summary>初始化 <see cref="T:System.Xml.XmlNodeList" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="P:System.Xml.XmlNodeList.Count">
+      <summary>取得 XmlNodeList 中的節點數目。</summary>
+      <returns>XmlNodeList 中的節點數目。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.GetEnumerator">
+      <summary>取得逐一查看節點集合的列舉值。</summary>
+      <returns>用來逐一查看節點集合的列舉值。</returns>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.Item(System.Int32)">
+      <summary>擷取指定索引的節點。</summary>
+      <returns>在集合中具有指定的索引的 <see cref="T:System.Xml.XmlNode" />。如果 <paramref name="index" /> 大於或等於清單中的節點數目，則傳回 null。</returns>
+      <param name="index">在節點清單中以零起始的索引。</param>
+    </member>
+    <member name="P:System.Xml.XmlNodeList.ItemOf(System.Int32)">
+      <summary>取得指定之索引位置的節點。</summary>
+      <returns>在集合中具有指定的索引的 <see cref="T:System.Xml.XmlNode" />。如果索引大於或等於清單中節點的數目，則會傳回 null。</returns>
+      <param name="i">在節點清單中以零起始的索引。</param>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.PrivateDisposeNodeList">
+      <summary>私下處置節點清單中的資源。</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.System#IDisposable#Dispose">
+      <summary>釋放 <see cref="T:System.Xml.XmlNodeList" /> 類別所使用的所有資源。</summary>
+    </member>
+    <member name="T:System.Xml.XmlProcessingInstruction">
+      <summary>表示處理指示，其中 XML 定義將處理器特定資訊保存在文件的文字中。</summary>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.#ctor(System.String,System.String,System.Xml.XmlDocument)">
+      <summary>初始化 <see cref="T:System.Xml.XmlProcessingInstruction" /> 類別的新執行個體。</summary>
+      <param name="target">處理指示的目標；請參閱 <see cref="P:System.Xml.XmlProcessingInstruction.Target" /> 屬性。</param>
+      <param name="data">指示的內容；請參閱 <see cref="P:System.Xml.XmlProcessingInstruction.Data" /> 屬性。</param>
+      <param name="doc">父代 XML 文件。</param>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.CloneNode(System.Boolean)">
+      <summary>建立這個節點的複本。</summary>
+      <returns>重複的節點。</returns>
+      <param name="deep">
+若要在指定的節點下遞迴地複製子樹狀結構，則為 true，若只要複製節點本身，則為 false。</param>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Data">
+      <summary>取得或設定處理指示的內容，目標除外。</summary>
+      <returns>處理指示的內容，目標除外。</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.InnerText">
+      <summary>取得或設定節點的串連值和其所有的子節點。</summary>
+      <returns>節點的串連值和其所有的子節點。</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.LocalName">
+      <summary>取得節點的區域名稱。</summary>
+      <returns>對於處理指示程式碼，這個屬性傳回處理指示的目標。</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Name">
+      <summary>取得節點的限定名稱。</summary>
+      <returns>對於處理指示程式碼，這個屬性傳回處理指示的目標。</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.NodeType">
+      <summary>取得目前節點的類型。</summary>
+      <returns>對於 XmlProcessingInstruction 節點，這個值是 XmlNodeType.ProcessingInstruction。</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Target">
+      <summary>取得處理指示的目標。</summary>
+      <returns>處理指示的目標。</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Value">
+      <summary>取得或設定節點的值。</summary>
+      <returns>處理指示的完整內容，目標除外。</returns>
+      <exception cref="T:System.ArgumentException">Node is read-only. </exception>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>將節點的所有子系儲存到指定的 <see cref="T:System.Xml.XmlWriter" />。因為 ProcessingInstruction 節點沒有子節點，所以這個方法不會有任何效果。</summary>
+      <param name="w">要儲存的目標 XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.WriteTo(System.Xml.XmlWriter)">
+      <summary>將節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目標 XmlWriter。 </param>
+    </member>
+    <member name="T:System.Xml.XmlSignificantWhitespace">
+      <summary>表示混合內容節點中標記間的空白區，或 xml:space= 'preserve' 範圍內的空白區。這個也可以稱為顯著的空白。</summary>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>初始化 <see cref="T:System.Xml.XmlSignificantWhitespace" /> 類別的新執行個體。</summary>
+      <param name="strData">節點的空白字元。</param>
+      <param name="doc">
+        <see cref="T:System.Xml.XmlDocument" /> 物件。</param>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.CloneNode(System.Boolean)">
+      <summary>建立這個節點的複本。</summary>
+      <returns>複製的節點。</returns>
+      <param name="deep">若要在指定的節點下遞迴地複製子樹狀結構，則為 true，若只要複製節點本身，則為 false。對於顯著的空白節點，不論參數設定為何，複製的節點永遠會包含資料值。</param>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.LocalName">
+      <summary>取得節點的區域名稱。</summary>
+      <returns>對於 XmlSignificantWhitespace 節點，這個屬性傳回 #significant-whitespace。</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.Name">
+      <summary>取得節點的限定名稱。</summary>
+      <returns>對於 XmlSignificantWhitespace 節點，這個屬性傳回 #significant-whitespace。</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.NodeType">
+      <summary>取得目前節點的類型。</summary>
+      <returns>對於 XmlSignificantWhitespace 節點，這個值為 XmlNodeType.SignificantWhitespace。</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.ParentNode">
+      <summary>取得目前節點的父節點。</summary>
+      <returns>目前節點的 <see cref="T:System.Xml.XmlNode" /> 父節點。</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.PreviousText">
+      <summary>取得這個節點的前置文字節點。</summary>
+      <returns>傳回 <see cref="T:System.Xml.XmlNode" />。</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.Value">
+      <summary>取得或設定節點的值。</summary>
+      <returns>節點中找到的空白字元。</returns>
+      <exception cref="T:System.ArgumentException">將 Value 設定為無效的空白字元。</exception>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>將節點的所有子系儲存到指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.WriteTo(System.Xml.XmlWriter)">
+      <summary>將節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlText">
+      <summary>表示項目或屬性的文字內容。</summary>
+    </member>
+    <member name="M:System.Xml.XmlText.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>初始化 <see cref="T:System.Xml.XmlText" /> 類別的新執行個體。</summary>
+      <param name="strData">節點的內容；請參閱 <see cref="P:System.Xml.XmlText.Value" /> 屬性。</param>
+      <param name="doc">父代 XML 文件。</param>
+    </member>
+    <member name="M:System.Xml.XmlText.CloneNode(System.Boolean)">
+      <summary>建立這個節點的複本。</summary>
+      <returns>複製的節點。</returns>
+      <param name="deep">若要在指定的節點下遞迴地複製子樹狀結構，則為 true，若只要複製節點本身，則為 false。</param>
+    </member>
+    <member name="P:System.Xml.XmlText.LocalName">
+      <summary>取得節點的區域名稱。</summary>
+      <returns>對於文字節點，這個屬性傳回 #text。</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.Name">
+      <summary>取得節點的限定名稱。</summary>
+      <returns>對於文字節點，這個屬性傳回 #text。</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.NodeType">
+      <summary>取得目前節點的類型。</summary>
+      <returns>對於文字節點，這個值為 XmlNodeType.Text。</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.ParentNode"></member>
+    <member name="P:System.Xml.XmlText.PreviousText">
+      <summary>取得這個節點的前置文字節點。</summary>
+      <returns>傳回 <see cref="T:System.Xml.XmlNode" />。</returns>
+    </member>
+    <member name="M:System.Xml.XmlText.SplitText(System.Int32)">
+      <summary>在指定的位移將這個節點分隔成兩個節點，使這兩個節點在樹狀結構中都保持同層級 (Sibling)。</summary>
+      <returns>新節點。</returns>
+      <param name="offset">分隔節點的位移。</param>
+    </member>
+    <member name="P:System.Xml.XmlText.Value">
+      <summary>取得或設定節點的值。</summary>
+      <returns>文字節點的內容。</returns>
+    </member>
+    <member name="M:System.Xml.XmlText.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>將節點的所有子系儲存到指定的 <see cref="T:System.Xml.XmlWriter" />。XmlText 節點沒有子系，所以這個方法不會有任何效果。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="M:System.Xml.XmlText.WriteTo(System.Xml.XmlWriter)">
+      <summary>將節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 XmlWriter。</param>
+    </member>
+    <member name="T:System.Xml.XmlWhitespace">
+      <summary>表示項目內容中的空白。</summary>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>初始化 <see cref="T:System.Xml.XmlWhitespace" /> 類別的新執行個體。</summary>
+      <param name="strData">節點的空白字元。</param>
+      <param name="doc">
+        <see cref="T:System.Xml.XmlDocument" /> 物件。</param>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.CloneNode(System.Boolean)">
+      <summary>建立這個節點的複本。</summary>
+      <returns>複製的節點。</returns>
+      <param name="deep">若要在指定的節點下遞迴地複製子樹狀結構，則為 true，若只要複製節點本身，則為 false。對於空白節點，不論參數設定為何，複製的節點永遠會包含資料值。</param>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.LocalName">
+      <summary>取得節點的區域名稱。</summary>
+      <returns>對於 XmlWhitespace 節點，這個屬性傳回 #whitespace。</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.Name">
+      <summary>取得節點的限定名稱。</summary>
+      <returns>對於 XmlWhitespace 節點，這個屬性傳回 #whitespace。</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.NodeType">
+      <summary>取得節點的類型。</summary>
+      <returns>對於 XmlWhitespace 節點，值為 <see cref="F:System.Xml.XmlNodeType.Whitespace" />。</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.ParentNode">
+      <summary>取得目前節點的父節點。</summary>
+      <returns>目前節點的 <see cref="T:System.Xml.XmlNode" /> 父節點。</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.PreviousText">
+      <summary>取得這個節點的前置文字節點。</summary>
+      <returns>傳回 <see cref="T:System.Xml.XmlNode" />。</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.Value">
+      <summary>取得或設定節點的值。</summary>
+      <returns>節點中找到的空白字元。</returns>
+      <exception cref="T:System.ArgumentException">將 <see cref="P:System.Xml.XmlWhitespace.Value" /> 設定為無效的空白字元。</exception>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>將節點的所有子系儲存到指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 <see cref="T:System.Xml.XmlWriter" />。</param>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.WriteTo(System.Xml.XmlWriter)">
+      <summary>將節點儲存至指定的 <see cref="T:System.Xml.XmlWriter" />。</summary>
+      <param name="w">要儲存的目的 <see cref="T:System.Xml.XmlWriter" />。</param>
+    </member>
+  </members>
+</doc>

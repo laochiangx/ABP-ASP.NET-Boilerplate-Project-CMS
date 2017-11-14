@@ -1,0 +1,1431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Xml.XmlDocument</name>
+  </assembly>
+  <members>
+    <member name="T:System.Xml.XmlAttribute">
+      <summary>Представляет атрибут.Допустимые значения атрибута и его значения по умолчанию определены в определении DTD или схеме.</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlAttribute" />.</summary>
+      <param name="prefix">Префикс пространства имен.</param>
+      <param name="localName">Локальное имя атрибута.</param>
+      <param name="namespaceURI">Универсальный код ресурса (URI) пространства имен.</param>
+      <param name="doc">Родительский XML-документ.</param>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.AppendChild(System.Xml.XmlNode)">
+      <summary>Добавляет указанный узел в конец списка дочерних узов данного узела.</summary>
+      <returns>Добавленный узел <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="newChild">Добавляемый объект <see cref="T:System.Xml.XmlNode" />.</param>
+      <exception cref="T:System.InvalidOperationException">Данный узел относится к типу, который не допускает дочерних узлов типа <paramref name="newChild" />.Узел <paramref name="newChild" /> является предком данного узла.</exception>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="newChild" /> был создан из другого документа, отличного от документа, из которого был создан этот узел.Этот узел доступен только для чтения.</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.BaseURI">
+      <summary>Получает базовый URI узла.</summary>
+      <returns>Место, из которого был загружен узел, или String.Empty, если базовый URI узела отсутствует.Узлам атрибутов присвоен базовый URI владеющего ими элемента.Если у атрибута нет элемента-владельца, свойство BaseURI возвращает значение String.Empty.</returns>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.CloneNode(System.Boolean)">
+      <summary>Создает дубликат этого узела.</summary>
+      <returns>Дублирующийся узел.</returns>
+      <param name="deep">Значение true для рекурсивного клонирования поддерева указанного узла; значение false для клонирования только самого узла </param>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.InnerText">
+      <summary>Задает последовательно соединенные значения узла и его дочерних узлов.</summary>
+      <returns>Последовательно соединенные значения узела и его дочерних узов.Для узлов атрибутов это свойство теми же функциями, что и свойство <see cref="P:System.Xml.XmlAttribute.Value" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.InnerXml">
+      <summary>Задает значение атрибута.</summary>
+      <returns>Значение атрибута.</returns>
+      <exception cref="T:System.Xml.XmlException">При задании этого свойства указан код XML с неправильным форматом.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Вставляет заданный узел сразу после указанного узела ссылки.</summary>
+      <returns>Вставленный узел <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="newChild">Вставляемый объект <see cref="T:System.Xml.XmlNode" />.</param>
+      <param name="refChild">узелом ссылки является <see cref="T:System.Xml.XmlNode" />.<paramref name="newChild" /> располагается после <paramref name="refChild" />.</param>
+      <exception cref="T:System.InvalidOperationException">Данный узел относится к типу, который не допускает дочерних узлов типа <paramref name="newChild" />.Узел <paramref name="newChild" /> является предком данного узла.</exception>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="newChild" /> был создан из другого документа, отличного от документа, из которого был создан этот узел.Узел <paramref name="refChild" /> не является дочерним для этого узла.Этот узел доступен только для чтения.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Вставляет заданный узел сразу перед указанным узелом ссылки.</summary>
+      <returns>Вставленный узел <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="newChild">Вставляемый объект <see cref="T:System.Xml.XmlNode" />.</param>
+      <param name="refChild">узелом ссылки является <see cref="T:System.Xml.XmlNode" />.<paramref name="newChild" /> размещен перед данным узелом.</param>
+      <exception cref="T:System.InvalidOperationException">Текущий узел относится к типу, который не допускает дочерних узлов типа <paramref name="newChild" />.Узел <paramref name="newChild" /> является предком данного узла.</exception>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="newChild" /> был создан из другого документа, отличного от документа, из которого был создан этот узел.Узел <paramref name="refChild" /> не является дочерним для этого узла.Этот узел доступен только для чтения.</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.LocalName">
+      <summary>Возвращает локальное имя узела.</summary>
+      <returns>Имя узла атрибута с удаленным префиксом.В примере тега &lt;book bk:genre= 'novel'&gt; значение LocalName атрибута равно genre.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Name">
+      <summary>Возвращает проверенное имя узла.</summary>
+      <returns>Полное имя узла атрибута.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.NamespaceURI">
+      <summary>Возвращает URI пространства имен данного узела.</summary>
+      <returns>URI пространства имен данного узла.Если атрибут не задан в пространстве имен явным образом, данное свойство возвращает значение String.Empty.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.NodeType">
+      <summary>Получает тип текущего узла.</summary>
+      <returns>Узлы XmlAttribute относятся к типу XmlNodeType.Attribute.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.OwnerDocument">
+      <summary>Возвращает класс <see cref="T:System.Xml.XmlDocument" />, которому принадлежит данный узел.</summary>
+      <returns>XML документ, которому принадлежит данный узел.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.OwnerElement">
+      <summary>Получает элемент <see cref="T:System.Xml.XmlElement" />, которому принадлежит атрибут.</summary>
+      <returns>Элемент XmlElement, которому принадлежит атрибут или значение null, если данный атрибут не является частью какого-либо элемента XmlElement.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.ParentNode">
+      <summary>Получает родительский узел данного узла.Для узлов XmlAttribute это свойство всегда возвращает значение null.</summary>
+      <returns>Для узлов XmlAttribute это свойство всегда возвращает значение null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Prefix">
+      <summary>Возвращает или задает префикс пространства имен данного узла.</summary>
+      <returns>Префикс пространства имен данного узла.Если префикс отсутствует, данное свойство возвращает String.Empty.</returns>
+      <exception cref="T:System.ArgumentException">Этот узел доступен только для чтения.</exception>
+      <exception cref="T:System.Xml.XmlException">Заданный префикс содержит недопустимый символ.Указан префикс неправильного формата.Код URI пространства имен для данного узла равен значению null.Задан префикс "xml", и код URI пространства имен отличается от значения "http://www.w3.org/XML/1998/namespace".Данный узел является атрибутом, задан префикс "xmlns", и URI пространства имен этого узла отличается от значения "http://www.w3.org/2000/xmlns/".Данный узел является атрибутом, и его полное имя — "xmlns" [пространства имен].</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.PrependChild(System.Xml.XmlNode)">
+      <summary>Добавляет указанный узел в начало списка дочерних узов данного узела.</summary>
+      <returns>Добавленный узел <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="newChild">Добавляемый объект <see cref="T:System.Xml.XmlNode" />.Для узлов <see cref="T:System.Xml.XmlDocumentFragment" /> все содержимое фрагмента документа перемещается в дочерний список данного узла.</param>
+      <exception cref="T:System.InvalidOperationException">Данный узел относится к типу, который не допускает дочерних узлов типа <paramref name="newChild" />.Узел <paramref name="newChild" /> является предком данного узла.</exception>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="newChild" /> был создан из другого документа, отличного от документа, из которого был создан этот узел.Этот узел доступен только для чтения.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.RemoveChild(System.Xml.XmlNode)">
+      <summary>Удаляет указанный дочерний узел.</summary>
+      <returns>Удаленный узел <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="oldChild">Удаляемый объект <see cref="T:System.Xml.XmlNode" />.</param>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="oldChild" /> не является дочерним для этого узла.Или этот узел доступен только для чтения.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Заменяет указанный дочерний узел заданным новым дочерним узлом.</summary>
+      <returns>Замененный узел <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="newChild">Новый дочерний узел <see cref="T:System.Xml.XmlNode" />.</param>
+      <param name="oldChild">Объект <see cref="T:System.Xml.XmlNode" /> для замены.</param>
+      <exception cref="T:System.InvalidOperationException">Данный узел относится к типу, который не допускает дочерних узлов типа <paramref name="newChild" />.Узел <paramref name="newChild" /> является предком данного узла.</exception>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="newChild" /> был создан из другого документа, отличного от документа, из которого был создан этот узел.Этот узел доступен только для чтения.Узел <paramref name="oldChild" /> не является дочерним для этого узла.</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Specified">
+      <summary>Получает значение, указывающее, было ли явно задано значение атрибута.</summary>
+      <returns>Значение true, если для атрибута было явно задано значение в исходном экземпляре документа; в противном случае — значение false.Значение false указывает, что значение атрибута происходит из определения DTD.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Value">
+      <summary>Возвращает или задает значение узела.</summary>
+      <returns>Возвращаемое значение зависит от значения свойства <see cref="P:System.Xml.XmlNode.NodeType" /> узла.Для узлов XmlAttribute значение это свойства равно значению атрибута.</returns>
+      <exception cref="T:System.ArgumentException">Вызвана операция set для узла, доступного только для чтения.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет все дочерние узлы в заданном классе <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение.</param>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.WriteTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет узел в заданном <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение.</param>
+    </member>
+    <member name="T:System.Xml.XmlAttributeCollection">
+      <summary>Представляет коллекцию атрибутов, к которым можно получить доступ по имени или по индексу.</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Append(System.Xml.XmlAttribute)">
+      <summary>Вставляет указанный атрибут как последний узел коллекции.</summary>
+      <returns>XmlAttribute, который требуется добавить в коллекцию.</returns>
+      <param name="node">Вставляемый объект <see cref="T:System.Xml.XmlAttribute" />. </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="node" /> был создан из документа, отличающегося от того, который создал данную коллекцию. </exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)">
+      <summary>Копирует объекты <see cref="T:System.Xml.XmlAttribute" /> из этой коллекции в заданный массив.</summary>
+      <param name="array">Массив, который является конечным массивом для объектов, копируемых из коллекции. </param>
+      <param name="index">Индекс массива, с которого начинается копирование. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.InsertAfter(System.Xml.XmlAttribute,System.Xml.XmlAttribute)">
+      <summary>Вставляет указанный атрибут непосредственно после заданного атрибута ссылки.</summary>
+      <returns>Класс XmlAttribute, вставляемый в коллекцию.</returns>
+      <param name="newNode">Вставляемый объект <see cref="T:System.Xml.XmlAttribute" />. </param>
+      <param name="refNode">Объект <see cref="T:System.Xml.XmlAttribute" />, являющийся атрибутом ссылки.<paramref name="newNode" /> располагается после <paramref name="refNode" />.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newNode" /> был создан из документа, отличающегося от того, который создал данную коллекцию.Или <paramref name="refNode" /> не является членом данной коллекции.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.InsertBefore(System.Xml.XmlAttribute,System.Xml.XmlAttribute)">
+      <summary>Вставляет указанный атрибут непосредственно перед заданным атрибутом ссылки.</summary>
+      <returns>Класс XmlAttribute, вставляемый в коллекцию.</returns>
+      <param name="newNode">Вставляемый объект <see cref="T:System.Xml.XmlAttribute" />. </param>
+      <param name="refNode">Объект <see cref="T:System.Xml.XmlAttribute" />, являющийся атрибутом ссылки.Элемент <paramref name="newNode" /> помещается перед элементом <paramref name="refNode" />.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newNode" /> был создан из документа, отличающегося от того, который создал данную коллекцию.Или <paramref name="refNode" /> не является членом данной коллекции.</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.Int32)">
+      <summary>Получает атрибут с указанным индексом.</summary>
+      <returns>Объект <see cref="T:System.Xml.XmlAttribute" /> с указанным индексом.</returns>
+      <param name="i">Индекс атрибута. </param>
+      <exception cref="T:System.IndexOutOfRangeException">Переданное значение индекса находится за пределами диапазона. </exception>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.String)">
+      <summary>Получает атрибут с заданным именем.</summary>
+      <returns>Объект <see cref="T:System.Xml.XmlAttribute" /> с заданным именем.Если атрибут не существует, это свойство возвращает значение null.</returns>
+      <param name="name">Проверенное имя атрибута. </param>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.String,System.String)">
+      <summary>Возвращает атрибут с заданным локальным именем и URI пространства имен.</summary>
+      <returns>Параметр <see cref="T:System.Xml.XmlAttribute" /> с заданным локальным именем и URI пространства имен.Если атрибут не существует, это свойство возвращает значение null.</returns>
+      <param name="localName">Локальное имя атрибута. </param>
+      <param name="namespaceURI">URI пространства имен атрибута. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Prepend(System.Xml.XmlAttribute)">
+      <summary>Вставляет указанный атрибут как первый узел коллекции.</summary>
+      <returns>Атрибут XmlAttribute, добавленный в коллекцию.</returns>
+      <param name="node">Вставляемый объект <see cref="T:System.Xml.XmlAttribute" />. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Remove(System.Xml.XmlAttribute)">
+      <summary>Удаляет указанный атрибут из коллекции.</summary>
+      <returns>узел удален или равен null, если он не найден в коллекции.</returns>
+      <param name="node">Удаляемый объект <see cref="T:System.Xml.XmlAttribute" />. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.RemoveAll">
+      <summary>Удаляет все атрибуты из коллекции.</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.RemoveAt(System.Int32)">
+      <summary>Удаляет из коллекции атрибут, соответствующий указанному индексу.</summary>
+      <returns>Возвращает значение null, если по указанному индексу атрибут отсутствует.</returns>
+      <param name="i">Индекс удаляемого узла.Первый узел имеет индекс 0.</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.SetNamedItem(System.Xml.XmlNode)">
+      <summary>Добавляет узел <see cref="T:System.Xml.XmlNode" /> с помощью свойства <see cref="P:System.Xml.XmlNode.Name" /></summary>
+      <returns>Если узел <paramref name="node" /> заменяет существующий узел с таким же именем, то возвращается старый узел; в противном случае возвращается добавленный узел.</returns>
+      <param name="node">узел атрибута, предназначенный для помещения в коллекцию.Позже узел будет доступен по своему имени.Если узел с таким именем уже присутствует в коллекции, он замещается новым; в противном случае узел добавляется в конец коллекции.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="node" /> был создан из <see cref="T:System.Xml.XmlDocument" />, отличающегося от того, который создал данную коллекцию.Этот объект XmlAttributeCollection доступен только для чтения. </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="node" /> представляет собой <see cref="T:System.Xml.XmlAttribute" />, который уже является атрибутом другого объекта <see cref="T:System.Xml.XmlElement" />.Для повторного использования атрибутов в других элементах необходимо клонировать объекты XmlAttribute, которые требуется повторно использовать.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>Описание этого члена см. в разделе <see cref="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)" />.</summary>
+      <param name="array">Массив, который является конечным массивом для объектов, копируемых из коллекции. </param>
+      <param name="index">Индекс массива, с которого начинается копирование. </param>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#Count">
+      <summary>Описание этого члена см. в разделе <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.Count" />.</summary>
+      <returns>Возвращает значение типа int, содержащее число атрибутов.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#IsSynchronized">
+      <summary>Описание этого члена см. в разделе <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.IsSynchronized" />.</summary>
+      <returns>Возвращает значение true, если коллекция синхронизирована.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#SyncRoot">
+      <summary>Описание этого члена см. в разделе <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.SyncRoot" />.</summary>
+      <returns>Возвращает объект <see cref="T:System.Object" />, который является корнем коллекции.</returns>
+    </member>
+    <member name="T:System.Xml.XmlCDataSection">
+      <summary>Представляет раздел CDATA.</summary>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlCDataSection" />.</summary>
+      <param name="data">Объект <see cref="T:System.String" />, содержащий знаковые данные.</param>
+      <param name="doc">Объект <see cref="T:System.Xml.XmlDocument" />.</param>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.CloneNode(System.Boolean)">
+      <summary>Создает дубликат этого узла.</summary>
+      <returns>Точная копия узла.</returns>
+      <param name="deep">trueдля рекурсивного создания точной копии поддерева указанного узла; false для создания точной копии самого узла.Поскольку узлы CDATA не имеют дочерних узлов, независимо от настройки параметра точная копия узла всегда будет включать содержимое данных.</param>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.LocalName">
+      <summary>Возвращает локальное имя узла.</summary>
+      <returns>узлы CDATA имеют локальное имя #cdata-section.</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.Name">
+      <summary>Возвращает полное имя узла.</summary>
+      <returns>узлы CDATA имеют локальное имя #cdata-section.</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.NodeType">
+      <summary>Получает тип текущего узла.</summary>
+      <returns>Тип узла.Для узлов CDATA значение равно XmlNodeType.CDATA.</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.ParentNode"></member>
+    <member name="P:System.Xml.XmlCDataSection.PreviousText">
+      <summary>Возвращает текстовый узел, которому предшествует этого узла.</summary>
+      <returns>Возвращает <see cref="T:System.Xml.XmlNode" />.</returns>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет дочерний узел этого узела в заданном классе <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.WriteTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет узел в заданном <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="T:System.Xml.XmlCharacterData">
+      <summary>Обеспечивает методы обработки текста, которые используются несколькими классами.</summary>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlCharacterData" />.</summary>
+      <param name="data">Строка, содержащая символьные данные, которые необходимо добавить в документ.</param>
+      <param name="doc">Объект <see cref="T:System.Xml.XmlDocument" />, который должен содержать символьные данные.</param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.AppendData(System.String)">
+      <summary>Добавляет заданную строку в конец знаковых данных узла.</summary>
+      <param name="strData">Строка, вставляемая в существующую строку. </param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Data">
+      <summary>Содержит данные узла.</summary>
+      <returns>Данные текущего узла.</returns>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.DeleteData(System.Int32,System.Int32)">
+      <summary>Удаляет диапазон знаков из узла.</summary>
+      <param name="offset">Позиция в строке, с которой начинается удаление. </param>
+      <param name="count">Число символов для удаления. </param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.InsertData(System.Int32,System.String)">
+      <summary>Вставляет заданную строку со смещением в указанное число знаков.</summary>
+      <param name="offset">Позиция в строке для вставки предлагаемых данных строки. </param>
+      <param name="strData">Данные строки, вставляемые в существующую строку. </param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Length">
+      <summary>Возвращает длину данных в знаках.</summary>
+      <returns>Длина строки в знаках в свойстве <see cref="P:System.Xml.XmlCharacterData.Data" />.Длина может быть равна нулю, то есть узлы CharacterData могут быть пустыми.</returns>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.ReplaceData(System.Int32,System.Int32,System.String)">
+      <summary>Замещает заданное количество знаков, начиная с указанного смещения в заданной строке.</summary>
+      <param name="offset">Позиция в строке, с которой начинается замещение. </param>
+      <param name="count">Число знаков для замещения. </param>
+      <param name="strData">Новые данные, заменяющие старые данные строки. </param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.Substring(System.Int32,System.Int32)">
+      <summary>Возвращает подстроку полной строки из заданного диапазона.</summary>
+      <returns>Подстрока, соответствующая указанному диапазону.</returns>
+      <param name="offset">Позиция в строке, с которой начинается извлечение.Нулевое смещение означает, что началом данных является начальная пиксель.</param>
+      <param name="count">Число извлекаемых знаков. </param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Value">
+      <summary>Возвращает или задает значение узела.</summary>
+      <returns>Значение узела.</returns>
+      <exception cref="T:System.ArgumentException">Узел доступен только для чтения. </exception>
+    </member>
+    <member name="T:System.Xml.XmlComment">
+      <summary>Представляет содержимое XML-комментария.</summary>
+    </member>
+    <member name="M:System.Xml.XmlComment.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlComment" />.</summary>
+      <param name="comment">Содержимое элемента комментария.</param>
+      <param name="doc">Родительский XML-документ.</param>
+    </member>
+    <member name="M:System.Xml.XmlComment.CloneNode(System.Boolean)">
+      <summary>Создает дубликат этого узела.</summary>
+      <returns>Точная копия узела.</returns>
+      <param name="deep">Значение true для рекурсивного создания точной копии поддерева указанного узела; false только для создания точной копии самого узела.Поскольку узлы комментариев не имеют дочерних узлов, точная копия узла всегда включает текстовое содержимое независимо от значения параметра.</param>
+    </member>
+    <member name="P:System.Xml.XmlComment.LocalName">
+      <summary>Возвращает локальное имя узела.</summary>
+      <returns>Для узлов комментариев значение — #comment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlComment.Name">
+      <summary>Возвращает проверенное имя узла.</summary>
+      <returns>Для узлов комментариев значение — #comment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlComment.NodeType">
+      <summary>Получает тип текущего узла.</summary>
+      <returns>Для узлов комментариев значение — XmlNodeType.Comment.</returns>
+    </member>
+    <member name="M:System.Xml.XmlComment.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет все дочерние узлы в заданном классе <see cref="T:System.Xml.XmlWriter" />.Поскольку у узлов комментариев отсутствуют дочерние узлы, этот метод не работает.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="M:System.Xml.XmlComment.WriteTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет узел в заданном <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="T:System.Xml.XmlDeclaration">
+      <summary>Представляет узел объявления XML &lt;?xml version='1.0'...?&gt;.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlDeclaration" />.</summary>
+      <param name="version">Версия XML, см. свойство <see cref="P:System.Xml.XmlDeclaration.Version" />.</param>
+      <param name="encoding">Схема кодирования, см. свойство <see cref="P:System.Xml.XmlDeclaration.Encoding" />.</param>
+      <param name="standalone">Указывает наличие зависимости XML-документа от внешнего DTD; см. свойство <see cref="P:System.Xml.XmlDeclaration.Standalone" />.</param>
+      <param name="doc">Родительский XML-документ.</param>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.CloneNode(System.Boolean)">
+      <summary>Создает дубликат этого узела.</summary>
+      <returns>Точная копия узела.</returns>
+      <param name="deep">Значение true для рекурсивного создания точной копии поддерева указанного узела; false только для создания точной копии самого узела.Поскольку узлы XmlDeclaration не имеют дочерних узлов, точная копия узла всегда включает значение данных независимо от значения параметра.</param>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Encoding">
+      <summary>Получает или задает уровень кодировки XML-документа.</summary>
+      <returns>Допустимое имя кодировки знаков.Ниже см. чаще всего поддерживаемые имена кодировок знаков для XML.Категория Имена кодировок Юникод UTF-8, UTF-16 ISO 10646 ISO-10646-UCS-2, ISO-10646-UCS-4 ISO 8859 ISO-8859-n (где "n" — цифра от 1 до 9) JIS X-0208-1997 ISO-2022-JP, Shift_JIS, EUC-JP Это необязательный параметр.Если значение не задано, это свойство возвращает String.Empty.Если атрибут кодировки не включен, предполагается использование кодировки UTF-8 при записи или сохранении документа.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.InnerText">
+      <summary>Получает или задает сцепленные значения для XmlDeclaration.</summary>
+      <returns>Сцепленные значения XmlDeclaration (то есть любое значение между &lt;?xml и ?&gt;).</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.LocalName">
+      <summary>Возвращает локальное имя узела.</summary>
+      <returns>Для узлов XmlDeclaration локальное имя — xml.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Name">
+      <summary>Возвращает проверенное имя узла.</summary>
+      <returns>Для узлов XmlDeclaration имя — xml.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.NodeType">
+      <summary>Получает тип текущего узла.</summary>
+      <returns>Для узлов XmlDeclaration это значение — XmlNodeType.XmlDeclaration.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Standalone">
+      <summary>Получает или задает значение отдельного атрибута.</summary>
+      <returns>Действительными значениями являются значения yes, если все объявления сущности, требующиеся для XML-документа, содержатся в документе, или значения no, если требуется внешнее DTD.Если отдельный атрибут отсутствует в объявлении XML, это свойство возвращает String.Empty.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Value">
+      <summary>Получает или задает значение XmlDeclaration.</summary>
+      <returns>Содержимое узла XmlDeclaration (то есть любое значение между &lt;?xml и ?&gt;).</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Version">
+      <summary>Получает XML-версию документа.</summary>
+      <returns>Это значение всегда равно 1.0.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет дочерний узел этого узела в заданном классе <see cref="T:System.Xml.XmlWriter" />.Поскольку у узлов XmlDeclaration отсутствуют дочерние узлы, этот метод не работает.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.WriteTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет узел в заданном <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="T:System.Xml.XmlDocument">
+      <summary>Представляет XML-документ.Дополнительные сведения см. в разделе Remarks.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlDocument" />.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor(System.Xml.XmlImplementation)">
+      <summary>Инициализирует новый экземпляр класса XmlDocument указанным значением <see cref="T:System.Xml.XmlImplementation" />.</summary>
+      <param name="imp">Используемый XmlImplementation. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor(System.Xml.XmlNameTable)">
+      <summary>Инициализирует новый экземпляр класса XmlDocument указанным значением <see cref="T:System.Xml.XmlNameTable" />.</summary>
+      <param name="nt">Используемый XmlNameTable. </param>
+    </member>
+    <member name="P:System.Xml.XmlDocument.BaseURI">
+      <summary>Возвращает базовый URI текущего узла.</summary>
+      <returns>Расположение, из которого загружен узел.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CloneNode(System.Boolean)">
+      <summary>Создает дубликат этого узла.</summary>
+      <returns>Клонированный узел XmlDocument.</returns>
+      <param name="deep">Значение true для рекурсивного клонирования поддерева указанного узла; значение false для клонирования только самого узла. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String)">
+      <summary>Создает объект <see cref="T:System.Xml.XmlAttribute" /> с указанным <see cref="P:System.Xml.XmlDocument.Name" />.</summary>
+      <returns>Новый объект XmlAttribute.</returns>
+      <param name="name">Полное имя атрибута.Если имя содержит двоеточие, свойство <see cref="P:System.Xml.XmlNode.Prefix" /> отражает часть имени, предшествующую ему, а свойство <see cref="P:System.Xml.XmlDocument.LocalName" /> — ту часть, которая следует за первым двоеточием.Свойство <see cref="P:System.Xml.XmlNode.NamespaceURI" /> остается пустым, если префикс не является распознаваемым встроенным префиксом, например xmlns.В этом случае NamespaceURI имеет значение http://www.w3.org/2000/xmlns/.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String,System.String)">
+      <summary>Создает <see cref="T:System.Xml.XmlAttribute" /> с помощью указанного полного имени и <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Новый объект XmlAttribute.</returns>
+      <param name="qualifiedName">Полное имя атрибута.Если имя содержит двоеточие, свойство <see cref="P:System.Xml.XmlNode.Prefix" /> отражает часть имени, предшествующую ему, а свойство <see cref="P:System.Xml.XmlDocument.LocalName" /> — ту часть, которая следует за двоеточием.</param>
+      <param name="namespaceURI">URI пространства имен атрибута.Если полное имя содержит префикс xmlns, то этот параметр должен иметь значение http://www.w3.org/2000/xmlns/.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String,System.String,System.String)">
+      <summary>Создает объект <see cref="T:System.Xml.XmlAttribute" /> с помощью указанных значений <see cref="P:System.Xml.XmlNode.Prefix" />, <see cref="P:System.Xml.XmlDocument.LocalName" /> и <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Новый объект XmlAttribute.</returns>
+      <param name="prefix">Префикс атрибута (если имеется).String.Empty равно значению null.</param>
+      <param name="localName">Локальное имя атрибута. </param>
+      <param name="namespaceURI">URI пространства имен атрибута (если имеется).String.Empty равно значению null.Если значение параметра <paramref name="prefix" /> равно xmlns, этот параметр должен иметь значение http://www.w3.org/2000/xmlns/. В противном случае создается исключение.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateCDataSection(System.String)">
+      <summary>Создает объект <see cref="T:System.Xml.XmlCDataSection" />, содержащий указанные данные.</summary>
+      <returns>Новый объект XmlCDataSection.</returns>
+      <param name="data">Содержимое нового класса XmlCDataSection. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateComment(System.String)">
+      <summary>Создает объект <see cref="T:System.Xml.XmlComment" />, содержащий указанные данные.</summary>
+      <returns>Новый объект XmlComment.</returns>
+      <param name="data">Содержимое нового класса XmlComment. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateDocumentFragment">
+      <summary>Создает объект <see cref="T:System.Xml.XmlDocumentFragment" />.</summary>
+      <returns>Новый объект XmlDocumentFragment.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String)">
+      <summary>Создает элемент с указанным именем.</summary>
+      <returns>Новый объект XmlElement.</returns>
+      <param name="name">Полное имя элемента.Если имя содержит двоеточие, свойство <see cref="P:System.Xml.XmlNode.Prefix" /> отражает часть имени, предшествующую ему, а свойство <see cref="P:System.Xml.XmlDocument.LocalName" /> — ту часть, которая следует за двоеточием.Полное имя не может содержать префикс "xmlns".</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String,System.String)">
+      <summary>Создает <see cref="T:System.Xml.XmlElement" /> с помощью полного имени и <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Новый объект XmlElement.</returns>
+      <param name="qualifiedName">Полное имя элемента.Если имя содержит двоеточие, свойство <see cref="P:System.Xml.XmlNode.Prefix" /> отражает часть имени, предшествующую ему, а свойство <see cref="P:System.Xml.XmlDocument.LocalName" /> — ту часть, которая следует за двоеточием.Полное имя не может содержать префикс "xmlns".</param>
+      <param name="namespaceURI">Универсальный код ресурса (URI) пространства имен элемента. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String,System.String,System.String)">
+      <summary>Создает элемент с помощью указанных <see cref="P:System.Xml.XmlNode.Prefix" />, <see cref="P:System.Xml.XmlDocument.LocalName" /> и <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Новый объект <see cref="T:System.Xml.XmlElement" />.</returns>
+      <param name="prefix">Префикс нового элемента (если имеется).String.Empty равно значению null.</param>
+      <param name="localName">Локальное имя нового элемента. </param>
+      <param name="namespaceURI">URI пространства имен нового элемента (если имеется).String.Empty равно значению null.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.String,System.String,System.String)">
+      <summary>Создает <see cref="T:System.Xml.XmlNode" /> с помощью указанного типа узла, а также свойств <see cref="P:System.Xml.XmlDocument.Name" /> и <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Новый объект XmlNode.</returns>
+      <param name="nodeTypeString">Строковая версия типа <see cref="T:System.Xml.XmlNodeType" /> нового узла.Этот параметр должен принимать одно из значений, перечисленных в следующей таблице.</param>
+      <param name="name">Полное имя нового узла.Если имя содержит двоеточие, оно разбивается на компоненты <see cref="P:System.Xml.XmlNode.Prefix" /> и <see cref="P:System.Xml.XmlDocument.LocalName" />.</param>
+      <param name="namespaceURI">URI пространства имен нового узла. </param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name; or <paramref name="nodeTypeString" /> is not one of the strings listed below. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.Xml.XmlNodeType,System.String,System.String)">
+      <summary>Создает объект <see cref="T:System.Xml.XmlNode" /> с помощью указанных значений <see cref="T:System.Xml.XmlNodeType" />, <see cref="P:System.Xml.XmlDocument.Name" /> и <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Новый объект XmlNode.</returns>
+      <param name="type">Тип XmlNodeType нового узла. </param>
+      <param name="name">Полное имя нового узла.Если имя содержит двоеточие, оно разбивается на компоненты <see cref="P:System.Xml.XmlNode.Prefix" /> и <see cref="P:System.Xml.XmlDocument.LocalName" />.</param>
+      <param name="namespaceURI">URI пространства имен нового узла. </param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.Xml.XmlNodeType,System.String,System.String,System.String)">
+      <summary>Создает объект <see cref="T:System.Xml.XmlNode" /> с помощью указанных типов <see cref="T:System.Xml.XmlNodeType" />, <see cref="P:System.Xml.XmlNode.Prefix" />, <see cref="P:System.Xml.XmlDocument.Name" /> и <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Новый объект XmlNode.</returns>
+      <param name="type">Тип XmlNodeType нового узла. </param>
+      <param name="prefix">Префикс нового узла. </param>
+      <param name="name">Локальное имя нового узла. </param>
+      <param name="namespaceURI">URI пространства имен нового узла. </param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateProcessingInstruction(System.String,System.String)">
+      <summary>Создает <see cref="T:System.Xml.XmlProcessingInstruction" /> с помощью указанного имени и данных.</summary>
+      <returns>Новый объект XmlProcessingInstruction.</returns>
+      <param name="target">Имя инструкции по обработке. </param>
+      <param name="data">Данные для инструкции обработки. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateSignificantWhitespace(System.String)">
+      <summary>Создает узел <see cref="T:System.Xml.XmlSignificantWhitespace" />.</summary>
+      <returns>Новый узел XmlSignificantWhitespace.</returns>
+      <param name="text">Строка должна содержать только следующие символы: &amp;#20; &amp;#10; &amp;#13; и &amp;#9; </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateTextNode(System.String)">
+      <summary>Создает объект <see cref="T:System.Xml.XmlText" /> с указанным текстом.</summary>
+      <returns>Новый узел XmlText.</returns>
+      <param name="text">Текст для узла Text. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateWhitespace(System.String)">
+      <summary>Создает узел <see cref="T:System.Xml.XmlWhitespace" />.</summary>
+      <returns>Новый узел XmlWhitespace.</returns>
+      <param name="text">Строка должна содержать только следующие символы: &amp;#20; &amp;#10; &amp;#13; и &amp;#9; </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateXmlDeclaration(System.String,System.String,System.String)">
+      <summary>Создает узел <see cref="T:System.Xml.XmlDeclaration" /> с указанными значениями.</summary>
+      <returns>Новый узел XmlDeclaration.</returns>
+      <param name="version">Номер версии должен быть равен 1.0. </param>
+      <param name="encoding">Значение атрибута кодировки.Эта кодировка используется при сохранении <see cref="T:System.Xml.XmlDocument" /> в файле или потоке, поэтому она должна быть задана как строка, поддерживаемая классом <see cref="T:System.Text.Encoding" />. В противном случае в работе <see cref="M:System.Xml.XmlDocument.Save(System.String)" /> возникает сбой.Если она имеет значение null или String.Empty, метод Save не записывает атрибут кодировки в объявление XML и используется кодировка UTF-8, заданная по умолчанию.Примечание. Если XmlDocument сохранен в <see cref="T:System.IO.TextWriter" /> или <see cref="T:System.Xml.XmlTextWriter" />, это значение кодировки не учитывается.Вместо нее используется кодировка TextWriter или XmlTextWriter.Таким образом обеспечивается возможность чтения записанного XML в правильной кодировке.</param>
+      <param name="standalone">Значение должно быть равно "yes" или "no".Если значение равно null или String.Empty, метод Save не записывает в объявление XML отдельный атрибут.</param>
+      <exception cref="T:System.ArgumentException">The values of <paramref name="version" /> or <paramref name="standalone" /> are something other than the ones specified above. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.DocumentElement">
+      <summary>Возвращает корень <see cref="T:System.Xml.XmlElement" /> для документа.</summary>
+      <returns>Объект XmlElement, представляющий корень дерева XML-документов.Если корень не существует, возвращается значение null.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.GetElementsByTagName(System.String)">
+      <summary>Возвращает значение <see cref="T:System.Xml.XmlNodeList" />, содержащее список всех элементов-потомков, соответствующих указанному имени <see cref="P:System.Xml.XmlDocument.Name" />.</summary>
+      <returns>Класс <see cref="T:System.Xml.XmlNodeList" />, содержащий список всех соответствующих узлов.Если ни один из узлов не соответствует <paramref name="name" />, возвращаемая коллекция будет пустой.</returns>
+      <param name="name">Сопоставляемое полное имя.Оно противопоставляется свойству Name соответствующего узла.Специальное значение "*" соответствует всем тегам.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.GetElementsByTagName(System.String,System.String)">
+      <summary>Возвращает <see cref="T:System.Xml.XmlNodeList" />, содержащий список всех элементов-потомков, соответствующих указанным значениям <see cref="P:System.Xml.XmlDocument.LocalName" /> и <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Класс <see cref="T:System.Xml.XmlNodeList" />, содержащий список всех соответствующих узлов.Если ни один из узлов не соответствует указанным параметрам <paramref name="localName" /> и <paramref name="namespaceURI" />, возвращаемая коллекция будет пустой.</returns>
+      <param name="localName">Сопоставляемый параметр LocalName.Специальное значение "*" соответствует всем тегам.</param>
+      <param name="namespaceURI">Сопоставляемый параметр NamespaceURI. </param>
+    </member>
+    <member name="P:System.Xml.XmlDocument.Implementation">
+      <summary>Возвращает объект <see cref="T:System.Xml.XmlImplementation" /> для текущего документа.</summary>
+      <returns>Объект XmlImplementation для текущего документа.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.ImportNode(System.Xml.XmlNode,System.Boolean)">
+      <summary>Импортирует в текущий документ узел из другого документа.</summary>
+      <returns>Импортированный <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="node">Импортируемый узел. </param>
+      <param name="deep">Значение true — выполняется полное точное клонирование; в противном случае — false. </param>
+      <exception cref="T:System.InvalidOperationException">Calling this method on a node type which cannot be imported. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.InnerText">
+      <summary>Во всех случаях вызывает исключение <see cref="T:System.InvalidOperationException" />.</summary>
+      <returns>Значения узла и всех его дочерних узлов.</returns>
+      <exception cref="T:System.InvalidOperationException">In all cases.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.InnerXml">
+      <summary>Возвращает или задает разметку, отражающую дочерние узлы текущего узла.</summary>
+      <returns>Разметка дочерних узлов текущего узла.</returns>
+      <exception cref="T:System.Xml.XmlException">The XML specified when setting this property is not well-formed. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.IsReadOnly">
+      <summary>Возвращает значение, определяющее, доступен ли текущий узел только для чтения.</summary>
+      <returns>Значение true, если текущий узел доступен только для чтения; в противном случае — значение false.Узлы XmlDocument всегда возвращают значение false.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.IO.Stream)">
+      <summary>Загружает XML-документ из указанного потока.</summary>
+      <param name="inStream">Поток, содержащий загружаемый документ XML. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, a <see cref="T:System.IO.FileNotFoundException" /> is raised.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.IO.TextReader)">
+      <summary>Загружает XML-документ из указанного <see cref="T:System.IO.TextReader" />.</summary>
+      <param name="txtReader">TextReader, используемый для передачи данных XML в документ. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.Xml.XmlReader)">
+      <summary>Загружает XML-документ из указанного <see cref="T:System.Xml.XmlReader" />.</summary>
+      <param name="reader">XmlReader, используемый для передачи данных XML в документ. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.LoadXml(System.String)">
+      <summary>Загружает XML-документ из указанной строки.</summary>
+      <param name="xml">Строка, содержащая загружаемый XML-документ. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.LocalName">
+      <summary>Возвращает локальное имя узла.</summary>
+      <returns>Для узлов XmlDocument локальное имя равно #document.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.Name">
+      <summary>Возвращает полное имя узла.</summary>
+      <returns>Для узлов XmlDocument имя равно #document.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.NameTable">
+      <summary>Возвращает класс <see cref="T:System.Xml.XmlNameTable" />, связанный с данной реализацией.</summary>
+      <returns>Класс XmlNameTable, позволяющий получить атомизированную версию строки в документе.</returns>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeChanged">
+      <summary>Возникает при изменении свойства <see cref="P:System.Xml.XmlNode.Value" /> узла, принадлежащего данному документу.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeChanging">
+      <summary>Возникает при намерении изменить свойство <see cref="P:System.Xml.XmlNode.Value" /> узла, принадлежащего данному документу.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeInserted">
+      <summary>Возникает после вставки узла, принадлежащего данному документу, в другой узел.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeInserting">
+      <summary>Возникает перед вставкой узла, принадлежащего данному документу, в другой узел.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeRemoved">
+      <summary>Возникает после удаления узла, принадлежащего данному документу, из родительского узла.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeRemoving">
+      <summary>Возникает перед удалением узла из документа.</summary>
+    </member>
+    <member name="P:System.Xml.XmlDocument.NodeType">
+      <summary>Возвращает тип текущего узла.</summary>
+      <returns>Тип узла.Для узлов XmlDocument это значение равно XmlNodeType.Document.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.OwnerDocument">
+      <summary>Возвращает <see cref="T:System.Xml.XmlDocument" />, к которому принадлежит текущий узел.</summary>
+      <returns>Для узлов XmlDocument (<see cref="P:System.Xml.XmlDocument.NodeType" /> имеет значение XmlNodeType.Document) это свойство всегда возвращает значение null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.ParentNode">
+      <summary>Возвращает родительский узел для данного узла (только узлов, у которых они могут быть).</summary>
+      <returns>Всегда возвращает значение null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.PreserveWhitespace">
+      <summary>Возвращает или задает значение, определяющее, будут ли сохранены знаки-разделители в содержимом элемента.</summary>
+      <returns>Значение true, если знак-разделитель будет сохранен; в противном случае — значение false.Значение по умолчанию — false.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.ReadNode(System.Xml.XmlReader)">
+      <summary>Создает объект <see cref="T:System.Xml.XmlNode" /> на основе данных из <see cref="T:System.Xml.XmlReader" />.Средство чтения должно быть позиционировано на узел или атрибут.</summary>
+      <returns>Новый XmlNode или значение null, если больше узлов не существует.</returns>
+      <param name="reader">Источник XML </param>
+      <exception cref="T:System.NullReferenceException">The reader is positioned on a node type that does not translate to a valid DOM node (for example, EndElement or EndEntity). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.IO.Stream)">
+      <summary>Сохраняет XML-документ в указанном потоке.</summary>
+      <param name="outStream">Поток, в который будет выполняться сохранение. </param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.IO.TextWriter)">
+      <summary>Сохраняет XML-документ в указанном <see cref="T:System.IO.TextWriter" />.</summary>
+      <param name="writer">Объект TextWriter, в котором необходимо выполнить сохранение. </param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.Xml.XmlWriter)">
+      <summary>Сохраняет XML-документ в указанном <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Объект XmlWriter, в котором необходимо выполнить сохранение. </param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет все дочерние узлы узла XmlDocument в заданном <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="xw">Объект XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.WriteTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет узел XmlDocument в заданном <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Объект XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="T:System.Xml.XmlDocumentFragment">
+      <summary>Представляет простой объект, полезный для операций вставки дерева.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.#ctor(System.Xml.XmlDocument)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlDocumentFragment" />.</summary>
+      <param name="ownerDocument">XML-документ, являющийся источником фрагмента.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.CloneNode(System.Boolean)">
+      <summary>Создает дубликат этого узела.</summary>
+      <returns>Точная копия узела.</returns>
+      <param name="deep">Значение true для рекурсивного создания точной копии поддерева указанного узела; false только для создания точной копии самого узела. </param>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.InnerXml">
+      <summary>Получает или задает разметку, представляющую дочерние узлы этого узла.</summary>
+      <returns>Разметка дочерних узлов этого узла.</returns>
+      <exception cref="T:System.Xml.XmlException">При задании этого свойства указан код XML с неправильным форматом. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.LocalName">
+      <summary>Возвращает локальное имя узела.</summary>
+      <returns>Для узлов XmlDocumentFragment локальное имя — #document-fragment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.Name">
+      <summary>Возвращает проверенное имя узла.</summary>
+      <returns>Для XmlDocumentFragment имя — #document-fragment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.NodeType">
+      <summary>Получает тип текущего узла.</summary>
+      <returns>Для узлов XmlDocumentFragment это значение равно XmlNodeType.DocumentFragment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.OwnerDocument">
+      <summary>Возвращает класс <see cref="T:System.Xml.XmlDocument" />, которому принадлежит данный узел.</summary>
+      <returns>XmlDocument, к которому принадлежит данный узел.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.ParentNode">
+      <summary>Возвращает родительский узел для данного узела (только для тех узов, которые могут их иметь).</summary>
+      <returns>Родительский узел этого узла.Для узлов XmlDocumentFragment это свойство всегда имеет значение null.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет все дочерние узлы в заданном классе <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.WriteTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет узел в заданном <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="T:System.Xml.XmlElement">
+      <summary>Представляет элемент.</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlElement" />.</summary>
+      <param name="prefix">Префикс пространства имен, см. свойство <see cref="P:System.Xml.XmlElement.Prefix" />.</param>
+      <param name="localName">Локальное имя, см. свойство <see cref="P:System.Xml.XmlElement.LocalName" />.</param>
+      <param name="namespaceURI">Универсальный код ресурса пространства имен, см. свойство <see cref="P:System.Xml.XmlElement.NamespaceURI" />.</param>
+      <param name="doc">Родительский XML-документ.</param>
+    </member>
+    <member name="P:System.Xml.XmlElement.Attributes">
+      <summary>Получает объект <see cref="T:System.Xml.XmlAttributeCollection" />, содержащий список атрибутов для этого узла.</summary>
+      <returns>Коллекция <see cref="T:System.Xml.XmlAttributeCollection" />, содержащая список атрибутов для этого узла.</returns>
+    </member>
+    <member name="M:System.Xml.XmlElement.CloneNode(System.Boolean)">
+      <summary>Создает дубликат этого узела.</summary>
+      <returns>Точная копия узела.</returns>
+      <param name="deep">Значение true для рекурсивного создания точной копии поддерева указанного узла; значение false только для создания точной копии самого узла (и его атрибутов, если узел является объектом XmlElement). </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttribute(System.String)">
+      <summary>Возвращает значение атрибута с указанным именем.</summary>
+      <returns>Значение указанного атрибута.Возвращается пустая строка, если соответствующий атрибут не найден или если атрибут не имеет заданного значения или значения по умолчанию.</returns>
+      <param name="name">Имя извлекаемого атрибута.Это полное имя.Оно противопоставляется свойству Name соответствующего узела.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttribute(System.String,System.String)">
+      <summary>Возвращает значение атрибута с заданным локальным именем и URI пространства имен.</summary>
+      <returns>Значение указанного атрибута.Возвращается пустая строка, если соответствующий атрибут не найден или если атрибут не имеет заданного значения или значения по умолчанию.</returns>
+      <param name="localName">Локальное имя получаемого атрибута. </param>
+      <param name="namespaceURI">URI пространства имен получаемого атрибута. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttributeNode(System.String)">
+      <summary>Возвращает XmlAttribute с заданным именем.</summary>
+      <returns>Значение XmlAttribute или null, если соответствующий атрибут не найден.</returns>
+      <param name="name">Имя извлекаемого атрибута.Это полное имя.Оно противопоставляется свойству Name соответствующего узела.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttributeNode(System.String,System.String)">
+      <summary>Возвращает объект <see cref="T:System.Xml.XmlAttribute" /> с заданным локальным именем и URI пространства имен.</summary>
+      <returns>Значение XmlAttribute или null, если соответствующий атрибут не найден.</returns>
+      <param name="localName">Локальное имя атрибута. </param>
+      <param name="namespaceURI">URI пространства имен атрибута. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetElementsByTagName(System.String)">
+      <summary>Возвращает <see cref="T:System.Xml.XmlNodeList" />, содержащий список всех элементов-потомков, соответствующих указанному свойству <see cref="P:System.Xml.XmlElement.Name" />.</summary>
+      <returns>Класс <see cref="T:System.Xml.XmlNodeList" />, содержащий список всех соответствующих узов.Список пуст, если отсутствуют узлы сопоставления.</returns>
+      <param name="name">Сопоставляемый тег name.Это полное имя.Оно противопоставляется свойству Name соответствующего узела.Звездочка "*" является специальным значением, соответствующим всем тегам.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetElementsByTagName(System.String,System.String)">
+      <summary>Возвращает <see cref="T:System.Xml.XmlNodeList" />, содержащий список всех элементов-потомков, соответствующих указанным свойствам <see cref="P:System.Xml.XmlElement.LocalName" /> и <see cref="P:System.Xml.XmlElement.NamespaceURI" />.</summary>
+      <returns>Класс <see cref="T:System.Xml.XmlNodeList" />, содержащий список всех соответствующих узов.Список пуст, если отсутствуют узлы сопоставления.</returns>
+      <param name="localName">Сопоставляемое локальное имя.Звездочка "*" является специальным значением, соответствующим всем тегам.</param>
+      <param name="namespaceURI">Сопоставляемый URI пространства имен. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.HasAttribute(System.String)">
+      <summary>Определяет наличие у текущего узла атрибута с заданным именем.</summary>
+      <returns>Значение true, если у текущего узла имеется заданный атрибут; в противном случае — значение false.</returns>
+      <param name="name">Имя искомого атрибута.Это полное имя.Оно противопоставляется свойству Name соответствующего узела.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.HasAttribute(System.String,System.String)">
+      <summary>Определяет наличие у текущего узла атрибута с заданным локальным именем и URI пространства имен.</summary>
+      <returns>Значение true, если у текущего узла имеется заданный атрибут; в противном случае — значение false.</returns>
+      <param name="localName">Локальное имя искомого атрибута. </param>
+      <param name="namespaceURI">URI пространства имен искомого атрибута. </param>
+    </member>
+    <member name="P:System.Xml.XmlElement.HasAttributes">
+      <summary>Получает значение boolean, указывающее наличие у текущего узла каких-либо атрибутов.</summary>
+      <returns>Значение true, если текущий узел содержит атрибуты; в противном случае — false.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.InnerText">
+      <summary>Получает или задает сцепленные значения узла и всех его дочерних узлов.</summary>
+      <returns>Последовательно соединенные значения узела и его дочерних узов.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.InnerXml">
+      <summary>Получает или задает разметку, представляющую только дочерние узлы этого узла.</summary>
+      <returns>Разметка дочерних узлов этого узла.</returns>
+      <exception cref="T:System.Xml.XmlException">При задании этого свойства указан код XML с неправильным форматом. </exception>
+    </member>
+    <member name="P:System.Xml.XmlElement.IsEmpty">
+      <summary>Получает или задает формат тега элемента.</summary>
+      <returns>Возвращает значение true, если элемент должен быть сериализован в тег с коротким форматом "&lt;item/&gt;"; в противном случае — значение false для тега с длинным форматом "&lt;item&gt;&lt;/item&gt;".Если значение true при задании этого свойства, дочерние элементы этого элемента удаляются и элемент сериализуется в тег с коротким форматом.Если задано значение false, значение свойства изменяется (независимо от наличия в элементе содержимого); если элемент пустой, он сериализуется в тег с длинным форматом.Это свойство является расширением Майкрософт для модели DOM.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.LocalName">
+      <summary>Получает локальное имя текущего узела.</summary>
+      <returns>Имя текущего узла с удаленным префиксом.Например, LocalName — это книга для элемента &lt;bk:book&gt;.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.Name">
+      <summary>Возвращает проверенное имя узла.</summary>
+      <returns>Проверенное имя узела.Для узлов XmlElement это имя тега элемента.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NamespaceURI">
+      <summary>Возвращает URI пространства имен данного узела.</summary>
+      <returns>URI пространства имен данного узла.Если URI пространства имен отсутствует, возвращается String.Empty.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NextSibling">
+      <summary>Получает объект <see cref="T:System.Xml.XmlNode" />, следующий сразу за этим элементом.</summary>
+      <returns>Объект XmlNode, следующий сразу за этим элементом.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NodeType">
+      <summary>Получает тип текущего узла.</summary>
+      <returns>Тип узла.Для узлов XmlElement это значение — XmlNodeType.Element.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.OwnerDocument">
+      <summary>Возвращает класс <see cref="T:System.Xml.XmlDocument" />, которому принадлежит данный узел.</summary>
+      <returns>Объект XmlDocument, которому принадлежит этот элемент.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.ParentNode"></member>
+    <member name="P:System.Xml.XmlElement.Prefix">
+      <summary>Возвращает или задает префикс пространства имен данного узла.</summary>
+      <returns>Префикс пространства имен данного узла.Если префикс отсутствует, данное свойство возвращает String.Empty.</returns>
+      <exception cref="T:System.ArgumentException">Этот узел доступен только для чтения. </exception>
+      <exception cref="T:System.Xml.XmlException">Заданный префикс содержит недопустимый символ.Указан префикс неправильного формата.Код URI пространства имен для данного узла равен значению null.Заданный префикс — "xml", и URI пространства имен этого узла отличается от пространства имен http://www.w3.org/XML/1998/namespace. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAll">
+      <summary>Удаляет все заданные атрибуты и дочерние узлы текущего узла.Атрибуты, используемые по умолчанию, не удаляются.</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAllAttributes">
+      <summary>Удаляет все заданные атрибуты из элемента.Атрибуты, используемые по умолчанию, не удаляются.</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttribute(System.String)">
+      <summary>Удаляет атрибут по имени.</summary>
+      <param name="name">Имя удаляемого атрибута. Это полное имя.Оно противопоставляется свойству Name соответствующего узела.</param>
+      <exception cref="T:System.ArgumentException">узел доступен только для чтения. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttribute(System.String,System.String)">
+      <summary>Удаляет атрибут с заданным локальным именем и URI пространства имен. (Если удаленный атрибут имеет значение по умолчанию, он немедленно заменяется).</summary>
+      <param name="localName">Локальное имя удаляемого атрибута. </param>
+      <param name="namespaceURI">URI пространства имен удаляемого атрибута. </param>
+      <exception cref="T:System.ArgumentException">узел доступен только для чтения. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeAt(System.Int32)">
+      <summary>Удаляет из элемента узел атрибутов с указанным индексом. (Если удаленный атрибут имеет значение по умолчанию, он немедленно заменяется).</summary>
+      <returns>Узел атрибутов удален, или значение null, если в указанном индексе узел отсутствует.</returns>
+      <param name="i">Индекс удаляемого узла.Первый узел имеет индекс 0.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeNode(System.String,System.String)">
+      <summary>Удаляет объект <see cref="T:System.Xml.XmlAttribute" />, заданный локальным именем и URI пространства имен. (Если удаленный атрибут имеет значение по умолчанию, он немедленно заменяется).</summary>
+      <returns>Удаленный объект XmlAttribute или значение null, если в элементе XmlElement отсутствует соответствующий узел атрибутов.</returns>
+      <param name="localName">Локальное имя атрибута. </param>
+      <param name="namespaceURI">URI пространства имен атрибута. </param>
+      <exception cref="T:System.ArgumentException">Этот узел доступен только для чтения. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeNode(System.Xml.XmlAttribute)">
+      <summary>Удаляет указанный объект <see cref="T:System.Xml.XmlAttribute" />.</summary>
+      <returns>Удаленный объект XmlAttribute или значение null, если <paramref name="oldAttr" /> не является узлом атрибутов XmlElement.</returns>
+      <param name="oldAttr">Удаляемый узел XmlAttribute.Если удаленный атрибут имеет значение по умолчанию, он немедленно заменяется.</param>
+      <exception cref="T:System.ArgumentException">Этот узел доступен только для чтения. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttribute(System.String,System.String)">
+      <summary>Задает значение атрибута с указанным именем.</summary>
+      <param name="name">Имя создаваемого или изменяемого атрибута.Это полное имя.Если имя содержит двоеточие, оно разбивается на префикс и локальное имя.</param>
+      <param name="value">Задаваемое значение атрибута. </param>
+      <exception cref="T:System.Xml.XmlException">Заданное имя содержит недопустимый символ. </exception>
+      <exception cref="T:System.ArgumentException">узел доступен только для чтения. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttribute(System.String,System.String,System.String)">
+      <summary>Задает значение атрибута с заданным локальным именем и URI пространства имен.</summary>
+      <returns>Значение атрибута.</returns>
+      <param name="localName">Локальное имя атрибута. </param>
+      <param name="namespaceURI">URI пространства имен атрибута. </param>
+      <param name="value">Задаваемое значение атрибута. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttributeNode(System.String,System.String)">
+      <summary>Добавляет заданный объект <see cref="T:System.Xml.XmlAttribute" />.</summary>
+      <returns>Добавляемый объект XmlAttribute.</returns>
+      <param name="localName">Локальное имя атрибута. </param>
+      <param name="namespaceURI">URI пространства имен атрибута. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttributeNode(System.Xml.XmlAttribute)">
+      <summary>Добавляет заданный объект <see cref="T:System.Xml.XmlAttribute" />.</summary>
+      <returns>Если атрибут заменяет существующий атрибут с таким же именем, возвращается старый узел XmlAttribute; в противном случае возвращается значение null.</returns>
+      <param name="newAttr">Узел XmlAttribute для добавления в коллекцию атрибутов этого элемента. </param>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="newAttr" /> был создан из другого документа, отличного от документа, из которого был создан этот узел.Или этот узел доступен только для чтения.</exception>
+      <exception cref="T:System.InvalidOperationException">Узел <paramref name="newAttr" /> уже является атрибутом другого объекта XmlElement.Необходимо явно создать точную копию узлов XmlAttribute для их повторного использования в других объектах XmlElement.</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет все дочерние узлы в заданном классе <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.WriteTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет текущий узел в заданный объект <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="T:System.Xml.XmlImplementation">
+      <summary>Определяет контекст набора объектов <see cref="T:System.Xml.XmlDocument" />.</summary>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlImplementation" />.</summary>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.#ctor(System.Xml.XmlNameTable)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlImplementation" /> указанной таблицей <see cref="T:System.Xml.XmlNameTable" />.</summary>
+      <param name="nt">Объект <see cref="T:System.Xml.XmlNameTable" />.</param>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.CreateDocument">
+      <summary>Создает новый объект <see cref="T:System.Xml.XmlDocument" />.</summary>
+      <returns>Новый объект XmlDocument.</returns>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.HasFeature(System.String,System.String)">
+      <summary>Проверяет, реализована ли в реализации модели DOM определенный компонент.</summary>
+      <returns>Значение true, если в указанной версии средство реализовано; в противном случае — false.В следующей таблице перечислены сочетания, которые приводят к возвращению методом HasFeature значения true.strFeature strVersion XML 1.0 XML 2.0 </returns>
+      <param name="strFeature">Имя пакета проверяемого средства.Это имя не учитывает регистр.</param>
+      <param name="strVersion">Это номер версии проверяемого имени пакета.Если версия не указана (null), поддержка любой версии компонента приводит к возвращению методом значения true.</param>
+    </member>
+    <member name="T:System.Xml.XmlLinkedNode">
+      <summary>Получает узел, непосредственно предшествующий данному узлу или следующий сразу же за ним.</summary>
+    </member>
+    <member name="P:System.Xml.XmlLinkedNode.NextSibling">
+      <summary>Возвращает узел, следующий сразу за данным узелом.</summary>
+      <returns>Узел <see cref="T:System.Xml.XmlNode" />, следующий сразу после этого узла, или значение null, если он не существует.</returns>
+    </member>
+    <member name="P:System.Xml.XmlLinkedNode.PreviousSibling">
+      <summary>Возвращает узел, непосредственно предшествующий данному узелу.</summary>
+      <returns>Предшествующий узел <see cref="T:System.Xml.XmlNode" /> или значение null, если он не существует.</returns>
+    </member>
+    <member name="T:System.Xml.XmlNamedNodeMap">
+      <summary>Представляет коллекцию узлов, доступ к которым можно получить по имени или по индексу.</summary>
+    </member>
+    <member name="P:System.Xml.XmlNamedNodeMap.Count">
+      <summary>Получает число узлов в объекте XmlNamedNodeMap.</summary>
+      <returns>Число узлов.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetEnumerator">
+      <summary>Обеспечивает поддержку итерации стиля "foreach" для коллекции узлов в объекте XmlNamedNodeMap.</summary>
+      <returns>Объект перечислителя.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String)">
+      <summary>Получает объект <see cref="T:System.Xml.XmlNode" />, указанный по имени.</summary>
+      <returns>Объект XmlNode с указанным именем или значение null, если соответствующий узел не найден.</returns>
+      <param name="name">Полное имя получаемого узла.Оно противопоставляется свойству <see cref="P:System.Xml.XmlNode.Name" /> соответствующего узела.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String,System.String)">
+      <summary>Получает узел с соответствующими свойствами <see cref="P:System.Xml.XmlNode.LocalName" /> и <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Объект <see cref="T:System.Xml.XmlNode" /> с соответствующим локальным именем и URI пространства имен или возвращается значение null, если соответствующий узел не найден.</returns>
+      <param name="localName">Локальное имя получаемого узла.</param>
+      <param name="namespaceURI">Универсальный код ресурса (URI) пространства имен получаемого узла.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.Item(System.Int32)">
+      <summary>Получает узел по указанному индексу в XmlNamedNodeMap.</summary>
+      <returns>Объект <see cref="T:System.Xml.XmlNode" /> с указанным индексом.Если значение <paramref name="index" /> меньше 0 либо больше или равно значению свойства <see cref="P:System.Xml.XmlNamedNodeMap.Count" />, возвращается значение null.</returns>
+      <param name="index">Позиция индекса узла, получаемого из XmlNamedNodeMap.Индекс начинается с нуля, поэтому первым узлом в индексе является 0, а последним — <see cref="P:System.Xml.XmlNamedNodeMap.Count" /> -1.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String)">
+      <summary>Удаляет узел из XmlNamedNodeMap.</summary>
+      <returns>Объект XmlNode удален из этого объекта XmlNamedNodeMap, или возвращается значение null, если соответствующий узел не найден.</returns>
+      <param name="name">Полное имя удаляемого узла.Имя сопоставляется со свойством <see cref="P:System.Xml.XmlNode.Name" /> соответствующего узла.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String,System.String)">
+      <summary>Удаляет узел с соответствующими объектами <see cref="P:System.Xml.XmlNode.LocalName" /> и <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Объект <see cref="T:System.Xml.XmlNode" /> удален, или возвращается значение null, если соответствующий узел не найден.</returns>
+      <param name="localName">Локальное имя удаляемого узла.</param>
+      <param name="namespaceURI">URI пространства имен удаляемого узла.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.SetNamedItem(System.Xml.XmlNode)">
+      <summary>Добавляет объект <see cref="T:System.Xml.XmlNode" /> с помощью свойства <see cref="P:System.Xml.XmlNode.Name" />.</summary>
+      <returns>Если узел <paramref name="node" /> заменяет существующий узел с таким же именем, возвращается старый узел; в противном случае возвращается значение null.</returns>
+      <param name="node">Объект XmlNode для хранения в XmlNamedNodeMap.Если узел с таким именем уже существует в сопоставлении, он заменяется новым.</param>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="node" /> был создан из другого объекта <see cref="T:System.Xml.XmlDocument" />, отличного от объекта, из которого был создан объект XmlNamedNodeMap; или объект XmlNamedNodeMap доступен только для чтения.</exception>
+    </member>
+    <member name="T:System.Xml.XmlNode">
+      <summary>Предоставляет отдельный узел в XML-документе. </summary>
+    </member>
+    <member name="M:System.Xml.XmlNode.AppendChild(System.Xml.XmlNode)">
+      <summary>Добавляет указанный узел в конец списка дочерних узлов данного узла.</summary>
+      <returns>Добавленный узел.</returns>
+      <param name="newChild">Добавляемый узел.Все содержимое узла, которое должно быть добавлено, перемещается в указанное расположение.</param>
+      <exception cref="T:System.InvalidOperationException">Данный узел относится к типу, который не допускает дочерних узлов типа <paramref name="newChild" />.Узел <paramref name="newChild" /> является предком данного узла. </exception>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="newChild" /> был создан из другого документа, отличного от документа, из которого был создан этот узел.Этот узел доступен только для чтения. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.Attributes">
+      <summary>Возвращает класс <see cref="T:System.Xml.XmlAttributeCollection" />, содержащий атрибуты данного узла.</summary>
+      <returns>Класс XmlAttributeCollection, содержащий атрибуты узла.Для узлов типа XmlNodeType.Element происходит возвращение атрибутов.В противном случае это свойство возвращает значение null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.BaseURI">
+      <summary>Возвращает базовый URI текущего узла.</summary>
+      <returns>Место, из которого был загружен узел, или String.Empty, если базовый URI узла отсутствует.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.ChildNodes">
+      <summary>Возвращает все дочерние узлы данного узла.</summary>
+      <returns>Объект, содержащий все дочерние узлы узла.Если дочерние узлы отсутствуют, это свойство возвращает пустой <see cref="T:System.Xml.XmlNodeList" />.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.CloneNode(System.Boolean)">
+      <summary>Когда переопределено в производном классе, создает дубликат узла.</summary>
+      <returns>Точная копия узла.</returns>
+      <param name="deep">trueдля рекурсивного создания точной копии поддерева указанного узла; false для создания точной копии самого узла. </param>
+      <exception cref="T:System.InvalidOperationException">Вызов этого метода для типа узла, для которого не может быть создана точная копия. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.FirstChild">
+      <summary>Возвращает первый дочерний узел данного узла.</summary>
+      <returns>Первый дочерний узел данного узла.Если такой узел отсутствует, возвращается значение null.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetEnumerator">
+      <summary>Вернуть перечислитель, выполняющий перебор дочерних узлов текущего узла.</summary>
+      <returns>Объект <see cref="T:System.Collections.IEnumerator" />, который можно использовать для итерации дочерних узлов в текущем узле.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetNamespaceOfPrefix(System.String)">
+      <summary>Ищет наиболее точное объявление xmlns для заданного префикса, принадлежащего ограниченной области действия текущего узла, и возвращает универсальный код ресурса (URI) пространства имен в объявлении.</summary>
+      <returns>URI пространства имен указанного префикса.</returns>
+      <param name="prefix">Префикс, универсальный код ресурса (URI) пространства имен которого нужно найти. </param>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetPrefixOfNamespace(System.String)">
+      <summary>Ищет наиболее точное объявление xmlns для универсального кода ресурса (URI) пространства имен, принадлежащего области действия текущего узла, и возвращает префикс, определенный в этом объявлении.</summary>
+      <returns>Префикс для указанного URI пространства имен.</returns>
+      <param name="namespaceURI">URI пространства имен, префикс которого нужно найти. </param>
+    </member>
+    <member name="P:System.Xml.XmlNode.HasChildNodes">
+      <summary>Возвращает значение, свидетельствующее о наличии дочерних узлов у текущего узла.</summary>
+      <returns>Значение true, если узел имеет дочерние узлы; в противном случае — значение false.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.InnerText">
+      <summary>Возвращает или задает связанные значения узла и всех его дочерних узлов.</summary>
+      <returns>Связанные значения узла и всех его дочерних узлов.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.InnerXml">
+      <summary>Возвращает или задает разметку, отражающую только дочерние узлы данного узла.</summary>
+      <returns>Разметка дочерних узлов данного узла.ПримечаниеInnerXml не возвращает атрибуты, используемые по умолчанию.</returns>
+      <exception cref="T:System.InvalidOperationException">Установка этого свойства на узле, который не может иметь дочерних узлов. </exception>
+      <exception cref="T:System.Xml.XmlException">При задании этого свойства указан код XML с неправильным форматом. </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Вставляет заданный узел сразу после указанного узла ссылки.</summary>
+      <returns>Вставляемый узел.</returns>
+      <param name="newChild">Вставляемый объект XmlNode. </param>
+      <param name="refChild">узелом ссылки является XmlNode.<paramref name="newNode" /> располагается после <paramref name="refNode" />.</param>
+      <exception cref="T:System.InvalidOperationException">Данный узел относится к типу, который не допускает дочерних узлов типа <paramref name="newChild" />.Узел <paramref name="newChild" /> является предком данного узла. </exception>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="newChild" /> был создан из другого документа, отличного от документа, из которого был создан этот узел.Узел <paramref name="refChild" /> не является дочерним для этого узла.Этот узел доступен только для чтения. </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Вставляет заданный узел сразу перед указанным узлом ссылки.</summary>
+      <returns>Вставляемый узел.</returns>
+      <param name="newChild">Вставляемый объект XmlNode. </param>
+      <param name="refChild">узелом ссылки является XmlNode.<paramref name="newChild" /> размещен перед данным узелом.</param>
+      <exception cref="T:System.InvalidOperationException">Текущий узел относится к типу, который не допускает дочерних узлов типа <paramref name="newChild" />.Узел <paramref name="newChild" /> является предком данного узла. </exception>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="newChild" /> был создан из другого документа, отличного от документа, из которого был создан этот узел.Узел <paramref name="refChild" /> не является дочерним для этого узла.Этот узел доступен только для чтения. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.IsReadOnly">
+      <summary>Возвращает значение, определяющее, доступен ли узел только для чтения.</summary>
+      <returns>Значение true, если узел доступен только для чтения; в противном случае — false.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Item(System.String)">
+      <summary>Возвращает первый дочерний элемент с помощью указанного свойства <see cref="P:System.Xml.XmlNode.Name" />.</summary>
+      <returns>Первый объект <see cref="T:System.Xml.XmlElement" />, соответствующий указанному имени.Если совпадения нет, он возвращает пустую ссылку (Nothing в Visual Basic).</returns>
+      <param name="name">Проверенное имя загружаемого элемента. </param>
+    </member>
+    <member name="P:System.Xml.XmlNode.Item(System.String,System.String)">
+      <summary>Возвращает первый дочерний элемент с помощью указанного свойства <see cref="P:System.Xml.XmlNode.LocalName" /> и <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Первый объект <see cref="T:System.Xml.XmlElement" /> с соответствующими параметрами <paramref name="localname" /> и <paramref name="ns" />..Если совпадения нет, он возвращает пустую ссылку (Nothing в Visual Basic).</returns>
+      <param name="localname">Локальное имя элемента. </param>
+      <param name="ns">Пространство имен URI элемента. </param>
+    </member>
+    <member name="P:System.Xml.XmlNode.LastChild">
+      <summary>Возвращает последний дочерний узел данного узла.</summary>
+      <returns>Последний дочерний узел данного узла.Если такой узел отсутствует, возвращается значение null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.LocalName">
+      <summary>При переопределении в производном классе возвращает локальное имя узла.</summary>
+      <returns>Имя узла с удаленным префиксом.Например, LocalName — это книга для элемента &lt;bk:book&gt;.Возвращаемое имя зависит от значения свойства <see cref="P:System.Xml.XmlNode.NodeType" /> узла. Тип Имя Атрибут Локальное имя атрибута. CDATA #cdata-section Комментарий #comment Document #document DocumentFragment #document-fragment DocumentType; Имя типа документа. Элемент Локальное имя элемента. Сущность Имя сущности. EntityReference Имя сущности, на которую существует ссылка. Notation Имя представления. ProcessingInstruction; Конечное приложение инструкции обработки. Text #text Whitespace #whitespace SignificantWhitespace #significant-whitespace XmlDeclaration #xml-declaration </returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Name">
+      <summary>При переопределении в производном классе возвращает полное имя узла.</summary>
+      <returns>Полное имя узла.Возвращаемое имя зависит от значения свойства <see cref="P:System.Xml.XmlNode.NodeType" /> узла.Тип Имя Атрибут Полное имя атрибута. CDATA #cdata-section Комментарий #comment Document #document DocumentFragment #document-fragment DocumentType; Имя типа документа. Элемент Полное имя элемента. Сущность Имя сущности. EntityReference Имя сущности, на которую существует ссылка. Notation Имя представления. ProcessingInstruction; Конечное приложение инструкции обработки. Text #text Whitespace #whitespace SignificantWhitespace #significant-whitespace XmlDeclaration #xml-declaration </returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NamespaceURI">
+      <summary>Возвращает URI пространства имен данного узла.</summary>
+      <returns>URI пространства имен данного узла.Если URI пространства имен отсутствует, возвращает String.Empty.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NextSibling">
+      <summary>Возвращает узел, следующий сразу за данным узлом.</summary>
+      <returns>Следующий XmlNode.Если следующий узел отсутствует, возвращается значение null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NodeType">
+      <summary>При переопределении в производном классе возвращает тип текущего узла.</summary>
+      <returns>Одно из значений <see cref="T:System.Xml.XmlNodeType" />.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.Normalize">
+      <summary>Помещает все узлы XmlText на максимальную глубину поддерева, расположенного под данным узлом XmlNode, в обычную форму, где узлы XmlText разделяются только разметкой (теги, примечания, комментарии, инструкции по обработке, разделы CDATA и ссылки на сущности). Смежные узлы XmlText отсутствуют.</summary>
+    </member>
+    <member name="P:System.Xml.XmlNode.OuterXml">
+      <summary>Возвращает разметку, содержащую данный узел и все его дочерние узлы.</summary>
+      <returns>Разметка, содержащая данный узел и все его дочерние узлы.ПримечаниеOuterXml не возвращает атрибуты, используемые по умолчанию.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.OwnerDocument">
+      <summary>Возвращает класс <see cref="T:System.Xml.XmlDocument" />, которому принадлежит данный узел.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlDocument" />, к которому принадлежит данный узел.Если узел является объектом <see cref="T:System.Xml.XmlDocument" /> (NodeType равен XmlNodeType.Document), это свойство возвращает значение null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.ParentNode">
+      <summary>Возвращает родительский узел для данного узла (только для тех узлов, которые могут иметь родительские узлы).</summary>
+      <returns>XmlNode, являющийся родительским узлом текущего узла.Если узел уже создан, но еще не добавлен в дерево или, если узел был из дерева удален, родительский узел равен null.Для всех других узлов возвращаемое значение зависит от свойства <see cref="P:System.Xml.XmlNode.NodeType" /> узла.В следующей таблице для свойства ParentNode описаны возможные возвращаемые значения.NodeType Возвращаемое значение параметра ParentNode Attribute, Document, DocumentFragment, Entity, Notation Возвращает значение null; эти узлы не имеют родительских узлов. CDATA Возвращает ссылку на сущность или элемент, содержащую раздел CDATA. Комментарий Возвращает элемент, ссылку на сущность, тип документа или документ, содержащий комментарий. DocumentType; Возвращает узел документа. Элемент Возвращает родительский узел элемента.Если элемент является корневым узлом дерева, родительский узел служит узлом документа.EntityReference Возвращает элемент, атрибут или ссылку на сущность, содержащую ссылку на сущность. ProcessingInstruction; Возвращает документ, элемент, тип документа или ссылку на сущность, содержащую инструкцию обработки. Text Возвращает родительский элемент, атрибут или ссылку на сущность, содержащую текстовый узел. </returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Prefix">
+      <summary>Возвращает или задает префикс пространства имен данного узла.</summary>
+      <returns>Префикс пространства имен данного узла.Например, Prefix — это книга для элемента &lt;bk:book&gt;.Если префикс отсутствует, данное свойство возвращает String.Empty.</returns>
+      <exception cref="T:System.ArgumentException">Этот узел доступен только для чтения. </exception>
+      <exception cref="T:System.Xml.XmlException">Заданный префикс содержит недопустимый символ.Указан префикс неправильного формата.Указан префикс "xml", а URI пространства имен данного узла отличается от "http://www.w3.org/XML/1998/namespace".Данный узел является атрибутом, указан префикс "xmlns", а URI пространства имен данного узла отличается от "http://www.w3.org/2000/xmlns".Данный узел является атрибутом, полное имя данного узла — "xmlns". </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.PrependChild(System.Xml.XmlNode)">
+      <summary>Добавляет указанный узел в начало списка дочерних узлов данного узла.</summary>
+      <returns>Добавленный узел.</returns>
+      <param name="newChild">Добавляемый узел.Все содержимое узла, которое должно быть добавлено, перемещается в указанное расположение.</param>
+      <exception cref="T:System.InvalidOperationException">Данный узел относится к типу, который не допускает дочерних узлов типа <paramref name="newChild" />.Узел <paramref name="newChild" /> является предком данного узла. </exception>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="newChild" /> был создан из другого документа, отличного от документа, из которого был создан этот узел.Этот узел доступен только для чтения. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.PreviousSibling">
+      <summary>Возвращает узел, непосредственно предшествующий данному узлу.</summary>
+      <returns>Предшествующий XmlNode.Если предшествующий узел отсутствует, возвращается значение null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.PreviousText">
+      <summary>Возвращает текстовый узел, которому предшествует этого узла.</summary>
+      <returns>Возвращает <see cref="T:System.Xml.XmlNode" />.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.RemoveAll">
+      <summary>Удаляет все дочерние узлы и (или) атрибуты текущего узла.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)">
+      <summary>Удаляет указанный дочерний узел.</summary>
+      <returns>Удаленный узел.</returns>
+      <param name="oldChild">Удаленный узел. </param>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="oldChild" /> не является дочерним для этого узла.Или этот узел доступен только для чтения.</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Заменяет дочерний узел <paramref name="oldChild" /> на узел <paramref name="newChild" />.</summary>
+      <returns>Замененный узел.</returns>
+      <param name="newChild">Новый узел для помещения в список дочерних элементов. </param>
+      <param name="oldChild">Замененный узел в списке. </param>
+      <exception cref="T:System.InvalidOperationException">Данный узел относится к типу, который не допускает дочерних узлов типа <paramref name="newChild" />.Узел <paramref name="newChild" /> является предком данного узла. </exception>
+      <exception cref="T:System.ArgumentException">Узел <paramref name="newChild" /> был создан из другого документа, отличного от документа, из которого был создан этот узел.Этот узел доступен только для чтения.Узел <paramref name="oldChild" /> не является дочерним для этого узла. </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.Supports(System.String,System.String)">
+      <summary>Проверяет, присутствует ли указанное средство в реализации DOM.</summary>
+      <returns>Значение true, если в указанной версии средство реализовано; в противном случае — false.В следующей таблице перечислены сочетания, возвращающие значение true.Функция Версия XML 1.0 XML 2.0 </returns>
+      <param name="feature">Имя пакета проверяемого средства.Это имя не учитывает регистр.</param>
+      <param name="version">Номер версии проверяемого средства.Если версия не указана (null), поддержка любой версии средства заставляет метод вернуть значение true.</param>
+    </member>
+    <member name="M:System.Xml.XmlNode.System#Collections#IEnumerable#GetEnumerator">
+      <summary>Описание этого члена см. в разделе <see cref="M:System.Xml.XmlNode.GetEnumerator" />.</summary>
+      <returns>Возвращает перечислитель для коллекции.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Value">
+      <summary>Возвращает или задает значение узла.</summary>
+      <returns>Возвращаемое значение зависит от значения свойства <see cref="P:System.Xml.XmlNode.NodeType" /> узла. Тип Значение Атрибут Значение атрибута. CDATASection. Содержимое раздела CDATA. Комментарий Содержимое комментария. Document null. DocumentFragment null. DocumentType; null. Элемент null.Для доступа к значению узла элемента можно использовать свойство <see cref="P:System.Xml.XmlElement.InnerText" /> или <see cref="P:System.Xml.XmlElement.InnerXml" />.Сущность null. EntityReference null. Notation null. ProcessingInstruction; Все содержимое, исключая назначение. Text Содержимое текстового узла. SignificantWhitespace Символы-разделители.Символы-разделители могут включать один или более символов пробела, возврата каретки, перевода строки или табуляции.Whitespace Символы-разделители.Символы-разделители могут включать один или более символов пробела, возврата каретки, перевода строки или табуляции.XmlDeclaration Содержимое объявления (между &lt;?xml и ?&gt;). </returns>
+      <exception cref="T:System.ArgumentException">Установка значения узла, доступного только для чтения. </exception>
+      <exception cref="T:System.InvalidOperationException">Установка значения узла, который не должен иметь значения (например, узла элемента). </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет все дочерние узлы данного узла в указанном <see cref="T:System.Xml.XmlWriter" /> при переопределении в производном классе.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="M:System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет текущий узел в указанном <see cref="T:System.Xml.XmlWriter" /> при переопределении в производном классе.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedAction">
+      <summary>Задает тип изменения узла.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Change">
+      <summary>Изменяется значение узла.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Insert">
+      <summary>Узел вставляется в дерево.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Remove">
+      <summary>Узел удаляется из дерева.</summary>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedEventArgs">
+      <summary>Предоставляет данные для событий <see cref="E:System.Xml.XmlDocument.NodeChanged" />, <see cref="E:System.Xml.XmlDocument.NodeChanging" />, <see cref="E:System.Xml.XmlDocument.NodeInserted" />, <see cref="E:System.Xml.XmlDocument.NodeInserting" />, <see cref="E:System.Xml.XmlDocument.NodeRemoved" /> и <see cref="E:System.Xml.XmlDocument.NodeRemoving" />.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeChangedEventArgs.#ctor(System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.String,System.Xml.XmlNodeChangedAction)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlNodeChangedEventArgs" />.</summary>
+      <param name="node">Объект <see cref="T:System.Xml.XmlNode" />, создавший событие.</param>
+      <param name="oldParent">Старый родительский узел <see cref="T:System.Xml.XmlNode" /> узла <see cref="T:System.Xml.XmlNode" />, создавшего событие.</param>
+      <param name="newParent">Новый родительский узел <see cref="T:System.Xml.XmlNode" /> узла <see cref="T:System.Xml.XmlNode" />, создавшего событие.</param>
+      <param name="oldValue">Старое значение узла <see cref="T:System.Xml.XmlNode" />, создавшего событие.</param>
+      <param name="newValue">Новое значение узла <see cref="T:System.Xml.XmlNode" />, создавшего событие.</param>
+      <param name="action">
+        <see cref="T:System.Xml.XmlNodeChangedAction" />.</param>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.Action">
+      <summary>Получает значение, указывающее тип происходящего события изменения узла.</summary>
+      <returns>Значение XmlNodeChangedAction, описывающее событие изменения узла.Значение XmlNodeChangedAction Описание Insert Узел был или будет вставлен. Удалить Узел был или будет удален. Изменение Узел был или будет изменен. ПримечаниеЗначение Action не различает, когда событие возникло (до или после).Можно создать отдельные обработчики событий для обработки обоих экземпляров.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.NewParent">
+      <summary>Получает значение <see cref="P:System.Xml.XmlNode.ParentNode" /> после завершения операции.</summary>
+      <returns>Значение ParentNode после завершения операции.Это свойство возвращает значение null, если узел удаляется.ПримечаниеДля узлов атрибутов это свойство возвращает <see cref="P:System.Xml.XmlAttribute.OwnerElement" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.NewValue">
+      <summary>Получает новое значение узла.</summary>
+      <returns>Новое значение узла.Это свойство возвращает значение null, если узел не является ни атрибутом, ни текстовым узлом или если узел удаляется.При вызове в событии <see cref="E:System.Xml.XmlDocument.NodeChanging" /> объект NewValue возвращает значение узла в случае успешного изменения.При вызове в событии <see cref="E:System.Xml.XmlDocument.NodeChanged" /> объект NewValue возвращает текущее значение узла.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.Node">
+      <summary>Получает добавляемый, удаляемый или изменяемый объект <see cref="T:System.Xml.XmlNode" />.</summary>
+      <returns>Добавляемый, удаляемый или изменяемый объект XmlNode; это свойство никогда не возвращает значение null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.OldParent">
+      <summary>Получает значение <see cref="P:System.Xml.XmlNode.ParentNode" /> до начала операции.</summary>
+      <returns>Значение ParentNode до начала операции.Это свойство возвращает значение null, если у узла отсутствует родительский узел.ПримечаниеДля узлов атрибутов это свойство возвращает <see cref="P:System.Xml.XmlAttribute.OwnerElement" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.OldValue">
+      <summary>Получает исходное значение узла.</summary>
+      <returns>Исходное значение узла.Это свойство возвращает значение null, если узел не является ни атрибутом, ни текстовым узлом или если узел вставляется.При вызове в событии <see cref="E:System.Xml.XmlDocument.NodeChanging" /> объект OldValue возвращает текущее значение узла, который будет заменен в случае успешного изменения.При вызове в событии <see cref="E:System.Xml.XmlDocument.NodeChanged" /> объект OldValue возвращает значение узла до изменения.</returns>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedEventHandler">
+      <summary>Представляет метод, обрабатывающий события <see cref="E:System.Xml.XmlDocument.NodeChanged" />, <see cref="E:System.Xml.XmlDocument.NodeChanging" />, <see cref="E:System.Xml.XmlDocument.NodeInserted" />, <see cref="E:System.Xml.XmlDocument.NodeInserting" />, <see cref="E:System.Xml.XmlDocument.NodeRemoved" /> и <see cref="E:System.Xml.XmlDocument.NodeRemoving" />.</summary>
+      <param name="sender">Источник события. </param>
+      <param name="e">Объект <see cref="T:System.Xml.XmlNodeChangedEventArgs" />, содержащий данные события. </param>
+    </member>
+    <member name="T:System.Xml.XmlNodeList">
+      <summary>Представляет упорядоченную коллекцию узлов.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlNodeList" />.</summary>
+    </member>
+    <member name="P:System.Xml.XmlNodeList.Count">
+      <summary>Получает число узлов в объекте XmlNodeList.</summary>
+      <returns>Число узлов в объекте XmlNodeList.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.GetEnumerator">
+      <summary>Получает перечислитель, выполняющий итерацию коллекции узлов.</summary>
+      <returns>Перечислитель, который используется для итерации коллекции узлов.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.Item(System.Int32)">
+      <summary>Извлекает узел по заданному индексу.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> с указанным индексом в коллекции.Если значение параметра <paramref name="index" /> больше или равно числу узлов в списке, возвращается значение null.</returns>
+      <param name="index">Отсчитываемый от нуля индекс в списке узлов.</param>
+    </member>
+    <member name="P:System.Xml.XmlNodeList.ItemOf(System.Int32)">
+      <summary>Получает узел по заданному индексу.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> с указанным индексом в коллекции.Если значение индекса больше или равно числу узлов в списке, возвращается значение null.</returns>
+      <param name="i">Отсчитываемый от нуля индекс в списке узлов.</param>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.PrivateDisposeNodeList">
+      <summary>Закрыто освобождает ресурсы в списке узлов.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.System#IDisposable#Dispose">
+      <summary>Освобождает все ресурсы, используемые классом <see cref="T:System.Xml.XmlNodeList" />.</summary>
+    </member>
+    <member name="T:System.Xml.XmlProcessingInstruction">
+      <summary>Представляет инструкцию по обработке, которая определяется в XML для хранения в тексте документа сведений, относящихся к обработчику.</summary>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.#ctor(System.String,System.String,System.Xml.XmlDocument)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlProcessingInstruction" />.</summary>
+      <param name="target">Целевой объект инструкции по обработке; см. описание свойства <see cref="P:System.Xml.XmlProcessingInstruction.Target" />.</param>
+      <param name="data">Содержимое инструкции; см. описание свойства <see cref="P:System.Xml.XmlProcessingInstruction.Data" />.</param>
+      <param name="doc">Родительский XML-документ.</param>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.CloneNode(System.Boolean)">
+      <summary>Создает дубликат этого узла.</summary>
+      <returns>Узел-дубликат.</returns>
+      <param name="deep">
+              Значение true для рекурсивного создания клона поддерева указанного узла; false только для создания клона самого узла. </param>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Data">
+      <summary>Возвращает или задает содержимое инструкции по обработке, исключая цель.</summary>
+      <returns>Содержимое инструкции по обработке, исключая цель.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.InnerText">
+      <summary>Возвращает или задает сцепленные значения узла и всех его дочерних узлов.</summary>
+      <returns>Последовательно соединенные значения узла и его дочерних узлов.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.LocalName">
+      <summary>Возвращает локальное имя узла.</summary>
+      <returns>Для узлов инструкций по обработке это свойство возвращает цель инструкции по обработке.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Name">
+      <summary>Возвращает полное имя узла.</summary>
+      <returns>Для узлов инструкций по обработке это свойство возвращает цель инструкции по обработке.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.NodeType">
+      <summary>Получает тип текущего узла.</summary>
+      <returns>Для узлов XmlProcessingInstruction это значение равно XmlNodeType.ProcessingInstruction.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Target">
+      <summary>Получает цель инструкции по обработке.</summary>
+      <returns>Цель инструкции по обработке.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Value">
+      <summary>Возвращает или задает значение узла.</summary>
+      <returns>Все содержимое инструкции по обработке, исключая цель.</returns>
+      <exception cref="T:System.ArgumentException">Node is read-only. </exception>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет все дочерние узлы в заданном классе <see cref="T:System.Xml.XmlWriter" />.У узлов ProcessingInstruction отсутствуют дочерние узлы, поэтому этот метод не выполняет никаких действий.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.WriteTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет узел в заданном <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="T:System.Xml.XmlSignificantWhitespace">
+      <summary>Представляет пробел между элементами разметки в смешанном узле содержимого или пробел в области xml:space= 'preserve'.Он также называется значащим пробелом.</summary>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlSignificantWhitespace" />.</summary>
+      <param name="strData">Пробелы узла.</param>
+      <param name="doc">Объект <see cref="T:System.Xml.XmlDocument" />.</param>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.CloneNode(System.Boolean)">
+      <summary>Создает дубликат этого узла.</summary>
+      <returns>Точная копия узла.</returns>
+      <param name="deep">trueдля рекурсивного создания точной копии поддерева указанного узла; false для создания точной копии самого узла.Для узлов значащих пробелов точная копия узла всегда включает значение данных независимо от значения параметра.</param>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.LocalName">
+      <summary>Возвращает локальное имя узла.</summary>
+      <returns>Для узлов XmlSignificantWhitespace это свойство возвращает значение #significant-whitespace.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.Name">
+      <summary>Возвращает полное имя узла.</summary>
+      <returns>Для узлов XmlSignificantWhitespace это свойство возвращает значение #significant-whitespace.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.NodeType">
+      <summary>Получает тип текущего узла.</summary>
+      <returns>Для узлов XmlSignificantWhitespace это значение — XmlNodeType.SignificantWhitespace.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.ParentNode">
+      <summary>Возвращает родительский узел текущего узла.</summary>
+      <returns>Родительский узел <see cref="T:System.Xml.XmlNode" /> текущего узла.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.PreviousText">
+      <summary>Возвращает текстовый узел, которому предшествует этого узла.</summary>
+      <returns>Возвращает <see cref="T:System.Xml.XmlNode" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.Value">
+      <summary>Возвращает или задает значение узла.</summary>
+      <returns>Пробелы, найденные в узле.</returns>
+      <exception cref="T:System.ArgumentException">Задание значения Value как недопустимые пробелы. </exception>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет все дочерние узлы в заданном классе <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.WriteTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет узел в заданном <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="T:System.Xml.XmlText">
+      <summary>Представляет текстовое содержимое элемента или атрибута.</summary>
+    </member>
+    <member name="M:System.Xml.XmlText.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlText" />.</summary>
+      <param name="strData">Содержимое узла см. в свойстве <see cref="P:System.Xml.XmlText.Value" />.</param>
+      <param name="doc">Родительский XML-документ.</param>
+    </member>
+    <member name="M:System.Xml.XmlText.CloneNode(System.Boolean)">
+      <summary>Создает дубликат этого узла.</summary>
+      <returns>Точная копия узла.</returns>
+      <param name="deep">trueдля рекурсивного создания точной копии поддерева указанного узла; false для создания точной копии самого узла. </param>
+    </member>
+    <member name="P:System.Xml.XmlText.LocalName">
+      <summary>Возвращает локальное имя узла.</summary>
+      <returns>Для текстовых узлов это свойство возвращает #text.</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.Name">
+      <summary>Возвращает полное имя узла.</summary>
+      <returns>Для текстовых узлов это свойство возвращает #text.</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.NodeType">
+      <summary>Получает тип текущего узла.</summary>
+      <returns>Для текстовых узлов это значение — XmlNodeType.Text.</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.ParentNode"></member>
+    <member name="P:System.Xml.XmlText.PreviousText">
+      <summary>Возвращает текстовый узел, которому предшествует этого узла.</summary>
+      <returns>Возвращает <see cref="T:System.Xml.XmlNode" />.</returns>
+    </member>
+    <member name="M:System.Xml.XmlText.SplitText(System.Int32)">
+      <summary>Разделяет узел на два узла с указанным смещением, сохраняя их в дереве как узлы одного уровня.</summary>
+      <returns>Новый узел.</returns>
+      <param name="offset">Смещение для разделения узла. </param>
+    </member>
+    <member name="P:System.Xml.XmlText.Value">
+      <summary>Возвращает или задает значение узла.</summary>
+      <returns>Содержимое текстового узла.</returns>
+    </member>
+    <member name="M:System.Xml.XmlText.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет все дочерние узлы в заданном классе <see cref="T:System.Xml.XmlWriter" />.У узлов XmlText отсутствуют дочерние узлы, поэтому этот метод не работает.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="M:System.Xml.XmlText.WriteTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет узел в заданном <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">XmlWriter, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="T:System.Xml.XmlWhitespace">
+      <summary>Представляет пробел в содержимом элемента.</summary>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Xml.XmlWhitespace" />.</summary>
+      <param name="strData">Пробелы узла.</param>
+      <param name="doc">Объект <see cref="T:System.Xml.XmlDocument" />.</param>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.CloneNode(System.Boolean)">
+      <summary>Создает дубликат этого узла.</summary>
+      <returns>Точная копия узла.</returns>
+      <param name="deep">trueдля рекурсивного создания точной копии поддерева указанного узла; false для создания точной копии самого узла.Для узлов пробелов точная копия узла всегда включает значение данных независимо от значения параметра.</param>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.LocalName">
+      <summary>Возвращает локальное имя узла.</summary>
+      <returns>Для узлов XmlWhitespace это свойство возвращает значение #whitespace.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.Name">
+      <summary>Возвращает полное имя узла.</summary>
+      <returns>Для узлов XmlWhitespace это свойство возвращает значение #whitespace.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.NodeType">
+      <summary>Возвращает тип узла.</summary>
+      <returns>Для узлов XmlWhitespace значение — <see cref="F:System.Xml.XmlNodeType.Whitespace" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.ParentNode">
+      <summary>Возвращает родительский узел текущего узла.</summary>
+      <returns>Родительский узел <see cref="T:System.Xml.XmlNode" /> текущего узла.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.PreviousText">
+      <summary>Возвращает текстовый узел, которому предшествует этого узла.</summary>
+      <returns>Возвращает <see cref="T:System.Xml.XmlNode" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.Value">
+      <summary>Возвращает или задает значение узла.</summary>
+      <returns>Пробелы, найденные в узле.</returns>
+      <exception cref="T:System.ArgumentException">Задание значения <see cref="P:System.Xml.XmlWhitespace.Value" /> как недопустимые пробелы. </exception>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет все дочерние узлы в заданном классе <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">
+        <see cref="T:System.Xml.XmlWriter" />, в котором необходимо выполнить сохранение. </param>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.WriteTo(System.Xml.XmlWriter)">
+      <summary>Сохраняет узел в заданном <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">
+        <see cref="T:System.Xml.XmlWriter" />, в котором необходимо выполнить сохранение.</param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,1441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Xml.XmlDocument</name>
+  </assembly>
+  <members>
+    <member name="T:System.Xml.XmlAttribute">
+      <summary>Rappresenta un attributo.I valori validi e predefiniti per l'attributo sono definiti in una DTD (Document Type Definition) o in uno schema.</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlAttribute" />.</summary>
+      <param name="prefix">Prefisso dello spazio dei nomi.</param>
+      <param name="localName">Nome locale dell'attributo.</param>
+      <param name="namespaceURI">Uniform Resource Identifier (URI) dello spazio dei nomi.</param>
+      <param name="doc">Documento XML padre.</param>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.AppendChild(System.Xml.XmlNode)">
+      <summary>Aggiunge il nodo specificato alla fine dell'elenco dei nodi figlio del nodo corrente.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlNode" /> aggiunto.</returns>
+      <param name="newChild">Oggetto <see cref="T:System.Xml.XmlNode" /> da aggiungere.</param>
+      <exception cref="T:System.InvalidOperationException">Per questo tipo di nodi non sono consentiti elementi figlio di tipo <paramref name="newChild" />.<paramref name="newChild" /> è un predecessore di questo nodo.</exception>
+      <exception cref="T:System.ArgumentException">Il nodo <paramref name="newChild" /> è stato creato da un documento diverso da quello che ha creato il nodo corrente.Il nodo è di sola lettura.</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.BaseURI">
+      <summary>Ottiene l'URI (Uniform Resource Identifier) di base del nodo.</summary>
+      <returns>Percorso da cui è stato caricato il nodo o String.Empty se il nodo non dispone di un URI di base.I nodi dell'attributo hanno lo stesso URI di base dell'elemento proprietario.Se il nodo di un attributo non dispone di un elemento proprietario, BaseURI restituirà String.Empty.</returns>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.CloneNode(System.Boolean)">
+      <summary>Crea un duplicato del nodo.</summary>
+      <returns>Nodo duplicato.</returns>
+      <param name="deep">true per duplicare in modo ricorsivo il sottoalbero del nodo specificato, false per duplicare solo il nodo </param>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.InnerText">
+      <summary>Imposta i valori concatenati del nodo e di tutti i relativi elementi figlio.</summary>
+      <returns>Valori concatenati del nodo e di tutti i relativi elementi figlio.In caso di nodi attributo, questa proprietà ha la stessa funzionalità della proprietà <see cref="P:System.Xml.XmlAttribute.Value" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.InnerXml">
+      <summary>Imposta il valore dell'attributo.</summary>
+      <returns>Valore dell'attributo.</returns>
+      <exception cref="T:System.Xml.XmlException">Il formato del file XML specificato al momento dell'impostazione della proprietà non è corretto.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Inserisce il nodo specificato immediatamente dopo il nodo dei riferimenti indicato.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlNode" /> inserito.</returns>
+      <param name="newChild">Oggetto <see cref="T:System.Xml.XmlNode" /> da inserire.</param>
+      <param name="refChild">Oggetto <see cref="T:System.Xml.XmlNode" /> che rappresenta il nodo dei riferimenti.Il nodo specificato in <paramref name="newChild" /> è posizionato dopo il nodo <paramref name="refChild" />.</param>
+      <exception cref="T:System.InvalidOperationException">Per questo tipo di nodi non sono consentiti elementi figlio di tipo <paramref name="newChild" />.<paramref name="newChild" /> è un predecessore di questo nodo.</exception>
+      <exception cref="T:System.ArgumentException">Il nodo <paramref name="newChild" /> è stato creato da un documento diverso da quello che ha creato il nodo corrente.<paramref name="refChild" /> non è un nodo figlio del nodo correnteIl nodo è di sola lettura.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Inserisce il nodo specificato immediatamente prima del nodo dei riferimenti indicato.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlNode" /> inserito.</returns>
+      <param name="newChild">Oggetto <see cref="T:System.Xml.XmlNode" /> da inserire.</param>
+      <param name="refChild">Oggetto <see cref="T:System.Xml.XmlNode" /> che rappresenta il nodo dei riferimenti.Il nodo specificato in <paramref name="newChild" /> viene posizionato prima del nodo corrente.</param>
+      <exception cref="T:System.InvalidOperationException">Per questo tipo di nodo non sono consentiti nodi figlio di tipo <paramref name="newChild" />.<paramref name="newChild" /> è un predecessore di questo nodo.</exception>
+      <exception cref="T:System.ArgumentException">Il nodo <paramref name="newChild" /> è stato creato da un documento diverso da quello che ha creato il nodo corrente.<paramref name="refChild" /> non è un nodo figlio del nodo correnteIl nodo è di sola lettura.</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.LocalName">
+      <summary>Ottiene il nome locale del nodo.</summary>
+      <returns>Nome del nodo attributo senza prefisso.Nell'esempio &lt;book bk:genre= "'novel"'&gt; descritto di seguito, il valore di LocalName per l'attributo è genre.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Name">
+      <summary>Ottiene il nome completo del nodo.</summary>
+      <returns>Nome completo del nodo attributo.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.NamespaceURI">
+      <summary>Ottiene l’URI dello spazio dei nomi del nodo.</summary>
+      <returns>URI dello spazio dei nomi del nodo.Se all'attributo non viene assegnato uno spazio dei nomi in modo esplicito, la proprietà restituirà String.Empty.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.NodeType">
+      <summary>Ottiene il tipo di nodo corrente.</summary>
+      <returns>Il tipo dei nodi XmlAttribute è XmlNodeType.Attribute.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.OwnerDocument">
+      <summary>Ottiene l'oggetto <see cref="T:System.Xml.XmlDocument" /> a cui appartiene il nodo.</summary>
+      <returns>Documento XML a cui appartiene il nodo.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.OwnerElement">
+      <summary>Ottiene l'oggetto <see cref="T:System.Xml.XmlElement" /> a cui appartiene l'attributo.</summary>
+      <returns>XmlElement a cui appartiene l'attributo o null se l'attributo non fa parte di un XmlElement .</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.ParentNode">
+      <summary>Ottiene l'elemento padre del nodo.Per i nodi XmlAttribute, la proprietà restituisce sempre null.</summary>
+      <returns>Per i nodi XmlAttribute, la proprietà restituisce sempre null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Prefix">
+      <summary>Ottiene o imposta il prefisso dello spazio dei nomi del nodo.</summary>
+      <returns>Prefisso dello spazio dei nomi del nodo.Se non è presente un prefisso, questa proprietà restituirà String.Empty.</returns>
+      <exception cref="T:System.ArgumentException">Il nodo è di sola lettura.</exception>
+      <exception cref="T:System.Xml.XmlException">Il prefisso specificato contiene un carattere non valido.Il prefisso specificato non è corretto.L'URI dello spazio dei nomi del nodo è null.Il prefisso specificato è "xml" e l'URI dello spazio dei nomi del nodo è diverso da "http://www.w3.org/XML/1998/namespace".Il nodo è un attributo, il prefisso specificato è "xmlns" e l'URI dello spazio dei nomi è diverso da "http://www.w3.org/2000/xmlns/" (in lingua inglese).Il nodo è un attributo e il valore qualifiedName del nome è "xmlns" [Namespaces].</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.PrependChild(System.Xml.XmlNode)">
+      <summary>Aggiunge il nodo specificato all'inizio dell'elenco dei nodi figlio del nodo corrente.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlNode" /> aggiunto.</returns>
+      <param name="newChild">Oggetto <see cref="T:System.Xml.XmlNode" /> da aggiungere.Se si tratta di un oggetto <see cref="T:System.Xml.XmlDocumentFragment" />, l'intero contenuto del frammento del documento viene spostato nell'elenco degli elementi figlio del nodo.</param>
+      <exception cref="T:System.InvalidOperationException">Per questo tipo di nodi non sono consentiti elementi figlio di tipo <paramref name="newChild" />.<paramref name="newChild" /> è un predecessore di questo nodo.</exception>
+      <exception cref="T:System.ArgumentException">Il nodo <paramref name="newChild" /> è stato creato da un documento diverso da quello che ha creato il nodo corrente.Il nodo è di sola lettura.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.RemoveChild(System.Xml.XmlNode)">
+      <summary>Rimuove il nodo figlio specificato.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlNode" /> rimosso.</returns>
+      <param name="oldChild">Oggetto <see cref="T:System.Xml.XmlNode" /> da rimuovere.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="oldChild" /> non è un nodo figlio del nodo correnteoppure il nodo è di sola lettura.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Sostituisce il nodo figlio specificato con il nuovo nodo figlio specificato.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlNode" /> sostituito.</returns>
+      <param name="newChild">Nuovo <see cref="T:System.Xml.XmlNode" /> figlio.</param>
+      <param name="oldChild">Oggetto <see cref="T:System.Xml.XmlNode" /> da sostituire.</param>
+      <exception cref="T:System.InvalidOperationException">Per questo tipo di nodi non sono consentiti elementi figlio di tipo <paramref name="newChild" />.<paramref name="newChild" /> è un predecessore di questo nodo.</exception>
+      <exception cref="T:System.ArgumentException">Il nodo <paramref name="newChild" /> è stato creato da un documento diverso da quello che ha creato il nodo corrente.Il nodo è di sola lettura.<paramref name="oldChild" /> non è un nodo figlio del nodo corrente</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Specified">
+      <summary>Ottiene un valore che indica se il valore dell'attributo è stato impostato in modo esplicito.</summary>
+      <returns>true se all'attributo è stato assegnato in modo esplicito un valore nel documento dell'istanza originale, in caso contrario false.Il valore false indica che il valore dell'attributo proviene dalla DTD.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Value">
+      <summary>Ottiene o imposta il valore del nodo.</summary>
+      <returns>Il valore restituito dipende dalla proprietà <see cref="P:System.Xml.XmlNode.NodeType" /> del nodo.Per i nodi XmlAttribute, questa proprietà è il valore dell'attributo.</returns>
+      <exception cref="T:System.ArgumentException">Il nodo è di sola lettura e viene chiamata un'operazione di impostazione.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Salva tutti gli elementi figlio del nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">XmlWriter nel quale si desidera eseguire il salvataggio.</param>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.WriteTo(System.Xml.XmlWriter)">
+      <summary>Salva il nodo nell'<see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">XmlWriter nel quale si desidera eseguire il salvataggio.</param>
+    </member>
+    <member name="T:System.Xml.XmlAttributeCollection">
+      <summary>Rappresenta un insieme di attributi accessibili per nome o per indice.</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Append(System.Xml.XmlAttribute)">
+      <summary>Inserisce l'attributo specificato come ultimo nodo nell'insieme.</summary>
+      <returns>XmlAttribute da aggiungere all'insieme.</returns>
+      <param name="node">Oggetto <see cref="T:System.Xml.XmlAttribute" /> da inserire. </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="node" /> è stato creato da un documento diverso da quello che ha creato questo insieme. </exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)">
+      <summary>Copia tutti gli oggetti <see cref="T:System.Xml.XmlAttribute" /> da questo insieme nella matrice specificata.</summary>
+      <param name="array">Matrice che rappresenta la destinazione degli oggetti copiati dall'insieme. </param>
+      <param name="index">Indice della matrice da cui ha inizio la copia. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.InsertAfter(System.Xml.XmlAttribute,System.Xml.XmlAttribute)">
+      <summary>Inserisce l'attributo specificato immediatamente dopo l'attributo di riferimento indicato.</summary>
+      <returns>L'oggetto XmlAttribute da inserire nell'insieme.</returns>
+      <param name="newNode">Oggetto <see cref="T:System.Xml.XmlAttribute" /> da inserire. </param>
+      <param name="refNode">
+        <see cref="T:System.Xml.XmlAttribute" /> che rappresenta l'attributo dei riferimenti.Il nodo <paramref name="newNode" /> è posizionato dopo il nodo <paramref name="refNode" />.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newNode" /> è stato creato da un documento diverso da quello che ha creato questo insiemeoppure <paramref name="refNode" /> non è un membro di questo insieme.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.InsertBefore(System.Xml.XmlAttribute,System.Xml.XmlAttribute)">
+      <summary>Inserisce l'attributo specificato immediatamente prima dell'attributo di riferimento indicato.</summary>
+      <returns>L'oggetto XmlAttribute da inserire nell'insieme.</returns>
+      <param name="newNode">Oggetto <see cref="T:System.Xml.XmlAttribute" /> da inserire. </param>
+      <param name="refNode">
+        <see cref="T:System.Xml.XmlAttribute" /> che rappresenta l'attributo dei riferimenti.L'oggetto <paramref name="newNode" /> viene collocato prima di <paramref name="refNode" />.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newNode" /> è stato creato da un documento diverso da quello che ha creato questo insiemeoppure <paramref name="refNode" /> non è un membro di questo insieme.</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.Int32)">
+      <summary>Ottiene l'attributo con l'indice specificato.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlAttribute" /> in corrispondenza dell'indice specificato.</returns>
+      <param name="i">Indice dell'attributo. </param>
+      <exception cref="T:System.IndexOutOfRangeException">L'indice passato è esterno all'intervallo. </exception>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.String)">
+      <summary>Ottiene l'attributo con il nome specificato.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlAttribute" /> con il nome specificato.Se l'attributo è inesistente, questa proprietà restituisce null.</returns>
+      <param name="name">Nome completo dell'attributo. </param>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.String,System.String)">
+      <summary>Ottiene l'attributo con il nome locale specificato e l'URI (Uniform Resource Identifier) dello spazio dei nomi.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlAttribute" /> con il nome locale e l'URI dello spazio dei nomi specificati.Se l'attributo è inesistente, questa proprietà restituisce null.</returns>
+      <param name="localName">Nome locale dell'attributo. </param>
+      <param name="namespaceURI">URI dello spazio dei nomi dell'attributo. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Prepend(System.Xml.XmlAttribute)">
+      <summary>Inserisce l'attributo specificato come primo nodo nell'insieme.</summary>
+      <returns>XmlAttribute aggiunto all'insieme.</returns>
+      <param name="node">Oggetto <see cref="T:System.Xml.XmlAttribute" /> da inserire. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Remove(System.Xml.XmlAttribute)">
+      <summary>Rimuove l'attributo specificato dall'insieme.</summary>
+      <returns>Nodo rimosso oppure null, se non viene trovato nell'insieme.</returns>
+      <param name="node">La classe <see cref="T:System.Xml.XmlAttribute" /> da rimuovere. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.RemoveAll">
+      <summary>Rimuove tutti gli attributi dall'insieme.</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.RemoveAt(System.Int32)">
+      <summary>Rimuove l'attributo che corrisponde all'indice specificato dall'insieme.</summary>
+      <returns>Restituisce null se non esistono attributi in corrispondenza dell'indice specificato.</returns>
+      <param name="i">Indice del nodo da rimuovere.Il primo nodo ha indice 0.</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.SetNamedItem(System.Xml.XmlNode)">
+      <summary>Aggiunge un <see cref="T:System.Xml.XmlNode" /> utilizzando la relativa proprietà <see cref="P:System.Xml.XmlNode.Name" />. </summary>
+      <returns>Se <paramref name="node" /> sostituisce un nodo esistente con lo stesso nome, viene restituito il nodo precedente. In caso contrario, viene restituito.</returns>
+      <param name="node">Nodo di attributi da memorizzare nell'insieme.Il nodo sarà successivamente accessibile utilizzando il nome del nodo.Se un nodo con tale nome è già presente nell'insieme, viene sostituito dal nuovo nodo. In caso contrario, il nodo viene aggiunto alla fine dell'insieme.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="node" /> è stato creato da un <see cref="T:System.Xml.XmlDocument" /> diverso da quello che ha creato questo insieme.Questo insieme XmlAttributeCollection è di sola lettura. </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="node" /> è un oggetto <see cref="T:System.Xml.XmlAttribute" /> che rappresenta già un attributo di un altro oggetto <see cref="T:System.Xml.XmlElement" />.Per riutilizzare gli attributi in altri elementi, è necessario duplicare gli oggetti XmlAttribute che si intende riutilizzare.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>Per una descrizione di questo membro, vedere <see cref="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)" />.</summary>
+      <param name="array">Matrice che rappresenta la destinazione degli oggetti copiati dall'insieme. </param>
+      <param name="index">Indice della matrice da cui ha inizio la copia. </param>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#Count">
+      <summary>Per una descrizione di questo membro, vedere <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.Count" />.</summary>
+      <returns>Restituisce un int contenente il conteggio degli attributi.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#IsSynchronized">
+      <summary>Per una descrizione di questo membro, vedere <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.IsSynchronized" />.</summary>
+      <returns>Restituisce true se l'insieme è sincronizzato.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#SyncRoot">
+      <summary>Per una descrizione di questo membro, vedere <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.SyncRoot" />.</summary>
+      <returns>Restituisce <see cref="T:System.Object" /> che rappresenta la radice dell'insieme.</returns>
+    </member>
+    <member name="T:System.Xml.XmlCDataSection">
+      <summary>Rappresenta una sezione CDATA.</summary>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlCDataSection" />.</summary>
+      <param name="data">
+        <see cref="T:System.String" /> che contiene dati di tipo carattere.</param>
+      <param name="doc">Oggetto <see cref="T:System.Xml.XmlDocument" />.</param>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.CloneNode(System.Boolean)">
+      <summary>Crea un duplicato del nodo.</summary>
+      <returns>Nodo clonato.</returns>
+      <param name="deep">true per clonare in modo ricorsivo il sottoalbero del nodo specificato; false per clonare solo il nodo.Dal momento che i nodi CDATA non dispongono di elementi figlio, indipendentemente dall'impostazione dei parametri, il nodo duplicato includerà sempre il contenuto dei dati.</param>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.LocalName">
+      <summary>Ottiene il nome locale del nodo.</summary>
+      <returns>Per i nodi CDATA, il nome locale è #cdata-section.</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.Name">
+      <summary>Ottiene il nome completo del nodo.</summary>
+      <returns>Per i nodi CDATA, il nome è #cdata-section.</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.NodeType">
+      <summary>Ottiene il tipo di nodo corrente.</summary>
+      <returns>Tipo di nodo.Nel caso di nodi CDATA, il valore è XmlNodeType.CDATA.</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.ParentNode"></member>
+    <member name="P:System.Xml.XmlCDataSection.PreviousText">
+      <summary>Ottiene il nodo di testo immediatamente precedente a quello corrente.</summary>
+      <returns>Restituisce <see cref="T:System.Xml.XmlNode" />.</returns>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Salva gli elementi figlio del nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">Oggetto XmlWriter in cui salvare. </param>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.WriteTo(System.Xml.XmlWriter)">
+      <summary>Salva il nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">Oggetto XmlWriter in cui salvare. </param>
+    </member>
+    <member name="T:System.Xml.XmlCharacterData">
+      <summary>Fornisce metodi di modifica del testo utilizzati da diverse classi.</summary>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlCharacterData" />.</summary>
+      <param name="data">Stringa contenente dati di tipo carattere da aggiungere al documento.</param>
+      <param name="doc">
+        <see cref="T:System.Xml.XmlDocument" /> per contenere dati di tipo carattere.</param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.AppendData(System.String)">
+      <summary>Aggiunge la stringa specificata alla fine dei dati di tipo carattere del nodo.</summary>
+      <param name="strData">Stringa da inserire in quella esistente. </param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Data">
+      <summary>Contiene i dati del nodo.</summary>
+      <returns>Dati del nodo.</returns>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.DeleteData(System.Int32,System.Int32)">
+      <summary>Rimuove un intervallo di caratteri dal nodo.</summary>
+      <param name="offset">Posizione all'interno della stringa da cui iniziare l'eliminazione. </param>
+      <param name="count">Numero di caratteri da eliminare. </param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.InsertData(System.Int32,System.String)">
+      <summary>Inserisce la stringa specificata nell'offset di caratteri indicato.</summary>
+      <param name="offset">Posizione all'interno della stringa per inserire i dati della stringa specificati. </param>
+      <param name="strData">Dati della stringa da inserire nella stringa esistente. </param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Length">
+      <summary>Ottiene la lunghezza dei dati in caratteri.</summary>
+      <returns>Lunghezza in caratteri della stringa nella proprietà <see cref="P:System.Xml.XmlCharacterData.Data" />.La lunghezza può essere zero, vale a dire i nodi CharacterData possono essere vuoti.</returns>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.ReplaceData(System.Int32,System.Int32,System.String)">
+      <summary>Sostituisce il numero di caratteri specificato partendo dall'offset indicato con la stringa specificata.</summary>
+      <param name="offset">Posizione all'interno della stringa da cui iniziare la sostituzione. </param>
+      <param name="count">Numero di caratteri da sostituire. </param>
+      <param name="strData">Nuovi dati che sostituiscono i dati precedenti della stringa. </param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.Substring(System.Int32,System.Int32)">
+      <summary>Recupera una sottostringa della stringa intera dall'intervallo specificato.</summary>
+      <returns>Sottostringa corrispondente all'intervallo specificato.</returns>
+      <param name="offset">Posizione all'interno della stringa da cui iniziare il recupero.Un offset di zero indica che il punto iniziale è all'inizio dei dati.</param>
+      <param name="count">Numero di caratteri da recuperare. </param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Value">
+      <summary>Ottiene o imposta il valore del nodo.</summary>
+      <returns>Valore del nodo.</returns>
+      <exception cref="T:System.ArgumentException">Il nodo è di sola lettura. </exception>
+    </member>
+    <member name="T:System.Xml.XmlComment">
+      <summary>Rappresenta il contenuto di un commento XML.</summary>
+    </member>
+    <member name="M:System.Xml.XmlComment.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlComment" />.</summary>
+      <param name="comment">Contenuto dell'elemento di commento.</param>
+      <param name="doc">Documento XML padre.</param>
+    </member>
+    <member name="M:System.Xml.XmlComment.CloneNode(System.Boolean)">
+      <summary>Crea un duplicato del nodo.</summary>
+      <returns>Nodo duplicato.</returns>
+      <param name="deep">true per clonare in modo ricorsivo il sottoalbero del nodo specificato, false per clonare solo il nodo.Dal momento che i nodi di commento non dispongono di elementi figlio, il nodo duplicato includerà sempre il contenuto dei dati indipendentemente dall'impostazione dei parametri.</param>
+    </member>
+    <member name="P:System.Xml.XmlComment.LocalName">
+      <summary>Ottiene il nome locale del nodo.</summary>
+      <returns>Nel caso di nodi di commento, il valore è #comment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlComment.Name">
+      <summary>Ottiene il nome completo del nodo.</summary>
+      <returns>Nel caso di nodi di commento, il valore è #comment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlComment.NodeType">
+      <summary>Ottiene il tipo di nodo corrente.</summary>
+      <returns>Nel caso di nodi di commento, il valore è XmlNodeType.Comment.</returns>
+    </member>
+    <member name="M:System.Xml.XmlComment.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Salva tutti gli elementi figlio del nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.Poiché i nodi di commento non contengono nodi figlio, questo metodo non ha alcun effetto.</summary>
+      <param name="w">XmlWriter nel quale si desidera eseguire il salvataggio. </param>
+    </member>
+    <member name="M:System.Xml.XmlComment.WriteTo(System.Xml.XmlWriter)">
+      <summary>Salva il nodo nell'<see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">XmlWriter nel quale si desidera eseguire il salvataggio. </param>
+    </member>
+    <member name="T:System.Xml.XmlDeclaration">
+      <summary>Rappresenta il nodo della dichiarazione XML: &lt;?xml version='1.0' ...?&gt;.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlDeclaration" />.</summary>
+      <param name="version">Versione XML.Vedere la proprietà <see cref="P:System.Xml.XmlDeclaration.Version" />.</param>
+      <param name="encoding">Schema di codifica. Vedere la proprietà <see cref="P:System.Xml.XmlDeclaration.Encoding" />.</param>
+      <param name="standalone">Indica se il documento XML dipende da un DTD esterno. Vedere la proprietà <see cref="P:System.Xml.XmlDeclaration.Standalone" />.</param>
+      <param name="doc">Documento XML padre.</param>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.CloneNode(System.Boolean)">
+      <summary>Crea un duplicato del nodo.</summary>
+      <returns>Nodo duplicato.</returns>
+      <param name="deep">true per clonare in modo ricorsivo il sottoalbero del nodo specificato, false per clonare solo il nodo.Dal momento che i nodi XmlDeclaration non dispongono di elementi figlio, il nodo duplicato includerà sempre il contenuto dei dati indipendentemente dall'impostazione dei parametri.</param>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Encoding">
+      <summary>Ottiene o imposta il livello di codifica del documento XML.</summary>
+      <returns>Nome della codifica di caratteri valida.Di seguito sono elencati i nomi delle codifiche di caratteri più comunemente supportate in XML:Categoria Nomi di codifica Unicode UTF-8, UTF-16 ISO 10646 ISO-10646-UCS-2, ISO-10646-UCS-4 ISO 8859 ISO-8859-n (dove "n" è una cifra da 1 a 9) JIS X-0208-1997 ISO-2022-JP, Shift_JIS, EUC-JP Questo valore è facoltativo.Se non viene impostato alcun valore, la proprietà restituirà String.Empty.Se non viene incluso alcun attributo di codifica, si presuppone la codifica UTF-8 quando il documento viene scritto o salvato.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.InnerText">
+      <summary>Ottiene o imposta i valori concatenati di XmlDeclaration.</summary>
+      <returns>Valori concatenati di XmlDeclaration, ossia tutti i valori compresi tra &lt;?xml e ?&gt;.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.LocalName">
+      <summary>Ottiene il nome locale del nodo.</summary>
+      <returns>Nel caso di nodi XmlDeclaration, il nome locale è xml.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Name">
+      <summary>Ottiene il nome completo del nodo.</summary>
+      <returns>Nel caso di nodi XmlDeclaration, il nome è xml.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.NodeType">
+      <summary>Ottiene il tipo di nodo corrente.</summary>
+      <returns>Nel caso di nodi XmlDeclaration, il valore è XmlNodeType.XmlDeclaration.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Standalone">
+      <summary>Ottiene o imposta il valore dell'attributo autonomo.</summary>
+      <returns>I valori validi sono yes se tutte le dichiarazioni di entità richieste dal documento XML sono contenute all'interno del documento, no se è richiesta una DTD (Document Type Definition) esterna.Se nella dichiarazione XML non è presente alcun attributo autonomo, la proprietà restituisce String.Empty.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Value">
+      <summary>Ottiene o imposta il valore di XmlDeclaration.</summary>
+      <returns>Contenuto di XmlDeclaration, ossia tutti i valori compresi tra &lt;?xml e ?&gt;.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Version">
+      <summary>Ottiene la versione XML del documento.</summary>
+      <returns>Il valore è sempre 1.0.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Salva gli elementi figlio del nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.Poiché i nodi XmlDeclaration non hanno elementi figlio, questo metodo non ha alcuna efficacia.</summary>
+      <param name="w">XmlWriter nel quale si desidera eseguire il salvataggio. </param>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.WriteTo(System.Xml.XmlWriter)">
+      <summary>Salva il nodo nell'<see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">XmlWriter nel quale si desidera eseguire il salvataggio. </param>
+    </member>
+    <member name="T:System.Xml.XmlDocument">
+      <summary>Rappresenta un documento XML.Per altre informazioni, vedere la sezione Remarks.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlDocument" />.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor(System.Xml.XmlImplementation)">
+      <summary>Inizializza una nuova istanza della classe XmlDocument con l'oggetto <see cref="T:System.Xml.XmlImplementation" /> specificato.</summary>
+      <param name="imp">Oggetto XmlImplementation da usare. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor(System.Xml.XmlNameTable)">
+      <summary>Inizializza una nuova istanza della classe XmlDocument con l'oggetto <see cref="T:System.Xml.XmlNameTable" /> specificato.</summary>
+      <param name="nt">Oggetto XmlNameTable da usare. </param>
+    </member>
+    <member name="P:System.Xml.XmlDocument.BaseURI">
+      <summary>Ottiene l'URI di base del nodo corrente.</summary>
+      <returns>Percorso da cui è stato caricato il nodo.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CloneNode(System.Boolean)">
+      <summary>Crea un duplicato del nodo.</summary>
+      <returns>Nodo XmlDocument clonato.</returns>
+      <param name="deep">true per clonare in modo ricorsivo il sottoalbero del nodo specificato; false per clonare solo il nodo. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String)">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlAttribute" /> con la proprietà <see cref="P:System.Xml.XmlDocument.Name" /> specificata.</summary>
+      <returns>Nuovo oggetto XmlAttribute.</returns>
+      <param name="name">Nome completo dell'attributo.Se il nome contiene i due punti, la proprietà <see cref="P:System.Xml.XmlNode.Prefix" /> riflette la parte del nome che precede i primi due punti e la proprietà <see cref="P:System.Xml.XmlDocument.LocalName" /> la parte che li segue.La proprietà <see cref="P:System.Xml.XmlNode.NamespaceURI" /> rimane vuota a meno che il prefisso non sia un prefisso incorporato riconosciuto, ad esempio xmlns.In questo caso, il valore di NamespaceURI è http://www.w3.org/2000/xmlns/.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String,System.String)">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlAttribute" /> con il nome completo e la proprietà <see cref="P:System.Xml.XmlNode.NamespaceURI" /> specificati.</summary>
+      <returns>Nuovo oggetto XmlAttribute.</returns>
+      <param name="qualifiedName">Nome completo dell'attributo.Se il nome contiene i due punti, la proprietà <see cref="P:System.Xml.XmlNode.Prefix" /> rifletterà la parte del nome che precede i due punti e la proprietà <see cref="P:System.Xml.XmlDocument.LocalName" /> la parte che li segue.</param>
+      <param name="namespaceURI">URI dello spazio dei nomi dell'attributo.Se il nome completo include un prefisso xmlns, il parametro deve essere http://www.w3.org/2000/xmlns/.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String,System.String,System.String)">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlAttribute" /> con le proprietà <see cref="P:System.Xml.XmlNode.Prefix" />, <see cref="P:System.Xml.XmlDocument.LocalName" /> e <see cref="P:System.Xml.XmlNode.NamespaceURI" /> specificate.</summary>
+      <returns>Nuovo oggetto XmlAttribute.</returns>
+      <param name="prefix">Prefisso dell'attributo, se presente.String.Empty e null sono equivalenti.</param>
+      <param name="localName">Nome locale dell'attributo. </param>
+      <param name="namespaceURI">URI dello spazio dei nomi dell'attributo, se presente.String.Empty e null sono equivalenti.Se <paramref name="prefix" /> è xmlns, il parametro deve essere http://www.w3.org/2000/xmlns/; in caso contrario, viene generata un'eccezione.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateCDataSection(System.String)">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlCDataSection" /> contenente i dati specificati.</summary>
+      <returns>Nuovo oggetto XmlCDataSection.</returns>
+      <param name="data">Contenuto del nuovo oggetto XmlCDataSection. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateComment(System.String)">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlComment" /> contenente i dati specificati.</summary>
+      <returns>Nuovo oggetto XmlComment.</returns>
+      <param name="data">Contenuto del nuovo oggetto XmlComment. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateDocumentFragment">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlDocumentFragment" />.</summary>
+      <returns>Nuovo oggetto XmlDocumentFragment.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String)">
+      <summary>Crea un elemento con il nome specificato.</summary>
+      <returns>Nuovo oggetto XmlElement.</returns>
+      <param name="name">Nome completo dell'elemento.Se il nome contiene i due punti, la proprietà <see cref="P:System.Xml.XmlNode.Prefix" /> riflette la parte del nome che precede i due punti e la proprietà <see cref="P:System.Xml.XmlDocument.LocalName" /> la parte che li segue.Il nome completo non può includere un prefisso"xmlns".</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String,System.String)">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlElement" /> con il nome completo e una proprietà <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Nuovo oggetto XmlElement.</returns>
+      <param name="qualifiedName">Nome completo dell'elemento.Se il nome contiene i due punti, la proprietà <see cref="P:System.Xml.XmlNode.Prefix" /> rifletterà la parte del nome che precede i due punti e la proprietà <see cref="P:System.Xml.XmlDocument.LocalName" /> la parte che li segue.Il nome completo non può includere un prefisso"xmlns".</param>
+      <param name="namespaceURI">URI dello spazio dei nomi dell'elemento. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String,System.String,System.String)">
+      <summary>Crea un elemento con le proprietà <see cref="P:System.Xml.XmlNode.Prefix" />, <see cref="P:System.Xml.XmlDocument.LocalName" /> e <see cref="P:System.Xml.XmlNode.NamespaceURI" /> specificate.</summary>
+      <returns>Nuovo oggetto <see cref="T:System.Xml.XmlElement" />.</returns>
+      <param name="prefix">Prefisso del nuovo elemento, se presente.String.Empty e null sono equivalenti.</param>
+      <param name="localName">Nome locale del nuovo elemento. </param>
+      <param name="namespaceURI">URI dello spazio dei nomi del nuovo elemento, se presente.String.Empty e null sono equivalenti.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.String,System.String,System.String)">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlNode" /> con il tipo di nodo e le proprietà <see cref="P:System.Xml.XmlDocument.Name" /> e <see cref="P:System.Xml.XmlNode.NamespaceURI" /> specificati.</summary>
+      <returns>Nuovo oggetto XmlNode.</returns>
+      <param name="nodeTypeString">Versione stringa dell'oggetto <see cref="T:System.Xml.XmlNodeType" /> del nuovo nodo.Questo parametro deve essere uno dei valori elencati nella tabella seguente.</param>
+      <param name="name">Nome completo del nuovo nodo.Se il nome contiene i due punti, viene analizzato nei componenti <see cref="P:System.Xml.XmlNode.Prefix" /> e <see cref="P:System.Xml.XmlDocument.LocalName" />.</param>
+      <param name="namespaceURI">URI dello spazio dei nomi del nuovo nodo. </param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name; or <paramref name="nodeTypeString" /> is not one of the strings listed below. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.Xml.XmlNodeType,System.String,System.String)">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlNode" /> con le proprietà <see cref="T:System.Xml.XmlNodeType" />, <see cref="P:System.Xml.XmlDocument.Name" /> e <see cref="P:System.Xml.XmlNode.NamespaceURI" /> specificate.</summary>
+      <returns>Nuovo oggetto XmlNode.</returns>
+      <param name="type">XmlNodeType del nuovo nodo. </param>
+      <param name="name">Nome completo del nuovo nodo.Se il nome contiene i due punti, viene analizzato nei componenti <see cref="P:System.Xml.XmlNode.Prefix" /> e <see cref="P:System.Xml.XmlDocument.LocalName" />.</param>
+      <param name="namespaceURI">URI dello spazio dei nomi del nuovo nodo. </param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.Xml.XmlNodeType,System.String,System.String,System.String)">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlNode" /> con gli oggetti <see cref="T:System.Xml.XmlNodeType" />, <see cref="P:System.Xml.XmlNode.Prefix" />, <see cref="P:System.Xml.XmlDocument.Name" /> e <see cref="P:System.Xml.XmlNode.NamespaceURI" /> specificati.</summary>
+      <returns>Nuovo oggetto XmlNode.</returns>
+      <param name="type">XmlNodeType del nuovo nodo. </param>
+      <param name="prefix">Prefisso del nuovo nodo. </param>
+      <param name="name">Nome locale del nuovo nodo. </param>
+      <param name="namespaceURI">URI dello spazio dei nomi del nuovo nodo. </param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateProcessingInstruction(System.String,System.String)">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlProcessingInstruction" /> con il nome e i dati specificati.</summary>
+      <returns>Nuovo oggetto XmlProcessingInstruction.</returns>
+      <param name="target">Nome dell'istruzione di elaborazione. </param>
+      <param name="data">Dati per l'istruzione di elaborazione. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateSignificantWhitespace(System.String)">
+      <summary>Crea un nodo <see cref="T:System.Xml.XmlSignificantWhitespace" />.</summary>
+      <returns>Nuovo nodo XmlSignificantWhitespace.</returns>
+      <param name="text">Stringa che può contenere solo i caratteri "&amp;#20;" "&amp;#10;" "&amp;#13;" e "&amp;#9;". </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateTextNode(System.String)">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlText" /> con il testo specificato.</summary>
+      <returns>Nuovo nodo XmlText.</returns>
+      <param name="text">Testo per il nodo Text. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateWhitespace(System.String)">
+      <summary>Crea un nodo <see cref="T:System.Xml.XmlWhitespace" />.</summary>
+      <returns>Nuovo nodo XmlWhitespace.</returns>
+      <param name="text">Stringa che può contenere solo i caratteri "&amp;#20;" "&amp;#10;" "&amp;#13;" e "&amp;#9;". </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateXmlDeclaration(System.String,System.String,System.String)">
+      <summary>Crea un nodo <see cref="T:System.Xml.XmlDeclaration" /> con i valori specificati.</summary>
+      <returns>Nuovo nodo XmlDeclaration.</returns>
+      <param name="version">La versione deve essere "1.0". </param>
+      <param name="encoding">Valore dell'attributo di codifica.Si tratta della codifica usata quando si salva l'oggetto <see cref="T:System.Xml.XmlDocument" /> in un file o in un flusso; pertanto, deve essere impostata su una stringa supportata dalla classe <see cref="T:System.Text.Encoding" />, altrimenti <see cref="M:System.Xml.XmlDocument.Save(System.String)" /> non riesce.Se il valore è null o String.Empty, il metodo Save non scrive un attributo di codifica nella dichiarazione XML e quindi viene usata la codifica predefinita UTF-8.Nota: se l'oggetto XmlDocument viene salvato in <see cref="T:System.IO.TextWriter" /> o in <see cref="T:System.Xml.XmlTextWriter" />, questo valore di codifica viene rimosso.Al suo posto viene usata la codifica di TextWriter o XmlTextWriter.In questo modo l'XML scritto potrà essere nuovamente letto con la codifica corretta.</param>
+      <param name="standalone">Il valore deve essere "yes" o "no".Se il valore è null o String.Empty, il metodo Save non scrive un attributo autonomo nella dichiarazione XML.</param>
+      <exception cref="T:System.ArgumentException">The values of <paramref name="version" /> or <paramref name="standalone" /> are something other than the ones specified above. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.DocumentElement">
+      <summary>Ottiene l'oggetto <see cref="T:System.Xml.XmlElement" /> radice per il documento.</summary>
+      <returns>Oggetto XmlElement che rappresenta la radice dell'albero del documento XML.Se non esistono radici, viene restituito null.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.GetElementsByTagName(System.String)">
+      <summary>Restituisce un oggetto <see cref="T:System.Xml.XmlNodeList" /> contenente un elenco di tutti gli elementi discendenti che corrispondono alla proprietà <see cref="P:System.Xml.XmlDocument.Name" /> specificata.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlNodeList" /> contenente un elenco di tutti i nodi corrispondenti.Se nessun nodo corrisponde a <paramref name="name" />, la raccolta restituita sarà vuota.</returns>
+      <param name="name">Nome completo di cui verificare la corrispondenza.Viene confrontato con la proprietà Name del nodo corrispondente.Il valore speciale "*" corrisponde a tutti i tag.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.GetElementsByTagName(System.String,System.String)">
+      <summary>Restituisce un oggetto <see cref="T:System.Xml.XmlNodeList" /> contenente un elenco di tutti gli elementi discendenti che corrispondono alle proprietà <see cref="P:System.Xml.XmlDocument.LocalName" /> e <see cref="P:System.Xml.XmlNode.NamespaceURI" /> specificate.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlNodeList" /> contenente un elenco di tutti i nodi corrispondenti.Se nessun nodo corrisponde agli oggetti <paramref name="localName" /> e <paramref name="namespaceURI" /> specificati, la raccolta restituita sarà vuota.</returns>
+      <param name="localName">LocalName di cui verificare la corrispondenza.Il valore speciale "*" corrisponde a tutti i tag.</param>
+      <param name="namespaceURI">NamespaceURI di cui verificare la corrispondenza. </param>
+    </member>
+    <member name="P:System.Xml.XmlDocument.Implementation">
+      <summary>Ottiene l'oggetto <see cref="T:System.Xml.XmlImplementation" /> per il documento corrente.</summary>
+      <returns>Oggetto XmlImplementation per il documento corrente.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.ImportNode(System.Xml.XmlNode,System.Boolean)">
+      <summary>Importa un nodo da un altro documento al documento corrente.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlNode" /> importato.</returns>
+      <param name="node">Nodo da importare. </param>
+      <param name="deep">true per eseguire una clonazione completa; in caso contrario, false. </param>
+      <exception cref="T:System.InvalidOperationException">Calling this method on a node type which cannot be imported. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.InnerText">
+      <summary>Genera <see cref="T:System.InvalidOperationException" /> in tutti i casi.</summary>
+      <returns>Valori del nodo e di tutti i relativi elementi figlio.</returns>
+      <exception cref="T:System.InvalidOperationException">In all cases.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.InnerXml">
+      <summary>Ottiene o imposta il markup che rappresenta gli elementi figlio del nodo corrente.</summary>
+      <returns>Markup degli elementi figlio del nodo corrente.</returns>
+      <exception cref="T:System.Xml.XmlException">The XML specified when setting this property is not well-formed. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.IsReadOnly">
+      <summary>Ottiene un valore che indica se il nodo corrente è di sola lettura.</summary>
+      <returns>true se il nodo corrente è in sola lettura; in caso contrario, false.I nodi XmlDocument restituiscono sempre false.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.IO.Stream)">
+      <summary>Carica il documento XML dal flusso specificato.</summary>
+      <param name="inStream">Flusso che contiene il documento XML da caricare. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, a <see cref="T:System.IO.FileNotFoundException" /> is raised.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.IO.TextReader)">
+      <summary>Carica il documento XML dall'oggetto <see cref="T:System.IO.TextReader" /> specificato.</summary>
+      <param name="txtReader">Oggetto TextReader usato per inserire i dati XML nel documento. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.Xml.XmlReader)">
+      <summary>Carica il documento XML dall'oggetto <see cref="T:System.Xml.XmlReader" /> specificato.</summary>
+      <param name="reader">Oggetto XmlReader usato per inserire i dati XML nel documento. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.LoadXml(System.String)">
+      <summary>Carica il documento XML dalla stringa specificata.</summary>
+      <param name="xml">Stringa che contiene il documento XML da caricare. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.LocalName">
+      <summary>Ottiene il nome locale del nodo.</summary>
+      <returns>Per i nodi XmlDocument, il nome locale è #document.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.Name">
+      <summary>Ottiene il nome completo del nodo.</summary>
+      <returns>Per i nodi XmlDocument, il nome è #document.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.NameTable">
+      <summary>Ottiene l'oggetto <see cref="T:System.Xml.XmlNameTable" /> associato all'implementazione.</summary>
+      <returns>Oggetto XmlNameTable che consente di ottenere la versione atomizzata di una stringa all'interno del documento.</returns>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeChanged">
+      <summary>Si verifica quando l'oggetto <see cref="P:System.Xml.XmlNode.Value" /> di un nodo appartenente a questo documento è stato modificato.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeChanging">
+      <summary>Si verifica quando l'oggetto <see cref="P:System.Xml.XmlNode.Value" /> di un nodo appartenente a questo documento sta per essere modificato.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeInserted">
+      <summary>Si verifica quando un nodo appartenente al documento è stato inserito in un altro nodo.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeInserting">
+      <summary>Si verifica quando un nodo appartenente al documento sta per essere inserito in un altro nodo.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeRemoved">
+      <summary>Si verifica quando un nodo appartenente al documento è stato rimosso dal relativo nodo padre.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeRemoving">
+      <summary>Si verifica quando un nodo appartenente al documento sta per essere rimosso dal documento.</summary>
+    </member>
+    <member name="P:System.Xml.XmlDocument.NodeType">
+      <summary>Ottiene il tipo di nodo corrente.</summary>
+      <returns>Tipo di nodo.Per i nodi XmlDocument, il valore è XmlNodeType.Document.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.OwnerDocument">
+      <summary>Ottiene l'oggetto <see cref="T:System.Xml.XmlDocument" /> a cui appartiene il nodo corrente.</summary>
+      <returns>Per i nodi XmlDocument, questa proprietà restituisce sempre null. La proprietà <see cref="P:System.Xml.XmlDocument.NodeType" /> equivale a XmlNodeType.Document.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.ParentNode">
+      <summary>Ottiene il nodo padre del nodo, per i nodi che hanno elementi padre.</summary>
+      <returns>Restituisce sempre null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.PreserveWhitespace">
+      <summary>Ottiene o imposta un valore che indica se preservare lo spazio vuoto nel contenuto dell'elemento.</summary>
+      <returns>true per preservare lo spazio vuoto; in caso contrario false.Il valore predefinito è false.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.ReadNode(System.Xml.XmlReader)">
+      <summary>Crea un oggetto <see cref="T:System.Xml.XmlNode" /> in base alle informazioni contenute in <see cref="T:System.Xml.XmlReader" />.Il lettore deve essere posizionato su un nodo o un attributo.</summary>
+      <returns>Nuovo oggetto XmlNode oppure null se non esistono altri nodi.</returns>
+      <param name="reader">XML di origine </param>
+      <exception cref="T:System.NullReferenceException">The reader is positioned on a node type that does not translate to a valid DOM node (for example, EndElement or EndEntity). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.IO.Stream)">
+      <summary>Salva il documento XML nel flusso specificato.</summary>
+      <param name="outStream">Flusso in cui salvare. </param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.IO.TextWriter)">
+      <summary>Salva il documento XML nell'oggetto <see cref="T:System.IO.TextWriter" /> specificato.</summary>
+      <param name="writer">Oggetto TextWriter in cui salvare. </param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.Xml.XmlWriter)">
+      <summary>Salva il documento XML nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">Oggetto XmlWriter in cui salvare. </param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Salva tutti gli elementi figlio del nodo XmlDocument nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="xw">Oggetto XmlWriter in cui salvare. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.WriteTo(System.Xml.XmlWriter)">
+      <summary>Salva il nodo XmlDocument nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">Oggetto XmlWriter in cui salvare. </param>
+    </member>
+    <member name="T:System.Xml.XmlDocumentFragment">
+      <summary>Rappresenta un oggetto semplice che si rivela utile per operazioni di inserimento nella struttura ad albero.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.#ctor(System.Xml.XmlDocument)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlDocumentFragment" />.</summary>
+      <param name="ownerDocument">Documento XML di origine del frammento.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.CloneNode(System.Boolean)">
+      <summary>Crea un duplicato del nodo.</summary>
+      <returns>Nodo duplicato.</returns>
+      <param name="deep">true per clonare in modo ricorsivo il sottoalbero del nodo specificato, false per clonare solo il nodo. </param>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.InnerXml">
+      <summary>Ottiene o imposta il markup che rappresenta gli elementi figlio del nodo.</summary>
+      <returns>Markup degli elementi figlio del nodo.</returns>
+      <exception cref="T:System.Xml.XmlException">Il formato del file XML specificato al momento dell'impostazione della proprietà non è corretto. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.LocalName">
+      <summary>Ottiene il nome locale del nodo.</summary>
+      <returns>Nel caso di nodi XmlDocumentFragment, il nome locale è #document-fragment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.Name">
+      <summary>Ottiene il nome completo del nodo.</summary>
+      <returns>Nel caso di XmlDocumentFragment, il nome è #document-fragment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.NodeType">
+      <summary>Ottiene il tipo di nodo corrente.</summary>
+      <returns>Nel caso di nodi XmlDocumentFragment, il valore è XmlNodeType.DocumentFragment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.OwnerDocument">
+      <summary>Ottiene l'oggetto <see cref="T:System.Xml.XmlDocument" /> a cui appartiene il nodo.</summary>
+      <returns>XmlDocument cui appartiene il nodo.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.ParentNode">
+      <summary>Ottiene l'elemento padre del nodo, nel caso di nodi che dispongono di elementi padre.</summary>
+      <returns>Elemento padre del nodo.Nel caso di nodi XmlDocumentFragment, questa proprietà è sempre null.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Salva tutti gli elementi figlio del nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">XmlWriter nel quale si desidera eseguire il salvataggio. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.WriteTo(System.Xml.XmlWriter)">
+      <summary>Salva il nodo nell'<see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">XmlWriter nel quale si desidera eseguire il salvataggio. </param>
+    </member>
+    <member name="T:System.Xml.XmlElement">
+      <summary>Rappresenta un elemento.</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlElement" />.</summary>
+      <param name="prefix">Prefisso dello spazio dei nomi. Vedere la proprietà <see cref="P:System.Xml.XmlElement.Prefix" />.</param>
+      <param name="localName">Nome locale. Vedere la proprietà <see cref="P:System.Xml.XmlElement.LocalName" />.</param>
+      <param name="namespaceURI">URI dello spazio dei nomi. Vedere la proprietà <see cref="P:System.Xml.XmlElement.NamespaceURI" />.</param>
+      <param name="doc">Documento XML padre.</param>
+    </member>
+    <member name="P:System.Xml.XmlElement.Attributes">
+      <summary>Ottiene un <see cref="T:System.Xml.XmlAttributeCollection" /> contenente l'elenco di attributi per il nodo.</summary>
+      <returns>Insieme <see cref="T:System.Xml.XmlAttributeCollection" /> contenente l'elenco di attributi per il nodo.</returns>
+    </member>
+    <member name="M:System.Xml.XmlElement.CloneNode(System.Boolean)">
+      <summary>Crea un duplicato del nodo.</summary>
+      <returns>Nodo duplicato.</returns>
+      <param name="deep">true per duplicare in modo ricorsivo il sottoalbero del nodo specificato, false per duplicare solo il nodo ed eventualmente anche i relativi attributi se il nodo è di tipo XmlElement. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttribute(System.String)">
+      <summary>Restituisce il valore per l'attributo con il nome specificato.</summary>
+      <returns>Valore dell'attributo specificato.Se non viene rilevato un attributo corrispondente o se l'attributo non dispone di un valore specificato o predefinito, viene restituita una stringa vuota.</returns>
+      <param name="name">Nome dell'attributo da recuperare.Si tratta di un nome completo.che viene confrontato con la proprietà Name del nodo corrispondente.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttribute(System.String,System.String)">
+      <summary>Restituisce il valore per l'attributo con il nome locale e l'URI dello spazio dei nomi specificati.</summary>
+      <returns>Valore dell'attributo specificato.Se non viene rilevato un attributo corrispondente o se l'attributo non dispone di un valore specificato o predefinito, viene restituita una stringa vuota.</returns>
+      <param name="localName">Nome locale dell'attributo da recuperare. </param>
+      <param name="namespaceURI">URI dello spazio dei nomi dell'attributo da recuperare. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttributeNode(System.String)">
+      <summary>Restituisce XmlAttribute con il nome specificato.</summary>
+      <returns>XmlAttribute specificato o null se non viene rilevato un attributo corrispondente.</returns>
+      <param name="name">Nome dell'attributo da recuperare.Si tratta di un nome completo.che viene confrontato con la proprietà Name del nodo corrispondente.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttributeNode(System.String,System.String)">
+      <summary>Restituisce l'attributo <see cref="T:System.Xml.XmlAttribute" /> con il nome locale e l'URI dello spazio dei nomi specificati.</summary>
+      <returns>XmlAttribute specificato o null se non viene rilevato un attributo corrispondente.</returns>
+      <param name="localName">Nome locale dell'attributo. </param>
+      <param name="namespaceURI">URI dello spazio dei nomi dell'attributo. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetElementsByTagName(System.String)">
+      <summary>Restituisce un oggetto <see cref="T:System.Xml.XmlNodeList" /> contenente un elenco di tutti gli elementi discendenti che corrispondono al <see cref="P:System.Xml.XmlElement.Name" /> specificato.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlNodeList" /> contenente un elenco di tutti i nodi corrispondenti.L'elenco è vuoto se non sono presenti nodi corrispondenti.</returns>
+      <param name="name">Tag del nome di cui verificare la corrispondenza.Si tratta di un nome completo.che viene confrontato con la proprietà Name del nodo corrispondente.L'asterisco (*) è un valore speciale che corrisponde a tutti i tag.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetElementsByTagName(System.String,System.String)">
+      <summary>Restituisce un <see cref="T:System.Xml.XmlNodeList" /> contenente un elenco di tutti gli elementi discendenti che corrispondono al <see cref="P:System.Xml.XmlElement.LocalName" /> e al <see cref="P:System.Xml.XmlElement.NamespaceURI" /> specificati.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlNodeList" /> contenente un elenco di tutti i nodi corrispondenti.L'elenco è vuoto se non sono presenti nodi corrispondenti.</returns>
+      <param name="localName">Nome locale di cui verificare la corrispondenza.L'asterisco (*) è un valore speciale che corrisponde a tutti i tag.</param>
+      <param name="namespaceURI">URI dello spazio dei nomi da associare. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.HasAttribute(System.String)">
+      <summary>Determina se il nodo corrente dispone di un attributo con il nome specificato.</summary>
+      <returns>true se il nodo corrente dispone dell'attributo specificato, in caso contrario false.</returns>
+      <param name="name">Nome dell'attributo da individuare.Si tratta di un nome completo.che viene confrontato con la proprietà Name del nodo corrispondente.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.HasAttribute(System.String,System.String)">
+      <summary>Determina se il nodo corrente dispone di un attributo con il nome locale e l'URI dello spazio dei nomi specificati.</summary>
+      <returns>true se il nodo corrente dispone dell'attributo specificato, in caso contrario false.</returns>
+      <param name="localName">Nome locale dell'attributo da individuare. </param>
+      <param name="namespaceURI">URI dello spazio dei nomi dell'attributo da individuare. </param>
+    </member>
+    <member name="P:System.Xml.XmlElement.HasAttributes">
+      <summary>Ottiene un valore boolean che indica se il nodo corrente dispone di attributi.</summary>
+      <returns>true se il nodo corrente presenta degli attributi, in caso contrario false.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.InnerText">
+      <summary>Ottiene o imposta i valori concatenati del nodo e di tutti i relativi elementi figlio.</summary>
+      <returns>Valori concatenati del nodo e di tutti i relativi elementi figlio.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.InnerXml">
+      <summary>Ottiene o imposta il markup che rappresenta solo gli elementi figlio del nodo.</summary>
+      <returns>Markup degli elementi figlio del nodo.</returns>
+      <exception cref="T:System.Xml.XmlException">Il formato del file XML specificato al momento dell'impostazione della proprietà non è corretto. </exception>
+    </member>
+    <member name="P:System.Xml.XmlElement.IsEmpty">
+      <summary>Ottiene o imposta il formato dei tag dell'elemento.</summary>
+      <returns>Restituisce true se l'elemento deve essere serializzato nel formato tag breve "&lt;item/&gt;", false per il formato esteso "&lt;item&gt;&lt;/item&gt;".Se questa proprietà viene impostata su true, gli elementi figlio dell'elemento verranno rimossi e l'elemento verrà serializzato nel formato tag breve.Se impostata su false, il valore della proprietà verrà modificato indipendentemente dal fatto che l'elemento abbia o meno il contenuto. Se l'elemento è vuoto, verrà serializzato nel formato esteso.Questa proprietà è un'estensione Microsoft del modello DOM (Document Object Model).</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.LocalName">
+      <summary>Ottiene il nome locale del nodo corrente.</summary>
+      <returns>Nome del nodo corrente senza il prefisso.Il valore di LocalName per l'elemento &lt;bk:book&gt;, ad esempio, è book.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.Name">
+      <summary>Ottiene il nome completo del nodo.</summary>
+      <returns>Nome completo del nodo.Per i nodi XmlElement, il nome del tag dell'elemento.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NamespaceURI">
+      <summary>Ottiene l’URI dello spazio dei nomi del nodo.</summary>
+      <returns>URI dello spazio dei nomi del nodo.Se non vi è alcun URI dello spazio dei nomi, la proprietà restituisce String.Empty.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NextSibling">
+      <summary>Ottiene il nodo <see cref="T:System.Xml.XmlNode" /> immediatamente successivo all'elemento.</summary>
+      <returns>Nodo XmlNode immediatamente successivo all'elemento.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NodeType">
+      <summary>Ottiene il tipo di nodo corrente.</summary>
+      <returns>Tipo di nodo.Per i nodi XmlElement questo valore è XmlNodeType.Element.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.OwnerDocument">
+      <summary>Ottiene l'oggetto <see cref="T:System.Xml.XmlDocument" /> a cui appartiene il nodo.</summary>
+      <returns>XmlDocument a cui appartiene l'elemento.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.ParentNode"></member>
+    <member name="P:System.Xml.XmlElement.Prefix">
+      <summary>Ottiene o imposta il prefisso dello spazio dei nomi del nodo.</summary>
+      <returns>Prefisso dello spazio dei nomi del nodo.Se non è presente un prefisso, questa proprietà restituirà String.Empty.</returns>
+      <exception cref="T:System.ArgumentException">Il nodo è di sola lettura </exception>
+      <exception cref="T:System.Xml.XmlException">Il prefisso specificato contiene un carattere non valido.Il prefisso specificato non è corretto.L'URI dello spazio dei nomi del nodo è null.Il prefisso specificato è "xml" e l'URI dello spazio dei nomi del nodo è diverso da http://www.w3.org/XML/1998/namespace. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAll">
+      <summary>Rimuove tutti gli attributi e gli elementi figlio del nodo corrente.Gli attributi predefiniti non vengono rimossi.</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAllAttributes">
+      <summary>Rimuove dall'elemento tutti gli attributi specificati.Gli attributi predefiniti non vengono rimossi.</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttribute(System.String)">
+      <summary>Rimuove un attributo in base al nome.</summary>
+      <param name="name">Nome dell'attributo da rimuovere. Si tratta di un nome completoche viene confrontato con la proprietà Name del nodo corrispondente.</param>
+      <exception cref="T:System.ArgumentException">Il nodo è di sola lettura. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttribute(System.String,System.String)">
+      <summary>Rimuove un attributo con il nome locale e l'URI dello spazio dei nomi specificati. Se l'attributo rimosso ha un valore predefinito, viene sostituito immediatamente.</summary>
+      <param name="localName">Nome locale dell'attributo da rimuovere. </param>
+      <param name="namespaceURI">URI dello spazio dei nomi dell'attributo da rimuovere. </param>
+      <exception cref="T:System.ArgumentException">Il nodo è di sola lettura. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeAt(System.Int32)">
+      <summary>Rimuove dall'elemento il nodo dell'attributo con l'indice specificato. Se l'attributo rimosso ha un valore predefinito, viene sostituito immediatamente.</summary>
+      <returns>Nodo dell'attributo rimosso o null se non è presente un nodo a livello dell'indice specificato.</returns>
+      <param name="i">Indice del nodo da rimuovere.Il primo nodo ha indice 0.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeNode(System.String,System.String)">
+      <summary>Rimuove <see cref="T:System.Xml.XmlAttribute" /> specificato dal nome locale e dall'URI dello spazio dei nomi. Se l'attributo rimosso ha un valore predefinito, viene sostituito immediatamente.</summary>
+      <returns>XmlAttribute rimosso o null se l'elemento XmlElement non dispone di un nodo di attributo corrispondente.</returns>
+      <param name="localName">Nome locale dell'attributo. </param>
+      <param name="namespaceURI">URI dello spazio dei nomi dell'attributo. </param>
+      <exception cref="T:System.ArgumentException">Il nodo è di sola lettura. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeNode(System.Xml.XmlAttribute)">
+      <summary>Rimuove l'attributo <see cref="T:System.Xml.XmlAttribute" /> specificato.</summary>
+      <returns>XmlAttribute rimosso o null se <paramref name="oldAttr" /> non è un nodo di attributo dell'elemento XmlElement.</returns>
+      <param name="oldAttr">Nodo XmlAttribute da rimuovere.Se l'attributo rimosso ha un valore predefinito, viene sostituito immediatamente.</param>
+      <exception cref="T:System.ArgumentException">Il nodo è di sola lettura. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttribute(System.String,System.String)">
+      <summary>Imposta il valore dell'attributo con il nome specificato.</summary>
+      <param name="name">Nome dell'attributo da creare o modificare.Si tratta di un nome completo.Se il nome contiene i due punti, viene analizzato nei componenti del nome locale e del prefisso.</param>
+      <param name="value">Valore da impostare per l'attributo. </param>
+      <exception cref="T:System.Xml.XmlException">Il nome specificato contiene un carattere non valido. </exception>
+      <exception cref="T:System.ArgumentException">Il nodo è di sola lettura. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttribute(System.String,System.String,System.String)">
+      <summary>Imposta il valore dell'attributo con il nome locale e l'URI dello spazio dei nomi specificati.</summary>
+      <returns>Valore dell'attributo.</returns>
+      <param name="localName">Nome locale dell'attributo. </param>
+      <param name="namespaceURI">URI dello spazio dei nomi dell'attributo. </param>
+      <param name="value">Valore da impostare per l'attributo. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttributeNode(System.String,System.String)">
+      <summary>Aggiunge l'oggetto <see cref="T:System.Xml.XmlAttribute" /> specificato.</summary>
+      <returns>Oggetto XmlAttribute da aggiungere.</returns>
+      <param name="localName">Nome locale dell'attributo. </param>
+      <param name="namespaceURI">URI dello spazio dei nomi dell'attributo. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttributeNode(System.Xml.XmlAttribute)">
+      <summary>Aggiunge l'oggetto <see cref="T:System.Xml.XmlAttribute" /> specificato.</summary>
+      <returns>Se l'attributo sostituisce un attributo esistente con lo stesso nome, viene restituito XmlAttribute precedente, in caso contrario viene restituito null.</returns>
+      <param name="newAttr">Nodo XmlAttribute da aggiungere all'insieme di attributi per l'elemento. </param>
+      <exception cref="T:System.ArgumentException">L'attributo specificato in <paramref name="newAttr" /> è stato creato da un documento diverso da quello che ha creato il nodooppure il nodo è di sola lettura.</exception>
+      <exception cref="T:System.InvalidOperationException">L'attributo specificato in <paramref name="newAttr" /> è già attributo di un altro oggetto XmlElement.È necessario duplicare i nodi XmlAttribute in modo esplicito per riutilizzarli in altri oggetti XmlElement.</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Salva tutti gli elementi figlio del nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">XmlWriter nel quale si desidera eseguire il salvataggio. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.WriteTo(System.Xml.XmlWriter)">
+      <summary>Salva il nodo corrente nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">XmlWriter nel quale si desidera eseguire il salvataggio. </param>
+    </member>
+    <member name="T:System.Xml.XmlImplementation">
+      <summary>Definisce il contesto per un insieme di oggetti <see cref="T:System.Xml.XmlDocument" />.</summary>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.#ctor">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlImplementation" />.</summary>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.#ctor(System.Xml.XmlNameTable)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlImplementation" /> con la classe <see cref="T:System.Xml.XmlNameTable" /> specificata.</summary>
+      <param name="nt">Un oggetto <see cref="T:System.Xml.XmlNameTable" />.</param>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.CreateDocument">
+      <summary>Crea un nuovo oggetto <see cref="T:System.Xml.XmlDocument" />.</summary>
+      <returns>Nuovo oggetto XmlDocument.</returns>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.HasFeature(System.String,System.String)">
+      <summary>Verifica se l'implementazione DOM (Document Object Model) implementa una funzionalità specifica.</summary>
+      <returns>true se la funzionalità è implementata nella versione specificata, in caso contrario false.Nella tabella riportata di seguito vengono illustrate le combinazioni in base alle quali HasFeature restituisce true.strFeature strVersion XML 1.0 XML 2.0 </returns>
+      <param name="strFeature">Nome del package della funzionalità da verificare.Il nome non è soggetto alla distinzione tra maiuscole e minuscole.</param>
+      <param name="strVersion">Numero di versione del nome del package da verificare.Se la versione non è specificata (null), il supporto di qualsiasi versione della funzionalità induce il metodo a restituire true.</param>
+    </member>
+    <member name="T:System.Xml.XmlLinkedNode">
+      <summary>Ottiene il nodo immediatamente precedente o successivo a quello corrente.</summary>
+    </member>
+    <member name="P:System.Xml.XmlLinkedNode.NextSibling">
+      <summary>Ottiene il nodo immediatamente successivo a quello corrente.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> immediatamente successivo a quello corrente oppure null se non sono presenti altri nodi.</returns>
+    </member>
+    <member name="P:System.Xml.XmlLinkedNode.PreviousSibling">
+      <summary>Ottiene il nodo immediatamente precedente a quello corrente.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> precedente oppure null se non sono presenti altri nodi.</returns>
+    </member>
+    <member name="T:System.Xml.XmlNamedNodeMap">
+      <summary>Rappresenta un insieme di nodi accessibili per nome o per indice.</summary>
+    </member>
+    <member name="P:System.Xml.XmlNamedNodeMap.Count">
+      <summary>Ottiene il numero di nodi nell'oggetto XmlNamedNodeMap.</summary>
+      <returns>Numero di nodi.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetEnumerator">
+      <summary>Fornisce supporto per l'iterazione di stile "foreach" nell'insieme di nodi in XmlNamedNodeMap.</summary>
+      <returns>Oggetto enumeratore.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String)">
+      <summary>Recupera un nodo <see cref="T:System.Xml.XmlNode" /> specificato in base al nome.</summary>
+      <returns>Nodo XmlNode con il nome specificato o null se non viene rilevato un nodo corrispondente.</returns>
+      <param name="name">Nome completo del nodo da recuperare.Viene confrontato con la proprietà <see cref="P:System.Xml.XmlNode.Name" /> del nodo corrispondente.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String,System.String)">
+      <summary>Recupera un nodo con <see cref="P:System.Xml.XmlNode.LocalName" /> e <see cref="P:System.Xml.XmlNode.NamespaceURI" /> corrispondenti.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> con il nome locale e l'URI dello spazio dei nomi corrispondenti o null se non è stato rilevato un nodo corrispondente.</returns>
+      <param name="localName">Nome locale del nodo da recuperare.</param>
+      <param name="namespaceURI">URI (Uniform Resource Identifier) dello spazio dei nomi del nodo da recuperare.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.Item(System.Int32)">
+      <summary>Recupera il nodo in corrispondenza dell'indice specificato in XmlNamedNodeMap.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> in corrispondenza dell'indice specificato.Se <paramref name="index" /> è minore di 0 oppure maggiore o uguale alla proprietà <see cref="P:System.Xml.XmlNamedNodeMap.Count" />, viene restituito null.</returns>
+      <param name="index">Posizione di indice del nodo da recuperare da XmlNamedNodeMap.Poiché l'indice è in base zero, l'indice del primo nodo è 0 e l'indice dell'ultimo nodo è uguale a <see cref="P:System.Xml.XmlNamedNodeMap.Count" />-1.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String)">
+      <summary>Rimuove il nodo da XmlNamedNodeMap.</summary>
+      <returns>XmlNode rimosso da XmlNamedNodeMap o null se non è stato rilevato un nodo corrispondente.</returns>
+      <param name="name">Nome completo del nodo da recuperare.Il nome viene confrontato con la proprietà <see cref="P:System.Xml.XmlNode.Name" /> del nodo corrispondente.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String,System.String)">
+      <summary>Rimuove un nodo con i <see cref="P:System.Xml.XmlNode.LocalName" /> e <see cref="P:System.Xml.XmlNode.NamespaceURI" /> corrispondenti.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> rimosso o null se non è stato rilevato un nodo corrispondente.</returns>
+      <param name="localName">Nome locale del nodo da rimuovere.</param>
+      <param name="namespaceURI">URI dello spazio dei nomi del nodo da rimuovere.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.SetNamedItem(System.Xml.XmlNode)">
+      <summary>Aggiunge un oggetto <see cref="T:System.Xml.XmlNode" /> utilizzando la relativa proprietà <see cref="P:System.Xml.XmlNode.Name" />.</summary>
+      <returns>Se <paramref name="node" /> sostituisce un nodo esistente con lo stesso nome, verrà restituito il nodo precedente, in caso contrario verrà restituito null.</returns>
+      <param name="node">XmlNode da memorizzare in XmlNamedNodeMap.Se un nodo con tale nome è già presente nella mappa, verrà sostituito dal nuovo nodo.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="node" /> è stato creato da un <see cref="T:System.Xml.XmlDocument" /> differente da quello che ha creato XmlNamedNodeMap oppure XmlNamedNodeMap è di sola lettura.</exception>
+    </member>
+    <member name="T:System.Xml.XmlNode">
+      <summary>Rappresenta un singolo nodo nel documento XML. </summary>
+    </member>
+    <member name="M:System.Xml.XmlNode.AppendChild(System.Xml.XmlNode)">
+      <summary>Aggiunge il nodo specificato alla fine dell'elenco dei nodi figlio del nodo corrente.</summary>
+      <returns>Nodo aggiunto.</returns>
+      <param name="newChild">Nodo da aggiungere.L'intero contenuto del nodo da aggiungere viene spostato nel percorso specificato.</param>
+      <exception cref="T:System.InvalidOperationException">Per questo tipo di nodi non sono consentiti elementi figlio di tipo <paramref name="newChild" />.<paramref name="newChild" /> è un predecessore di questo nodo. </exception>
+      <exception cref="T:System.ArgumentException">Il nodo <paramref name="newChild" /> è stato creato da un documento diverso da quello che ha creato il nodo corrente.Il nodo è di sola lettura. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.Attributes">
+      <summary>Ottiene un oggetto <see cref="T:System.Xml.XmlAttributeCollection" /> contenente gli attributi del nodo.</summary>
+      <returns>XmlAttributeCollection contenente gli attributi del nodo.Se il tipo di nodo è XmlNodeType.Element, vengono restituiti gli attributi del nodo.In caso contrario la proprietà restituisce null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.BaseURI">
+      <summary>Ottiene l'URI di base del nodo corrente.</summary>
+      <returns>Percorso da cui è stato caricato il nodo o String.Empty se il nodo non dispone di un URI di base.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.ChildNodes">
+      <summary>Ottiene tutti i nodi figlio del nodo.</summary>
+      <returns>Oggetto contenente tutti i nodi figlio del nodo.Se non sono presenti nodi figlio, la proprietà restituisce un oggetto <see cref="T:System.Xml.XmlNodeList" /> vuoto.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.CloneNode(System.Boolean)">
+      <summary>Quando viene eseguito l'override in una classe derivata, crea un duplicato del nodo.</summary>
+      <returns>Nodo clonato.</returns>
+      <param name="deep">true per clonare in modo ricorsivo il sottoalbero del nodo specificato; false per clonare solo il nodo. </param>
+      <exception cref="T:System.InvalidOperationException">Viene effettuata una chiamata al metodo su un tipo di nodo che non può essere duplicato. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.FirstChild">
+      <summary>Ottiene il primo elemento figlio del nodo.</summary>
+      <returns>Primo elemento figlio del nodo.Se non è presente tale nodo, viene restituito null.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetEnumerator">
+      <summary>Ottiene un enumeratore che scorre i nodi figlio nel nodo corrente.</summary>
+      <returns>Oggetto <see cref="T:System.Collections.IEnumerator" /> che può essere usato per scorrere i nodi figlio del nodo corrente.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetNamespaceOfPrefix(System.String)">
+      <summary>Cerca la dichiarazione xmlns più vicina per il prefisso specificato nell'ambito del nodo corrente e restituisce l'URI dello spazio dei nomi in essa contenuto.</summary>
+      <returns>URI dello spazio dei nomi del prefisso specificato.</returns>
+      <param name="prefix">Prefisso di cui trovare l'URI dello spazio dei nomi. </param>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetPrefixOfNamespace(System.String)">
+      <summary>Cerca la dichiarazione xmlns più vicina per l'URI dello spazio dei nomi specificato nell'ambito del nodo corrente e restituisce il prefisso in essa definito.</summary>
+      <returns>Prefisso per l'URI dello spazio specificato.</returns>
+      <param name="namespaceURI">URI dello spazio dei nomi di cui trovare il prefisso. </param>
+    </member>
+    <member name="P:System.Xml.XmlNode.HasChildNodes">
+      <summary>Ottiene un valore che indica se il nodo dispone di nodi figlio.</summary>
+      <returns>true se il nodo presenta nodi figlio; in caso contrario, false.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.InnerText">
+      <summary>Ottiene o imposta i valori concatenati del nodo e di tutti i relativi nodi figlio.</summary>
+      <returns>Valori concatenati del nodo e di tutti i relativi nodi figlio.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.InnerXml">
+      <summary>Ottiene o imposta il markup che rappresenta solo i nodi figlio del nodo.</summary>
+      <returns>Markup dei nodi figlio del nodo.NotaInnerXml non restituisce attributi predefiniti.</returns>
+      <exception cref="T:System.InvalidOperationException">Viene impostata questa proprietà per un nodo che non può avere elementi figlio. </exception>
+      <exception cref="T:System.Xml.XmlException">Il formato del file XML specificato al momento dell'impostazione della proprietà non è corretto. </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Inserisce il nodo specificato immediatamente dopo il nodo dei riferimenti indicato.</summary>
+      <returns>Nodo da inserire.</returns>
+      <param name="newChild">Oggetto XmlNode da inserire. </param>
+      <param name="refChild">Oggetto XmlNode che rappresenta il nodo di riferimento.Il nodo <paramref name="newNode" /> è posizionato dopo il nodo <paramref name="refNode" />.</param>
+      <exception cref="T:System.InvalidOperationException">Per questo tipo di nodi non sono consentiti elementi figlio di tipo <paramref name="newChild" />.<paramref name="newChild" /> è un predecessore di questo nodo. </exception>
+      <exception cref="T:System.ArgumentException">Il nodo <paramref name="newChild" /> è stato creato da un documento diverso da quello che ha creato il nodo corrente.<paramref name="refChild" /> non è un nodo figlio del nodo correnteIl nodo è di sola lettura. </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Inserisce il nodo specificato immediatamente prima del nodo dei riferimenti indicato.</summary>
+      <returns>Nodo da inserire.</returns>
+      <param name="newChild">Oggetto XmlNode da inserire. </param>
+      <param name="refChild">Oggetto XmlNode che rappresenta il nodo di riferimento.Il nodo <paramref name="newChild" /> è posizionato prima del nodo corrente.</param>
+      <exception cref="T:System.InvalidOperationException">Per questo tipo di nodo non sono consentiti nodi figlio di tipo <paramref name="newChild" />.<paramref name="newChild" /> è un predecessore di questo nodo. </exception>
+      <exception cref="T:System.ArgumentException">Il nodo <paramref name="newChild" /> è stato creato da un documento diverso da quello che ha creato il nodo corrente.<paramref name="refChild" /> non è un nodo figlio del nodo correnteIl nodo è di sola lettura. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.IsReadOnly">
+      <summary>Ottiene un valore che indica se il nodo è di sola lettura.</summary>
+      <returns>true se il nodo è di sola lettura; in caso contrario, false.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Item(System.String)">
+      <summary>Ottiene il primo elemento figlio con il valore <see cref="P:System.Xml.XmlNode.Name" /> specificato.</summary>
+      <returns>Primo oggetto <see cref="T:System.Xml.XmlElement" /> il cui nome corrisponde a quello specificato. Restituisce un riferimento Null (Nothing in Visual Basic) se non esiste una corrispondenza.</returns>
+      <param name="name">Nome completo dell'elemento da recuperare. </param>
+    </member>
+    <member name="P:System.Xml.XmlNode.Item(System.String,System.String)">
+      <summary>Ottiene il primo elemento figlio con i valori <see cref="P:System.Xml.XmlNode.LocalName" /> e <see cref="P:System.Xml.XmlNode.NamespaceURI" /> specificati.</summary>
+      <returns>Primo oggetto <see cref="T:System.Xml.XmlElement" /> con <paramref name="localname" /> e <paramref name="ns" /> corrispondenti.. Restituisce un riferimento Null (Nothing in Visual Basic) se non esiste una corrispondenza.</returns>
+      <param name="localname">Nome locale dell'elemento. </param>
+      <param name="ns">URI dello spazio dei nomi dell'elemento. </param>
+    </member>
+    <member name="P:System.Xml.XmlNode.LastChild">
+      <summary>Ottiene l'ultimo elemento figlio del nodo.</summary>
+      <returns>Ultimo elemento figlio del nodo.Se non è presente tale nodo, viene restituito null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.LocalName">
+      <summary>Ottiene il nome locale del nodo, quando viene eseguito l'override in una classe derivata.</summary>
+      <returns>Nome del nodo senza prefisso.Ad esempio, il valore di LocalName per l'elemento &lt;bk:book&gt; è book.Il nome restituito dipende da <see cref="P:System.Xml.XmlNode.NodeType" /> del nodo: Tipo Nome Attributo Nome locale dell'attributo. CDATA #cdata-section Commento #comment Documento #document DocumentFragment #document-fragment DocumentType Nome del tipo di documento. Elemento Nome locale dell'elemento. Entità Nome dell'entità. EntityReference Nome dell'entità a cui si fa riferimento. Notation Nome della notazione. ProcessingInstruction Destinazione dell'istruzione di elaborazione. Text #text Whitespace #whitespace SignificantWhitespace #significant-whitespace XmlDeclaration #xml-declaration </returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Name">
+      <summary>Ottiene il nome completo del nodo quando viene eseguito l'override in una classe derivata.</summary>
+      <returns>Nome completo del nodo.Il nome restituito dipende da <see cref="P:System.Xml.XmlNode.NodeType" /> del nodo:Tipo Nome Attributo Nome completo dell'attributo. CDATA #cdata-section Commento #comment Documento #document DocumentFragment #document-fragment DocumentType Nome del tipo di documento. Elemento Nome completo dell'elemento. Entità Nome dell'entità. EntityReference Nome dell'entità a cui si fa riferimento. Notation Nome della notazione. ProcessingInstruction Destinazione dell'istruzione di elaborazione. Text #text Whitespace #whitespace SignificantWhitespace #significant-whitespace XmlDeclaration #xml-declaration </returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NamespaceURI">
+      <summary>Ottiene l'URI dello spazio dei nomi del nodo.</summary>
+      <returns>URI dello spazio dei nomi del nodo.Se non è presente un URI dello spazio dei nomi, la proprietà restituisce String.Empty.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NextSibling">
+      <summary>Ottiene il nodo immediatamente successivo a quello corrente.</summary>
+      <returns>Oggetto XmlNode successivo.Se non è presente un nodo successivo, viene restituito null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NodeType">
+      <summary>Ottiene il tipo del nodo corrente quando viene eseguito l'override in una classe derivata.</summary>
+      <returns>Uno dei valori di <see cref="T:System.Xml.XmlNodeType" />.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.Normalize">
+      <summary>Inserisce tutti i nodi XmlText nell'intero sottoalbero del nodo XmlNode corrente in un formato standard in cui tali nodi sono separati solo tramite markup, ovvero tag, commenti, istruzioni di elaborazione, sezioni CDATA e riferimenti a entità, pertanto, non vi sono nodi XmlText adiacenti.</summary>
+    </member>
+    <member name="P:System.Xml.XmlNode.OuterXml">
+      <summary>Ottiene il markup che contiene questo nodo e tutti i relativi nodi figlio.</summary>
+      <returns>Markup che contiene il nodo e tutti i relativi nodi figlio.NotaOuterXml non restituisce attributi predefiniti.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.OwnerDocument">
+      <summary>Ottiene l'oggetto <see cref="T:System.Xml.XmlDocument" /> a cui appartiene il nodo.</summary>
+      <returns>Oggetto <see cref="T:System.Xml.XmlDocument" /> a cui appartiene il nodo.Se il nodo è un oggetto <see cref="T:System.Xml.XmlDocument" />, ossia se NodeType equivale a XmlNodeType.Document, la proprietà restituisce null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.ParentNode">
+      <summary>Ottiene l'elemento padre del nodo, nel caso di nodi che dispongono di elementi padre.</summary>
+      <returns>XmlNode che rappresenta l'elemento padre del nodo corrente.Se il nodo è stato appena creato e non ancora aggiunto all'albero oppure se è stato rimosso dall'albero, il valore che rappresenta il nodo padre è null.Per tutti gli altri nodi, il valore restituito dipende dalla proprietà <see cref="P:System.Xml.XmlNode.NodeType" /> del nodo. La tabella seguente contiene i possibili valori restituiti della proprietà ParentNode.NodeType Valore di ParentNode restituito Attribute, Document, DocumentFragment, Entity, Notation Restituisce null. Questi nodi non dispongono di elementi padre. CDATA Restituisce l'elemento o il riferimento all'entità contenente la sezione CDATA. Commento Restituisce l'elemento, il riferimento all'entità, il tipo di documento o il documento contenente il commento. DocumentType Restituisce il nodo documento. Elemento Restituisce il nodo padre dell'elemento.Se l'elemento è il nodo radice dell'albero, il nodo padre è il nodo documento.EntityReference Restituisce l'elemento, l'attributo o il riferimento all'entità contenente il riferimento all'entità. ProcessingInstruction Restituisce il documento, l'elemento, il tipo di documento o il riferimento all'entità contenente l'istruzione di elaborazione. Text Restituisce l'elemento, l'attributo o il riferimento all'entità padre contenente il nodo di testo. </returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Prefix">
+      <summary>Ottiene o imposta il prefisso dello spazio dei nomi del nodo.</summary>
+      <returns>Prefisso dello spazio dei nomi del nodo.Ad esempio, il valore di Prefix per l'elemento &lt;bk:book&gt; è bk.Se non è presente un prefisso, questa proprietà restituisce String.Empty.</returns>
+      <exception cref="T:System.ArgumentException">Il nodo è di sola lettura. </exception>
+      <exception cref="T:System.Xml.XmlException">Il prefisso specificato contiene un carattere non valido.Il prefisso specificato non è corretto.Il prefisso specificato è "xml" e l'URI dello spazio dei nomi del nodo è diverso da "http://www.w3.org/XML/1998/namespace" (informazioni in lingua inglese).Il nodo è un attributo, il prefisso specificato è "xmlns" e l'URI dello spazio dei nomi è diverso da "http://www.w3.org/2000/xmlns/" (informazioni in lingua inglese).Il nodo è un attributo e il suo nome completo è "xmlns". </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.PrependChild(System.Xml.XmlNode)">
+      <summary>Aggiunge il nodo specificato all'inizio dell'elenco dei nodi figlio del nodo corrente.</summary>
+      <returns>Nodo aggiunto.</returns>
+      <param name="newChild">Nodo da aggiungere.L'intero contenuto del nodo da aggiungere viene spostato nel percorso specificato.</param>
+      <exception cref="T:System.InvalidOperationException">Per questo tipo di nodi non sono consentiti elementi figlio di tipo <paramref name="newChild" />.<paramref name="newChild" /> è un predecessore di questo nodo. </exception>
+      <exception cref="T:System.ArgumentException">Il nodo <paramref name="newChild" /> è stato creato da un documento diverso da quello che ha creato il nodo corrente.Il nodo è di sola lettura. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.PreviousSibling">
+      <summary>Ottiene il nodo immediatamente precedente a quello corrente.</summary>
+      <returns>XmlNode precedente.In mancanza di nodi precedenti, viene restituito null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.PreviousText">
+      <summary>Ottiene il nodo di testo immediatamente precedente a quello corrente.</summary>
+      <returns>Restituisce <see cref="T:System.Xml.XmlNode" />.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.RemoveAll">
+      <summary>Rimuove tutti gli elementi figlio e/o gli attributi del nodo corrente.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)">
+      <summary>Rimuove il nodo figlio specificato.</summary>
+      <returns>Nodo rimosso.</returns>
+      <param name="oldChild">Nodo da rimuovere. </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="oldChild" /> non è un nodo figlio del nodo correnteoppure il nodo è di sola lettura.</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Sostituisce il nodo figlio <paramref name="oldChild" /> con il nodo <paramref name="newChild" />.</summary>
+      <returns>Nodo sostituito.</returns>
+      <param name="newChild">Nuovo nodo da inserire nell'elenco dei nodi figlio. </param>
+      <param name="oldChild">Nodo da sostituire nell'elenco. </param>
+      <exception cref="T:System.InvalidOperationException">Per questo tipo di nodi non sono consentiti elementi figlio di tipo <paramref name="newChild" />.<paramref name="newChild" /> è un predecessore di questo nodo. </exception>
+      <exception cref="T:System.ArgumentException">Il nodo <paramref name="newChild" /> è stato creato da un documento diverso da quello che ha creato il nodo corrente.Il nodo è di sola lettura.<paramref name="oldChild" /> non è un nodo figlio del nodo corrente </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.Supports(System.String,System.String)">
+      <summary>Verifica se l'implementazione DOM implementa una funzionalità specifica.</summary>
+      <returns>true se la funzionalità è implementata nella versione specificata; in caso contrario, false.La tabella seguente illustra le combinazioni che restituiscono true.Funzionalità Versione XML 1.0 XML 2.0 </returns>
+      <param name="feature">Nome del pacchetto della funzionalità da verificare.Il nome non è soggetto alla distinzione tra maiuscole e minuscole.</param>
+      <param name="version">Versione del nome del pacchetto da verificare.Se la versione non è specificata (null), il supporto di qualsiasi versione della funzionalità induce il metodo a restituire true.</param>
+    </member>
+    <member name="M:System.Xml.XmlNode.System#Collections#IEnumerable#GetEnumerator">
+      <summary>Per una descrizione di questo membro, vedere <see cref="M:System.Xml.XmlNode.GetEnumerator" />.</summary>
+      <returns>Restituisce un enumeratore per la raccolta.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Value">
+      <summary>Ottiene o imposta il valore del nodo.</summary>
+      <returns>Il valore restituito dipende dalla proprietà <see cref="P:System.Xml.XmlNode.NodeType" /> del nodo:  Tipo Valore Attributo Valore dell'attributo. CDATASection Contenuto della sezione CDATA. Commento Contenuto del commento. Documento null. DocumentFragment null. DocumentType null. Elemento null.È possibile utilizzare la proprietà <see cref="P:System.Xml.XmlElement.InnerText" /> o <see cref="P:System.Xml.XmlElement.InnerXml" /> per accedere al valore del nodo elemento.Entità null. EntityReference null. Notation null. ProcessingInstruction Intero contenuto, ad eccezione della destinazione. Text Contenuto del nodo di testo. SignificantWhitespace Caratteri spazio vuoto.Gli spazi vuoti sono costituiti da uno o più caratteri spazio, ritorno a capo, avanzamento riga o tabulazione.Whitespace Caratteri spazio vuoto.Gli spazi vuoti sono costituiti da uno o più caratteri spazio, ritorno a capo, avanzamento riga o tabulazione.XmlDeclaration  Contenuto della dichiarazione, ovvero tutti i valori compresi tra &lt;?xml e ?&gt;. </returns>
+      <exception cref="T:System.ArgumentException">Viene impostato il valore di un nodo in sola lettura. </exception>
+      <exception cref="T:System.InvalidOperationException">Viene impostato un valore per un nodo che non deve disporre di alcun valore, ad esempio un nodo Element. </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Salva tutti i nodi figlio del nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato, quando viene eseguito l'override in una classe derivata.</summary>
+      <param name="w">Oggetto XmlWriter in cui salvare. </param>
+    </member>
+    <member name="M:System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)">
+      <summary>Salva il nodo corrente nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato, quando viene eseguito l'override in una classe derivata.</summary>
+      <param name="w">Oggetto XmlWriter in cui salvare. </param>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedAction">
+      <summary>Specifica il tipo di modifica del nodo.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Change">
+      <summary>È stato modificato il valore di un nodo.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Insert">
+      <summary>È stato inserito un nodo nella struttura ad albero.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Remove">
+      <summary>È stato rimosso un nodo dalla struttura ad albero.</summary>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedEventArgs">
+      <summary>Fornisce dati per gli eventi <see cref="E:System.Xml.XmlDocument.NodeChanged" />, <see cref="E:System.Xml.XmlDocument.NodeChanging" />, <see cref="E:System.Xml.XmlDocument.NodeInserted" />, <see cref="E:System.Xml.XmlDocument.NodeInserting" />, <see cref="E:System.Xml.XmlDocument.NodeRemoved" /> e <see cref="E:System.Xml.XmlDocument.NodeRemoving" />.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeChangedEventArgs.#ctor(System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.String,System.Xml.XmlNodeChangedAction)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlNodeChangedEventArgs" />.</summary>
+      <param name="node">
+        <see cref="T:System.Xml.XmlNode" /> che ha generato l'evento.</param>
+      <param name="oldParent">Precedente elemento padre <see cref="T:System.Xml.XmlNode" /> dell'oggetto <see cref="T:System.Xml.XmlNode" /> che ha generato l'evento.</param>
+      <param name="newParent">Nuovo elemento padre <see cref="T:System.Xml.XmlNode" /> dell'oggetto <see cref="T:System.Xml.XmlNode" /> che ha generato l'evento.</param>
+      <param name="oldValue">Valore precedente dell'oggetto <see cref="T:System.Xml.XmlNode" /> che ha generato l'evento.</param>
+      <param name="newValue">Nuovo valore dell'oggetto <see cref="T:System.Xml.XmlNode" /> che ha generato l'evento.</param>
+      <param name="action">Campo <see cref="T:System.Xml.XmlNodeChangedAction" />.</param>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.Action">
+      <summary>Ottiene un valore che indica il tipo di evento di modifica del nodo in corso.</summary>
+      <returns>Valore XmlNodeChangedAction che descrive l'evento di modifica del nodo.Valore XmlNodeChangedAction Descrizione INS È stato inserito o verrà inserito un nodo. Rimozione È stato rimosso o verrà rimosso un nodo. Modifica È stato modificato o verrà modificato un nodo. NotaIl valore Action non consente di distinguere quando l'evento si è verificato (prima o dopo).È possibile creare gestori eventi diversi per gestire entrambe le istanze.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.NewParent">
+      <summary>Ottiene il valore di <see cref="P:System.Xml.XmlNode.ParentNode" /> dopo che l'operazione è stata completata.</summary>
+      <returns>Valore di ParentNode dopo che l'operazione è stata completata.Se il nodo viene rimosso, la proprietà restituirà null.NotaPer i nodi attributo la proprietà restituisce <see cref="P:System.Xml.XmlAttribute.OwnerElement" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.NewValue">
+      <summary>Ottiene il nuovo valore del nodo.</summary>
+      <returns>Nuovo valore del nodo.Questa proprietà restituisce null se il nodo non è un attributo né un nodo di testo oppure se il nodo viene rimosso.Se viene chiamato in un evento <see cref="E:System.Xml.XmlDocument.NodeChanging" />, NewValue restituisce il valore del nodo se la modifica ha esito positivo.Se viene chiamato in un evento <see cref="E:System.Xml.XmlDocument.NodeChanged" />, NewValue restituisce il valore corrente del nodo.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.Node">
+      <summary>Ottiene il nodo <see cref="T:System.Xml.XmlNode" /> che viene aggiunto, rimosso o modificato.</summary>
+      <returns>Nodo XmlNode che viene aggiunto, rimosso o modificato. La proprietà non restituisce mai null.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.OldParent">
+      <summary>Ottiene il valore di <see cref="P:System.Xml.XmlNode.ParentNode" /> prima dell'inizio dell'operazione.</summary>
+      <returns>Valore di ParentNode prima dell'inizio dell'operazione.Questa proprietà restituisce null se il nodo non dispone di un nodo padre.NotaPer i nodi attributo la proprietà restituisce <see cref="P:System.Xml.XmlAttribute.OwnerElement" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.OldValue">
+      <summary>Ottiene il valore originale del nodo.</summary>
+      <returns>Valore originale del nodo.Questa proprietà restituisce null se il nodo non è un attributo né un nodo di testo oppure se il nodo viene inserito.Se viene chiamato in un evento <see cref="E:System.Xml.XmlDocument.NodeChanging" />, OldValue restituisce il valore corrente del nodo che verrà sostituito se la modifica ha esito positivo.Se viene chiamato in un evento <see cref="E:System.Xml.XmlDocument.NodeChanged" />, OldValue restituisce il valore del nodo prima della modifica.</returns>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedEventHandler">
+      <summary>Rappresenta il metodo che gestisce gli eventi <see cref="E:System.Xml.XmlDocument.NodeChanged" />, <see cref="E:System.Xml.XmlDocument.NodeChanging" />, <see cref="E:System.Xml.XmlDocument.NodeInserted" />, <see cref="E:System.Xml.XmlDocument.NodeInserting" />, <see cref="E:System.Xml.XmlDocument.NodeRemoved" /> e <see cref="E:System.Xml.XmlDocument.NodeRemoving" />.</summary>
+      <param name="sender">Origine dell'evento. </param>
+      <param name="e">Oggetto <see cref="T:System.Xml.XmlNodeChangedEventArgs" /> che contiene i dati dell'evento. </param>
+    </member>
+    <member name="T:System.Xml.XmlNodeList">
+      <summary>Rappresenta un insieme ordinato di nodi.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.#ctor">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlNodeList" />.</summary>
+    </member>
+    <member name="P:System.Xml.XmlNodeList.Count">
+      <summary>Ottiene il numero di nodi nell'elenco XmlNodeList.</summary>
+      <returns>Numero di nodi nell'oggetto XmlNodeList.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.GetEnumerator">
+      <summary>Ottiene un enumeratore che consente di scorrere la raccolta di nodi.</summary>
+      <returns>Enumeratore che consente di scorrere la raccolta di nodi.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.Item(System.Int32)">
+      <summary>Recupera un nodo in corrispondenza dell'indice specificato.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> con l'indice specificato nella raccolta.Se <paramref name="index" /> è maggiore o uguale al numero di nodi nell'elenco, viene restituito null.</returns>
+      <param name="index">Indice in base zero nell'elenco dei nodi.</param>
+    </member>
+    <member name="P:System.Xml.XmlNodeList.ItemOf(System.Int32)">
+      <summary>Ottiene un nodo in corrispondenza dell'indice specificato.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" /> con l'indice specificato nella raccolta.Se l'indice è maggiore o uguale al numero di nodi nell'elenco, viene restituito null.</returns>
+      <param name="i">Indice in base zero nell'elenco dei nodi.</param>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.PrivateDisposeNodeList">
+      <summary>Elimina le risorse nell'elenco di nodi privatamente.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.System#IDisposable#Dispose">
+      <summary>Rilascia tutte le risorse utilizzate dalla classe <see cref="T:System.Xml.XmlNodeList" />.</summary>
+    </member>
+    <member name="T:System.Xml.XmlProcessingInstruction">
+      <summary>Rappresenta un'istruzione di elaborazione, definita dal codice XML per mantenere le informazioni specifiche del processore nel testo del documento.</summary>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.#ctor(System.String,System.String,System.Xml.XmlDocument)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlProcessingInstruction" />.</summary>
+      <param name="target">Destinazione dell'istruzione di elaborazione; vedere la proprietà <see cref="P:System.Xml.XmlProcessingInstruction.Target" />.</param>
+      <param name="data">Contenuto dell'istruzione; vedere la proprietà <see cref="P:System.Xml.XmlProcessingInstruction.Data" />.</param>
+      <param name="doc">Documento XML padre.</param>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.CloneNode(System.Boolean)">
+      <summary>Crea un duplicato del nodo.</summary>
+      <returns>Nodo duplicato.</returns>
+      <param name="deep">true per clonare in modo ricorsivo il sottoalbero del nodo specificato; false per clonare solo il nodo. </param>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Data">
+      <summary>Ottiene o imposta il contenuto dell'istruzione di elaborazione, esclusa la destinazione.</summary>
+      <returns>Contenuto dell'istruzione di elaborazione, esclusa la destinazione.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.InnerText">
+      <summary>Ottiene o imposta i valori concatenati del nodo e di tutti i relativi elementi figlio.</summary>
+      <returns>Valori concatenati del nodo e di tutti i relativi elementi figlio.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.LocalName">
+      <summary>Ottiene il nome locale del nodo.</summary>
+      <returns>Per i nodi dell'istruzione di elaborazione, questa proprietà restituisce la destinazione dell'istruzione di elaborazione.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Name">
+      <summary>Ottiene il nome completo del nodo.</summary>
+      <returns>Per i nodi dell'istruzione di elaborazione, questa proprietà restituisce la destinazione dell'istruzione di elaborazione.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.NodeType">
+      <summary>Ottiene il tipo di nodo corrente.</summary>
+      <returns>Per i nodi XmlProcessingInstruction, questo valore è XmlNodeType.ProcessingInstruction.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Target">
+      <summary>Ottiene la destinazione dell'istruzione di elaborazione.</summary>
+      <returns>Destinazione dell'istruzione di elaborazione.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Value">
+      <summary>Ottiene o imposta il valore del nodo.</summary>
+      <returns>Contenuto completo dell'istruzione di elaborazione, esclusa la destinazione.</returns>
+      <exception cref="T:System.ArgumentException">Node is read-only. </exception>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Salva tutti gli elementi figlio del nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.Poiché i nodi ProcessingInstruction non contengono nodi figlio, questo metodo non ha alcun effetto.</summary>
+      <param name="w">Oggetto XmlWriter in cui salvare. </param>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.WriteTo(System.Xml.XmlWriter)">
+      <summary>Salva il nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">Oggetto XmlWriter in cui salvare. </param>
+    </member>
+    <member name="T:System.Xml.XmlSignificantWhitespace">
+      <summary>Rappresenta uno spazio vuoto tra markup in un nodo a contenuto misto oppure uno spazio vuoto all'interno di un ambito xml:space='preserve'.È indicato anche come spazio vuoto significativo.</summary>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlSignificantWhitespace" />.</summary>
+      <param name="strData">Caratteri di spazio del nodo.</param>
+      <param name="doc">Oggetto <see cref="T:System.Xml.XmlDocument" />.</param>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.CloneNode(System.Boolean)">
+      <summary>Crea un duplicato del nodo.</summary>
+      <returns>Nodo clonato.</returns>
+      <param name="deep">true per clonare in modo ricorsivo il sottoalbero del nodo specificato; false per clonare solo il nodo.Per i nodi spazi vuoti significativi, il nodo duplicato include sempre il valore indipendentemente all'impostazione dei parametri.</param>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.LocalName">
+      <summary>Ottiene il nome locale del nodo.</summary>
+      <returns>Per i nodi XmlSignificantWhitespace, questa proprietà restituisce #significant-whitespace.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.Name">
+      <summary>Ottiene il nome completo del nodo.</summary>
+      <returns>Per i nodi XmlSignificantWhitespace, questa proprietà restituisce #significant-whitespace.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.NodeType">
+      <summary>Ottiene il tipo di nodo corrente.</summary>
+      <returns>Per i nodi XmlSignificantWhitespace, il valore è XmlNodeType.SignificantWhitespace.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.ParentNode">
+      <summary>Ottiene l'elemento padre del nodo corrente.</summary>
+      <returns>Nodo padre <see cref="T:System.Xml.XmlNode" /> del nodo corrente.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.PreviousText">
+      <summary>Ottiene il nodo di testo immediatamente precedente a quello corrente.</summary>
+      <returns>Restituisce <see cref="T:System.Xml.XmlNode" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.Value">
+      <summary>Ottiene o imposta il valore del nodo.</summary>
+      <returns>Caratteri spazio vuoto individuati nel nodo.</returns>
+      <exception cref="T:System.ArgumentException">Impostazione di Value su caratteri spazio vuoto non validi. </exception>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Salva tutti gli elementi figlio del nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">Oggetto XmlWriter in cui salvare. </param>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.WriteTo(System.Xml.XmlWriter)">
+      <summary>Salva il nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">Oggetto XmlWriter in cui salvare. </param>
+    </member>
+    <member name="T:System.Xml.XmlText">
+      <summary>Rappresenta il contenuto di testo di un elemento o attributo.</summary>
+    </member>
+    <member name="M:System.Xml.XmlText.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlText" />.</summary>
+      <param name="strData">Contenuto del nodo; vedere la proprietà <see cref="P:System.Xml.XmlText.Value" />.</param>
+      <param name="doc">Documento XML padre.</param>
+    </member>
+    <member name="M:System.Xml.XmlText.CloneNode(System.Boolean)">
+      <summary>Crea un duplicato del nodo.</summary>
+      <returns>Nodo clonato.</returns>
+      <param name="deep">true per clonare in modo ricorsivo il sottoalbero del nodo specificato; false per clonare solo il nodo. </param>
+    </member>
+    <member name="P:System.Xml.XmlText.LocalName">
+      <summary>Ottiene il nome locale del nodo.</summary>
+      <returns>Per i nodi di testo, questa proprietà restituisce #text.</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.Name">
+      <summary>Ottiene il nome completo del nodo.</summary>
+      <returns>Per i nodi di testo, questa proprietà restituisce #text.</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.NodeType">
+      <summary>Ottiene il tipo di nodo corrente.</summary>
+      <returns>Per i nodi di testo, il valore è XmlNodeType.Text.</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.ParentNode"></member>
+    <member name="P:System.Xml.XmlText.PreviousText">
+      <summary>Ottiene il nodo di testo immediatamente precedente a quello corrente.</summary>
+      <returns>Restituisce <see cref="T:System.Xml.XmlNode" />.</returns>
+    </member>
+    <member name="M:System.Xml.XmlText.SplitText(System.Int32)">
+      <summary>Divide il nodo in due nodi in corrispondenza dell'offset specificato, mantenendoli entrambi nell'albero come oggetti di pari livello.</summary>
+      <returns>Nuovo nodo.</returns>
+      <param name="offset">Offset in corrispondenza del quale dividere il nodo. </param>
+    </member>
+    <member name="P:System.Xml.XmlText.Value">
+      <summary>Ottiene o imposta il valore del nodo.</summary>
+      <returns>Contenuto del nodo di testo.</returns>
+    </member>
+    <member name="M:System.Xml.XmlText.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Salva tutti gli elementi figlio del nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.I nodi XmlText non hanno elementi figlio, perciò questo metodo non ha alcuna efficacia.</summary>
+      <param name="w">Oggetto XmlWriter in cui salvare. </param>
+    </member>
+    <member name="M:System.Xml.XmlText.WriteTo(System.Xml.XmlWriter)">
+      <summary>Salva il nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">Oggetto XmlWriter in cui salvare. </param>
+    </member>
+    <member name="T:System.Xml.XmlWhitespace">
+      <summary>Rappresenta uno spazio vuoto nel contenuto dell'elemento.</summary>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Inizializza una nuova istanza della classe <see cref="T:System.Xml.XmlWhitespace" />.</summary>
+      <param name="strData">Caratteri di spazio del nodo.</param>
+      <param name="doc">Oggetto <see cref="T:System.Xml.XmlDocument" />.</param>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.CloneNode(System.Boolean)">
+      <summary>Crea un duplicato del nodo.</summary>
+      <returns>Nodo clonato.</returns>
+      <param name="deep">true per clonare in modo ricorsivo il sottoalbero del nodo specificato; false per clonare solo il nodo.Per i nodi spazi vuoti, il nodo duplicato include sempre il valore indipendentemente all'impostazione dei parametri.</param>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.LocalName">
+      <summary>Ottiene il nome locale del nodo.</summary>
+      <returns>Per i nodi XmlWhitespace, questa proprietà restituisce #whitespace.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.Name">
+      <summary>Ottiene il nome completo del nodo.</summary>
+      <returns>Per i nodi XmlWhitespace, questa proprietà restituisce #whitespace.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.NodeType">
+      <summary>Ottiene il tipo di nodo.</summary>
+      <returns>Per i nodi XmlWhitespace, il valore è <see cref="F:System.Xml.XmlNodeType.Whitespace" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.ParentNode">
+      <summary>Ottiene l'elemento padre del nodo corrente.</summary>
+      <returns>Nodo padre <see cref="T:System.Xml.XmlNode" /> del nodo corrente.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.PreviousText">
+      <summary>Ottiene il nodo di testo immediatamente precedente a quello corrente.</summary>
+      <returns>Restituisce <see cref="T:System.Xml.XmlNode" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.Value">
+      <summary>Ottiene o imposta il valore del nodo.</summary>
+      <returns>Caratteri spazio vuoto individuati nel nodo.</returns>
+      <exception cref="T:System.ArgumentException">Impostazione di <see cref="P:System.Xml.XmlWhitespace.Value" /> su caratteri spazio vuoto non validi. </exception>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Salva tutti gli elementi figlio del nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">Oggetto <see cref="T:System.Xml.XmlWriter" /> in cui salvare. </param>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.WriteTo(System.Xml.XmlWriter)">
+      <summary>Salva il nodo nell'oggetto <see cref="T:System.Xml.XmlWriter" /> specificato.</summary>
+      <param name="w">Oggetto <see cref="T:System.Xml.XmlWriter" /> in cui salvare.</param>
+    </member>
+  </members>
+</doc>

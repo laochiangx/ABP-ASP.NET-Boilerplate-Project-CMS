@@ -1,0 +1,1443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Xml.XmlDocument</name>
+  </assembly>
+  <members>
+    <member name="T:System.Xml.XmlAttribute">
+      <summary>Stellt ein Attribut dar.Gültige Werte und Standardwerte für Attribute werden in einer DTD (Document Type Definition) oder in einem Schema angegeben.</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlAttribute" />-Klasse.</summary>
+      <param name="prefix">Das Namespacepräfix.</param>
+      <param name="localName">Der lokale Name des Attributs.</param>
+      <param name="namespaceURI">Der URI (Uniform Resource Identifier) des Namespaces.</param>
+      <param name="doc">Das übergeordnete XML-Dokument.</param>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.AppendChild(System.Xml.XmlNode)">
+      <summary>Fügt den angegebenen Knoten am Ende der Liste der untergeordneten Knoten dieses Knotens hinzu.</summary>
+      <returns>Der hinzugefügte <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="newChild">Die zu addierende <see cref="T:System.Xml.XmlNode" />.</param>
+      <exception cref="T:System.InvalidOperationException">Der Typ dieses Knotens lässt keine untergeordneten Knoten vom Typ des <paramref name="newChild" />-Knotens zu.<paramref name="newChild" /> ist eine frühere Version dieses Knotens.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> wurde nicht aus dem Dokument erstellt, aus dem dieser Knoten erstellt wurde.Dieser Knoten ist schreibgeschützt.</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.BaseURI">
+      <summary>Ruft den Basis-URI (Uniform Resource Identifier) des Knotens ab.</summary>
+      <returns>Die Position, aus der der Knoten geladen wurde oder String.Empty, wenn der Knoten über keinen Basis-URI verfügt.Attributknoten haben die gleiche Basis-URI wie das Besitzerelement.Wenn ein Attributknoten kein Besitzerelement aufweist, gibt BaseURI String.Empty zurück.</returns>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.CloneNode(System.Boolean)">
+      <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+      <returns>Das Knotenduplikat.</returns>
+      <param name="deep">true, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, false, wenn nur der Knoten selbst geklont werden soll. </param>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.InnerText">
+      <summary>Legt die verketteten Werte des Knotens und aller diesem untergeordneten Elemente fest.</summary>
+      <returns>Die verketteten Werte des Knotens und aller diesem untergeordneten Elemente.Bei Attributknoten verfügt diese Eigenschaft über dieselben Funktionen wie die <see cref="P:System.Xml.XmlAttribute.Value" />-Eigenschaft.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.InnerXml">
+      <summary>Legt den Wert des Attributs fest.</summary>
+      <returns>Der Attributwert.</returns>
+      <exception cref="T:System.Xml.XmlException">Der beim Festlegen dieser Eigenschaft angegebene XML-Code ist nicht wohlgeformt.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Fügt den angegebenen Knoten unmittelbar hinter dem angegebenen Verweisknoten ein.</summary>
+      <returns>Der eingefügte <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="newChild">Die einzufügende <see cref="T:System.Xml.XmlNode" />.</param>
+      <param name="refChild">Der <see cref="T:System.Xml.XmlNode" />, der der Verweisknoten ist.<paramref name="newChild" /> wird hinter <paramref name="refChild" /> platziert.</param>
+      <exception cref="T:System.InvalidOperationException">Der Typ dieses Knotens lässt keine untergeordneten Knoten vom Typ des <paramref name="newChild" />-Knotens zu.<paramref name="newChild" /> ist eine frühere Version dieses Knotens.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> wurde nicht aus dem Dokument erstellt, aus dem dieser Knoten erstellt wurde.<paramref name="refChild" /> ist kein untergeordnetes Element dieses Knotens.Dieser Knoten ist schreibgeschützt.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Fügt den angegebenen Knoten direkt vor dem angegebenen Verweisknoten ein.</summary>
+      <returns>Der eingefügte <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="newChild">Die einzufügende <see cref="T:System.Xml.XmlNode" />.</param>
+      <param name="refChild">Der <see cref="T:System.Xml.XmlNode" />, der der Verweisknoten ist.<paramref name="newChild" /> wird vor diesem Knoten platziert.</param>
+      <exception cref="T:System.InvalidOperationException">Der Typ des aktuellen Knotens lässt keine untergeordneten Knoten vom Typ des <paramref name="newChild" />-Knotens zu.<paramref name="newChild" /> ist eine frühere Version dieses Knotens.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> wurde nicht aus dem Dokument erstellt, aus dem dieser Knoten erstellt wurde.<paramref name="refChild" /> ist kein untergeordnetes Element dieses Knotens.Dieser Knoten ist schreibgeschützt.</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.LocalName">
+      <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+      <returns>Der Name des Attributknotens ohne das Präfix.Im folgenden Beispiel &lt;book bk:genre= 'novel'&gt; ist der LocalName des Attributs genre.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Name">
+      <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+      <returns>Der gekennzeichnete Name des Attributknotens.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.NamespaceURI">
+      <summary>Ruft den Namespace-URI dieses Knotens ab.</summary>
+      <returns>Der Namespace-URI dieses Knotens.Wenn für dieses Attribut nicht explizit ein Namespace angegeben wird, gibt diese Eigenschaft String.Empty zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.NodeType">
+      <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+      <returns>Der Knotentyp für XmlAttribute-Knoten ist XmlNodeType.Attribute.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.OwnerDocument">
+      <summary>Ruft das <see cref="T:System.Xml.XmlDocument" /> ab, zu dem dieser Knoten gehört.</summary>
+      <returns>Ein XML-Dokument, zu dem dieser Knoten gehört.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.OwnerElement">
+      <summary>Ruft das <see cref="T:System.Xml.XmlElement" /> ab, zu dem das Attribut gehört.</summary>
+      <returns>Das XmlElement, zu dem das Attribut gehört, oder null, wenn dieses Attribut nicht Teil eines XmlElement ist.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.ParentNode">
+      <summary>Ruft das übergeordnete Element dieses Knotens ab.Für XmlAttribute-Knoten gibt diese Eigenschaft immer null zurück.</summary>
+      <returns>Für XmlAttribute-Knoten gibt diese Eigenschaft immer null zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Prefix">
+      <summary>Ruft das Namespacepräfix dieses Knotens ab oder legt dieses fest.</summary>
+      <returns>Das Namespacepräfix dieses Knotens.Wenn kein Präfix vorhanden ist, gibt diese Eigenschaft String.Empty zurück.</returns>
+      <exception cref="T:System.ArgumentException">Dieser Knoten ist schreibgeschützt.</exception>
+      <exception cref="T:System.Xml.XmlException">Das angegebene Präfix enthält ein ungültiges Zeichen.Das angegebene Präfix ist ungültig.Der namespaceURI dieses Knotens ist null.Das angegebene Präfix ist "xml", und der namespaceURI dieses Knotens ist nicht identisch mit "http://www.w3.org/XML/1998/namespace".Dieser Knoten ist ein Attribut, das angegebene Präfix ist "xmlns", und der namespaceURI dieses Knotens unterscheidet sich von "http://www.w3.org/2000/xmlns/".Dieser Knoten ist ein Attribut, und qualifiedName dieses Knotens lautet "xmlns" [Namespaces].</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.PrependChild(System.Xml.XmlNode)">
+      <summary>Fügt den angegebenen Knoten am Anfang der Liste der untergeordneten Knoten dieses Knotens hinzu.</summary>
+      <returns>Der hinzugefügte <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="newChild">Die zu addierende <see cref="T:System.Xml.XmlNode" />.Wenn dieser ein <see cref="T:System.Xml.XmlDocumentFragment" /> ist, wird der gesamte Inhalt des Dokumentfragments in die Liste der untergeordneten Elemente dieses Knotens verschoben.</param>
+      <exception cref="T:System.InvalidOperationException">Der Typ dieses Knotens lässt keine untergeordneten Knoten vom Typ des <paramref name="newChild" />-Knotens zu.<paramref name="newChild" /> ist eine frühere Version dieses Knotens.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> wurde nicht aus dem Dokument erstellt, aus dem dieser Knoten erstellt wurde.Dieser Knoten ist schreibgeschützt.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.RemoveChild(System.Xml.XmlNode)">
+      <summary>Entfernt den angegebenen untergeordneten Knoten.</summary>
+      <returns>Der entfernte <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="oldChild">Das zu entfernende <see cref="T:System.Xml.XmlNode" />-Element.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="oldChild" /> ist kein untergeordnetes Element dieses Knotens.Oder dieser Knoten ist schreibgeschützt.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Ersetzt den angegebenen untergeordneten Knoten durch den angegebenen neuen Knoten.</summary>
+      <returns>Der ersetzte <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="newChild">Der neue untergeordnete <see cref="T:System.Xml.XmlNode" />.</param>
+      <param name="oldChild">Der zu ersetzende <see cref="T:System.Xml.XmlNode" />.</param>
+      <exception cref="T:System.InvalidOperationException">Der Typ dieses Knotens lässt keine untergeordneten Knoten vom Typ des <paramref name="newChild" />-Knotens zu.<paramref name="newChild" /> ist eine frühere Version dieses Knotens.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> wurde nicht aus dem Dokument erstellt, aus dem dieser Knoten erstellt wurde.Dieser Knoten ist schreibgeschützt.<paramref name="oldChild" /> ist kein untergeordnetes Element dieses Knotens.</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Specified">
+      <summary>Ruft einen Wert ab, der angibt, ob der Attributwert explizit festgelegt wurde.</summary>
+      <returns>true, wenn für dieses Attribut im ursprünglichen Instanzendokument ein Wert angegeben wurde, andernfalls false.Der Wert false gibt an, dass der Wert des Attributs aus der DTD stammt.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Value">
+      <summary>Ruft den Wert des Knotens ab oder legt diesen fest.</summary>
+      <returns>Der zurückgegebene Wert hängt vom <see cref="P:System.Xml.XmlNode.NodeType" /> des Knotens ab.Bei XmlAttribute-Knoten ist diese Eigenschaft der Wert des Attributs.</returns>
+      <exception cref="T:System.ArgumentException">Der Knoten ist schreibgeschützt, und ein Set-Vorgang wird aufgerufen.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Speichert alle untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll.</param>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.WriteTo(System.Xml.XmlWriter)">
+      <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll.</param>
+    </member>
+    <member name="T:System.Xml.XmlAttributeCollection">
+      <summary>Stellt eine Auflistung von Attributen dar, die über Name oder Index zugänglich sind.</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Append(System.Xml.XmlAttribute)">
+      <summary>Fügt das angegebene Attribut als letzten Knoten in die Auflistung ein.</summary>
+      <returns>Das an die Auflistung anzufügende XmlAttribute.</returns>
+      <param name="node">Die einzufügende <see cref="T:System.Xml.XmlAttribute" />. </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="node" /> wurde aus einem anderen Dokument als dem erstellt, das diese Auflistung erstellt hat. </exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)">
+      <summary>Kopiert alle <see cref="T:System.Xml.XmlAttribute" />-Objekte aus dieser Auflistung in das angegebene Array.</summary>
+      <param name="array">Das Array, das als Ziel für die aus dieser Auflistung kopierten Objekte verwendet wird. </param>
+      <param name="index">Der Index im Array, bei dem mit dem Kopieren begonnen wird. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.InsertAfter(System.Xml.XmlAttribute,System.Xml.XmlAttribute)">
+      <summary>Fügt das angegebene Attribut direkt nach dem angegebenen Verweisattribut ein.</summary>
+      <returns>Die in die Auflistung einzufügende XmlAttribute-Klasse.</returns>
+      <param name="newNode">Die einzufügende <see cref="T:System.Xml.XmlAttribute" />. </param>
+      <param name="refNode">Das <see cref="T:System.Xml.XmlAttribute" />, das das Verweisattribut ist.<paramref name="newNode" /> wird hinter <paramref name="refNode" /> platziert.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newNode" /> wurde aus einem anderen Dokument als dem erstellt, das diese Auflistung erstellt hat.Oder <paramref name="refNode" /> ist kein Member dieser Auflistung.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.InsertBefore(System.Xml.XmlAttribute,System.Xml.XmlAttribute)">
+      <summary>Fügt das angegebene Attribut direkt vor dem angegebenen Verweisattribut ein.</summary>
+      <returns>Die in die Auflistung einzufügende XmlAttribute-Klasse.</returns>
+      <param name="newNode">Die einzufügende <see cref="T:System.Xml.XmlAttribute" />. </param>
+      <param name="refNode">Das <see cref="T:System.Xml.XmlAttribute" />, das das Verweisattribut ist.<paramref name="newNode" /> wird vor <paramref name="refNode" /> platziert.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newNode" /> wurde aus einem anderen Dokument als dem erstellt, das diese Auflistung erstellt hat.Oder <paramref name="refNode" /> ist kein Member dieser Auflistung.</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.Int32)">
+      <summary>Ruft das Attribut mit dem angegebenen Index ab.</summary>
+      <returns>Der <see cref="T:System.Xml.XmlAttribute" /> am angegebenen Index.</returns>
+      <param name="i">Der Index des Attributs. </param>
+      <exception cref="T:System.IndexOutOfRangeException">Der übergebene Index liegt außerhalb des Bereichs. </exception>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.String)">
+      <summary>Ruft das Attribut mit dem angegebenen Namen ab.</summary>
+      <returns>Der <see cref="T:System.Xml.XmlAttribute" /> mit dem angegebenen Namen.Wenn das Attribut nicht vorhanden ist, gibt diese Eigenschaft null zurück.</returns>
+      <param name="name">Der qualifizierte Name des Attributs. </param>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.String,System.String)">
+      <summary>Ruft das Attribut mit dem angegebenen lokalen Namen und Namespace-URI (Uniform Resource Identifier) ab.</summary>
+      <returns>Das <see cref="T:System.Xml.XmlAttribute" /> mit dem angegebenen lokalen Namen und Namespace-URI.Wenn das Attribut nicht vorhanden ist, gibt diese Eigenschaft null zurück.</returns>
+      <param name="localName">Der lokale Name des Attributs. </param>
+      <param name="namespaceURI">Der Namespace-URI dieses Attributs. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Prepend(System.Xml.XmlAttribute)">
+      <summary>Fügt das angegebene Attribut als ersten Knoten in die Auflistung ein.</summary>
+      <returns>Das der Auflistung hinzugefügte XmlAttribute.</returns>
+      <param name="node">Die einzufügende <see cref="T:System.Xml.XmlAttribute" />. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Remove(System.Xml.XmlAttribute)">
+      <summary>Entfernt das angegebene Attribut aus der Auflistung.</summary>
+      <returns>Der entfernte Knoten oder null, wenn er nicht in der Auflistung gefunden wurde.</returns>
+      <param name="node">Das zu entfernende <see cref="T:System.Xml.XmlAttribute" />-Element. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.RemoveAll">
+      <summary>Entfernt alle Attribute aus der Auflistung.</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.RemoveAt(System.Int32)">
+      <summary>Entfernt das Attribut aus der Auflistung, das dem angegebenen Index entspricht.</summary>
+      <returns>Gibt null zurück, wenn sich am angegebenen Index kein Attribut befindet.</returns>
+      <param name="i">Der Index des zu entfernenden Knotens.Der erste Knoten hat den Index 0.</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.SetNamedItem(System.Xml.XmlNode)">
+      <summary>Fügt einen <see cref="T:System.Xml.XmlNode" /> unter Verwendung der entsprechenden <see cref="P:System.Xml.XmlNode.Name" />-Eigenschaft hinzu. </summary>
+      <returns>Wenn der <paramref name="node" /> einen vorhandenen Knoten mit demselben Namen ersetzt, wird der alte Knoten zurückgegeben, andernfalls wird hinzugefügte Knoten zurückgegeben.</returns>
+      <param name="node">Ein in dieser Auflistung zu speichernder Attributknoten.Auf den Knoten kann später mit dem Namen des Knotens zugegriffen werden.Wenn ein Knoten mit diesem Namen bereits in der Auflistung enthalten ist, wird er durch den neuen ersetzt, andernfalls wird der Knoten am Ende der Auflistung angehängt.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="node" /> wurde aus einem anderen <see cref="T:System.Xml.XmlDocument" /> als dem erstellt, das diese Auflistung erstellt hat.Diese XmlAttributeCollection ist schreibgeschützt. </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="node" /> ist ein <see cref="T:System.Xml.XmlAttribute" />, das bereits ein Attribut eines anderen <see cref="T:System.Xml.XmlElement" />-Objekts ist.Wenn Attribute in anderen Elementen wiederverwendet werden sollen, müssen Sie die wiederzuverwendenden XmlAttribute-Objekte klonen.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)" />.</summary>
+      <param name="array">Das Array, das als Ziel für die aus dieser Auflistung kopierten Objekte verwendet wird. </param>
+      <param name="index">Der Index im Array, bei dem mit dem Kopieren begonnen wird. </param>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#Count">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.Count" />.</summary>
+      <returns>Gibt ein int zurück, das die Anzahl der Attribute enthält.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#IsSynchronized">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.IsSynchronized" />.</summary>
+      <returns>Gibt true zurück, wenn die Auflistung synchronisiert ist.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#SyncRoot">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.SyncRoot" />.</summary>
+      <returns>Gibt das <see cref="T:System.Object" /> zurück, das der Stamm der Auflistung ist.</returns>
+    </member>
+    <member name="T:System.Xml.XmlCDataSection">
+      <summary>Stellt einen CDATA-Abschnitt dar.</summary>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Initialisiert eine neue Instanz der<see cref="T:System.Xml.XmlCDataSection" />-Klasse.</summary>
+      <param name="data">Ein <see cref="T:System.String" />, der Zeichendaten enthält.</param>
+      <param name="doc">
+        <see cref="T:System.Xml.XmlDocument" />-Objekt</param>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.CloneNode(System.Boolean)">
+      <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+      <returns>Der geklonte Knoten.</returns>
+      <param name="deep">true, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, false, wenn nur der Knoten selbst geklont werden soll.Da CDATA-Knoten, unabhängig von der Parametereinstellung, keine untergeordneten Elemente aufweisen, enthält der geklonte Knoten immer den Dateninhalt.</param>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.LocalName">
+      <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+      <returns>Für CDATA-Knoten lautet der lokale Name #cdata-section.</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.Name">
+      <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+      <returns>Für CDATA-Knoten lautet der Name #cdata-section.</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.NodeType">
+      <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+      <returns>Der Knotentyp.Für CDATA-Knoten ist der Wert XmlNodeType.CDATA.</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.ParentNode"></member>
+    <member name="P:System.Xml.XmlCDataSection.PreviousText">
+      <summary>Ruft den Textknoten ab, der diesem Knoten unmittelbar vorausgeht.</summary>
+      <returns>Gibt <see cref="T:System.Xml.XmlNode" />zurück.</returns>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Speichert die untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.WriteTo(System.Xml.XmlWriter)">
+      <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="T:System.Xml.XmlCharacterData">
+      <summary>Stellt Methoden für die Textbearbeitung bereit, die von mehreren Klassen verwendet werden.</summary>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlCharacterData" />-Klasse.</summary>
+      <param name="data">Die Zeichenfolge mit den Zeichendaten, die dem Dokument hinzugefügt werden sollen.</param>
+      <param name="doc">
+        <see cref="T:System.Xml.XmlDocument" /> für Zeichendaten.</param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.AppendData(System.String)">
+      <summary>Fügt die angegebene Zeichenfolge an das Ende der Zeichendaten des Knotens an.</summary>
+      <param name="strData">Die Zeichenfolge, die in die vorhandene Zeichenfolge eingefügt werden soll. </param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Data">
+      <summary>Enthält die Daten des Knotens.</summary>
+      <returns>Die Daten des Knotens.</returns>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.DeleteData(System.Int32,System.Int32)">
+      <summary>Entfernt einen Bereich von Zeichen aus dem Knoten.</summary>
+      <param name="offset">Die Position in der Zeichenfolge, an der der Löschvorgang begonnen werden soll. </param>
+      <param name="count">Die Anzahl der zu löschenden Zeichen. </param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.InsertData(System.Int32,System.String)">
+      <summary>Fügen Sie die angegebene Zeichenfolge am angegebenen Zeichenoffset ein.</summary>
+      <param name="offset">Die Position in der Zeichenfolge, an der die übergebenen Zeichenfolgendaten eingefügt werden sollen. </param>
+      <param name="strData">Die Zeichenfolgendaten, die in die vorhandene Zeichenfolge eingefügt werden sollen. </param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Length">
+      <summary>Ruft die Länge der Daten in Zeichen ab.</summary>
+      <returns>Die Länge der Zeichenfolge in der <see cref="P:System.Xml.XmlCharacterData.Data" />-Eigenschaft in Zeichen.Die Länge kann den Wert 0 haben. CharacterData-Knoten können somit leer sein.</returns>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.ReplaceData(System.Int32,System.Int32,System.String)">
+      <summary>Ersetzt die angegebene Anzahl von Zeichen ab dem angegebenen Offset mit der angegebenen Zeichenfolge.</summary>
+      <param name="offset">Die Position in der Zeichenfolge, an der der Ersetzungsvorgang begonnen werden soll. </param>
+      <param name="count">Die Anzahl der zu ersetzenden Zeichen. </param>
+      <param name="strData">Die neuen Daten, die die alten Zeichenfolgendaten ersetzen. </param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.Substring(System.Int32,System.Int32)">
+      <summary>Ruft eine Teilzeichenfolge der vollständigen Zeichenfolge aus dem angegebenen Bereich ab.</summary>
+      <returns>Die dem angegebenen Bereich entsprechende Teilzeichenfolge.</returns>
+      <param name="offset">Die Position in der Zeichenfolge, an der der Abruf begonnen werden soll.Ein Offset von 0 gibt an, dass der Anfangspunkt am Anfang der Daten liegt.</param>
+      <param name="count">Die Anzahl der abzurufenden Zeichen. </param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Value">
+      <summary>Ruft den Wert des Knotens ab oder legt diesen fest.</summary>
+      <returns>Der Wert des Knotens.</returns>
+      <exception cref="T:System.ArgumentException">Der Knoten ist schreibgeschützt. </exception>
+    </member>
+    <member name="T:System.Xml.XmlComment">
+      <summary>Stellt den Inhalt eines XML-Kommentars dar.</summary>
+    </member>
+    <member name="M:System.Xml.XmlComment.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlComment" />-Klasse.</summary>
+      <param name="comment">Der Inhalt des Kommentarelements.</param>
+      <param name="doc">Das übergeordnete XML-Dokument.</param>
+    </member>
+    <member name="M:System.Xml.XmlComment.CloneNode(System.Boolean)">
+      <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+      <returns>Der geklonte Knoten.</returns>
+      <param name="deep">true, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, false, wenn nur der Knoten selbst geklont werden soll.Da Kommentarknoten, unabhängig von der Parametereinstellung, keine untergeordneten Elemente aufweisen, enthält der geklonte Knoten immer den Textinhalt.</param>
+    </member>
+    <member name="P:System.Xml.XmlComment.LocalName">
+      <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+      <returns>Für Kommentarknoten ist der Wert #comment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlComment.Name">
+      <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+      <returns>Für Kommentarknoten ist der Wert #comment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlComment.NodeType">
+      <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+      <returns>Für Kommentarknoten ist der Wert XmlNodeType.Comment.</returns>
+    </member>
+    <member name="M:System.Xml.XmlComment.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Speichert alle untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.Da Kommentarknoten nicht über untergeordnete Elemente verfügen, hat diese Methode keine Auswirkungen.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlComment.WriteTo(System.Xml.XmlWriter)">
+      <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="T:System.Xml.XmlDeclaration">
+      <summary>Stellt den Knoten für die XML-Deklaration &lt;?xml version='1.0' ...?&gt; dar.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlDeclaration" />-Klasse.</summary>
+      <param name="version">Die XML-Version. Weitere Informationen finden Sie unter der <see cref="P:System.Xml.XmlDeclaration.Version" />-Eigenschaft.</param>
+      <param name="encoding">Das Codierungsschema. Weitere Informationen finden Sie unter der <see cref="P:System.Xml.XmlDeclaration.Encoding" />-Eigenschaft.</param>
+      <param name="standalone">Gibt an, ob das XML-Dokument von einer externen DTD abhängt. Weitere Informationen finden Sie unter der <see cref="P:System.Xml.XmlDeclaration.Standalone" />-Eigenschaft.</param>
+      <param name="doc">Das übergeordnete XML-Dokument.</param>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.CloneNode(System.Boolean)">
+      <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+      <returns>Der geklonte Knoten.</returns>
+      <param name="deep">true, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, false, wenn nur der Knoten selbst geklont werden soll.Da XmlDeclaration-Knoten, unabhängig von der Parametereinstellung, keine untergeordneten Elemente aufweisen, enthält der geklonte Knoten immer den Datenwert.</param>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Encoding">
+      <summary>Ruft die Codierungsebene des XML-Dokuments ab oder legt diese fest.</summary>
+      <returns>Der gültige Name der Zeichencodierung.Im Folgenden werden die am häufigsten unterstützten Namen für die Zeichencodierung in XML aufgeführt:Kategorie (Category) Codierungsnamen Unicode UTF-8, UTF-16 ISO 10646 ISO-10646-UCS-2, ISO-10646-UCS-4 ISO 8859 ISO-8859-n (wobei "n" eine Ziffer von 1 bis 9 ist) JIS X-0208-1997 ISO-2022-JP, Shift_JIS, EUC-JP Dieser Wert ist optional.Wenn kein Wert festgelegt ist, gibt diese Eigenschaft String.Empty zurück.Wenn kein Codierungsattribut angegeben ist, wird beim Schreiben oder Speichern des Dokuments die UTF-8-Codierung zugrunde gelegt.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.InnerText">
+      <summary>Ruft die verketteten Werte der XmlDeclaration ab oder legt diese fest.</summary>
+      <returns>Die verketteten Werte der XmlDeclaration (d. h. alle Werte zwischen &lt;?xml und ?&gt;).</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.LocalName">
+      <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+      <returns>Für XmlDeclaration-Knoten lautet der lokale Name xml.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Name">
+      <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+      <returns>Für XmlDeclaration-Knoten lautet der Name xml.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.NodeType">
+      <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+      <returns>Für XmlDeclaration-Knoten ist dieser Wert XmlNodeType.XmlDeclaration.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Standalone">
+      <summary>Ruft den Wert für das eigenständige Attribut ab oder legt diesen fest.</summary>
+      <returns>Gültige Werte sind yes,wenn alle vom XML-Dokument geforderten Entitätsdeklarationen im Dokument enthalten sind, oder no, wenn eine externe DTD (Document Type Definition) benötigt wird.Wenn die XML-Deklaration kein eigenständiges Attribut aufweist, gibt diese Eigenschaft String.Empty zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Value">
+      <summary>Ruft den Wert von XmlDeclaration ab oder legt diesen fest.</summary>
+      <returns>Der Inhalt der XmlDeclaration (d. h. alle Werte zwischen &lt;?xml und ?&gt;).</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Version">
+      <summary>Ruft die XML-Version des Dokuments ab.</summary>
+      <returns>Der Wert ist immer 1.0.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Speichert die untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.Da XmlDeclaration-Knoten keine untergeordneten Elemente besitzen, hat diese Methode keine Auswirkungen.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.WriteTo(System.Xml.XmlWriter)">
+      <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="T:System.Xml.XmlDocument">
+      <summary>Stellt ein XML-Dokument dar.Weitere Informationen finden Sie im Abschnitt Remarks.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlDocument" />-Klasse.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor(System.Xml.XmlImplementation)">
+      <summary>Initialisiert eine neue Instanz der XmlDocument-Klasse mit der angegebenen <see cref="T:System.Xml.XmlImplementation" />.</summary>
+      <param name="imp">Der zu verwendende XmlImplementation. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor(System.Xml.XmlNameTable)">
+      <summary>Initialisiert eine neue Instanz der XmlDocument-Klasse mit der angegebenen <see cref="T:System.Xml.XmlNameTable" />.</summary>
+      <param name="nt">Der zu verwendende XmlNameTable. </param>
+    </member>
+    <member name="P:System.Xml.XmlDocument.BaseURI">
+      <summary>Ruft den Basis-URI des aktuellen Knotens ab.</summary>
+      <returns>Der Speicherort, von dem aus der Knoten geladen wurde.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CloneNode(System.Boolean)">
+      <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+      <returns>Der geklonte XmlDocument-Knoten.</returns>
+      <param name="deep">true, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, false, wenn nur der Knoten selbst geklont werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String)">
+      <summary>Erstellt ein <see cref="T:System.Xml.XmlAttribute" /> mit dem angegebenen <see cref="P:System.Xml.XmlDocument.Name" />.</summary>
+      <returns>Die neue XmlAttribute.</returns>
+      <param name="name">Der qualifizierte Name des Attributs.Wenn der Name einen Doppelpunkt enthält, gibt die <see cref="P:System.Xml.XmlNode.Prefix" />-Eigenschaft den vor dem Doppelpunkt stehenden Teil des Namens und die <see cref="P:System.Xml.XmlDocument.LocalName" />-Eigenschaft den hinter dem Doppelpunkt stehenden Teil wieder.Der <see cref="P:System.Xml.XmlNode.NamespaceURI" /> bleibt leer, sofern das Präfix kein erkanntes integriertes Präfix, z. B. „xmlns“ ist.In diesem Fall hat der NamespaceURI den Wert http://www.w3.org/2000/xmlns/.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String,System.String)">
+      <summary>Erstellt ein <see cref="T:System.Xml.XmlAttribute" /> mit dem angegebenen qualifizierten Namen und dem angegebenen <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Die neue XmlAttribute.</returns>
+      <param name="qualifiedName">Der qualifizierte Name des Attributs.Wenn der Name einen Doppelpunkt enthält, gibt die <see cref="P:System.Xml.XmlNode.Prefix" />-Eigenschaft den vor dem Doppelpunkt stehenden Teil des Namens und die <see cref="P:System.Xml.XmlDocument.LocalName" />-Eigenschaft den hinter dem Doppelpunkt stehenden Teil wieder.</param>
+      <param name="namespaceURI">Der namespaceURI des Attributs.Wenn der qualifizierte Name das Präfix xmlns enthält, muss dieser Parameter http://www.w3.org/2000/xmlns/ lauten.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String,System.String,System.String)">
+      <summary>Erstellt ein <see cref="T:System.Xml.XmlAttribute" /> mit dem angegebenen <see cref="P:System.Xml.XmlNode.Prefix" />, <see cref="P:System.Xml.XmlDocument.LocalName" /> und <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Die neue XmlAttribute.</returns>
+      <param name="prefix">Das Präfix des Attributs (sofern vorhanden).„String.Empty“ und null sind äquivalent.</param>
+      <param name="localName">Der lokale Name des Attributs. </param>
+      <param name="namespaceURI">Der Namespace-URI des Attributs (sofern vorhanden).„String.Empty“ und null sind äquivalent.Wenn das <paramref name="prefix" /> „xmlns“ ist, muss dieser Parameter „http://www.w3.org/2000/xmlns/“ lauten. Andernfalls wird eine Ausnahme ausgelöst.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateCDataSection(System.String)">
+      <summary>Erstellt eine <see cref="T:System.Xml.XmlCDataSection" />, die die angegebenen Daten enthält.</summary>
+      <returns>Die neue XmlCDataSection.</returns>
+      <param name="data">Der Inhalt der neuen XmlCDataSection. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateComment(System.String)">
+      <summary>Erstellt einen <see cref="T:System.Xml.XmlComment" />, der die angegebenen Daten enthält.</summary>
+      <returns>Die neue XmlComment.</returns>
+      <param name="data">Der Inhalt des neuen XmlComment. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateDocumentFragment">
+      <summary>Erstellt eine <see cref="T:System.Xml.XmlDocumentFragment" />.</summary>
+      <returns>Die neue XmlDocumentFragment.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String)">
+      <summary>Erstellt ein Element mit dem angegebenen Namen.</summary>
+      <returns>Die neue XmlElement.</returns>
+      <param name="name">Der qualifizierte Name des Elements.Wenn der Name einen Doppelpunkt enthält, gibt die <see cref="P:System.Xml.XmlNode.Prefix" />-Eigenschaft den vor dem Doppelpunkt stehenden Teil des Namens und die <see cref="P:System.Xml.XmlDocument.LocalName" />-Eigenschaft den hinter dem Doppelpunkt stehenden Teil wieder.Der qualifizierte Name darf nicht das Präfix "xmlns" enthalten.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String,System.String)">
+      <summary>Erstellt ein <see cref="T:System.Xml.XmlElement" /> mit dem qualifizierten Namen und dem <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Die neue XmlElement.</returns>
+      <param name="qualifiedName">Der qualifizierte Name des Elements.Wenn der Name einen Doppelpunkt enthält, gibt die <see cref="P:System.Xml.XmlNode.Prefix" />-Eigenschaft den vor dem Doppelpunkt stehenden Teil des Namens und die <see cref="P:System.Xml.XmlDocument.LocalName" />-Eigenschaft den hinter dem Doppelpunkt stehenden Teil wieder.Der qualifizierte Name darf nicht das Präfix "xmlns" enthalten.</param>
+      <param name="namespaceURI">Der Namespace-URI des Elements. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String,System.String,System.String)">
+      <summary>Erstellt ein Element mit dem angegebenen <see cref="P:System.Xml.XmlNode.Prefix" />, <see cref="P:System.Xml.XmlDocument.LocalName" /> und der <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Die neue <see cref="T:System.Xml.XmlElement" />.</returns>
+      <param name="prefix">Das Präfix des neuen Elements (sofern vorhanden).„String.Empty“ und null sind äquivalent.</param>
+      <param name="localName">Der lokale Name des neuen Elements. </param>
+      <param name="namespaceURI">Der Namespace-URI des neuen Elements (sofern vorhanden).„String.Empty“ und null sind äquivalent.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.String,System.String,System.String)">
+      <summary>Erstellt einen <see cref="T:System.Xml.XmlNode" /> mit dem angegebenen Knotentyp, <see cref="P:System.Xml.XmlDocument.Name" /> und <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Die neue XmlNode.</returns>
+      <param name="nodeTypeString">Zeichenfolgenversion des <see cref="T:System.Xml.XmlNodeType" /> für den neuen Knoten.Dieser Parameter muss einer der in der folgenden Tabelle aufgelisteten Werte sein.</param>
+      <param name="name">Der qualifizierte Name des neuen Knotens.Wenn der Name einen Doppelpunkt enthält, wird er in eine <see cref="P:System.Xml.XmlNode.Prefix" />-Komponente und eine <see cref="P:System.Xml.XmlDocument.LocalName" />-Komponente aufgelöst.</param>
+      <param name="namespaceURI">Der Namespace-URI des neuen Knotens. </param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name; or <paramref name="nodeTypeString" /> is not one of the strings listed below. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.Xml.XmlNodeType,System.String,System.String)">
+      <summary>Erstellt einen <see cref="T:System.Xml.XmlNode" /> mit dem angegebenen <see cref="T:System.Xml.XmlNodeType" />, <see cref="P:System.Xml.XmlDocument.Name" /> und <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Die neue XmlNode.</returns>
+      <param name="type">Der XmlNodeType des neuen Knotens. </param>
+      <param name="name">Der qualifizierte Name des neuen Knotens.Wenn der Name einen Doppelpunkt enthält, wird er in eine <see cref="P:System.Xml.XmlNode.Prefix" />-Komponente und eine <see cref="P:System.Xml.XmlDocument.LocalName" />-Komponente aufgelöst.</param>
+      <param name="namespaceURI">Der Namespace-URI des neuen Knotens. </param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.Xml.XmlNodeType,System.String,System.String,System.String)">
+      <summary>Erstellt einen <see cref="T:System.Xml.XmlNode" /> mit dem angegebenen <see cref="T:System.Xml.XmlNodeType" />, <see cref="P:System.Xml.XmlNode.Prefix" />, <see cref="P:System.Xml.XmlDocument.Name" /> und <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Die neue XmlNode.</returns>
+      <param name="type">Der XmlNodeType des neuen Knotens. </param>
+      <param name="prefix">Das Präfix des neuen Knotens. </param>
+      <param name="name">Der lokale Name des neuen Knotens. </param>
+      <param name="namespaceURI">Der Namespace-URI des neuen Knotens. </param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateProcessingInstruction(System.String,System.String)">
+      <summary>Erstellt eine <see cref="T:System.Xml.XmlProcessingInstruction" /> mit dem angegebenen Namen und den angegebenen Daten.</summary>
+      <returns>Die neue XmlProcessingInstruction.</returns>
+      <param name="target">Der Name der Verarbeitungsanweisung. </param>
+      <param name="data">Die Daten für die Verarbeitungsanweisung. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateSignificantWhitespace(System.String)">
+      <summary>Erstellt einen <see cref="T:System.Xml.XmlSignificantWhitespace" />-Knoten.</summary>
+      <returns>Ein neuer XmlSignificantWhitespace-Knoten.</returns>
+      <param name="text">Die Zeichenfolge darf nur die Zeichen &amp;#20; &amp;#10; &amp;#13; und &amp;#9; enthalten. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateTextNode(System.String)">
+      <summary>Erstellt einen <see cref="T:System.Xml.XmlText" /> mit dem angegebenen Text.</summary>
+      <returns>Der neue XmlText-Knoten.</returns>
+      <param name="text">Der Text für den Text-Knoten. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateWhitespace(System.String)">
+      <summary>Erstellt einen <see cref="T:System.Xml.XmlWhitespace" />-Knoten.</summary>
+      <returns>Ein neuer XmlWhitespace-Knoten.</returns>
+      <param name="text">Die Zeichenfolge darf nur die Zeichen &amp;#20; &amp;#10; &amp;#13; und &amp;#9; enthalten. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateXmlDeclaration(System.String,System.String,System.String)">
+      <summary>Erstellt einen <see cref="T:System.Xml.XmlDeclaration" />-Knoten mit den angegebenen Werten.</summary>
+      <returns>Der neue XmlDeclaration-Knoten.</returns>
+      <param name="version">Die Version muss "1.0" sein. </param>
+      <param name="encoding">Der Wert des Codierungsattributs.Dies ist die Codierung, die für das Speichern des <see cref="T:System.Xml.XmlDocument" /> in einer Datei oder einem Stream verwendet wird. Daher muss das Codierungsattribut auf eine von der <see cref="T:System.Text.Encoding" />-Klasse unterstützte Zeichenfolge festgelegt werden. Andernfalls schlägt <see cref="M:System.Xml.XmlDocument.Save(System.String)" /> fehl.Wenn der Wert null oder „String.Empty“ ist, schreibt die Save-Methode kein Codierungsattribut für die XML-Deklaration, und es wird daher die Standardcodierung UTF-8 verwendet.Wenn das XmlDocument in einem <see cref="T:System.IO.TextWriter" /> oder einem <see cref="T:System.Xml.XmlTextWriter" /> gespeichert wird, wird dieser Codierungswert verworfen.Stattdessen wird die Codierung des TextWriter oder XmlTextWriter verwendet.Dadurch ist gewährleistet, dass die geschriebenen XML-Daten mit der richtigen Codierung eingelesen werden können.</param>
+      <param name="standalone">Der Wert muss entweder yes oder no sein.Wenn der Wert null oder String.Empty ist, schreibt die Save-Methode kein eigenständiges Attribut für die XML-Deklaration.</param>
+      <exception cref="T:System.ArgumentException">The values of <paramref name="version" /> or <paramref name="standalone" /> are something other than the ones specified above. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.DocumentElement">
+      <summary>Ruft das Stamm-<see cref="T:System.Xml.XmlElement" /> für das Dokument ab.</summary>
+      <returns>Das XmlElement, das den Stamm der XML-Dokumentstruktur darstellt.Wenn kein Stamm vorhanden ist, wird null zurückgegeben.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.GetElementsByTagName(System.String)">
+      <summary>Gibt eine <see cref="T:System.Xml.XmlNodeList" /> mit einer Liste aller untergeordneten Elemente zurück, die mit dem angegebenen <see cref="P:System.Xml.XmlDocument.Name" /> übereinstimmen.</summary>
+      <returns>Eine <see cref="T:System.Xml.XmlNodeList" /> mit einer Liste aller übereinstimmenden Knoten.Wenn mit <paramref name="name" /> keine Knoten übereinstimmen, ist die zurückgegebene Auflistung leer.</returns>
+      <param name="name">Der qualifizierte Name, mit dem eine Übereinstimmung gefunden werden soll.Er wird mit der Name-Eigenschaft des übereinstimmenden Knotens verglichen.Der spezielle Wert "*" entspricht allen Tags.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.GetElementsByTagName(System.String,System.String)">
+      <summary>Gibt eine <see cref="T:System.Xml.XmlNodeList" /> mit einer Liste aller untergeordneten Elemente zurück, die mit dem angegebenen <see cref="P:System.Xml.XmlDocument.LocalName" /> und <see cref="P:System.Xml.XmlNode.NamespaceURI" /> übereinstimmen.</summary>
+      <returns>Eine <see cref="T:System.Xml.XmlNodeList" /> mit einer Liste aller übereinstimmenden Knoten.Wenn keine mit dem angegebenen <paramref name="localName" /> und dem <paramref name="namespaceURI" /> kein Knoten übereinstimmt, ist die zurückgegebene Auflistung leer.</returns>
+      <param name="localName">Der LocalName, mit dem eine Übereinstimmung gefunden werden soll.Der spezielle Wert "*" entspricht allen Tags.</param>
+      <param name="namespaceURI">Der NamespaceURI, mit dem eine Übereinstimmung gefunden werden soll. </param>
+    </member>
+    <member name="P:System.Xml.XmlDocument.Implementation">
+      <summary>Ruft das <see cref="T:System.Xml.XmlImplementation" />-Objekt für das aktuelle Dokument ab.</summary>
+      <returns>Das XmlImplementation-Objekt für das aktuelle Dokument.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.ImportNode(System.Xml.XmlNode,System.Boolean)">
+      <summary>Importiert einen Knoten aus einem anderen Dokument in das aktuelle Dokument.</summary>
+      <returns>Der importierte <see cref="T:System.Xml.XmlNode" />.</returns>
+      <param name="node">Der Knoten, der importiert wird. </param>
+      <param name="deep">true für das Erstellen eines tiefen Klons, andernfalls false. </param>
+      <exception cref="T:System.InvalidOperationException">Calling this method on a node type which cannot be imported. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.InnerText">
+      <summary>Löst in allen Fällen eine <see cref="T:System.InvalidOperationException" /> aus.</summary>
+      <returns>Die Werte des Knotens und aller diesem untergeordneten Knoten.</returns>
+      <exception cref="T:System.InvalidOperationException">In all cases.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.InnerXml">
+      <summary>Ruft das Markup ab, das die untergeordneten Elemente des aktuellen Knotens darstellt, oder legt dieses fest.</summary>
+      <returns>Das Markup der untergeordneten Elemente des aktuellen Knotens.</returns>
+      <exception cref="T:System.Xml.XmlException">The XML specified when setting this property is not well-formed. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.IsReadOnly">
+      <summary>Ruft einen Wert ab, der angibt, ob der aktuelle Knoten schreibgeschützt ist.</summary>
+      <returns>true, wenn der aktuelle Knoten schreibgeschützt ist, andernfalls false.XmlDocument-Knoten geben immer false zurück.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.IO.Stream)">
+      <summary>Lädt das XML-Dokument aus dem angegebenen Stream.</summary>
+      <param name="inStream">Der Stream, der das zu ladende XML-Dokument enthält. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, a <see cref="T:System.IO.FileNotFoundException" /> is raised.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.IO.TextReader)">
+      <summary>Lädt das XML-Dokument aus dem angegebenen <see cref="T:System.IO.TextReader" />.</summary>
+      <param name="txtReader">Der zum Übertragen von XML-Daten in das Dokument verwendete TextReader. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.Xml.XmlReader)">
+      <summary>Lädt das XML-Dokument aus dem angegebenen <see cref="T:System.Xml.XmlReader" />.</summary>
+      <param name="reader">Der zum Übertragen von XML-Daten in das Dokument verwendete XmlReader. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.LoadXml(System.String)">
+      <summary>Lädt das XML-Dokument aus der angegebenen Zeichenfolge.</summary>
+      <param name="xml">Zeichenfolge, die das zu ladende XML-Dokument enthält. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.LocalName">
+      <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+      <returns>Für XmlDocument-Knoten lautet der lokale Name „#document“.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.Name">
+      <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+      <returns>Für XmlDocument-Knoten lautet der Name „#document“.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.NameTable">
+      <summary>Ruft die <see cref="T:System.Xml.XmlNameTable" /> ab, die dieser Implementierung zugeordnet ist.</summary>
+      <returns>Eine XmlNameTable, die das Abrufen der atomisierten Version einer Zeichenfolge im Dokument ermöglicht.</returns>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeChanged">
+      <summary>Tritt ein, wenn der <see cref="P:System.Xml.XmlNode.Value" /> eines zu diesem Dokument gehörenden Knotens geändert wurde.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeChanging">
+      <summary>Tritt ein, wenn der <see cref="P:System.Xml.XmlNode.Value" /> eines zu diesem Dokument gehörenden Knotens gerade geändert wird.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeInserted">
+      <summary>Tritt ein, wenn ein zu diesem Dokument gehörender Knoten in einen anderen Knoten eingefügt wurde.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeInserting">
+      <summary>Tritt ein, wenn ein zu diesem Dokument gehörender Knoten gerade in einen anderen Knoten eingefügt wird.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeRemoved">
+      <summary>Tritt ein, wenn ein zu diesem Dokument gehörender Knoten aus dem übergeordneten Element entfernt wurde.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeRemoving">
+      <summary>Tritt ein, wenn ein zu diesem Dokument gehörender Knoten gerade aus dem Dokument entfernt wird.</summary>
+    </member>
+    <member name="P:System.Xml.XmlDocument.NodeType">
+      <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+      <returns>Der Knotentyp.Für XmlDocument-Knoten ist dieser Wert „XmlNodeType.Document“.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.OwnerDocument">
+      <summary>Ruft das <see cref="T:System.Xml.XmlDocument" /> ab, zu dem der aktuelle Knoten gehört.</summary>
+      <returns>Für XmlDocument-Knoten (<see cref="P:System.Xml.XmlDocument.NodeType" /> entspricht „XmlNodeType.Document“) gibt diese Eigenschaft immer null zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.ParentNode">
+      <summary>Ruft den übergeordneten Knoten dieses Knotens ab (bei Knoten, die über übergeordnete Knoten verfügen können).</summary>
+      <returns>Gibt immer null zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.PreserveWhitespace">
+      <summary>Ruft einen Wert ab, der angibt, ob der Leerraum im Elementinhalt beibehalten wird, oder legt diesen fest.</summary>
+      <returns>true, um Leerraum beizubehalten, andernfalls false.Die Standardeinstellung ist false.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.ReadNode(System.Xml.XmlReader)">
+      <summary>Erstellt anhand der Informationen im <see cref="T:System.Xml.XmlReader" /> ein <see cref="T:System.Xml.XmlNode" />-Objekt.Der Reader muss auf einem Knoten oder Attribut positioniert sein.</summary>
+      <returns>Der neue XmlNode oder null, wenn keine weiteren Knoten vorhanden sind.</returns>
+      <param name="reader">Die XML-Quelle </param>
+      <exception cref="T:System.NullReferenceException">The reader is positioned on a node type that does not translate to a valid DOM node (for example, EndElement or EndEntity). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.IO.Stream)">
+      <summary>Speichert das XML-Dokument im angegebenen Stream.</summary>
+      <param name="outStream">Der Stream, in dem gespeichert werden soll. </param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.IO.TextWriter)">
+      <summary>Speichert das XML-Dokument im angegebenen <see cref="T:System.IO.TextWriter" />.</summary>
+      <param name="writer">Der TextWriter, in dem gespeichert werden soll. </param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.Xml.XmlWriter)">
+      <summary>Speichert das XML-Dokument im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Speichert alle untergeordneten Elemente des XmlDocument-Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="xw">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.WriteTo(System.Xml.XmlWriter)">
+      <summary>Speichert den XmlDocument-Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="T:System.Xml.XmlDocumentFragment">
+      <summary>Stellt ein kompaktes Objekt dar, das für das Einfügen in Strukturen nützlich ist.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.#ctor(System.Xml.XmlDocument)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlDocumentFragment" />-Klasse.</summary>
+      <param name="ownerDocument">Das XML-Dokument, das die Quelle des Fragments darstellt.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.CloneNode(System.Boolean)">
+      <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+      <returns>Der geklonte Knoten.</returns>
+      <param name="deep">true, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, false, wenn nur der Knoten selbst geklont werden soll. </param>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.InnerXml">
+      <summary>Ruft das Markup ab, das die untergeordneten Elemente dieses Knotens darstellt, oder legt dieses fest.</summary>
+      <returns>Das Markup der untergeordneten Elemente dieses Knotens.</returns>
+      <exception cref="T:System.Xml.XmlException">Der beim Festlegen dieser Eigenschaft angegebene XML-Code ist nicht wohlgeformt. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.LocalName">
+      <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+      <returns>Für XmlDocumentFragment-Knoten lautet der lokale Name #document-fragment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.Name">
+      <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+      <returns>Für XmlDocumentFragment lautet der Name #document-fragment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.NodeType">
+      <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+      <returns>Für XmlDocumentFragment-Knoten ist dieser Wert XmlNodeType.DocumentFragment.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.OwnerDocument">
+      <summary>Ruft das <see cref="T:System.Xml.XmlDocument" /> ab, zu dem dieser Knoten gehört.</summary>
+      <returns>Das XmlDocument, zu dem dieser Knoten gehört.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.ParentNode">
+      <summary>Ruft das übergeordnete Element dieses Knotens ab (bei Knoten, die über übergeordnete Elemente verfügen können).</summary>
+      <returns>Das übergeordnete Element dieses Knotens.Für XmlDocumentFragment-Knoten ist diese Eigenschaft immer null.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Speichert alle untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.WriteTo(System.Xml.XmlWriter)">
+      <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="T:System.Xml.XmlElement">
+      <summary>Stellt ein Element dar.</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlElement" />-Klasse.</summary>
+      <param name="prefix">Das Namespacepräfix. Weitere Informationen finden Sie unter der <see cref="P:System.Xml.XmlElement.Prefix" />-Eigenschaft.</param>
+      <param name="localName">Der lokale Name. Weitere Informationen finden Sie unter der <see cref="P:System.Xml.XmlElement.LocalName" />-Eigenschaft.</param>
+      <param name="namespaceURI">Der Namespace-URI. Weitere Informationen finden Sie unter der <see cref="P:System.Xml.XmlElement.NamespaceURI" />-Eigenschaft.</param>
+      <param name="doc">Das übergeordnete XML-Dokument.</param>
+    </member>
+    <member name="P:System.Xml.XmlElement.Attributes">
+      <summary>Ruft eine <see cref="T:System.Xml.XmlAttributeCollection" /> ab, die die Liste der Attribute für diesen Knoten enthält.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlAttributeCollection" />, die die Liste der Attribute für diesen Knoten enthält.</returns>
+    </member>
+    <member name="M:System.Xml.XmlElement.CloneNode(System.Boolean)">
+      <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+      <returns>Der geklonte Knoten.</returns>
+      <param name="deep">true, um die Teilstruktur unter dem angegebenen Knoten rekursiv zu klonen. false, um nur den Knoten selbst zu klonen (und dessen Attribute, wenn der Knoten ein XmlElement ist). </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttribute(System.String)">
+      <summary>Gibt den Wert des Attributs mit dem angegebenen Namen zurück.</summary>
+      <returns>Der Wert des angegebenen Attributs.Wenn kein übereinstimmendes Attribut gefunden wurde oder das Attribut keinen angegebenen Wert oder Standardwert hat, wird eine leere Zeichenfolge zurückgegeben.</returns>
+      <param name="name">Der Name des abzurufenden Attributs.Dies ist ein gekennzeichneter Name.Er wird mit der Name-Eigenschaft des übereinstimmenden Knotens verglichen.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttribute(System.String,System.String)">
+      <summary>Gibt den Wert des Attributs mit dem angegebenen lokalen Namen und Namespace-URI zurück.</summary>
+      <returns>Der Wert des angegebenen Attributs.Wenn kein übereinstimmendes Attribut gefunden wurde oder das Attribut keinen angegebenen Wert oder Standardwert hat, wird eine leere Zeichenfolge zurückgegeben.</returns>
+      <param name="localName">Der lokale Name des abzurufenden Attributs. </param>
+      <param name="namespaceURI">Der Namespace-URI des abzurufenden Attributs. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttributeNode(System.String)">
+      <summary>Gibt das XmlAttribute mit dem angegebenen Namen zurück.</summary>
+      <returns>Das angegebene XmlAttribute oder null, wenn kein übereinstimmendes Attribut gefunden wurde.</returns>
+      <param name="name">Der Name des abzurufenden Attributs.Dies ist ein gekennzeichneter Name.Er wird mit der Name-Eigenschaft des übereinstimmenden Knotens verglichen.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttributeNode(System.String,System.String)">
+      <summary>Gibt das <see cref="T:System.Xml.XmlAttribute" /> mit dem angegebenen lokalen Namen und Namespace-URI zurück.</summary>
+      <returns>Das angegebene XmlAttribute oder null, wenn kein übereinstimmendes Attribut gefunden wurde.</returns>
+      <param name="localName">Der lokale Name des Attributs. </param>
+      <param name="namespaceURI">Der Namespace-URI dieses Attributs. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetElementsByTagName(System.String)">
+      <summary>Gibt eine <see cref="T:System.Xml.XmlNodeList" /> mit einer Liste aller untergeordneten Elemente zurück, die mit dem angegebenen <see cref="P:System.Xml.XmlElement.Name" /> übereinstimmen.</summary>
+      <returns>Eine <see cref="T:System.Xml.XmlNodeList" /> mit einer Liste aller übereinstimmenden Knoten.Die Liste ist leer, wenn es keine entsprechenden Knoten gibt.</returns>
+      <param name="name">Der Namenstag, mit dem eine Übereinstimmung gefunden werden soll.Dies ist ein gekennzeichneter Name.Er wird mit der Name-Eigenschaft des übereinstimmenden Knotens verglichen.Das Sternchen (*) ist ein spezieller Wert, der allen Tags entspricht.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetElementsByTagName(System.String,System.String)">
+      <summary>Gibt eine <see cref="T:System.Xml.XmlNodeList" /> mit einer Liste aller Nachfolgerelemente zurück, die mit dem angegebenen <see cref="P:System.Xml.XmlElement.LocalName" /> und <see cref="P:System.Xml.XmlElement.NamespaceURI" /> übereinstimmen.</summary>
+      <returns>Eine <see cref="T:System.Xml.XmlNodeList" /> mit einer Liste aller übereinstimmenden Knoten.Die Liste ist leer, wenn es keine entsprechenden Knoten gibt.</returns>
+      <param name="localName">Der lokale Name, mit dem eine Übereinstimmung gefunden werden soll.Das Sternchen (*) ist ein spezieller Wert, der allen Tags entspricht.</param>
+      <param name="namespaceURI">Der Namespace-URI, mit dem Übereinstimmungen gefunden werden sollen. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.HasAttribute(System.String)">
+      <summary>Ermittelt, ob der aktuelle Knoten über ein Attribut mit dem angegebenen Namen verfügt.</summary>
+      <returns>true, wenn der aktuelle Knoten über das angegebene Attribut verfügt, andernfalls false.</returns>
+      <param name="name">Der Name des zu suchenden Attributs.Dies ist ein gekennzeichneter Name.Er wird mit der Name-Eigenschaft des übereinstimmenden Knotens verglichen.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.HasAttribute(System.String,System.String)">
+      <summary>Ermittelt, ob der aktuelle Knoten über ein Attribut mit dem angegebenen lokalen Namen und Namespace-URI verfügt.</summary>
+      <returns>true, wenn der aktuelle Knoten über das angegebene Attribut verfügt, andernfalls false.</returns>
+      <param name="localName">Der lokale Name des zu suchenden Attributs. </param>
+      <param name="namespaceURI">Der Namespace-URI des zu suchenden Attributs. </param>
+    </member>
+    <member name="P:System.Xml.XmlElement.HasAttributes">
+      <summary>Ruft einen boolean-Wert ab, der angibt, ob der aktuelle Knoten über Attribute verfügt.</summary>
+      <returns>true, wenn der aktuelle Knoten über Attribute verfügt, andernfalls false.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.InnerText">
+      <summary>Ruft die verketteten Werte des Knotens und sämtlicher diesem untergeordneten Elemente ab oder legt diese fest.</summary>
+      <returns>Die verketteten Werte des Knotens und aller diesem untergeordneten Elemente.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.InnerXml">
+      <summary>Ruft das Markup ab, das nur die untergeordneten Elemente dieses Knotens darstellt, oder legt dieses fest.</summary>
+      <returns>Das Markup der untergeordneten Elemente dieses Knotens.</returns>
+      <exception cref="T:System.Xml.XmlException">Der beim Festlegen dieser Eigenschaft angegebene XML-Code ist nicht wohlgeformt. </exception>
+    </member>
+    <member name="P:System.Xml.XmlElement.IsEmpty">
+      <summary>Ruft das Tagformat des Elements ab oder legt dieses fest.</summary>
+      <returns>Gibt true zurück, wenn das Element im kurzen Tagformat "&lt;item/&gt;" serialisiert werden soll, false für das lange Format "&lt;item&gt;&lt;/item&gt;".Wenn diese Eigenschaft auf true festgelegt ist, werden die dem Element untergeordneten Elemente entfernt, und das Element wird im kurzen Tagformat serialisiert.Wenn die Eigenschaft auf false festgelegt ist, ändert sich der Wert der Eigenschaft (unabhängig davon, ob das Element leer ist oder nicht). Wenn das Element leer ist, wird es im langen Format serialisiert.Diese Eigenschaft ist eine Microsoft-Erweiterung des Dokumentobjektmodells (Document Object Model, DOM).</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.LocalName">
+      <summary>Ruft den lokalen Namen des aktuellen Knotens ab.</summary>
+      <returns>Der Name des aktuellen Knotens ohne das Präfix.Beispielsweise ist book der LocalName für das Element &lt;bk:book&gt;.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.Name">
+      <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+      <returns>Der gekennzeichnete Name des Knotens.Für XmlElement-Knoten ist dies der Tagname des Elements.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NamespaceURI">
+      <summary>Ruft den Namespace-URI dieses Knotens ab.</summary>
+      <returns>Der Namespace-URI dieses Knotens.Wenn kein Namespace-URI vorhanden ist, gibt diese Eigenschaft String.Empty zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NextSibling">
+      <summary>Ruft den <see cref="T:System.Xml.XmlNode" /> ab, der diesem Element unmittelbar folgt.</summary>
+      <returns>Der XmlNode, der diesem Element unmittelbar folgt.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NodeType">
+      <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+      <returns>Der Knotentyp.Für XmlElement-Knoten ist dieser Wert XmlNodeType.Element.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.OwnerDocument">
+      <summary>Ruft das <see cref="T:System.Xml.XmlDocument" /> ab, zu dem dieser Knoten gehört.</summary>
+      <returns>Das XmlDocument, zu dem dieses Element gehört.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.ParentNode"></member>
+    <member name="P:System.Xml.XmlElement.Prefix">
+      <summary>Ruft das Namespacepräfix dieses Knotens ab oder legt dieses fest.</summary>
+      <returns>Das Namespacepräfix dieses Knotens.Wenn kein Präfix vorhanden ist, gibt diese Eigenschaft String.Empty zurück.</returns>
+      <exception cref="T:System.ArgumentException">Dieser Knoten ist schreibgeschützt </exception>
+      <exception cref="T:System.Xml.XmlException">Das angegebene Präfix enthält ein ungültiges Zeichen.Das angegebene Präfix ist ungültig.Der namespaceURI dieses Knotens ist null.Das angegebene Präfix ist "xml", und der namespaceURI dieses Knotens ist nicht identisch mit http://www.w3.org/XML/1998/namespace. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAll">
+      <summary>Entfernt alle angegebenen Attribute und untergeordneten Elemente des aktuellen Knotens.Standardattribute werden nicht entfernt.</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAllAttributes">
+      <summary>Entfernt alle angegebenen Attribute des Elements.Standardattribute werden nicht entfernt.</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttribute(System.String)">
+      <summary>Entfernt ein Attribut über den Namen.</summary>
+      <param name="name">Der Name des zu entfernenden Attributs. Dies ist ein gekennzeichneter Name.Er wird mit der Name-Eigenschaft des übereinstimmenden Knotens verglichen.</param>
+      <exception cref="T:System.ArgumentException">Der Knoten ist schreibgeschützt. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttribute(System.String,System.String)">
+      <summary>Entfernt ein Attribut mit dem angegebenen lokalen Namen und Namespace-URI. (Wenn das entfernte Attribut über einen Standardwert verfügt, wird es sofort ersetzt.)</summary>
+      <param name="localName">Der lokale Name des zu entfernenden Attributs. </param>
+      <param name="namespaceURI">Der Namespace-URI des zu entfernenden Attributs. </param>
+      <exception cref="T:System.ArgumentException">Der Knoten ist schreibgeschützt. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeAt(System.Int32)">
+      <summary>Entfernt den Attributknoten mit dem angegebenen Index aus dem Element. (Wenn das entfernte Attribut über einen Standardwert verfügt, wird es sofort ersetzt.)</summary>
+      <returns>Der entfernte Attributknoten oder null, wenn am angegebenen Index kein Knoten vorhanden ist.</returns>
+      <param name="i">Der Index des zu entfernenden Knotens.Der erste Knoten hat den Index 0.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeNode(System.String,System.String)">
+      <summary>Entfernt das mit dem lokalen Namen und Namespace-URI angegebene <see cref="T:System.Xml.XmlAttribute" />. (Wenn das entfernte Attribut über einen Standardwert verfügt, wird es sofort ersetzt.)</summary>
+      <returns>Das entfernte XmlAttribute oder null, wenn das XmlElement über keinen übereinstimmenden Attributknoten verfügt.</returns>
+      <param name="localName">Der lokale Name des Attributs. </param>
+      <param name="namespaceURI">Der Namespace-URI dieses Attributs. </param>
+      <exception cref="T:System.ArgumentException">Dieser Knoten ist schreibgeschützt. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeNode(System.Xml.XmlAttribute)">
+      <summary>Entfernt das angegebene <see cref="T:System.Xml.XmlAttribute" />.</summary>
+      <returns>Das entfernte XmlAttribute oder null, wenn <paramref name="oldAttr" /> kein Attributknoten des XmlElement ist.</returns>
+      <param name="oldAttr">Der zu entfernende XmlAttribute-Knoten.Wenn das entfernte Attribut über einen Standardwert verfügt, wird es sofort ersetzt.</param>
+      <exception cref="T:System.ArgumentException">Dieser Knoten ist schreibgeschützt. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttribute(System.String,System.String)">
+      <summary>Legt den Wert des Attributs mit dem angegebenen Namen fest.</summary>
+      <param name="name">Der Name des Attributs, das erstellt oder geändert werden soll.Dies ist ein gekennzeichneter Name.Wenn der Name einen Doppelpunkt enthält, wird er in eine Präfix- und eine lokale Namenskomponente aufgelöst.</param>
+      <param name="value">Der für das Attribut festzulegende Wert. </param>
+      <exception cref="T:System.Xml.XmlException">Der angegebene Name enthält ein ungültiges Zeichen. </exception>
+      <exception cref="T:System.ArgumentException">Der Knoten ist schreibgeschützt. </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttribute(System.String,System.String,System.String)">
+      <summary>Legt den Wert des Attributs mit dem angegebenen lokalen Namen und Namespace-URI fest.</summary>
+      <returns>Der Attributwert.</returns>
+      <param name="localName">Der lokale Name des Attributs. </param>
+      <param name="namespaceURI">Der Namespace-URI dieses Attributs. </param>
+      <param name="value">Der für das Attribut festzulegende Wert. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttributeNode(System.String,System.String)">
+      <summary>Fügt das angegebene <see cref="T:System.Xml.XmlAttribute" /> hinzu.</summary>
+      <returns>Die zu addierende XmlAttribute.</returns>
+      <param name="localName">Der lokale Name des Attributs. </param>
+      <param name="namespaceURI">Der Namespace-URI dieses Attributs. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttributeNode(System.Xml.XmlAttribute)">
+      <summary>Fügt das angegebene <see cref="T:System.Xml.XmlAttribute" /> hinzu.</summary>
+      <returns>Wenn das Attribut ein vorhandenes Attribut mit demselben Namen ersetzt, wird das alte XmlAttribute zurückgegeben, andernfalls wird null zurückgegeben.</returns>
+      <param name="newAttr">Der XmlAttribute-Knoten, der der Attributauflistung dieses Elements hinzugefügt werden soll. </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newAttr" /> wurde nicht aus dem Dokument erstellt, aus dem dieser Knoten erstellt wurde.Oder dieser Knoten ist schreibgeschützt.</exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="newAttr" /> ist bereits ein Attribut eines anderen XmlElement-Objekts.Sie müssen XmlAttribute-Knoten explizit klonen, um sie in anderen XmlElement-Objekten erneut verwenden zu können.</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Speichert alle untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.WriteTo(System.Xml.XmlWriter)">
+      <summary>Speichert den aktuellen Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="T:System.Xml.XmlImplementation">
+      <summary>Definiert den Kontext für eine Gruppe von <see cref="T:System.Xml.XmlDocument" />-Objekten</summary>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlImplementation" />-Klasse.</summary>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.#ctor(System.Xml.XmlNameTable)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlImplementation" />-Klasse mit der angegebenen <see cref="T:System.Xml.XmlNameTable" />.</summary>
+      <param name="nt">Ein <see cref="T:System.Xml.XmlNameTable" />-Objekt.</param>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.CreateDocument">
+      <summary>Erstellt einen neuen <see cref="T:System.Xml.XmlDocument" />.</summary>
+      <returns>Das neue XmlDocument-Objekt.</returns>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.HasFeature(System.String,System.String)">
+      <summary>Überprüft, ob die DOM-Implementierung (Document Object Model) ein bestimmtes Feature implementiert.</summary>
+      <returns>true, wenn das Feature in der angegebenen Version implementiert ist, andernfalls false.In der folgenden Tabelle werden die Kombinationen aufgeführt, bei den HasFeature den Wert true zurückgibt.strFeature strVersion XML 1.0 XML 2.0 </returns>
+      <param name="strFeature">Der Paketname des zu testenden Features.Bei diesem Namen wird die Groß- und Kleinschreibung nicht berücksichtigt.</param>
+      <param name="strVersion">Dies ist die Versionsnummer des zu testenden Paketnamens.Wenn die Version nicht angegeben ist (null) und eine beliebige Version des Features unterstützt wird, gibt die Methode den Wert true zurück.</param>
+    </member>
+    <member name="T:System.Xml.XmlLinkedNode">
+      <summary>Ruft den Knoten ab, der diesem Knoten unmittelbar vorausgeht oder auf ihn folgt.</summary>
+    </member>
+    <member name="P:System.Xml.XmlLinkedNode.NextSibling">
+      <summary>Ruft den Knoten ab, der diesem Knoten unmittelbar folgt.</summary>
+      <returns>Der <see cref="T:System.Xml.XmlNode" />, der unmittelbar auf diesen Knoten folgt, oder null, wenn kein solcher vorhanden ist.</returns>
+    </member>
+    <member name="P:System.Xml.XmlLinkedNode.PreviousSibling">
+      <summary>Ruft den Knoten ab, der diesem Knoten unmittelbar vorausgeht.</summary>
+      <returns>Der vorausgehende <see cref="T:System.Xml.XmlNode" /> oder null, wenn kein solcher vorhanden ist.</returns>
+    </member>
+    <member name="T:System.Xml.XmlNamedNodeMap">
+      <summary>Stellt eine Auflistung von Knoten dar, die über Name oder Index zugänglich sind.</summary>
+    </member>
+    <member name="P:System.Xml.XmlNamedNodeMap.Count">
+      <summary>Ruft die Anzahl der Knoten im XmlNamedNodeMap-Objekt ab.</summary>
+      <returns>Die Anzahl der Knoten.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetEnumerator">
+      <summary>Stellt Unterstützung für "foreach"-Iterationen in der Auflistung von Knoten in der XmlNamedNodeMap bereit.</summary>
+      <returns>Ein Enumeratorobjekt.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String)">
+      <summary>Ruft einen durch den Namen angegebenen <see cref="T:System.Xml.XmlNode" /> ab.</summary>
+      <returns>Ein XmlNode mit dem angegebenen Namen oder null, wenn kein übereinstimmender Knoten gefunden wurde.</returns>
+      <param name="name">Der gekennzeichnete Name des abzurufenden Knotens.Er wird mit der <see cref="P:System.Xml.XmlNode.Name" />-Eigenschaft des übereinstimmenden Knotens verglichen.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String,System.String)">
+      <summary>Ruft einen Knoten mit dem übereinstimmenden <see cref="P:System.Xml.XmlNode.LocalName" /> und <see cref="P:System.Xml.XmlNode.NamespaceURI" /> ab.</summary>
+      <returns>Ein <see cref="T:System.Xml.XmlNode" /> mit dem übereinstimmenden lokalen Namen und Namespace-URI oder null, wenn kein übereinstimmender Knoten gefunden wurde.</returns>
+      <param name="localName">Der lokale Name des abzurufenden Knotens.</param>
+      <param name="namespaceURI">Der abzurufende Namespace-URI (Uniform Resource Identifier) des Knotens.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.Item(System.Int32)">
+      <summary>Ruft den Knoten am angegebenen Index in der XmlNamedNodeMap ab.</summary>
+      <returns>Der <see cref="T:System.Xml.XmlNode" /> am angegebenen Index.Wenn <paramref name="index" /> kleiner als 0 oder größer oder gleich der <see cref="P:System.Xml.XmlNamedNodeMap.Count" />-Eigenschaft ist, wird null zurückgegeben.</returns>
+      <param name="index">Die Indexposition des aus der XmlNamedNodeMap abzurufenden Knotens.Der Index ist nullbasiert. Daher ist der Index des ersten Knotens 0 und der des letzten Knotens <see cref="P:System.Xml.XmlNamedNodeMap.Count" /> -1.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String)">
+      <summary>Entfernt den Knoten aus der XmlNamedNodeMap.</summary>
+      <returns>Der aus dieser XmlNamedNodeMap entfernte XmlNode oder null, wenn kein übereinstimmender Knoten gefunden wurde.</returns>
+      <param name="name">Der gekennzeichnete Name des zu entfernenden Knotens.Der Name wird mit der <see cref="P:System.Xml.XmlNode.Name" />-Eigenschaft des übereinstimmenden Knotens verglichen.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String,System.String)">
+      <summary>Entfernt einen Knoten mit dem übereinstimmenden <see cref="P:System.Xml.XmlNode.LocalName" /> und <see cref="P:System.Xml.XmlNode.NamespaceURI" />.</summary>
+      <returns>Der entfernte <see cref="T:System.Xml.XmlNode" /> oder null, wenn kein übereinstimmender Knoten gefunden wurde.</returns>
+      <param name="localName">Der lokale Name des zu entfernenden Knotens.</param>
+      <param name="namespaceURI">Der Namespace-URI des zu entfernenden Knotens.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.SetNamedItem(System.Xml.XmlNode)">
+      <summary>Fügt einen <see cref="T:System.Xml.XmlNode" /> unter Verwendung der entsprechenden <see cref="P:System.Xml.XmlNode.Name" />-Eigenschaft hinzu.</summary>
+      <returns>Wenn der <paramref name="node" /> einen vorhandenen Knoten mit demselben Namen ersetzt, wird der alte Knoten zurückgegeben, andernfalls wird null zurückgegeben.</returns>
+      <param name="node">Ein in der XmlNamedNodeMap zu speichernder XmlNode.Wenn ein Knoten mit diesem Namen bereits in der Zuordnung enthalten ist, wird er durch den neuen ersetzt.</param>
+      <exception cref="T:System.ArgumentException">Der <paramref name="node" /> wurde aus einem anderen <see cref="T:System.Xml.XmlDocument" /> als dem erstellt, das die XmlNamedNodeMap erstellt hat; oder die XmlNamedNodeMap ist schreibgeschützt.</exception>
+    </member>
+    <member name="T:System.Xml.XmlNode">
+      <summary>Stellt einen einzelnen Knoten im XML-Dokument dar. </summary>
+    </member>
+    <member name="M:System.Xml.XmlNode.AppendChild(System.Xml.XmlNode)">
+      <summary>Fügt den angegebenen Knoten am Ende der Liste der untergeordneten Knoten dieses Knotens hinzu.</summary>
+      <returns>Der hinzugefügte Knoten.</returns>
+      <param name="newChild">Der hinzuzufügende Knoten.Der gesamte Inhalt des hinzuzufügenden Knotens wird an den angegebenen Speicherort verschoben.</param>
+      <exception cref="T:System.InvalidOperationException">Der Typ dieses Knotens lässt keine untergeordneten Knoten vom Typ des <paramref name="newChild" />-Knotens zu.<paramref name="newChild" /> ist eine frühere Version dieses Knotens. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> wurde nicht aus dem Dokument erstellt, aus dem dieser Knoten erstellt wurde.Dieser Knoten ist schreibgeschützt. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.Attributes">
+      <summary>Ruft eine <see cref="T:System.Xml.XmlAttributeCollection" /> ab, die die Attribute dieses Knotens enthält.</summary>
+      <returns>Eine XmlAttributeCollection, die die Attribute des Knotens enthält.Wenn der Knoten vom Typ XmlNodeType.Element ist, werden die Attribute des Knotens zurückgegeben.Andernfalls gibt diese Eigenschaft null zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.BaseURI">
+      <summary>Ruft den Basis-URI des aktuellen Knotens ab.</summary>
+      <returns>Die Position, aus der der Knoten geladen wurde oder String.Empty, wenn der Knoten über keinen Basis-URI verfügt.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.ChildNodes">
+      <summary>Ruft alle untergeordneten Knoten des Knotens ab.</summary>
+      <returns>Ein Objekt, das sämtliche untergeordneten Knoten des Knotens enthält.Wenn keine untergeordneten Knoten vorhanden sind, gibt diese Eigenschaft eine leere <see cref="T:System.Xml.XmlNodeList" /> zurück.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.CloneNode(System.Boolean)">
+      <summary>Erstellt beim Überschreiben in einer abgeleiteten Klasse ein Duplikat des Knotens.</summary>
+      <returns>Der geklonte Knoten.</returns>
+      <param name="deep">true, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, false, wenn nur der Knoten selbst geklont werden soll. </param>
+      <exception cref="T:System.InvalidOperationException">Aufruf dieser Methode für einen Knotentyp, der nicht geklont werden kann. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.FirstChild">
+      <summary>Ruft das erste untergeordnete Element des Knotens ab.</summary>
+      <returns>Das erste untergeordnete Element des Knotens.Wenn kein solcher Knoten vorhanden ist, wird null zurückgegeben.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetEnumerator">
+      <summary>Ruft einen Enumerator ab, der die untergeordneten Knoten des aktuellen Knotens durchläuft.</summary>
+      <returns>Ein <see cref="T:System.Collections.IEnumerator" />-Objekt, mit dem die untergeordneten Knoten im aktuellen Knoten durchlaufen werden können.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetNamespaceOfPrefix(System.String)">
+      <summary>Sucht im Gültigkeitsbereich des aktuellen Knotens die nächstgelegene xmlns-Deklaration für das angegebene Präfix und gibt den Namespace-URI in der Deklaration zurück.</summary>
+      <returns>Der Namespace-URI des angegebenen Präfixes.</returns>
+      <param name="prefix">Das Präfix, dessen Namespace-URI gesucht werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetPrefixOfNamespace(System.String)">
+      <summary>Sucht im Gültigkeitsbereich des aktuellen Knotens die nächstgelegene xmlns-Deklaration für den angegebenen Namespace-URI und gibt das in dieser Deklaration definierte Präfix zurück.</summary>
+      <returns>Das Präfix für den angegebenen Namespace-URI.</returns>
+      <param name="namespaceURI">Der Namespace-URI, dessen Präfix gesucht werden soll. </param>
+    </member>
+    <member name="P:System.Xml.XmlNode.HasChildNodes">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Knoten über untergeordnete Knoten verfügt.</summary>
+      <returns>true, wenn der Knoten über untergeordnete Knoten verfügt, andernfalls false.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.InnerText">
+      <summary>Ruft die verketteten Werte des Knotens und sämtlicher diesem untergeordneten Knoten ab oder legt diese fest.</summary>
+      <returns>Die verketteten Werte des Knotens und aller diesem untergeordneten Knoten.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.InnerXml">
+      <summary>Ruft das Markup ab, das nur die untergeordneten Knoten dieses Knotens darstellt, oder legt dieses fest.</summary>
+      <returns>Das Markup der untergeordneten Knoten dieses Knotens.HinweisInnerXml gibt keine Standardattribute zurück.</returns>
+      <exception cref="T:System.InvalidOperationException">Festlegen dieser Eigenschaft auf einem Knoten, der keine untergeordneten Knoten besitzen kann. </exception>
+      <exception cref="T:System.Xml.XmlException">Der beim Festlegen dieser Eigenschaft angegebene XML-Code ist nicht wohlgeformt. </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Fügt den angegebenen Knoten unmittelbar hinter dem angegebenen Verweisknoten ein.</summary>
+      <returns>Der Knoten, der eingefügt wird.</returns>
+      <param name="newChild">Der einzufügende XmlNode. </param>
+      <param name="refChild">Der XmlNode, der der Verweisknoten ist.Der <paramref name="newNode" /> wird hinter <paramref name="refNode" /> platziert.</param>
+      <exception cref="T:System.InvalidOperationException">Der Typ dieses Knotens lässt keine untergeordneten Knoten vom Typ des <paramref name="newChild" />-Knotens zu.<paramref name="newChild" /> ist eine frühere Version dieses Knotens. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> wurde nicht aus dem Dokument erstellt, aus dem dieser Knoten erstellt wurde.<paramref name="refChild" /> ist kein untergeordnetes Element dieses Knotens.Dieser Knoten ist schreibgeschützt. </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Fügt den angegebenen Knoten direkt vor dem angegebenen Verweisknoten ein.</summary>
+      <returns>Der Knoten, der eingefügt wird.</returns>
+      <param name="newChild">Der einzufügende XmlNode. </param>
+      <param name="refChild">Der XmlNode, der der Verweisknoten ist.Das <paramref name="newChild" /> wird vor diesem Knoten platziert.</param>
+      <exception cref="T:System.InvalidOperationException">Der Typ des aktuellen Knotens lässt keine untergeordneten Knoten vom Typ des <paramref name="newChild" />-Knotens zu.<paramref name="newChild" /> ist eine frühere Version dieses Knotens. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> wurde nicht aus dem Dokument erstellt, aus dem dieser Knoten erstellt wurde.<paramref name="refChild" /> ist kein untergeordnetes Element dieses Knotens.Dieser Knoten ist schreibgeschützt. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.IsReadOnly">
+      <summary>Ruft einen Wert ab, der angibt, ob der Knoten schreibgeschützt ist.</summary>
+      <returns>true, wenn der Knoten schreibgeschützt ist, andernfalls false.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Item(System.String)">
+      <summary>Ruft das erste untergeordnete Element mit dem angegebenen <see cref="P:System.Xml.XmlNode.Name" /> ab.</summary>
+      <returns>Das erste <see cref="T:System.Xml.XmlElement" />, das mit dem angegebenen Namen übereinstimmt.Es wird ein NULL-Verweis zurückgegeben (Nothing in Visual Basic), wenn keine Übereinstimmung vorhanden ist.</returns>
+      <param name="name">Der gekennzeichnete Name des abzurufenden Elements. </param>
+    </member>
+    <member name="P:System.Xml.XmlNode.Item(System.String,System.String)">
+      <summary>Ruft das erste untergeordnete Element mit dem angegebenen <see cref="P:System.Xml.XmlNode.LocalName" /> und dem <see cref="P:System.Xml.XmlNode.NamespaceURI" /> ab.</summary>
+      <returns>Das erste <see cref="T:System.Xml.XmlElement" /> mit dem passenden <paramref name="localname" /> und <paramref name="ns" />..Es wird ein NULL-Verweis zurückgegeben (Nothing in Visual Basic), wenn keine Übereinstimmung vorhanden ist.</returns>
+      <param name="localname">Der lokale Name des Elements. </param>
+      <param name="ns">Der Namespace-URI des Elements. </param>
+    </member>
+    <member name="P:System.Xml.XmlNode.LastChild">
+      <summary>Ruft das letzte untergeordnete Element des Knotens ab.</summary>
+      <returns>Das letzte untergeordnete Element des Knotens.Wenn kein solcher Knoten vorhanden ist, wird null zurückgegeben.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.LocalName">
+      <summary>Ruft den lokalen Namen des Knotens ab, wenn er in einer abgeleiteten Klasse überschrieben wird.</summary>
+      <returns>Der Name des Knotens ohne dessen Präfix.Beispielsweise ist book der LocalName für das Element &lt;bk:book&gt;.Der zurückgegebene Name hängt vom <see cref="P:System.Xml.XmlNode.NodeType" /> des Knotens ab:  Typ Name Attribut Der lokale Name des Attributs. CDATA #cdata-section Kommentar #comment Document #document DocumentFragment #document-fragment DocumentType Der Name des Dokumenttyps. Element Der lokale Name des Elements. Entität Der Name der Entität. EntityReference Der Name der Entität, auf die verwiesen wird. Notation Der Notationsname. ProcessingInstruction Das Ziel der Verarbeitungsanweisung. Text #text Whitespace #whitespace SignificantWhitespace #significant-whitespace XmlDeclaration #xml-declaration </returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Name">
+      <summary>Ruft den qualifizierten Namen des Knotens ab, wenn er in einer abgeleiteten Klasse überschrieben wurde.</summary>
+      <returns>Der gekennzeichnete Name des Knotens.Der zurückgegebene Name hängt vom <see cref="P:System.Xml.XmlNode.NodeType" /> des Knotens ab: Typ Name Attribut Der qualifizierte Name des Attributs. CDATA #cdata-section Kommentar #comment Document #document DocumentFragment #document-fragment DocumentType Der Name des Dokumenttyps. Element Der qualifizierte Name des Elements. Entität Der Name der Entität. EntityReference Der Name der Entität, auf die verwiesen wird. Notation Der Notationsname. ProcessingInstruction Das Ziel der Verarbeitungsanweisung. Text #text Whitespace #whitespace SignificantWhitespace #significant-whitespace XmlDeclaration #xml-declaration </returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NamespaceURI">
+      <summary>Ruft den Namespace-URI dieses Knotens ab.</summary>
+      <returns>Der Namespace-URI dieses Knotens.Wenn kein Namespace-URI vorhanden ist, gibt diese Eigenschaft String.Empty zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NextSibling">
+      <summary>Ruft den Knoten ab, der diesem Knoten unmittelbar folgt.</summary>
+      <returns>Der nächste XmlNode.Wenn kein nächster Knoten vorhanden ist, wird null zurückgegeben.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NodeType">
+      <summary>Ruft beim Überschreiben in einer abgeleiteten Klasse den Typ des aktuellen Knotens ab.</summary>
+      <returns>Einer der <see cref="T:System.Xml.XmlNodeType" />-Werte.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.Normalize">
+      <summary>Weist allen XmlText-Knoten in der Teilstruktur unterhalb dieses XmlNode eine "normale" Form zu. In dieser werden XmlText-Knoten nur durch Markup (d. h. Tags, Kommentare, Verarbeitungsanweisungen, CDATA-Abschnitte und Entitätsverweise) getrennt, und es sind somit keine direkt aufeinander folgenden XmlText-Knoten vorhanden.</summary>
+    </member>
+    <member name="P:System.Xml.XmlNode.OuterXml">
+      <summary>Ruft das Markup ab, das diesen Knoten und alle ihm untergeordneten Knoten enthält.</summary>
+      <returns>Das Markup, das diesen Knoten und alle ihm untergeordneten Knoten enthält.HinweisOuterXml gibt keine Standardattribute zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.OwnerDocument">
+      <summary>Ruft das <see cref="T:System.Xml.XmlDocument" /> ab, zu dem dieser Knoten gehört.</summary>
+      <returns>Das <see cref="T:System.Xml.XmlDocument" />, zu dem dieser Knoten gehört.Wenn der Knoten ein <see cref="T:System.Xml.XmlDocument" /> ist (NodeType ist gleich XmlNodeType.Document), gibt diese Eigenschaft null zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.ParentNode">
+      <summary>Ruft das übergeordnete Element dieses Knotens ab (bei Knoten, die über übergeordnete Elemente verfügen können).</summary>
+      <returns>Der XmlNode, der das übergeordnete Element des aktuellen Knotens ist.Wenn ein Knoten gerade erstellt, jedoch noch nicht der Struktur hinzugefügt oder aus dieser entfernt wurde, ist das übergeordnete Element null.Für alle anderen Knoten hängt der zurückgegebene Wert vom <see cref="P:System.Xml.XmlNode.NodeType" /> des Knotens ab.In der folgenden Tabelle werden die möglichen Rückgabewerte für die ParentNode-Eigenschaft beschrieben.NodeType Rückgabewert von ParentNode Attribute, Document, DocumentFragment, Entity, Notation Gibt null zurück. Diese Knoten verfügen über keine übergeordneten Elemente. CDATA Gibt das Element oder den Entitätsverweis mit dem CDATA-Abschnitt zurück. Kommentar Gibt das Element, den Entitätsverweis, den Dokumenttyp oder das Dokument mit dem Kommentar zurück. DocumentType Gibt den Dokumentknoten zurück. Element Gibt den übergeordneten Knoten des Elements zurück.Wenn das Element der Stammknoten der Struktur ist, ist das übergeordnete Element der Dokumentknoten.EntityReference Gibt das Element, das Attribut oder den Entitätsverweis mit dem Entitätsverweis zurück. ProcessingInstruction Gibt das Dokument, das Element, den Dokumenttyp oder den Entitätsverweis mit der Verarbeitungsanweisung zurück. Text Gibt das übergeordnete Element, das Attribut oder den Entitätsverweis mit dem Textknoten zurück. </returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Prefix">
+      <summary>Ruft das Namespacepräfix dieses Knotens ab oder legt dieses fest.</summary>
+      <returns>Das Namespacepräfix dieses Knotens.Beispielsweise ist bk das Prefix für das Element &lt;bk:book&gt;.Wenn kein Präfix vorhanden ist, gibt diese Eigenschaft String.Empty zurück.</returns>
+      <exception cref="T:System.ArgumentException">Dieser Knoten ist schreibgeschützt. </exception>
+      <exception cref="T:System.Xml.XmlException">Das angegebene Präfix enthält ein ungültiges Zeichen.Das angegebene Präfix ist ungültig.Das angegebene Präfix ist "xml", und der namespaceURI dieses Knotens ist nicht mit "http://www.w3.org/XML/1998/namespace" identisch.Dieser Knoten ist ein Attribut, das angegebene Präfix ist "xmlns", und der namespaceURI dieses Knotens unterscheidet von "http://www.w3.org/2000/xmlns/".Dieser Knoten ist ein Attribut, und der qualifiedName dieses Knotens ist "xmlns". </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.PrependChild(System.Xml.XmlNode)">
+      <summary>Fügt den angegebenen Knoten am Anfang der Liste der untergeordneten Knoten dieses Knotens hinzu.</summary>
+      <returns>Der hinzugefügte Knoten.</returns>
+      <param name="newChild">Der hinzuzufügende Knoten.Der gesamte Inhalt des hinzuzufügenden Knotens wird an den angegebenen Speicherort verschoben.</param>
+      <exception cref="T:System.InvalidOperationException">Der Typ dieses Knotens lässt keine untergeordneten Knoten vom Typ des <paramref name="newChild" />-Knotens zu.<paramref name="newChild" /> ist eine frühere Version dieses Knotens. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> wurde nicht aus dem Dokument erstellt, aus dem dieser Knoten erstellt wurde.Dieser Knoten ist schreibgeschützt. </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.PreviousSibling">
+      <summary>Ruft den Knoten ab, der diesem Knoten unmittelbar vorausgeht.</summary>
+      <returns>Der vorausgehende XmlNode.Wenn kein vorausgehender Knoten vorhanden ist, wird null zurückgegeben.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.PreviousText">
+      <summary>Ruft den Textknoten ab, der diesem Knoten unmittelbar vorausgeht.</summary>
+      <returns>Gibt <see cref="T:System.Xml.XmlNode" />zurück.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.RemoveAll">
+      <summary>Entfernt alle untergeordneten Knoten bzw. Attribute des aktuellen Knotens.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)">
+      <summary>Entfernt den angegebenen untergeordneten Knoten.</summary>
+      <returns>Der entfernte Knoten.</returns>
+      <param name="oldChild">Der Knoten, der entfernt wird. </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="oldChild" /> ist kein untergeordnetes Element dieses Knotens.Oder dieser Knoten ist schreibgeschützt.</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>Ersetzt den untergeordneten <paramref name="oldChild" />-Knoten durch den <paramref name="newChild" />-Knoten.</summary>
+      <returns>Der ersetzte Knoten.</returns>
+      <param name="newChild">Der neue Knoten, der in die Liste der untergeordneten Elemente eingefügt werden soll. </param>
+      <param name="oldChild">Der Knoten, der in der Liste ersetzt wird. </param>
+      <exception cref="T:System.InvalidOperationException">Der Typ dieses Knotens lässt keine untergeordneten Knoten vom Typ des <paramref name="newChild" />-Knotens zu.<paramref name="newChild" /> ist eine frühere Version dieses Knotens. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="newChild" /> wurde nicht aus dem Dokument erstellt, aus dem dieser Knoten erstellt wurde.Dieser Knoten ist schreibgeschützt.<paramref name="oldChild" /> ist kein untergeordnetes Element dieses Knotens. </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.Supports(System.String,System.String)">
+      <summary>Überprüft, ob die DOM-Implementierung ein bestimmtes Funktion implementiert.</summary>
+      <returns>true, wenn das Feature in der angegebenen Version implementiert ist, andernfalls false.In der folgenden Tabelle werden die Kombinationen beschrieben, bei denen true zurückgegeben wird.Funktion Version XML 1.0 XML 2.0 </returns>
+      <param name="feature">Der Paketname des zu testenden Features.Bei diesem Namen wird die Groß- und Kleinschreibung nicht berücksichtigt.</param>
+      <param name="version">Die Versionsnummer des zu testenden Paketnamens.Wenn die Version nicht angegeben ist (NULL) und jede Version des Features unterstützt wird, gibt die Methode True zurück.</param>
+    </member>
+    <member name="M:System.Xml.XmlNode.System#Collections#IEnumerable#GetEnumerator">
+      <summary>Eine Beschreibung dieses Members finden Sie unter <see cref="M:System.Xml.XmlNode.GetEnumerator" />.</summary>
+      <returns>Gibt einen Enumerator für die Auflistung zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Value">
+      <summary>Ruft den Wert des Knotens ab oder legt diesen fest.</summary>
+      <returns>Der zurückgegebene Wert hängt vom <see cref="P:System.Xml.XmlNode.NodeType" /> des Knotens ab:  Typ Wert Attribut Der Wert des Attributs. CDATASection Der Inhalt des CDATA-Abschnitts. Kommentar Der Inhalt des Kommentars. Document null. DocumentFragment null. DocumentType null. Element null.Sie können mit der <see cref="P:System.Xml.XmlElement.InnerText" />-Eigenschaft oder der <see cref="P:System.Xml.XmlElement.InnerXml" />-Eigenschaft auf den Wert des Elementknotens zugreifen.Entität null. EntityReference null. Notation null. ProcessingInstruction Der gesamte Inhalt mit Ausnahme des Ziels. Text Der Inhalt des Textknotens. SignificantWhitespace Die Leerraumzeichen.Leerraum kann aus einem oder mehreren Leerzeichen, Wagenrückläufen, Zeilenvorschüben und Tabstopps bestehen.Whitespace Die Leerraumzeichen.Leerraum kann aus einem oder mehreren Leerzeichen, Wagenrückläufen, Zeilenvorschüben und Tabstopps bestehen.XmlDeclaration Der Inhalt der Deklaration (d. h. alle Zeichen zwischen &lt;?xml und ?&gt;). </returns>
+      <exception cref="T:System.ArgumentException">Festlegen des Werts eines schreibgeschützten Knotens. </exception>
+      <exception cref="T:System.InvalidOperationException">Festlegen des Werts eines Knotens, der normalerweise keinen Wert besitzt (z. B. ein Elementknoten). </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Speichert beim Überschreiben in einer abgeleiteten Klasse sämtliche untergeordneten Knoten des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)">
+      <summary>Speichert beim Überschreiben in einer abgeleiteten Klasse den aktuellen Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedAction">
+      <summary>Gibt den Typ der Knotenänderung an.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Change">
+      <summary>Ein Knotenwert wird geändert.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Insert">
+      <summary>In die Struktur wird ein Knoten eingefügt.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Remove">
+      <summary>Aus der Struktur wird ein Knoten entfernt.</summary>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedEventArgs">
+      <summary>Stellt Daten für das <see cref="E:System.Xml.XmlDocument.NodeChanged" />-Ereignis, das <see cref="E:System.Xml.XmlDocument.NodeChanging" />-Ereignis, das <see cref="E:System.Xml.XmlDocument.NodeInserted" />-Ereignis, das <see cref="E:System.Xml.XmlDocument.NodeInserting" />-Ereignis, das <see cref="E:System.Xml.XmlDocument.NodeRemoved" />-Ereignis und das <see cref="E:System.Xml.XmlDocument.NodeRemoving" />-Ereignis bereit.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeChangedEventArgs.#ctor(System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.String,System.Xml.XmlNodeChangedAction)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlNodeChangedEventArgs" />-Klasse.</summary>
+      <param name="node">Der <see cref="T:System.Xml.XmlNode" />, der das Ereignis generiert hat.</param>
+      <param name="oldParent">Der alte übergeordnete <see cref="T:System.Xml.XmlNode" /> des <see cref="T:System.Xml.XmlNode" />, der das Ereignis generiert hat.</param>
+      <param name="newParent">Der neue übergeordnete <see cref="T:System.Xml.XmlNode" /> des <see cref="T:System.Xml.XmlNode" />, der das Ereignis generiert hat.</param>
+      <param name="oldValue">Der alte Wert des <see cref="T:System.Xml.XmlNode" />, der das Ereignis generiert hat.</param>
+      <param name="newValue">Der neue Wert des <see cref="T:System.Xml.XmlNode" />, der das Ereignis generiert hat.</param>
+      <param name="action">
+        <see cref="T:System.Xml.XmlNodeChangedAction" />.</param>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.Action">
+      <summary>Ruft einen Wert ab, der angibt, welcher Typ von Knotenänderungsereignis eintritt.</summary>
+      <returns>Ein XmlNodeChangedAction-Wert, der das Knotenänderungsereignis beschreibt.XmlNodeChangedAction-Wert BeschreibungInsert Ein Knoten wurde oder wird eingefügt. Entfernen Ein Knoten wurde oder wird entfernt. Änderung Ein Knoten wurde oder wird geändert. HinweisBeim Action-Wert wird der Zeitpunkt des Ereignisses (vor oder nach) nicht berücksichtigt.Um beide Instanzen zu behandeln, können Sie separate Ereignishandler erstellen.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.NewParent">
+      <summary>Ruft nach Abschluss des Vorgangs den Wert des <see cref="P:System.Xml.XmlNode.ParentNode" /> ab.</summary>
+      <returns>Der Wert des ParentNode nach Abschluss des Vorgangs.Wenn der Knoten entfernt wird, gibt diese Eigenschaft null zurück.HinweisFür Attributknoten gibt diese Eigenschaft das <see cref="P:System.Xml.XmlAttribute.OwnerElement" /> zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.NewValue">
+      <summary>Ruft den neuen Wert des Knotens ab.</summary>
+      <returns>Der neue Wert des Knotens.Diese Eigenschaft gibt null zurück, wenn der Knoten kein ein Attribut und kein Textknoten ist oder der Knoten entfernt wird.Bei einem Aufruf im <see cref="E:System.Xml.XmlDocument.NodeChanging" />-Ereignis gibt NewValue den Wert des Knotens zurück, wenn die Änderung erfolgreich ist.Bei einem Aufruf im <see cref="E:System.Xml.XmlDocument.NodeChanged" />-Ereignis gibt NewValue den aktuellen Wert des Knotens zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.Node">
+      <summary>Ruft den <see cref="T:System.Xml.XmlNode" /> ab, der hinzugefügt, entfernt oder geändert wird.</summary>
+      <returns>Der XmlNode, der hinzugefügt, entfernt oder geändert wird. Diese Eigenschaft gibt niemals null zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.OldParent">
+      <summary>Ruft den Wert des <see cref="P:System.Xml.XmlNode.ParentNode" /> vor Beginn des Vorgangs ab.</summary>
+      <returns>Der Wert des ParentNode vor Beginn des Vorgangs.Wenn für den Knoten kein übergeordnetes Element vorhanden war, gibt diese Eigenschaft null zurück.HinweisFür Attributknoten gibt diese Eigenschaft das <see cref="P:System.Xml.XmlAttribute.OwnerElement" /> zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.OldValue">
+      <summary>Ruft den ursprünglichen Wert des Knotens ab.</summary>
+      <returns>Der ursprüngliche Wert des Knotens.Diese Eigenschaft gibt null zurück, wenn der Knoten kein ein Attribut und kein Textknoten ist oder der Knoten eingefügt wird.Bei einem Aufruf im <see cref="E:System.Xml.XmlDocument.NodeChanging" />-Ereignis gibt OldValue den aktuellen Wert des Knotens zurück, der ersetzt wird, wenn die Änderung erfolgreich ist.Bei einem Aufruf im <see cref="E:System.Xml.XmlDocument.NodeChanged" />-Ereignis gibt OldValue den Wert des Knotens vor der Änderung zurück.</returns>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedEventHandler">
+      <summary>Stellt die Methode dar, die das <see cref="E:System.Xml.XmlDocument.NodeChanged" />-Ereignis, das <see cref="E:System.Xml.XmlDocument.NodeChanging" />-Ereignis, das <see cref="E:System.Xml.XmlDocument.NodeInserted" />-Ereignis, das <see cref="E:System.Xml.XmlDocument.NodeInserting" />-Ereignis, das <see cref="E:System.Xml.XmlDocument.NodeRemoved" />-Ereignis und das <see cref="E:System.Xml.XmlDocument.NodeRemoving" />-Ereignis behandelt.</summary>
+      <param name="sender">Die Quelle des Ereignisses. </param>
+      <param name="e">Eine Instanz von <see cref="T:System.Xml.XmlNodeChangedEventArgs" />, die die Ereignisdaten enthält. </param>
+    </member>
+    <member name="T:System.Xml.XmlNodeList">
+      <summary>Stellt eine geordnete Auflistung von Knoten dar.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlNodeList" />-Klasse.</summary>
+    </member>
+    <member name="P:System.Xml.XmlNodeList.Count">
+      <summary>Ruft die Anzahl der Knoten in der XmlNodeList ab.</summary>
+      <returns>Die Anzahl der Knoten im XmlNodeList-Objekt.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.GetEnumerator">
+      <summary>Ruft einen Enumerator ab, der die Knotenauflistung durchläuft.</summary>
+      <returns>Ein Enumerator, der zum Durchlaufen der Knotensammlung verwendet werden kann.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.Item(System.Int32)">
+      <summary>Ruft einen Knoten am angegebenen Index ab.</summary>
+      <returns>Das <see cref="T:System.Xml.XmlNode" /> mit dem angegebenen Index in der Auflistung.Wenn <paramref name="index" /> größer oder gleich der Anzahl der Knoten in der Liste ist, wird null zurückgegeben.</returns>
+      <param name="index">Nullbasierter Index für die Liste der Knoten.</param>
+    </member>
+    <member name="P:System.Xml.XmlNodeList.ItemOf(System.Int32)">
+      <summary>Ruft einen Knoten am angegebenen Index ab.</summary>
+      <returns>Das <see cref="T:System.Xml.XmlNode" /> mit dem angegebenen Index in der Auflistung.Wenn der Index größer oder gleich der Anzahl der Knoten in der Liste ist, wird null zurückgegeben.</returns>
+      <param name="i">Nullbasierter Index für die Liste der Knoten.</param>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.PrivateDisposeNodeList">
+      <summary>Gibt Ressourcen in der Knotenliste privat frei.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.System#IDisposable#Dispose">
+      <summary>Gibt alle von der <see cref="T:System.Xml.XmlNodeList" />-Klasse verwendeten Ressourcen frei.</summary>
+    </member>
+    <member name="T:System.Xml.XmlProcessingInstruction">
+      <summary>Stellt eine Verarbeitungsanweisung dar, die in XML definiert wird, um prozessorspezifische Informationen im Text des Dokuments beizubehalten.</summary>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.#ctor(System.String,System.String,System.Xml.XmlDocument)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Xml.XmlProcessingInstruction" />-Klasse.</summary>
+      <param name="target">Das Ziel der Verarbeitungsanweisung. Weitere Informationen finden Sie unter der <see cref="P:System.Xml.XmlProcessingInstruction.Target" />-Eigenschaft.</param>
+      <param name="data">Der Inhalt der Anweisung. Weitere Informationen finden Sie unter der <see cref="P:System.Xml.XmlProcessingInstruction.Data" />-Eigenschaft.</param>
+      <param name="doc">Das übergeordnete XML-Dokument.</param>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.CloneNode(System.Boolean)">
+      <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+      <returns>Das Knotenduplikat.</returns>
+      <param name="deep">true, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, false, wenn nur der Knoten selbst geklont werden soll. </param>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Data">
+      <summary>Ruft den Inhalt der Verarbeitungsanweisung ohne das Ziel ab oder legt diesen fest.</summary>
+      <returns>Der Inhalt der Verarbeitungsanweisung ohne das Ziel.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.InnerText">
+      <summary>Ruft die verketteten Werte des Knotens und sämtlicher diesem untergeordneten Elemente ab oder legt diese fest.</summary>
+      <returns>Die verketteten Werte des Knotens und aller diesem untergeordneten Elemente.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.LocalName">
+      <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+      <returns>Bei Verarbeitungsanweisungsknoten gibt diese Eigenschaft das Ziel der Verarbeitungsanweisung zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Name">
+      <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+      <returns>Bei Verarbeitungsanweisungsknoten gibt diese Eigenschaft das Ziel der Verarbeitungsanweisung zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.NodeType">
+      <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+      <returns>Für XmlProcessingInstruction-Knoten ist dieser Wert XmlNodeType.ProcessingInstruction.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Target">
+      <summary>Ruft das Ziel der Verarbeitungsanweisung ab.</summary>
+      <returns>Das Ziel der Verarbeitungsanweisung.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Value">
+      <summary>Ruft den Wert des Knotens ab oder legt diesen fest.</summary>
+      <returns>Der gesamte Inhalt der Verarbeitungsanweisung ohne das Ziel.</returns>
+      <exception cref="T:System.ArgumentException">Node is read-only. </exception>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Speichert alle untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.Da ProcessingInstruction-Knoten über keine untergeordneten Elemente verfügen, hat diese Methode keine Auswirkungen.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.WriteTo(System.Xml.XmlWriter)">
+      <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="T:System.Xml.XmlSignificantWhitespace">
+      <summary>Stellt ein Leerzeichen zwischen Markup in einem Knoten mit gemischtem Inhalt oder ein Leerzeichen innerhalb eines xml:space= "preserve"-Bereichs dar.Dies wird auch als signifikantes Leerzeichen bezeichnet.</summary>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Initialisiert eine neue Instanz der<see cref="T:System.Xml.XmlSignificantWhitespace" />-Klasse.</summary>
+      <param name="strData">Die Leerzeichen im Knoten.</param>
+      <param name="doc">Das <see cref="T:System.Xml.XmlDocument" />-Objekt.</param>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.CloneNode(System.Boolean)">
+      <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+      <returns>Der geklonte Knoten.</returns>
+      <param name="deep">true, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, false, wenn nur der Knoten selbst geklont werden soll.Bei signifikanten Leerzeichenknoten enthält der geklonte Knoten, unabhängig von der Parametereinstellung, immer den Datenwert.</param>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.LocalName">
+      <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+      <returns>Für XmlSignificantWhitespace-Knoten gibt diese Eigenschaft #significant-whitespace zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.Name">
+      <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+      <returns>Für XmlSignificantWhitespace-Knoten gibt diese Eigenschaft #significant-whitespace zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.NodeType">
+      <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+      <returns>Für XmlSignificantWhitespace-Knoten ist dieser Wert XmlNodeType.SignificantWhitespace.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.ParentNode">
+      <summary>Ruft das übergeordnete Element des aktuellen Knotens ab.</summary>
+      <returns>Der übergeordnete <see cref="T:System.Xml.XmlNode" />-Knoten des aktuellen Knotens.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.PreviousText">
+      <summary>Ruft den Textknoten ab, der diesem Knoten unmittelbar vorausgeht.</summary>
+      <returns>Gibt <see cref="T:System.Xml.XmlNode" />zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.Value">
+      <summary>Ruft den Wert des Knotens ab oder legt diesen fest.</summary>
+      <returns>Die im Knoten gefundenen Leerzeichen.</returns>
+      <exception cref="T:System.ArgumentException">Value wird auf ungültige Leerraumzeichen festgelegt. </exception>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Speichert alle untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.WriteTo(System.Xml.XmlWriter)">
+      <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="T:System.Xml.XmlText">
+      <summary>Stellt den Textinhalt eines Elements oder Attributs dar.</summary>
+    </member>
+    <member name="M:System.Xml.XmlText.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Initialisiert eine neue Instanz der<see cref="T:System.Xml.XmlText" />-Klasse.</summary>
+      <param name="strData">Der Inhalt des Knotens. Weitere Informationen finden Sie unter der <see cref="P:System.Xml.XmlText.Value" />-Eigenschaft.</param>
+      <param name="doc">Das übergeordnete XML-Dokument.</param>
+    </member>
+    <member name="M:System.Xml.XmlText.CloneNode(System.Boolean)">
+      <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+      <returns>Der geklonte Knoten.</returns>
+      <param name="deep">true, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, false, wenn nur der Knoten selbst geklont werden soll. </param>
+    </member>
+    <member name="P:System.Xml.XmlText.LocalName">
+      <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+      <returns>Für Textknoten gibt diese Eigenschaft #text zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.Name">
+      <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+      <returns>Für Textknoten gibt diese Eigenschaft #text zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.NodeType">
+      <summary>Ruft den Typ des aktuellen Knotens ab.</summary>
+      <returns>Für Textknoten ist dieser Wert XmlNodeType.Text.</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.ParentNode"></member>
+    <member name="P:System.Xml.XmlText.PreviousText">
+      <summary>Ruft den Textknoten ab, der diesem Knoten unmittelbar vorausgeht.</summary>
+      <returns>Gibt <see cref="T:System.Xml.XmlNode" />zurück.</returns>
+    </member>
+    <member name="M:System.Xml.XmlText.SplitText(System.Int32)">
+      <summary>Teilt den Knoten am angegebenen Offset in zwei Knoten und behält beide Knoten in der Struktur als nebengeordnete Elemente bei.</summary>
+      <returns>Der neue Knoten.</returns>
+      <param name="offset">Der Offset, an dem der Knoten geteilt werden soll. </param>
+    </member>
+    <member name="P:System.Xml.XmlText.Value">
+      <summary>Ruft den Wert des Knotens ab oder legt diesen fest.</summary>
+      <returns>Der Inhalt des Textknotens.</returns>
+    </member>
+    <member name="M:System.Xml.XmlText.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Speichert alle untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.Da XmlText-Knoten keine untergeordneten Elemente besitzen, hat diese Methode keine Auswirkungen.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlText.WriteTo(System.Xml.XmlWriter)">
+      <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der XmlWriter, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="T:System.Xml.XmlWhitespace">
+      <summary>Stellt Leerzeichen im Elementinhalt dar.</summary>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>Initialisiert eine neue Instanz der<see cref="T:System.Xml.XmlWhitespace" />-Klasse.</summary>
+      <param name="strData">Die Leerzeichen im Knoten.</param>
+      <param name="doc">Das <see cref="T:System.Xml.XmlDocument" />-Objekt.</param>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.CloneNode(System.Boolean)">
+      <summary>Erstellt ein Duplikat dieses Knotens.</summary>
+      <returns>Der geklonte Knoten.</returns>
+      <param name="deep">true, wenn die Teilstruktur unter dem angegebenen Knoten rekursiv geklont werden soll, false, wenn nur der Knoten selbst geklont werden soll.Bei Leerzeichenknoten enthält der geklonte Knoten, unabhängig von der Parametereinstellung, immer den Datenwert.</param>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.LocalName">
+      <summary>Ruft den lokalen Namen des Knotens ab.</summary>
+      <returns>Für XmlWhitespace-Knoten gibt diese Eigenschaft #whitespace zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.Name">
+      <summary>Ruft den qualifizierten Namen des Knotens ab.</summary>
+      <returns>Für XmlWhitespace-Knoten gibt diese Eigenschaft #whitespace zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.NodeType">
+      <summary>Ruft den Typ des Knotens ab.</summary>
+      <returns>Für XmlWhitespace-Knoten ist der Wert <see cref="F:System.Xml.XmlNodeType.Whitespace" />.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.ParentNode">
+      <summary>Ruft das übergeordnete Element des aktuellen Knotens ab.</summary>
+      <returns>Der übergeordnete <see cref="T:System.Xml.XmlNode" />-Knoten des aktuellen Knotens.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.PreviousText">
+      <summary>Ruft den Textknoten ab, der diesem Knoten unmittelbar vorausgeht.</summary>
+      <returns>Gibt <see cref="T:System.Xml.XmlNode" />zurück.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.Value">
+      <summary>Ruft den Wert des Knotens ab oder legt diesen fest.</summary>
+      <returns>Die im Knoten gefundenen Leerzeichen.</returns>
+      <exception cref="T:System.ArgumentException">
+        <see cref="P:System.Xml.XmlWhitespace.Value" /> wird auf ungültige Leerraumzeichen festgelegt. </exception>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>Speichert alle untergeordneten Elemente des Knotens im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der <see cref="T:System.Xml.XmlWriter" />, in dem gespeichert werden soll. </param>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.WriteTo(System.Xml.XmlWriter)">
+      <summary>Speichert den Knoten im angegebenen <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">Der <see cref="T:System.Xml.XmlWriter" />, in dem gespeichert werden soll.</param>
+    </member>
+  </members>
+</doc>

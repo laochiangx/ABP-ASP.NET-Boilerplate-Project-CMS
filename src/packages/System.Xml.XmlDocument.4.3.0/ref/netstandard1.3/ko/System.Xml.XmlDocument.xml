@@ -1,0 +1,1464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Xml.XmlDocument</name>
+  </assembly>
+  <members>
+    <member name="T:System.Xml.XmlAttribute">
+      <summary>특성을 나타냅니다.특성에 대해 유효한 값과 기본값은 DTD(문서 형식 정의) 또는 스키마에 정의됩니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlAttribute" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="prefix">네임스페이스 접두사입니다.</param>
+      <param name="localName">특성의 로컬 이름입니다.</param>
+      <param name="namespaceURI">네임스페이스 URI(Uniform Resource Identifier)입니다.</param>
+      <param name="doc">부모 XML 문서입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.AppendChild(System.Xml.XmlNode)">
+      <summary>지정된 노드를 이 노드의 자식 노드 목록 끝에 추가합니다.</summary>
+      <returns>추가된 <see cref="T:System.Xml.XmlNode" />입니다.</returns>
+      <param name="newChild">추가할 <see cref="T:System.Xml.XmlNode" />입니다.</param>
+      <exception cref="T:System.InvalidOperationException">이 노드가 <paramref name="newChild" /> 노드 형식의 자식 노드를 허용하지 않는 형식을 가지는 경우<paramref name="newChild" />가 이 노드의 상위 노드일 경우</exception>
+      <exception cref="T:System.ArgumentException">이 노드를 만든 문서가 아닌 다른 문서에서 <paramref name="newChild" />를 만든 경우이 노드가 읽기 전용인 경우</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.BaseURI">
+      <summary>노드의 기본 URI(Uniform Resource Identifier)를 가져옵니다.</summary>
+      <returns>노드가 로드된 위치이거나 노드에 기본 URI가 없으면 String.Empty입니다.Attribute 노드의 기본 URI는 해당 노드의 소유자 요소의 기본 URI와 같습니다.Attribute 노드에 소유자 요소가 없으면, BaseURI가 String.Empty를 반환합니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.CloneNode(System.Boolean)">
+      <summary>이 노드의 복제본을 만듭니다.</summary>
+      <returns>복제 노드입니다.</returns>
+      <param name="deep">지정된 노드 아래의 하위 트리를 재귀적으로 복제하려면 true이고, 노드 자체만 복제하려면 false입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.InnerText">
+      <summary>노드와 모든 자식의 연결된 값을 설정합니다.</summary>
+      <returns>노드와 모든 자식의 연결된 값입니다.Attribute 노드의 경우, 이 속성의 기능은 <see cref="P:System.Xml.XmlAttribute.Value" /> 속성의 기능과 같습니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.InnerXml">
+      <summary>특성 값을 설정합니다.</summary>
+      <returns>특성 값입니다.</returns>
+      <exception cref="T:System.Xml.XmlException">이 속성을 설정할 때 지정한 XML이 제대로 구성되지 않은 경우</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>지정된 노드를 지정된 참조 노드 바로 다음에 삽입합니다.</summary>
+      <returns>삽입된 <see cref="T:System.Xml.XmlNode" />입니다.</returns>
+      <param name="newChild">삽입할 <see cref="T:System.Xml.XmlNode" />입니다.</param>
+      <param name="refChild">참조 노드인 <see cref="T:System.Xml.XmlNode" />입니다.<paramref name="newChild" />는 <paramref name="refChild" /> 다음에 있습니다.</param>
+      <exception cref="T:System.InvalidOperationException">이 노드가 <paramref name="newChild" /> 노드 형식의 자식 노드를 허용하지 않는 형식을 가지는 경우<paramref name="newChild" />가 이 노드의 상위 노드일 경우</exception>
+      <exception cref="T:System.ArgumentException">이 노드를 만든 문서가 아닌 다른 문서에서 <paramref name="newChild" />를 만든 경우<paramref name="refChild" />가 이 노드의 자식이 아닌 경우이 노드가 읽기 전용인 경우</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>지정된 노드를 지정된 참조 노드 바로 앞에 삽입합니다.</summary>
+      <returns>삽입된 <see cref="T:System.Xml.XmlNode" />입니다.</returns>
+      <param name="newChild">삽입할 <see cref="T:System.Xml.XmlNode" />입니다.</param>
+      <param name="refChild">참조 노드인 <see cref="T:System.Xml.XmlNode" />입니다.이 노드 앞에 <paramref name="newChild" />가 있습니다.</param>
+      <exception cref="T:System.InvalidOperationException">현재 노드가 <paramref name="newChild" /> 노드 형식의 자식 노드를 허용하지 않는 형식인 경우<paramref name="newChild" />가 이 노드의 상위 노드일 경우</exception>
+      <exception cref="T:System.ArgumentException">이 노드를 만든 문서가 아닌 다른 문서에서 <paramref name="newChild" />를 만든 경우<paramref name="refChild" />가 이 노드의 자식이 아닌 경우이 노드가 읽기 전용인 경우</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.LocalName">
+      <summary>노드의 로컬 이름을 가져옵니다.</summary>
+      <returns>접두사가 제거된 Attribute 노드의 이름입니다.다음 예제 &lt;book bk:genre= 'novel'&gt;에서 특성의 LocalName은 genre입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Name">
+      <summary>노드의 정규화된 이름을 가져옵니다.</summary>
+      <returns>Attribute 노드의 정규화된 이름입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.NamespaceURI">
+      <summary>이 노드의 네임스페이스 URI를 가져옵니다.</summary>
+      <returns>이 노드의 네임스페이스 URI입니다.해당 특성에 네임스페이스가 명시적으로 부여되지 않으면, 이 속성은 String.Empty를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.NodeType">
+      <summary>현재 노드의 형식을 가져옵니다.</summary>
+      <returns>XmlAttribute 노드의 노드 형식은 XmlNodeType.Attribute입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.OwnerDocument">
+      <summary>이 노드가 속한 <see cref="T:System.Xml.XmlDocument" />를 가져옵니다.</summary>
+      <returns>이 노드가 속하는 XML 문서입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.OwnerElement">
+      <summary>특성이 속한 <see cref="T:System.Xml.XmlElement" />를 가져옵니다.</summary>
+      <returns>해당 특성이 속한 XmlElement이거나, 이 특성이 XmlElement의 일부가 아닌 경우 null입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.ParentNode">
+      <summary>이 노드의 부모 노드를 가져옵니다.XmlAttribute 노드의 경우, 이 속성은 항상 null을 반환합니다.</summary>
+      <returns>XmlAttribute 노드의 경우, 이 속성은 항상 null을 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Prefix">
+      <summary>이 노드의 네임스페이스 접두사를 가져오거나 설정합니다.</summary>
+      <returns>이 노드의 네임스페이스 접두사입니다.접두사가 없으면, 이 속성은 String.Empty를 반환합니다.</returns>
+      <exception cref="T:System.ArgumentException">이 노드가 읽기 전용인 경우</exception>
+      <exception cref="T:System.Xml.XmlException">지정된 접두사에 잘못된 문자가 있는 경우지정된 접두사가 잘못된 경우이 노드의 namespaceURI가 null인 경우지정된 접두사는 "xml"이고, 이 노드의 namespaceURI가 "http://www.w3.org/XML/1998/namespace"와 다른 경우이 노드가 특성이고, 지정된 접두사가 "xmlns"이며, 이 노드의 namespaceURI가 "http://www.w3.org/2000/xmlns/"와 다른 경우이 노드가 특성이고 이 노드의 qualifiedName이 "xmlns" [Namespaces]인 경우</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.PrependChild(System.Xml.XmlNode)">
+      <summary>지정된 노드를 이 노드의 자식 노드 목록 앞에 추가합니다.</summary>
+      <returns>추가된 <see cref="T:System.Xml.XmlNode" />입니다.</returns>
+      <param name="newChild">추가할 <see cref="T:System.Xml.XmlNode" />입니다.<see cref="T:System.Xml.XmlDocumentFragment" />일 경우 문서 단편의 전체 내용이 이 노드의 자식 목록으로 이동합니다.</param>
+      <exception cref="T:System.InvalidOperationException">이 노드가 <paramref name="newChild" /> 노드 형식의 자식 노드를 허용하지 않는 형식을 가지는 경우<paramref name="newChild" />가 이 노드의 상위 노드일 경우</exception>
+      <exception cref="T:System.ArgumentException">이 노드를 만든 문서가 아닌 다른 문서에서 <paramref name="newChild" />를 만든 경우이 노드가 읽기 전용인 경우</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.RemoveChild(System.Xml.XmlNode)">
+      <summary>지정된 자식 노드를 제거합니다.</summary>
+      <returns>제거된 <see cref="T:System.Xml.XmlNode" />입니다.</returns>
+      <param name="oldChild">제거할 <see cref="T:System.Xml.XmlNode" />입니다.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="oldChild" />가 이 노드의 자식이 아닌 경우이 노드가 읽기 전용인 경우</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>지정된 자식 노드를 지정된 새 자식 노드로 바꿉니다.</summary>
+      <returns>바꾼 <see cref="T:System.Xml.XmlNode" />입니다.</returns>
+      <param name="newChild">새 자식 <see cref="T:System.Xml.XmlNode" />입니다.</param>
+      <param name="oldChild">바꿀 <see cref="T:System.Xml.XmlNode" />입니다.</param>
+      <exception cref="T:System.InvalidOperationException">이 노드가 <paramref name="newChild" /> 노드 형식의 자식 노드를 허용하지 않는 형식을 가지는 경우<paramref name="newChild" />가 이 노드의 상위 노드일 경우</exception>
+      <exception cref="T:System.ArgumentException">이 노드를 만든 문서가 아닌 다른 문서에서 <paramref name="newChild" />를 만든 경우이 노드가 읽기 전용인 경우<paramref name="oldChild" />가 이 노드의 자식이 아닌 경우</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Specified">
+      <summary>특성 값이 명시적으로 설정되었는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>원본 인스턴스 문서에서 이 특성에 값이 명시적으로 부여되었으면 true이고, 그렇지 않으면 false입니다.false 값은 해당 특성 값을 DTD에서 가져왔음을 나타냅니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttribute.Value">
+      <summary>노드의 값을 가져오거나 설정합니다.</summary>
+      <returns>반환되는 값은 노드의 <see cref="P:System.Xml.XmlNode.NodeType" />에 따라 달라집니다.XmlAttribute 노드의 경우, 이 속성은 특성 값입니다.</returns>
+      <exception cref="T:System.ArgumentException">노드가 읽기 전용인데 set 작업이 호출된 경우</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드의 모든 자식을 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlAttribute.WriteTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드를 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다.</param>
+    </member>
+    <member name="T:System.Xml.XmlAttributeCollection">
+      <summary>이름이나 인덱스로 액세스할 수 있는 특성의 컬렉션을 나타냅니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Append(System.Xml.XmlAttribute)">
+      <summary>지정된 특성을 컬렉션의 마지막 노드로 삽입합니다.</summary>
+      <returns>컬렉션에 추가할 XmlAttribute입니다.</returns>
+      <param name="node">삽입할 <see cref="T:System.Xml.XmlAttribute" />입니다. </param>
+      <exception cref="T:System.ArgumentException">이 컬렉션을 만든 문서와 다른 문서에서 <paramref name="node" />를 만든 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)">
+      <summary>모든 <see cref="T:System.Xml.XmlAttribute" /> 개체를 이 컬렉션에서 지정된 배열로 복사합니다.</summary>
+      <param name="array">이 컬렉션에서 복사된 개체의 대상인 배열입니다. </param>
+      <param name="index">복사를 시작할 배열의 인덱스입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.InsertAfter(System.Xml.XmlAttribute,System.Xml.XmlAttribute)">
+      <summary>지정된 특성을 지정된 참조 특성 바로 뒤에 삽입합니다.</summary>
+      <returns>컬렉션에 삽입할 XmlAttribute입니다.</returns>
+      <param name="newNode">삽입할 <see cref="T:System.Xml.XmlAttribute" />입니다. </param>
+      <param name="refNode">참조 특성인 <see cref="T:System.Xml.XmlAttribute" />입니다.<paramref name="newNode" />는 <paramref name="refNode" /> 뒤에 삽입됩니다.</param>
+      <exception cref="T:System.ArgumentException">이 컬렉션을 만든 문서와 다른 문서에서 <paramref name="newNode" />를 만든 경우또는 <paramref name="refNode" />가 이 컬렉션의 멤버가 아닌 경우</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.InsertBefore(System.Xml.XmlAttribute,System.Xml.XmlAttribute)">
+      <summary>지정된 특성을 지정된 참조 특성 바로 앞에 삽입합니다.</summary>
+      <returns>컬렉션에 삽입할 XmlAttribute입니다.</returns>
+      <param name="newNode">삽입할 <see cref="T:System.Xml.XmlAttribute" />입니다. </param>
+      <param name="refNode">참조 특성인 <see cref="T:System.Xml.XmlAttribute" />입니다.<paramref name="newNode" />는 <paramref name="refNode" /> 앞에 삽입됩니다.</param>
+      <exception cref="T:System.ArgumentException">이 컬렉션을 만든 문서와 다른 문서에서 <paramref name="newNode" />를 만든 경우또는 <paramref name="refNode" />가 이 컬렉션의 멤버가 아닌 경우</exception>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.Int32)">
+      <summary>지정된 인덱스가 있는 특성을 가져옵니다.</summary>
+      <returns>지정된 인덱스에 있는 <see cref="T:System.Xml.XmlAttribute" />입니다.</returns>
+      <param name="i">특성의 인덱스입니다. </param>
+      <exception cref="T:System.IndexOutOfRangeException">전달된 인덱스가 범위를 벗어납니다. </exception>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.String)">
+      <summary>지정된 이름이 있는 특성을 가져옵니다.</summary>
+      <returns>지정된 이름을 가진 <see cref="T:System.Xml.XmlAttribute" />입니다.특성이 없는 경우 이 속성은 null을 반환합니다.</returns>
+      <param name="name">특성의 정규화된 이름입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.ItemOf(System.String,System.String)">
+      <summary>지정된 로컬 이름이나 네임스페이스 URI(Uniform Resource Identifier)가 있는 특성을 가져옵니다.</summary>
+      <returns>지정된 로컬 이름이나 네임스페이스 URI가 있는 <see cref="T:System.Xml.XmlAttribute" />입니다.특성이 없는 경우 이 속성은 null을 반환합니다.</returns>
+      <param name="localName">특성의 로컬 이름입니다. </param>
+      <param name="namespaceURI">특성의 네임스페이스 URI입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Prepend(System.Xml.XmlAttribute)">
+      <summary>지정된 특성을 컬렉션의 첫 노드로 삽입합니다.</summary>
+      <returns>컬렉션에 추가된 XmlAttribute입니다.</returns>
+      <param name="node">삽입할 <see cref="T:System.Xml.XmlAttribute" />입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.Remove(System.Xml.XmlAttribute)">
+      <summary>컬렉션에서 지정된 특성을 제거합니다.</summary>
+      <returns>제거된 노드이거나 컬렉션에 없는 경우 null입니다.</returns>
+      <param name="node">제거할 <see cref="T:System.Xml.XmlAttribute" />입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.RemoveAll">
+      <summary>컬렉션에서 모든 특성을 제거합니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.RemoveAt(System.Int32)">
+      <summary>컬렉션에서 지정된 인덱스에 해당하는 특성을 제거합니다.</summary>
+      <returns>지정된 인덱스에 특성이 없으면 null입니다.</returns>
+      <param name="i">제거할 노드의 인덱스입니다.첫 번째 노드의 인덱스는 0입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.SetNamedItem(System.Xml.XmlNode)">
+      <summary>해당 <see cref="P:System.Xml.XmlNode.Name" /> 속성을 사용하여 <see cref="T:System.Xml.XmlNode" />를 추가합니다. </summary>
+      <returns>
+        <paramref name="node" />가 기존 노드를 같은 이름으로 바꾸면 이전 노드가 반환되고, 그렇지 않으면 추가된 노드가 반환됩니다.</returns>
+      <param name="node">이 컬렉션에 저장할 Attribute 노드입니다.노드 이름을 사용하여 나중에 노드에 액세스할 수 있습니다.컬렉션에 해당 이름의 노드가 이미 있으면 새 노드로 바뀌고, 그렇지 않으면 노드가 컬렉션 끝에 추가됩니다.</param>
+      <exception cref="T:System.ArgumentException">이 컬렉션을 만든 문서와 다른 <see cref="T:System.Xml.XmlDocument" />에서 <paramref name="node" />를 만든 경우이 XmlAttributeCollection이 읽기 전용인 경우 </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="node" />가 이미 다른 <see cref="T:System.Xml.XmlElement" /> 개체의 특성인 <see cref="T:System.Xml.XmlAttribute" />인 경우.다른 요소에서 특성을 다시 사용하려면 다시 사용할 XmlAttribute 개체를 복제해야 합니다.</exception>
+    </member>
+    <member name="M:System.Xml.XmlAttributeCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>이 멤버에 대한 설명은 <see cref="M:System.Xml.XmlAttributeCollection.CopyTo(System.Xml.XmlAttribute[],System.Int32)" />를 참조하십시오.</summary>
+      <param name="array">이 컬렉션에서 복사된 개체의 대상인 배열입니다. </param>
+      <param name="index">복사를 시작할 배열의 인덱스입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#Count">
+      <summary>이 멤버에 대한 설명은 <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.Count" />를 참조하십시오.</summary>
+      <returns>특성의 수가 포함된 int를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#IsSynchronized">
+      <summary>이 멤버에 대한 설명은 <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.IsSynchronized" />를 참조하십시오.</summary>
+      <returns>컬렉션이 동기화되면 true를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlAttributeCollection.System#Collections#ICollection#SyncRoot">
+      <summary>이 멤버에 대한 설명은 <see cref="P:System.Xml.XmlAttributeCollection.System.Collections.ICollection.SyncRoot" />를 참조하십시오.</summary>
+      <returns>컬렉션의 루트인 <see cref="T:System.Object" />를 반환합니다.</returns>
+    </member>
+    <member name="T:System.Xml.XmlCDataSection">
+      <summary>CDATA 섹션을 나타냅니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlCDataSection" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="data">문자 데이터가 포함된 <see cref="T:System.String" />입니다.</param>
+      <param name="doc">
+        <see cref="T:System.Xml.XmlDocument" /> 개체</param>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.CloneNode(System.Boolean)">
+      <summary>이 노드의 복제본을 만듭니다.</summary>
+      <returns>복제된 노드입니다.</returns>
+      <param name="deep">지정된 노드 아래의 하위 트리를 재귀적으로 복제하려면 true이고, 노드 자체만 복제하려면 false입니다.CDATA 노드에는 자식이 없으므로 복제된 노드는 매개 변수 설정에 상관 없이 항상 데이터 내용을 포함하게 됩니다.</param>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.LocalName">
+      <summary>노드의 로컬 이름을 가져옵니다.</summary>
+      <returns>CDATA 노드의 경우 로컬 이름은 #cdata-section입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.Name">
+      <summary>노드의 정규화된 이름을 가져옵니다.</summary>
+      <returns>CDATA 노드의 경우 이 이름은 #cdata-section입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.NodeType">
+      <summary>현재 노드의 형식을 가져옵니다.</summary>
+      <returns>노드 형식입니다.CDATA 노드의 경우 이 값은 XmlNodeType.CDATA입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlCDataSection.ParentNode"></member>
+    <member name="P:System.Xml.XmlCDataSection.PreviousText">
+      <summary>이 노드 바로 앞에 있는 텍스트 노드를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" />를 반환합니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드의 자식을 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlCDataSection.WriteTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드를 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="T:System.Xml.XmlCharacterData">
+      <summary>일부 클래스에서 사용하는 텍스트 조작 메서드를 제공합니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlCharacterData" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="data">문서에 추가할 문자 데이터가 포함된 문자열입니다.</param>
+      <param name="doc">문자 데이터를 포함하기 위한 <see cref="T:System.Xml.XmlDocument" />입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.AppendData(System.String)">
+      <summary>지정한 문자열을 노드의 문자 데이터 끝에 추가합니다.</summary>
+      <param name="strData">기존 문자열에 삽입할 문자열입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Data">
+      <summary>노드의 데이터가 포함됩니다.</summary>
+      <returns>노드의 데이터입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.DeleteData(System.Int32,System.Int32)">
+      <summary>노드에서 문자 범위를 제거합니다.</summary>
+      <param name="offset">삭제를 시작할 문자열 내의 위치입니다. </param>
+      <param name="count">삭제할 문자의 수입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.InsertData(System.Int32,System.String)">
+      <summary>지정된 문자 오프셋에 지정된 문자열을 삽입합니다.</summary>
+      <param name="offset">제공된 문자열 데이터를 삽입할 문자열 내의 위치입니다. </param>
+      <param name="strData">기존 문자열에 삽입할 문자열 데이터입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Length">
+      <summary>데이터의 길이(문자 수)를 가져옵니다.</summary>
+      <returns>
+        <see cref="P:System.Xml.XmlCharacterData.Data" /> 속성의 문자열 길이(문자 수)입니다.이 길이는 0일 수 있습니다. 즉, CharacterData 노드가 비어 있을 수 있습니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.ReplaceData(System.Int32,System.Int32,System.String)">
+      <summary>지정된 오프셋에서 시작하여 지정된 수의 문자를 지정된 문자열로 교체합니다.</summary>
+      <param name="offset">교체를 시작할 문자열 내의 위치입니다. </param>
+      <param name="count">교체할 문자 수입니다. </param>
+      <param name="strData">기존 문자열 데이터를 대체하는 새 데이터입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlCharacterData.Substring(System.Int32,System.Int32)">
+      <summary>지정된 범위에서 전체 문자열의 부분 문자열을 검색합니다.</summary>
+      <returns>지정된 범위에 해당하는 부분 문자열입니다.</returns>
+      <param name="offset">검색을 시작할 문자열 내의 위치입니다.오프셋이 0이면 시작 위치가 데이터의 시작 부분임을 나타냅니다.</param>
+      <param name="count">검색할 문자 수입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlCharacterData.Value">
+      <summary>노드의 값을 가져오거나 설정합니다.</summary>
+      <returns>노드의 값입니다.</returns>
+      <exception cref="T:System.ArgumentException">노드가 읽기 전용인 경우 </exception>
+    </member>
+    <member name="T:System.Xml.XmlComment">
+      <summary>XML 주석의 내용을 나타냅니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlComment.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlComment" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="comment">주석 요소의 콘텐츠입니다.</param>
+      <param name="doc">부모 XML 문서입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlComment.CloneNode(System.Boolean)">
+      <summary>이 노드의 복제본을 만듭니다.</summary>
+      <returns>복제된 노드입니다.</returns>
+      <param name="deep">지정된 노드 아래의 하위 트리를 재귀적으로 복제하려면 true이고, 노드 자체만 복제하려면 false입니다.Comment 노드에는 자식이 없으므로 복제된 노드는 매개 변수 설정에 상관 없이 항상 텍스트 내용을 포함합니다.</param>
+    </member>
+    <member name="P:System.Xml.XmlComment.LocalName">
+      <summary>노드의 로컬 이름을 가져옵니다.</summary>
+      <returns>Comment 노드의 경우 이 값은 #comment입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlComment.Name">
+      <summary>노드의 정규화된 이름을 가져옵니다.</summary>
+      <returns>Comment 노드의 경우 이 값은 #comment입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlComment.NodeType">
+      <summary>현재 노드의 형식을 가져옵니다.</summary>
+      <returns>Comment 노드의 경우 이 값은 XmlNodeType.Comment입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlComment.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드의 모든 자식을 저장합니다.Comment 노드에 자식이 없으므로 이 메서드는 아무런 영향을 주지 않습니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlComment.WriteTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드를 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="T:System.Xml.XmlDeclaration">
+      <summary>XmlDeclaration 노드(&lt;?xml version='1.0' ...?&gt;)를 나타냅니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlDeclaration" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="version">XML 버전입니다. <see cref="P:System.Xml.XmlDeclaration.Version" /> 속성을 참조하십시오.</param>
+      <param name="encoding">인코딩 체계입니다. <see cref="P:System.Xml.XmlDeclaration.Encoding" /> 속성을 참조하십시오.</param>
+      <param name="standalone">XML 문서가 외부 DTD에 따라 달라지는지 여부를 나타냅니다. <see cref="P:System.Xml.XmlDeclaration.Standalone" /> 속성을 참조하십시오.</param>
+      <param name="doc">부모 XML 문서입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.CloneNode(System.Boolean)">
+      <summary>이 노드의 복제본을 만듭니다.</summary>
+      <returns>복제된 노드입니다.</returns>
+      <param name="deep">지정된 노드 아래의 하위 트리를 재귀적으로 복제하려면 true이고, 노드 자체만 복제하려면 false입니다.XmlDeclaration 노드에는 자식이 없으므로 복제된 노드는 매개 변수 설정에 상관 없이 항상 데이터 값을 포함합니다.</param>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Encoding">
+      <summary>XML 문서의 인코딩 수준을 가져오거나 설정합니다.</summary>
+      <returns>올바른 문자 인코딩 이름입니다.다음은 가장 일반적으로 지원되는 XML 문자 인코딩 이름입니다.범주 인코딩 이름 유니코드(Unicode) UTF-8, UTF-16 ISO 10646 ISO-10646-UCS-2, ISO-10646-UCS-4 ISO 8859 ISO-8859-n(여기서 "n"은 1에서 9 사이의 숫자임) JIS X-0208-1997 ISO-2022-JP, Shift_JIS, EUC-JP 이 값은 선택 사항입니다.값이 설정되지 않으면 이 속성은 String.Empty를 반환합니다.인코딩 속성이 포함되지 않으면 문서를 쓰거나 저장할 때 UTF-8 인코딩을 가정합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.InnerText">
+      <summary>XmlDeclaration의 연결된 값을 가져오거나 설정합니다.</summary>
+      <returns>XmlDeclaration의 연결된 값 즉, &lt;?xml과 ?&gt; 사이의 모든 내용입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.LocalName">
+      <summary>노드의 로컬 이름을 가져옵니다.</summary>
+      <returns>XmlDeclaration 노드의 경우 이 이름은 xml입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Name">
+      <summary>노드의 정규화된 이름을 가져옵니다.</summary>
+      <returns>XmlDeclaration 노드의 경우 이 이름은 xml입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.NodeType">
+      <summary>현재 노드의 형식을 가져옵니다.</summary>
+      <returns>XmlDeclaration 노드의 경우 이 값은 XmlNodeType.XmlDeclaration입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Standalone">
+      <summary>독립형 특성의 값을 가져오거나 설정합니다.</summary>
+      <returns>유효한 값은 XML 문서에서 필요로 하는 모든 엔터티 선언이 문서 내에 포함되는 경우에는 yes이고, 외부 DTD(문서 형식 정의)를 필요로 하는 경우에는 no입니다.XML 선언에 독립형 특성이 없으면 이 속성은 String.Empty를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Value">
+      <summary>XmlDeclaration의 값을 가져오거나 설정합니다.</summary>
+      <returns>XmlDeclaration의 내용 즉, &lt;?xml과 ?&gt; 사이의 모든 내용입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDeclaration.Version">
+      <summary>XML 버전의 문서를 가져옵니다.</summary>
+      <returns>값은 항상 1.0입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드의 자식을 저장합니다.XmlDeclaration 노드에 자식이 없으므로 이 메서드는 아무런 영향을 주지 않습니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlDeclaration.WriteTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드를 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="T:System.Xml.XmlDocument">
+      <summary>XML 문서를 나타냅니다.자세한 내용은 Remarks 섹션을 참조하세요.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor">
+      <summary>
+        <see cref="T:System.Xml.XmlDocument" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor(System.Xml.XmlImplementation)">
+      <summary>지정된 XmlDocument를 사용하여 <see cref="T:System.Xml.XmlImplementation" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="imp">사용할 XmlImplementation입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.#ctor(System.Xml.XmlNameTable)">
+      <summary>지정된 XmlDocument를 사용하여 <see cref="T:System.Xml.XmlNameTable" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="nt">사용할 XmlNameTable입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlDocument.BaseURI">
+      <summary>현재 노드의 기본 URI를 가져옵니다.</summary>
+      <returns>노드를 로드한 위치입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CloneNode(System.Boolean)">
+      <summary>이 노드의 복제본을 만듭니다.</summary>
+      <returns>복제된 XmlDocument 노드입니다.</returns>
+      <param name="deep">지정된 노드 아래의 하위 트리를 재귀적으로 복제하려면 true이고, 노드 자체만 복제하려면 false입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String)">
+      <summary>지정된 <see cref="P:System.Xml.XmlDocument.Name" />을 가진 <see cref="T:System.Xml.XmlAttribute" />를 만듭니다.</summary>
+      <returns>새 XmlAttribute입니다.</returns>
+      <param name="name">특성의 정규화된 이름입니다.이름에 콜론이 포함되어 있는 경우, <see cref="P:System.Xml.XmlNode.Prefix" /> 속성은 첫 번째 콜론 앞의 이름 부분을 반영하고 <see cref="P:System.Xml.XmlDocument.LocalName" /> 속성은 첫 번째 콜론 뒤의 이름 부분을 반영합니다.접두사가 xmlns같은 인식된 기본 제공되는 접두사가 아닌 경우 <see cref="P:System.Xml.XmlNode.NamespaceURI" />는 비어 있습니다.이 경우 NamespaceURI의 값은 http://www.w3.org/2000/xmlns/입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String,System.String)">
+      <summary>지정된 정규화된 이름과 <see cref="P:System.Xml.XmlNode.NamespaceURI" />가 있는 <see cref="T:System.Xml.XmlAttribute" />를 만듭니다.</summary>
+      <returns>새 XmlAttribute입니다.</returns>
+      <param name="qualifiedName">특성의 정규화된 이름입니다.이름에 콜론이 포함되어 있는 경우, <see cref="P:System.Xml.XmlNode.Prefix" /> 속성은 콜론 앞의 이름 부분을 반영하고 <see cref="P:System.Xml.XmlDocument.LocalName" /> 속성은 콜론 뒤의 이름 부분을 반영합니다.</param>
+      <param name="namespaceURI">특성의 네임스페이스 URI입니다.정규화된 이름에 xmlns 접두사가 포함된 경우 이 매개 변수는 http://www.w3.org/2000/xmlns/가 됩니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateAttribute(System.String,System.String,System.String)">
+      <summary>지정된 <see cref="P:System.Xml.XmlNode.Prefix" />, <see cref="P:System.Xml.XmlDocument.LocalName" /> 및 <see cref="P:System.Xml.XmlNode.NamespaceURI" />가 있는 <see cref="T:System.Xml.XmlAttribute" />를 만듭니다.</summary>
+      <returns>새 XmlAttribute입니다.</returns>
+      <param name="prefix">특성의 접두사입니다.String.Empty와 null은 같습니다.</param>
+      <param name="localName">특성의 로컬 이름입니다. </param>
+      <param name="namespaceURI">특성의 네임스페이스 URI입니다.String.Empty와 null은 같습니다.<paramref name="prefix" />가 xmlns일 경우 이 매개 변수는 http://www.w3.org/2000/xmlns/이어야 합니다. 그렇지 않으면 예외가 throw됩니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateCDataSection(System.String)">
+      <summary>지정된 데이터가 포함된 <see cref="T:System.Xml.XmlCDataSection" />를 만듭니다.</summary>
+      <returns>새 XmlCDataSection입니다.</returns>
+      <param name="data">새 XmlCDataSection의 콘텐츠입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateComment(System.String)">
+      <summary>지정된 데이터가 포함된 <see cref="T:System.Xml.XmlComment" />를 만듭니다.</summary>
+      <returns>새 XmlComment입니다.</returns>
+      <param name="data">새 XmlComment의 콘텐츠입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateDocumentFragment">
+      <summary>
+        <see cref="T:System.Xml.XmlDocumentFragment" />를 만듭니다.</summary>
+      <returns>새 XmlDocumentFragment입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String)">
+      <summary>지정된 이름을 가진 요소를 만듭니다.</summary>
+      <returns>새 XmlElement입니다.</returns>
+      <param name="name">요소의 정규화된 이름입니다.이름에 콜론이 포함되어 있는 경우 <see cref="P:System.Xml.XmlNode.Prefix" /> 속성은 콜론 앞의 이름 부분을 반영하고 <see cref="P:System.Xml.XmlDocument.LocalName" /> 속성은 콜론 뒤의 이름 부분을 반영합니다.정규화된 이름에는 'xmlns'라는 접두사가 포함될 수 없습니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String,System.String)">
+      <summary>정규화된 이름과 <see cref="P:System.Xml.XmlNode.NamespaceURI" />를 가진 <see cref="T:System.Xml.XmlElement" />를 만듭니다.</summary>
+      <returns>새 XmlElement입니다.</returns>
+      <param name="qualifiedName">요소의 정규화된 이름입니다.이름에 콜론이 포함되어 있는 경우, <see cref="P:System.Xml.XmlNode.Prefix" /> 속성은 콜론 앞의 이름 부분을 반영하고 <see cref="P:System.Xml.XmlDocument.LocalName" /> 속성은 콜론 뒤의 이름 부분을 반영합니다.정규화된 이름에는 'xmlns'라는 접두사가 포함될 수 없습니다.</param>
+      <param name="namespaceURI">요소의 네임스페이스 URI입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateElement(System.String,System.String,System.String)">
+      <summary>지정된 <see cref="P:System.Xml.XmlNode.Prefix" />, <see cref="P:System.Xml.XmlDocument.LocalName" /> 및 <see cref="P:System.Xml.XmlNode.NamespaceURI" />가 있는 요소를 만듭니다.</summary>
+      <returns>새 <see cref="T:System.Xml.XmlElement" />입니다.</returns>
+      <param name="prefix">새 요소의 접두사입니다.String.Empty와 null은 같습니다.</param>
+      <param name="localName">새 요소의 로컬 이름입니다. </param>
+      <param name="namespaceURI">새 요소의 네임스페이스 URI입니다.String.Empty와 null은 같습니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.String,System.String,System.String)">
+      <summary>지정된 노드 형식, <see cref="P:System.Xml.XmlDocument.Name" /> 및 <see cref="P:System.Xml.XmlNode.NamespaceURI" />가 있는 <see cref="T:System.Xml.XmlNode" />를 만듭니다.</summary>
+      <returns>새 XmlNode입니다.</returns>
+      <param name="nodeTypeString">새 노드의 <see cref="T:System.Xml.XmlNodeType" /> 문자열 버전입니다.이 매개 변수는 아래 테이블에 나열된 값 중 하나여야 합니다.</param>
+      <param name="name">새 노드의 정규화된 이름입니다.이름에 콜론이 포함된 경우에는 <see cref="P:System.Xml.XmlNode.Prefix" /> 및 <see cref="P:System.Xml.XmlDocument.LocalName" /> 구성 요소로 구문 분석됩니다.</param>
+      <param name="namespaceURI">새 노드의 네임스페이스 URI입니다. </param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name; or <paramref name="nodeTypeString" /> is not one of the strings listed below. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.Xml.XmlNodeType,System.String,System.String)">
+      <summary>지정된 <see cref="T:System.Xml.XmlNodeType" />, <see cref="P:System.Xml.XmlDocument.Name" /> 및 <see cref="P:System.Xml.XmlNode.NamespaceURI" />가 있는 <see cref="T:System.Xml.XmlNode" />를 만듭니다.</summary>
+      <returns>새 XmlNode입니다.</returns>
+      <param name="type">새 노드의 XmlNodeType입니다. </param>
+      <param name="name">새 노드의 정규화된 이름입니다.이름에 콜론이 포함되어 있으면 <see cref="P:System.Xml.XmlNode.Prefix" /> 및 <see cref="P:System.Xml.XmlDocument.LocalName" /> 구성 요소로 구문 분석됩니다.</param>
+      <param name="namespaceURI">새 노드의 네임스페이스 URI입니다. </param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateNode(System.Xml.XmlNodeType,System.String,System.String,System.String)">
+      <summary>지정된 <see cref="T:System.Xml.XmlNodeType" />, <see cref="P:System.Xml.XmlNode.Prefix" />, <see cref="P:System.Xml.XmlDocument.Name" /> 및 <see cref="P:System.Xml.XmlNode.NamespaceURI" />가 있는 <see cref="T:System.Xml.XmlNode" />를 만듭니다.</summary>
+      <returns>새 XmlNode입니다.</returns>
+      <param name="type">새 노드의 XmlNodeType입니다. </param>
+      <param name="prefix">새 노드의 접두사입니다. </param>
+      <param name="name">새 노드의 지역 이름입니다. </param>
+      <param name="namespaceURI">새 노드의 네임스페이스 URI입니다. </param>
+      <exception cref="T:System.ArgumentException">The name was not provided and the XmlNodeType requires a name. </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateProcessingInstruction(System.String,System.String)">
+      <summary>지정된 이름과 데이터가 있는 <see cref="T:System.Xml.XmlProcessingInstruction" />을 만듭니다.</summary>
+      <returns>새 XmlProcessingInstruction입니다.</returns>
+      <param name="target">처리 명령의 이름입니다. </param>
+      <param name="data">처리 명령의 데이터입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateSignificantWhitespace(System.String)">
+      <summary>
+        <see cref="T:System.Xml.XmlSignificantWhitespace" /> 노드를 만듭니다.</summary>
+      <returns>새 XmlSignificantWhitespace 노드입니다.</returns>
+      <param name="text">문자열에는 &amp;#20; &amp;#10; &amp;#13; 및 &amp;#9; 문자만 포함되어야 합니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateTextNode(System.String)">
+      <summary>지정된 텍스트가 있는 <see cref="T:System.Xml.XmlText" />를 만듭니다.</summary>
+      <returns>새 XmlText 노드입니다.</returns>
+      <param name="text">Text 노드의 텍스트입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateWhitespace(System.String)">
+      <summary>
+        <see cref="T:System.Xml.XmlWhitespace" /> 노드를 만듭니다.</summary>
+      <returns>새 XmlWhitespace 노드입니다.</returns>
+      <param name="text">문자열에는 &amp;#20; &amp;#10; &amp;#13; 및 &amp;#9; 문자만 포함되어야 합니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.CreateXmlDeclaration(System.String,System.String,System.String)">
+      <summary>지정된 값이 있는 <see cref="T:System.Xml.XmlDeclaration" /> 노드를 만듭니다.</summary>
+      <returns>새 XmlDeclaration 노드입니다.</returns>
+      <param name="version">버전은 "1.0"이어야 합니다. </param>
+      <param name="encoding">인코딩 특성 값입니다.<see cref="T:System.Xml.XmlDocument" />를 파일이나 스트림으로 저장할 경우 사용하는 인코딩입니다. 그러므로 <see cref="T:System.Text.Encoding" /> 클래스에서 지원하는 문자열로 설정되어야 합니다. 그렇지 않으면 <see cref="M:System.Xml.XmlDocument.Save(System.String)" />이 실패합니다.null 또는 String.Empty일 경우 Save 메서드에서 인코딩 특성을 XML 선언에 기록하지 않으므로 기본 인코딩인 UTF-8을 사용하게 됩니다.참고: XmlDocument를 <see cref="T:System.IO.TextWriter" />나 <see cref="T:System.Xml.XmlTextWriter" />로 저장하면 이 인코딩 값이 삭제됩니다.대신 TextWriter 또는 XmlTextWriter의 인코딩을 사용합니다.그러면 기록된 XML을 올바른 인코딩을 사용하여 다시 읽을 수 있습니다.</param>
+      <param name="standalone">값은 "Yes" 또는 "No"여야 합니다.값이 null이나 String.Empty일 경우에는 Save 메서드에서 독립형 특성을 XML 선언에 기록하지 않습니다.</param>
+      <exception cref="T:System.ArgumentException">The values of <paramref name="version" /> or <paramref name="standalone" /> are something other than the ones specified above. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.DocumentElement">
+      <summary>문서의 루트 <see cref="T:System.Xml.XmlElement" />를 가져옵니다.</summary>
+      <returns>XML 문서 트리의 루트를 나타내는 XmlElement입니다.루트가 없으면 null이 반환됩니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.GetElementsByTagName(System.String)">
+      <summary>지정된 <see cref="P:System.Xml.XmlDocument.Name" />과 일치하는 모든 하위 요소의 목록이 포함된 <see cref="T:System.Xml.XmlNodeList" />를 반환합니다.</summary>
+      <returns>일치하는 모든 노드 목록이 포함된 <see cref="T:System.Xml.XmlNodeList" />입니다.<paramref name="name" />과 일치하는 노드가 없으면 빈 컬렉션이 반환됩니다.</returns>
+      <param name="name">일치시킬 정규화된 이름입니다.일치하는 노드의 Name 속성과 일치합니다.특수 값 "*"은 모든 태그와 일치합니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.GetElementsByTagName(System.String,System.String)">
+      <summary>지정된 <see cref="P:System.Xml.XmlDocument.LocalName" /> 및 <see cref="P:System.Xml.XmlNode.NamespaceURI" />와 일치하는 모든 하위 요소의 목록이 포함된 <see cref="T:System.Xml.XmlNodeList" />를 반환합니다.</summary>
+      <returns>일치하는 모든 노드 목록이 포함된 <see cref="T:System.Xml.XmlNodeList" />입니다.지정된 <paramref name="localName" /> 및 <paramref name="namespaceURI" />와 일치하는 노드가 없으면 빈 컬렉션이 반환됩니다.</returns>
+      <param name="localName">일치시킬 LocalName입니다.특수 값 "*"은 모든 태그와 일치합니다.</param>
+      <param name="namespaceURI">일치시킬 NamespaceURI입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlDocument.Implementation">
+      <summary>현재 문서에 대한 <see cref="T:System.Xml.XmlImplementation" /> 개체를 가져옵니다.</summary>
+      <returns>현재 문서에 대한 XmlImplementation 개체입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.ImportNode(System.Xml.XmlNode,System.Boolean)">
+      <summary>다른 문서에서 현재 문서로 노드를 가져옵니다.</summary>
+      <returns>가져온 <see cref="T:System.Xml.XmlNode" />입니다.</returns>
+      <param name="node">가져올 노드입니다. </param>
+      <param name="deep">전체 복제를 수행하려면 true이고, 그렇지 않으면 false입니다. </param>
+      <exception cref="T:System.InvalidOperationException">Calling this method on a node type which cannot be imported. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.InnerText">
+      <summary>모든 경우에 <see cref="T:System.InvalidOperationException" />을 throw합니다.</summary>
+      <returns>노드와 모든 자식 노드의 값입니다.</returns>
+      <exception cref="T:System.InvalidOperationException">In all cases.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.InnerXml">
+      <summary>현재 노드의 자식을 나타내는 태그를 가져오거나 설정합니다.</summary>
+      <returns>현재 노드의 자식을 나타내는 태그입니다.</returns>
+      <exception cref="T:System.Xml.XmlException">The XML specified when setting this property is not well-formed. </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.IsReadOnly">
+      <summary>현재 노드가 읽기 전용인지를 나타내는 값을 가져옵니다.</summary>
+      <returns>현재 노드가 읽기 전용이면 true이고, 그렇지 않으면 false입니다.XmlDocument 노드에서는 항상 false를 반환합니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.IO.Stream)">
+      <summary>지정된 스트림에서 XML 문서를 로드합니다.</summary>
+      <param name="inStream">로드할 XML 문서가 포함된 스트림입니다. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, a <see cref="T:System.IO.FileNotFoundException" /> is raised.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.IO.TextReader)">
+      <summary>지정된 <see cref="T:System.IO.TextReader" />에서 XML 문서를  로드합니다.</summary>
+      <param name="txtReader">XML 데이터를 문서에 제공하기 위해 사용하는 TextReader입니다. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Load(System.Xml.XmlReader)">
+      <summary>지정된 <see cref="T:System.Xml.XmlReader" />에서 XML 문서를 로드합니다.</summary>
+      <param name="reader">XML 데이터를 문서에 제공하기 위해 사용하는 XmlReader입니다. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.LoadXml(System.String)">
+      <summary>지정된 문자열에서 XML 문서를 로드합니다.</summary>
+      <param name="xml">로드할 XML 문서가 포함된 문자열입니다. </param>
+      <exception cref="T:System.Xml.XmlException">There is a load or parse error in the XML.In this case, the document remains empty.</exception>
+    </member>
+    <member name="P:System.Xml.XmlDocument.LocalName">
+      <summary>노드의 로컬 이름을 가져옵니다.</summary>
+      <returns>XmlDocument 노드의 경우 로컬 이름이 #document가 됩니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.Name">
+      <summary>노드의 정규화된 이름을 가져옵니다.</summary>
+      <returns>XmlDocument 노드의 경우 이름이 #document가 됩니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.NameTable">
+      <summary>이 구현과 관련된 <see cref="T:System.Xml.XmlNameTable" />을 가져옵니다.</summary>
+      <returns>문서 내에서 원자화된 버전의 문자열을 가져올 수 있게 해주는 XmlNameTable입니다.</returns>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeChanged">
+      <summary>이 문서에 속하는 노드의 <see cref="P:System.Xml.XmlNode.Value" />가 변경된 경우에 발생합니다.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeChanging">
+      <summary>이 문서에 속하는 노드의 <see cref="P:System.Xml.XmlNode.Value" />를 변경할 경우에 발생합니다.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeInserted">
+      <summary>이 문서에 속하는 노드를 다른 노드에 삽입한 경우에 발생합니다.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeInserting">
+      <summary>이 문서에 속하는 노드를 다른 노드에 삽입할 경우에 발생합니다.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeRemoved">
+      <summary>이 문서에 속하는 노드를 부모에서 제거한 경우에 발생합니다.</summary>
+    </member>
+    <member name="E:System.Xml.XmlDocument.NodeRemoving">
+      <summary>이 문서에 속하는 노드를 문서에서 제거할 경우에 발생합니다.</summary>
+    </member>
+    <member name="P:System.Xml.XmlDocument.NodeType">
+      <summary>현재 노드의 형식을 가져옵니다.</summary>
+      <returns>노드 형식입니다.XmlDocument 노드의 경우 이 값은 XmlNodeType.Document가 됩니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.OwnerDocument">
+      <summary>현재 노드가 속하는 <see cref="T:System.Xml.XmlDocument" />를 가져옵니다.</summary>
+      <returns>XmlDocument 노드(<see cref="P:System.Xml.XmlDocument.NodeType" />이 XmlNodeType.Document)의 경우 이 속성에서는 항상 null을 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.ParentNode">
+      <summary>부모가 있을 수 있는 노드의 경우 이 노드의 부모 노드를 가져옵니다.</summary>
+      <returns>항상 null를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocument.PreserveWhitespace">
+      <summary>요소 콘텐츠에서 공백을 유지할지를 나타내는 값을 가져오거나 설정합니다.</summary>
+      <returns>공백을 유지하려면 true이고, 그렇지 않으면 false입니다.기본값은 false입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocument.ReadNode(System.Xml.XmlReader)">
+      <summary>
+        <see cref="T:System.Xml.XmlNode" />의 내용을 기준으로 <see cref="T:System.Xml.XmlReader" /> 개체를 만듭니다.판독기는 노드나 특성에 위치해야 합니다.</summary>
+      <returns>새 XmlNode이거나 더 이상 노드가 없으면 null입니다.</returns>
+      <param name="reader">XML 소스입니다. </param>
+      <exception cref="T:System.NullReferenceException">The reader is positioned on a node type that does not translate to a valid DOM node (for example, EndElement or EndEntity). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.IO.Stream)">
+      <summary>XML 문서를 지정된 스트림에 저장합니다.</summary>
+      <param name="outStream">저장할 스트림입니다. </param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.IO.TextWriter)">
+      <summary>XML 문서를 지정된 <see cref="T:System.IO.TextWriter" />에 저장합니다.</summary>
+      <param name="writer">저장할 대상 TextWriter입니다. </param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.Save(System.Xml.XmlWriter)">
+      <summary>XML 문서를 지정된 <see cref="T:System.Xml.XmlWriter" />에 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+      <exception cref="T:System.Xml.XmlException">The operation would not result in a well formed XML document (for example, no document element or duplicate XML declarations). </exception>
+    </member>
+    <member name="M:System.Xml.XmlDocument.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>XmlDocument 노드의 모든 자식을 지정된 <see cref="T:System.Xml.XmlWriter" />에 저장합니다.</summary>
+      <param name="xw">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocument.WriteTo(System.Xml.XmlWriter)">
+      <summary>XmlDocument 노드를 지정된 <see cref="T:System.Xml.XmlWriter" />에 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="T:System.Xml.XmlDocumentFragment">
+      <summary>트리 삽입 작업에 유용한 경량의 개체를 나타냅니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.#ctor(System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlDocumentFragment" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="ownerDocument">조각의 소스인 XML 문서입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.CloneNode(System.Boolean)">
+      <summary>이 노드의 복제본을 만듭니다.</summary>
+      <returns>복제된 노드입니다.</returns>
+      <param name="deep">지정된 노드 아래의 하위 트리를 재귀적으로 복제하려면 true이고, 노드 자체만 복제하려면 false입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.InnerXml">
+      <summary>이 노드의 자식을 나타내는 태그를 가져오거나 설정합니다.</summary>
+      <returns>이 노드의 자식을 나타내는 태그입니다.</returns>
+      <exception cref="T:System.Xml.XmlException">이 속성을 설정할 때 지정한 XML이 제대로 구성되지 않은 경우 </exception>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.LocalName">
+      <summary>노드의 로컬 이름을 가져옵니다.</summary>
+      <returns>XmlDocumentFragment 노드의 경우 이 이름은 #document-fragment입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.Name">
+      <summary>노드의 정규화된 이름을 가져옵니다.</summary>
+      <returns>XmlDocumentFragment의 경우 이 이름은 #document-fragment입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.NodeType">
+      <summary>현재 노드의 형식을 가져옵니다.</summary>
+      <returns>XmlDocumentFragment 노드의 경우 이 값은 XmlNodeType.DocumentFragment입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.OwnerDocument">
+      <summary>이 노드가 속한 <see cref="T:System.Xml.XmlDocument" />를 가져옵니다.</summary>
+      <returns>이 노드가 속한 XmlDocument입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlDocumentFragment.ParentNode">
+      <summary>부모를 가질 수 있는 노드의 경우 이 노드의 부모를 가져옵니다.</summary>
+      <returns>이 노드의 부모입니다.XmlDocumentFragment 노드의 경우 이 속성은 항상 null입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드의 모든 자식을 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlDocumentFragment.WriteTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드를 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="T:System.Xml.XmlElement">
+      <summary>요소를 나타냅니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.#ctor(System.String,System.String,System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlElement" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="prefix">네임스페이스 접두사입니다. <see cref="P:System.Xml.XmlElement.Prefix" /> 속성을 참조하십시오.</param>
+      <param name="localName">로컬 이름입니다. <see cref="P:System.Xml.XmlElement.LocalName" /> 속성을 참조하십시오.</param>
+      <param name="namespaceURI">네임스페이스 URI입니다. <see cref="P:System.Xml.XmlElement.NamespaceURI" /> 속성을 참조하십시오.</param>
+      <param name="doc">부모 XML 문서입니다.</param>
+    </member>
+    <member name="P:System.Xml.XmlElement.Attributes">
+      <summary>이 노드의 특성 목록이 포함된 <see cref="T:System.Xml.XmlAttributeCollection" />을 가져옵니다.</summary>
+      <returns>이 노드의 특성 목록이 포함된 <see cref="T:System.Xml.XmlAttributeCollection" />입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlElement.CloneNode(System.Boolean)">
+      <summary>이 노드의 복제본을 만듭니다.</summary>
+      <returns>복제된 노드입니다.</returns>
+      <param name="deep">지정한 노드의 하위 트리를 재귀적으로 복제하려면 true이고, 노드만(노드가 XmlElement일 경우에는 특성 포함)복제하려면 false입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttribute(System.String)">
+      <summary>지정된 이름을 가진 특성의 값을 반환합니다.</summary>
+      <returns>지정된 특성의 값을 반환합니다.일치하는 특성이 없거나 해당 특성에 지정된 값이나 기본값이 없는 경우에는 빈 문자열이 반환됩니다.</returns>
+      <param name="name">검색할 특성의 이름입니다.이것은 정규화된 이름입니다.일치하는 노드의 Name 속성과 일치합니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttribute(System.String,System.String)">
+      <summary>지정된 로컬 이름과 네임스페이스 URI를 갖고 있는 특성의 값을 반환합니다.</summary>
+      <returns>지정된 특성의 값을 반환합니다.일치하는 특성이 없거나 해당 특성에 지정된 값이나 기본값이 없는 경우에는 빈 문자열이 반환됩니다.</returns>
+      <param name="localName">검색할 특성의 로컬 이름입니다. </param>
+      <param name="namespaceURI">검색할 특성의 네임스페이스 URI입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttributeNode(System.String)">
+      <summary>지정된 이름의 XmlAttribute를 반환합니다.</summary>
+      <returns>지정된 XmlAttribute이거나 일치하는 특성이 없는 경우에는 null입니다.</returns>
+      <param name="name">검색할 특성의 이름입니다.이것은 정규화된 이름입니다.일치하는 노드의 Name 속성과 일치합니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetAttributeNode(System.String,System.String)">
+      <summary>지정된 로컬 이름과 네임스페이스 URI를 갖고 있는 <see cref="T:System.Xml.XmlAttribute" />를 반환합니다.</summary>
+      <returns>지정된 XmlAttribute이거나 일치하는 특성이 없는 경우에는 null입니다.</returns>
+      <param name="localName">특성의 로컬 이름입니다. </param>
+      <param name="namespaceURI">특성의 네임스페이스 URI입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetElementsByTagName(System.String)">
+      <summary>지정된 <see cref="P:System.Xml.XmlElement.Name" />과 일치하는 모든 하위 요소의 목록이 포함된 <see cref="T:System.Xml.XmlNodeList" />를 반환합니다.</summary>
+      <returns>일치하는 모든 노드 목록이 포함된 <see cref="T:System.Xml.XmlNodeList" />입니다.일치하는 노드가 없으면 목록이 비어 있습니다.</returns>
+      <param name="name">일치시킬 이름 태그입니다.이것은 정규화된 이름입니다.일치하는 노드의 Name 속성과 일치합니다.별표(*)는 모든 태그와 일치하는 특수 값입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.GetElementsByTagName(System.String,System.String)">
+      <summary>지정된 <see cref="P:System.Xml.XmlElement.LocalName" /> 및 <see cref="P:System.Xml.XmlElement.NamespaceURI" />와 일치하는 모든 하위 요소의 목록이 포함된 <see cref="T:System.Xml.XmlNodeList" />를 반환합니다.</summary>
+      <returns>일치하는 모든 노드 목록이 포함된 <see cref="T:System.Xml.XmlNodeList" />입니다.일치하는 노드가 없으면 목록이 비어 있습니다.</returns>
+      <param name="localName">일치시킬 로컬 이름입니다.별표(*)는 모든 태그와 일치하는 특수 값입니다.</param>
+      <param name="namespaceURI">일치시킬 네임스페이스 URI입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.HasAttribute(System.String)">
+      <summary>현재 노드에 지정된 이름을 가진 특성이 있는지 확인합니다.</summary>
+      <returns>현재 노드에 지정된 특성이 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="name">찾을 특성의 이름입니다.이것은 정규화된 이름입니다.일치하는 노드의 Name 속성과 일치합니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.HasAttribute(System.String,System.String)">
+      <summary>현재 노드에 지정된 로컬 이름과 네임스페이스 URI를 갖고 있는 특성이 있는지 확인합니다.</summary>
+      <returns>현재 노드에 지정된 특성이 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="localName">찾을 특성의 로컬 이름입니다. </param>
+      <param name="namespaceURI">찾을 특성의 네임스페이스 URI입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlElement.HasAttributes">
+      <summary>현재 노드에 특성이 있는지 여부를 나타내는 boolean 값을 가져옵니다.</summary>
+      <returns>현재 노드에 특성이 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.InnerText">
+      <summary>노드와 모든 자식의 연결된 값을 가져오거나 설정합니다.</summary>
+      <returns>노드와 모든 자식의 연결된 값입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.InnerXml">
+      <summary>이 노드의 자식을 나타내는 태그를 가져오거나 설정합니다.</summary>
+      <returns>이 노드의 자식을 나타내는 태그입니다.</returns>
+      <exception cref="T:System.Xml.XmlException">이 속성을 설정할 때 지정한 XML이 제대로 구성되지 않은 경우 </exception>
+    </member>
+    <member name="P:System.Xml.XmlElement.IsEmpty">
+      <summary>요소의 태그 형식을 가져오거나 설정합니다.</summary>
+      <returns>요소를 짧은 태그 형식 "&lt;item/&gt;"으로 serialize할 경우 true를 반환하고, 긴 형식 "&lt;item&gt;&lt;/item&gt;"으로 serialize할 경우 false를 반환합니다.이 속성을 설정할 때 true로 설정하면 요소의 자식이 제거되고 요소는 짧은 태그 형식으로 serialize됩니다.false로 설정하면 요소에 내용이 있는지 여부와 상관없이 속성 값이 변경되고, 요소가 비었으면 긴 형식으로 serialize됩니다.이 속성은 DOM(문서 개체 모델)에 대한 Microsoft 확장입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.LocalName">
+      <summary>현재 노드의 로컬 이름을 가져옵니다.</summary>
+      <returns>접두사를 제거한 현재 노드의 이름입니다.예를 들어, &lt;bk:book&gt; 요소에서 LocalName은 book입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.Name">
+      <summary>노드의 정규화된 이름을 가져옵니다.</summary>
+      <returns>노드의 정규화된 이름입니다.XmlElement 노드의 경우에는 요소의 태그 이름입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NamespaceURI">
+      <summary>이 노드의 네임스페이스 URI를 가져옵니다.</summary>
+      <returns>이 노드의 네임스페이스 URI입니다.네임스페이스 URI가 없으면, 이 속성은 String.Empty를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NextSibling">
+      <summary>이 요소 바로 다음에 오는 <see cref="T:System.Xml.XmlNode" />를 가져옵니다.</summary>
+      <returns>이 요소 바로 다음에 오는 XmlNode입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.NodeType">
+      <summary>현재 노드의 형식을 가져옵니다.</summary>
+      <returns>노드 형식입니다.XmlElement 노드의 경우 이 값은 XmlNodeType.Element입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.OwnerDocument">
+      <summary>이 노드가 속한 <see cref="T:System.Xml.XmlDocument" />를 가져옵니다.</summary>
+      <returns>이 요소가 속한 XmlDocument입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlElement.ParentNode"></member>
+    <member name="P:System.Xml.XmlElement.Prefix">
+      <summary>이 노드의 네임스페이스 접두사를 가져오거나 설정합니다.</summary>
+      <returns>이 노드의 네임스페이스 접두사입니다.접두사가 없으면, 이 속성은 String.Empty를 반환합니다.</returns>
+      <exception cref="T:System.ArgumentException">이 노드가 읽기 전용인 경우 </exception>
+      <exception cref="T:System.Xml.XmlException">지정된 접두사에 잘못된 문자가 있는 경우지정된 접두사가 잘못된 경우이 노드의 namespaceURI가 null인 경우지정된 접두사는 "xml"이고 이 노드의 namespaceURI가 http://www.w3.org/XML/1998/namespace와 다른 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAll">
+      <summary>현재 노드의 지정된 특성 및 자식을 모두 제거합니다.기본 특성은 제거되지 않습니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAllAttributes">
+      <summary>요소에서 지정된 모든 특성을 제거합니다.기본 특성은 제거되지 않습니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttribute(System.String)">
+      <summary>이름별로 특성을 제거합니다.</summary>
+      <param name="name">제거할 특성의 이름입니다. 이것은 정규화된 이름으로,일치하는 노드의 Name 속성과 일치합니다.</param>
+      <exception cref="T:System.ArgumentException">노드가 읽기 전용인 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttribute(System.String,System.String)">
+      <summary>지정된 로컬 이름과 네임스페이스 URI를 갖고 있는 특성을 제거합니다. (제거한 특성에 기본값이 있으면 바로 대체됩니다.)</summary>
+      <param name="localName">제거할 특성의 로컬 이름입니다. </param>
+      <param name="namespaceURI">제거할 특성의 네임스페이스 URI입니다. </param>
+      <exception cref="T:System.ArgumentException">노드가 읽기 전용인 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeAt(System.Int32)">
+      <summary>지정된 인덱스를 갖고 있는 Attribute 노드를 요소에서 제거합니다. (제거한 특성에 기본값이 있으면 바로 대체됩니다.)</summary>
+      <returns>제거한 Attribute 노드이거나, 지정한 인덱스에 노드가 없는 경우에는 null입니다.</returns>
+      <param name="i">제거할 노드의 인덱스입니다.첫 번째 노드의 인덱스는 0입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeNode(System.String,System.String)">
+      <summary>로컬 이름과 네임스페이스 URI로 지정한 <see cref="T:System.Xml.XmlAttribute" />를 제거합니다. (제거한 특성에 기본값이 있으면 바로 대체됩니다.)</summary>
+      <returns>제거한 XmlAttribute이거나 XmlElement에 일치하는 Attribute 노드가 없으면 null입니다.</returns>
+      <param name="localName">특성의 로컬 이름입니다. </param>
+      <param name="namespaceURI">특성의 네임스페이스 URI입니다. </param>
+      <exception cref="T:System.ArgumentException">이 노드가 읽기 전용인 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.RemoveAttributeNode(System.Xml.XmlAttribute)">
+      <summary>지정된 <see cref="T:System.Xml.XmlAttribute" />을 제거합니다.</summary>
+      <returns>제거한 XmlAttribute이거나, <paramref name="oldAttr" />이 XmlElement의 Attribute 노드가 아닐 경우에는 null입니다.</returns>
+      <param name="oldAttr">제거할 XmlAttribute 노드입니다.제거한 특성에 기본값이 있으면 바로 대체됩니다.</param>
+      <exception cref="T:System.ArgumentException">이 노드가 읽기 전용인 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttribute(System.String,System.String)">
+      <summary>지정된 이름을 가진 특성의 값을 설정합니다.</summary>
+      <param name="name">만들거나 변경할 특성의 이름입니다.이것은 정규화된 이름입니다.이름에 콜론이 포함되어 있으면 접두사와 로컬 이름 구성 요소로 구문 분석됩니다.</param>
+      <param name="value">특성에 설정할 값입니다. </param>
+      <exception cref="T:System.Xml.XmlException">지정된 이름에 잘못된 문자가 있는 경우 </exception>
+      <exception cref="T:System.ArgumentException">노드가 읽기 전용인 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttribute(System.String,System.String,System.String)">
+      <summary>지정된 로컬 이름과 네임스페이스 URI를 갖고 있는 특성의 값을 설정합니다.</summary>
+      <returns>특성 값입니다.</returns>
+      <param name="localName">특성의 로컬 이름입니다. </param>
+      <param name="namespaceURI">특성의 네임스페이스 URI입니다. </param>
+      <param name="value">특성에 설정할 값입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttributeNode(System.String,System.String)">
+      <summary>지정된 <see cref="T:System.Xml.XmlAttribute" />를 추가합니다.</summary>
+      <returns>추가할 XmlAttribute입니다.</returns>
+      <param name="localName">특성의 로컬 이름입니다. </param>
+      <param name="namespaceURI">특성의 네임스페이스 URI입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.SetAttributeNode(System.Xml.XmlAttribute)">
+      <summary>지정된 <see cref="T:System.Xml.XmlAttribute" />를 추가합니다.</summary>
+      <returns>특성이 같은 이름을 가진 기존 특성을 대체할 경우 이전 XmlAttribute가 반환됩니다. 그렇지 않으면 null이 반환됩니다.</returns>
+      <param name="newAttr">이 요소의 특성 컬렉션에 추가할 XmlAttribute 노드입니다. </param>
+      <exception cref="T:System.ArgumentException">이 노드를 만든 문서와 다른 문서에서 <paramref name="newAttr" />를 만들었거나이 노드가 읽기 전용인 경우</exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="newAttr" />가 이미 다른 XmlElement 개체의 특성인 경우.다른 XmlElement 개체에서 다시 사용하려면 명시적으로 XmlAttribute 노드를 복제해야 합니다.</exception>
+    </member>
+    <member name="M:System.Xml.XmlElement.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드의 모든 자식을 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlElement.WriteTo(System.Xml.XmlWriter)">
+      <summary>현재 노드를 지정된 <see cref="T:System.Xml.XmlWriter" />에 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="T:System.Xml.XmlImplementation">
+      <summary>
+        <see cref="T:System.Xml.XmlDocument" /> 개체 집합에 대한 컨텍스트를 정의합니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.#ctor">
+      <summary>
+        <see cref="T:System.Xml.XmlImplementation" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.#ctor(System.Xml.XmlNameTable)">
+      <summary>지정된 <see cref="T:System.Xml.XmlNameTable" />을 사용하여 <see cref="T:System.Xml.XmlImplementation" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="nt">
+        <see cref="T:System.Xml.XmlNameTable" /> 개체</param>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.CreateDocument">
+      <summary>새 <see cref="T:System.Xml.XmlDocument" />를 만듭니다.</summary>
+      <returns>새 XmlDocument 개체입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlImplementation.HasFeature(System.String,System.String)">
+      <summary>DOM(문서 개체 모델)을 구현할 때 특정 기능을 구현하는지 여부를 테스트합니다.</summary>
+      <returns>지정된 버전에 기능이 구현되면 true이고, 그렇지 않으면 false입니다.다음 표에서는 HasFeature가 true를 반환하도록 하는 조합을 보여 줍니다.strFeature strVersion XML 1.0 XML 2.0 </returns>
+      <param name="strFeature">테스트할 기능의 패키지 이름입니다.대/소문자를 구분하지 않습니다.</param>
+      <param name="strVersion">이것은 테스트할 패키지 이름의 버전 번호입니다.버전이 지정되지 않은 경우(null) 아무 기능 버전이나 지원하도록 하면 메서드가 true를 반환합니다.</param>
+    </member>
+    <member name="T:System.Xml.XmlLinkedNode">
+      <summary>이 노드 바로 앞이나 뒤에 있는 노드를 가져옵니다.</summary>
+    </member>
+    <member name="P:System.Xml.XmlLinkedNode.NextSibling">
+      <summary>이 노드 바로 다음에 오는 노드를 가져옵니다.</summary>
+      <returns>이 노드 바로 뒤에 있는 <see cref="T:System.Xml.XmlNode" />이거나, 노드가 없으면 null입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlLinkedNode.PreviousSibling">
+      <summary>이 노드 바로 앞에 있는 노드를 가져옵니다.</summary>
+      <returns>앞에 있는 <see cref="T:System.Xml.XmlNode" />이거나, 노드가 없으면 null입니다.</returns>
+    </member>
+    <member name="T:System.Xml.XmlNamedNodeMap">
+      <summary>이름이나 인덱스로 액세스할 수 있는 노드의 컬렉션을 나타냅니다.</summary>
+    </member>
+    <member name="P:System.Xml.XmlNamedNodeMap.Count">
+      <summary>XmlNamedNodeMap의 노드 수를 가져옵니다.</summary>
+      <returns>노드 수입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetEnumerator">
+      <summary>XmlNamedNodeMap의 노드 컬렉션에 대한 "foreach" 스타일 반복 지원을 제공합니다.</summary>
+      <returns>열거자 개체입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String)">
+      <summary>이름으로 지정된 <see cref="T:System.Xml.XmlNode" />를 검색합니다.</summary>
+      <returns>지정된 이름을 가진 XmlNode이거나, 일치하는 노드가 없으면 null입니다.</returns>
+      <param name="name">검색할 노드의 정규화된 이름입니다.일치하는 노드의 <see cref="P:System.Xml.XmlNode.Name" /> 속성과 일치합니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.GetNamedItem(System.String,System.String)">
+      <summary>일치하는 <see cref="P:System.Xml.XmlNode.LocalName" /> 및 <see cref="P:System.Xml.XmlNode.NamespaceURI" />를 갖고 있는 노드를 검색합니다.</summary>
+      <returns>일치하는 로컬 이름과 네임스페이스 URI를 갖고 있는 <see cref="T:System.Xml.XmlNode" />이거나, 일치하는 노드가 없는 경우에는 null입니다.</returns>
+      <param name="localName">검색할 노드의 로컬 이름입니다.</param>
+      <param name="namespaceURI">검색할 노드의 네임스페이스 URI(Uniform Resource Identifier)입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.Item(System.Int32)">
+      <summary>XmlNamedNodeMap의 지정된 인덱스에서 노드를 검색합니다.</summary>
+      <returns>지정된 인덱스에 있는 <see cref="T:System.Xml.XmlNode" />입니다.<paramref name="index" />가 0보다 작거나 <see cref="P:System.Xml.XmlNamedNodeMap.Count" /> 속성보다 크거나 같을 경우에는 null이 반환됩니다.</returns>
+      <param name="index">XmlNamedNodeMap에서 검색할 노드의 인덱스 위치입니다.인덱스는 0부터 시작하므로 첫 번째 노드의 인덱스는 0이고 마지막 노드의 인덱스는 <see cref="P:System.Xml.XmlNamedNodeMap.Count" />-1입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String)">
+      <summary>XmlNamedNodeMap에서 노드를 제거합니다.</summary>
+      <returns>이 XmlNamedNodeMap에서 제거한 XmlNode이거나, 일치하는 노드가 없는 경우에는 null입니다.</returns>
+      <param name="name">제거할 노드의 정규화된 이름입니다.일치하는 노드의 <see cref="P:System.Xml.XmlNode.Name" /> 속성과 이름을 일치시킵니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.RemoveNamedItem(System.String,System.String)">
+      <summary>일치하는 <see cref="P:System.Xml.XmlNode.LocalName" /> 및 <see cref="P:System.Xml.XmlNode.NamespaceURI" />를 갖고 있는 노드를 제거합니다.</summary>
+      <returns>제거한 <see cref="T:System.Xml.XmlNode" />이거나, 일치하는 노드가 없는 경우에는 null입니다.</returns>
+      <param name="localName">제거할 노드의 로컬 이름입니다.</param>
+      <param name="namespaceURI">제거할 노드의 네임스페이스 URI입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlNamedNodeMap.SetNamedItem(System.Xml.XmlNode)">
+      <summary>해당하는 <see cref="P:System.Xml.XmlNode.Name" /> 속성을 사용하여 <see cref="T:System.Xml.XmlNode" />를 추가합니다.</summary>
+      <returns>
+        <paramref name="node" />에서 같은 이름을 가진 기존 노드를 대체할 경우 이전 노드가 반환되고, 그렇지 않으면 null이 반환됩니다.</returns>
+      <param name="node">XmlNamedNodeMap에 저장할 XmlNode입니다.해당하는 이름의 노드가 이미 맵에 있을 경우에는 새 노드로 대체됩니다.</param>
+      <exception cref="T:System.ArgumentException">XmlNamedNodeMap을 만든 문서가 아니라 다른 <see cref="T:System.Xml.XmlDocument" />에서 <paramref name="node" />를 만들었거나 XmlNamedNodeMap이 읽기 전용인 경우</exception>
+    </member>
+    <member name="T:System.Xml.XmlNode">
+      <summary>XML 문서의 단일 노드를 나타냅니다. </summary>
+    </member>
+    <member name="M:System.Xml.XmlNode.AppendChild(System.Xml.XmlNode)">
+      <summary>지정된 노드를 이 노드의 자식 노드 목록 끝에 추가합니다.</summary>
+      <returns>추가한 노드입니다.</returns>
+      <param name="newChild">추가할 노드입니다.지정된 위치로 이동하는, 추가할 노드의 모든 콘텐츠입니다.</param>
+      <exception cref="T:System.InvalidOperationException">이 노드가 <paramref name="newChild" /> 노드 형식의 자식 노드를 허용하지 않는 형식을 가지는 경우<paramref name="newChild" />가 이 노드의 상위 노드일 경우 </exception>
+      <exception cref="T:System.ArgumentException">이 노드를 만든 문서가 아닌 다른 문서에서 <paramref name="newChild" />를 만든 경우이 노드가 읽기 전용인 경우 </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.Attributes">
+      <summary>이 노드의 특성이 포함된 <see cref="T:System.Xml.XmlAttributeCollection" />을 가져옵니다.</summary>
+      <returns>노드의 특성을 포함하는 XmlAttributeCollection입니다.노드가 XmlNodeType.Element 형식일 경우 노드의 특성이 반환됩니다.그렇지 않은 경우 null을 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.BaseURI">
+      <summary>현재 노드의 기본 URI를 가져옵니다.</summary>
+      <returns>노드가 로드된 위치이거나 노드에 기본 URI가 없으면 String.Empty입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.ChildNodes">
+      <summary>노드의 모든 자식을 가져옵니다.</summary>
+      <returns>노드의 모든 자식을 포함하는 개체입니다.자식 노드가 없으면 이 속성은 빈 <see cref="T:System.Xml.XmlNodeList" />를 반환합니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.CloneNode(System.Boolean)">
+      <summary>파생 클래스에서 재정의한 경우 노드를 복제합니다.</summary>
+      <returns>복제된 노드입니다.</returns>
+      <param name="deep">지정된 노드 아래의 하위 트리를 재귀적으로 복제하려면 true이고, 노드 자체만 복제하려면 false입니다. </param>
+      <exception cref="T:System.InvalidOperationException">복제할 수 없는 노드 형식에 이 메서드를 호출하는 경우 </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.FirstChild">
+      <summary>노드의 첫 번째 자식을 가져옵니다.</summary>
+      <returns>노드의 첫 번째 자식입니다.이러한 노드가 없으면, null이 반환됩니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetEnumerator">
+      <summary>현재 노드에서 자식 노드를 반복하는 열거자를 가져옵니다.</summary>
+      <returns>현재 노드에서 하위 노드를 반복하는 데 사용할 수 있는 <see cref="T:System.Collections.IEnumerator" /> 개체입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetNamespaceOfPrefix(System.String)">
+      <summary>현재 노드의 범위에 있는 지정된 접두사에 대해 가장 가까운 xmlns 선언을 조회하여 선언의 네임스페이스 URI를 반환합니다.</summary>
+      <returns>지정된 접두사의 네임스페이스 URI입니다.</returns>
+      <param name="prefix">찾으려는 네임스페이스 URI가 있는 접두사입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlNode.GetPrefixOfNamespace(System.String)">
+      <summary>현재 노드의 범위에 있는 지정된 네임스페이스 URI에 대해 가장 가까운 xmlns 선언을 조회하여 해당 선언에 정의된 접두사를 반환합니다.</summary>
+      <returns>지정된 네임스페이스 URI의 접두사입니다.</returns>
+      <param name="namespaceURI">찾으려는 접두사를 가진 네임스페이스 URI입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlNode.HasChildNodes">
+      <summary>이 노드에 자식 노드가 있는지를 나타내는 값을 가져옵니다.</summary>
+      <returns>현재 노드에 자식 노드가 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.InnerText">
+      <summary>노드와 모든 자식 노드의 연결된 값을 가져오거나 설정합니다.</summary>
+      <returns>노드와 모든 자식 노드의 연결된 값입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.InnerXml">
+      <summary>이 노드의 자식 노드를 나타내는 태그를 가져오거나 설정합니다.</summary>
+      <returns>이 노드의 자식 노드를 나타내는 태그입니다.참고InnerXml은 기본 특성을 반환하지 않습니다.</returns>
+      <exception cref="T:System.InvalidOperationException">자식 노드를 가질 수 없는 노드에 대해 이 속성을 설정하는 경우 </exception>
+      <exception cref="T:System.Xml.XmlException">이 속성을 설정할 때 지정한 XML이 제대로 구성되지 않은 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.InsertAfter(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>지정된 노드를 지정된 참조 노드 바로 다음에 삽입합니다.</summary>
+      <returns>삽입할 노드입니다.</returns>
+      <param name="newChild">삽입할 XmlNode입니다. </param>
+      <param name="refChild">참조 노드인 XmlNode입니다.<paramref name="newNode" />는 <paramref name="refNode" /> 다음에 있습니다.</param>
+      <exception cref="T:System.InvalidOperationException">이 노드가 <paramref name="newChild" /> 노드 형식의 자식 노드를 허용하지 않는 형식을 가지는 경우<paramref name="newChild" />가 이 노드의 상위 노드일 경우 </exception>
+      <exception cref="T:System.ArgumentException">이 노드를 만든 문서가 아닌 다른 문서에서 <paramref name="newChild" />를 만든 경우<paramref name="refChild" />가 이 노드의 자식이 아닌 경우이 노드가 읽기 전용인 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.InsertBefore(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>지정된 노드를 지정된 참조 노드 바로 앞에 삽입합니다.</summary>
+      <returns>삽입할 노드입니다.</returns>
+      <param name="newChild">삽입할 XmlNode입니다. </param>
+      <param name="refChild">참조 노드인 XmlNode입니다.이 노드 앞에 <paramref name="newChild" />가 있습니다.</param>
+      <exception cref="T:System.InvalidOperationException">현재 노드가 <paramref name="newChild" /> 노드 형식의 자식 노드를 허용하지 않는 형식인 경우<paramref name="newChild" />가 이 노드의 상위 노드일 경우 </exception>
+      <exception cref="T:System.ArgumentException">이 노드를 만든 문서가 아닌 다른 문서에서 <paramref name="newChild" />를 만든 경우<paramref name="refChild" />가 이 노드의 자식이 아닌 경우이 노드가 읽기 전용인 경우 </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.IsReadOnly">
+      <summary>노드가 읽기 전용인지를 나타내는 값을 가져옵니다.</summary>
+      <returns>노드가 읽기 전용이면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Item(System.String)">
+      <summary>지정된 <see cref="P:System.Xml.XmlNode.Name" />을 가진 첫 번째 자식 요소를 가져옵니다.</summary>
+      <returns>지정된 이름과 일치하는 첫 번째 <see cref="T:System.Xml.XmlElement" />입니다.일치되는 항목이 없으면 null 참조(Visual Basic의 경우 Nothing)를 반환합니다.</returns>
+      <param name="name">검색할 요소의 정규화된 이름입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlNode.Item(System.String,System.String)">
+      <summary>지정된 <see cref="P:System.Xml.XmlNode.LocalName" />과 <see cref="P:System.Xml.XmlNode.NamespaceURI" />를 갖고 있는 첫 번째 자식 요소를 가져옵니다.</summary>
+      <returns>일치하는 <paramref name="localname" />과 <paramref name="ns" />를 갖고 있는 첫 번째 <see cref="T:System.Xml.XmlElement" />입니다..일치되는 항목이 없으면 null 참조(Visual Basic의 경우 Nothing)를 반환합니다.</returns>
+      <param name="localname">요소의 로컬 이름입니다. </param>
+      <param name="ns">요소의 네임스페이스 URI입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlNode.LastChild">
+      <summary>노드의 마지막 자식을 가져옵니다.</summary>
+      <returns>노드의 마지막 자식입니다.이러한 노드가 없으면, null이 반환됩니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.LocalName">
+      <summary>파생 클래스에서 재정의되면 노드의 로컬 이름을 가져옵니다.</summary>
+      <returns>접두사를 제거한 노드의 이름입니다.예를 들어, &lt;bk:book&gt; 요소에서 LocalName은 book입니다.반환되는 이름은 다음과 같이 노드의 <see cref="P:System.Xml.XmlNode.NodeType" />에 따라 달라집니다. 형식 이름 특성 특성의 로컬 이름입니다. CDATA #cdata-section 주석 #comment 문서 #document DocumentFragment #document-fragment DocumentType 문서 형식 이름입니다. 요소 요소의 로컬 이름입니다. 엔터티 엔터티의 이름입니다. EntityReference 참조된 엔터티의 이름입니다. Notation 표기법 이름입니다. ProcessingInstruction 처리 명령의 대상입니다. Text #text Whitespace #whitespace SignificantWhitespace #significant-whitespace XmlDeclaration #xml-declaration </returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Name">
+      <summary>파생 클래스에서 재정의되면 노드의 정규화된 이름을 가져옵니다.</summary>
+      <returns>노드의 정규화된 이름입니다.반환되는 이름은 다음과 같이 노드의 <see cref="P:System.Xml.XmlNode.NodeType" />에 따라 달라집니다.형식 이름 특성 특성의 정규화된 이름입니다. CDATA #cdata-section 주석 #comment 문서 #document DocumentFragment #document-fragment DocumentType 문서 형식 이름입니다. 요소 요소의 정규화된 이름입니다. 엔터티 엔터티의 이름입니다. EntityReference 참조된 엔터티의 이름입니다. Notation 표기법 이름입니다. ProcessingInstruction 처리 명령의 대상입니다. Text #text Whitespace #whitespace SignificantWhitespace #significant-whitespace XmlDeclaration #xml-declaration </returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NamespaceURI">
+      <summary>이 노드의 네임스페이스 URI를 가져옵니다.</summary>
+      <returns>이 노드의 네임스페이스 URI입니다.네임스페이스 URI가 없으면, 이 속성은 String.Empty를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NextSibling">
+      <summary>이 노드 바로 다음에 오는 노드를 가져옵니다.</summary>
+      <returns>다음 XmlNode입니다.다음 노드가 없으면 null이 반환됩니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.NodeType">
+      <summary>파생 클래스에서 재정의되면 현재 노드의 형식을 가져옵니다.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNodeType" /> 값 중 하나입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.Normalize">
+      <summary>이 XmlNode 아래 전체 수준의 하위 트리에 있는 모든 XmlText 노드를 태그(즉, 태그, 주석, 처리 명령, CDATA 섹션 및 엔터티 참조)만이 XmlText 노드를 구분하는, 인접한 XmlText 노드가 없는 "정상적인" 폼에 넣습니다.</summary>
+    </member>
+    <member name="P:System.Xml.XmlNode.OuterXml">
+      <summary>이 노드와 모든 자식 노드를 포함하는 태그를 가져옵니다.</summary>
+      <returns>이 노드와 모든 자식 노드를 포함하는 태그입니다.참고OuterXml은 기본 특성을 반환하지 않습니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.OwnerDocument">
+      <summary>이 노드가 속한 <see cref="T:System.Xml.XmlDocument" />를 가져옵니다.</summary>
+      <returns>이 노드가 속한 <see cref="T:System.Xml.XmlDocument" />입니다.노드가 <see cref="T:System.Xml.XmlDocument" />(NodeType이 XmlNodeType.Document와 같음)일 경우 이 속성에서는 null을 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.ParentNode">
+      <summary>부모를 가질 수 있는 노드의 경우 이 노드의 부모를 가져옵니다.</summary>
+      <returns>현재 노드의 부모인 XmlNode입니다.노드를 만들고 트리에 추가하지 않은 경우나 트리에서 노드를 제거한 경우 부모는 null입니다.다른 모든 노드의 경우에는 노드의 <see cref="P:System.Xml.XmlNode.NodeType" />에 따라 반환되는 값이 달라집니다.다음 표에서는 ParentNode 속성에 대해 가능한 반환 값을 설명합니다.노드 형식 ParentNode의 값을 반환합니다. Attribute, Document, DocumentFragment, Entity, Notation null을 반환합니다. 이 노드에는 부모가 없습니다. CDATA CDATA 섹션이 포함된 요소나 엔터티 참조를 반환합니다. 주석 주석이 포함된 요소, 엔터티 참조, 문서 형식 또는 문서를 반환합니다. DocumentType Document 노드를 반환합니다. 요소 요소의 부모 노드를 반환합니다.요소가 트리의 루트 노드일 경우 부모는 문서 노드입니다.EntityReference 엔터티 참조가 포함된 요소, 특성 또는 엔터티 참조를 반환합니다. ProcessingInstruction 처리 명령이 포함된 문서, 요소, 문서 형식 또는 엔터티 참조를 반환합니다. Text Text 노드가 포함된 부모 요소, 특성 또는 엔터티 참조를 반환합니다. </returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Prefix">
+      <summary>이 노드의 네임스페이스 접두사를 가져오거나 설정합니다.</summary>
+      <returns>이 노드의 네임스페이스 접두사입니다.예를 들어,  &lt;bk:book&gt; 요소에서 Prefix는 bk입니다.접두사가 없으면, 이 속성은 String.Empty를 반환합니다.</returns>
+      <exception cref="T:System.ArgumentException">이 노드가 읽기 전용인 경우 </exception>
+      <exception cref="T:System.Xml.XmlException">지정된 접두사에 잘못된 문자가 있는 경우지정된 접두사가 잘못된 경우지정된 접두사는 "xml"이고, 이 노드의 namespaceURI가 "http://www.w3.org/XML/1998/namespace"와 다른 경우이 노드가 특성이고, 지정된 접두사가 "xmlns"이며, 이 노드의 namespaceURI가 "http://www.w3.org/2000/xmlns/ "와다른 경우이 노드가 특성이고 이 노드의 qualifiedName이 "xmlns"인 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.PrependChild(System.Xml.XmlNode)">
+      <summary>지정된 노드를 이 노드의 자식 노드 목록 앞에 추가합니다.</summary>
+      <returns>추가한 노드입니다.</returns>
+      <param name="newChild">추가할 노드입니다.지정된 위치로 이동하는, 추가할 노드의 모든 콘텐츠입니다.</param>
+      <exception cref="T:System.InvalidOperationException">이 노드가 <paramref name="newChild" /> 노드 형식의 자식 노드를 허용하지 않는 형식을 가지는 경우<paramref name="newChild" />가 이 노드의 상위 노드일 경우 </exception>
+      <exception cref="T:System.ArgumentException">이 노드를 만든 문서가 아닌 다른 문서에서 <paramref name="newChild" />를 만든 경우이 노드가 읽기 전용인 경우 </exception>
+    </member>
+    <member name="P:System.Xml.XmlNode.PreviousSibling">
+      <summary>이 노드 바로 앞에 있는 노드를 가져옵니다.</summary>
+      <returns>앞에 있는 XmlNode입니다.앞에 노드가 없으면 null이 반환됩니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.PreviousText">
+      <summary>이 노드 바로 앞에 있는 텍스트 노드를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" />를 반환합니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNode.RemoveAll">
+      <summary>현재 노드의 모든 자식 노드 및/또는 특성을 제거합니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNode.RemoveChild(System.Xml.XmlNode)">
+      <summary>지정된 자식 노드를 제거합니다.</summary>
+      <returns>제거한 노드입니다.</returns>
+      <param name="oldChild">제거할 노드입니다. </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="oldChild" />가 이 노드의 자식이 아닌 경우이 노드가 읽기 전용인 경우</exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.ReplaceChild(System.Xml.XmlNode,System.Xml.XmlNode)">
+      <summary>
+        <paramref name="oldChild" /> 자식 노드를 <paramref name="newChild" /> 노드로 대체합니다.</summary>
+      <returns>대체한 노드입니다.</returns>
+      <param name="newChild">자식 목록에 삽입할 새 노드입니다. </param>
+      <param name="oldChild">목록에서 대체할 노드입니다. </param>
+      <exception cref="T:System.InvalidOperationException">이 노드가 <paramref name="newChild" /> 노드 형식의 자식 노드를 허용하지 않는 형식을 가지는 경우<paramref name="newChild" />가 이 노드의 상위 노드일 경우 </exception>
+      <exception cref="T:System.ArgumentException">이 노드를 만든 문서가 아닌 다른 문서에서 <paramref name="newChild" />를 만든 경우이 노드가 읽기 전용인 경우<paramref name="oldChild" />가 이 노드의 자식이 아닌 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.Supports(System.String,System.String)">
+      <summary>DOM 구현에서 특정 기능을 구현하는지 테스트합니다.</summary>
+      <returns>지정된 버전에 기능이 구현되면 true이고, 그렇지 않으면 false입니다.다음 표에서는 true를 반환하는 조합을 설명합니다.기능 버전 XML 1.0 XML 2.0 </returns>
+      <param name="feature">테스트할 기능의 패키지 이름입니다.대/소문자를 구분하지 않습니다.</param>
+      <param name="version">테스트할 패키지 이름의 버전 번호입니다.버전을 지정하지 않을 경우(null), 모든 버전의 기능을 지원하면 메서드에서 true를 반환합니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlNode.System#Collections#IEnumerable#GetEnumerator">
+      <summary>이 멤버에 대한 설명은 <see cref="M:System.Xml.XmlNode.GetEnumerator" />를 참조하십시오.</summary>
+      <returns>컬렉션에 대한 열거자를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNode.Value">
+      <summary>노드의 값을 가져오거나 설정합니다.</summary>
+      <returns>노드의 <see cref="P:System.Xml.XmlNode.NodeType" />에 따라 반환되는 값이 달라집니다. 형식 값 특성 특성 값입니다. CDATASection CDATA 섹션의 콘텐츠입니다. 주석 주석의 콘텐츠입니다. 문서 null. DocumentFragment null. DocumentType null. 요소 null.<see cref="P:System.Xml.XmlElement.InnerText" /> 또는 <see cref="P:System.Xml.XmlElement.InnerXml" /> 속성을 사용하여 Element 노드의 값에 액세스할 수 있습니다.엔터티 null. EntityReference null. Notation null. ProcessingInstruction 대상을 제외한 전체 콘텐츠입니다. Text 텍스트 노드의 내용입니다. SignificantWhitespace 공백 문자입니다.공백은 하나 이상의 스페이스 문자, 캐리지 리턴, 줄 바꿈 또는 탭 등으로 구성될 수 있습니다.Whitespace 공백 문자입니다.공백은 하나 이상의 스페이스 문자, 캐리지 리턴, 줄 바꿈 또는 탭 등으로 구성될 수 있습니다.XmlDeclaration 선언(즉, &lt;?xml과 ?&gt; 사이의 모든 것)의 콘텐츠입니다. </returns>
+      <exception cref="T:System.ArgumentException">읽기 전용인 노드의 값을 설정하는 경우 </exception>
+      <exception cref="T:System.InvalidOperationException">값이 없어야 하는 노드의 값을 설정하는 경우(예: Element 노드) </exception>
+    </member>
+    <member name="M:System.Xml.XmlNode.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>파생 클래스에서 재정의된 경우 노드의 모든 자식 노드를 지정된 <see cref="T:System.Xml.XmlWriter" />에 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlNode.WriteTo(System.Xml.XmlWriter)">
+      <summary>파생 클래스에서 재정의된 경우 현재 노드를 지정된 <see cref="T:System.Xml.XmlWriter" />에 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedAction">
+      <summary>노드 변경 형식을 지정합니다.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Change">
+      <summary>노드 값이 변경됩니다.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Insert">
+      <summary>노드가 트리에 삽입됩니다.</summary>
+    </member>
+    <member name="F:System.Xml.XmlNodeChangedAction.Remove">
+      <summary>노드가 트리에서 제거됩니다.</summary>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedEventArgs">
+      <summary>
+        <see cref="E:System.Xml.XmlDocument.NodeChanged" /> , <see cref="E:System.Xml.XmlDocument.NodeChanging" /> , <see cref="E:System.Xml.XmlDocument.NodeInserted" /> , <see cref="E:System.Xml.XmlDocument.NodeInserting" /> , <see cref="E:System.Xml.XmlDocument.NodeRemoved" /> 및 <see cref="E:System.Xml.XmlDocument.NodeRemoving" /> 이벤트에 대한 데이터를 제공합니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeChangedEventArgs.#ctor(System.Xml.XmlNode,System.Xml.XmlNode,System.Xml.XmlNode,System.String,System.String,System.Xml.XmlNodeChangedAction)">
+      <summary>
+        <see cref="T:System.Xml.XmlNodeChangedEventArgs" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="node">이벤트를 생성한 <see cref="T:System.Xml.XmlNode" />입니다.</param>
+      <param name="oldParent">이벤트를 생성한 <see cref="T:System.Xml.XmlNode" />의 이전 부모 <see cref="T:System.Xml.XmlNode" />입니다.</param>
+      <param name="newParent">이벤트를 생성한 <see cref="T:System.Xml.XmlNode" />의 새 부모 <see cref="T:System.Xml.XmlNode" />입니다.</param>
+      <param name="oldValue">이벤트를 생성한 <see cref="T:System.Xml.XmlNode" />의 이전 값입니다.</param>
+      <param name="newValue">이벤트를 생성한 <see cref="T:System.Xml.XmlNode" />의 새 값입니다.</param>
+      <param name="action">
+        <see cref="T:System.Xml.XmlNodeChangedAction" />
+      </param>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.Action">
+      <summary>발생할 노드 변경 이벤트 형식을 나타내는 값을 가져옵니다.</summary>
+      <returns>노드 변경 이벤트를 설명하는 XmlNodeChangedAction 값입니다.XmlNodeChangedAction 값 설명 Insert 노드를 삽입했거나 삽입합니다. 제거 노드를 제거했거나 제거합니다. 변경 노드를 변경했거나 변경합니다. 참고이벤트가 발생한 시점(전후) 사이에 Action 값이 달라지지 않습니다.별도의 이벤트 처리기를 만들어 두 인스턴스를 모두 처리할 수 있습니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.NewParent">
+      <summary>작업을 완료한 후 <see cref="P:System.Xml.XmlNode.ParentNode" />의 값을 가져옵니다.</summary>
+      <returns>작업을 완료한 후 ParentNode의 값입니다.노드를 제거할 경우 이 속성에서 null을 반환합니다.참고Attribute 노드의 경우, 이 속성은 <see cref="P:System.Xml.XmlAttribute.OwnerElement" />를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.NewValue">
+      <summary>노드의 새 값을 가져옵니다.</summary>
+      <returns>노드의 새 값입니다.노드가 특성이나 텍스트 노드가 아니거나, 노드가 제거되고 있는 경우에 이 속성은 null을 반환합니다.<see cref="E:System.Xml.XmlDocument.NodeChanging" /> 이벤트에서 호출되었을 경우, 변경이 성공적이면 NewValue가 노드 값을 반환합니다.<see cref="E:System.Xml.XmlDocument.NodeChanged" /> 이벤트에서 호출되었을 경우에는 NewValue가 노드의 현재 값을 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.Node">
+      <summary>추가, 제거 또는 변경할 <see cref="T:System.Xml.XmlNode" />를 가져옵니다.</summary>
+      <returns>추가, 제거 또는 변경할 XmlNode입니다. 이 속성에서는 null을 반환하지 않습니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.OldParent">
+      <summary>작업을 시작하기 전에 <see cref="P:System.Xml.XmlNode.ParentNode" />의 값을 가져옵니다.</summary>
+      <returns>작업을 시작하기 전 ParentNode의 값입니다.노드에 부모가 없으면 이 속성은 null을 반환합니다.참고Attribute 노드의 경우, 이 속성은 <see cref="P:System.Xml.XmlAttribute.OwnerElement" />를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlNodeChangedEventArgs.OldValue">
+      <summary>노드의 원래 값을 가져옵니다.</summary>
+      <returns>노드의 원래 값입니다.노드가 특성이나 텍스트 노드가 아니거나, 노드가 삽입되고 있는 경우에 이 속성은 null을 반환합니다.<see cref="E:System.Xml.XmlDocument.NodeChanging" /> 이벤트에서 호출되었을 경우, 변경이 성공적이면 OldValue가 교체될 노드의 현재 값을 반환합니다.<see cref="E:System.Xml.XmlDocument.NodeChanged" /> 이벤트에서 호출되었을 경우에는 OldValue가 변경 전 노드 값을 반환합니다.</returns>
+    </member>
+    <member name="T:System.Xml.XmlNodeChangedEventHandler">
+      <summary>
+        <see cref="E:System.Xml.XmlDocument.NodeChanged" />, <see cref="E:System.Xml.XmlDocument.NodeChanging" />, <see cref="E:System.Xml.XmlDocument.NodeInserted" />, <see cref="E:System.Xml.XmlDocument.NodeInserting" />, <see cref="E:System.Xml.XmlDocument.NodeRemoved" /> 및 <see cref="E:System.Xml.XmlDocument.NodeRemoving" /> 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+      <param name="sender">이벤트 소스입니다. </param>
+      <param name="e">이벤트 데이터가 포함된 <see cref="T:System.Xml.XmlNodeChangedEventArgs" />입니다. </param>
+    </member>
+    <member name="T:System.Xml.XmlNodeList">
+      <summary>노드의 정렬된 컬렉션을 나타냅니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.#ctor">
+      <summary>
+        <see cref="T:System.Xml.XmlNodeList" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:System.Xml.XmlNodeList.Count">
+      <summary>XmlNodeList에서 노드의 수를 가져옵니다.</summary>
+      <returns>XmlNodeList의 노드 수입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.GetEnumerator">
+      <summary>노드의 컬렉션을 반복하는 열거자를 가져옵니다.</summary>
+      <returns>노드의 컬렉션 전체에서 반복하는 데 사용되는 열거자입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.Item(System.Int32)">
+      <summary>특정 인덱스에서 노드를 검색합니다.</summary>
+      <returns>컬렉션에서 지정된 인덱스의 <see cref="T:System.Xml.XmlNode" />입니다.<paramref name="index" />가 목록의 노드 수보다 크거나 같은 경우 null을 반환합니다.</returns>
+      <param name="index">노드 목록에 대한 0부터 시작하는 인덱스입니다.</param>
+    </member>
+    <member name="P:System.Xml.XmlNodeList.ItemOf(System.Int32)">
+      <summary>특정 인덱스에서 노드를 가져옵니다.</summary>
+      <returns>컬렉션에서 지정된 인덱스의 <see cref="T:System.Xml.XmlNode" />입니다.인덱스가 목록의 노드 수보다 크거나 같은 경우 null을 반환합니다.</returns>
+      <param name="i">노드 목록에 대한 0부터 시작하는 인덱스입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.PrivateDisposeNodeList">
+      <summary>노드 목록에서 개인적으로 리소스를 삭제합니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlNodeList.System#IDisposable#Dispose">
+      <summary>
+        <see cref="T:System.Xml.XmlNodeList" /> 클래스에서 사용하는 모든 리소스를 해제합니다.</summary>
+    </member>
+    <member name="T:System.Xml.XmlProcessingInstruction">
+      <summary>문서의 텍스트에 있는 프로세스 관련 정보를 유지하기 위해 정의된 XML 처리 명령을 나타냅니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.#ctor(System.String,System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlProcessingInstruction" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="target">처리 명령의 대상입니다. <see cref="P:System.Xml.XmlProcessingInstruction.Target" /> 속성을 참조하세요.</param>
+      <param name="data">처리 명령의 콘텐츠입니다. <see cref="P:System.Xml.XmlProcessingInstruction.Data" /> 속성을 참조하세요.</param>
+      <param name="doc">부모 XML 문서입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.CloneNode(System.Boolean)">
+      <summary>이 노드의 복제본을 만듭니다.</summary>
+      <returns>복제 노드입니다.</returns>
+      <param name="deep">
+              지정된 노드 아래의 하위 트리를 재귀적으로 복제하려면 true이고, 노드 자체만 복제하려면 false입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Data">
+      <summary>처리 명령의 콘텐츠를 가져오거나 설정합니다. 처리 명령의 대상은 제외됩니다.</summary>
+      <returns>처리 명령의 대상을 제외한 처리 명령의 콘텐츠입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.InnerText">
+      <summary>노드와 모든 자식의 연결된 값을 가져오거나 설정합니다.</summary>
+      <returns>노드와 모든 자식의 연결된 값입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.LocalName">
+      <summary>노드의 로컬 이름을 가져옵니다.</summary>
+      <returns>processinginstruction 노드의 경우, 이 속성은 처리 명령의 대상을 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Name">
+      <summary>노드의 정규화된 이름을 가져옵니다.</summary>
+      <returns>processinginstruction 노드의 경우, 이 속성은 처리 명령의 대상을 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.NodeType">
+      <summary>현재 노드의 형식을 가져옵니다.</summary>
+      <returns>XmlProcessingInstruction 노드인 경우 이 값은 XmlNodeType.ProcessingInstruction입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Target">
+      <summary>처리 명령의 대상을 가져옵니다.</summary>
+      <returns>처리 명령의 대상입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlProcessingInstruction.Value">
+      <summary>노드의 값을 가져오거나 설정합니다.</summary>
+      <returns>처리 명령의 대상을 제외한 처리 명령의 전체 콘텐츠입니다.</returns>
+      <exception cref="T:System.ArgumentException">Node is read-only. </exception>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드의 모든 자식을 저장합니다.ProcessingInstruction 노드는 자식을 가지지 않습니다. 따라서 이 메서드에서는 아무 작업도 수행되지 않습니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlProcessingInstruction.WriteTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드를 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="T:System.Xml.XmlSignificantWhitespace">
+      <summary>혼합된 내용 노드의 태그 사이에 있는 공백이나 xml:space= 'preserve' 범위 내에 있는 공백을 나타냅니다.이러한 공백을 유효 공백이라고도 합니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlSignificantWhitespace" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="strData">노드의 공백 문자입니다.</param>
+      <param name="doc">
+        <see cref="T:System.Xml.XmlDocument" /> 개체</param>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.CloneNode(System.Boolean)">
+      <summary>이 노드의 복제본을 만듭니다.</summary>
+      <returns>복제된 노드입니다.</returns>
+      <param name="deep">지정된 노드 아래의 하위 트리를 재귀적으로 복제하려면 true이고, 노드 자체만 복제하려면 false입니다.유효 공백 노드의 경우 복제된 노드에는 항상 매개 변수 설정과 상관 없이 데이터 값이 포함됩니다.</param>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.LocalName">
+      <summary>노드의 로컬 이름을 가져옵니다.</summary>
+      <returns>XmlSignificantWhitespace 노드의 경우 이 속성은 #significant-whitespace를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.Name">
+      <summary>노드의 정규화된 이름을 가져옵니다.</summary>
+      <returns>XmlSignificantWhitespace 노드의 경우 이 속성은 #significant-whitespace를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.NodeType">
+      <summary>현재 노드의 형식을 가져옵니다.</summary>
+      <returns>XmlSignificantWhitespace 노드의 경우 이 값은 XmlNodeType.SignificantWhitespace입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.ParentNode">
+      <summary>현재 노드의 부모를 가져옵니다.</summary>
+      <returns>현재 노드의 <see cref="T:System.Xml.XmlNode" /> 부모 노드입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.PreviousText">
+      <summary>이 노드 바로 앞에 있는 텍스트 노드를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" />를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlSignificantWhitespace.Value">
+      <summary>노드의 값을 가져오거나 설정합니다.</summary>
+      <returns>노드에 있는 공백 문자입니다.</returns>
+      <exception cref="T:System.ArgumentException">Value를 잘못된 공백 문자로 설정하는 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드의 모든 자식을 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlSignificantWhitespace.WriteTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드를 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="T:System.Xml.XmlText">
+      <summary>요소나 특성의 텍스트 콘텐츠를 나타냅니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlText.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlText" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="strData">노드의 내용입니다. <see cref="P:System.Xml.XmlText.Value" /> 속성을 참조하십시오.</param>
+      <param name="doc">부모 XML 문서입니다.</param>
+    </member>
+    <member name="M:System.Xml.XmlText.CloneNode(System.Boolean)">
+      <summary>이 노드의 복제본을 만듭니다.</summary>
+      <returns>복제된 노드입니다.</returns>
+      <param name="deep">지정된 노드 아래의 하위 트리를 재귀적으로 복제하려면 true이고, 노드 자체만 복제하려면 false입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlText.LocalName">
+      <summary>노드의 로컬 이름을 가져옵니다.</summary>
+      <returns>text 노드의 경우 이 속성은 #text를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.Name">
+      <summary>노드의 정규화된 이름을 가져옵니다.</summary>
+      <returns>text 노드의 경우 이 속성은 #text를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.NodeType">
+      <summary>현재 노드의 형식을 가져옵니다.</summary>
+      <returns>텍스트 노드의 경우 이 값은 XmlNodeType.Text입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlText.ParentNode"></member>
+    <member name="P:System.Xml.XmlText.PreviousText">
+      <summary>이 노드 바로 앞에 있는 텍스트 노드를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" />를 반환합니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlText.SplitText(System.Int32)">
+      <summary>지정된 오프셋으로 노드 하나를 두 개로 분할합니다. 트리에 있는 이 두 노드는 형제 노드로 유지됩니다.</summary>
+      <returns>새 노드입니다.</returns>
+      <param name="offset">노드를 분할하는 오프셋입니다. </param>
+    </member>
+    <member name="P:System.Xml.XmlText.Value">
+      <summary>노드의 값을 가져오거나 설정합니다.</summary>
+      <returns>텍스트 노드의 내용입니다.</returns>
+    </member>
+    <member name="M:System.Xml.XmlText.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드의 모든 자식을 저장합니다.XmlText 노드는 자식이 없으므로 이 메서드는 어떠한 영향도 끼치지 않습니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlText.WriteTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드를 저장합니다.</summary>
+      <param name="w">저장할 대상 XmlWriter입니다. </param>
+    </member>
+    <member name="T:System.Xml.XmlWhitespace">
+      <summary>요소 내용에 있는 공백을 나타냅니다.</summary>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.#ctor(System.String,System.Xml.XmlDocument)">
+      <summary>
+        <see cref="T:System.Xml.XmlWhitespace" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="strData">노드의 공백 문자입니다.</param>
+      <param name="doc">
+        <see cref="T:System.Xml.XmlDocument" /> 개체</param>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.CloneNode(System.Boolean)">
+      <summary>이 노드의 복제본을 만듭니다.</summary>
+      <returns>복제된 노드입니다.</returns>
+      <param name="deep">지정된 노드 아래의 하위 트리를 재귀적으로 복제하려면 true이고, 노드 자체만 복제하려면 false입니다.문서 형식 노드의 경우 복제된 노드에는 항상 매개 변수 설정과 상관없이 하위 트리가 포함됩니다.</param>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.LocalName">
+      <summary>노드의 로컬 이름을 가져옵니다.</summary>
+      <returns>XmlWhitespace 노드의 경우 이 속성은 #whitespace를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.Name">
+      <summary>노드의 정규화된 이름을 가져옵니다.</summary>
+      <returns>XmlWhitespace 노드의 경우 이 속성은 #whitespace를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.NodeType">
+      <summary>노드의 형식을 가져옵니다.</summary>
+      <returns>XmlWhitespace 노드의 경우 이 값은 <see cref="F:System.Xml.XmlNodeType.Whitespace" />입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.ParentNode">
+      <summary>현재 노드의 부모를 가져옵니다.</summary>
+      <returns>현재 노드의 <see cref="T:System.Xml.XmlNode" /> 부모 노드입니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.PreviousText">
+      <summary>이 노드 바로 앞에 있는 텍스트 노드를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:System.Xml.XmlNode" />를 반환합니다.</returns>
+    </member>
+    <member name="P:System.Xml.XmlWhitespace.Value">
+      <summary>노드의 값을 가져오거나 설정합니다.</summary>
+      <returns>노드에 있는 공백 문자입니다.</returns>
+      <exception cref="T:System.ArgumentException">
+        <see cref="P:System.Xml.XmlWhitespace.Value" />를 잘못된 공백 문자로 설정하는 경우 </exception>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.WriteContentTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드의 모든 자식을 저장합니다.</summary>
+      <param name="w">저장할 대상 <see cref="T:System.Xml.XmlWriter" />입니다. </param>
+    </member>
+    <member name="M:System.Xml.XmlWhitespace.WriteTo(System.Xml.XmlWriter)">
+      <summary>지정된 <see cref="T:System.Xml.XmlWriter" />에 노드를 저장합니다.</summary>
+      <param name="w">저장할 대상 <see cref="T:System.Xml.XmlWriter" />입니다.</param>
+    </member>
+  </members>
+</doc>
