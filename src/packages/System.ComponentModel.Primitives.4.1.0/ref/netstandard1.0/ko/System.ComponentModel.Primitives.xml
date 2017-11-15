@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ComponentModel.Primitives</name>
+  </assembly>
+  <members>
+    <member name="T:System.ComponentModel.ComponentCollection">
+      <summary>
+        <see cref="T:System.ComponentModel.IComponent" /> 개체의 컬렉션에 대한 읽기 전용 컨테이너를 제공합니다.</summary>
+    </member>
+    <member name="T:System.ComponentModel.IComponent">
+      <summary>모든 구성 요소에 필요한 기능을 제공합니다. </summary>
+    </member>
+    <member name="E:System.ComponentModel.IComponent.Disposed">
+      <summary>구성 요소의 <see cref="E:System.ComponentModel.IComponent.Disposed" /> 이벤트를 처리하는 메서드를 나타냅니다.</summary>
+    </member>
+    <member name="P:System.ComponentModel.IComponent.Site">
+      <summary>
+        <see cref="T:System.ComponentModel.IComponent" />와 관련된 <see cref="T:System.ComponentModel.ISite" />를 가져오거나 설정합니다.</summary>
+      <returns>구성 요소와 관련된 <see cref="T:System.ComponentModel.ISite" /> 개체이거나, 구성 요소에 사이트가 없으면 null입니다.</returns>
+    </member>
+    <member name="T:System.ComponentModel.IContainer">
+      <summary>컨테이너의 기능을 제공합니다.컨테이너는 논리적으로 0개 이상의 구성 요소를 포함하는 개체입니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent)">
+      <summary>지정된 <see cref="T:System.ComponentModel.IComponent" />를 목록 끝에 있는 <see cref="T:System.ComponentModel.IContainer" />에 추가합니다.</summary>
+      <param name="component">추가할 <see cref="T:System.ComponentModel.IComponent" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent,System.String)">
+      <summary>지정된 <see cref="T:System.ComponentModel.IComponent" />를 목록 끝에 있는 <see cref="T:System.ComponentModel.IContainer" />에 추가하고 구성 요소의 이름을 지정합니다.</summary>
+      <param name="component">추가할 <see cref="T:System.ComponentModel.IComponent" />입니다. </param>
+      <param name="name">구성 요소에 할당할 대/소문자를 구분하지 않는 고유한 이름또는 구성 요소의 이름을 지정하지 않는 null입니다. </param>
+    </member>
+    <member name="P:System.ComponentModel.IContainer.Components">
+      <summary>
+        <see cref="T:System.ComponentModel.IContainer" />의 모든 구성 요소를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.IContainer" />에서 모든 구성 요소를 나타내는 <see cref="T:System.ComponentModel.IComponent" /> 개체의 컬렉션입니다.</returns>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Remove(System.ComponentModel.IComponent)">
+      <summary>
+        <see cref="T:System.ComponentModel.IContainer" />에서 구성 요소를 제거합니다.</summary>
+      <param name="component">제거할 <see cref="T:System.ComponentModel.IComponent" />입니다. </param>
+    </member>
+    <member name="T:System.ComponentModel.ISite">
+      <summary>사이트에 필요한 기능을 제공합니다.</summary>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Component">
+      <summary>클래스에서 구현될 때 <see cref="T:System.ComponentModel.ISite" />와 관련된 구성 요소를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.ISite" />와 관련된 <see cref="T:System.ComponentModel.IComponent" /> 인스턴스입니다.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Container">
+      <summary>클래스에서 구현될 때 <see cref="T:System.ComponentModel.ISite" />와 관련된 <see cref="T:System.ComponentModel.IContainer" />를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.ISite" />와 관련된 <see cref="T:System.ComponentModel.IContainer" /> 인스턴스입니다.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.DesignMode">
+      <summary>클래스에서 구현될 때 구성 요소가 디자인 타임인지 여부를 확인합니다.</summary>
+      <returns>구성 요소가 디자인 모드에 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Name">
+      <summary>클래스에서 구현될 때 <see cref="T:System.ComponentModel.ISite" />와 관련된 구성 요소의 이름을 가져오거나 설정합니다.</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.ISite" />와 관련된 구성 요소의 이름이거나, 구성 요소에 이름이 지정되지 않으면 null입니다.</returns>
+    </member>
+  </members>
+</doc>

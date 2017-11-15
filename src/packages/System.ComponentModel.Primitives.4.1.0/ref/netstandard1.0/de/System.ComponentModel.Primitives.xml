@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ComponentModel.Primitives</name>
+  </assembly>
+  <members>
+    <member name="T:System.ComponentModel.ComponentCollection">
+      <summary>Stellt einen schreibgeschützten Container für eine Auflistung von <see cref="T:System.ComponentModel.IComponent" />-Objekten bereit.</summary>
+    </member>
+    <member name="T:System.ComponentModel.IComponent">
+      <summary>Stellt Funktionen bereit, die von allen Komponenten benötigt werden. </summary>
+    </member>
+    <member name="E:System.ComponentModel.IComponent.Disposed">
+      <summary>Stellt die Methode dar, die das <see cref="E:System.ComponentModel.IComponent.Disposed" />-Ereignis einer Komponente behandelt.</summary>
+    </member>
+    <member name="P:System.ComponentModel.IComponent.Site">
+      <summary>Ruft den dem <see cref="T:System.ComponentModel.IComponent" /> zugeordneten <see cref="T:System.ComponentModel.ISite" /> ab oder legt diesen fest.</summary>
+      <returns>Das der Komponente zugeordnete <see cref="T:System.ComponentModel.ISite" />-Objekt oder null, wenn die Komponente über keine Site verfügt.</returns>
+    </member>
+    <member name="T:System.ComponentModel.IContainer">
+      <summary>Stellt Funktionen für Container bereit.Container sind Objekte, die logisch 0 oder mehr Komponenten enthalten.</summary>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent)">
+      <summary>Fügt dem <see cref="T:System.ComponentModel.IContainer" /> am Ende der Liste die angegebene <see cref="T:System.ComponentModel.IComponent" /> hinzu.</summary>
+      <param name="component">Die zu addierende <see cref="T:System.ComponentModel.IComponent" />. </param>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent,System.String)">
+      <summary>Fügt dem <see cref="T:System.ComponentModel.IContainer" /> am Ende der Liste die angegebene <see cref="T:System.ComponentModel.IComponent" /> hinzu und weist der Komponente einen Namen zu.</summary>
+      <param name="component">Die zu addierende <see cref="T:System.ComponentModel.IComponent" />. </param>
+      <param name="name">Der eindeutige Name für die Komponente, bei dem die Groß- und Kleinschreibung nicht berücksichtigt wird.- oder - null, wenn der Komponente kein Name zugewiesen wird. </param>
+    </member>
+    <member name="P:System.ComponentModel.IContainer.Components">
+      <summary>Ruft alle Komponenten im <see cref="T:System.ComponentModel.IContainer" /> ab.</summary>
+      <returns>Eine Auflistung von <see cref="T:System.ComponentModel.IComponent" />-Objekten, die alle Komponenten in <see cref="T:System.ComponentModel.IContainer" /> darstellt.</returns>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Remove(System.ComponentModel.IComponent)">
+      <summary>Entfernt eine Komponente aus <see cref="T:System.ComponentModel.IContainer" />.</summary>
+      <param name="component">Die zu entfernende <see cref="T:System.ComponentModel.IComponent" />. </param>
+    </member>
+    <member name="T:System.ComponentModel.ISite">
+      <summary>Stellt von Sites benötigte Funktionen bereit.</summary>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Component">
+      <summary>Ruft bei der Implementierung durch eine Klasse die der <see cref="T:System.ComponentModel.ISite" /> zugeordnete Komponente ab.</summary>
+      <returns>Die der <see cref="T:System.ComponentModel.ISite" /> zugeordnete <see cref="T:System.ComponentModel.IComponent" />-Instanz.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Container">
+      <summary>Ruft bei der Implementierung durch eine Klasse den der <see cref="T:System.ComponentModel.ISite" /> zugeordneten <see cref="T:System.ComponentModel.IContainer" /> ab.</summary>
+      <returns>Die der <see cref="T:System.ComponentModel.ISite" /> zugeordnete <see cref="T:System.ComponentModel.IContainer" />-Instanz.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.DesignMode">
+      <summary>Bestimmt, ob sich die Komponente beim Implementieren durch eine Klasse im Entwurfsmodus befindet.</summary>
+      <returns>true, wenn sich die Komponente im Entwurfsmodus befindet, andernfalls false.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Name">
+      <summary>Ruft bei der Implementierung durch eine Klasse den Namen der Komponente ab, die <see cref="T:System.ComponentModel.ISite" /> zugeordnet ist, oder legt diesen fest.</summary>
+      <returns>Der Name der Komponente, die <see cref="T:System.ComponentModel.ISite" /> zugeordnet ist, oder null, wenn der Komponente kein Name zugewiesen ist.</returns>
+    </member>
+  </members>
+</doc>

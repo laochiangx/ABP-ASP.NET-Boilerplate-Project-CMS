@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ComponentModel.Primitives</name>
+  </assembly>
+  <members>
+    <member name="T:System.ComponentModel.ComponentCollection">
+      <summary>Proporciona un contenedor de sólo lectura para una colección de objetos <see cref="T:System.ComponentModel.IComponent" />.</summary>
+    </member>
+    <member name="T:System.ComponentModel.IComponent">
+      <summary>Proporciona la funcionalidad requerida por todos los componentes. </summary>
+    </member>
+    <member name="E:System.ComponentModel.IComponent.Disposed">
+      <summary>Representa el método que controla el evento <see cref="E:System.ComponentModel.IComponent.Disposed" /> de un componente.</summary>
+    </member>
+    <member name="P:System.ComponentModel.IComponent.Site">
+      <summary>Obtiene o establece el <see cref="T:System.ComponentModel.ISite" /> asociado a <see cref="T:System.ComponentModel.IComponent" />.</summary>
+      <returns>Objeto <see cref="T:System.ComponentModel.ISite" /> asociado al componente; o null, si el componente no tiene un sitio asociado.</returns>
+    </member>
+    <member name="T:System.ComponentModel.IContainer">
+      <summary>Proporciona funcionalidad para contenedores.Los contenedores son objetos que contienen cero o más componentes de forma lógica.</summary>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent)">
+      <summary>Agrega la <see cref="T:System.ComponentModel.IComponent" /> especificada a <see cref="T:System.ComponentModel.IContainer" /> al final de la lista.</summary>
+      <param name="component">
+        <see cref="T:System.ComponentModel.IComponent" /> que se va a sumar. </param>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent,System.String)">
+      <summary>Agrega la <see cref="T:System.ComponentModel.IComponent" /> especificada a <see cref="T:System.ComponentModel.IContainer" /> al final de la lista, y le asigna un nombre al componente.</summary>
+      <param name="component">
+        <see cref="T:System.ComponentModel.IComponent" /> que se va a sumar. </param>
+      <param name="name">Nombre único que se le va a asignar al componente, sin hacer distinción entre mayúsculas y minúsculas.O bien null que deja al componente sin nombre. </param>
+    </member>
+    <member name="P:System.ComponentModel.IContainer.Components">
+      <summary>Obtiene todos los componentes de <see cref="T:System.ComponentModel.IContainer" />.</summary>
+      <returns>Colección de objetos <see cref="T:System.ComponentModel.IComponent" /> que representa todos los componentes de <see cref="T:System.ComponentModel.IContainer" />.</returns>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Remove(System.ComponentModel.IComponent)">
+      <summary>Quita un componente de <see cref="T:System.ComponentModel.IContainer" />.</summary>
+      <param name="component">
+        <see cref="T:System.ComponentModel.IComponent" /> que se va a quitar. </param>
+    </member>
+    <member name="T:System.ComponentModel.ISite">
+      <summary>Proporciona la funcionalidad requerida por los sitios.</summary>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Component">
+      <summary>Cuando una clase implementa <see cref="T:System.ComponentModel.ISite" />, se obtiene el componente asociado al sitio.</summary>
+      <returns>Instancia de <see cref="T:System.ComponentModel.IComponent" /> asociada a <see cref="T:System.ComponentModel.ISite" />.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Container">
+      <summary>Obtiene la <see cref="T:System.ComponentModel.IContainer" /> asociada a <see cref="T:System.ComponentModel.ISite" /> cuando se implementa por medio de una clase.</summary>
+      <returns>Instancia de <see cref="T:System.ComponentModel.IContainer" /> asociada a <see cref="T:System.ComponentModel.ISite" />.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.DesignMode">
+      <summary>Determina si el componente se encuentra en modo de diseño cuando se implementa por medio de una clase.</summary>
+      <returns>Es true si el componente está en modo de diseño; en caso contrario, es false.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Name">
+      <summary>Obtiene o establece el nombre del componente asociado a <see cref="T:System.ComponentModel.ISite" /> cuando se implementa por medio de una clase.</summary>
+      <returns>Nombre del componente asociado a <see cref="T:System.ComponentModel.ISite" />; o null si no se ha asignado un nombre al componente.</returns>
+    </member>
+  </members>
+</doc>

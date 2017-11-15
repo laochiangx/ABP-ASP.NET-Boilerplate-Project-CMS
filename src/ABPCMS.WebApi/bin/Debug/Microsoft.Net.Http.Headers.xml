@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Net.Http.Headers</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Net.Http.Headers.ContentDispositionHeaderValue.SetHttpFileName(System.String)">
+            <summary>
+            Sets both FileName and FileNameStar using encodings appropriate for HTTP headers.
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.ContentDispositionHeaderValue.SetMimeFileName(System.String)">
+            <summary>
+            Sets the FileName parameter using encodings appropriate for MIME headers.
+            The FileNameStar paraemter is removed.
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="F:Microsoft.Net.Http.Headers.HeaderQuality.Match">
+            <summary>
+            Quality factor to indicate a perfect match.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Net.Http.Headers.HeaderQuality.NoMatch">
+            <summary>
+            Quality factor to indicate no match.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Net.Http.Headers.MediaTypeHeaderValue.MatchesAllTypes">
+            <summary>
+            MediaType = "*/*"
+            </summary>
+        </member>
+        <member name="P:Microsoft.Net.Http.Headers.MediaTypeHeaderValue.MatchesAllSubTypes">
+            <summary>
+            SubType = "*"
+            </summary>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.MediaTypeHeaderValue.IsSubsetOf(Microsoft.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Microsoft.Net.Http.Headers.MediaTypeHeaderValue"/> is a subset of
+            <paramref name="otherMediaType"/>. A "subset" is defined as the same or a more specific media type
+            according to the precedence described in https://www.ietf.org/rfc/rfc2068.txt section 14.1, Accept.
+            </summary>
+            <param name="otherMediaType">The <see cref="T:Microsoft.Net.Http.Headers.MediaTypeHeaderValue"/> to compare.</param>
+            <returns>
+            A value indicating whether this <see cref="T:Microsoft.Net.Http.Headers.MediaTypeHeaderValue"/> is a subset of
+            <paramref name="otherMediaType"/>.
+            </returns>
+            <remarks>
+            For example "multipart/mixed; boundary=1234" is a subset of "multipart/mixed; boundary=1234",
+            "multipart/mixed", "multipart/*", and "*/*" but not "multipart/mixed; boundary=2345" or
+            "multipart/message; boundary=1234".
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.MediaTypeHeaderValue.Copy">
+            <summary>
+            Performs a deep copy of this object and all of it's NameValueHeaderValue sub components,
+            while avoiding the cost of revalidating the components.
+            </summary>
+            <returns>A deep copy.</returns>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.MediaTypeHeaderValue.CopyAsReadOnly">
+            <summary>
+            Performs a deep copy of this object and all of it's NameValueHeaderValue sub components,
+            while avoiding the cost of revalidating the components. This copy is read-only.
+            </summary>
+            <returns>A deep, read-only, copy.</returns>
+        </member>
+        <member name="T:Microsoft.Net.Http.Headers.MediaTypeHeaderValueComparer">
+            <summary>
+            Implementation of <see cref="T:System.Collections.Generic.IComparer`1"/> that can compare accept media type header fields
+            based on their quality values (a.k.a q-values).
+            </summary>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.MediaTypeHeaderValueComparer.Compare(Microsoft.Net.Http.Headers.MediaTypeHeaderValue,Microsoft.Net.Http.Headers.MediaTypeHeaderValue)">
+            <inheritdoc />
+            <remarks>
+            Performs comparisons based on the arguments' quality values
+            (aka their "q-value"). Values with identical q-values are considered equal (i.e. the result is 0)
+            with the exception that subtype wildcards are considered less than specific media types and full
+            wildcards are considered less than subtype wildcards. This allows callers to sort a sequence of
+            <see cref="T:Microsoft.Net.Http.Headers.MediaTypeHeaderValue"/> following their q-values in the order of specific
+            media types, subtype wildcards, and last any full wildcards.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.NameValueHeaderValue.Copy">
+            <summary>
+            Provides a copy of this object without the cost of re-validating the values.
+            </summary>
+            <returns>A copy.</returns>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.SetCookieHeaderValue.AppendToStringBuilder(System.Text.StringBuilder)">
+            <summary>
+            Append string representation of this <see cref="T:Microsoft.Net.Http.Headers.SetCookieHeaderValue"/> to given
+            <paramref name="builder"/>.
+            </summary>
+            <param name="builder">
+            The <see cref="T:System.Text.StringBuilder"/> to receive the string representation of this
+            <see cref="T:Microsoft.Net.Http.Headers.SetCookieHeaderValue"/>.
+            </param>
+        </member>
+        <member name="T:Microsoft.Net.Http.Headers.StringWithQualityHeaderValueComparer">
+            <summary>
+            Implementation of <see cref="T:System.Collections.Generic.IComparer`1"/> that can compare content negotiation header fields
+            based on their quality values (a.k.a q-values). This applies to values used in accept-charset,
+            accept-encoding, accept-language and related header fields with similar syntax rules. See
+            <see cref="T:Microsoft.Net.Http.Headers.MediaTypeHeaderValueComparer"/> for a comparer for media type
+            q-values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.StringWithQualityHeaderValueComparer.Compare(Microsoft.Net.Http.Headers.StringWithQualityHeaderValue,Microsoft.Net.Http.Headers.StringWithQualityHeaderValue)">
+            <summary>
+            Compares two <see cref="T:Microsoft.Net.Http.Headers.StringWithQualityHeaderValue"/> based on their quality value
+            (a.k.a their "q-value").
+            Values with identical q-values are considered equal (i.e the result is 0) with the exception of wild-card
+            values (i.e. a value of "*") which are considered less than non-wild-card values. This allows to sort
+            a sequence of <see cref="T:Microsoft.Net.Http.Headers.StringWithQualityHeaderValue"/> following their q-values ending up with any
+            wild-cards at the end.
+            </summary>
+            <param name="stringWithQuality1">The first value to compare.</param>
+            <param name="stringWithQuality2">The second value to compare</param>
+            <returns>The result of the comparison.</returns>
+        </member>
+    </members>
+</doc>

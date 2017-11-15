@@ -27,7 +27,13 @@
                         <i class="fa fa-envelope-o"></i>
                         <span class="label label-success">4</span>
                     </a>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            @Html.Action("LanguageSelection", "Layout")
+                        </ul>
+                    </div>
                     <ul class="dropdown-menu">
+                     
                         <li class="header">You have 4 messages</li>
                         <li>
                             <!-- inner menu: contains the messages -->

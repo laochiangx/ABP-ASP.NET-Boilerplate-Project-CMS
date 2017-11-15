@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ComponentModel.TypeConverter</name>
+  </assembly>
+  <members>
+    <member name="T:System.ComponentModel.ArrayConverter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von <see cref="T:System.Array" />-Objekten in verschiedene andere und aus verschiedenen anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.ArrayConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.ArrayConverter" />-Klasse. </summary>
+    </member>
+    <member name="M:System.ComponentModel.ArrayConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Wertobjekt in den angegebenen Zieltyp.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Die Kultur, in die der <paramref name="value" /> konvertiert wird.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <param name="destinationType">Die <see cref="T:System.Type" />-Klasse, in die der Wert konvertiert werden soll. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> ist null. </exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="T:System.ComponentModel.BaseNumberConverter">
+      <summary>Stellt einen Basistypkonverter für numerische Festkommatypen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.BaseNumberConverter" />-Klasse.</summary>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Bestimmt, ob dieser Konverter ein Objekt des angegebenen Quelltyps in den systemeigenen Typ des Konverters konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter den Vorgang durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="sourceType">Eine <see cref="T:System.Type" />-Klasse, die den Ausgangstyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Gibt einen Wert zurück, der angibt, ob dieser Konverter ein Objekt unter Verwendung des Kontexts in den angegebenen Zieltyp konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter den Vorgang durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="t">Ein <see cref="T:System.Type" />, der den Zieltyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert das angegebene Objekt in den systemeigenen Typ des Konverters.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Eine <see cref="T:System.Globalization.CultureInfo" />-Klasse, die die Kultur angibt, in der die Zahl dargestellt werden soll. </param>
+      <param name="value">Das zu konvertierende Objekt. </param>
+      <exception cref="T:System.Exception">
+        <paramref name="value" /> ist kein gültiger Wert für den Zieltyp.</exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Objekt in einen anderen Typ.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Eine <see cref="T:System.Globalization.CultureInfo" />-Klasse, die die Kultur angibt, in der die Zahl dargestellt werden soll. </param>
+      <param name="value">Das zu konvertierende Objekt. </param>
+      <param name="destinationType">Der Typ, in den das Objekt konvertiert werden soll. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> ist null.</exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="T:System.ComponentModel.BooleanConverter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von <see cref="T:System.Boolean" />-Objekten in andere und aus anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.BooleanConverter" />-Klasse. </summary>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt vom angegebenen Quelltyp unter Verwendung des angegebenen Kontexts in ein boolesches Objekt konvertieren kann.</summary>
+      <returns>true, wenn dieses Objekt die Konvertierung ausführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="sourceType">Eine <see cref="T:System.Type" />-Klasse, die den Ausgangstyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert das angegebene Wertobjekt in ein boolesches Objekt.</summary>
+      <returns>Eine <see cref="T:System.Object" />-Klasse, die den konvertierten <paramref name="value" />-Parameter darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Eine <see cref="T:System.Globalization.CultureInfo" />-Klasse, die die Kultur angibt, in die konvertiert werden soll.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> ist kein gültiger Wert für den Zieltyp. </exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="T:System.ComponentModel.ByteConverter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von 8-Bit-Ganzzahlobjekten ohne Vorzeichen in andere und aus anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.ByteConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.ByteConverter" />-Klasse. </summary>
+    </member>
+    <member name="T:System.ComponentModel.CharConverter">
+      <summary>Stellt einen Typkonverter zum Konvertieren von Unicode-Zeichenobjekten in andere und aus anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.CharConverter" />-Klasse. </summary>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt vom angegebenen Quelltyp unter Verwendung des angegebenen Kontexts in ein Unicode-Zeichenobjekt konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="sourceType">Eine <see cref="T:System.Type" />-Klasse, die den Ausgangstyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert das angegebene Objekt in ein Unicode-Zeichenobjekt.</summary>
+      <returns>Eine <see cref="T:System.Object" />-Klasse, die den konvertierten <paramref name="value" />-Parameter darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Die Kultur, in die der <paramref name="value" /> konvertiert wird.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> ist kein gültiger Wert für den Zieltyp. </exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Wertobjekt mithilfe der Argumente in ein Unicode-Zeichenobjekt.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Die Kultur, in die der <paramref name="value" /> konvertiert wird.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <param name="destinationType">Die <see cref="T:System.Type" />-Klasse, in die der Wert konvertiert werden soll. </param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="T:System.ComponentModel.CollectionConverter">
+      <summary>Stellt einen Typkonverter zum Konvertieren von Auflistungsobjekten in andere und aus anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.CollectionConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.CollectionConverter" />-Klasse. </summary>
+    </member>
+    <member name="M:System.ComponentModel.CollectionConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Wertobjekt in den angegebenen Zieltyp.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Die Kultur, in die der <paramref name="value" /> konvertiert wird.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse.Dieser Parameter muss von der <see cref="T:System.Collections.ICollection" />-Schnittstelle erben.</param>
+      <param name="destinationType">Die <see cref="T:System.Type" />-Klasse, in die der Wert konvertiert werden soll. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> ist null. </exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="T:System.ComponentModel.DateTimeConverter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von <see cref="T:System.DateTime" />-Objekten in verschiedene andere und aus verschiedenen anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DateTimeConverter" />-Klasse.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt vom angegebenen Quelltyp unter Verwendung des angegebenen Kontexts in eine <see cref="T:System.DateTime" />-Struktur konvertieren kann.</summary>
+      <returns>true, wenn dieses Objekt die Konvertierung ausführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="sourceType">Eine <see cref="T:System.Type" />-Klasse, die den Ausgangstyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt unter Verwendung des Kontexts in den angegebenen Zieltyp konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="destinationType">Eine <see cref="T:System.Type" />-Klasse, die den Zieltyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert den angegebenen Wert in eine <see cref="T:System.DateTime" />-Struktur.</summary>
+      <returns>Eine <see cref="T:System.Object" />-Klasse, die den konvertierten <paramref name="value" />-Parameter darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Eine optionale <see cref="T:System.Globalization.CultureInfo" />-Klasse.Wenn nichts anderes angegeben ist, wird die aktuelle Kultur angenommen.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> ist kein gültiger Wert für den Zieltyp. </exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert den angegebenen Wert mithilfe der Argumente in eine <see cref="T:System.DateTime" />-Struktur.</summary>
+      <returns>Eine <see cref="T:System.Object" />-Klasse, die den konvertierten <paramref name="value" />-Parameter darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Eine optionale <see cref="T:System.Globalization.CultureInfo" />-Klasse.Wenn nichts anderes angegeben ist, wird die aktuelle Kultur angenommen.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <param name="destinationType">Die <see cref="T:System.Type" />-Klasse, in die der Wert konvertiert werden soll. </param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="T:System.ComponentModel.DateTimeOffsetConverter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von <see cref="T:System.DateTimeOffset" />-Strukturen in verschiedene andere und aus verschiedenen anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DateTimeOffsetConverter" />-Klasse. </summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Gibt einen Wert zurück, der angibt, ob ein Objekt des angegebenen Quelltyps in einen <see cref="T:System.DateTimeOffset" /> konvertiert werden kann.</summary>
+      <returns>true, wenn der angegebene Typ in einen <see cref="T:System.DateTimeOffset" /> konvertiert werden kann, andernfalls false.</returns>
+      <param name="context">Der Datenformatkontext.</param>
+      <param name="sourceType">Der zu überprüfende Quelltyp.</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Gibt einen Wert zurück, der angibt, ob ein <see cref="T:System.DateTimeOffset" /> in ein Objekt vom angegebenen Typ konvertiert werden kann.</summary>
+      <returns>true, wenn ein <see cref="T:System.DateTimeOffset" /> in den angegebenen Typ konvertiert werden kann, andernfalls false.</returns>
+      <param name="context">Der Datenformatkontext.</param>
+      <param name="destinationType">Der zu überprüfende Zieltyp.</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert das angegebene Objekt in einen <see cref="T:System.DateTimeOffset" />.</summary>
+      <returns>Ein <see cref="T:System.DateTimeOffset" />, der das angegebene Objekt darstellt.</returns>
+      <param name="context">Der Datenformatkontext.</param>
+      <param name="culture">Die Datumskultur.</param>
+      <param name="value">Das zu konvertierende Objekt.</param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden.</exception>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert einen <see cref="T:System.DateTimeOffset" /> in ein Objekt vom angegebenen Typ.</summary>
+      <returns>Ein Objekt vom angegebenen Typ, das den <see cref="T:System.DateTimeOffset" /> darstellt. </returns>
+      <param name="context">Der Datenformatkontext.</param>
+      <param name="culture">Die Datumskultur.</param>
+      <param name="value">Der zu konvertierende <see cref="T:System.DateTimeOffset" />.</param>
+      <param name="destinationType">Der Typ, in den konvertiert werden soll.</param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden.</exception>
+    </member>
+    <member name="T:System.ComponentModel.DecimalConverter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von <see cref="T:System.Decimal" />-Objekten in andere und aus anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DecimalConverter" />-Klasse. </summary>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt unter Verwendung des Kontexts in den angegebenen Zieltyp konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="destinationType">Eine <see cref="T:System.Type" />-Klasse, die den Zieltyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Wertobjekt mithilfe der Argumente in eine <see cref="T:System.Decimal" />-Struktur.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Eine optionale <see cref="T:System.Globalization.CultureInfo" />-Klasse.Wenn nichts anderes angegeben ist, wird die aktuelle Kultur angenommen.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <param name="destinationType">Die <see cref="T:System.Type" />-Klasse, in die der Wert konvertiert werden soll. </param>
+      <exception cref="T:System.ArgumentNullException">Die <paramref name="destinationType" /> ist null. </exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="T:System.ComponentModel.DoubleConverter">
+      <summary>Stellt einen Typkonverter bereit, mit dem Objekte für Gleitkommazahlen doppelter Genauigkeit in andere und aus anderen Darstellungen konvertiert werden können.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DoubleConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.DoubleConverter" />-Klasse. </summary>
+    </member>
+    <member name="T:System.ComponentModel.EnumConverter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von <see cref="T:System.Enum" />-Objekten in andere und aus anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.#ctor(System.Type)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.EnumConverter" />-Klasse für den angegebenen Typ.</summary>
+      <param name="type">Eine <see cref="T:System.Type" />-Klasse, die den Typ der Enumeration darstellt, der diesem Enumerationskonverter zugeordnet werden soll. </param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt vom angegebenen Quelltyp unter Verwendung des angegebenen Kontexts in ein Enumerationsobjekt konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="sourceType">Eine <see cref="T:System.Type" />-Klasse, die den Ausgangstyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt unter Verwendung des Kontexts in den angegebenen Zieltyp konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="destinationType">Eine <see cref="T:System.Type" />-Klasse, die den Zieltyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert das angegebene Wertobjekt in ein Enumerationsobjekt.</summary>
+      <returns>Eine <see cref="T:System.Object" />-Klasse, die den konvertierten <paramref name="value" />-Parameter darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Eine optionale <see cref="T:System.Globalization.CultureInfo" />-Klasse.Wenn nichts anderes angegeben ist, wird die aktuelle Kultur angenommen.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> ist kein gültiger Wert für den Zieltyp. </exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Wertobjekt in den angegebenen Zieltyp.</summary>
+      <returns>Eine <see cref="T:System.Object" />-Klasse, die den konvertierten <paramref name="value" />-Parameter darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Eine optionale <see cref="T:System.Globalization.CultureInfo" />-Klasse.Wenn nichts anderes angegeben ist, wird die aktuelle Kultur angenommen.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <param name="destinationType">Die <see cref="T:System.Type" />-Klasse, in die der Wert konvertiert werden soll. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> ist null. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" /> ist kein gültiger Wert für die Enumeration. </exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="P:System.ComponentModel.EnumConverter.EnumType">
+      <summary>Gibt den Typ des Enumerators an, dem dieser Konverter zugeordnet wurde.</summary>
+      <returns>Der Typ des Enumerators, dem dieser Konverter zugeordnet wurde.</returns>
+    </member>
+    <member name="T:System.ComponentModel.GuidConverter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von <see cref="T:System.Guid" />-Objekten in verschiedene andere und aus verschiedenen anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.GuidConverter" />-Klasse. </summary>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt vom angegebenen Quelltyp unter Verwendung des Kontexts in ein GUID-Objekt konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="sourceType">Eine <see cref="T:System.Type" />-Klasse, die den Ausgangstyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt unter Verwendung des Kontexts in den angegebenen Zieltyp konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="destinationType">Eine <see cref="T:System.Type" />-Klasse, die den Zieltyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert das angegebene Objekt in ein GUID-Objekt.</summary>
+      <returns>Eine <see cref="T:System.Object" />-Klasse, die den konvertierten <paramref name="value" />-Parameter darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Eine optionale <see cref="T:System.Globalization.CultureInfo" />-Klasse.Wenn nichts anderes angegeben ist, wird die aktuelle Kultur angenommen.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Objekt in einen anderen Typ.</summary>
+      <returns>Das konvertierte Objekt.</returns>
+      <param name="context">Ein Formatierungskontext. </param>
+      <param name="culture">Die Kultur, in die der <paramref name="value" /> konvertiert wird.</param>
+      <param name="value">Das zu konvertierende Objekt. </param>
+      <param name="destinationType">Der Typ, in den das Objekt konvertiert werden soll. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> ist null.</exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="T:System.ComponentModel.Int16Converter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von 16-Bit-Ganzzahlobjekten mit Vorzeichen in und von anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int16Converter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Int16Converter" />-Klasse. </summary>
+    </member>
+    <member name="T:System.ComponentModel.Int32Converter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von 32-Bit-Ganzzahlobjekten mit Vorzeichen in und von anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int32Converter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Int32Converter" />-Klasse. </summary>
+    </member>
+    <member name="T:System.ComponentModel.Int64Converter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von 64-Bit-Ganzzahlobjekten mit Vorzeichen in andere und aus anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int64Converter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.Int64Converter" />-Klasse. </summary>
+    </member>
+    <member name="T:System.ComponentModel.ITypeDescriptorContext">
+      <summary>Stellt Kontextinformationen über eine Komponente bereit, z. B. den zugehörigen Container und Eigenschaftendeskriptor.</summary>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.Container">
+      <summary>Ruft den Container ab, der diese <see cref="T:System.ComponentModel.TypeDescriptor" />-Anforderung darstellt.</summary>
+      <returns>Ein <see cref="T:System.ComponentModel.IContainer" /> mit der Gruppe von Objekten für diesen <see cref="T:System.ComponentModel.TypeDescriptor" />, andernfalls null, wenn kein Container vorhanden ist oder der <see cref="T:System.ComponentModel.TypeDescriptor" /> keine externen Objekte verwendet.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.Instance">
+      <summary>Ruft das Objekt ab, das mit dieser Typdeskriptoranforderung verbunden ist.</summary>
+      <returns>Das Objekt, das die Methode für den <see cref="T:System.ComponentModel.TypeDescriptor" /> aufruft, andernfalls null, wenn kein für den Aufruf verantwortliches Objekt vorhanden ist.</returns>
+    </member>
+    <member name="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanged">
+      <summary>Löst das <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" />-Ereignis aus.</summary>
+    </member>
+    <member name="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanging">
+      <summary>Löst das <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanging" />-Ereignis aus.</summary>
+      <returns>true, wenn dieses Objekt geändert werden kann, andernfalls false.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor">
+      <summary>Ruft den <see cref="T:System.ComponentModel.PropertyDescriptor" /> ab, der dem angegebenen Kontextelement zugeordnet ist.</summary>
+      <returns>Der <see cref="T:System.ComponentModel.PropertyDescriptor" />, der das angegebene Kontextelement beschreibt, andernfalls null, wenn kein für den Aufruf verantwortlicher <see cref="T:System.ComponentModel.PropertyDescriptor" /> vorhanden ist.</returns>
+    </member>
+    <member name="T:System.ComponentModel.MultilineStringConverter">
+      <summary>Stellt einen Typkonverter bereit, um mehrzeilige Zeichenfolgen in eine einfache Zeichenfolge zu konvertieren.</summary>
+    </member>
+    <member name="M:System.ComponentModel.MultilineStringConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.MultilineStringConverter" />-Klasse. </summary>
+    </member>
+    <member name="M:System.ComponentModel.MultilineStringConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Wertobjekt unter Verwendung des angegebenen Kontexts und der angegebenen Kulturinformationen in den angegebenen Typ.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />Wenn null übergeben wird, wird von der aktuellen Kultur ausgegangen.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse.</param>
+      <param name="destinationType">Der <see cref="T:System.Type" />, in den der Parameter für den Wert konvertiert werden soll.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> ist null.</exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="T:System.ComponentModel.NullableConverter">
+      <summary>Stellt die automatische Konvertierung zwischen einem Typ, der NULL-Werte zulässt, und seinem zugrunde liegenden primitiven Typ bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.#ctor(System.Type)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.NullableConverter" />-Klasse.</summary>
+      <param name="type">Der angegebene Typ, der NULL-Werte zulässt.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="type" /> ist kein Typ, der NULL-Werte zulässt.</exception>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Gibt zurück, ob dieser Konverter ein Objekt des angegebenen Typs mithilfe des angegebenen Kontexts in den Typ des Konverters konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Ein <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, der einen Formatierungskontext bereitstellt.</param>
+      <param name="sourceType">Eine <see cref="T:System.Type" />-Klasse, die den Ausgangstyp der Konvertierung darstellt.</param>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Gibt zurück, ob dieser Konverter das Objekt mithilfe des angegebenen Kontexts in den angegebenen Typ konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt.</param>
+      <param name="destinationType">Ein <see cref="T:System.Type" />, der den Zieltyp der Konvertierung darstellt.</param>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert das angegebene Objekt unter Verwendung des angegebenen Kontexts und der Kulturinformationen in den Typ dieses Konverters.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt.</param>
+      <param name="culture">Die als aktuelle Kultur zu verwendenden <see cref="T:System.Globalization.CultureInfo" />.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse.</param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Wertobjekt unter Verwendung des angegebenen Kontexts und der angegebenen Kulturinformationen in den angegebenen Typ.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt.</param>
+      <param name="culture">Die als aktuelle Kultur zu verwendenden <see cref="T:System.Globalization.CultureInfo" />.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse.</param>
+      <param name="destinationType">Der <see cref="T:System.Type" />, in den der Parameter für den Wert konvertiert werden soll.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> ist null.</exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.NullableType">
+      <summary>Ruft den Typ ab, der NULL-Werte zulässt.</summary>
+      <returns>Ein <see cref="T:System.Type" />, der den Typ darstellt, der NULL-Werte zulässt.</returns>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.UnderlyingType">
+      <summary>Ruft den zugrunde liegenden Typ ab.</summary>
+      <returns>Ein <see cref="T:System.Type" />, der den zugrunde liegenden Typ darstellt.</returns>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.UnderlyingTypeConverter">
+      <summary>Ruft den zugrunde liegenden Typkonverter ab.</summary>
+      <returns>Ein <see cref="T:System.ComponentModel.TypeConverter" />, der den zugrunde liegenden Typkonverter darstellt.</returns>
+    </member>
+    <member name="T:System.ComponentModel.PropertyDescriptor">
+      <summary>Stellt eine Abstraktion einer Eigenschaft für eine Klasse bereit.</summary>
+    </member>
+    <member name="T:System.ComponentModel.SByteConverter">
+      <summary>Stellt einen Typkonverter zum Konvertieren von 8-Bit-Ganzzahlobjekten ohne Vorzeichen in eine und aus einer Zeichenfolge bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.SByteConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.SByteConverter" />-Klasse. </summary>
+    </member>
+    <member name="T:System.ComponentModel.SingleConverter">
+      <summary>Stellt einen Typkonverter bereit, um Gleitkommazahlobjekte mit einfacher Genauigkeit in andere und aus anderen Darstellungen zu konvertieren.</summary>
+    </member>
+    <member name="M:System.ComponentModel.SingleConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.SingleConverter" />-Klasse. </summary>
+    </member>
+    <member name="T:System.ComponentModel.StringConverter">
+      <summary>Stellt einen Typkonverter zum Konvertieren von Zeichenfolgenobjekten in andere und aus anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.StringConverter" />-Klasse. </summary>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt vom angegebenen Quelltyp unter Verwendung des angegebenen Kontexts in eine Zeichenfolge konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="sourceType">Eine <see cref="T:System.Type" />-Klasse, die den Ausgangstyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert das angegebene Wertobjekt in ein <see cref="T:System.String" />-Objekt.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Der zu verwendende <see cref="T:System.Globalization.CultureInfo" />. </param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung konnte nicht durchgeführt werden. </exception>
+    </member>
+    <member name="T:System.ComponentModel.TimeSpanConverter">
+      <summary>Stellt einen Typkonverter zum Konvertieren von <see cref="T:System.TimeSpan" />-Objekten in andere und aus anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.TimeSpanConverter" />-Klasse. </summary>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt vom angegebenen Quelltyp unter Verwendung des angegebenen Kontexts in eine <see cref="T:System.TimeSpan" />-Struktur konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="sourceType">Eine <see cref="T:System.Type" />-Klasse, die den Ausgangstyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt unter Verwendung des Kontexts in den angegebenen Zieltyp konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="destinationType">Eine <see cref="T:System.Type" />-Klasse, die den Zieltyp der Konvertierung darstellt. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> ist null.</exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> ist kein gültiger Wert für den Zieltyp. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert das angegebene Objekt in eine <see cref="T:System.TimeSpan" />-Struktur.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Eine optionale <see cref="T:System.Globalization.CultureInfo" />-Klasse.Wenn nichts anderes angegeben ist, wird die aktuelle Kultur angenommen.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> ist kein gültiger Wert für den Zieltyp. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Objekt in einen anderen Typ. </summary>
+      <returns>Das konvertierte Objekt.</returns>
+      <param name="context">Ein Formatierungskontext. </param>
+      <param name="culture">Die Kultur, in die der <paramref name="value" /> konvertiert wird.</param>
+      <param name="value">Das zu konvertierende Objekt. </param>
+      <param name="destinationType">Der Typ, in den das Objekt konvertiert werden soll. </param>
+    </member>
+    <member name="T:System.ComponentModel.TypeConverter">
+      <summary>Stellt eine einheitliche Methode zum Konvertieren von Werttypen in andere Typen sowie zum Zugreifen auf Standardwerte und Untereigenschaften bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.TypeConverter" />-Klasse. </summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Gibt zurück, ob dieser Konverter ein Objekt des angegebenen Typs mithilfe des angegebenen Kontexts in den Typ des Konverters konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="sourceType">Eine <see cref="T:System.Type" />-Klasse, die den Ausgangstyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)">
+      <summary>Gibt zurück, ob dieser Konverter ein Objekt des angegebenen Typs in den Typ dieses Konverters konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="sourceType">Eine <see cref="T:System.Type" />-Klasse, die den Ausgangstyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Gibt zurück, ob dieser Konverter das Objekt mithilfe des angegebenen Kontexts in den angegebenen Typ konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="destinationType">Ein <see cref="T:System.Type" />, der den Zieltyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertTo(System.Type)">
+      <summary>Gibt zurück, ob dieser Konverter das Objekt in den angegebenen Typ konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="destinationType">Ein <see cref="T:System.Type" />, der den Zieltyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert das angegebene Objekt unter Verwendung des angegebenen Kontexts und der Kulturinformationen in den Typ dieses Konverters.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Die als aktuelle Kultur zu verwendenden <see cref="T:System.Globalization.CultureInfo" />. </param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFrom(System.Object)">
+      <summary>Konvertiert den angegebenen Wert in den Typ dieses Konverters.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.String)">
+      <summary>Konvertiert die angegebene Zeichenfolge unter Verwendung der invarianten Kultur in einen Typ dieses Konverters.</summary>
+      <returns>Eine <see cref="T:System.Object" />-Klasse, die den konvertierten Text darstellt.</returns>
+      <param name="text">Die zu konvertierende <see cref="T:System.String" />. </param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.String)">
+      <summary>Konvertiert den angegebenen Text unter Verwendung des angegebenen Kontexts und der angegebenen Kulturinformationen in ein Objekt.</summary>
+      <returns>Eine <see cref="T:System.Object" />-Klasse, die den konvertierten Text darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />Wenn null übergeben wird, wird von der aktuellen Kultur ausgegangen.</param>
+      <param name="text">Die zu konvertierende <see cref="T:System.String" />. </param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromString(System.String)">
+      <summary>Konvertiert den angegebenen Text in ein Objekt.</summary>
+      <returns>Eine <see cref="T:System.Object" />-Klasse, die den konvertierten Text darstellt.</returns>
+      <param name="text">Die Textdarstellung des zu konvertierenden Objekts. </param>
+      <exception cref="T:System.NotSupportedException">Die Zeichenfolge kann nicht in das entsprechende Objekt konvertiert werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Wertobjekt unter Verwendung des angegebenen Kontexts und der angegebenen Kulturinformationen in den angegebenen Typ.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />Wenn null übergeben wird, wird von der aktuellen Kultur ausgegangen.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <param name="destinationType">Der <see cref="T:System.Type" />, in den der <paramref name="value" />-Parameter konvertiert werden soll. </param>
+      <exception cref="T:System.ArgumentNullException">Der <paramref name="destinationType" />-Parameter ist null. </exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertTo(System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Wertobjekt unter Verwendung der Argumente in den angegebenen Typ.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <param name="destinationType">Der <see cref="T:System.Type" />, in den der <paramref name="value" />-Parameter konvertiert werden soll. </param>
+      <exception cref="T:System.ArgumentNullException">Der <paramref name="destinationType" />-Parameter ist null. </exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToInvariantString(System.Object)">
+      <summary>Konvertiert den angegebenen Wert in eine Zeichenfolgendarstellung mit invarianter Kultur.</summary>
+      <returns>Eine <see cref="T:System.String" />-Klasse, die den konvertierten Wert darstellt.</returns>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert den angegebenen Wert unter Verwendung des angegebenen Kontexts und der angegebenen Kulturinformationen in eine Zeichenfolgendarstellung.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />Wenn null übergeben wird, wird von der aktuellen Kultur ausgegangen.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToString(System.Object)">
+      <summary>Konvertiert den angegebenen Wert in eine Zeichenfolgendarstellung.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)">
+      <summary>Gibt eine Ausnahme zurück, die ausgelöst wird, wenn eine Konvertierung nicht durchgeführt werden kann.</summary>
+      <returns>Eine <see cref="T:System.Exception" />-Klasse, die die Ausnahme darstellt, die ausgelöst wird, wenn eine Konvertierung nicht durchgeführt werden kann.</returns>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse oder null, wenn das Objekt nicht verfügbar ist. </param>
+      <exception cref="T:System.NotSupportedException">Wird automatisch durch diese Methode ausgelöst. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)">
+      <summary>Gibt eine Ausnahme zurück, die ausgelöst wird, wenn eine Konvertierung nicht durchgeführt werden kann.</summary>
+      <returns>Eine <see cref="T:System.Exception" />-Klasse, die die Ausnahme darstellt, die ausgelöst wird, wenn eine Konvertierung nicht durchgeführt werden kann.</returns>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse oder null, wenn das Objekt nicht verfügbar ist. </param>
+      <param name="destinationType">Eine <see cref="T:System.Type" />-Klasse, die den Typ darstellt, in den konvertiert werden sollte. </param>
+      <exception cref="T:System.NotSupportedException">Wird automatisch durch diese Methode ausgelöst. </exception>
+    </member>
+    <member name="T:System.ComponentModel.TypeConverterAttribute">
+      <summary>Gibt an, welcher Typ als Konverter für das Objekt verwendet werden sollte, an das dieses Attribut gebunden ist.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.#ctor(System.String)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.TypeConverterAttribute" />-Klasse. Dabei wird der angegebene Typname als Datenkonverter für das Objekt verwendet, an das dieses Attribut gebunden ist.</summary>
+      <param name="typeName">Der voll gekennzeichnete Name der Klasse, mit der die Datenkonvertierung für das Objekt erfolgt, an die dieses Attribut gebunden ist. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.TypeConverterAttribute" />-Klasse. Dabei wird der angegebene Typ als Datenkonverter für das Objekt verwendet, an das dieses Attribut gebunden ist.</summary>
+      <param name="type">Ein <see cref="T:System.Type" />, der den Typ der Konverterklasse darstellt, der zur Datenkonvertierung für das Objekt verwendet wird, an das dieses Attribut gebunden ist. </param>
+    </member>
+    <member name="P:System.ComponentModel.TypeConverterAttribute.ConverterTypeName">
+      <summary>Ruft den voll gekennzeichneten Typnamen von <see cref="T:System.Type" /> ab, der als Konverter für das Objekt verwendet wird, an das dieses Attribut gebunden ist.</summary>
+      <returns>Der voll gekennzeichnete Typname von <see cref="T:System.Type" />, der als Konverter für das Objekt verwendet wird, an das dieses Attribut gebunden ist. Eine leere Zeichenfolge (""), wenn kein Konverter vorhanden ist.Der Standardwert ist eine leere Zeichenfolge ("").</returns>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.Equals(System.Object)">
+      <summary>Gibt zurück, ob der Wert des angegebenen Objekts gleich dem aktuellen <see cref="T:System.ComponentModel.TypeConverterAttribute" /> ist.</summary>
+      <returns>true, wenn der Wert des angegebenen Objekts dem aktuellen <see cref="T:System.ComponentModel.TypeConverterAttribute" /> entspricht, andernfalls false.</returns>
+      <param name="obj">Das Objekt, dessen Wert auf Gleichheit geprüft werden soll. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.GetHashCode">
+      <summary>Gibt den Hashcode für diese Instanz zurück.</summary>
+      <returns>Ein Hashcode für das aktuelle <see cref="T:System.ComponentModel.TypeConverterAttribute" />.</returns>
+    </member>
+    <member name="T:System.ComponentModel.TypeDescriptor">
+      <summary>Stellt Informationen über die Eigenschaften einer Komponente bereit, z. B. seine Attribute, Eigenschaften und Ereignisse.Diese Klasse kann nicht vererbt werden.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeDescriptor.GetConverter(System.Type)">
+      <summary>Gibt einen Typkonverter für den angegebenen Typ zurück.</summary>
+      <returns>Ein <see cref="T:System.ComponentModel.TypeConverter" /> für den angegebenen Typ.</returns>
+      <param name="type">Der <see cref="T:System.Type" /> der Zielkomponente. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="component" /> ist null. </exception>
+    </member>
+    <member name="T:System.ComponentModel.TypeListConverter">
+      <summary>Stellt einen Typkonverter bereit, der zum Auffüllen eines Listenfelds mit verfügbaren Typen verwendet werden kann.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.#ctor(System.Type[])">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.TypeListConverter" />-Klasse, unter Verwendung des Typarrays als verfügbare Typen.</summary>
+      <param name="types">Das Array vom Typ <see cref="T:System.Type" />, das als verfügbare Typen verwendet werden soll. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob der Konverter die angegebene <see cref="T:System.Type" />-Klasse des Quellobjekts mithilfe des angegebenen Kontexts konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt.</param>
+      <param name="sourceType">Die <see cref="T:System.Type" />-Klasse des Quellobjekts.</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Ruft einen Wert ab, der angibt, ob dieser Konverter ein Objekt unter Verwendung des Kontexts in den angegebenen Zieltyp konvertieren kann.</summary>
+      <returns>true, wenn dieser Konverter die Konvertierung durchführen kann, andernfalls false.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="destinationType">Eine <see cref="T:System.Type" />-Klasse, die den Zieltyp der Konvertierung darstellt. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Konvertiert das angegebene Objekt in den systemeigenen Typ des Konverters.</summary>
+      <returns>Ein <see cref="T:System.Object" />, das den konvertierten Wert darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Eine <see cref="T:System.Globalization.CultureInfo" />-Klasse, die die Kultur angibt, mit der die Schriftart dargestellt wird. </param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Konvertiert das angegebene Wertobjekt in den angegebenen Zieltyp.</summary>
+      <returns>Eine <see cref="T:System.Object" />-Klasse, die den konvertierten <paramref name="value" />-Parameter darstellt.</returns>
+      <param name="context">Eine <see cref="T:System.ComponentModel.ITypeDescriptorContext" />-Schnittstelle, die einen Formatierungskontext bereitstellt. </param>
+      <param name="culture">Eine optionale <see cref="T:System.Globalization.CultureInfo" />-Klasse.Wenn nichts anderes angegeben ist, wird die aktuelle Kultur angenommen.</param>
+      <param name="value">Die zu konvertierende <see cref="T:System.Object" />-Klasse. </param>
+      <param name="destinationType">Die <see cref="T:System.Type" />-Klasse, in die der Wert konvertiert werden soll. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> ist null. </exception>
+      <exception cref="T:System.NotSupportedException">Die Konvertierung kann nicht durchgeführt werden. </exception>
+    </member>
+    <member name="T:System.ComponentModel.UInt16Converter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von 16-Bit-Ganzzahlobjekten mit Vorzeichen in und von anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt16Converter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.UInt16Converter" />-Klasse. </summary>
+    </member>
+    <member name="T:System.ComponentModel.UInt32Converter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von 32-Bit-Ganzzahlobjekten ohne Vorzeichen in andere und aus anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt32Converter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.UInt32Converter" />-Klasse. </summary>
+    </member>
+    <member name="T:System.ComponentModel.UInt64Converter">
+      <summary>Stellt einen Typkonverter für das Konvertieren von 64-Bit-Ganzzahlobjekten mit Vorzeichen in und von anderen Darstellungen bereit.</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt64Converter.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.ComponentModel.UInt64Converter" />-Klasse. </summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ComponentModel.Primitives</name>
+  </assembly>
+  <members>
+    <member name="T:System.ComponentModel.ComponentCollection">
+      <summary>Предоставляет для коллекции объектов <see cref="T:System.ComponentModel.IComponent" /> контейнер только для чтения.</summary>
+    </member>
+    <member name="T:System.ComponentModel.IComponent">
+      <summary>Предоставляет функциональные возможности, необходимые для всех компонентов. </summary>
+    </member>
+    <member name="E:System.ComponentModel.IComponent.Disposed">
+      <summary>Представляет метод, обрабатывающий событие <see cref="E:System.ComponentModel.IComponent.Disposed" /> компонента.</summary>
+    </member>
+    <member name="P:System.ComponentModel.IComponent.Site">
+      <summary>Возвращает или задает объект <see cref="T:System.ComponentModel.ISite" />, связанный с объектом <see cref="T:System.ComponentModel.IComponent" />.</summary>
+      <returns>Объект <see cref="T:System.ComponentModel.ISite" />, связанный с компонентом; или null, если у компонента нет узла.</returns>
+    </member>
+    <member name="T:System.ComponentModel.IContainer">
+      <summary>Предоставляет функциональные возможности для контейнеров.Контейнеры являются объектами, логически включающими ноль и более компонентов.</summary>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent)">
+      <summary>Добавляет указанный компонент <see cref="T:System.ComponentModel.IComponent" /> в конец списка контейнера <see cref="T:System.ComponentModel.IContainer" />.</summary>
+      <param name="component">Добавляемый объект <see cref="T:System.ComponentModel.IComponent" />. </param>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent,System.String)">
+      <summary>Добавляет указанный компонент <see cref="T:System.ComponentModel.IComponent" /> в конец списка в объект <see cref="T:System.ComponentModel.IContainer" /> и назначает компоненту имя.</summary>
+      <param name="component">Добавляемый объект <see cref="T:System.ComponentModel.IComponent" />. </param>
+      <param name="name">Назначаемое компоненту уникальное имя, в котором не учитывается регистр.– или – Значение null, при котором компонент остается безымянным. </param>
+    </member>
+    <member name="P:System.ComponentModel.IContainer.Components">
+      <summary>Получает все компоненты в контейнере <see cref="T:System.ComponentModel.IContainer" />.</summary>
+      <returns>Коллекция объектов <see cref="T:System.ComponentModel.IComponent" />, представляющая все компоненты в контейнере <see cref="T:System.ComponentModel.IContainer" />.</returns>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Remove(System.ComponentModel.IComponent)">
+      <summary>Удаляет компонент из контейнера <see cref="T:System.ComponentModel.IContainer" />.</summary>
+      <param name="component">Удаляемый объект <see cref="T:System.ComponentModel.IComponent" />. </param>
+    </member>
+    <member name="T:System.ComponentModel.ISite">
+      <summary>Предоставляет функциональные возможности, необходимые для узлов.</summary>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Component">
+      <summary>Возвращает компонент, связанный с объектом интерфейсом <see cref="T:System.ComponentModel.ISite" /> при реализации классом.</summary>
+      <returns>Экземпляр <see cref="T:System.ComponentModel.IComponent" />, связанный с объектом <see cref="T:System.ComponentModel.ISite" />.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Container">
+      <summary>Возвращает интерфейс <see cref="T:System.ComponentModel.IContainer" />, при реализации классом связанный с интерфейсом <see cref="T:System.ComponentModel.ISite" />.</summary>
+      <returns>Экземпляр <see cref="T:System.ComponentModel.IContainer" />, связанный с объектом <see cref="T:System.ComponentModel.ISite" />.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.DesignMode">
+      <summary>Определяет, находится ли компонент в режиме разработки при реализации классом.</summary>
+      <returns>Значение true, если компонент находится в режиме разработки; в противном случае — значение false.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Name">
+      <summary>При реализации классом возвращает или задает имя компонента, связанного с интерфейсом <see cref="T:System.ComponentModel.ISite" />.</summary>
+      <returns>Имя компонента, связанного с интерфейсом <see cref="T:System.ComponentModel.ISite" />; или значение null, если компоненту не присвоено имя.</returns>
+    </member>
+  </members>
+</doc>

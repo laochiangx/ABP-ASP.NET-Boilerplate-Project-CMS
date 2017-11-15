@@ -1,0 +1,783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ComponentModel.TypeConverter</name>
+  </assembly>
+  <members>
+    <member name="T:System.ComponentModel.ArrayConverter">
+      <summary>提供型別轉換子 (Type Converter) 將 <see cref="T:System.Array" /> 物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.ArrayConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.ArrayConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.ArrayConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>將指定的數值物件轉換成指定的目的型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">
+        <paramref name="value" /> 所要轉換成的文化特性 (Culture)。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">值將會轉換成這個 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 為 null。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="T:System.ComponentModel.BaseNumberConverter">
+      <summary>提供非浮點實值型別的基底型別轉換子 (Base Type Converter)。</summary>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.BaseNumberConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>判斷這個轉換子是否可以將指定來源型別中的物件轉換成轉換子的原生型別。</summary>
+      <returns>如果這個轉換子可以執行作業，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要轉換的來源型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，指出這個轉換子是否可以使用內容來將物件轉換成指定的目的型別。</summary>
+      <returns>如果這個轉換子可以執行作業，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="t">
+        <see cref="T:System.Type" />，表示要轉換之目的型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>將指定的物件轉換成轉換子的原生型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />，指定用於表示數字的文化特性。</param>
+      <param name="value">要進行轉換的物件。</param>
+      <exception cref="T:System.Exception">
+        <paramref name="value" /> 對於目標型別並不是有效的值。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>將指定的物件轉換為另一個型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />，指定用於表示數字的文化特性。</param>
+      <param name="value">要進行轉換的物件。</param>
+      <param name="destinationType">要將物件轉換成的型別。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 為 null。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="T:System.ComponentModel.BooleanConverter">
+      <summary>提供型別轉換子 (Type Converter) 將 <see cref="T:System.Boolean" /> 物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.BooleanConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，指出這個轉換子是否可以使用指定的內容，將指定來源型別中的物件轉換成布林物件。</summary>
+      <returns>如果這個物件可以執行轉換則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要轉換的來源型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>將指定值物件轉換為布林物件。</summary>
+      <returns>
+        <see cref="T:System.Object" />，代表轉換的 <paramref name="value" />。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />，指定要轉換成的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> 對於目標型別並不是有效的值。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="T:System.ComponentModel.ByteConverter">
+      <summary>提供型別轉換子 (Type Converter) 將 8 位元不帶正負號的整數 (Unsigned Integer) 物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.ByteConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.ByteConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="T:System.ComponentModel.CharConverter">
+      <summary>提供型別轉換子 (Type Converter) 將 Unicode 字元物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.CharConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，表示這個轉換子是否可以使用指定的內容，將指定來源型別中的物件轉換成 Unicode 字元物件。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要轉換的來源型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>將指定的物件轉換成 Unicode 字元物件。</summary>
+      <returns>
+        <see cref="T:System.Object" />，代表轉換的 <paramref name="value" />。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">
+        <paramref name="value" /> 所要轉換成的文化特性 (Culture)。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> 對於目標型別並不是有效的值。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>使用引數，將指定值物件轉換成 Unicode 字元物件。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">
+        <paramref name="value" /> 所要轉換成的文化特性 (Culture)。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">值將會轉換成這個 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="T:System.ComponentModel.CollectionConverter">
+      <summary>提供型別轉換子 (Type Converter) 將集合物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.CollectionConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.CollectionConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.CollectionConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>將指定的數值物件轉換成指定的目的型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">
+        <paramref name="value" /> 所要轉換的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。這個參數必須繼承自 <see cref="T:System.Collections.ICollection" />。</param>
+      <param name="destinationType">值將會轉換成這個 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 為 null。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="T:System.ComponentModel.DateTimeConverter">
+      <summary>提供型別轉換子 (Type Converter) 將 <see cref="T:System.DateTime" /> 物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.DateTimeConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，表示這個轉換子是否可以使用指定的內容，將指定來源型別中的物件轉換成 <see cref="T:System.DateTime" />。</summary>
+      <returns>如果這個物件可以執行轉換則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要轉換的來源型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，表示這個轉換子是否可以使用內容將物件轉換成指定的目的型別。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="destinationType">
+        <see cref="T:System.Type" />，表示要轉換為何種目標型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>將指定值物件轉換為 <see cref="T:System.DateTime" />。</summary>
+      <returns>
+        <see cref="T:System.Object" />，代表轉換的 <paramref name="value" />。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">選擇性 (Optional) <see cref="T:System.Globalization.CultureInfo" />。如果未提供，則會假設使用目前的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> 對於目標型別並不是有效的值。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>使用引數，將指定值物件轉換為 <see cref="T:System.DateTime" />。</summary>
+      <returns>
+        <see cref="T:System.Object" />，代表轉換的 <paramref name="value" />。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">選擇性 (Optional) <see cref="T:System.Globalization.CultureInfo" />。如果未提供，則會假設使用目前的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">值將會轉換成這個 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="T:System.ComponentModel.DateTimeOffsetConverter">
+      <summary>提供型別轉換子 (Type Converter) 將 <see cref="T:System.DateTimeOffset" /> 結構與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.DateTimeOffsetConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>傳回值，這個值表示是否可將指定之來源型別的物件轉換成 <see cref="T:System.DateTimeOffset" />。</summary>
+      <returns>如果指定的型別可轉換為 <see cref="T:System.DateTimeOffset" /> 則為 true，否則為 false。</returns>
+      <param name="context">日期格式內容。</param>
+      <param name="sourceType">要檢查的來源型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>傳回值，這個值表示是否可將 <see cref="T:System.DateTimeOffset" /> 轉換成指定之型別的物件。</summary>
+      <returns>如果 <see cref="T:System.DateTimeOffset" /> 可轉換為指定的型別，則為 true，否則為 false。</returns>
+      <param name="context">日期格式內容。</param>
+      <param name="destinationType">要檢查的目的型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>將指定物件轉換為 <see cref="T:System.DateTimeOffset" />。</summary>
+      <returns>
+        <see cref="T:System.DateTimeOffset" />，表示指定的物件。</returns>
+      <param name="context">日期格式內容。</param>
+      <param name="culture">日期文化特性。</param>
+      <param name="value">要被轉換的物件。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>將 <see cref="T:System.DateTimeOffset" /> 轉換為指定型別的物件。</summary>
+      <returns>指定之型別的物件，表示 <see cref="T:System.DateTimeOffset" />。</returns>
+      <param name="context">日期格式內容。</param>
+      <param name="culture">日期文化特性。</param>
+      <param name="value">要轉換的 <see cref="T:System.DateTimeOffset" />。</param>
+      <param name="destinationType">要轉換成的型別。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="T:System.ComponentModel.DecimalConverter">
+      <summary>提供型別轉換子 (Type Converter) 將 <see cref="T:System.Decimal" /> 物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.DecimalConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，表示這個轉換子是否可以使用內容將物件轉換成指定的目的型別。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="destinationType">
+        <see cref="T:System.Type" />，表示要轉換為何種目標型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>使用引數，將指定值物件轉換為 <see cref="T:System.Decimal" />。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">選擇性 (Optional) <see cref="T:System.Globalization.CultureInfo" />。如果未提供，則會假設使用目前的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">值將會轉換成這個 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 為 null。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="T:System.ComponentModel.DoubleConverter">
+      <summary>提供型別轉換子 (Type Converter) 將雙精度浮點數和浮點數物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DoubleConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.DoubleConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="T:System.ComponentModel.EnumConverter">
+      <summary>提供型別轉換子 (Type Converter) 將 <see cref="T:System.Enum" /> 物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.#ctor(System.Type)">
+      <summary>初始化指定型別之 <see cref="T:System.ComponentModel.EnumConverter" /> 類別的新執行個體。</summary>
+      <param name="type">
+        <see cref="T:System.Type" />，表示要與這個列舉型別轉換子產生關聯的列舉型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，指出這個轉換子是否可以使用指定的內容，將指定來源型別中的物件轉換成列舉型別物件。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要轉換的來源型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，表示這個轉換子是否可以使用內容將物件轉換成指定的目的型別。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="destinationType">
+        <see cref="T:System.Type" />，表示要轉換為何種目標型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>將指定的值物件轉換為列舉型別物件。</summary>
+      <returns>
+        <see cref="T:System.Object" />，代表轉換的 <paramref name="value" />。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">選擇性 (Optional) <see cref="T:System.Globalization.CultureInfo" />。如果未提供，則會假設使用目前的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> 對於目標型別並不是有效的值。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>將指定的數值物件轉換成指定的目的型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，代表轉換的 <paramref name="value" />。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">選擇性 (Optional) <see cref="T:System.Globalization.CultureInfo" />。如果未提供，則會假設使用目前的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">值將會轉換成這個 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 為 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" /> 不是列舉型別的有效值。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="P:System.ComponentModel.EnumConverter.EnumType">
+      <summary>指定這個轉換子關聯的列舉值型別。</summary>
+      <returns>這個轉換子關聯的列舉值型別。</returns>
+    </member>
+    <member name="T:System.ComponentModel.GuidConverter">
+      <summary>提供型別轉換子 (Type Converter) 將 <see cref="T:System.Guid" /> 物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.GuidConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，表示此轉換子是否可以使用內容將指定來源型別中的物件轉換成 GUID 物件。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要轉換的來源型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，表示這個轉換子是否可以使用內容將物件轉換成指定的目的型別。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="destinationType">
+        <see cref="T:System.Type" />，表示要轉換為何種目標型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>將指定的物件轉換為 GUID 物件。</summary>
+      <returns>
+        <see cref="T:System.Object" />，代表轉換的 <paramref name="value" />。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">選擇性 (Optional) <see cref="T:System.Globalization.CultureInfo" />。如果未提供，則會假設使用目前的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>將指定的物件轉換為另一個型別。</summary>
+      <returns>轉換的物件。</returns>
+      <param name="context">格式子 (Formatter) 內容。</param>
+      <param name="culture">
+        <paramref name="value" /> 所要轉換成的文化特性 (Culture)。</param>
+      <param name="value">要進行轉換的物件。</param>
+      <param name="destinationType">要將物件轉換成的型別。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 為 null。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="T:System.ComponentModel.Int16Converter">
+      <summary>提供型別轉換子 (Type Converter) 將 16 位元帶正負號的整數 (Signed Integer) 物件與其他表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int16Converter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.Int16Converter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="T:System.ComponentModel.Int32Converter">
+      <summary>提供型別轉換子 (Type Converter) 將 32 位元帶正負號的整數 (Signed Integer) 物件與其他表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int32Converter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.Int32Converter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="T:System.ComponentModel.Int64Converter">
+      <summary>提供型別轉換子 (Type Converter) 將 64 位元帶正負號的整數 (Signed Integer) 物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int64Converter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.Int64Converter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="T:System.ComponentModel.ITypeDescriptorContext">
+      <summary>提供元件的內容資訊，例如其容器和屬性描述項。</summary>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.Container">
+      <summary>取得表示這個 <see cref="T:System.ComponentModel.TypeDescriptor" /> 要求的容器。</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.IContainer" />，含有這個 <see cref="T:System.ComponentModel.TypeDescriptor" /> 的物件集，如果沒有容器或 <see cref="T:System.ComponentModel.TypeDescriptor" /> 不使用外部物件，則為 null。</returns>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.Instance">
+      <summary>取得與這個型別描述項要求關聯的物件。</summary>
+      <returns>在 <see cref="T:System.ComponentModel.TypeDescriptor" /> 上叫用方法的物件，如果沒有物件負責呼叫，則為 null。</returns>
+    </member>
+    <member name="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanged">
+      <summary>引發 <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" /> 事件。</summary>
+    </member>
+    <member name="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanging">
+      <summary>引發 <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanging" /> 事件。</summary>
+      <returns>如果這個物件可以變更，則為 true，否則為 false。</returns>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor">
+      <summary>取得與指定內容項目關聯的 <see cref="T:System.ComponentModel.PropertyDescriptor" />。</summary>
+      <returns>描述指定內容項目的 <see cref="T:System.ComponentModel.PropertyDescriptor" />，如果沒有 <see cref="T:System.ComponentModel.PropertyDescriptor" /> 負責呼叫時，則為 null。</returns>
+    </member>
+    <member name="T:System.ComponentModel.MultilineStringConverter">
+      <summary>提供型別轉換子，將多行字串轉換成簡單字串。</summary>
+    </member>
+    <member name="M:System.ComponentModel.MultilineStringConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.MultilineStringConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.MultilineStringConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>會使用指定的內容和文化特性資訊，將指定值物件轉換成指定型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />。如果傳遞 null，會假設目前的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">值參數將會轉換成這個 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 為 null。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="T:System.ComponentModel.NullableConverter">
+      <summary>提供可為 null 型別及其基礎基本型別之間的自動轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.#ctor(System.Type)">
+      <summary>初始化 <see cref="T:System.ComponentModel.NullableConverter" /> 類別的新執行個體。</summary>
+      <param name="type">指定的可為 null 型別。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="type" /> 不是可為 null 的型別。</exception>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>會傳回這個轉換子是否可以使用指定內容，將指定型別的物件轉換為這個轉換子的型別。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要轉換的來源型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>傳回值，指出這個轉換子是否可以使用指定的內容，將物件轉換成指定的型別。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="destinationType">
+        <see cref="T:System.Type" />，表示要轉換成的型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>使用指定的內容和文化特性資訊，將指定物件轉換為這個轉換子的型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">當做目前文化特性 (Culture) 使用的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>會使用指定的內容和文化特性資訊，將指定值物件轉換成指定型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">當做目前文化特性 (Culture) 使用的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">值參數將會轉換成這個 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 為 null。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.NullableType">
+      <summary>取得可為 null 的型別。</summary>
+      <returns>
+        <see cref="T:System.Type" />，表示可為 null 的型別。</returns>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.UnderlyingType">
+      <summary>取得基礎型別。</summary>
+      <returns>表示基礎型別的 <see cref="T:System.Type" />。</returns>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.UnderlyingTypeConverter">
+      <summary>取得基礎型別轉換子。</summary>
+      <returns>表示基礎型別轉換子的 <see cref="T:System.ComponentModel.TypeConverter" />。</returns>
+    </member>
+    <member name="T:System.ComponentModel.PropertyDescriptor">
+      <summary>提供類別 (Class) 上屬性的抽象。</summary>
+    </member>
+    <member name="T:System.ComponentModel.SByteConverter">
+      <summary>提供型別轉換子 (Type Converter) 將 8 位元不帶正負號的整數 (Unsigned Integer) 物件與其他字串相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.SByteConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.SByteConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="T:System.ComponentModel.SingleConverter">
+      <summary>提供型別轉換子 (Type Converter) 將單精確度浮點數、浮點數物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.SingleConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.SingleConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="T:System.ComponentModel.StringConverter">
+      <summary>提供型別轉換子 (Type Converter) 將字串物件與其他表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.StringConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，表示此轉換器是否可以用指定的內容將指定來源型別的物件轉換成字串。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要轉換的來源型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>將指定值物件轉換為 <see cref="T:System.String" /> 物件。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">要使用的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換。</exception>
+    </member>
+    <member name="T:System.ComponentModel.TimeSpanConverter">
+      <summary>提供型別轉換子 (Type Converter) 將 <see cref="T:System.TimeSpan" /> 物件與其他表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.TimeSpanConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，表示這個轉換子是否可以使用指定的內容，將指定來源型別中的物件轉換成 <see cref="T:System.TimeSpan" />。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要轉換的來源型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，表示這個轉換子是否可以使用內容將物件轉換成指定的目的型別。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="destinationType">
+        <see cref="T:System.Type" />，表示要轉換為何種目標型別。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 為 null。</exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> 對於目標型別並不是有效的值。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>將指定物件轉換為 <see cref="T:System.TimeSpan" />。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">選擇性 (Optional) <see cref="T:System.Globalization.CultureInfo" />。如果未提供，則會假設使用目前的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> 對於目標型別並不是有效的值。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>將指定的物件轉換為另一個型別。</summary>
+      <returns>轉換的物件。</returns>
+      <param name="context">格式子 (Formatter) 內容。</param>
+      <param name="culture">
+        <paramref name="value" /> 所要轉換成的文化特性 (Culture)。</param>
+      <param name="value">要進行轉換的物件。</param>
+      <param name="destinationType">要將物件轉換成的型別。</param>
+    </member>
+    <member name="T:System.ComponentModel.TypeConverter">
+      <summary>會提供轉換實值型別為其他型別，以及存取標準值和子屬性的統一方式。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.TypeConverter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>會傳回這個轉換子是否可以使用指定內容，將指定型別的物件轉換為這個轉換子的型別。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要轉換的來源型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)">
+      <summary>傳回值，指出這個轉換子是否可將指定之型別的物件轉換為這個轉換子的型別。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要轉換的來源型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>傳回值，指出這個轉換子是否可以使用指定的內容，將物件轉換成指定的型別。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="destinationType">
+        <see cref="T:System.Type" />，表示要轉換成的型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertTo(System.Type)">
+      <summary>傳回值，指出這個轉換子是否可以將物件轉換成指定的型別。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="destinationType">
+        <see cref="T:System.Type" />，表示要轉換成的型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>使用指定的內容和文化特性資訊，將指定物件轉換為這個轉換子的型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">當做目前文化特性 (Culture) 使用的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFrom(System.Object)">
+      <summary>會將指定值轉換為這個轉換子的型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.String)">
+      <summary>會使用不因文化特性而異，將指定字串轉換為這個轉換子的型別。</summary>
+      <returns>表示轉換文字的 <see cref="T:System.Object" />。</returns>
+      <param name="text">要進行轉換的 <see cref="T:System.String" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.String)">
+      <summary>會使用指定內容和文化特性資訊，將指定文字轉換為物件。</summary>
+      <returns>表示轉換文字的 <see cref="T:System.Object" />。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />。如果傳遞 null，會假設目前的文化特性。</param>
+      <param name="text">要進行轉換的 <see cref="T:System.String" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromString(System.String)">
+      <summary>會將指定的文字轉換成物件。</summary>
+      <returns>表示轉換文字的 <see cref="T:System.Object" />。</returns>
+      <param name="text">要轉換物件的文字表示。</param>
+      <exception cref="T:System.NotSupportedException">字串無法轉換為適當的物件。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>會使用指定的內容和文化特性資訊，將指定值物件轉換成指定型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />。如果傳遞 null，會假設目前的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">要將 <paramref name="value" /> 參數轉換成的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 參數為 null。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertTo(System.Object,System.Type)">
+      <summary>會使用引數，將指定值物件轉換成指定型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">要將 <paramref name="value" /> 參數轉換成的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 參數為 null。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToInvariantString(System.Object)">
+      <summary>會將指定值轉換成不因文化特性而異的字串表示。</summary>
+      <returns>
+        <see cref="T:System.String" />，表示轉換的值。</returns>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>會使用指定的內容和文化特性資訊，將指定值轉換為字串表示。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />。如果傳遞 null，會假設目前的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToString(System.Object)">
+      <summary>會將指定值轉換成字串表示。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)">
+      <summary>無法執行轉換時，會傳回要擲回的例外狀況。</summary>
+      <returns>
+        <see cref="T:System.Exception" />，表示無法執行轉換時將擲回的例外狀況。</returns>
+      <param name="value">要轉換的 <see cref="T:System.Object" />，如果無法取得物件，則為 null。</param>
+      <exception cref="T:System.NotSupportedException">由這個方法自動擲回。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)">
+      <summary>無法執行轉換時，會傳回要擲回的例外狀況。</summary>
+      <returns>
+        <see cref="T:System.Exception" />，表示無法執行轉換時將擲回的例外狀況。</returns>
+      <param name="value">要轉換的 <see cref="T:System.Object" />，如果無法取得物件，則為 null。</param>
+      <param name="destinationType">
+        <see cref="T:System.Type" />，表示轉換嘗試轉換的型別。</param>
+      <exception cref="T:System.NotSupportedException">由這個方法自動擲回。</exception>
+    </member>
+    <member name="T:System.ComponentModel.TypeConverterAttribute">
+      <summary>指定要用來做為此屬性 (Attribute) 所繫結至物件的型別轉換子。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.#ctor(System.String)">
+      <summary>使用指定型別名稱做為這個屬性所繫結之物件的資料轉換子，來初始化 <see cref="T:System.ComponentModel.TypeConverterAttribute" /> 類別的新執行個體。</summary>
+      <param name="typeName">類別的完整名稱，用於這個屬性所繫結之物件的資料轉換。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)">
+      <summary>使用指定型別做為這個屬性所繫結之物件的資料轉換子，來初始化 <see cref="T:System.ComponentModel.TypeConverterAttribute" /> 類別的新執行個體。</summary>
+      <param name="type">
+        <see cref="T:System.Type" /> 表示轉換子類別的型別，用於這個屬性所繫結之物件的資料轉換。</param>
+    </member>
+    <member name="P:System.ComponentModel.TypeConverterAttribute.ConverterTypeName">
+      <summary>取得 <see cref="T:System.Type" /> 的完整型別名稱來做為這個屬性所繫結之物件的轉換子。</summary>
+      <returns>
+        <see cref="T:System.Type" /> 的完整型別名稱，用來做為這個屬性所繫結之物件的轉換子，如果屬性值不存在的話，則為空字串 ("")。預設為空字串 ("")。</returns>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.Equals(System.Object)">
+      <summary>傳回值，表示指定的物件值是否等於目前的 <see cref="T:System.ComponentModel.TypeConverterAttribute" />。</summary>
+      <returns>如果指定的物件值等於目前 <see cref="T:System.ComponentModel.TypeConverterAttribute" /> 的值，則為 true，否則為 false。</returns>
+      <param name="obj">測試其數值相等的物件。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.GetHashCode">
+      <summary>傳回這個執行個體的雜湊碼。</summary>
+      <returns>目前 <see cref="T:System.ComponentModel.TypeConverterAttribute" /> 的雜湊程式碼。</returns>
+    </member>
+    <member name="T:System.ComponentModel.TypeDescriptor">
+      <summary>提供元件特性的相關資訊，例如其屬性 (Attribute)、屬性 (Property) 和事件。此類別無法被繼承。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeDescriptor.GetConverter(System.Type)">
+      <summary>傳回指定型別的型別轉換子。</summary>
+      <returns>指定之型別的 <see cref="T:System.ComponentModel.TypeConverter" />。</returns>
+      <param name="type">目標元件的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="component" /> 為 null。</exception>
+    </member>
+    <member name="T:System.ComponentModel.TypeListConverter">
+      <summary>提供可以用於將可用的型別填入清單方塊的型別轉換子 (Type Converter)。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.#ctor(System.Type[])">
+      <summary>使用型別陣列做為可用的型別，初始化 <see cref="T:System.ComponentModel.TypeListConverter" /> 類別的新執行個體。</summary>
+      <param name="types">當做可用型別使用的 <see cref="T:System.Type" /> 型別陣列。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，指出此轉換子是否可以使用指定的內容轉換來源物件的指定 <see cref="T:System.Type" />。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="sourceType">來源物件的 <see cref="T:System.Type" />。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>取得值，表示這個轉換子是否可以使用內容將物件轉換成指定的目的型別。</summary>
+      <returns>如果這個轉換子可以執行轉換，則為 true，否則為 false。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="destinationType">
+        <see cref="T:System.Type" />，表示要轉換為何種目標型別。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>將指定的物件轉換成轉換子的原生型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，表示轉換的值。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />，指定用於表示字型的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>將指定的數值物件轉換成指定的目的型別。</summary>
+      <returns>
+        <see cref="T:System.Object" />，代表轉換的 <paramref name="value" />。</returns>
+      <param name="context">提供格式內容的 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />。</param>
+      <param name="culture">選擇性 (Optional) <see cref="T:System.Globalization.CultureInfo" />。如果未提供，則會假設使用目前的文化特性。</param>
+      <param name="value">要進行轉換的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">值將會轉換成這個 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 為 null。</exception>
+      <exception cref="T:System.NotSupportedException">無法執行轉換作業。</exception>
+    </member>
+    <member name="T:System.ComponentModel.UInt16Converter">
+      <summary>提供型別轉換子 (Type Converter) 將 16 位元不帶正負號的整數 (Unsigned Integer) 物件與其他表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt16Converter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.UInt16Converter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="T:System.ComponentModel.UInt32Converter">
+      <summary>提供型別轉換子 (Type Converter) 將 32 位元不帶正負號的整數 (Unsigned Integer) 物件與其他各種表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt32Converter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.UInt32Converter" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="T:System.ComponentModel.UInt64Converter">
+      <summary>提供型別轉換子 (Type Converter) 將 64 位元不帶正負號的整數 (Unsigned Integer) 物件與其他表示相互轉換。</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt64Converter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.UInt64Converter" /> 類別的新執行個體。</summary>
+    </member>
+  </members>
+</doc>

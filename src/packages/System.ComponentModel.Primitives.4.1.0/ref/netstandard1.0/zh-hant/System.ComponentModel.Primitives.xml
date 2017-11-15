@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ComponentModel.Primitives</name>
+  </assembly>
+  <members>
+    <member name="T:System.ComponentModel.ComponentCollection">
+      <summary>提供 <see cref="T:System.ComponentModel.IComponent" /> 物件集合的唯讀容器 (Container)。</summary>
+    </member>
+    <member name="T:System.ComponentModel.IComponent">
+      <summary>提供所有元件必須的功能。</summary>
+    </member>
+    <member name="E:System.ComponentModel.IComponent.Disposed">
+      <summary>表示處理元件的 <see cref="E:System.ComponentModel.IComponent.Disposed" /> 事件的方法。</summary>
+    </member>
+    <member name="P:System.ComponentModel.IComponent.Site">
+      <summary>取得或設定與 <see cref="T:System.ComponentModel.IComponent" /> 相關聯的 <see cref="T:System.ComponentModel.ISite" />。</summary>
+      <returns>與元件相關聯的 <see cref="T:System.ComponentModel.ISite" /> 物件；或為 null (如果元件沒有站台)。</returns>
+    </member>
+    <member name="T:System.ComponentModel.IContainer">
+      <summary>為容器 (Container) 提供功能。容器是邏輯上包含零或多個元件的物件。</summary>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent)">
+      <summary>在清單結尾處，將指定的 <see cref="T:System.ComponentModel.IComponent" /> 加入 <see cref="T:System.ComponentModel.IContainer" />。</summary>
+      <param name="component">要相加的 <see cref="T:System.ComponentModel.IComponent" />。</param>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent,System.String)">
+      <summary>在清單結尾處，將指定的 <see cref="T:System.ComponentModel.IComponent" /> 加入 <see cref="T:System.ComponentModel.IContainer" />，並指派名稱給元件。</summary>
+      <param name="component">要相加的 <see cref="T:System.ComponentModel.IComponent" />。</param>
+      <param name="name">要指派給元件的唯一、不區分大小寫的名稱。-或-null，表示沒有為元件命名。</param>
+    </member>
+    <member name="P:System.ComponentModel.IContainer.Components">
+      <summary>取得 <see cref="T:System.ComponentModel.IContainer" /> 中的所有元件。</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.IComponent" /> 物件的集合，表示 <see cref="T:System.ComponentModel.IContainer" /> 中的所有元件。</returns>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Remove(System.ComponentModel.IComponent)">
+      <summary>從 <see cref="T:System.ComponentModel.IContainer" /> 移除元件。</summary>
+      <param name="component">要移除的 <see cref="T:System.ComponentModel.IComponent" />。</param>
+    </member>
+    <member name="T:System.ComponentModel.ISite">
+      <summary>提供站台需要的功能。</summary>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Component">
+      <summary>當由類別實作時，取得與 <see cref="T:System.ComponentModel.ISite" /> 相關聯的元件。</summary>
+      <returns>與 <see cref="T:System.ComponentModel.ISite" /> 相關聯的 <see cref="T:System.ComponentModel.IComponent" /> 執行個體。</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Container">
+      <summary>當由類別實作時，取得與 <see cref="T:System.ComponentModel.ISite" /> 相關聯的 <see cref="T:System.ComponentModel.IContainer" />。</summary>
+      <returns>與 <see cref="T:System.ComponentModel.ISite" /> 相關聯的 <see cref="T:System.ComponentModel.IContainer" /> 執行個體。</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.DesignMode">
+      <summary>判斷由類別實作時，元件是否處於設計模式。</summary>
+      <returns>如果元件處於設計模式，則為 true，否則為 false。</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Name">
+      <summary>當由類別實作時，取得或設定與 <see cref="T:System.ComponentModel.ISite" /> 相關聯的元件名稱。</summary>
+      <returns>與 <see cref="T:System.ComponentModel.ISite" /> 相關聯的元件名稱；或 null (如果沒有名稱指派給元件)。</returns>
+    </member>
+  </members>
+</doc>

@@ -70,6 +70,40 @@
             height: 800px !important;
         }
 
+        .main-header .navbar-custom-menu, .main-header .navbar-right {
+            float: right !important;
+        }
+
+        vendor-prefixes.less:76 * {
+            box-sizing: border-box !important;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 160px;
+            padding: 5px 0;
+            margin: 2px 0 0;
+            font-size: 14px;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0, 0, 0, .15);
+            border-radius: 4px;
+            -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175) !important;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .175) !important;
+        }
+        .main-header .navbar-custom-menu, .main-header .navbar-right {
+            float: right !important;
+            margin-right: 300px !important;
+        }
         /*.sidebar {
             display: none !important;
 
@@ -87,6 +121,7 @@
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini"  >
+
     <div class="wrapper">
         @Html.Action("_MainHeader", "Layout")
         @Html.Action("SideBarNav", "Layout", new { activeMenu = ViewBag.ActiveMenu })

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ComponentModel.Primitives</name>
+  </assembly>
+  <members>
+    <member name="T:System.ComponentModel.ComponentCollection">
+      <summary>
+        <see cref="T:System.ComponentModel.IComponent" /> オブジェクトのコレクション用の読み取り専用コンテナーを提供します。</summary>
+    </member>
+    <member name="T:System.ComponentModel.IComponent">
+      <summary>すべてのコンポーネントによって要求される機能を提供します。</summary>
+    </member>
+    <member name="E:System.ComponentModel.IComponent.Disposed">
+      <summary>コンポーネントの <see cref="E:System.ComponentModel.IComponent.Disposed" /> イベントを処理するメソッドを表します。</summary>
+    </member>
+    <member name="P:System.ComponentModel.IComponent.Site">
+      <summary>
+        <see cref="T:System.ComponentModel.IComponent" /> に関連付けられた <see cref="T:System.ComponentModel.ISite" /> を取得または設定します。</summary>
+      <returns>コンポーネントに関連付けられている <see cref="T:System.ComponentModel.ISite" /> オブジェクト。コンポーネントにサイトがない場合は null。</returns>
+    </member>
+    <member name="T:System.ComponentModel.IContainer">
+      <summary>コンテナーの機能を提供します。コンテナーとは、論理上 0 個以上のコンポーネントを格納しているオブジェクトです。</summary>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent)">
+      <summary>指定した <see cref="T:System.ComponentModel.IComponent" /> を <see cref="T:System.ComponentModel.IContainer" /> のリストの末尾に追加します。</summary>
+      <param name="component">追加する <see cref="T:System.ComponentModel.IComponent" />。</param>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Add(System.ComponentModel.IComponent,System.String)">
+      <summary>指定した <see cref="T:System.ComponentModel.IComponent" /> を <see cref="T:System.ComponentModel.IContainer" /> のリストの末尾に追加し、そのコンポーネントに名前を割り当てます。</summary>
+      <param name="component">追加する <see cref="T:System.ComponentModel.IComponent" />。</param>
+      <param name="name">コンポーネントに割り当てる、大文字小文字を区別しない一意の名前。またはコンポーネントに名前を付けない場合は null。</param>
+    </member>
+    <member name="P:System.ComponentModel.IContainer.Components">
+      <summary>
+        <see cref="T:System.ComponentModel.IContainer" /> 内のすべてのコンポーネントを取得します。</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.IContainer" /> 内のすべてのコンポーネントを表す <see cref="T:System.ComponentModel.IComponent" /> オブジェクトのコレクション。</returns>
+    </member>
+    <member name="M:System.ComponentModel.IContainer.Remove(System.ComponentModel.IComponent)">
+      <summary>
+        <see cref="T:System.ComponentModel.IContainer" /> からコンポーネントを削除します。</summary>
+      <param name="component">削除する <see cref="T:System.ComponentModel.IComponent" />。</param>
+    </member>
+    <member name="T:System.ComponentModel.ISite">
+      <summary>サイトによって要求される機能を提供します。</summary>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Component">
+      <summary>クラスによって実装される場合は、<see cref="T:System.ComponentModel.ISite" /> に関連付けられているコンポーネントを取得します。</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.ISite" /> に関連付けられている <see cref="T:System.ComponentModel.IComponent" /> インスタンス。</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Container">
+      <summary>クラスによって実装される場合は、<see cref="T:System.ComponentModel.ISite" /> に関連付けられている <see cref="T:System.ComponentModel.IContainer" /> を取得します。</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.ISite" /> に関連付けられている <see cref="T:System.ComponentModel.IContainer" /> インスタンス。</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.DesignMode">
+      <summary>クラスによって実装される場合に、コンポーネントがデザイン モードかどうかを判断します。</summary>
+      <returns>コンポーネントがデザイン モードの場合は true。それ以外の場合は false。</returns>
+    </member>
+    <member name="P:System.ComponentModel.ISite.Name">
+      <summary>クラスによって実装される場合は、<see cref="T:System.ComponentModel.ISite" /> に関連付けられているコンポーネントの名前を取得または設定します。</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.ISite" /> に関連付けられるコンポーネントの名前。コンポーネントに名前が割り当てられていない場合は null。</returns>
+    </member>
+  </members>
+</doc>

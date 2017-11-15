@@ -1,0 +1,735 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ComponentModel.TypeConverter</name>
+  </assembly>
+  <members>
+    <member name="T:System.ComponentModel.ArrayConverter">
+      <summary>提供将 <see cref="T:System.Array" /> 对象与其他各种表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.ArrayConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.ArrayConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.ArrayConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>将给定的值对象转换为指定的目标类型。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">
+        <paramref name="value" /> 将要转换到的区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">要将值转换成的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 为 null。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="T:System.ComponentModel.BaseNumberConverter">
+      <summary>为非浮点数字类型提供基类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.BaseNumberConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>确定该转换器是否可以将给定源类型的对象转换为转换器的本机类型。</summary>
+      <returns>如果此转换器能够执行该操作，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，它表示要对其进行转换的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>返回一个值，此值指示该转换器能否使用上下文将对象转换为给定的目标类型。</summary>
+      <returns>如果此转换器能够执行该操作，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="t">
+        <see cref="T:System.Type" />，它表示要转换为的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>将给定对象转换为转换器的本机类型。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">指定表示数字的区域性的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="value">要转换的对象。</param>
+      <exception cref="T:System.Exception">
+        <paramref name="value" /> 不是目标类型的有效值。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>将指定的对象转换为其他类型。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">指定表示数字的区域性的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="value">要转换的对象。</param>
+      <param name="destinationType">对象要转换为的类型。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 为 null。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="T:System.ComponentModel.BooleanConverter">
+      <summary>提供将 <see cref="T:System.Boolean" /> 对象与其他各种表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.BooleanConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器是否可使用指定上下文将给定源类型的对象转换为布尔对象。</summary>
+      <returns>如果此对象可以执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要从中进行转换的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>将给定值对象转换为布尔对象。</summary>
+      <returns>表示转换的 <paramref name="value" /> 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">指定要转换成的区域性的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> 不是目标类型的有效值。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="T:System.ComponentModel.ByteConverter">
+      <summary>提供将 8 位无符号整数对象与其他各种表示形式互相转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.ByteConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.ByteConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.ComponentModel.CharConverter">
+      <summary>提供将 Unicode 字符对象与各种其他表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.CharConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器是否可使用指定上下文将给定源类型的对象转换为 Unicode 字符对象。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="sourceType">一个 <see cref="T:System.Type" />，表示要转换的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>将给定对象转换为 Unicode 字符对象。</summary>
+      <returns>表示转换的 <paramref name="value" /> 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">
+        <paramref name="value" /> 将要转换到的区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> 不是目标类型的有效值。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>使用这些参数将给定值对象转换为 Unicode 字符对象。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">
+        <paramref name="value" /> 将要转换到的区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">要将值转换成的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="T:System.ComponentModel.CollectionConverter">
+      <summary>提供将集合对象与各种其他表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.CollectionConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.CollectionConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.CollectionConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>将给定的值对象转换为指定的目标类型。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">要将 <paramref name="value" /> 转换成的区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。此参数必须从 <see cref="T:System.Collections.ICollection" /> 继承。</param>
+      <param name="destinationType">要将值转换成的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 为 null。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="T:System.ComponentModel.DateTimeConverter">
+      <summary>提供将 <see cref="T:System.DateTime" /> 对象与其他各种表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.DateTimeConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器是否可使用指定上下文将给定源类型的对象转换为 <see cref="T:System.DateTime" />。</summary>
+      <returns>如果此对象可以执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要从中进行转换的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器能否使用上下文将对象转换为给定的目标类型。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="destinationType">表示要转换到的类型的 <see cref="T:System.Type" />。</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>将给定的值对象转换为 <see cref="T:System.DateTime" />。</summary>
+      <returns>表示转换的 <paramref name="value" /> 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">一个可选的 <see cref="T:System.Globalization.CultureInfo" />。如果未提供区域性设置，则使用当前区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> 不是目标类型的有效值。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>使用这些参数将给定的值对象转换为 <see cref="T:System.DateTime" />。</summary>
+      <returns>表示转换的 <paramref name="value" /> 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">一个可选的 <see cref="T:System.Globalization.CultureInfo" />。如果未提供区域性设置，则使用当前区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">要将值转换成的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="T:System.ComponentModel.DateTimeOffsetConverter">
+      <summary>提供将 <see cref="T:System.DateTimeOffset" /> 结构与其他各种表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.DateTimeOffsetConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>返回一个值，该值指示是否可将指定源类型的对象转换为 <see cref="T:System.DateTimeOffset" />。</summary>
+      <returns>如果可以将指定的类型转换为 <see cref="T:System.DateTimeOffset" />，则为 true；否则为 false。</returns>
+      <param name="context">日期格式上下文。</param>
+      <param name="sourceType">要检查的源类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>返回一个值，该值指示是否可将 <see cref="T:System.DateTimeOffset" /> 转换为指定类型的对象。</summary>
+      <returns>如果可以将 <see cref="T:System.DateTimeOffset" /> 转换为指定的类型，则为 true；否则为 false。</returns>
+      <param name="context">日期格式上下文。</param>
+      <param name="destinationType">要检查的目标类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>将指定对象转换为 <see cref="T:System.DateTimeOffset" />。</summary>
+      <returns>表示指定对象的 <see cref="T:System.DateTimeOffset" />。</returns>
+      <param name="context">日期格式上下文。</param>
+      <param name="culture">日期区域性。</param>
+      <param name="value">要转换的对象。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>将 <see cref="T:System.DateTimeOffset" /> 转换为指定类型的对象。</summary>
+      <returns>一个表示 <see cref="T:System.DateTimeOffset" /> 的指定类型的对象。</returns>
+      <param name="context">日期格式上下文。</param>
+      <param name="culture">日期区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.DateTimeOffset" />。</param>
+      <param name="destinationType">要转换到的类型。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="T:System.ComponentModel.DecimalConverter">
+      <summary>提供将 <see cref="T:System.Decimal" /> 对象与其他各种表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.DecimalConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器能否使用上下文将对象转换为给定的目标类型。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="destinationType">表示要转换到的类型的 <see cref="T:System.Type" />。</param>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>使用这些参数将给定的值对象转换为 <see cref="T:System.Decimal" />。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">一个可选的 <see cref="T:System.Globalization.CultureInfo" />。如果未提供区域性设置，则使用当前区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">要将值转换成的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 为 null。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="T:System.ComponentModel.DoubleConverter">
+      <summary>提供将双精度浮点数字对象与各种其他表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.DoubleConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.DoubleConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.ComponentModel.EnumConverter">
+      <summary>提供将 <see cref="T:System.Enum" /> 对象与其他各种表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.#ctor(System.Type)">
+      <summary>为给定类型初始化 <see cref="T:System.ComponentModel.EnumConverter" /> 类的新实例。</summary>
+      <param name="type">
+        <see cref="T:System.Type" /> 表示与此枚举转换器关联的枚举类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器是否可使用指定上下文将给定源类型的对象转换为枚举对象。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要从中进行转换的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器能否使用上下文将对象转换为给定的目标类型。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="destinationType">表示要转换到的类型的 <see cref="T:System.Type" />。</param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>将指定的值对象转换为枚举对象。</summary>
+      <returns>表示转换的 <paramref name="value" /> 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">一个可选的 <see cref="T:System.Globalization.CultureInfo" />。如果未提供区域性设置，则使用当前区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> 不是目标类型的有效值。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>将给定的值对象转换为指定的目标类型。</summary>
+      <returns>表示转换的 <paramref name="value" /> 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">一个可选的 <see cref="T:System.Globalization.CultureInfo" />。如果未提供区域性设置，则使用当前区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">要将值转换成的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 为 null。</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" /> 不是枚举的有效值。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="P:System.ComponentModel.EnumConverter.EnumType">
+      <summary>指定与此转换器关联的枚举数的类型。</summary>
+      <returns>与此转换器关联的枚举数的类型。</returns>
+    </member>
+    <member name="T:System.ComponentModel.GuidConverter">
+      <summary>提供将 <see cref="T:System.Guid" /> 对象与其他各种表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.GuidConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器是否可使用上下文将给定源类型的对象转换为 GUID 对象。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要从中进行转换的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器能否使用上下文将对象转换为给定的目标类型。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="destinationType">表示要转换到的类型的 <see cref="T:System.Type" />。</param>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>将给定对象转换为 GUID 对象。</summary>
+      <returns>表示转换的 <paramref name="value" /> 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">一个可选的 <see cref="T:System.Globalization.CultureInfo" />。如果未提供区域性设置，则使用当前区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>将给定对象转换为其他类型。</summary>
+      <returns>被转换的对象。</returns>
+      <param name="context">格式化程序上下文。</param>
+      <param name="culture">
+        <paramref name="value" /> 将要转换到的区域性。</param>
+      <param name="value">要转换的对象。</param>
+      <param name="destinationType">对象要转换为的类型。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 为 null。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="T:System.ComponentModel.Int16Converter">
+      <summary>提供将 16 位有符号整数对象与其他表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int16Converter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.Int16Converter" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.ComponentModel.Int32Converter">
+      <summary>提供将 32 位有符号整数对象与其他表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int32Converter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.Int32Converter" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.ComponentModel.Int64Converter">
+      <summary>提供将 64 位有符号整数对象与各种其他表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int64Converter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.Int64Converter" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.ComponentModel.ITypeDescriptorContext">
+      <summary>提供有关组件的上下文信息，如其容器和属性描述符。</summary>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.Container">
+      <summary>获取表示此 <see cref="T:System.ComponentModel.TypeDescriptor" /> 请求的容器。</summary>
+      <returns>包含此 <see cref="T:System.ComponentModel.TypeDescriptor" /> 的对象集的 <see cref="T:System.ComponentModel.IContainer" />；否则，如果不存在容器，或者如果 <see cref="T:System.ComponentModel.TypeDescriptor" /> 不使用外部对象，则为 null。</returns>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.Instance">
+      <summary>获取与此类型说明符请求相连接的对象。</summary>
+      <returns>调用 <see cref="T:System.ComponentModel.TypeDescriptor" /> 的方法的对象；否则，如果不存在负责调用的对象，则为 null。</returns>
+    </member>
+    <member name="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanged">
+      <summary>引发 <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" /> 事件。</summary>
+    </member>
+    <member name="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanging">
+      <summary>引发 <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanging" /> 事件。</summary>
+      <returns>如果该对象可以更改，则为 true；否则为 false。</returns>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor">
+      <summary>获取与给定上下文项相关联的 <see cref="T:System.ComponentModel.PropertyDescriptor" />。</summary>
+      <returns>描述给定上下文项的 <see cref="T:System.ComponentModel.PropertyDescriptor" />；否则，如果不存在负责调用的 <see cref="T:System.ComponentModel.PropertyDescriptor" />，则为 null。</returns>
+    </member>
+    <member name="T:System.ComponentModel.MultilineStringConverter">
+      <summary>提供将多行字符串转换为单行字符串的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.MultilineStringConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.MultilineStringConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.MultilineStringConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>使用指定的上下文和区域性信息将给定的值对象转换为指定的类型。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />。如果传递 null，则采用当前区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">要将 value 参数转换为的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 为 null。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="T:System.ComponentModel.NullableConverter">
+      <summary>提供可以为 null 的类型与其基础基元类型间的自动转换。</summary>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.#ctor(System.Type)">
+      <summary>初始化 <see cref="T:System.ComponentModel.NullableConverter" /> 类的新实例。</summary>
+      <param name="type">指定的可以为 null 的类型。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="type" /> 不是可以为 null 的类型。</exception>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>返回该转换器是否可以使用指定的上下文将给定类型的对象转换为此转换器的类型。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="sourceType">一个 <see cref="T:System.Type" />，表示要转换的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>返回此转换器是否可以使用指定的上下文将该对象转换为指定的类型。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="destinationType">一个 <see cref="T:System.Type" />，表示要转换到的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>使用指定的上下文和区域性信息将给定的对象转换为此转换器的类型。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">用作当前区域性的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>使用指定的上下文和区域性信息将给定的值对象转换为指定的类型。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">用作当前区域性的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">要将 value 参数转换为的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 为 null。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.NullableType">
+      <summary>获取可以为 null 的类型。</summary>
+      <returns>表示可以为 null 的类型的 <see cref="T:System.Type" />。</returns>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.UnderlyingType">
+      <summary>获取基础类型。</summary>
+      <returns>表示基础类型的 <see cref="T:System.Type" />。</returns>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.UnderlyingTypeConverter">
+      <summary>获取基础类型转换器。</summary>
+      <returns>表示基础类型转换器的 <see cref="T:System.ComponentModel.TypeConverter" />。</returns>
+    </member>
+    <member name="T:System.ComponentModel.PropertyDescriptor">
+      <summary>提供类上的属性的抽象化。</summary>
+    </member>
+    <member name="T:System.ComponentModel.SByteConverter">
+      <summary>提供将 8 位无符号整数对象与字符串相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.SByteConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.SByteConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.ComponentModel.SingleConverter">
+      <summary>提供将单精度浮点数字对象与各种其他表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.SingleConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.SingleConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.ComponentModel.StringConverter">
+      <summary>提供在字符串对象与其他表示形式之间实现相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.StringConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器是否可以使用指定的上下文将给定源类型中的对象转换为字符串。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要从中进行转换的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>将指定的值对象转换为 <see cref="T:System.String" /> 对象。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">要使用的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">转换未能执行。</exception>
+    </member>
+    <member name="T:System.ComponentModel.TimeSpanConverter">
+      <summary>提供将 <see cref="T:System.TimeSpan" /> 对象与其他表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.TimeSpanConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器是否可使用指定上下文将给定源类型的对象转换为 <see cref="T:System.TimeSpan" />。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="sourceType">
+        <see cref="T:System.Type" />，表示要从中进行转换的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器能否使用上下文将对象转换为给定的目标类型。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="destinationType">表示要转换到的类型的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 为 null。</exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> 不是目标类型的有效值。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>将给定对象转换为 <see cref="T:System.TimeSpan" />。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">一个可选的 <see cref="T:System.Globalization.CultureInfo" />。如果未提供区域性设置，则使用当前区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" /> 不是目标类型的有效值。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>将给定对象转换为其他类型。</summary>
+      <returns>被转换的对象。</returns>
+      <param name="context">格式化程序上下文。</param>
+      <param name="culture">
+        <paramref name="value" /> 将要转换到的区域性。</param>
+      <param name="value">要转换的对象。</param>
+      <param name="destinationType">对象要转换为的类型。</param>
+    </member>
+    <member name="T:System.ComponentModel.TypeConverter">
+      <summary>提供一种将值的类型转换为其他类型以及访问标准值和子属性的统一方法。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.TypeConverter" /> 类的新实例。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>返回该转换器是否可以使用指定的上下文将给定类型的对象转换为此转换器的类型。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="sourceType">一个 <see cref="T:System.Type" />，表示要转换的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)">
+      <summary>返回该转换器是否可以将给定类型的对象转换为此转换器的类型。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="sourceType">一个 <see cref="T:System.Type" />，表示要转换的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>返回此转换器是否可以使用指定的上下文将该对象转换为指定的类型。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="destinationType">一个 <see cref="T:System.Type" />，表示要转换到的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertTo(System.Type)">
+      <summary>返回此转换器是否可将该对象转换为指定的类型。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="destinationType">一个 <see cref="T:System.Type" />，表示要转换到的类型。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>使用指定的上下文和区域性信息将给定的对象转换为此转换器的类型。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">用作当前区域性的 <see cref="T:System.Globalization.CultureInfo" />。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFrom(System.Object)">
+      <summary>将给定值转换为此转换器的类型。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.String)">
+      <summary>使用不变区域性将给定字符串转换为此转换器的类型。</summary>
+      <returns>一个 <see cref="T:System.Object" />，表示已转换的文本。</returns>
+      <param name="text">要转换的 <see cref="T:System.String" />。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.String)">
+      <summary>使用指定的上下文和区域性信息将给定的文本转换为对象。</summary>
+      <returns>一个 <see cref="T:System.Object" />，表示已转换的文本。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />。如果传递 null，则采用当前区域性。</param>
+      <param name="text">要转换的 <see cref="T:System.String" />。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromString(System.String)">
+      <summary>将指定文本转换为对象。</summary>
+      <returns>一个 <see cref="T:System.Object" />，表示已转换的文本。</returns>
+      <param name="text">要转换的对象的文本表示形式。</param>
+      <exception cref="T:System.NotSupportedException">该字符串不能转换为适当的对象。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>使用指定的上下文和区域性信息将给定的值对象转换为指定的类型。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />。如果传递 null，则采用当前区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">
+        <paramref name="value" /> 参数要转换成的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 参数为 null。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertTo(System.Object,System.Type)">
+      <summary>使用参数将给定的值对象转换为指定的类型。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">
+        <paramref name="value" /> 参数要转换成的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 参数为 null。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToInvariantString(System.Object)">
+      <summary>将指定值转换为区域性不变的字符串表示形式。</summary>
+      <returns>
+        <see cref="T:System.String" />，表示已转换的值。</returns>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>使用指定的上下文和区域性信息将给定的值转换为字符串表示形式。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />。如果传递 null，则采用当前区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToString(System.Object)">
+      <summary>将指定值转换为字符串表示形式。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)">
+      <summary>返回无法执行转换时引发的异常。</summary>
+      <returns>一个 <see cref="T:System.Exception" />，表示当无法执行转换时引发的异常。</returns>
+      <param name="value">要转换的 <see cref="T:System.Object" />，或者，如果该对象不可用，则为 null。</param>
+      <exception cref="T:System.NotSupportedException">由此方法自动引发。</exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)">
+      <summary>返回无法执行转换时引发的异常。</summary>
+      <returns>一个 <see cref="T:System.Exception" />，表示当无法执行转换时引发的异常。</returns>
+      <param name="value">要转换的 <see cref="T:System.Object" />，或者，如果该对象不可用，则为 null。</param>
+      <param name="destinationType">一个 <see cref="T:System.Type" />，表示转换尝试转换到的类型。</param>
+      <exception cref="T:System.NotSupportedException">由此方法自动引发。</exception>
+    </member>
+    <member name="T:System.ComponentModel.TypeConverterAttribute">
+      <summary>指定对于此特性绑定到的对象要使用哪种类型作为转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.#ctor(System.String)">
+      <summary>通过将指定类型名称用作该属性所绑定到的对象的数据转换器，初始化 <see cref="T:System.ComponentModel.TypeConverterAttribute" /> 类的新实例。</summary>
+      <param name="typeName">类的完全限定名，该类将用于此属性所绑定到的对象的数据转换。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)">
+      <summary>通过将指定类型用作该属性所绑定到的对象的数据转换器，初始化 <see cref="T:System.ComponentModel.TypeConverterAttribute" /> 类的新实例。</summary>
+      <param name="type">表示转换器类的类型的 <see cref="T:System.Type" />，它将用于该特性所绑定到的对象的数据转换。</param>
+    </member>
+    <member name="P:System.ComponentModel.TypeConverterAttribute.ConverterTypeName">
+      <summary>获取 <see cref="T:System.Type" /> 的完全限定的类型名，以将其用作此特性所绑定到的对象的转换器。</summary>
+      <returns>
+        <see cref="T:System.Type" /> 的完全限定的类型名，它将用作此特性所绑定到的对象的转换器；如果不存在，则为空字符串 ("")。默认值为空字符串 ("")。</returns>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.Equals(System.Object)">
+      <summary>返回给定对象的值是否等于当前的 <see cref="T:System.ComponentModel.TypeConverterAttribute" />。</summary>
+      <returns>如果给定对象的值等于当前 <see cref="T:System.ComponentModel.TypeConverterAttribute" /> 的值，则为 true；否则为 false。</returns>
+      <param name="obj">要进行值的相等性测试的对象。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.GetHashCode">
+      <summary>返回此实例的哈希代码。</summary>
+      <returns>当前 <see cref="T:System.ComponentModel.TypeConverterAttribute" /> 的哈希代码。</returns>
+    </member>
+    <member name="T:System.ComponentModel.TypeDescriptor">
+      <summary>提供有关组件特征的信息，如组件的特性、属性和事件。此类不能被继承。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeDescriptor.GetConverter(System.Type)">
+      <summary>返回指定类型的类型转换器。</summary>
+      <returns>指定类型的 <see cref="T:System.ComponentModel.TypeConverter" />。</returns>
+      <param name="type">目标组件的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="component" /> 为 null。</exception>
+    </member>
+    <member name="T:System.ComponentModel.TypeListConverter">
+      <summary>提供可用于以可用类型填充列表框的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.#ctor(System.Type[])">
+      <summary>将类型数组用作可用的类型来初始化 <see cref="T:System.ComponentModel.TypeListConverter" /> 类的新实例。</summary>
+      <param name="types">用作可用类型的类型 <see cref="T:System.Type" /> 的数组。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器是否可以使用给定上下文转换源对象的指定 <see cref="T:System.Type" />。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="sourceType">源对象的 <see cref="T:System.Type" />。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>获取一个值，该值指示此转换器能否使用上下文将对象转换为给定的目标类型。</summary>
+      <returns>如果该转换器能够执行转换，则为 true；否则为 false。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="destinationType">表示要转换到的类型的 <see cref="T:System.Type" />。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>将指定对象转换为转换器的本机类型。</summary>
+      <returns>表示转换的 value 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />，它指定用于表示该字体的区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>将给定的值对象转换为指定的目标类型。</summary>
+      <returns>表示转换的 <paramref name="value" /> 的 <see cref="T:System.Object" />。</returns>
+      <param name="context">一个 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />，提供格式上下文。</param>
+      <param name="culture">一个可选的 <see cref="T:System.Globalization.CultureInfo" />。如果未提供区域性设置，则使用当前区域性。</param>
+      <param name="value">要转换的 <see cref="T:System.Object" />。</param>
+      <param name="destinationType">要将值转换成的 <see cref="T:System.Type" />。</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 为 null。</exception>
+      <exception cref="T:System.NotSupportedException">不能执行转换。</exception>
+    </member>
+    <member name="T:System.ComponentModel.UInt16Converter">
+      <summary>提供将 16 位无符号整数对象与其他表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt16Converter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.UInt16Converter" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.ComponentModel.UInt32Converter">
+      <summary>提供将 32 位无符号整数对象与其他各种表示形式互相转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt32Converter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.UInt32Converter" /> 类的新实例。</summary>
+    </member>
+    <member name="T:System.ComponentModel.UInt64Converter">
+      <summary>提供将 64 位无符号整数对象与其他表示形式相互转换的类型转换器。</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt64Converter.#ctor">
+      <summary>初始化 <see cref="T:System.ComponentModel.UInt64Converter" /> 类的新实例。</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ComponentModel.TypeConverter</name>
+  </assembly>
+  <members>
+    <member name="T:System.ComponentModel.ArrayConverter">
+      <summary>Предоставляет преобразователь типов для преобразования объектов <see cref="T:System.Array" /> в другие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.ArrayConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.ArrayConverter" />. </summary>
+    </member>
+    <member name="M:System.ComponentModel.ArrayConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразовывает указанное значение объекта в указанный тип.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Язык и региональные параметры, в которые будет выполнено преобразование <paramref name="value" />.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <param name="destinationType">Тип <see cref="T:System.Type" />, к которому следует привести значение. </param>
+      <exception cref="T:System.ArgumentNullException">Параметр <paramref name="destinationType" /> имеет значение null. </exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="T:System.ComponentModel.BaseNumberConverter">
+      <summary>Предоставляет преобразователь базового типа для числовых типов, не относящихся к типам с плавающей запятой.</summary>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.BaseNumberConverter" />.</summary>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Определяет, может ли данный преобразователь преобразовывать объект заданного типа источника в собственный тип преобразователя.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить операцию, в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="sourceType">Тип <see cref="T:System.Type" />, представляющий конечный тип преобразования. </param>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Возвращает значение, показывающее, может ли данный преобразователь преобразовать объект с помощью контекста в конечный тип.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить операцию, в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="t">
+        <see cref="T:System.Type" /> представляет нужный результат конвертирования. </param>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует указанный объект в тип, используемый преобразователем.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Объект <see cref="T:System.Globalization.CultureInfo" />, определяющий язык и региональные параметры для представления числа. </param>
+      <param name="value">Преобразуемый объект. </param>
+      <exception cref="T:System.Exception">Значение <paramref name="value" /> не является допустимым значением для конечного типа.</exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразует указанный объект в другой тип.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Объект <see cref="T:System.Globalization.CultureInfo" />, определяющий язык и региональные параметры для представления числа. </param>
+      <param name="value">Преобразуемый объект. </param>
+      <param name="destinationType">Тип, в который требуется преобразовать объект. </param>
+      <exception cref="T:System.ArgumentNullException">Параметр <paramref name="destinationType" /> имеет значение null.</exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="T:System.ComponentModel.BooleanConverter">
+      <summary>Предоставляет преобразователь типов для преобразования объектов <see cref="T:System.Boolean" /> в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.BooleanConverter" />. </summary>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Возвращает значение, показывающее, может ли этот преобразователь выполнить преобразование объекта заданного исходного типа в объект типа Boolean, используя заданный контекст.</summary>
+      <returns>true, если этот объект может выполнить преобразование; в противном случае — false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="sourceType">Тип <see cref="T:System.Type" />, представляющий тип, из которого нужно выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует данный объект значения в объект Boolean.</summary>
+      <returns>Объект <see cref="T:System.Object" />, представляющий преобразованное значение <paramref name="value" />.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Объект <see cref="T:System.Globalization.CultureInfo" />, определяющий язык и региональные параметры для преобразования.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <exception cref="T:System.FormatException">Значение <paramref name="value" /> не является допустимым значением для конечного типа. </exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="T:System.ComponentModel.ByteConverter">
+      <summary>Предоставляет преобразователь типов для преобразования 8-разрядных целых объектов в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.ByteConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.ByteConverter" />. </summary>
+    </member>
+    <member name="T:System.ComponentModel.CharConverter">
+      <summary>Предоставляет преобразователь типов для преобразования символьных объектов Юникода в другие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.CharConverter" />. </summary>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Возвращает значение, показывающее, может ли этот преобразователь выполнить преобразование объекта заданного исходного типа в символьный объект Юникод, используя заданный контекст.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="sourceType">Объект <see cref="T:System.Type" />, представляющий тип, из которого требуется выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует данный объект в символьный объект Юникод.</summary>
+      <returns>Объект <see cref="T:System.Object" />, представляющий преобразованное значение <paramref name="value" />.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Язык и региональные параметры, в которые будет выполнено преобразование <paramref name="value" />.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <exception cref="T:System.FormatException">Значение <paramref name="value" /> не является допустимым значением для конечного типа. </exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразовывает объект с заданным значением в символьный объект Юникод, используя аргументы.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Язык и региональные параметры, в которые будет выполнено преобразование <paramref name="value" />.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <param name="destinationType">Тип <see cref="T:System.Type" />, к которому следует привести значение. </param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="T:System.ComponentModel.CollectionConverter">
+      <summary>Предоставляет преобразователь типов для преобразования объектов коллекций в различные другие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.CollectionConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.CollectionConverter" />. </summary>
+    </member>
+    <member name="M:System.ComponentModel.CollectionConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразовывает указанное значение объекта в указанный тип.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Язык и региональные параметры, к которым будет преобразован параметр <paramref name="value" />.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />.Этот параметр должен наследоваться из <see cref="T:System.Collections.ICollection" />.</param>
+      <param name="destinationType">Тип <see cref="T:System.Type" />, к которому следует привести значение. </param>
+      <exception cref="T:System.ArgumentNullException">Параметр <paramref name="destinationType" /> имеет значение null. </exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="T:System.ComponentModel.DateTimeConverter">
+      <summary>Предоставляет преобразователь типа для преобразования объектов <see cref="T:System.DateTime" /> в другие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.DateTimeConverter" />.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Возвращает значение, показывающее, может ли этот преобразователь выполнить преобразование объекта заданного исходного типа в <see cref="T:System.DateTime" />, используя заданный контекст.</summary>
+      <returns>true, если этот объект может выполнить преобразование; в противном случае — false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="sourceType">Тип <see cref="T:System.Type" />, представляющий тип, из которого нужно выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Получает значение, показывающее, может ли данный преобразователь преобразовать объект с помощью контекста в заданный конечный тип.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="destinationType">Объект <see cref="T:System.Type" />, представляющий тип, в который необходимо выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует данный объект значения в объект <see cref="T:System.DateTime" />.</summary>
+      <returns>Объект <see cref="T:System.Object" />, представляющий преобразованное значение <paramref name="value" />.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Необязательный объект <see cref="T:System.Globalization.CultureInfo" />.Если не предоставляются, предполагается использование текущего языка и региональных параметров.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <exception cref="T:System.FormatException">Значение <paramref name="value" /> не является допустимым значением для конечного типа. </exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразует объект с заданным значением в <see cref="T:System.DateTime" />, используя заданные аргументы.</summary>
+      <returns>Объект <see cref="T:System.Object" />, представляющий преобразованное значение <paramref name="value" />.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Необязательный объект <see cref="T:System.Globalization.CultureInfo" />.Если не предоставляются, предполагается использование текущего языка и региональных параметров.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <param name="destinationType">Тип <see cref="T:System.Type" />, к которому следует привести значение. </param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="T:System.ComponentModel.DateTimeOffsetConverter">
+      <summary>Предоставляет преобразователь типов для преобразования структур <see cref="T:System.DateTimeOffset" /> в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.DateTimeOffsetConverter" />. </summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Возвращает значение, указывающее, можно преобразовать объект с заданным исходным типом в объект <see cref="T:System.DateTimeOffset" />.</summary>
+      <returns>Значение true, если заданный тип можно преобразовать в объект <see cref="T:System.DateTimeOffset" />; в противном случае — значение false.</returns>
+      <param name="context">Контекст формата даты.</param>
+      <param name="sourceType">Проверяемый исходный тип.</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Возвращает значение, указывающее, можно преобразовать объект <see cref="T:System.DateTimeOffset" /> в объект заданного типа.</summary>
+      <returns>Значение true, если объект <see cref="T:System.DateTimeOffset" /> можно привести к заданному типу; в противном случае — значение false.</returns>
+      <param name="context">Контекст формата даты.</param>
+      <param name="destinationType">Проверяемый конечный тип.</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует указанный объект в <see cref="T:System.DateTimeOffset" />.</summary>
+      <returns>Объект <see cref="T:System.DateTimeOffset" />, представляющий заданный объект.</returns>
+      <param name="context">Контекст формата даты.</param>
+      <param name="culture">Язык и региональные параметры, определяющие формат даты.</param>
+      <param name="value">Преобразуемый объект.</param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено.</exception>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразует <see cref="T:System.DateTimeOffset" /> в объект заданного типа.</summary>
+      <returns>Объект заданного типа, представляющий объект <see cref="T:System.DateTimeOffset" />. </returns>
+      <param name="context">Контекст формата даты.</param>
+      <param name="culture">Язык и региональные параметры, определяющие формат даты.</param>
+      <param name="value">Преобразуемая структура <see cref="T:System.DateTimeOffset" />.</param>
+      <param name="destinationType">Тип, в который выполняется преобразование.</param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено.</exception>
+    </member>
+    <member name="T:System.ComponentModel.DecimalConverter">
+      <summary>Предоставляет преобразователь типов для преобразования объектов <see cref="T:System.Decimal" /> в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.DecimalConverter" />. </summary>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Получает значение, показывающее, может ли данный преобразователь преобразовать объект с помощью контекста в заданный конечный тип.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="destinationType">Объект <see cref="T:System.Type" />, представляющий тип, в который необходимо выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразует объект с заданным значением в <see cref="T:System.Decimal" />, используя заданные аргументы.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Необязательный объект <see cref="T:System.Globalization.CultureInfo" />.Если не предоставляются, предполагается использование текущего языка и региональных параметров.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <param name="destinationType">Тип <see cref="T:System.Type" />, к которому следует привести значение. </param>
+      <exception cref="T:System.ArgumentNullException">Свойство <paramref name="destinationType" /> имеет значение null. </exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="T:System.ComponentModel.DoubleConverter">
+      <summary>Предоставляет преобразователь типов для преобразования объектов, являющихся числами с плавающей запятой с удвоенной точностью, в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DoubleConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.DoubleConverter" />. </summary>
+    </member>
+    <member name="T:System.ComponentModel.EnumConverter">
+      <summary>Предоставляет преобразователь типа для преобразования объектов <see cref="T:System.Enum" /> в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.#ctor(System.Type)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.EnumConverter" /> для данного типа.</summary>
+      <param name="type">Тип <see cref="T:System.Type" />, представляющий тип перечисления, связываемый с этим преобразователем перечисления. </param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Возвращает значение, показывающее, может ли этот преобразователь выполнить преобразование объекта заданного исходного типа в объект перечисления, используя заданный контекст.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="sourceType">Тип <see cref="T:System.Type" />, представляющий тип, из которого нужно выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Получает значение, показывающее, может ли данный преобразователь преобразовать объект с помощью контекста в заданный конечный тип.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="destinationType">Объект <see cref="T:System.Type" />, представляющий тип, в который необходимо выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует заданный объект значения в объект перечисления.</summary>
+      <returns>Объект <see cref="T:System.Object" />, представляющий преобразованное значение <paramref name="value" />.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Необязательный объект <see cref="T:System.Globalization.CultureInfo" />.Если не предоставляются, предполагается использование текущего языка и региональных параметров.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <exception cref="T:System.FormatException">Значение <paramref name="value" /> не является допустимым значением для конечного типа. </exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразовывает указанное значение объекта в указанный тип.</summary>
+      <returns>Объект <see cref="T:System.Object" />, представляющий преобразованное значение <paramref name="value" />.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Необязательный объект <see cref="T:System.Globalization.CultureInfo" />.Если не предоставляются, предполагается использование текущего языка и региональных параметров.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <param name="destinationType">Тип <see cref="T:System.Type" />, к которому следует привести значение. </param>
+      <exception cref="T:System.ArgumentNullException">Параметр <paramref name="destinationType" /> имеет значение null. </exception>
+      <exception cref="T:System.ArgumentException">Параметр <paramref name="value" /> не является допустимым значением перечисления. </exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="P:System.ComponentModel.EnumConverter.EnumType">
+      <summary>Определяет тип перечислителя, с которым связан этот преобразователь.</summary>
+      <returns>Определяет тип перечислителя, с которым связан этот преобразователь.</returns>
+    </member>
+    <member name="T:System.ComponentModel.GuidConverter">
+      <summary>Предоставляет преобразователь типов для преобразования объектов <see cref="T:System.Guid" /> в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.GuidConverter" />. </summary>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Возвращает значение, показывающее, может ли этот преобразователь выполнить преобразование объекта заданного исходного типа в объект GUID, используя контекст.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="sourceType">Тип <see cref="T:System.Type" />, представляющий тип, из которого нужно выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Получает значение, показывающее, может ли данный преобразователь преобразовать объект с помощью контекста в заданный конечный тип.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="destinationType">Объект <see cref="T:System.Type" />, представляющий тип, в который необходимо выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует данный объект в объект GUID.</summary>
+      <returns>Объект <see cref="T:System.Object" />, представляющий преобразованное значение <paramref name="value" />.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Необязательный объект <see cref="T:System.Globalization.CultureInfo" />.Если не предоставляются, предполагается использование текущего языка и региональных параметров.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразует указанный объект в другой тип.</summary>
+      <returns>Преобразованный объект.</returns>
+      <param name="context">Контекст модуля форматирования. </param>
+      <param name="culture">Язык и региональные параметры, в которые будет выполнено преобразование <paramref name="value" />.</param>
+      <param name="value">Преобразуемый объект. </param>
+      <param name="destinationType">Тип, в который требуется преобразовать объект. </param>
+      <exception cref="T:System.ArgumentNullException">Параметр <paramref name="destinationType" /> имеет значение null.</exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="T:System.ComponentModel.Int16Converter">
+      <summary>Предоставляет преобразователь типа для преобразования 16-разрядных целочисленных объектов со знаком в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int16Converter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.Int16Converter" />. </summary>
+    </member>
+    <member name="T:System.ComponentModel.Int32Converter">
+      <summary>Предоставляет преобразователь типа для преобразования 32-разрядных целочисленных объектов со знаком в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int32Converter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.Int32Converter" />. </summary>
+    </member>
+    <member name="T:System.ComponentModel.Int64Converter">
+      <summary>Предоставляет преобразователь типов для преобразования 64-разрядных целочисленных объектов со знаком в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int64Converter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.Int64Converter" />. </summary>
+    </member>
+    <member name="T:System.ComponentModel.ITypeDescriptorContext">
+      <summary>Предоставляет контекстную информацию о компоненте, например, его контейнер и дескриптор свойства.</summary>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.Container">
+      <summary>Возвращает контейнер, представляющий это запрос <see cref="T:System.ComponentModel.TypeDescriptor" />.</summary>
+      <returns>Контейнер <see cref="T:System.ComponentModel.IContainer" /> с набором объектов для этого дескриптора <see cref="T:System.ComponentModel.TypeDescriptor" />; в противном случае — значение null, если контейнер отсутствует или если дескриптор <see cref="T:System.ComponentModel.TypeDescriptor" /> не использует внешних объектов.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.Instance">
+      <summary>Возвращает объект, связанный с этим запросом дескриптора типа.</summary>
+      <returns>Объект, вызывающий метод для дескриптора <see cref="T:System.ComponentModel.TypeDescriptor" />; в противном случае — значение null, если ответственный за вызов объект отсутствует.</returns>
+    </member>
+    <member name="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanged">
+      <summary>Создает событие <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" />.</summary>
+    </member>
+    <member name="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanging">
+      <summary>Создает событие <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanging" />.</summary>
+      <returns>Значение true, если объект может быть изменен; в противном случае — значение false.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor">
+      <summary>Возвращает <see cref="T:System.ComponentModel.PropertyDescriptor" />, связанный с заданным элементом контекста.</summary>
+      <returns>Дескриптор <see cref="T:System.ComponentModel.PropertyDescriptor" />, описывающий данный элемент контекста; в противном случае — значение null, если отсутствует дескриптор <see cref="T:System.ComponentModel.PropertyDescriptor" />, ответственный за вызов.</returns>
+    </member>
+    <member name="T:System.ComponentModel.MultilineStringConverter">
+      <summary>Предоставляет преобразователь типов для выполнения многострочных строк в простую строку.</summary>
+    </member>
+    <member name="M:System.ComponentModel.MultilineStringConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.MultilineStringConverter" />. </summary>
+    </member>
+    <member name="M:System.ComponentModel.MultilineStringConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразует данное значение в указанный тип, используя заданные сведения о контексте, а также о языке и региональных параметрах.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">Объект <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, предоставляющий контекст формата.</param>
+      <param name="culture">Объект <see cref="T:System.Globalization.CultureInfo" />.Если передано значение null, используется текущая установка языка и региональных параметров.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />.</param>
+      <param name="destinationType">Значение типа <see cref="T:System.Type" />, в которое преобразовывается параметр значения.</param>
+      <exception cref="T:System.ArgumentNullException">Параметр <paramref name="destinationType" /> имеет значение null.</exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="T:System.ComponentModel.NullableConverter">
+      <summary>Обеспечивает автоматическое преобразование между обнуляемым типом и базовым примитивом.</summary>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.#ctor(System.Type)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.NullableConverter" />.</summary>
+      <param name="type">Заданный обнуляемый тип.</param>
+      <exception cref="T:System.ArgumentException">Элемент <paramref name="type" /> не является обнуляемым типом.</exception>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Используя заданный контекст, возвращает значение, показывающее, может ли этот преобразователь преобразовать объект данного типа в тип этого преобразователя.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">Объект <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, предоставляющий контекст формата.</param>
+      <param name="sourceType">Объект <see cref="T:System.Type" />, представляющий тип, из которого требуется выполнить преобразование.</param>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Используя заданный контекст, возвращает значение, указывающее, может ли этот преобразователь преобразовать объект к указанному типу.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата.</param>
+      <param name="destinationType">Объект <see cref="T:System.Type" />, представляющий тип, в который требуется сделать преобразование.</param>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует заданный объект в тип этого преобразователя, используя заданный контекст и информацию о языке и региональных параметрах.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата.</param>
+      <param name="culture">Объект <see cref="T:System.Globalization.CultureInfo" />, который используется как текущие язык и региональные параметры.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />.</param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразует данное значение в указанный тип, используя заданные сведения о контексте, а также о языке и региональных параметрах.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата.</param>
+      <param name="culture">Объект <see cref="T:System.Globalization.CultureInfo" />, который используется как текущие язык и региональные параметры.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />.</param>
+      <param name="destinationType">Значение типа <see cref="T:System.Type" />, в которое преобразовывается параметр значения.</param>
+      <exception cref="T:System.ArgumentNullException">Параметр <paramref name="destinationType" /> имеет значение null.</exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.NullableType">
+      <summary>Возвращает обнуляемый тип.</summary>
+      <returns>Тип <see cref="T:System.Type" />, представляющий обнуляемый тип.</returns>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.UnderlyingType">
+      <summary>Возвращает базовый тип.</summary>
+      <returns>Тип <see cref="T:System.Type" />, представляющий базовый тип.</returns>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.UnderlyingTypeConverter">
+      <summary>Возвращает преобразователь базового типа.</summary>
+      <returns>Преобразователь <see cref="T:System.ComponentModel.TypeConverter" />, представляющий преобразователь базового типа.</returns>
+    </member>
+    <member name="T:System.ComponentModel.PropertyDescriptor">
+      <summary>Предоставляет краткое описание свойства класса.</summary>
+    </member>
+    <member name="T:System.ComponentModel.SByteConverter">
+      <summary>Предоставляет преобразователь типов для преобразования 8-разрядных целых чисел без знака в строку и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.SByteConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.SByteConverter" />. </summary>
+    </member>
+    <member name="T:System.ComponentModel.SingleConverter">
+      <summary>Предоставляет преобразователь типов для преобразования объектов, являющихся числами с плавающей запятой с одинарной точностью, в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.SingleConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.SingleConverter" />. </summary>
+    </member>
+    <member name="T:System.ComponentModel.StringConverter">
+      <summary>Предоставляет преобразователь типов для преобразования строковых объектов в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.StringConverter" />. </summary>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Возвращает значение, показывающее, может ли этот преобразователь выполнить преобразование объекта заданного исходного типа в строку, используя заданный контекст.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="sourceType">Тип <see cref="T:System.Type" />, представляющий тип, из которого нужно выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует указанный объект значения в объект <see cref="T:System.String" />.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Используемое средство записи <see cref="T:System.Globalization.CultureInfo" />. </param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <exception cref="T:System.NotSupportedException">Не удалось выполнить преобразование. </exception>
+    </member>
+    <member name="T:System.ComponentModel.TimeSpanConverter">
+      <summary>Предоставляет преобразователь типа для преобразования объектов <see cref="T:System.TimeSpan" /> в другие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.TimeSpanConverter" />. </summary>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Возвращает значение, показывающее, может ли этот преобразователь выполнить преобразование объекта заданного исходного типа в <see cref="T:System.TimeSpan" />, используя заданный контекст.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="sourceType">Тип <see cref="T:System.Type" />, представляющий тип, из которого нужно выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Получает значение, показывающее, может ли данный преобразователь преобразовать объект с помощью контекста в заданный конечный тип.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="destinationType">Объект <see cref="T:System.Type" />, представляющий тип, в который необходимо выполнить преобразование. </param>
+      <exception cref="T:System.ArgumentNullException">Параметр <paramref name="destinationType" /> имеет значение null.</exception>
+      <exception cref="T:System.FormatException">Значение <paramref name="value" /> не является допустимым значением для конечного типа. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует данный объект в объект <see cref="T:System.TimeSpan" />.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Необязательный объект <see cref="T:System.Globalization.CultureInfo" />.Если не предоставляются, предполагается использование текущего языка и региональных параметров.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+      <exception cref="T:System.FormatException">Значение <paramref name="value" /> не является допустимым значением для конечного типа. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразует указанный объект в другой тип. </summary>
+      <returns>Преобразованный объект.</returns>
+      <param name="context">Контекст модуля форматирования. </param>
+      <param name="culture">Язык и региональные параметры, в которые будет выполнено преобразование <paramref name="value" />.</param>
+      <param name="value">Преобразуемый объект. </param>
+      <param name="destinationType">Тип, в который требуется преобразовать объект. </param>
+    </member>
+    <member name="T:System.ComponentModel.TypeConverter">
+      <summary>Предоставляет унифицированный способ преобразования типов значений в другие типы, а также позволяет осуществить доступ к стандартным значениям и вложенным свойствам.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.TypeConverter" />. </summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Используя заданный контекст, возвращает значение, показывающее, может ли этот преобразователь преобразовать объект данного типа в тип этого преобразователя.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="sourceType">Объект <see cref="T:System.Type" />, представляющий тип, из которого требуется выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)">
+      <summary>Возвращает значение, указывающее, может ли этот преобразователь преобразовать объект заданного типа к типу этого преобразователя.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="sourceType">Объект <see cref="T:System.Type" />, представляющий тип, из которого требуется выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Используя заданный контекст, возвращает значение, указывающее, может ли этот преобразователь преобразовать объект к указанному типу.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="destinationType">Объект <see cref="T:System.Type" />, представляющий тип, в который требуется сделать преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertTo(System.Type)">
+      <summary>Возвращает значение, указывающее, может ли этот преобразователь выполнить преобразование данного объекта к заданному типу.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="destinationType">Объект <see cref="T:System.Type" />, представляющий тип, в который требуется сделать преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует заданный объект в тип этого преобразователя, используя заданный контекст и информацию о языке и региональных параметрах.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Объект <see cref="T:System.Globalization.CultureInfo" />, который используется как текущие язык и региональные параметры. </param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFrom(System.Object)">
+      <summary>Приводит заданное значение к типу этого преобразователя.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.String)">
+      <summary>Преобразует заданную строку к типу этого преобразователя, используя нейтральные язык и региональные параметры.</summary>
+      <returns>Объект <see cref="T:System.Object" />, представляющий преобразованный текст.</returns>
+      <param name="text">Преобразуемый объект <see cref="T:System.String" />. </param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.String)">
+      <summary>Преобразует заданный текст в объект, используя заданный контекст и сведения о языке и региональных параметрах.</summary>
+      <returns>Объект <see cref="T:System.Object" />, представляющий преобразованный текст.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Объект <see cref="T:System.Globalization.CultureInfo" />.Если передано значение null, используется текущая установка языка и региональных параметров.</param>
+      <param name="text">Преобразуемый объект <see cref="T:System.String" />. </param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromString(System.String)">
+      <summary>Преобразует заданный текст в объект.</summary>
+      <returns>Объект <see cref="T:System.Object" />, представляющий преобразованный текст.</returns>
+      <param name="text">Текстовое представление преобразуемого объекта. </param>
+      <exception cref="T:System.NotSupportedException">Данная строка не может быть преобразована в соответствующий объект. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразует данное значение в указанный тип, используя заданные сведения о контексте, а также о языке и региональных параметрах.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Объект <see cref="T:System.Globalization.CultureInfo" />.Если передано значение null, используется текущая установка языка и региональных параметров.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <param name="destinationType">
+        <see cref="T:System.Type" />, к которому преобразуется параметр <paramref name="value" />. </param>
+      <exception cref="T:System.ArgumentNullException">Значение параметра <paramref name="destinationType" /> — null. </exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertTo(System.Object,System.Type)">
+      <summary>Преобразует данное значение в указанный тип, используя заданные аргументы.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <param name="destinationType">
+        <see cref="T:System.Type" />, к которому преобразуется параметр <paramref name="value" />. </param>
+      <exception cref="T:System.ArgumentNullException">Значение параметра <paramref name="destinationType" /> — null. </exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToInvariantString(System.Object)">
+      <summary>Преобразует указанное значение в строковое представление для нейтральных языка и региональных параметров.</summary>
+      <returns>Объект <see cref="T:System.String" />, представляющий преобразованное значение.</returns>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует данное значение в заданный тип, используя заданный контекст и сведения о языке и региональных параметрах.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Объект <see cref="T:System.Globalization.CultureInfo" />.Если передано значение null, используется текущая установка языка и региональных параметров.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToString(System.Object)">
+      <summary>Преобразует указанное значение в строковое представление.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)">
+      <summary>Возвращает исключение, возникающее, если преобразование не может быть выполнено.</summary>
+      <returns>Объект <see cref="T:System.Exception" />, представляющий исключение, возникающее, если преобразование не может быть выполнено.</returns>
+      <param name="value">Объект <see cref="T:System.Object" /> для преобразования или null, если объект отсутствует. </param>
+      <exception cref="T:System.NotSupportedException">Автоматически вызывается этим методом. </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)">
+      <summary>Возвращает исключение, возникающее, если преобразование не может быть выполнено.</summary>
+      <returns>Объект <see cref="T:System.Exception" />, представляющий исключение, возникающее, если преобразование не может быть выполнено.</returns>
+      <param name="value">Объект <see cref="T:System.Object" /> для преобразования или null, если объект отсутствует. </param>
+      <param name="destinationType">Объект <see cref="T:System.Type" />, представляющий тип, в который осуществлялось преобразование. </param>
+      <exception cref="T:System.NotSupportedException">Автоматически вызывается этим методом. </exception>
+    </member>
+    <member name="T:System.ComponentModel.TypeConverterAttribute">
+      <summary>Указывает, какой тип использовать в качестве преобразователя для объекта, с которым связан этот атрибут.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.#ctor(System.String)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.TypeConverterAttribute" />, используя заданное имя типа в качестве преобразователя данных для объекта, с которым связан этот атрибут.</summary>
+      <param name="typeName">Полное имя класса, который будет использован в качестве преобразователя данных для объекта, с которым связан этот атрибут. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.TypeConverterAttribute" />, используя заданный тип в качестве преобразователя данных для объекта, с которым связан этот атрибут.</summary>
+      <param name="type">Тип <see cref="T:System.Type" />, представляющий тип класса преобразователя, используемого с целью преобразования данных для объекта, с которым связан этот атрибут. </param>
+    </member>
+    <member name="P:System.ComponentModel.TypeConverterAttribute.ConverterTypeName">
+      <summary>Возвращает полное имя типа <see cref="T:System.Type" />, используемого в качестве преобразователя для объекта, с которым связан этот атрибут.</summary>
+      <returns>Полное имя типа <see cref="T:System.Type" />, используемого в качестве преобразователя для объекта, с которым связан этот атрибут, или пустая строка (""), если этот тип не существует.Значением по умолчанию является пустая строка ("").</returns>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.Equals(System.Object)">
+      <summary>Возвращает значение, показывающее, равно ли значение данного объекта текущему атрибуту <see cref="T:System.ComponentModel.TypeConverterAttribute" />.</summary>
+      <returns>Значение true, если значение данного объекта равно значению текущего атрибута <see cref="T:System.ComponentModel.TypeConverterAttribute" />; в противном случае — значение false.</returns>
+      <param name="obj">Объект, проверяемый на равенство. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.GetHashCode">
+      <summary>Возвращает хэш-код для данного экземпляра.</summary>
+      <returns>Хэш-код для текущего объекта <see cref="T:System.ComponentModel.TypeConverterAttribute" />.</returns>
+    </member>
+    <member name="T:System.ComponentModel.TypeDescriptor">
+      <summary>Содержит сведения о характеристиках компонента, например его атрибутах, свойствах и событиях.Этот класс не наследуется.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeDescriptor.GetConverter(System.Type)">
+      <summary>Возвращает преобразователь типов для заданного типа.</summary>
+      <returns>Идентификатор <see cref="T:System.ComponentModel.TypeConverter" /> для заданного типа.</returns>
+      <param name="type">Тип <see cref="T:System.Type" /> целевого компонента. </param>
+      <exception cref="T:System.ArgumentNullException">Параметр <paramref name="component" /> имеет значение null. </exception>
+    </member>
+    <member name="T:System.ComponentModel.TypeListConverter">
+      <summary>Предоставляет преобразователь типов, который может быть использован для заполнения поля списка доступными типами.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.#ctor(System.Type[])">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.TypeListConverter" />, используя в качестве доступных типов массив типов.</summary>
+      <param name="types">Массив типов <see cref="T:System.Type" />, используемый в качестве доступных типов. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Возвращает значение, показывающее, может ли этот преобразователь выполнить преобразование заданного типа в <see cref="T:System.Type" /> исходного объекта, используя заданный контекст.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата.</param>
+      <param name="sourceType">Тип <see cref="T:System.Type" /> исходного объекта.</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>Получает значение, показывающее, может ли данный преобразователь преобразовать объект с помощью контекста в заданный конечный тип.</summary>
+      <returns>Значение true, если данный преобразователь может выполнить преобразование; в противном случае — значение false.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="destinationType">Объект <see cref="T:System.Type" />, представляющий тип, в который необходимо выполнить преобразование. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>Преобразует указанный объект в собственный тип преобразователя.</summary>
+      <returns>
+        <see cref="T:System.Object" />, представляющий преобразованное значение.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Объект <see cref="T:System.Globalization.CultureInfo" />, задающий язык и региональные параметры, используемые для представления шрифта. </param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>Преобразовывает указанное значение объекта в указанный тип.</summary>
+      <returns>Объект <see cref="T:System.Object" />, представляющий преобразованное значение <paramref name="value" />.</returns>
+      <param name="context">
+        <see cref="T:System.ComponentModel.ITypeDescriptorContext" />, представляющий контекст формата. </param>
+      <param name="culture">Необязательный объект <see cref="T:System.Globalization.CultureInfo" />.Если не предоставляются, предполагается использование текущего языка и региональных параметров.</param>
+      <param name="value">Преобразуемый объект <see cref="T:System.Object" />. </param>
+      <param name="destinationType">Тип <see cref="T:System.Type" />, к которому следует привести значение. </param>
+      <exception cref="T:System.ArgumentNullException">Параметр <paramref name="destinationType" /> имеет значение null. </exception>
+      <exception cref="T:System.NotSupportedException">Преобразование не может быть выполнено. </exception>
+    </member>
+    <member name="T:System.ComponentModel.UInt16Converter">
+      <summary>Предоставляет преобразователь типов для преобразования 16-разрядных целочисленных объектов без знака в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt16Converter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.UInt16Converter" />. </summary>
+    </member>
+    <member name="T:System.ComponentModel.UInt32Converter">
+      <summary>Предоставляет преобразователь типов для преобразования 32-разрядных целых объектов в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt32Converter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.UInt32Converter" />. </summary>
+    </member>
+    <member name="T:System.ComponentModel.UInt64Converter">
+      <summary>Предоставляет преобразователь типов для преобразования 64-разрядных целочисленных объектов без знака в прочие представления и обратно.</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt64Converter.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.ComponentModel.UInt64Converter" />. </summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNetCore.Hosting.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.AspNetCore.Hosting.EnvironmentName">
+            <summary>
+            Commonly used environment names.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.UseConfiguration(Microsoft.AspNetCore.Hosting.IWebHostBuilder,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Use the given configuration settings on the web host.
+            </summary>
+            <param name="hostBuilder">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/> to configure.</param>
+            <param name="configuration">The <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> containing settings to be used.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.CaptureStartupErrors(Microsoft.AspNetCore.Hosting.IWebHostBuilder,System.Boolean)">
+            <summary>
+            Set whether startup errors should be captured in the configuration settings of the web host.
+            When enabled, startup exceptions will be caught and an error page will be returned. If disabled, startup exceptions will be propagated.
+            </summary>
+            <param name="hostBuilder">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/> to configure.</param>
+            <param name="captureStartupErrors"><c>true</c> to use startup error page; otherwise <c>false</c>.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.UseStartup(Microsoft.AspNetCore.Hosting.IWebHostBuilder,System.String)">
+            <summary>
+            Specify the assembly containing the startup type to be used by the web host.
+            </summary>
+            <param name="hostBuilder">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/> to configure.</param>
+            <param name="startupAssemblyName">The name of the assembly containing the startup type.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.UseServer(Microsoft.AspNetCore.Hosting.IWebHostBuilder,Microsoft.AspNetCore.Hosting.Server.IServer)">
+            <summary>
+            Specify the server to be used by the web host.
+            </summary>
+            <param name="hostBuilder">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/> to configure.</param>
+            <param name="server">The <see cref="T:Microsoft.AspNetCore.Hosting.Server.IServer"/> to be used.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.UseEnvironment(Microsoft.AspNetCore.Hosting.IWebHostBuilder,System.String)">
+            <summary>
+            Specify the environment to be used by the web host.
+            </summary>
+            <param name="hostBuilder">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/> to configure.</param>
+            <param name="environment">The environment to host the application in.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.UseContentRoot(Microsoft.AspNetCore.Hosting.IWebHostBuilder,System.String)">
+            <summary>
+            Specify the content root directory to be used by the web host.
+            </summary>
+            <param name="hostBuilder">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/> to configure.</param>
+            <param name="contentRoot">Path to root directory of the application.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.UseWebRoot(Microsoft.AspNetCore.Hosting.IWebHostBuilder,System.String)">
+            <summary>
+            Specify the webroot directory to be used by the web host.
+            </summary>
+            <param name="hostBuilder">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/> to configure.</param>
+            <param name="webRoot">Path to the root directory used by the web server.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.UseUrls(Microsoft.AspNetCore.Hosting.IWebHostBuilder,System.String[])">
+            <summary>
+            Specify the urls the web host will listen on.
+            </summary>
+            <param name="hostBuilder">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/> to configure.</param>
+            <param name="urls">The urls the hosted application will listen on.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingAbstractionsWebHostBuilderExtensions.Start(Microsoft.AspNetCore.Hosting.IWebHostBuilder,System.String[])">
+            <summary>
+            Start the web host and listen on the speficied urls.
+            </summary>
+            <param name="hostBuilder">The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/> to start.</param>
+            <param name="urls">The urls the hosted application will listen on.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Hosting.HostingEnvironmentExtensions">
+            <summary>
+            Extension methods for <see cref="T:Microsoft.AspNetCore.Hosting.IHostingEnvironment"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingEnvironmentExtensions.IsDevelopment(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Checks if the current hosting environment name is "Development".
+            </summary>
+            <param name="hostingEnvironment">An instance of <see cref="T:Microsoft.AspNetCore.Hosting.IHostingEnvironment"/>.</param>
+            <returns>True if the environment name is "Development", otherwise false.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingEnvironmentExtensions.IsStaging(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Checks if the current hosting environment name is "Staging".
+            </summary>
+            <param name="hostingEnvironment">An instance of <see cref="T:Microsoft.AspNetCore.Hosting.IHostingEnvironment"/>.</param>
+            <returns>True if the environment name is "Staging", otherwise false.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingEnvironmentExtensions.IsProduction(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Checks if the current hosting environment name is "Production".
+            </summary>
+            <param name="hostingEnvironment">An instance of <see cref="T:Microsoft.AspNetCore.Hosting.IHostingEnvironment"/>.</param>
+            <returns>True if the environment name is "Production", otherwise false.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.HostingEnvironmentExtensions.IsEnvironment(Microsoft.AspNetCore.Hosting.IHostingEnvironment,System.String)">
+            <summary>
+            Compares the current hosting environment name against the specified value.
+            </summary>
+            <param name="hostingEnvironment">An instance of <see cref="T:Microsoft.AspNetCore.Hosting.IHostingEnvironment"/>.</param>
+            <param name="environmentName">Environment name to validate against.</param>
+            <returns>True if the specified name is the same as the current environment, otherwise false.</returns>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Hosting.IApplicationLifetime">
+            <summary>
+            Allows consumers to perform cleanup during a graceful shutdown.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Hosting.IApplicationLifetime.ApplicationStarted">
+            <summary>
+            Triggered when the application host has fully started and is about to wait
+            for a graceful shutdown.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Hosting.IApplicationLifetime.ApplicationStopping">
+            <summary>
+            Triggered when the application host is performing a graceful shutdown.
+            Requests may still be in flight. Shutdown will block until this event completes.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Hosting.IApplicationLifetime.ApplicationStopped">
+            <summary>
+            Triggered when the application host is performing a graceful shutdown.
+            All requests should be complete at this point. Shutdown will block
+            until this event completes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.IApplicationLifetime.StopApplication">
+            <summary>
+            Requests termination the current application.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Hosting.IHostingEnvironment">
+            <summary>
+            Provides information about the web hosting environment an application is running in.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Hosting.IHostingEnvironment.EnvironmentName">
+            <summary>
+            Gets or sets the name of the environment. This property is automatically set by the host to the value
+            of the "ASPNETCORE_ENVIRONMENT" environment variable.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Hosting.IHostingEnvironment.ApplicationName">
+            <summary>
+            Gets or sets the name of the application. This property is automatically set by the host to the assembly containing
+            the application entry point.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Hosting.IHostingEnvironment.WebRootPath">
+            <summary>
+            Gets or sets the absolute path to the directory that contains the web-servable application content files.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Hosting.IHostingEnvironment.WebRootFileProvider">
+            <summary>
+            Gets or sets an <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider"/> pointing at <see cref="P:Microsoft.AspNetCore.Hosting.IHostingEnvironment.WebRootPath"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Hosting.IHostingEnvironment.ContentRootPath">
+            <summary>
+            Gets or sets the absolute path to the directory that contains the application content files.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Hosting.IHostingEnvironment.ContentRootFileProvider">
+            <summary>
+            Gets or sets an <see cref="T:Microsoft.Extensions.FileProviders.IFileProvider"/> pointing at <see cref="P:Microsoft.AspNetCore.Hosting.IHostingEnvironment.ContentRootPath"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Hosting.IWebHost">
+            <summary>
+            Represents a configured web host.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Hosting.IWebHost.ServerFeatures">
+            <summary>
+            The <see cref="T:Microsoft.AspNetCore.Http.Features.IFeatureCollection"/> exposed by the configured server.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Hosting.IWebHost.Services">
+            <summary>
+            The <see cref="T:System.IServiceProvider"/> for the host.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.IWebHost.Start">
+            <summary>
+            Starts listening on the configured addresses.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder">
+            <summary>
+            A builder for <see cref="T:Microsoft.AspNetCore.Hosting.IWebHost"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.IWebHostBuilder.Build">
+            <summary>
+            Builds an <see cref="T:Microsoft.AspNetCore.Hosting.IWebHost"/> which hosts a web application.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.IWebHostBuilder.UseLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Specify the <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to be used by the web host.
+            </summary>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to be used.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.IWebHostBuilder.ConfigureServices(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})">
+            <summary>
+            Specify the delegate that is used to configure the services of the web application.
+            </summary>
+            <param name="configureServices">The delegate that configures the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.IWebHostBuilder.ConfigureLogging(System.Action{Microsoft.Extensions.Logging.ILoggerFactory})">
+            <summary>
+            Adds a delegate for configuring the provided <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/>. This may be called multiple times.
+            </summary>
+            <param name="configureLogging">The delegate that configures the <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/>.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.IWebHostBuilder.UseSetting(System.String,System.String)">
+            <summary>
+            Add or replace a setting in the configuration.
+            </summary>
+            <param name="key">The key of the setting to add or replace.</param>
+            <param name="value">The value of the setting to add or replace.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Hosting.IWebHostBuilder"/>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Hosting.IWebHostBuilder.GetSetting(System.String)">
+            <summary>
+            Get the setting value from the configuration.
+            </summary>
+            <param name="key">The key of the setting to look up.</param>
+            <returns>The value the setting currently contains.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.ComponentModel.TypeConverter</name>
+  </assembly>
+  <members>
+    <member name="T:System.ComponentModel.ArrayConverter">
+      <summary>
+        <see cref="T:System.Array" /> 개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.ArrayConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.ArrayConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="M:System.ComponentModel.ArrayConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>주어진 값 개체를 지정한 대상 형식으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">
+        <paramref name="value" />가 변환될 문화권입니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <param name="destinationType">값을 변환할 대상 <see cref="T:System.Type" />입니다. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" />가 null입니다. </exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="T:System.ComponentModel.BaseNumberConverter">
+      <summary>부동 소수점 숫자가 아닌 형식을 위한 기본 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.BaseNumberConverter" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>이 변환기가 지정된 소스 형식의 개체를 변환기의 네이티브 형식으로 변환할 수 있는지 여부를 확인합니다.</summary>
+      <returns>이 변환기가 작업을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="sourceType">변환할 원본 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>컨텍스트를 사용하여 이 변환기에서 개체를 지정된 대상 형식으로 변환할 수 있는지 여부를 나타내는 값을 반환합니다.</summary>
+      <returns>이 변환기가 작업을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="t">변환할 대상 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 개체를 변환기의 네이티브 형식으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">숫자를 나타내는 문화권이 지정된 <see cref="T:System.Globalization.CultureInfo" />입니다. </param>
+      <param name="value">변환할 개체입니다. </param>
+      <exception cref="T:System.Exception">
+        <paramref name="value" />가 대상 형식의 올바른 값이 아닌 경우</exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.BaseNumberConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>지정된 개체를 다른 형식으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">숫자를 나타내는 문화권이 지정된 <see cref="T:System.Globalization.CultureInfo" />입니다. </param>
+      <param name="value">변환할 개체입니다. </param>
+      <param name="destinationType">개체를 변환할 대상 형식입니다. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" />가 null입니다.</exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="T:System.ComponentModel.BooleanConverter">
+      <summary>
+        <see cref="T:System.Boolean" /> 개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.BooleanConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>지정된 컨텍스트를 사용하여 이 변환기가 지정된 소스 형식의 개체를 부울 개체로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 개체가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="sourceType">변환할 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.BooleanConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 값 개체를 부울 개체로 변환합니다.</summary>
+      <returns>변환된 <paramref name="value" />를 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">변환할 대상 문화권을 지정하는 <see cref="T:System.Globalization.CultureInfo" />입니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" />가 대상 형식의 올바른 값이 아닌 경우 </exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="T:System.ComponentModel.ByteConverter">
+      <summary>부호 없는 8비트 정수 개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.ByteConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.ByteConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="T:System.ComponentModel.CharConverter">
+      <summary>유니코드 문자 개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.CharConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>지정된 컨텍스트를 사용하여 이 변환기가 지정된 소스 형식의 개체를 유니코드 문자 개체로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="sourceType">변환할 원본 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 개체를 유니코드 문자 개체로 변환합니다.</summary>
+      <returns>변환된 <paramref name="value" />를 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">
+        <paramref name="value" />가 변환될 문화권입니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" />가 대상 형식의 올바른 값이 아닌 경우 </exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.CharConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>인수를 사용하여 지정된 값 개체를 유니코드 문자 개체로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">
+        <paramref name="value" />가 변환될 문화권입니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <param name="destinationType">값을 변환할 대상 <see cref="T:System.Type" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="T:System.ComponentModel.CollectionConverter">
+      <summary>개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.CollectionConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.CollectionConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="M:System.ComponentModel.CollectionConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>주어진 값 개체를 지정한 대상 형식으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">
+        <paramref name="value" />가 변환될 문화권입니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다.이 매개 변수는 반드시 <see cref="T:System.Collections.ICollection" />에서 상속되어야 합니다.</param>
+      <param name="destinationType">값을 변환할 대상 <see cref="T:System.Type" />입니다. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" />가 null입니다. </exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="T:System.ComponentModel.DateTimeConverter">
+      <summary>
+        <see cref="T:System.DateTime" /> 개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.DateTimeConverter" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>지정된 컨텍스트를 사용하여 이 변환기가 지정된 소스 형식의 개체를 <see cref="T:System.DateTime" />으로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 개체가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="sourceType">변환할 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>컨텍스트를 사용하여 이 변환기에서 개체를 지정된 대상 형식으로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="destinationType">변환할 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 값 개체를 <see cref="T:System.DateTime" />으로 변환합니다.</summary>
+      <returns>변환된 <paramref name="value" />를 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">선택적 <see cref="T:System.Globalization.CultureInfo" />입니다.제공되지 않으면 현재 culture로 가정합니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" />가 대상 형식의 올바른 값이 아닌 경우 </exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>인수를 사용하여 지정된 값 개체를 <see cref="T:System.DateTime" />으로 변환합니다.</summary>
+      <returns>변환된 <paramref name="value" />를 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">선택적 <see cref="T:System.Globalization.CultureInfo" />입니다.제공되지 않으면 현재 culture로 가정합니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <param name="destinationType">값을 변환할 대상 <see cref="T:System.Type" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="T:System.ComponentModel.DateTimeOffsetConverter">
+      <summary>
+        <see cref="T:System.DateTimeOffset" /> 구조와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.DateTimeOffsetConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>지정된 소스 형식의 개체를 <see cref="T:System.DateTimeOffset" />으로 변환할 수 있는지 여부를 나타내는 값을 반환합니다.</summary>
+      <returns>지정된 형식을 <see cref="T:System.DateTimeOffset" />으로 변환할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">날짜 서식 컨텍스트입니다.</param>
+      <param name="sourceType">확인할 소스 형식입니다.</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>
+        <see cref="T:System.DateTimeOffset" />을 지정된 형식의 개체로 변환할 수 있는지 여부를 나타내는 값을 반환합니다.</summary>
+      <returns>
+        <see cref="T:System.DateTimeOffset" />을 지정된 형식으로 변환할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">날짜 서식 컨텍스트입니다.</param>
+      <param name="destinationType">확인할 대상 형식입니다.</param>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 개체를 <see cref="T:System.DateTimeOffset" />으로 변환합니다.</summary>
+      <returns>지정된 개체를 나타내는 <see cref="T:System.DateTimeOffset" />입니다.</returns>
+      <param name="context">날짜 서식 컨텍스트입니다.</param>
+      <param name="culture">날짜 문화권입니다.</param>
+      <param name="value">변환될 개체입니다.</param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우</exception>
+    </member>
+    <member name="M:System.ComponentModel.DateTimeOffsetConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>
+        <see cref="T:System.DateTimeOffset" />을 지정된 형식의 개체로 변환합니다.</summary>
+      <returns>
+        <see cref="T:System.DateTimeOffset" />을 나타내는 지정된 형식의 개체입니다. </returns>
+      <param name="context">날짜 서식 컨텍스트입니다.</param>
+      <param name="culture">날짜 문화권입니다.</param>
+      <param name="value">변환될 <see cref="T:System.DateTimeOffset" />입니다.</param>
+      <param name="destinationType">변환할 대상 형식입니다.</param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우</exception>
+    </member>
+    <member name="T:System.ComponentModel.DecimalConverter">
+      <summary>
+        <see cref="T:System.Decimal" /> 개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.DecimalConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>컨텍스트를 사용하여 이 변환기에서 개체를 지정된 대상 형식으로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="destinationType">변환할 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.DecimalConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>인수를 사용하여 지정된 값 개체를 <see cref="T:System.Decimal" />로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">선택적 <see cref="T:System.Globalization.CultureInfo" />입니다.제공되지 않으면 현재 culture로 가정합니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <param name="destinationType">값을 변환할 대상 <see cref="T:System.Type" />입니다. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" />은 null입니다. </exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="T:System.ComponentModel.DoubleConverter">
+      <summary>배정밀도 부동 소수점 숫자 개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.DoubleConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.DoubleConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="T:System.ComponentModel.EnumConverter">
+      <summary>
+        <see cref="T:System.Enum" /> 개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.#ctor(System.Type)">
+      <summary>지정된 형식에 대한 <see cref="T:System.ComponentModel.EnumConverter" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="type">이 열거형 변환기에 연결할 열거형 유형을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>지정된 컨텍스트를 사용하여 이 변환기가 지정된 소스 형식의 개체를 열거형 개체로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="sourceType">변환할 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>컨텍스트를 사용하여 이 변환기에서 개체를 지정된 대상 형식으로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="destinationType">변환할 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 값 개체를 열거형 개체로 변환합니다.</summary>
+      <returns>변환된 <paramref name="value" />를 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">선택적 <see cref="T:System.Globalization.CultureInfo" />입니다.제공되지 않으면 현재 culture로 가정합니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" />가 대상 형식의 올바른 값이 아닌 경우 </exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.EnumConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>주어진 값 개체를 지정한 대상 형식으로 변환합니다.</summary>
+      <returns>변환된 <paramref name="value" />를 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">선택적 <see cref="T:System.Globalization.CultureInfo" />입니다.제공되지 않으면 현재 culture로 가정합니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <param name="destinationType">값을 변환할 대상 <see cref="T:System.Type" />입니다. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" />가 null입니다. </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="value" />가 열거형에 대한 올바른 값이 아닌 경우 </exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="P:System.ComponentModel.EnumConverter.EnumType">
+      <summary>이 변환기를 연결할 열거자의 유형을 지정합니다.</summary>
+      <returns>이 변환기를 연결할 열거자의 형식입니다.</returns>
+    </member>
+    <member name="T:System.ComponentModel.GuidConverter">
+      <summary>
+        <see cref="T:System.Guid" /> 개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.GuidConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>이 변환기가 지정된 소스 형식의 개체를 컨텍스트를 사용하여 GUID 개체로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="sourceType">변환할 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>컨텍스트를 사용하여 이 변환기에서 개체를 지정된 대상 형식으로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="destinationType">변환할 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 개체를 GUID 개체로 변환합니다.</summary>
+      <returns>변환된 <paramref name="value" />를 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">선택적 <see cref="T:System.Globalization.CultureInfo" />입니다.제공되지 않으면 현재 culture로 가정합니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.GuidConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>지정된 개체를 다른 형식으로 변환합니다.</summary>
+      <returns>변환된 개체입니다.</returns>
+      <param name="context">포맷터 컨텍스트입니다. </param>
+      <param name="culture">
+        <paramref name="value" />가 변환될 문화권입니다.</param>
+      <param name="value">변환할 개체입니다. </param>
+      <param name="destinationType">개체를 변환할 대상 형식입니다. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" />가 null입니다.</exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="T:System.ComponentModel.Int16Converter">
+      <summary>16비트 부호 있는 정수 개체와 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int16Converter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.Int16Converter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="T:System.ComponentModel.Int32Converter">
+      <summary>32비트 부호 있는 정수 개체와 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int32Converter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.Int32Converter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="T:System.ComponentModel.Int64Converter">
+      <summary>64비트 부호 있는 정수 개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.Int64Converter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.Int64Converter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="T:System.ComponentModel.ITypeDescriptorContext">
+      <summary>컨테이너 및 속성 설명자와 같은 구성 요소에 대한 컨텍스트 정보를 제공합니다.</summary>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.Container">
+      <summary>이 <see cref="T:System.ComponentModel.TypeDescriptor" /> 요청을 나타내는 컨테이너를 가져옵니다.</summary>
+      <returns>이 <see cref="T:System.ComponentModel.TypeDescriptor" />에 대한 개체 집합이 포함된 <see cref="T:System.ComponentModel.IContainer" />이거나, 컨테이너가 없거나 <see cref="T:System.ComponentModel.TypeDescriptor" />에서 외부 개체를 사용하지 않으면 null입니다.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.Instance">
+      <summary>이 형식 설명자 요청과 연결된 개체를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:System.ComponentModel.TypeDescriptor" />에서 메서드를 호출하는 개체이거나 호출을 담당하는 개체가 없으면 null입니다.</returns>
+    </member>
+    <member name="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanged">
+      <summary>
+        <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanged" /> 이벤트를 발생시킵니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.ITypeDescriptorContext.OnComponentChanging">
+      <summary>
+        <see cref="E:System.ComponentModel.Design.IComponentChangeService.ComponentChanging" /> 이벤트를 발생시킵니다.</summary>
+      <returns>해당 개체를 변경할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor">
+      <summary>지정된 컨텍스트 항목과 연결된 <see cref="T:System.ComponentModel.PropertyDescriptor" />를 가져옵니다.</summary>
+      <returns>지정된 컨텍스트 항목을 설명하는 <see cref="T:System.ComponentModel.PropertyDescriptor" />이거나, 호출을 담당하는 <see cref="T:System.ComponentModel.PropertyDescriptor" />가 없으면 null입니다.</returns>
+    </member>
+    <member name="T:System.ComponentModel.MultilineStringConverter">
+      <summary>여러 줄 문자열을 단순 문자열로 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.MultilineStringConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.MultilineStringConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="M:System.ComponentModel.MultilineStringConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>지정된 컨텍스트 및 문화권 정보를 사용하여, 지정된 값 개체를 지정된 형식으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다.</param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />null이 전달되면 현재 문화권이 선택됩니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다.</param>
+      <param name="destinationType">값 매개 변수를 변환할 대상 <see cref="T:System.Type" />입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" />가 null입니다.</exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="T:System.ComponentModel.NullableConverter">
+      <summary>nullable 형식과 내부 기본 형식 간의 자동 변환 기능을 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.#ctor(System.Type)">
+      <summary>
+        <see cref="T:System.ComponentModel.NullableConverter" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="type">지정된 nullable 형식입니다.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="type" />이 nullable 형식이 아닌 경우</exception>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>이 변환기가 지정된 컨텍스트를 사용하여 지정된 형식의 개체를 이 변환기의 기본 형식으로 변환할 수 있는지 여부를 반환합니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다.</param>
+      <param name="sourceType">변환할 원본 형식을 나타내는 <see cref="T:System.Type" />입니다.</param>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>이 변환기가 지정된 컨텍스트를 사용하여 개체를 지정된 형식으로 변환할 수 있는지 여부를 반환합니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다.</param>
+      <param name="destinationType">변환할 대상 형식을 나타내는 <see cref="T:System.Type" />입니다.</param>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 컨텍스트 및 culture 정보를 사용하여, 지정된 개체를 이 변환기의 형식으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다.</param>
+      <param name="culture">현재 문화권으로 사용할 <see cref="T:System.Globalization.CultureInfo" />입니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다.</param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.NullableConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>지정된 컨텍스트 및 문화권 정보를 사용하여, 지정된 값 개체를 지정된 형식으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다.</param>
+      <param name="culture">현재 문화권으로 사용할 <see cref="T:System.Globalization.CultureInfo" />입니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다.</param>
+      <param name="destinationType">값 매개 변수를 변환할 대상 <see cref="T:System.Type" />입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" />가 null입니다.</exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.NullableType">
+      <summary>nullable 형식을 가져옵니다.</summary>
+      <returns>nullable 형식을 나타내는 <see cref="T:System.Type" />입니다.</returns>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.UnderlyingType">
+      <summary>내부 형식을 가져옵니다.</summary>
+      <returns>내부 형식을 나타내는 <see cref="T:System.Type" />입니다.</returns>
+    </member>
+    <member name="P:System.ComponentModel.NullableConverter.UnderlyingTypeConverter">
+      <summary>내부 형식 변환기를 가져옵니다.</summary>
+      <returns>내부 형식 변환기를 나타내는 <see cref="T:System.ComponentModel.TypeConverter" />입니다.</returns>
+    </member>
+    <member name="T:System.ComponentModel.PropertyDescriptor">
+      <summary>클래스의 속성에 대한 추상화를 제공합니다.</summary>
+    </member>
+    <member name="T:System.ComponentModel.SByteConverter">
+      <summary>8비트 부호 없는 정수 개체와 문자열 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.SByteConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.SByteConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="T:System.ComponentModel.SingleConverter">
+      <summary>단정밀도 부동 소수점 숫자 개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.SingleConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.SingleConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="T:System.ComponentModel.StringConverter">
+      <summary>string 개체와 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.StringConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>이 변환기가 지정된 컨텍스트를 사용하여 지정된 소스 형식의 개체를 문자열로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="sourceType">변환할 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.StringConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 값 개체를 <see cref="T:System.String" /> 개체로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">사용할 <see cref="T:System.Globalization.CultureInfo" />입니다. </param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">변환을 수행할 수 없는 경우 </exception>
+    </member>
+    <member name="T:System.ComponentModel.TimeSpanConverter">
+      <summary>
+        <see cref="T:System.TimeSpan" /> 개체와 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.TimeSpanConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>지정된 컨텍스트를 사용하여 이 변환기가 지정된 소스 형식의 개체를 <see cref="T:System.TimeSpan" />으로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="sourceType">변환할 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>컨텍스트를 사용하여 이 변환기에서 개체를 지정된 대상 형식으로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="destinationType">변환할 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" />가 null입니다.</exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" />가 대상 형식의 올바른 값이 아닌 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 개체를 <see cref="T:System.TimeSpan" />으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">선택적 <see cref="T:System.Globalization.CultureInfo" />입니다.제공되지 않으면 현재 culture로 가정합니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+      <exception cref="T:System.FormatException">
+        <paramref name="value" />가 대상 형식의 올바른 값이 아닌 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TimeSpanConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>지정된 개체를 다른 형식으로 변환합니다. </summary>
+      <returns>변환된 개체입니다.</returns>
+      <param name="context">포맷터 컨텍스트입니다. </param>
+      <param name="culture">
+        <paramref name="value" />가 변환될 문화권입니다.</param>
+      <param name="value">변환할 개체입니다. </param>
+      <param name="destinationType">개체를 변환할 대상 형식입니다. </param>
+    </member>
+    <member name="T:System.ComponentModel.TypeConverter">
+      <summary>표준 값과 하위 속성에 액세스하기 위한 그리고 값의 형식을 다른 형식으로 변환하기 위한 통합된 방법을 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.TypeConverter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>이 변환기가 지정된 컨텍스트를 사용하여 지정된 형식의 개체를 이 변환기의 기본 형식으로 변환할 수 있는지 여부를 반환합니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="sourceType">변환할 원본 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertFrom(System.Type)">
+      <summary>이 변환기가 지정된 형식의 개체를 이 변환기의 형식으로 변환할 수 있는지 여부를 반환합니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="sourceType">변환할 원본 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>이 변환기가 지정된 컨텍스트를 사용하여 개체를 지정된 형식으로 변환할 수 있는지 여부를 반환합니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="destinationType">변환할 대상 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.CanConvertTo(System.Type)">
+      <summary>이 변환기가 개체를 지정된 형식으로 변환할 수 있는지 여부를 반환합니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="destinationType">변환할 대상 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 컨텍스트 및 culture 정보를 사용하여, 지정된 개체를 이 변환기의 형식으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">현재 문화권으로 사용할 <see cref="T:System.Globalization.CultureInfo" />입니다. </param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFrom(System.Object)">
+      <summary>지정된 값을 이 변환기의 형식으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromInvariantString(System.String)">
+      <summary>고정 문화권을 사용하여, 지정된 문자열을 이 변환기의 형식으로 변환합니다.</summary>
+      <returns>변환된 텍스트를 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="text">변환할 <see cref="T:System.String" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.String)">
+      <summary>지정된 컨텍스트 및 문화권 정보를 사용하여, 지정된 텍스트를 개체로 변환합니다.</summary>
+      <returns>변환된 텍스트를 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />null이 전달되면 현재 문화권이 선택됩니다.</param>
+      <param name="text">변환할 <see cref="T:System.String" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertFromString(System.String)">
+      <summary>지정된 텍스트를 개체로 변환합니다.</summary>
+      <returns>변환된 텍스트를 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="text">변환할 개체의 텍스트 표현입니다. </param>
+      <exception cref="T:System.NotSupportedException">문자열을 적절한 개체로 변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>지정된 컨텍스트 및 문화권 정보를 사용하여, 지정된 값 개체를 지정된 형식으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />null이 전달되면 현재 문화권이 선택됩니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <param name="destinationType">
+        <paramref name="value" /> 매개 변수를 변환할 <see cref="T:System.Type" />입니다. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 매개 변수가 null인 경우 </exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertTo(System.Object,System.Type)">
+      <summary>인수를 사용하여, 지정된 값 개체를 지정된 형식으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <param name="destinationType">
+        <paramref name="value" /> 매개 변수를 변환할 <see cref="T:System.Type" />입니다. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" /> 매개 변수가 null인 경우 </exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToInvariantString(System.Object)">
+      <summary>지정된 값을 고정 문화권의 문자열 표현으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.String" />입니다.</returns>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToString(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 컨텍스트 및 문화권 정보를 사용하여, 지정된 값을 문자열 표현으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">
+        <see cref="T:System.Globalization.CultureInfo" />null이 전달되면 현재 문화권이 선택됩니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.ConvertToString(System.Object)">
+      <summary>지정된 값을 문자열 표현으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.GetConvertFromException(System.Object)">
+      <summary>변환을 수행할 수 없을 때 throw되는 예외를 반환합니다.</summary>
+      <returns>변환을 수행할 수 없을 때 throw되는 예외를 나타내는 <see cref="T:System.Exception" />입니다.</returns>
+      <param name="value">변환할 <see cref="T:System.Object" />이거나, 개체를 사용할 수 없는 경우 null입니다. </param>
+      <exception cref="T:System.NotSupportedException">이 메서드에서 자동으로 throw되는 경우 </exception>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverter.GetConvertToException(System.Object,System.Type)">
+      <summary>변환을 수행할 수 없을 때 throw되는 예외를 반환합니다.</summary>
+      <returns>변환을 수행할 수 없을 때 throw되는 예외를 나타내는 <see cref="T:System.Exception" />입니다.</returns>
+      <param name="value">변환할 <see cref="T:System.Object" />이거나, 개체를 사용할 수 없는 경우 null입니다. </param>
+      <param name="destinationType">변환할 대상 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+      <exception cref="T:System.NotSupportedException">이 메서드에서 자동으로 throw되는 경우 </exception>
+    </member>
+    <member name="T:System.ComponentModel.TypeConverterAttribute">
+      <summary>이 특성이 바인딩되는 개체에 대한 변환기로 사용할 형식을 지정합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.#ctor(System.String)">
+      <summary>지정된 형식 이름을 이 특성이 바인딩되는 개체의 데이터 변환기로 사용하여 <see cref="T:System.ComponentModel.TypeConverterAttribute" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="typeName">이 특성이 바인딩되는 개체의 데이터 변환에 사용할 클래스의 정규화된 이름입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.#ctor(System.Type)">
+      <summary>지정된 형식을 이 특성이 바인딩되는 개체의 데이터 변환기로 사용하여 <see cref="T:System.ComponentModel.TypeConverterAttribute" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="type">이 특성이 바인딩되는 개체의 데이터 변환에 사용할 변환기 클래스의 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="P:System.ComponentModel.TypeConverterAttribute.ConverterTypeName">
+      <summary>이 특성이 바인딩되는 개체의 변환기로 사용할 <see cref="T:System.Type" />의 정규화된 형식 이름을 가져옵니다.</summary>
+      <returns>이 특성이 바인딩되는 개체의 변환기로 사용할 <see cref="T:System.Type" />의 정규화된 형식 이름 또는 정규화된 이름이 없는 경우 빈 문자열("")입니다.기본값은 빈 문자열("")입니다.</returns>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.Equals(System.Object)">
+      <summary>주어진 개체의 값이 현재 <see cref="T:System.ComponentModel.TypeConverterAttribute" />와 같은지 여부를 반환합니다.</summary>
+      <returns>지정된 개체의 값이 현재 <see cref="T:System.ComponentModel.TypeConverterAttribute" />의 값과 같으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="obj">값이 같은지 테스트할 개체입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeConverterAttribute.GetHashCode">
+      <summary>이 인스턴스의 해시 코드를 반환합니다.</summary>
+      <returns>현재 <see cref="T:System.ComponentModel.TypeConverterAttribute" />의 해시 코드입니다.</returns>
+    </member>
+    <member name="T:System.ComponentModel.TypeDescriptor">
+      <summary>특성, 속성 및 이벤트와 같은 구성 요소의 특징에 대한 정보를 제공합니다.이 클래스는 상속될 수 없습니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeDescriptor.GetConverter(System.Type)">
+      <summary>지정된 형식에 대한 형식 변환기를 반환합니다.</summary>
+      <returns>지정된 형식에 대한 <see cref="T:System.ComponentModel.TypeConverter" />입니다.</returns>
+      <param name="type">대상 구성 요소의 <see cref="T:System.Type" />입니다. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="component" />가 null입니다. </exception>
+    </member>
+    <member name="T:System.ComponentModel.TypeListConverter">
+      <summary>사용 가능한 형식으로 목록 상자를 채우는 데 사용할 수 있는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.#ctor(System.Type[])">
+      <summary>사용 가능한 형식의 형식 배열을 사용하여 <see cref="T:System.ComponentModel.TypeListConverter" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="types">사용 가능한 형식으로 사용할 <see cref="T:System.Type" /> 형식의 배열입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>지정된 컨텍스트를 사용하여 이 변환기가 소스 개체의 지정된 <see cref="T:System.Type" />을 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다.</param>
+      <param name="sourceType">소스 개체의 <see cref="T:System.Type" />입니다.</param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+      <summary>컨텍스트를 사용하여 이 변환기에서 개체를 지정된 대상 형식으로 변환할 수 있는지 여부를 나타내는 값을 가져옵니다.</summary>
+      <returns>이 변환기가 변환을 수행할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="destinationType">변환할 형식을 나타내는 <see cref="T:System.Type" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+      <summary>지정된 개체를 변환기의 네이티브 형식으로 변환합니다.</summary>
+      <returns>변환된 값을 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">글꼴을 나타내는 데 사용할 문화권을 지정하는 <see cref="T:System.Globalization.CultureInfo" />입니다. </param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+    </member>
+    <member name="M:System.ComponentModel.TypeListConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+      <summary>주어진 값 개체를 지정한 대상 형식으로 변환합니다.</summary>
+      <returns>변환된 <paramref name="value" />를 나타내는 <see cref="T:System.Object" />입니다.</returns>
+      <param name="context">형식 컨텍스트를 제공하는 <see cref="T:System.ComponentModel.ITypeDescriptorContext" />입니다. </param>
+      <param name="culture">선택적 <see cref="T:System.Globalization.CultureInfo" />입니다.제공되지 않으면 현재 culture로 가정합니다.</param>
+      <param name="value">변환할 <see cref="T:System.Object" />입니다. </param>
+      <param name="destinationType">값을 변환할 대상 <see cref="T:System.Type" />입니다. </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destinationType" />가 null입니다. </exception>
+      <exception cref="T:System.NotSupportedException">변환할 수 없는 경우 </exception>
+    </member>
+    <member name="T:System.ComponentModel.UInt16Converter">
+      <summary>16비트 부호 없는 정수 개체와 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt16Converter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.UInt16Converter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="T:System.ComponentModel.UInt32Converter">
+      <summary>32비트 부호 없는 정수 개체와 여러 가지 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt32Converter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.UInt32Converter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+    <member name="T:System.ComponentModel.UInt64Converter">
+      <summary>64비트 부호 없는 정수 개체와 다른 표현 사이를 변환하는 형식 변환기를 제공합니다.</summary>
+    </member>
+    <member name="M:System.ComponentModel.UInt64Converter.#ctor">
+      <summary>
+        <see cref="T:System.ComponentModel.UInt64Converter" /> 클래스의 새 인스턴스를 초기화합니다. </summary>
+    </member>
+  </members>
+</doc>
