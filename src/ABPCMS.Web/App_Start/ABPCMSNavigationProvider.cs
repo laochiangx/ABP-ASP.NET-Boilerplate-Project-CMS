@@ -48,6 +48,7 @@ namespace ABPCMS.Web
                         requiredPermissionName: PermissionNames.Pages_Roles
                     )
                 )
+
                 .AddItem(
                     new MenuItemDefinition(
                         PageNames.About,

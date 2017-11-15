@@ -3028,3 +3028,941 @@ Abp.Authorization.AbpAuthorizationException: Current user did not login to the a
 DEBUG 2017-11-15 11:30:18,741 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"1aecc206-7a46-4d7b-bcce-1b3570702057","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T11:30:18.7360919+08:00","Properties":{}}
 DEBUG 2017-11-15 11:30:18,789 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 1aecc206-7a46-4d7b-bcce-1b3570702057
 DEBUG 2017-11-15 11:30:22,486 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 1aecc206-7a46-4d7b-bcce-1b3570702057
+DEBUG 2017-11-15 12:41:19,488 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-15 12:41:19,502 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-11-15 12:41:19,509 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,513 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,513 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,513 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,513 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,513 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,516 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:19,519 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-11-15 12:41:19,695 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 12:41:19,695 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 12:41:19,695 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 12:41:19,695 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 12:41:20,034 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 12:41:22,172 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-11-15 12:41:22,197 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-15 12:41:22,215 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-15 12:41:22,217 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-11-15 12:41:22,218 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-11-15 12:41:22,302 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-11-15 12:41:22,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-11-15 12:41:22,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-11-15 12:41:22,351 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-11-15 12:41:22,351 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-11-15 12:41:22,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-11-15 12:41:22,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-11-15 12:41:22,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-11-15 12:41:22,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-11-15 12:41:22,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-11-15 12:41:22,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-11-15 12:41:22,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-11-15 12:41:22,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-11-15 12:41:22,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-11-15 12:41:22,352 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-11-15 12:41:23,842 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-11-15 12:41:23,843 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-11-15 12:41:23,845 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-11-15 12:41:23,845 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-11-15 12:41:23,846 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-11-15 12:41:23,847 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+WARN  2017-11-15 12:41:28,399 [5    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+WARN  2017-11-15 12:41:41,235 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+WARN  2017-11-15 12:41:42,922 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 12:41:43,647 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"df137c21-82d7-4aaa-bdf9-b3e21962ca4c","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T12:41:43.6406232+08:00","Properties":{}}
+DEBUG 2017-11-15 12:41:43,684 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: df137c21-82d7-4aaa-bdf9-b3e21962ca4c
+WARN  2017-11-15 12:41:46,768 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 12:41:46,806 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: df137c21-82d7-4aaa-bdf9-b3e21962ca4c
+WARN  2017-11-15 12:41:46,929 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 12:41:47,318 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"8db1d77f-91dd-4df7-93b1-537134aa83a0","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T12:41:47.3188988+08:00","Properties":{}}
+DEBUG 2017-11-15 12:41:47,325 [10   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 8db1d77f-91dd-4df7-93b1-537134aa83a0
+DEBUG 2017-11-15 12:41:49,551 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 8db1d77f-91dd-4df7-93b1-537134aa83a0
+DEBUG 2017-11-15 20:58:32,448 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-15 20:58:32,478 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-11-15 20:58:32,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:32,490 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-11-15 20:58:32,663 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 20:58:32,663 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 20:58:32,663 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 20:58:32,663 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 20:58:32,981 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 20:58:35,417 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-11-15 20:58:35,440 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-15 20:58:35,463 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-15 20:58:35,466 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-11-15 20:58:35,467 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-11-15 20:58:35,542 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-11-15 20:58:35,593 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-11-15 20:58:35,593 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-11-15 20:58:35,596 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-11-15 20:58:35,596 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-11-15 20:58:35,596 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-11-15 20:58:35,596 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-11-15 20:58:35,596 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-11-15 20:58:35,596 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-11-15 20:58:35,596 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-11-15 20:58:35,596 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-11-15 20:58:35,596 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-11-15 20:58:35,596 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-11-15 20:58:35,596 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-11-15 20:58:35,596 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-11-15 20:58:36,958 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-11-15 20:58:36,959 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-11-15 20:58:36,960 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-11-15 20:58:36,961 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-11-15 20:58:36,962 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-11-15 20:58:36,962 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+WARN  2017-11-15 20:58:41,527 [5    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+WARN  2017-11-15 20:59:09,890 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+WARN  2017-11-15 20:59:11,432 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 20:59:12,173 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"0f81c36d-7e0e-4f88-9ba6-fd66b569da0e","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T20:59:12.1680807+08:00","Properties":{}}
+DEBUG 2017-11-15 20:59:12,208 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 0f81c36d-7e0e-4f88-9ba6-fd66b569da0e
+WARN  2017-11-15 20:59:14,997 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 20:59:15,025 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 0f81c36d-7e0e-4f88-9ba6-fd66b569da0e
+WARN  2017-11-15 20:59:15,117 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 20:59:15,470 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"32faf796-738f-47d0-9cec-601c52ed4830","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T20:59:15.4706709+08:00","Properties":{}}
+DEBUG 2017-11-15 20:59:15,478 [15   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 32faf796-738f-47d0-9cec-601c52ed4830
+DEBUG 2017-11-15 21:04:19,797 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 32faf796-738f-47d0-9cec-601c52ed4830
+DEBUG 2017-11-15 21:04:22,089 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"c4793fcd-39b9-4116-8861-a7160d021beb","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T21:04:22.0899518+08:00","Properties":{}}
+DEBUG 2017-11-15 21:04:22,096 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: c4793fcd-39b9-4116-8861-a7160d021beb
+WARN  2017-11-15 21:06:05,892 [37   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:06:05,926 [19   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: c4793fcd-39b9-4116-8861-a7160d021beb
+WARN  2017-11-15 21:06:06,060 [39   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:06:06,467 [45   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e9e00216-d827-4638-b30b-926564eeaf40","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T21:06:06.4673606+08:00","Properties":{}}
+DEBUG 2017-11-15 21:06:06,472 [43   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e9e00216-d827-4638-b30b-926564eeaf40
+WARN  2017-11-15 21:08:02,304 [41   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:08:02,330 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e9e00216-d827-4638-b30b-926564eeaf40
+WARN  2017-11-15 21:08:02,436 [39   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:08:02,676 [41   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"ee379633-a6b9-44f6-a6c3-3561efca28c4","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T21:08:02.6767093+08:00","Properties":{}}
+DEBUG 2017-11-15 21:08:02,680 [58   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: ee379633-a6b9-44f6-a6c3-3561efca28c4
+WARN  2017-11-15 21:08:45,581 [41   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:08:45,603 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: ee379633-a6b9-44f6-a6c3-3561efca28c4
+WARN  2017-11-15 21:08:45,710 [30   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:08:45,824 [55   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"6d390a64-6305-4037-bdee-0c35ae38a77d","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T21:08:45.8248343+08:00","Properties":{}}
+DEBUG 2017-11-15 21:08:45,829 [41   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 6d390a64-6305-4037-bdee-0c35ae38a77d
+WARN  2017-11-15 21:09:07,911 [41   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:09:07,933 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 6d390a64-6305-4037-bdee-0c35ae38a77d
+WARN  2017-11-15 21:09:08,038 [39   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:09:08,167 [55   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"b6b1245d-d4d1-4649-8435-41c040658be6","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T21:09:08.1668452+08:00","Properties":{}}
+DEBUG 2017-11-15 21:09:08,170 [60   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: b6b1245d-d4d1-4649-8435-41c040658be6
+WARN  2017-11-15 21:09:47,583 [55   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:09:47,605 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: b6b1245d-d4d1-4649-8435-41c040658be6
+WARN  2017-11-15 21:09:47,700 [30   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:09:47,896 [41   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"2aa9aa87-ae03-4ef6-8519-e076e306b0f3","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T21:09:47.8962651+08:00","Properties":{}}
+DEBUG 2017-11-15 21:09:47,901 [59   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 2aa9aa87-ae03-4ef6-8519-e076e306b0f3
+DEBUG 2017-11-15 21:34:46,361 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-15 21:34:46,380 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-11-15 21:34:46,385 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,387 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,387 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,389 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,389 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,389 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,389 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,389 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,389 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:46,392 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-11-15 21:34:46,556 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 21:34:46,556 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 21:34:46,556 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 21:34:46,556 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 21:34:46,885 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 21:34:49,068 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-11-15 21:34:49,110 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-15 21:34:49,118 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-15 21:34:49,120 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-11-15 21:34:49,121 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-11-15 21:34:49,205 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-11-15 21:34:49,263 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-11-15 21:34:49,263 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-11-15 21:34:49,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-11-15 21:34:49,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-11-15 21:34:49,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-11-15 21:34:49,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-11-15 21:34:49,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-11-15 21:34:49,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-11-15 21:34:49,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-11-15 21:34:49,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-11-15 21:34:49,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-11-15 21:34:49,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-11-15 21:34:49,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-11-15 21:34:49,267 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-11-15 21:34:50,832 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-11-15 21:34:50,833 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-11-15 21:34:50,833 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-11-15 21:34:50,834 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-11-15 21:34:50,835 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-11-15 21:34:50,836 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+WARN  2017-11-15 21:35:02,490 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+WARN  2017-11-15 21:35:04,004 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:35:04,783 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"9d9819df-4a06-4fb9-b126-82cb8ba23c0d","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T21:35:04.7766336+08:00","Properties":{}}
+DEBUG 2017-11-15 21:35:04,819 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 9d9819df-4a06-4fb9-b126-82cb8ba23c0d
+WARN  2017-11-15 21:35:16,238 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:35:16,267 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 9d9819df-4a06-4fb9-b126-82cb8ba23c0d
+WARN  2017-11-15 21:35:16,364 [6    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 21:35:16,704 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"72dd790f-1527-4242-bcce-9010015382a0","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T21:35:16.7047689+08:00","Properties":{}}
+DEBUG 2017-11-15 21:35:16,714 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 72dd790f-1527-4242-bcce-9010015382a0
+DEBUG 2017-11-15 22:10:44,551 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-15 22:10:44,577 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-11-15 22:10:44,584 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:44,592 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-11-15 22:10:44,767 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 22:10:44,767 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 22:10:44,767 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 22:10:44,767 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 22:10:45,098 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:10:47,647 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-11-15 22:10:47,675 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-15 22:10:47,682 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-15 22:10:47,684 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-11-15 22:10:47,686 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-11-15 22:10:47,778 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-11-15 22:10:47,832 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-11-15 22:10:47,832 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-11-15 22:10:47,835 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-11-15 22:10:47,835 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-11-15 22:10:47,835 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-11-15 22:10:47,835 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-11-15 22:10:47,835 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-11-15 22:10:47,835 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-11-15 22:10:47,835 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-11-15 22:10:47,835 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-11-15 22:10:47,835 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-11-15 22:10:47,836 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-11-15 22:10:47,836 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-11-15 22:10:47,836 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-11-15 22:10:49,465 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-11-15 22:10:49,465 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-11-15 22:10:49,466 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-11-15 22:10:49,467 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-11-15 22:10:49,468 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-11-15 22:10:49,469 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+WARN  2017-11-15 22:11:01,217 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:11:02,814 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:11:03,589 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"5c6bdcf1-7668-44c0-904c-7cb5ae8c42f5","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:11:03.5829728+08:00","Properties":{}}
+DEBUG 2017-11-15 22:11:03,646 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 5c6bdcf1-7668-44c0-904c-7cb5ae8c42f5
+WARN  2017-11-15 22:11:07,670 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:11:07,700 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:11:07,732 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 5c6bdcf1-7668-44c0-904c-7cb5ae8c42f5
+WARN  2017-11-15 22:11:07,840 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:11:08,230 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"9394c1b8-48ff-429c-aa09-dc6c997e49b8","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:11:08.2309653+08:00","Properties":{}}
+DEBUG 2017-11-15 22:11:08,238 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 9394c1b8-48ff-429c-aa09-dc6c997e49b8
+WARN  2017-11-15 22:11:47,669 [6    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:11:48,984 [6    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:11:49,009 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 9394c1b8-48ff-429c-aa09-dc6c997e49b8
+WARN  2017-11-15 22:11:49,104 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:11:49,525 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"4f3ef153-13e8-4f3d-9af9-bdb314024c18","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:11:49.5257232+08:00","Properties":{}}
+DEBUG 2017-11-15 22:11:49,531 [17   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 4f3ef153-13e8-4f3d-9af9-bdb314024c18
+WARN  2017-11-15 22:12:08,376 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:12:08,400 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 4f3ef153-13e8-4f3d-9af9-bdb314024c18
+WARN  2017-11-15 22:12:08,492 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:12:08,755 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"907e86cd-77e4-4e05-a810-cb689d1c6f60","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:12:08.7550175+08:00","Properties":{}}
+DEBUG 2017-11-15 22:12:08,760 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 907e86cd-77e4-4e05-a810-cb689d1c6f60
+WARN  2017-11-15 22:12:11,159 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:12:11,188 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:12:11,211 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 907e86cd-77e4-4e05-a810-cb689d1c6f60
+WARN  2017-11-15 22:12:11,306 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:12:11,621 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"7a1ab7d0-d43d-47f6-9142-f13753c7b84a","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:12:11.621309+08:00","Properties":{}}
+DEBUG 2017-11-15 22:12:11,628 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 7a1ab7d0-d43d-47f6-9142-f13753c7b84a
+WARN  2017-11-15 22:13:05,168 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:13:06,626 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:13:06,650 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 7a1ab7d0-d43d-47f6-9142-f13753c7b84a
+WARN  2017-11-15 22:13:06,749 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:13:06,949 [17   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"3a75e4d8-d718-4fd4-86a5-775eca6193b4","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:13:06.9493788+08:00","Properties":{}}
+DEBUG 2017-11-15 22:13:06,952 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 3a75e4d8-d718-4fd4-86a5-775eca6193b4
+WARN  2017-11-15 22:14:02,703 [17   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:14:03,990 [17   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:14:04,011 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 3a75e4d8-d718-4fd4-86a5-775eca6193b4
+WARN  2017-11-15 22:14:04,107 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:14:04,444 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"f29042d8-d51e-4050-9d9a-d9b60a0d7171","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:14:04.4446094+08:00","Properties":{}}
+DEBUG 2017-11-15 22:14:04,453 [20   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: f29042d8-d51e-4050-9d9a-d9b60a0d7171
+WARN  2017-11-15 22:14:12,778 [9    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:14:14,252 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:14:14,279 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: f29042d8-d51e-4050-9d9a-d9b60a0d7171
+WARN  2017-11-15 22:14:14,406 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:14:14,873 [26   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"cc8d6d64-8a93-47dc-9ab1-ab54826f84e1","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:14:14.8733225+08:00","Properties":{}}
+DEBUG 2017-11-15 22:14:14,879 [32   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: cc8d6d64-8a93-47dc-9ab1-ab54826f84e1
+WARN  2017-11-15 22:15:55,502 [8    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:15:56,790 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:15:56,815 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: cc8d6d64-8a93-47dc-9ab1-ab54826f84e1
+WARN  2017-11-15 22:15:56,921 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:15:57,266 [26   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"8365a347-55d8-4020-8944-a3a2ecafed6a","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:15:57.2660297+08:00","Properties":{}}
+DEBUG 2017-11-15 22:15:57,272 [24   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 8365a347-55d8-4020-8944-a3a2ecafed6a
+WARN  2017-11-15 22:16:06,499 [8    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:16:07,812 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:16:07,835 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 8365a347-55d8-4020-8944-a3a2ecafed6a
+WARN  2017-11-15 22:16:07,949 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:16:08,315 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"1da9b2d7-fec1-41c8-abd1-c56e77b11cf4","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:16:08.3151453+08:00","Properties":{}}
+DEBUG 2017-11-15 22:16:08,322 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 1da9b2d7-fec1-41c8-abd1-c56e77b11cf4
+WARN  2017-11-15 22:16:24,031 [8    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:16:25,349 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:16:25,370 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 1da9b2d7-fec1-41c8-abd1-c56e77b11cf4
+WARN  2017-11-15 22:16:25,471 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:16:25,660 [33   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"080cc9d1-6174-4282-8720-d61d95adb245","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:16:25.6601961+08:00","Properties":{}}
+DEBUG 2017-11-15 22:16:25,665 [43   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 080cc9d1-6174-4282-8720-d61d95adb245
+WARN  2017-11-15 22:16:42,813 [26   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:16:44,167 [26   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:16:44,191 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 080cc9d1-6174-4282-8720-d61d95adb245
+WARN  2017-11-15 22:16:44,273 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:16:44,447 [26   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"3c60ebb8-b375-4b46-b2f1-99c2189e4856","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:16:44.44707+08:00","Properties":{}}
+DEBUG 2017-11-15 22:16:44,452 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 3c60ebb8-b375-4b46-b2f1-99c2189e4856
+WARN  2017-11-15 22:17:08,586 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:17:09,908 [12   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:17:09,932 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 3c60ebb8-b375-4b46-b2f1-99c2189e4856
+WARN  2017-11-15 22:17:10,031 [12   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:17:10,217 [33   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"b16807a3-9f07-45b9-9967-a956789cdce3","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:17:10.2177266+08:00","Properties":{}}
+DEBUG 2017-11-15 22:17:10,222 [43   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: b16807a3-9f07-45b9-9967-a956789cdce3
+WARN  2017-11-15 22:19:59,758 [39   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:19:59,784 [39   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:19:59,812 [42   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: b16807a3-9f07-45b9-9967-a956789cdce3
+WARN  2017-11-15 22:19:59,918 [42   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:20:00,274 [35   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"a0a9f886-38cc-4848-8a6a-22704b132089","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:20:00.2749813+08:00","Properties":{}}
+DEBUG 2017-11-15 22:20:00,280 [37   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: a0a9f886-38cc-4848-8a6a-22704b132089
+WARN  2017-11-15 22:23:24,289 [42   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:23:25,760 [42   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:23:25,784 [42   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: a0a9f886-38cc-4848-8a6a-22704b132089
+WARN  2017-11-15 22:23:25,893 [42   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:23:26,283 [71   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"a588d38f-4667-4899-8db0-b068603bfa26","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:23:26.2837403+08:00","Properties":{}}
+DEBUG 2017-11-15 22:23:26,290 [73   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: a588d38f-4667-4899-8db0-b068603bfa26
+WARN  2017-11-15 22:23:40,781 [71   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:23:42,116 [71   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:23:42,142 [42   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: a588d38f-4667-4899-8db0-b068603bfa26
+WARN  2017-11-15 22:23:42,252 [28   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:23:42,634 [72   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"5f51d389-55dd-4c29-b67b-d35247c51ce9","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:23:42.6344621+08:00","Properties":{}}
+DEBUG 2017-11-15 22:23:42,640 [68   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 5f51d389-55dd-4c29-b67b-d35247c51ce9
+WARN  2017-11-15 22:25:23,140 [61   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:25:24,438 [61   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:25:24,462 [72   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 5f51d389-55dd-4c29-b67b-d35247c51ce9
+WARN  2017-11-15 22:25:24,573 [61   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:25:24,933 [54   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"65e17a33-d544-4003-9c02-e5604f4d77ea","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:25:24.9331633+08:00","Properties":{}}
+DEBUG 2017-11-15 22:25:24,939 [72   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 65e17a33-d544-4003-9c02-e5604f4d77ea
+WARN  2017-11-15 22:25:47,230 [42   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:25:47,251 [42   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 65e17a33-d544-4003-9c02-e5604f4d77ea
+WARN  2017-11-15 22:25:47,350 [42   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:25:47,517 [77   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"8b6bb89c-ffb4-4b7e-8027-c7b1d65a1a19","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:25:47.5178007+08:00","Properties":{}}
+DEBUG 2017-11-15 22:25:47,523 [59   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 8b6bb89c-ffb4-4b7e-8027-c7b1d65a1a19
+WARN  2017-11-15 22:25:48,392 [28   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:25:48,419 [28   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:25:48,440 [42   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 8b6bb89c-ffb4-4b7e-8027-c7b1d65a1a19
+WARN  2017-11-15 22:25:48,550 [28   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:25:48,647 [72   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"ca8f805f-9efc-42ff-81ae-cb307b25fcfa","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:25:48.6473117+08:00","Properties":{}}
+DEBUG 2017-11-15 22:25:48,650 [59   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: ca8f805f-9efc-42ff-81ae-cb307b25fcfa
+WARN  2017-11-15 22:26:07,806 [28   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:26:09,160 [28   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:26:09,181 [42   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: ca8f805f-9efc-42ff-81ae-cb307b25fcfa
+WARN  2017-11-15 22:26:09,272 [72   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:26:09,464 [39   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"979bc9cd-f4ee-4f98-9ffb-6559a0434ed7","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:26:09.4644557+08:00","Properties":{}}
+DEBUG 2017-11-15 22:26:09,469 [63   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 979bc9cd-f4ee-4f98-9ffb-6559a0434ed7
+WARN  2017-11-15 22:26:21,142 [42   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:26:21,165 [42   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:26:21,186 [42   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 979bc9cd-f4ee-4f98-9ffb-6559a0434ed7
+WARN  2017-11-15 22:26:21,279 [42   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:26:21,472 [72   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"86172bd9-3fb1-4f79-bcfd-a56228c464a3","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:26:21.472618+08:00","Properties":{}}
+DEBUG 2017-11-15 22:26:21,477 [60   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 86172bd9-3fb1-4f79-bcfd-a56228c464a3
+WARN  2017-11-15 22:27:41,161 [39   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:27:42,626 [39   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:27:42,658 [63   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 86172bd9-3fb1-4f79-bcfd-a56228c464a3
+WARN  2017-11-15 22:27:42,754 [63   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:27:42,963 [70   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"9c48ce14-72de-40f1-b0a0-030df62558e7","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:27:42.9632055+08:00","Properties":{}}
+DEBUG 2017-11-15 22:27:42,969 [63   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 9c48ce14-72de-40f1-b0a0-030df62558e7
+WARN  2017-11-15 22:27:51,174 [63   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:27:51,206 [63   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:27:51,230 [73   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 9c48ce14-72de-40f1-b0a0-030df62558e7
+WARN  2017-11-15 22:27:51,345 [73   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:27:51,457 [19   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"672527c3-5094-4a45-b36a-cde5f44d40b2","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:27:51.456612+08:00","Properties":{}}
+DEBUG 2017-11-15 22:27:51,460 [48   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 672527c3-5094-4a45-b36a-cde5f44d40b2
+WARN  2017-11-15 22:27:55,361 [63   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:27:55,392 [63   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:27:55,414 [63   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 672527c3-5094-4a45-b36a-cde5f44d40b2
+WARN  2017-11-15 22:27:55,515 [63   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:27:55,618 [69   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"214b63a9-9bbc-4590-8de0-d18119ca88ba","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:27:55.6184086+08:00","Properties":{}}
+DEBUG 2017-11-15 22:27:55,623 [70   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 214b63a9-9bbc-4590-8de0-d18119ca88ba
+DEBUG 2017-11-15 22:28:29,717 [55   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-11-15 22:28:29,718 [55   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-11-15 22:28:29,719 [55   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-11-15 22:28:29,719 [55   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-11-15 22:28:34,142 [16   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-15 22:28:34,447 [16   ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-11-15 22:28:34,453 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,455 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,456 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,456 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,456 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,456 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,456 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,456 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,457 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,457 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,457 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,457 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,457 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,457 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,458 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,458 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,458 [16   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:34,460 [16   ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-11-15 22:28:34,852 [16   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 22:28:34,852 [16   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 22:28:34,852 [16   ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 22:28:34,852 [16   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 22:28:35,235 [16   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:28:36,056 [16   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-11-15 22:28:36,060 [16   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-15 22:28:36,067 [16   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-15 22:28:36,069 [16   ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-11-15 22:28:36,070 [16   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-11-15 22:28:36,151 [16   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-11-15 22:28:36,195 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-11-15 22:28:36,195 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-11-15 22:28:36,198 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-11-15 22:28:36,198 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-11-15 22:28:36,199 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-11-15 22:28:36,199 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-11-15 22:28:36,199 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-11-15 22:28:36,199 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-11-15 22:28:36,199 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-11-15 22:28:36,199 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-11-15 22:28:36,199 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-11-15 22:28:36,199 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-11-15 22:28:36,199 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-11-15 22:28:36,199 [16   ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-11-15 22:28:37,711 [16   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-11-15 22:28:37,712 [16   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-11-15 22:28:37,713 [16   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-11-15 22:28:37,714 [16   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-11-15 22:28:37,715 [16   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-11-15 22:28:37,716 [16   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-11-15 22:28:44,486 [39   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"214b63a9-9bbc-4590-8de0-d18119ca88ba","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:28:44.4716351+08:00","Properties":{}}
+WARN  2017-11-15 22:28:44,919 [63   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:28:47,231 [63   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:28:47,876 [53   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 214b63a9-9bbc-4590-8de0-d18119ca88ba
+WARN  2017-11-15 22:28:48,087 [63   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:28:48,269 [39   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"1f05667d-ecde-4f21-b995-1fd330fcfe92","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:28:48.269639+08:00","Properties":{}}
+DEBUG 2017-11-15 22:28:48,290 [27   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 1f05667d-ecde-4f21-b995-1fd330fcfe92
+WARN  2017-11-15 22:29:31,157 [22   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:29:32,594 [22   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:29:32,625 [63   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 1f05667d-ecde-4f21-b995-1fd330fcfe92
+WARN  2017-11-15 22:29:32,721 [63   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:29:32,835 [39   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"03200127-244b-4eba-a78f-85ef12a0d614","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:29:32.8355202+08:00","Properties":{}}
+DEBUG 2017-11-15 22:29:32,845 [59   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 03200127-244b-4eba-a78f-85ef12a0d614
+WARN  2017-11-15 22:29:49,202 [63   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:29:50,553 [63   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:29:50,581 [63   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 03200127-244b-4eba-a78f-85ef12a0d614
+WARN  2017-11-15 22:29:50,682 [39   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:29:50,791 [22   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"1c68f073-4c93-4596-afb7-dd51008a73b8","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:29:50.7910438+08:00","Properties":{}}
+DEBUG 2017-11-15 22:29:50,795 [41   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 1c68f073-4c93-4596-afb7-dd51008a73b8
+WARN  2017-11-15 22:30:00,739 [61   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:30:02,146 [61   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:30:02,174 [63   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 1c68f073-4c93-4596-afb7-dd51008a73b8
+WARN  2017-11-15 22:30:02,261 [63   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:30:02,378 [39   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"ee416f04-66a0-47d3-97ea-4ac9bf6dc6c7","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:30:02.3785035+08:00","Properties":{}}
+DEBUG 2017-11-15 22:30:02,381 [22   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: ee416f04-66a0-47d3-97ea-4ac9bf6dc6c7
+WARN  2017-11-15 22:32:03,908 [39   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:32:03,939 [39   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:32:03,965 [63   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: ee416f04-66a0-47d3-97ea-4ac9bf6dc6c7
+WARN  2017-11-15 22:32:04,082 [40   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:32:04,440 [39   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"11689632-3559-4786-8fa0-9eba130a1028","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:32:04.4399723+08:00","Properties":{}}
+DEBUG 2017-11-15 22:32:04,446 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 11689632-3559-4786-8fa0-9eba130a1028
+WARN  2017-11-15 22:32:07,258 [63   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:32:07,289 [63   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:32:07,312 [63   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 11689632-3559-4786-8fa0-9eba130a1028
+WARN  2017-11-15 22:32:07,418 [39   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:32:07,799 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"1470647c-5eb1-4935-a1e3-2f32d463a5a0","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:32:07.7993812+08:00","Properties":{}}
+DEBUG 2017-11-15 22:32:07,804 [40   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 1470647c-5eb1-4935-a1e3-2f32d463a5a0
+WARN  2017-11-15 22:34:10,686 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:34:12,057 [12   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:34:12,082 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 1470647c-5eb1-4935-a1e3-2f32d463a5a0
+WARN  2017-11-15 22:34:12,207 [12   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:34:12,547 [10   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"86685916-74a4-4df5-bab4-476a51b268f9","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:34:12.5479925+08:00","Properties":{}}
+DEBUG 2017-11-15 22:34:12,560 [10   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 86685916-74a4-4df5-bab4-476a51b268f9
+WARN  2017-11-15 22:34:38,331 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:34:39,651 [52   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:34:39,677 [52   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 86685916-74a4-4df5-bab4-476a51b268f9
+WARN  2017-11-15 22:34:39,776 [71   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:34:40,180 [72   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"140eec3c-d3a5-4cb2-9e77-920d997a777b","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:34:40.1804702+08:00","Properties":{}}
+DEBUG 2017-11-15 22:34:40,280 [31   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 140eec3c-d3a5-4cb2-9e77-920d997a777b
+WARN  2017-11-15 22:34:46,156 [52   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:34:46,180 [52   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:34:46,202 [52   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 140eec3c-d3a5-4cb2-9e77-920d997a777b
+WARN  2017-11-15 22:34:46,304 [71   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:34:46,511 [71   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"62ee15da-8189-446e-a988-2ad50ac0cd7e","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:34:46.5117574+08:00","Properties":{}}
+DEBUG 2017-11-15 22:34:46,515 [72   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 62ee15da-8189-446e-a988-2ad50ac0cd7e
+WARN  2017-11-15 22:35:04,777 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:35:06,109 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:35:06,132 [31   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 62ee15da-8189-446e-a988-2ad50ac0cd7e
+WARN  2017-11-15 22:35:06,235 [31   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:35:06,437 [38   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"7980c3fb-df3d-4c4c-9bc6-129c2a258b17","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:35:06.4379943+08:00","Properties":{}}
+DEBUG 2017-11-15 22:35:06,443 [62   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 7980c3fb-df3d-4c4c-9bc6-129c2a258b17
+DEBUG 2017-11-15 22:47:14,263 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-15 22:47:14,278 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-11-15 22:47:14,284 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,286 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,286 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,287 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,287 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,287 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,287 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,287 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,287 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,287 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,288 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,288 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,288 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,288 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,288 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,288 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,288 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:14,292 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-11-15 22:47:14,458 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 22:47:14,458 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 22:47:14,458 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 22:47:14,458 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 22:47:14,803 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 22:47:17,086 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-11-15 22:47:17,126 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-15 22:47:17,137 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-15 22:47:17,141 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-11-15 22:47:17,143 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-11-15 22:47:17,234 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-11-15 22:47:17,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-11-15 22:47:17,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-11-15 22:47:17,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-11-15 22:47:17,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-11-15 22:47:17,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-11-15 22:47:17,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-11-15 22:47:17,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-11-15 22:47:17,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-11-15 22:47:17,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-11-15 22:47:17,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-11-15 22:47:17,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-11-15 22:47:17,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-11-15 22:47:17,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-11-15 22:47:17,284 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-11-15 22:47:18,745 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-11-15 22:47:18,745 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-11-15 22:47:18,746 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-11-15 22:47:18,747 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-11-15 22:47:18,748 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-11-15 22:47:18,748 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+WARN  2017-11-15 22:47:30,938 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:47:32,108 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:47:32,538 [10   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"ffb78d25-aac8-4e5b-874f-ff72875a7e58","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:47:32.5302377+08:00","Properties":{}}
+DEBUG 2017-11-15 22:47:32,575 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: ffb78d25-aac8-4e5b-874f-ff72875a7e58
+WARN  2017-11-15 22:48:59,548 [17   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:48:59,576 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: ffb78d25-aac8-4e5b-874f-ff72875a7e58
+WARN  2017-11-15 22:48:59,682 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:00,100 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"44877694-20ef-4e59-8029-78ea17ceb80c","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:49:00.1000475+08:00","Properties":{}}
+DEBUG 2017-11-15 22:49:00,110 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 44877694-20ef-4e59-8029-78ea17ceb80c
+WARN  2017-11-15 22:49:02,178 [19   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:02,227 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 44877694-20ef-4e59-8029-78ea17ceb80c
+WARN  2017-11-15 22:49:02,344 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:02,692 [13   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"1ac92dfb-af8c-4bc9-bcd1-e9afb1fc8c84","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:49:02.6922934+08:00","Properties":{}}
+DEBUG 2017-11-15 22:49:02,699 [24   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 1ac92dfb-af8c-4bc9-bcd1-e9afb1fc8c84
+WARN  2017-11-15 22:49:05,054 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:05,078 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 1ac92dfb-af8c-4bc9-bcd1-e9afb1fc8c84
+WARN  2017-11-15 22:49:05,185 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:05,572 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"dac3b49b-b402-48f2-87cc-619b66250683","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:49:05.5721276+08:00","Properties":{}}
+DEBUG 2017-11-15 22:49:05,578 [22   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: dac3b49b-b402-48f2-87cc-619b66250683
+WARN  2017-11-15 22:49:06,230 [12   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:06,254 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: dac3b49b-b402-48f2-87cc-619b66250683
+WARN  2017-11-15 22:49:06,359 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:06,712 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"beeae1d7-8c98-4543-ac1e-919426c14d49","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:49:06.7129783+08:00","Properties":{}}
+DEBUG 2017-11-15 22:49:06,721 [19   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: beeae1d7-8c98-4543-ac1e-919426c14d49
+WARN  2017-11-15 22:49:35,738 [25   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:35,760 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: beeae1d7-8c98-4543-ac1e-919426c14d49
+WARN  2017-11-15 22:49:35,866 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:36,205 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"637dbda1-6f52-48f1-9739-750278223455","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:49:36.205524+08:00","Properties":{}}
+DEBUG 2017-11-15 22:49:36,211 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 637dbda1-6f52-48f1-9739-750278223455
+WARN  2017-11-15 22:49:39,403 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:49:39,427 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:39,449 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 637dbda1-6f52-48f1-9739-750278223455
+WARN  2017-11-15 22:49:39,549 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:39,875 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"4b850683-ce3d-4be2-9c27-d527cfc7f37e","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:49:39.8753561+08:00","Properties":{}}
+DEBUG 2017-11-15 22:49:39,880 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 4b850683-ce3d-4be2-9c27-d527cfc7f37e
+WARN  2017-11-15 22:49:44,432 [26   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:44,455 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 4b850683-ce3d-4be2-9c27-d527cfc7f37e
+WARN  2017-11-15 22:49:44,556 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:49:44,898 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"cee282b3-0a0c-4bab-a197-2b3b4568a66c","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:49:44.8983056+08:00","Properties":{}}
+DEBUG 2017-11-15 22:49:44,906 [26   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: cee282b3-0a0c-4bab-a197-2b3b4568a66c
+WARN  2017-11-15 22:53:32,229 [19   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:53:32,256 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: cee282b3-0a0c-4bab-a197-2b3b4568a66c
+WARN  2017-11-15 22:53:32,355 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:53:32,570 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"dfff4414-44a0-40ed-8fef-367e8f44beb5","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:53:32.5705532+08:00","Properties":{}}
+DEBUG 2017-11-15 22:53:32,576 [22   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: dfff4414-44a0-40ed-8fef-367e8f44beb5
+WARN  2017-11-15 22:53:37,846 [8    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:53:37,870 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:53:37,897 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: dfff4414-44a0-40ed-8fef-367e8f44beb5
+WARN  2017-11-15 22:53:38,003 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:53:38,111 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"7589b8e8-6afa-4d19-af50-c8dd97edd3b0","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:53:38.111572+08:00","Properties":{}}
+DEBUG 2017-11-15 22:53:38,114 [20   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 7589b8e8-6afa-4d19-af50-c8dd97edd3b0
+WARN  2017-11-15 22:53:40,895 [10   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:53:40,917 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 7589b8e8-6afa-4d19-af50-c8dd97edd3b0
+WARN  2017-11-15 22:53:41,014 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:53:41,133 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"c0bc6b9b-3a8f-4111-aa91-46713f823b08","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:53:41.1335402+08:00","Properties":{}}
+DEBUG 2017-11-15 22:53:41,138 [22   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: c0bc6b9b-3a8f-4111-aa91-46713f823b08
+WARN  2017-11-15 22:53:42,218 [8    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:53:42,244 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:53:42,265 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: c0bc6b9b-3a8f-4111-aa91-46713f823b08
+WARN  2017-11-15 22:53:42,356 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:53:42,468 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"efd5920b-5787-4454-883e-c94582232b28","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:53:42.4682789+08:00","Properties":{}}
+DEBUG 2017-11-15 22:53:42,471 [20   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: efd5920b-5787-4454-883e-c94582232b28
+WARN  2017-11-15 22:54:04,415 [9    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 22:54:05,755 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:54:05,777 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: efd5920b-5787-4454-883e-c94582232b28
+WARN  2017-11-15 22:54:05,878 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:54:06,055 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"6b5ff8cd-6b1d-4b6e-b5b1-58de190a014a","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:54:06.0559065+08:00","Properties":{}}
+DEBUG 2017-11-15 22:54:06,060 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 6b5ff8cd-6b1d-4b6e-b5b1-58de190a014a
+WARN  2017-11-15 22:54:08,570 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:54:08,593 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 6b5ff8cd-6b1d-4b6e-b5b1-58de190a014a
+WARN  2017-11-15 22:54:08,686 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:54:08,828 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"d3889dad-7b7d-4cf5-aac3-6034b42c8e04","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:54:08.8283398+08:00","Properties":{}}
+DEBUG 2017-11-15 22:54:08,832 [20   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: d3889dad-7b7d-4cf5-aac3-6034b42c8e04
+WARN  2017-11-15 22:55:04,445 [12   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:55:04,467 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: d3889dad-7b7d-4cf5-aac3-6034b42c8e04
+WARN  2017-11-15 22:55:04,576 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:55:04,951 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"6a1b26d6-38c4-4265-8e3f-d0768a3d1c4b","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:55:04.9516239+08:00","Properties":{}}
+DEBUG 2017-11-15 22:55:04,957 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 6a1b26d6-38c4-4265-8e3f-d0768a3d1c4b
+WARN  2017-11-15 22:56:09,818 [12   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:56:09,842 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 6a1b26d6-38c4-4265-8e3f-d0768a3d1c4b
+WARN  2017-11-15 22:56:09,941 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:56:10,174 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e14cc6c9-f027-419e-ac50-3b12eb0e44ea","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:56:10.1745477+08:00","Properties":{}}
+DEBUG 2017-11-15 22:56:10,178 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e14cc6c9-f027-419e-ac50-3b12eb0e44ea
+WARN  2017-11-15 22:58:56,162 [20   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:58:56,186 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e14cc6c9-f027-419e-ac50-3b12eb0e44ea
+WARN  2017-11-15 22:58:56,287 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:58:56,467 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"73062e4e-1284-480c-9873-fc5a97a3b996","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:58:56.4679556+08:00","Properties":{}}
+DEBUG 2017-11-15 22:58:56,472 [23   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 73062e4e-1284-480c-9873-fc5a97a3b996
+WARN  2017-11-15 22:59:50,717 [22   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:59:50,741 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 73062e4e-1284-480c-9873-fc5a97a3b996
+WARN  2017-11-15 22:59:50,848 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 22:59:51,235 [24   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"0dac2933-c44b-487e-bd86-791d8017a251","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T22:59:51.2358945+08:00","Properties":{}}
+DEBUG 2017-11-15 22:59:51,241 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 0dac2933-c44b-487e-bd86-791d8017a251
+WARN  2017-11-15 23:02:05,399 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 23:02:05,426 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 0dac2933-c44b-487e-bd86-791d8017a251
+WARN  2017-11-15 23:02:05,540 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 23:02:05,980 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"a02cfcd4-cc67-4092-8f06-9c26dc784f1b","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T23:02:05.9795002+08:00","Properties":{}}
+DEBUG 2017-11-15 23:02:05,987 [20   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: a02cfcd4-cc67-4092-8f06-9c26dc784f1b
+WARN  2017-11-15 23:02:26,797 [22   ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 23:02:26,867 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: a02cfcd4-cc67-4092-8f06-9c26dc784f1b
+WARN  2017-11-15 23:02:26,978 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 23:02:27,304 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"319a8f43-9cf4-4492-9460-47a4a7a031c9","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T23:02:27.304037+08:00","Properties":{}}
+DEBUG 2017-11-15 23:02:27,311 [22   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 319a8f43-9cf4-4492-9460-47a4a7a031c9
+DEBUG 2017-11-15 23:02:29,915 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 319a8f43-9cf4-4492-9460-47a4a7a031c9
+DEBUG 2017-11-15 23:03:14,320 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-15 23:03:14,505 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-11-15 23:03:14,510 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,512 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,512 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,512 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,512 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,513 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,513 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,513 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,513 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,513 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,513 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:14,518 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-11-15 23:03:14,830 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 23:03:14,830 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 23:03:14,831 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 23:03:14,831 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 23:03:15,177 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:03:15,862 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-11-15 23:03:15,887 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-15 23:03:15,893 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-15 23:03:15,896 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-11-15 23:03:15,898 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-11-15 23:03:15,974 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-11-15 23:03:16,031 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-11-15 23:03:16,031 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-11-15 23:03:16,037 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-11-15 23:03:16,037 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-11-15 23:03:16,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-11-15 23:03:16,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-11-15 23:03:16,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-11-15 23:03:16,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-11-15 23:03:16,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-11-15 23:03:16,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-11-15 23:03:16,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-11-15 23:03:16,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-11-15 23:03:16,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-11-15 23:03:16,038 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-11-15 23:03:17,455 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-11-15 23:03:17,456 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-11-15 23:03:17,457 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-11-15 23:03:17,458 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-11-15 23:03:17,460 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-11-15 23:03:17,461 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+WARN  2017-11-15 23:03:23,920 [6    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: µ±«∞”√ªß√ª”–µ«¬ºµΩœµÕ≥£°
+   ‘⁄ Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- “˝∑¢“Ï≥£µƒ…œ“ªŒª÷√÷–∂—’ª∏˙◊Ÿµƒƒ©Œ≤ ---
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ‘⁄ Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- “˝∑¢“Ï≥£µƒ…œ“ªŒª÷√÷–∂—’ª∏˙◊Ÿµƒƒ©Œ≤ ---
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ‘⁄ Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- “˝∑¢“Ï≥£µƒ…œ“ªŒª÷√÷–∂—’ª∏˙◊Ÿµƒƒ©Œ≤ ---
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ‘⁄ Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   ‘⁄ Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   ‘⁄ System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   ‘⁄ System.Threading.Tasks.Task.Execute()
+--- “˝∑¢“Ï≥£µƒ…œ“ªŒª÷√÷–∂—’ª∏˙◊Ÿµƒƒ©Œ≤ ---
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ‘⁄ Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   ‘⁄ Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   ‘⁄ Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   ‘⁄ Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: µ±«∞”√ªß√ª”–µ«¬ºµΩœµÕ≥£°
+   ‘⁄ Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- “˝∑¢“Ï≥£µƒ…œ“ªŒª÷√÷–∂—’ª∏˙◊Ÿµƒƒ©Œ≤ ---
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ‘⁄ Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- “˝∑¢“Ï≥£µƒ…œ“ªŒª÷√÷–∂—’ª∏˙◊Ÿµƒƒ©Œ≤ ---
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ‘⁄ Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- “˝∑¢“Ï≥£µƒ…œ“ªŒª÷√÷–∂—’ª∏˙◊Ÿµƒƒ©Œ≤ ---
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ‘⁄ Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   ‘⁄ Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   ‘⁄ System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   ‘⁄ System.Threading.Tasks.Task.Execute()
+--- “˝∑¢“Ï≥£µƒ…œ“ªŒª÷√÷–∂—’ª∏˙◊Ÿµƒƒ©Œ≤ ---
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   ‘⁄ System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   ‘⁄ Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   ‘⁄ Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   ‘⁄ Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   ‘⁄ Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+WARN  2017-11-15 23:04:00,052 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+WARN  2017-11-15 23:04:01,435 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 23:04:03,329 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"f226fe18-885b-428a-b47c-d5e7a12e1723","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T23:04:03.3237673+08:00","Properties":{}}
+DEBUG 2017-11-15 23:04:03,365 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: f226fe18-885b-428a-b47c-d5e7a12e1723
+WARN  2017-11-15 23:04:06,685 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 23:04:06,716 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: f226fe18-885b-428a-b47c-d5e7a12e1723
+WARN  2017-11-15 23:04:06,815 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 23:04:07,171 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e8190d17-57c3-4811-bb7b-1667e8cb9c27","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T23:04:07.1718206+08:00","Properties":{}}
+DEBUG 2017-11-15 23:04:07,177 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e8190d17-57c3-4811-bb7b-1667e8cb9c27
+WARN  2017-11-15 23:04:15,887 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2017-11-15 23:04:15,910 [7    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 23:04:15,934 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e8190d17-57c3-4811-bb7b-1667e8cb9c27
+WARN  2017-11-15 23:04:16,043 [8    ] naries.DictionaryBasedLocalizationSource - Can not find '”Ô—‘' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 23:04:16,396 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"799f5a9f-4cf5-4791-b010-a8e176448c5c","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T23:04:16.3960836+08:00","Properties":{}}
+DEBUG 2017-11-15 23:04:16,403 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 799f5a9f-4cf5-4791-b010-a8e176448c5c
+DEBUG 2017-11-15 23:07:14,052 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-11-15 23:07:14,065 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2017-11-15 23:07:14,070 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,072 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,073 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,073 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,073 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,073 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,074 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,074 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,074 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,074 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,074 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,074 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,074 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.1.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:14,079 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2017-11-15 23:07:14,253 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 23:07:14,253 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 23:07:14,253 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 23:07:14,253 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-11-15 23:07:14,563 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-11-15 23:07:16,795 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-11-15 23:07:16,818 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-11-15 23:07:16,835 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-11-15 23:07:16,837 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-11-15 23:07:16,838 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-11-15 23:07:16,912 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-11-15 23:07:16,968 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-11-15 23:07:16,968 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-11-15 23:07:16,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-11-15 23:07:16,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-11-15 23:07:16,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-11-15 23:07:16,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-11-15 23:07:16,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-11-15 23:07:16,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-11-15 23:07:16,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-11-15 23:07:16,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-11-15 23:07:16,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-11-15 23:07:16,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-11-15 23:07:16,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-11-15 23:07:16,971 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-11-15 23:07:18,407 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-11-15 23:07:18,409 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-11-15 23:07:18,410 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-11-15 23:07:18,411 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-11-15 23:07:18,412 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-11-15 23:07:18,413 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-11-15 23:07:32,079 [10   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"28830f8d-20b5-476f-a473-2362727cfdce","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T23:07:32.070375+08:00","Properties":{}}
+DEBUG 2017-11-15 23:07:32,112 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 28830f8d-20b5-476f-a473-2362727cfdce
+WARN  2017-11-15 23:07:37,717 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+DEBUG 2017-11-15 23:07:37,773 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 28830f8d-20b5-476f-a473-2362727cfdce
+DEBUG 2017-11-15 23:07:38,245 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"05d17d56-b548-4536-8433-25471f789093","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-11-15T23:07:38.245462+08:00","Properties":{}}
+DEBUG 2017-11-15 23:07:38,251 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 05d17d56-b548-4536-8433-25471f789093
