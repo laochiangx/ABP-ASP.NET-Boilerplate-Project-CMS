@@ -70,13 +70,16 @@ namespace ABPCMS.Web
                 .Include("~/Views/Shared/_Layout.css", new CssRewriteUrlTransform())
             );
 
-            //~/Bundles/vendor/bottom (Included in the bottom for fast page load)
+            //~/Bundles/vendor/bottom (Included in the bottom for fast page load) 模板页
             bundles.Add(
                 new ScriptBundle("~/Bundles/vendor/js/bottom")
                     .Include(
                         "~/lib/json2/json2.js",
+                         "~/Scripts/jquery-2.2.0.js",
                         "~/lib/jquery/dist/jquery.js",
                         "~/lib/bootstrap/dist/js/bootstrap.js",
+                        "~/Scripts/Content/bootstrap-table/bootstrap-table.js",
+                        "~/Scripts/Content/bootstrap-table/locale/bootstrap-table-zh-CN.js",
                         "~/lib/moment/min/moment-with-locales.js",
                         "~/lib/jquery-validation/dist/jquery.validate.js",
                         "~/lib/blockUI/jquery.blockUI.js",
@@ -98,6 +101,7 @@ namespace ABPCMS.Web
                         "~/js/main.js",
                         "~/Views/Shared/_Layout.js",
                         "~/lib/signalr/jquery.signalR.js"
+ 
                     )
                 );
 

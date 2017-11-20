@@ -173,6 +173,7 @@ C:\Users\jiangcy\Desktop\ABPCMS\3.1.2\src\ABPCMS.Application\obj\Debug\ABPCMS.Ap
 C:\Users\jiangcy\Desktop\ABPCMS\3.1.2\src\ABPCMS.Application\obj\Debug\ABPCMS.Application.dll
 C:\Users\jiangcy\Desktop\ABPCMS\3.1.2\src\ABPCMS.Application\obj\Debug\ABPCMS.Application.pdb
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\ABPCMS.Application.dll.config
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\ABPCMS.Application.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\ABPCMS.Application.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\ABPCMS.Application.pdb
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Microsoft.Win32.Primitives.dll
@@ -346,4 +347,3 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\obj\D
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\obj\Debug\ABPCMS.Application.csproj.CoreCompileInputs.cache
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\obj\Debug\ABPCMS.Application.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\obj\Debug\ABPCMS.Application.pdb
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\ABPCMS.Application.xml

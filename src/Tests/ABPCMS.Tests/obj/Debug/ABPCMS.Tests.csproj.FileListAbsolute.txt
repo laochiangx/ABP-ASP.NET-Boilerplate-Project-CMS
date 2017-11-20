@@ -366,6 +366,7 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\D
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\xunit.core.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\xunit.execution.desktop.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\ABPCMS.Application.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\ABPCMS.Application.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\ABPCMS.Application.dll.config
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\ABPCMS.Core.pdb
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\ABPCMS.Core.dll.config
@@ -426,4 +427,3 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\obj\D
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\obj\Debug\ABPCMS.Tests.csproj.CoreCompileInputs.cache
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\obj\Debug\ABPCMS.Tests.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\obj\Debug\ABPCMS.Tests.pdb
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\ABPCMS.Application.xml

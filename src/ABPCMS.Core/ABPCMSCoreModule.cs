@@ -43,6 +43,8 @@ namespace ABPCMS
             Configuration.Authorization.Providers.Add<ABPCMSAuthorizationProvider>();
 
             Configuration.Settings.Providers.Add<AppSettingProvider>();
+
+            Configuration.Authorization.Providers.Add<TaskAuthorizationProvider>();
         }
 
         public override void Initialize()

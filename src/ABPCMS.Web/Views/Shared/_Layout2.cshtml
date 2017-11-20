@@ -58,6 +58,7 @@
 
     <!-- View specific styles -->
     @RenderSection("styles", required: false)
+
     <style type="text/css">
         body {
             font-family: verdana,helvetica,arial,sans-serif;
@@ -70,6 +71,12 @@
             height: auto !important;
         }
     </style>
+
+    <script type="text/javascript">
+        //This is used to get the application's root path from javascript. It's useful if you're running application in a virtual directory under IIS.
+        var abp = abp || {}; abp.appPath = '@ApplicationPath';
+
+    </script>
 
 </head>
 
@@ -85,5 +92,25 @@
         <div class="control-sidebar-bg"></div>
     </div>
     <script src="~/Scripts/AdminLTE-2.1.1/AdminLTE-2.1.1/dist/js/app.min.js"></script>
+
+
+    @Scripts.Render("~/Bundles/vendor/js/bottom")
+
+    <script>
+        //Localizing momentjs
+        moment.locale('@Thread.CurrentThread.CurrentUICulture.Name');
+    </script>
+
+    <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
+    <script src="~/api/AbpServiceProxies/GetAll?v=@(Clock.Now.Ticks)"></script>
+    <script src="~/AbpScripts/GetScripts?v=@(Clock.Now.Ticks)" type="text/javascript"></script>
+
+    <!-- SignalR scripts -->
+    <script src="~/signalr/hubs"></script>
+    @Html.IncludeScript("~/Abp/Framework/scripts/libs/abp.signalr.js")
+
+    <!-- View specific scripts -->
+    @RenderSection("scripts", required: false)
+
 </body>
 </html>

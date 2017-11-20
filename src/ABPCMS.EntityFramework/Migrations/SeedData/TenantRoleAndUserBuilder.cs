@@ -42,6 +42,11 @@ namespace ABPCMS.Migrations.SeedData
                     .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Tenant))
                     .ToList();
 
+                //将Task相关Permission赋予给Admin
+                var taskPermissions =
+                    PermissionFinder.GetAllPermissions(new TaskAuthorizationProvider()).ToList();
+                permissions.AddRange(taskPermissions);
+
                 foreach (var permission in permissions)
                 {
                     _context.Permissions.Add(

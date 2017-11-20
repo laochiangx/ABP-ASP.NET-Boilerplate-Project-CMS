@@ -328,3 +328,4 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Core\bin\Debug\Sy
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Core\obj\Debug\ABPCMS.Core.csproj.CoreCompileInputs.cache
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Core\obj\Debug\ABPCMS.Core.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Core\obj\Debug\ABPCMS.Core.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Core\obj\Debug\ABPCMS.Core.csprojResolveAssemblyReference.cache

@@ -48,7 +48,15 @@ namespace ABPCMS.Web
                         requiredPermissionName: PermissionNames.Pages_Roles
                     )
                 )
-
+                .AddItem(
+                    new MenuItemDefinition(
+                        PageNames.Users,
+                        L("用户详情"),
+                        url: "UserInfo",
+                        icon: "people",
+                        requiredPermissionName: PermissionNames.Pages_Users
+                    )
+                )
                 .AddItem(
                     new MenuItemDefinition(
                         PageNames.About,

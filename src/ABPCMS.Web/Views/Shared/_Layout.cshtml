@@ -50,13 +50,13 @@
     <!-- REQUIRED JS SCRIPTS -->
     <!-- jQuery 2.2.3 -->
     <link href="~/Scripts/Content/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
-    <script src="~/Scripts/Content/bootstrap-table/bootstrap-table.js"></script>
+   @* <script src="~/Scripts/Content/bootstrap-table/bootstrap-table.js"></script>
     <script src="~/Scripts/Content/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
     <link href="~/Scripts/Toastr/toastr.css" rel="stylesheet" />
     <script src="~/Scripts/Toastr/toastr.min.js"></script>
     <link href="~/Abp/Framework/styles/abp.css" rel="stylesheet" />
     <script src="~/Abp/Framework/scripts/abp.js"></script>
-    <script src="~/Abp/Framework/scripts/libs/abp.jquery.js"></script>
+    <script src="~/Abp/Framework/scripts/libs/abp.jquery.js"></script>*@
 
     <style type="text/css">
         body {
@@ -102,6 +102,34 @@
             display: none !important;
 
         }*/
+
+        .content {
+            min-height: 700px ;
+            height: auto !important;
+        }
+
+        /*.content {
+            min-height: 250px !important;
+            padding: 15px !important;
+            margin-right: auto !important;
+            margin-left: auto !important;
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+        .panel-body {
+            padding: 15px;
+            margin-top: -60px !important;
+        }*/
+        /*section.content {
+            margin: 100px 15px 0 315px;
+            -moz-transition: 0.5s;
+            -o-transition: 0.5s;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            margin-left: -5px;
+        }*/
+
+
     </style>
 
 
@@ -125,7 +153,7 @@
         @Html.Action("_MainFooter", "Layout")
         <div class="control-sidebar-bg"></div>
     </div>
-    <script src="~/Scripts/AdminLTE-2.1.1/AdminLTE-2.1.1/dist/js/app.min.js"></script>
+    @*<script src="~/Scripts/AdminLTE-2.1.1/AdminLTE-2.1.1/dist/js/app.min.js"></script>*@
 
 
     @Scripts.Render("~/Bundles/vendor/js/bottom")

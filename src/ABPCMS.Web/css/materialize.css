@@ -6,12 +6,12 @@
 
 /* Radio Buttons
    ========================================================================== */
-[type="radio"]:not(:checked),
+/*[type="radio"]:not(:checked),
 [type="radio"]:checked {
   position: absolute;
   left: -9999px;
   opacity: 0;
-}
+}*/
 
 [type="radio"]:not(:checked) + label,
 [type="radio"]:checked + label {
@@ -140,12 +140,12 @@ form p:last-child {
 }
 
 /* Remove default checkbox */
-[type="checkbox"]:not(:checked),
+/*[type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
   position: absolute;
   left: -9999px;
   opacity: 0;
-}
+}*/
 
 [type="checkbox"] {
   /* checkbox aspect */

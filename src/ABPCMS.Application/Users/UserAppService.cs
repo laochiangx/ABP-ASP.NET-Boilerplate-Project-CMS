@@ -67,6 +67,22 @@ namespace ABPCMS.Users
             return MapToEntityDto(user);
         }
 
+        public  async Task<UserDto> UserInfoCreate(CreateUserDto input)
+        {
+            CheckCreatePermission();
+
+            var user = ObjectMapper.Map<User>(input);
+
+            user.TenantId = AbpSession.TenantId;
+            user.Password = new PasswordHasher().HashPassword(input.Password);
+            user.IsEmailConfirmed = true;
+
+            CheckErrors(await _userManager.CreateAsync(user));
+
+            return MapToEntityDto(user);
+        }
+
+
         public override async Task<UserDto> Update(UpdateUserDto input)
         {
             CheckUpdatePermission();
