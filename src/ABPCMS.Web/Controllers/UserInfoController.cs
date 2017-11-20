@@ -1,6 +1,8 @@
 ﻿using Abp.Application.Services.Dto;
+using Abp.Authorization;
 using Abp.Web.Models;
 using Abp.Web.Security.AntiForgery;
+using ABPCMS.Authorization;
 using ABPCMS.Authorization.Roles;
 using ABPCMS.Users;
 using ABPCMS.Web.Models.Users;
@@ -28,7 +30,7 @@ namespace ABPCMS.Web.Controllers
         {
             return View();
         }
-
+        [AbpAuthorize(PermissionNames.Pages_UserInfos)]
         [DisableAbpAntiForgeryTokenValidation]
         [HttpGet]
         [DontWrapResult]
@@ -44,16 +46,6 @@ namespace ABPCMS.Web.Controllers
             return Json(result, JsonRequestBehavior.AllowGet);
         }
 
-        public async Task<ActionResult> EditUserModal(long userId)
-        {
-            var user = await _userAppService.Get(new EntityDto<long>(userId));
-            var roles = (await _userAppService.GetRoles()).Items;
-            var model = new EditUserModalViewModel
-            {
-                User = user,
-                Roles = roles
-            };
-            return View("_EditUserModal", model);
-        }
+
     }
 }

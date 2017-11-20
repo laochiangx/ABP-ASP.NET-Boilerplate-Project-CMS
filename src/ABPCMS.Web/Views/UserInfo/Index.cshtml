@@ -113,7 +113,7 @@
         return oTableInit;
     };
 
-
+  var actionUrl = "@Url.Action("GetUsersList")";
     var ButtonInit = function () {
         var oInit = new Object();
         var postdata = {};
@@ -122,7 +122,7 @@
             //初始化页面上面的按钮事件
             //查询角色
             $("#btn_query").click(function () {
-                var actionUrl = "@Url.Action("GetUsersList")";
+
                 m_pagerow = 0;
                 $("#tb_departments").bootstrapTable('refresh', { url: actionUrl });
 

@@ -44,7 +44,7 @@ namespace ABPCMS.Migrations.SeedData
 
                 //将Task相关Permission赋予给Admin
                 var taskPermissions =
-                    PermissionFinder.GetAllPermissions(new TaskAuthorizationProvider()).ToList();
+                    PermissionFinder.GetAllPermissions(new UserInfoAuthorizationProvider()).ToList();
                 permissions.AddRange(taskPermissions);
 
                 foreach (var permission in permissions)

@@ -11,10 +11,10 @@
 
         public const string Pages = "Pages";
 
-        public const string Pages_Tasks = "Pages.Tasks";
+        public const string Pages_UserInfos = "Pages.UserInfos";
 
-        public const string Pages_Tasks_AssignPerson = "Pages.Tasks.AssignPerson";
+        public const string Pages_UserInfos_Create = "Pages.UserInfo.Create";
 
-        public const string Pages_Tasks_Delete = "Pages.Tasks.Delete";
+        public const string Pages_UserInfos_Delete = "Pages.UserInfo.Delete";
     }
 }

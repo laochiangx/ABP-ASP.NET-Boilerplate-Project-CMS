@@ -188,7 +188,7 @@
     <Compile Include="Authorization\PermissionNames.cs" />
     <Compile Include="Authorization\Roles\AppRoleConfig.cs" />
     <Compile Include="Authorization\Roles\StaticRoleNames.cs" />
-    <Compile Include="Authorization\TaskAuthorizationProvider.cs" />
+    <Compile Include="Authorization\UserInfoAuthorizationProvider.cs" />
     <Compile Include="Authorization\Users\UserRegistrationManager.cs" />
     <Compile Include="Configuration\AppSettingNames.cs" />
     <Compile Include="Configuration\AppSettingProvider.cs" />
