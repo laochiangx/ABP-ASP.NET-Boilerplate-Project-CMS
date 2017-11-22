@@ -14,6 +14,7 @@ using ABPCMS.Authorization.Users;
 using ABPCMS.Roles.Dto;
 using ABPCMS.Users.Dto;
 using Microsoft.AspNet.Identity;
+using Abp.Threading;
 
 namespace ABPCMS.Users
 {
@@ -131,6 +132,12 @@ namespace ABPCMS.Users
 
         protected override async Task<User> GetEntityByIdAsync(long id)
         {
+            bool UserInfos = PermissionChecker.IsGranted(PermissionNames.Pages_UserInfos);
+            //如果当前人员没有权限，则抛出异常
+            if (!UserInfos)
+            {
+                throw new AbpAuthorizationException("没有权限！");
+            }
             var user = Repository.GetAllIncluding(x => x.Roles).FirstOrDefault(x => x.Id == id);
             return await Task.FromResult(user);
         }

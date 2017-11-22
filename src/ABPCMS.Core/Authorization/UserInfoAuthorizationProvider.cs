@@ -17,11 +17,10 @@ namespace ABPCMS.Authorization
             if (pages == null)
                 pages = context.CreatePermission(PermissionNames.Pages, L("Pages"));
 
-            //Tasks
-            var tasks = pages.CreateChildPermission(PermissionNames.Pages_UserInfos, L("UserInfos"));
-            tasks.CreateChildPermission(PermissionNames.Pages_UserInfos_Create, L("UserInfosCreate"));
-            tasks.CreateChildPermission(PermissionNames.Pages_UserInfos_Delete, L("UserInfosDelete"));
-            tasks.CreateChildPermission(PermissionNames.Pages_UserInfos_Update, L("UserInfosUpdate"));
+            var UserInfos = pages.CreateChildPermission(PermissionNames.Pages_UserInfos, L("UserInfos"));
+            UserInfos.CreateChildPermission(PermissionNames.Pages_UserInfos_Create, L("UserInfosCreate"));
+            UserInfos.CreateChildPermission(PermissionNames.Pages_UserInfos_Delete, L("UserInfosDelete"));
+            UserInfos.CreateChildPermission(PermissionNames.Pages_UserInfos_Update, L("UserInfosUpdate"));
         }
 
         private static ILocalizableString L(string name)
