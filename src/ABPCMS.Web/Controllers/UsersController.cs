@@ -15,6 +15,7 @@ using ABPCMS.Authorization;
 using ABPCMS.Authorization.Roles;
 using ABPCMS.Users;
 using ABPCMS.Web.Models.Users;
+using Abp.Authorization;
 
 namespace ABPCMS.Web.Controllers
 {
@@ -42,7 +43,7 @@ namespace ABPCMS.Web.Controllers
 
             return View(model);
         }
-
+        [AbpAuthorize(PermissionNames.Pages_UserInfos_Update)]
         public async Task<ActionResult> EditUserModal(long userId)
         {
             var user = await _userAppService.Get(new EntityDto<long>(userId));

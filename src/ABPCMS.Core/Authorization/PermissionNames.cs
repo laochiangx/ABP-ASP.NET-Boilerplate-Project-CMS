@@ -16,5 +16,7 @@
         public const string Pages_UserInfos_Create = "Pages.UserInfo.Create";
 
         public const string Pages_UserInfos_Delete = "Pages.UserInfo.Delete";
+
+        public const string Pages_UserInfos_Update = "Pages.UserInfo.Update";
     }
 }

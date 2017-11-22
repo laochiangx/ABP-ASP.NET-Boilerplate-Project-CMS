@@ -25,13 +25,11 @@ namespace ABPCMS.Web.Controllers
             _userAppService = userAppService;
             _roleManager = roleManager;
         }
-        // GET: UserInfo
         public ActionResult Index()
         {
             return View();
         }
-        [AbpAuthorize(PermissionNames.Pages_UserInfos)]
-        [DisableAbpAntiForgeryTokenValidation]
+        [AbpAuthorize(PermissionNames.Pages_UserInfos_Update)]
         [HttpGet]
         [DontWrapResult]
 

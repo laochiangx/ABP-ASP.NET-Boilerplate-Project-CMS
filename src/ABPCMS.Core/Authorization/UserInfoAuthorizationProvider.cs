@@ -21,6 +21,7 @@ namespace ABPCMS.Authorization
             var tasks = pages.CreateChildPermission(PermissionNames.Pages_UserInfos, L("UserInfos"));
             tasks.CreateChildPermission(PermissionNames.Pages_UserInfos_Create, L("UserInfosCreate"));
             tasks.CreateChildPermission(PermissionNames.Pages_UserInfos_Delete, L("UserInfosDelete"));
+            tasks.CreateChildPermission(PermissionNames.Pages_UserInfos_Update, L("UserInfosUpdate"));
         }
 
         private static ILocalizableString L(string name)
