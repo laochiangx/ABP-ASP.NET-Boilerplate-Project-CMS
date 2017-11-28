@@ -29,7 +29,6 @@ namespace ABPCMS.Web.Controllers
         {
             return View();
         }
-        [AbpAuthorize(PermissionNames.Pages_UserInfos_Update)]
         [HttpGet]
         [DontWrapResult]
 

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abp.HangFire</name>
+    </assembly>
+    <members>
+        <member name="M:Abp.Hangfire.Configuration.AbpHangfireConfigurationExtensions.AbpHangfire(Abp.Configuration.Startup.IModuleConfigurations)">
+            <summary>
+            Used to configure ABP Hangfire module.
+            </summary>
+        </member>
+        <member name="M:Abp.Hangfire.Configuration.AbpHangfireConfigurationExtensions.UseHangfire(Abp.BackgroundJobs.IBackgroundJobConfiguration,System.Action{Abp.Hangfire.Configuration.IAbpHangfireConfiguration})">
+            <summary>
+            Configures to use Hangfire for background job management.
+            </summary>
+        </member>
+        <member name="T:Abp.Hangfire.Configuration.IAbpHangfireConfiguration">
+            <summary>
+            Used to configure Hangfire.
+            </summary>
+        </member>
+        <member name="P:Abp.Hangfire.Configuration.IAbpHangfireConfiguration.Server">
+            <summary>
+            Gets or sets the Hanfgire's <see cref="T:Hangfire.BackgroundJobServer"/> object.
+            Important: This is null in <see cref="M:Abp.Modules.AbpModule.PreInitialize"/>. You can create and set it to customize it's creation.
+            If you don't set it, it's automatically set in <see cref="M:Abp.Modules.AbpModule.PreInitialize"/> by Abp.HangFire module with it's default constructor
+            if background job execution is enabled (see <see cref="P:Abp.BackgroundJobs.IBackgroundJobConfiguration.IsJobExecutionEnabled"/>).
+            So, if you create it yourself, it's your responsibility to check if background job execution is enabled (see <see cref="P:Abp.BackgroundJobs.IBackgroundJobConfiguration.IsJobExecutionEnabled"/>).
+            </summary>
+        </member>
+        <member name="P:Abp.Hangfire.Configuration.IAbpHangfireConfiguration.GlobalConfiguration">
+            <summary>
+            A reference to Hangfire's global configuration.
+            </summary>
+        </member>
+    </members>
+</doc>

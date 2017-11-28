@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DFA48E27-7D53-4955-A722-3D91A7119BE7}"
 	ProjectSection(SolutionItems) = preProject
@@ -27,6 +27,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{7408541C-F99C-4197-B203-136115BD1CB9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABPCMS.Migrator", "Tools\ABPCMS.Migrator\ABPCMS.Migrator.csproj", "{6F98C2F2-898A-421B-BE3D-68FE69EC0646}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastWorkWorkerPxoxyModule", "FastWorkWorkerPxoxyModule\FastWorkWorkerPxoxyModule.csproj", "{D997CCAB-AE26-4A44-B274-F98E93BD1E29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{6F98C2F2-898A-421B-BE3D-68FE69EC0646}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F98C2F2-898A-421B-BE3D-68FE69EC0646}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F98C2F2-898A-421B-BE3D-68FE69EC0646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D997CCAB-AE26-4A44-B274-F98E93BD1E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D997CCAB-AE26-4A44-B274-F98E93BD1E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D997CCAB-AE26-4A44-B274-F98E93BD1E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D997CCAB-AE26-4A44-B274-F98E93BD1E29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,5 +76,7 @@ Global
 		{C602C47E-F379-40A3-A146-4F19105B3491} = {7E85C7E5-70BD-4C9D-B052-D95955F46609}
 		{6F98C2F2-898A-421B-BE3D-68FE69EC0646} = {7408541C-F99C-4197-B203-136115BD1CB9}
 	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24E94EA9-56D0-4C56-B090-427DE39453EF}
+	EndGlobalSection
 EndGlobal
-

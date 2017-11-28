@@ -427,3 +427,11 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\obj\D
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\obj\Debug\ABPCMS.Tests.csproj.CoreCompileInputs.cache
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\obj\Debug\ABPCMS.Tests.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\obj\Debug\ABPCMS.Tests.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\Abp.HangFire.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\Hangfire.Core.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\Owin.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\Abp.HangFire.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\Abp.HangFire.xml
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\Hangfire.Core.xml
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\es\Hangfire.Core.resources.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\Tests\ABPCMS.Tests\bin\Debug\zh\Hangfire.Core.resources.dll

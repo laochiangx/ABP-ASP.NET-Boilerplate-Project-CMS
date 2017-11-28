@@ -9,11 +9,12 @@ using ABPCMS.Authorization.Roles;
 using ABPCMS.Authorization.Users;
 using ABPCMS.Roles.Dto;
 using ABPCMS.Users.Dto;
+using Abp.Threading.BackgroundWorkers;
 
 namespace ABPCMS
 {
     [DependsOn(typeof(ABPCMSCoreModule), typeof(AbpAutoMapperModule))]
-    public class ABPCMSApplicationModule : AbpModule
+    public class ABPCMSApplicationModule : AbpModule 
     {
         public override void PreInitialize()
         {
@@ -39,6 +40,12 @@ namespace ABPCMS
                 cfg.CreateMap<CreateUserDto, User>();
                 cfg.CreateMap<CreateUserDto, User>().ForMember(x => x.Roles, opt => opt.Ignore());
             });
+        }
+        public override void PostInitialize()
+        {
+            //注册后台工作者标记消极用户
+            var workManager = IocManager.Resolve<IBackgroundWorkerManager>();
+          //  workManager.Add(IocManager.Resolve<MakeInactiveUsersPassiveWorker>());
         }
     }
 }

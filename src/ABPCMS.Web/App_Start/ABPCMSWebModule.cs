@@ -13,6 +13,8 @@ using ABPCMS.Api;
 using Castle.MicroKernel.Registration;
 using Hangfire;
 using Microsoft.Owin.Security;
+using Abp.Threading.BackgroundWorkers;
+using ABPCMS.HangFiresTest;
 
 namespace ABPCMS.Web
 {
@@ -33,13 +35,18 @@ namespace ABPCMS.Web
             //Configure navigation/menu
             Configuration.Navigation.Providers.Add<ABPCMSNavigationProvider>();
 
-            //Configure Hangfire - ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
+         //   Configure Hangfire -ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
             //Configuration.BackgroundJobs.UseHangfire(configuration =>
             //{
             //    configuration.GlobalConfiguration.UseSqlServerStorage("Default");
             //});
-        }
 
+        }
+        public override void PostInitialize()
+        {
+            var workManager = IocManager.Resolve<IBackgroundWorkerManager>();
+            workManager.Add(IocManager.Resolve<MakeInactiveUsersPassiveWorker>());
+        }
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
@@ -56,4 +63,5 @@ namespace ABPCMS.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
+
 }
