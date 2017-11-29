@@ -27,15 +27,15 @@ namespace ABPCMS.Web
         public void Configuration(IAppBuilder app)
         {
             app.UseAbp();
-           
+
             app.UseOAuthBearerAuthentication(AccountController.OAuthBearerOptions);
-            
+
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
                 LoginPath = new PathString("/Account/Login")
             });
-           
+
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             app.MapSignalR();
@@ -49,22 +49,36 @@ namespace ABPCMS.Web
             ////启用HangfireServer这个中间件（它会自动释放）
             //app.UseHangfireServer();
             ////启用Hangfire的仪表盘（可以看到任务的状态，进度等信息）
-            //// app.UseHangfireDashboard();
+            //app.UseHangfireDashboard();
 
             //app.UseHangfireDashboard("/hangfire", new DashboardOptions
             //{
             //    Authorization = new[] { new AbpHangfireAuthorizationFilter() }
             //});
 
+            //var jobId = BackgroundJob.Schedule(
+            //    () => Console.WriteLine("Delayed!"),
+            //    TimeSpan.FromDays(7));
+
+
             //RecurringJob.AddOrUpdate(
-            //   () => TextMessageBuffer.WriteLine("Recurring Job completed successfully!"),
-            //   Cron.Minutely);
+            //            () => Console.WriteLine("Recurring!"),
+            //            Cron.Daily);
 
-            //var jobId = BackgroundJob.Enqueue(
-            //       () => Console.WriteLine("Fire-and-forget!"));
+            //BackgroundJob.ContinueWith(
+            //                jobId,
+            //                () => Console.WriteLine("Continuation!"));
 
 
-            ////ENABLE TO USE HANGFIRE dashboard (Requires enabling Hangfire in ABPCMSWebModule)
+            //var jobId2 = BackgroundJob.Schedule(
+            //            () => Console.WriteLine("Delayed!"),
+            //            TimeSpan.FromDays(7));
+
+
+
+
+
+            //  ENABLE TO USE HANGFIRE dashboard(Requires enabling Hangfire in ABPCMSWebModule)
             //app.UseHangfireDashboard("/hangfire", new DashboardOptions
             //{
             //    Authorization = new[] { new AbpHangfireAuthorizationFilter() } //You can remove this line to disable authorization
@@ -75,16 +89,11 @@ namespace ABPCMS.Web
             //input.Id = 1;
             //BackgroundJob.Enqueue<UserAppService>(x => x.Get(input));
 
+            app.MapSignalR();
 
-            //app.UseHangfireDashboard("/hangfire", new DashboardOptions
-            //{
-            //    Authorization = new[] { new AbpHangfireAuthorizationFilter() }
-            //});
-
-            //app.UseHangfireServer();
-            //app.UseHangfireDashboard();
+            app.UseHangfireDashboard();
         }
 
-        
-    }
+
+}
 }

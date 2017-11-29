@@ -16,6 +16,7 @@ using Microsoft.Owin.Security;
 using Abp.Threading.BackgroundWorkers;
 using FastWorkWorkerPxoxyModule;
 using FastWorkWorkerPxoxyModule.HangFires;
+using ABPCMS.HangfireServiceBase;
 
 namespace ABPCMS.Web
 {
@@ -25,8 +26,8 @@ namespace ABPCMS.Web
         typeof(ABPCMSWebApiModule),
          typeof(AbpWebSignalRModule),   
         typeof(AbpWebMvcModule),
-          typeof(AbpHangfireModule),
-          typeof(HangFireWorkerModule) //- ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
+          typeof(AbpHangfireModule)
+         // typeof(HangFireWorkerModule) //- ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
         )]
 
     public class ABPCMSWebModule : AbpModule
@@ -52,16 +53,18 @@ namespace ABPCMS.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            //Configuration.BackgroundJobs.UseHangfire(configuration =>
-            //{
-            //    configuration.GlobalConfiguration.UseSqlServerStorage("Default");
-            //});
+            // Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
 
+            Configuration.BackgroundJobs.UseHangfire(configuration => //Configure to use hangfire for background jobs.
+            {
+                configuration.GlobalConfiguration.UseSqlServerStorage("Default"); //Set database connection
+            });
         }
+
         public override void PostInitialize()
         {
             var workManager = IocManager.Resolve<IBackgroundWorkerManager>();
-            workManager.Add(IocManager.Resolve<SmsWorker>());
+            workManager.Add(IocManager.Resolve<MakeInactiveUsersPassiveWorker>());
         }
     }
 

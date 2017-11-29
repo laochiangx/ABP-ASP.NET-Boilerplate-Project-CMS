@@ -209,6 +209,14 @@
     <Compile Include="Configuration\IConfigurationAppService.cs" />
     <Compile Include="Configuration\Ui\UiThemeInfo.cs" />
     <Compile Include="Configuration\Ui\UiThemes.cs" />
+    <Compile Include="HangfireServiceBase\IMyEmailAppService.cs" />
+    <Compile Include="HangfireServiceBase\MakeInactiveUsersPassiveWorker.cs" />
+    <Compile Include="HangfireServiceBase\MyEmailAppService.cs" />
+    <Compile Include="HangfireServiceBase\MyService.cs" />
+    <Compile Include="HangfireServiceBase\SendEmailInput.cs" />
+    <Compile Include="HangfireServiceBase\SimpleSendEmailJob.cs" />
+    <Compile Include="HangfireServiceBase\SimpleSendEmailJobArgs.cs" />
+    <Compile Include="HangfireServiceBase\TestJob.cs" />
     <Compile Include="MultiTenancy\Dto\CreateTenantDto.cs" />
     <Compile Include="MultiTenancy\Dto\EditTenantDto.cs" />
     <Compile Include="MultiTenancy\Dto\TenantDto.cs" />
