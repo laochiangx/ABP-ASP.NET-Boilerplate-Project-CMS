@@ -274,6 +274,7 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\D
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\System.Xml.XPath.XDocument.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.AutoMapper.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.HangFire.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.Zero.Common.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.Zero.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\ABPCMS.Core.dll
@@ -281,6 +282,7 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\D
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Castle.Core.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Castle.Facilities.Logging.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Castle.Windsor.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Hangfire.Core.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\JetBrains.Annotations.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
@@ -300,6 +302,7 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\D
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Nito.AsyncEx.Tasks.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Nito.Collections.Deque.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Nito.Disposables.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Owin.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\System.Collections.Immutable.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\System.ComponentModel.Annotations.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\System.Configuration.ConfigurationManager.dll
@@ -312,6 +315,8 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\D
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.AutoMapper.pdb
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.AutoMapper.xml
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.HangFire.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.HangFire.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.Zero.pdb
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.Zero.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.Zero.Common.pdb
@@ -320,6 +325,7 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\D
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Castle.Core.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Castle.Facilities.Logging.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Castle.Windsor.xml
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Hangfire.Core.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\JetBrains.Annotations.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
@@ -343,15 +349,9 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\D
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\System.Linq.Dynamic.Core.pdb
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\System.Linq.Dynamic.Core.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\es\Hangfire.Core.resources.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\zh\Hangfire.Core.resources.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\obj\Debug\ABPCMS.Application.csprojResolveAssemblyReference.cache
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\obj\Debug\ABPCMS.Application.csproj.CoreCompileInputs.cache
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\obj\Debug\ABPCMS.Application.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\obj\Debug\ABPCMS.Application.pdb
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.HangFire.dll
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Hangfire.Core.dll
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Owin.dll
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.HangFire.pdb
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.HangFire.xml
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Hangfire.Core.xml
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\es\Hangfire.Core.resources.dll
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\zh\Hangfire.Core.resources.dll

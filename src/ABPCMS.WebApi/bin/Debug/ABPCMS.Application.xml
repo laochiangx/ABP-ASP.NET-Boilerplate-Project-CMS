@@ -9,56 +9,5 @@
             Derive your application services from this class.
             </summary>
         </member>
-        <member name="T:ABPCMS.HangFires.BackgroundWorker`1">
-            <summary>
-            所有后台工作者类都应继承该类
-            </summary>
-        </member>
-        <member name="M:ABPCMS.HangFires.BackgroundWorker`1.Start">
-            <summary>
-            任务启动
-            </summary>
-        </member>
-        <member name="M:ABPCMS.HangFires.BackgroundWorker`1.DoWork">
-            <summary>
-            具体的任务执行
-            </summary>
-        </member>
-        <member name="M:ABPCMS.HangFires.IBackgroudWorkerProxy.Excete``1(System.Action,ABPCMS.HangFires.WorkerConfig)">
-            <summary>
-            执行
-            </summary>
-            <param name="method"></param>
-        </member>
-        <member name="T:ABPCMS.HangFires.IBackgroundWorkerDo">
-            <summary>
-            所有的后台工作者类都应实现该接口
-            </summary>
-        </member>
-        <member name="M:ABPCMS.HangFires.IBackgroundWorkerDo.DoWork">
-            <summary>
-            执行具体的任务
-            </summary>
-        </member>
-        <member name="T:ABPCMS.HangFires.WorkerConfig">
-            <summary>
-            工作任务配置
-            </summary>
-        </member>
-        <member name="P:ABPCMS.HangFires.WorkerConfig.IntervalSecond">
-            <summary>
-            轮询秒数
-            </summary>
-        </member>
-        <member name="P:ABPCMS.HangFires.WorkerConfig.WorkerId">
-            <summary>
-            工作唯一编号
-            </summary>
-        </member>
-        <member name="T:FastWorkWorkerPxoxyModule.HangFires.SmsWorker">
-            <summary>
-            清理短信日志
-            </summary>
-        </member>
     </members>
 </doc>

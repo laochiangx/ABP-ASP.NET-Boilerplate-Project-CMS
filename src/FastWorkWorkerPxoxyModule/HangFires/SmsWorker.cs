@@ -1,5 +1,6 @@
 ﻿using Abp.Dependency;
 using Abp.Domain.Repositories;
+using ABPCMS.Authorization.Users;
 using ABPCMS.HangFires;
 using System;
 using System.Collections.Generic;
@@ -15,14 +16,21 @@ namespace FastWorkWorkerPxoxyModule.HangFires
         /// </summary>
         public class SmsWorker : BackgroundWorker<SmsWorker>, ISingletonDependency
         {
-            private readonly IRepository<SmsSendLog, long> _smsLogRepository;
-            public SmsWorker(IRepository<SmsSendLog, long> smsLogRepository, IBackgroudWorkerProxy workMiddleware) : base(workMiddleware, new WorkerConfig { IntervalSecond = 60, WorkerId = "smsworker" })
+            private readonly IRepository<User, long> _smsLogRepository;
+            public SmsWorker(IRepository<User, long> smsLogRepository, IBackgroudWorkerProxy workMiddleware) : base(workMiddleware, new WorkerConfig { IntervalSecond = 60, WorkerId = "smsworker" })
             {
                 _smsLogRepository = smsLogRepository;
             }
             public override void DoWork()
             {
-                //_smsLogRepository.Insert(new SmsSendLog { IsOk = true, Content = "轮询任务创建的", CreationTime = DateTime.Now });
+            _smsLogRepository.GetAll();
             }
         }
+
+    internal class SmsSendLog : User
+    {
+        public bool IsOk { get; set; }
+        public string Content { get; set; }
+        public DateTime CreationTime { get; set; }
+    }
 }

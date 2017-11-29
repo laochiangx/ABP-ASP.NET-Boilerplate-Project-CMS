@@ -4033,6 +4033,8 @@
     <Compile Include="App_Start\PageNames.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="App_Start\TextMessageBuffer.cs" />
+    <Compile Include="App_Start\TextBufferLogProvider.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -4210,6 +4212,10 @@
     <ProjectReference Include="..\ABPCMS.WebApi\ABPCMS.WebApi.csproj">
       <Project>{5eb52d3d-09fd-463a-b02a-8d9856bd3724}</Project>
       <Name>ABPCMS.WebApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FastWorkWorkerPxoxyModule\FastWorkWorkerPxoxyModule.csproj">
+      <Project>{d997ccab-ae26-4a44-b274-f98e93bd1e29}</Project>
+      <Name>FastWorkWorkerPxoxyModule</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using Abp.Dependency;
+using Abp.Hangfire.Configuration;
 using Abp.Modules;
 using ABPCMS.HangFires;
 using FastWorkWorkerPxoxyModule.HangFires;
@@ -28,7 +29,7 @@ namespace FastWorkWorkerPxoxyModule
             var hangfireConfig = IocManager.Resolve<IAbpHangfireConfiguration>();
             if (hangfireConfig?.Server != null)
             {
-                IocManager.IocContainer.Register(Component.For<IBackgroudWorkerProxy>().ImplementedBy<HangfireWorkerPxoxy>().IsDefault());
+             // IocManager.IocContainer.Register(Component.For<IBackgroudWorkerProxy>().ImplementedBy<HangfireWorkerPxoxy>().IsDefault());
             }
         }
     }

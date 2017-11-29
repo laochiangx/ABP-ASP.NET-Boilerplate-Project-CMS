@@ -12,7 +12,7 @@ namespace ABPCMS.Migrator
         {
             Database.SetInitializer<ABPCMSDbContext>(null);
 
-            Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
+          //  Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
         }
 
         public override void Initialize()

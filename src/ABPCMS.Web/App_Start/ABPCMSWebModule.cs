@@ -14,7 +14,8 @@ using Castle.MicroKernel.Registration;
 using Hangfire;
 using Microsoft.Owin.Security;
 using Abp.Threading.BackgroundWorkers;
-using ABPCMS.HangFiresTest;
+using FastWorkWorkerPxoxyModule;
+using FastWorkWorkerPxoxyModule.HangFires;
 
 namespace ABPCMS.Web
 {
@@ -22,9 +23,12 @@ namespace ABPCMS.Web
         typeof(ABPCMSDataModule),
         typeof(ABPCMSApplicationModule),
         typeof(ABPCMSWebApiModule),
-        typeof(AbpWebSignalRModule),
-        //typeof(AbpHangfireModule), - ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
-        typeof(AbpWebMvcModule))]
+         typeof(AbpWebSignalRModule),   
+        typeof(AbpWebMvcModule),
+          typeof(AbpHangfireModule),
+          typeof(HangFireWorkerModule) //- ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
+        )]
+
     public class ABPCMSWebModule : AbpModule
     {
         public override void PreInitialize()
@@ -35,20 +39,6 @@ namespace ABPCMS.Web
             //Configure navigation/menu
             Configuration.Navigation.Providers.Add<ABPCMSNavigationProvider>();
 
-         //   Configure Hangfire -ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
-            //Configuration.BackgroundJobs.UseHangfire(configuration =>
-            //{
-            //    configuration.GlobalConfiguration.UseSqlServerStorage("Default");
-            //});
-
-        }
-        public override void PostInitialize()
-        {
-            var workManager = IocManager.Resolve<IBackgroundWorkerManager>();
-            workManager.Add(IocManager.Resolve<MakeInactiveUsersPassiveWorker>());
-        }
-        public override void Initialize()
-        {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
 
             IocManager.IocContainer.Register(
@@ -61,6 +51,17 @@ namespace ABPCMS.Web
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //Configuration.BackgroundJobs.UseHangfire(configuration =>
+            //{
+            //    configuration.GlobalConfiguration.UseSqlServerStorage("Default");
+            //});
+
+        }
+        public override void PostInitialize()
+        {
+            var workManager = IocManager.Resolve<IBackgroundWorkerManager>();
+            workManager.Add(IocManager.Resolve<SmsWorker>());
         }
     }
 

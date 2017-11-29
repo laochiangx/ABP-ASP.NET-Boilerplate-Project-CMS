@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FastWorkWorkerPxoxyModule
 {
-    [DependsOn(typeof(AbpZeroCoreModule), typeof(AbpZeroLdapModule), typeof(AbpAutoMapperModule), typeof(FastWorkWorkerPxoxyModule))]
+    [DependsOn(typeof(AbpZeroCoreModule), typeof(AbpAutoMapperModule), typeof(FastWorkWorkerPxoxyModule))] //typeof(AbpZeroLdapModule)
     public class FastWorkCoreModule : AbpModule
     {
          

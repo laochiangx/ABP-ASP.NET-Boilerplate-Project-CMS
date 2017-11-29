@@ -14,10 +14,22 @@ namespace ABPCMS.HangFires
         /// <summary>
         /// 轮询秒数
         /// </summary>
-        public int IntervalSecond { get; set; }
+  
+        private int  _IntervalSecond;
+        public int  IntervalSecond
+        {
+            get { return _IntervalSecond; }
+            set { _IntervalSecond = value; }
+        }
+
         /// <summary>
         /// 工作唯一编号
         /// </summary>
-        public string WorkerId { get; set; }
+        private string _WorkerId;
+        public string WorkerId
+        {
+            get { return _WorkerId; }
+            set { _WorkerId = value; }
+        }
     }
 }

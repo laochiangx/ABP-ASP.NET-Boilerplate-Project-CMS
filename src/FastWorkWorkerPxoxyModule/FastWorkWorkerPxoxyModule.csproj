@@ -30,11 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Abp">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Abp.dll</HintPath>
+    <Reference Include="Abp, Version=3.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.3.2.5\lib\netstandard2.0\Abp.dll</HintPath>
     </Reference>
     <Reference Include="Abp.AutoMapper">
       <HintPath>..\ABPCMS.Application\bin\Debug\Abp.AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Abp.HangFire, Version=3.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.HangFire.3.2.5\lib\netstandard2.0\Abp.HangFire.dll</HintPath>
     </Reference>
     <Reference Include="Abp.Zero">
       <HintPath>..\ABPCMS.Application\bin\Debug\Abp.Zero.dll</HintPath>
@@ -51,35 +54,38 @@
     <Reference Include="AutoMapper">
       <HintPath>..\ABPCMS.Application\bin\Debug\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="Castle.Core">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Castle.Core.dll</HintPath>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Castle.Facilities.Logging">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Castle.Facilities.Logging.dll</HintPath>
+    <Reference Include="Castle.Facilities.Logging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.LoggingFacility.4.1.0\lib\net45\Castle.Facilities.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Castle.Windsor">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Castle.Windsor.dll</HintPath>
+    <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
     </Reference>
-    <Reference Include="JetBrains.Annotations">
-      <HintPath>..\ABPCMS.Application\bin\Debug\JetBrains.Annotations.dll</HintPath>
+    <Reference Include="Hangfire.Core, Version=1.6.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.6.17\lib\net45\Hangfire.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=11.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\ABPCMS.Application\bin\Debug\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.Caching.Abstractions">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.Caching.Memory">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.Options">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Microsoft.Extensions.Options.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.Primitives">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Microsoft.Extensions.Primitives.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks">
       <HintPath>..\ABPCMS.Application\bin\Debug\Microsoft.Threading.Tasks.dll</HintPath>
@@ -96,9 +102,8 @@
     <Reference Include="netstandard">
       <HintPath>..\ABPCMS.Application\bin\Debug\netstandard.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ABPCMS.Application\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Nito.AsyncEx">
       <HintPath>..\ABPCMS.Application\bin\Debug\Nito.AsyncEx.dll</HintPath>
@@ -106,23 +111,26 @@
     <Reference Include="Nito.AsyncEx.Concurrent">
       <HintPath>..\ABPCMS.Application\bin\Debug\Nito.AsyncEx.Concurrent.dll</HintPath>
     </Reference>
-    <Reference Include="Nito.AsyncEx.Context">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Nito.AsyncEx.Context.dll</HintPath>
+    <Reference Include="Nito.AsyncEx.Context, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.Context.1.1.0\lib\net46\Nito.AsyncEx.Context.dll</HintPath>
     </Reference>
-    <Reference Include="Nito.AsyncEx.Coordination">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Nito.AsyncEx.Coordination.dll</HintPath>
+    <Reference Include="Nito.AsyncEx.Coordination, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.Coordination.1.0.2\lib\net46\Nito.AsyncEx.Coordination.dll</HintPath>
     </Reference>
     <Reference Include="Nito.AsyncEx.Enlightenment">
       <HintPath>..\ABPCMS.Application\bin\Debug\Nito.AsyncEx.Enlightenment.dll</HintPath>
     </Reference>
-    <Reference Include="Nito.AsyncEx.Tasks">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Nito.AsyncEx.Tasks.dll</HintPath>
+    <Reference Include="Nito.AsyncEx.Tasks, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.AsyncEx.Tasks.1.1.0\lib\net46\Nito.AsyncEx.Tasks.dll</HintPath>
     </Reference>
-    <Reference Include="Nito.Collections.Deque">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Nito.Collections.Deque.dll</HintPath>
+    <Reference Include="Nito.Collections.Deque, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.Collections.Deque.1.0.0\lib\portable45-net45+win8+wp8+wpa81\Nito.Collections.Deque.dll</HintPath>
     </Reference>
-    <Reference Include="Nito.Disposables">
-      <HintPath>..\ABPCMS.Application\bin\Debug\Nito.Disposables.dll</HintPath>
+    <Reference Include="Nito.Disposables, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nito.Disposables.1.0.0\lib\portable45-net45+win8+wp8+wpa81\Nito.Disposables.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext">
@@ -134,9 +142,8 @@
     <Reference Include="System.Collections.Concurrent">
       <HintPath>..\ABPCMS.Application\bin\Debug\System.Collections.Concurrent.dll</HintPath>
     </Reference>
-    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ABPCMS.Application\bin\Debug\System.Collections.Immutable.dll</HintPath>
+    <Reference Include="System.Collections.Immutable, Version=1.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.4.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.NonGeneric">
       <HintPath>..\ABPCMS.Application\bin\Debug\System.Collections.NonGeneric.dll</HintPath>
@@ -147,9 +154,10 @@
     <Reference Include="System.ComponentModel">
       <HintPath>..\ABPCMS.Application\bin\Debug\System.ComponentModel.dll</HintPath>
     </Reference>
-    <Reference Include="System.ComponentModel.Annotations">
-      <HintPath>..\ABPCMS.Application\bin\Debug\System.ComponentModel.Annotations.dll</HintPath>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.ComponentModel.EventBasedAsync">
       <HintPath>..\ABPCMS.Application\bin\Debug\System.ComponentModel.EventBasedAsync.dll</HintPath>
     </Reference>
@@ -160,15 +168,16 @@
       <HintPath>..\ABPCMS.Application\bin\Debug\System.ComponentModel.TypeConverter.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.ConfigurationManager">
-      <HintPath>..\ABPCMS.Application\bin\Debug\System.Configuration.ConfigurationManager.dll</HintPath>
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.4.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Console">
       <HintPath>..\ABPCMS.Application\bin\Debug\System.Console.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Common">
-      <HintPath>..\ABPCMS.Application\bin\Debug\System.Data.Common.dll</HintPath>
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Diagnostics.Contracts">
       <HintPath>..\ABPCMS.Application\bin\Debug\System.Diagnostics.Contracts.dll</HintPath>
@@ -245,8 +254,8 @@
     <Reference Include="System.IO.UnmanagedMemoryStream">
       <HintPath>..\ABPCMS.Application\bin\Debug\System.IO.UnmanagedMemoryStream.dll</HintPath>
     </Reference>
-    <Reference Include="System.Linq.Dynamic.Core">
-      <HintPath>..\ABPCMS.Application\bin\Debug\System.Linq.Dynamic.Core.dll</HintPath>
+    <Reference Include="System.Linq.Dynamic.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=0f07ec44de6ac832, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.Core.1.0.7.12\lib\net46\System.Linq.Dynamic.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq.Expressions">
       <HintPath>..\ABPCMS.Application\bin\Debug\System.Linq.Expressions.dll</HintPath>
@@ -257,26 +266,58 @@
     <Reference Include="System.Linq.Queryable">
       <HintPath>..\ABPCMS.Application\bin\Debug\System.Linq.Queryable.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.4.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>..\packages\System.Runtime.Serialization.Formatters.4.3.0\lib\net46\System.Runtime.Serialization.Formatters.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>..\packages\System.Security.Claims.4.3.0\lib\net46\System.Security.Claims.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>..\packages\System.Xml.XmlDocument.4.3.0\lib\net46\System.Xml.XmlDocument.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>..\packages\System.Xml.XPath.4.3.0\lib\net46\System.Xml.XPath.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XmlDocument, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.XPath.XmlDocument.4.3.0\lib\net46\System.Xml.XPath.XmlDocument.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HangFires\AbpZeroLdapModule.cs" />
+    <Compile Include="HangFires\BackgroundWorker.cs" />
     <Compile Include="HangFires\FastWorkCoreModule.cs" />
     <Compile Include="HangFires\FastWorkWorkerPxoxyModule.cs" />
-    <Compile Include="HangFires\BackgroundWorker.cs" />
+    <Compile Include="HangFires\HangFireWorkerModule.cs" />
     <Compile Include="HangFires\HangfireWorkerPxoxy .cs" />
     <Compile Include="HangFires\IBackgroudWorkerProxy.cs" />
     <Compile Include="HangFires\IBackgroundWorkerDo.cs" />
     <Compile Include="HangFires\PeriodicWorkerPxoxy.cs" />
     <Compile Include="HangFires\SmsWorker.cs" />
     <Compile Include="HangFires\WorkerConfig.cs" />
-    <Compile Include="HangFires\HangFireWorkerModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

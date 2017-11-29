@@ -25,7 +25,7 @@ namespace ABPCMS.HangFires
         public override void Start()
         {
             Logger.Debug("轮询任务启动");
-            _workProxy.Excete<T>(DoWork, _config); //主要指定当前任务类，不然hangfire无法调用，不然可以移到父类去
+         //   _workProxy.Excete<T>(DoWork, _config); //主要指定当前任务类，不然hangfire无法调用，不然可以移到父类去
         }
         /// <summary>
         /// 具体的任务执行
