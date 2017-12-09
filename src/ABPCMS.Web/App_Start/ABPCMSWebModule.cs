@@ -17,6 +17,8 @@ using Abp.Threading.BackgroundWorkers;
 using FastWorkWorkerPxoxyModule;
 using FastWorkWorkerPxoxyModule.HangFires;
 using ABPCMS.HangfireServiceBase;
+using Abp.Runtime.Caching.Redis;
+using System;
 
 namespace ABPCMS.Web
 {
@@ -26,14 +28,17 @@ namespace ABPCMS.Web
         typeof(ABPCMSWebApiModule),
          typeof(AbpWebSignalRModule),   
         typeof(AbpWebMvcModule),
-          typeof(AbpHangfireModule)
+          typeof(AbpHangfireModule),
          // typeof(HangFireWorkerModule) //- ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
+          typeof(AbpRedisCacheModule)
         )]
 
     public class ABPCMSWebModule : AbpModule
     {
         public override void PreInitialize()
         {
+
+
             //Enable database based localization
             Configuration.Modules.Zero().LanguageManagement.EnableDbLocalization();
 
@@ -58,6 +63,20 @@ namespace ABPCMS.Web
             Configuration.BackgroundJobs.UseHangfire(configuration => //Configure to use hangfire for background jobs.
             {
                 configuration.GlobalConfiguration.UseSqlServerStorage("Default"); //Set database connection
+            });
+            //配置使用Redis缓存
+            Configuration.Caching.UseRedis();
+
+            //配置所有Cache的默认过期时间为2小时
+            Configuration.Caching.ConfigureAll(cache =>
+            {
+                cache.DefaultSlidingExpireTime = TimeSpan.FromHours(2);
+            });
+
+            //配置指定的Cache过期时间为10分钟
+            Configuration.Caching.Configure("LoginUserCache", cache =>
+            {
+                cache.DefaultSlidingExpireTime = TimeSpan.FromMinutes(10);
             });
         }
 

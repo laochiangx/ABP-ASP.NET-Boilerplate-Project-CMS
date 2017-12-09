@@ -57,6 +57,15 @@ namespace ABPCMS.Web
                         requiredPermissionName: PermissionNames.Pages_Users
                     )
                 )
+               .AddItem(
+                    new MenuItemDefinition(
+                        PageNames.Users,
+                        L("后台工作者"),
+                        url: "hangfire",
+                        icon: "people",
+                        requiredPermissionName: PermissionNames.Pages_Users
+                    )
+                )
                 .AddItem(
                     new MenuItemDefinition(
                         PageNames.About,

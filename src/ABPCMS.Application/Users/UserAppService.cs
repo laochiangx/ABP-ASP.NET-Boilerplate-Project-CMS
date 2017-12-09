@@ -15,6 +15,8 @@ using ABPCMS.Roles.Dto;
 using ABPCMS.Users.Dto;
 using Microsoft.AspNet.Identity;
 using Abp.Threading;
+using Abp.Runtime.Caching;
+using Abp.AutoMapper;
 
 namespace ABPCMS.Users
 {
@@ -24,17 +26,25 @@ namespace ABPCMS.Users
         private readonly UserManager _userManager;
         private readonly RoleManager _roleManager;
         private readonly IRepository<Role> _roleRepository;
+        private readonly ICacheManager _cacheManager;
+
+          IRepository<User, long> _userrepository;
 
         public UserAppService(
             IRepository<User, long> repository, 
             UserManager userManager, 
-            IRepository<Role> roleRepository, 
-            RoleManager roleManager)
+            IRepository<Role> roleRepository,
+            ICacheManager cacheManager,
+            RoleManager roleManager,
+             IRepository<User, long> Userrepository
+            )
             : base(repository)
         {
             _userManager = userManager;
             _roleRepository = roleRepository;
             _roleManager = roleManager;
+            _cacheManager = cacheManager;
+            _userrepository = Userrepository;
         }
 
         public override async Task<UserDto> Get(EntityDto<long> input)
@@ -43,6 +53,15 @@ namespace ABPCMS.Users
             var userRoles = await _userManager.GetRolesAsync(user.Id);
             user.Roles = userRoles.Select(ur => ur).ToArray();
             return user;
+        }
+
+        public List<UserDto> GetAlluser()
+        {
+            List<UserDto> user = new List<UserDto>();
+            var userlist = _userrepository.GetAllList();
+            user = userlist.MapTo<List<UserDto>>();
+            return user;
+
         }
 
         public override async Task<UserDto> Create(CreateUserDto input)
@@ -151,5 +170,7 @@ namespace ABPCMS.Users
         {
             identityResult.CheckErrors(LocalizationManager);
         }
+
+    
     }
 }

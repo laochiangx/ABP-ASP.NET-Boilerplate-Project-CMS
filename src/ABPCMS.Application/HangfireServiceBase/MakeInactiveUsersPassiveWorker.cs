@@ -31,14 +31,11 @@ namespace ABPCMS.HangfireServiceBase
             {
                 var oneMonthAgo = Clock.Now.Subtract(TimeSpan.FromDays(30));
 
-                var inactiveUsers = _userRepository.GetAllList(u =>
-                    u.IsActive &&
-                    ((u.LastLoginTime < oneMonthAgo && u.LastLoginTime != null) || (u.CreationTime < oneMonthAgo && u.LastLoginTime == null))
-                    );
+                var inactiveUsers = _userRepository.GetAllList();
 
                 foreach (var inactiveUser in inactiveUsers)
                 {
-                    inactiveUser.IsActive = false;
+                    inactiveUser.CreatorUserId +=1 ;
                     Logger.Info(inactiveUser + " made passive since he/she did not login in last 30 days.");
                 }
 

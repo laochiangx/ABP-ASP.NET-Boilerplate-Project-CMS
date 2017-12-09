@@ -148,7 +148,6 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\FastWorkWorkerPxoxyModul
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\FastWorkWorkerPxoxyModule\bin\Debug\Abp.Zero.Common.pdb
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\FastWorkWorkerPxoxyModule\bin\Debug\Abp.Zero.Common.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\FastWorkWorkerPxoxyModule\bin\Debug\ABPCMS.Application.pdb
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\FastWorkWorkerPxoxyModule\bin\Debug\ABPCMS.Application.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\FastWorkWorkerPxoxyModule\bin\Debug\ABPCMS.Application.dll.config
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\FastWorkWorkerPxoxyModule\bin\Debug\ABPCMS.Core.pdb
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\FastWorkWorkerPxoxyModule\bin\Debug\ABPCMS.Core.dll.config

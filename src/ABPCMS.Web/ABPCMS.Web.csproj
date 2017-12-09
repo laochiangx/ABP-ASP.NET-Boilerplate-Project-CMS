@@ -68,6 +68,9 @@
     <Reference Include="Abp.Owin, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Owin.3.1.1\lib\net461\Abp.Owin.dll</HintPath>
     </Reference>
+    <Reference Include="Abp.RedisCache, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.RedisCache.3.1.1\lib\netstandard2.0\Abp.RedisCache.dll</HintPath>
+    </Reference>
     <Reference Include="Abp.Web, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Web.3.1.1\lib\net461\Abp.Web.dll</HintPath>
     </Reference>
@@ -248,6 +251,9 @@
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="StackExchange.Redis.StrongName, Version=1.2.6.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.StrongName.1.2.6\lib\net46\StackExchange.Redis.StrongName.dll</HintPath>
     </Reference>
     <Reference Include="System.AppContext">
       <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>

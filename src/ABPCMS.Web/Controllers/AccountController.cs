@@ -30,6 +30,9 @@ using ABPCMS.Web.Models.Account;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using Abp.Runtime.Caching;
+using ABPCMS.Users;
+using Abp.Application.Services.Dto;
 
 namespace ABPCMS.Web.Controllers
 {
@@ -45,6 +48,8 @@ namespace ABPCMS.Web.Controllers
         private readonly ILanguageManager _languageManager;
         private readonly ITenantCache _tenantCache;
         private readonly IAuthenticationManager _authenticationManager;
+        private readonly ICacheManager _cacheManager;
+        private readonly IUserAppService _userAppService;
 
         public AccountController(
             TenantManager tenantManager,
@@ -56,7 +61,9 @@ namespace ABPCMS.Web.Controllers
             ISessionAppService sessionAppService,
             ILanguageManager languageManager, 
             ITenantCache tenantCache, 
-            IAuthenticationManager authenticationManager)
+            IAuthenticationManager authenticationManager,
+            ICacheManager cacheManager,
+            IUserAppService userAppService)
         {
             _tenantManager = tenantManager;
             _userManager = userManager;
@@ -68,10 +75,14 @@ namespace ABPCMS.Web.Controllers
             _languageManager = languageManager;
             _tenantCache = tenantCache;
             _authenticationManager = authenticationManager;
+            _cacheManager = cacheManager;
+            _userAppService = userAppService;
         }
 
         #region Login / Logout
 
+
+        [OutputCache(Duration = 1200, VaryByParam = "none")]
         public ActionResult Login(string returnUrl = "")
         {
             if (string.IsNullOrWhiteSpace(returnUrl))
@@ -89,6 +100,7 @@ namespace ABPCMS.Web.Controllers
                     IsSelfRegistrationAllowed = IsSelfRegistrationEnabled(),
                     MultiTenancySide = AbpSession.MultiTenancySide
                 });
+           // var userList = _userAppService.GetAll(new PagedResultRequestDto { MaxResultCount = int.MaxValue });
         }
 
         [HttpPost]
@@ -115,6 +127,10 @@ namespace ABPCMS.Web.Controllers
                 returnUrl = returnUrl + returnUrlHash;
             }
 
+
+
+
+           // var userList = _cacheManager.GetCache("LoginUserCache").Get("AllUsers", () =>  _userAppService.GetAll(new PagedResultRequestDto { MaxResultCount = int.MaxValue }));
             return Json(new AjaxResponse { TargetUrl = returnUrl });
         }
 
