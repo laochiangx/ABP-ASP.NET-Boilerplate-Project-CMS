@@ -31,6 +31,7 @@ namespace ABPCMS.Web.Controllers
         [OutputCache(Duration = 1200, VaryByParam = "none")]
         public ActionResult Index()
         {
+            var users = _userAppService.GetAll(new PagedResultRequestDto { MaxResultCount = int.MaxValue });
             return View();
 
         }
@@ -40,7 +41,13 @@ namespace ABPCMS.Web.Controllers
         public async Task<ActionResult> GetUserInfo()
         {
 
+            _cacheManager.GetCache("ControllerCache").Clear();
+
             var userList = _cacheManager.GetCache("ControllerCache").Get("AllUsers", () => _userAppService.GetAlluser());
+
+            _cacheManager.GetCache("ControllerCache").Set("AllUsers",  _userAppService.GetAlluser());
+
+         
 
             string pageNumber = string.IsNullOrWhiteSpace(Request["pageNumber"]) ? "0" : Request["pageNumber"];
             string pageSize = string.IsNullOrWhiteSpace(Request["pageSize"]) ? "20" : Request["pageSize"];

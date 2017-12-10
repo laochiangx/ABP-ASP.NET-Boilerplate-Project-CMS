@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ABPCMS.Application</name>
+    </assembly>
+    <members>
+        <member name="T:ABPCMS.ABPCMSAppServiceBase">
+            <summary>
+            Derive your application services from this class.
+            </summary>
+        </member>
+    </members>
+</doc>

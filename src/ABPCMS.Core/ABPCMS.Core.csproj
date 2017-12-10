@@ -182,6 +182,7 @@
     <Compile Include="ABPCMSConsts.cs" />
     <Compile Include="ABPCMSCoreModule.cs" />
     <Compile Include="AppVersionHelper.cs" />
+    <Compile Include="Articles\Article.cs" />
     <Compile Include="Authorization\ABPCMSAuthorizationProvider.cs" />
     <Compile Include="Authorization\LoginManager.cs" />
     <Compile Include="Authorization\PermissionChecker.cs" />

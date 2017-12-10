@@ -37,6 +37,20 @@ namespace ABPCMS.Web
     {
         public override void PreInitialize()
         {
+            //配置使用Redis缓存
+            Configuration.Caching.UseRedis();
+
+            //配置所有Cache的默认过期时间为2小时
+            Configuration.Caching.ConfigureAll(cache =>
+            {
+                cache.DefaultSlidingExpireTime = TimeSpan.FromHours(2);
+            });
+
+            //配置指定的Cache过期时间为8分钟
+            Configuration.Caching.Configure("LoginUserCache", cache =>
+            {
+                cache.DefaultSlidingExpireTime = TimeSpan.FromMinutes(8);
+            });
 
 
             //Enable database based localization
@@ -64,20 +78,7 @@ namespace ABPCMS.Web
             {
                 configuration.GlobalConfiguration.UseSqlServerStorage("Default"); //Set database connection
             });
-            //配置使用Redis缓存
-            Configuration.Caching.UseRedis();
-
-            //配置所有Cache的默认过期时间为2小时
-            Configuration.Caching.ConfigureAll(cache =>
-            {
-                cache.DefaultSlidingExpireTime = TimeSpan.FromHours(2);
-            });
-
-            //配置指定的Cache过期时间为10分钟
-            Configuration.Caching.Configure("LoginUserCache", cache =>
-            {
-                cache.DefaultSlidingExpireTime = TimeSpan.FromMinutes(10);
-            });
+    
         }
 
         public override void PostInitialize()

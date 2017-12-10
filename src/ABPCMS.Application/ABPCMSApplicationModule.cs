@@ -10,6 +10,8 @@ using ABPCMS.Authorization.Users;
 using ABPCMS.Roles.Dto;
 using ABPCMS.Users.Dto;
 using Abp.Threading.BackgroundWorkers;
+using Abp.Runtime.Caching;
+using Abp.Runtime.Caching.Redis;
 
 namespace ABPCMS
 {
@@ -18,6 +20,10 @@ namespace ABPCMS
     {
         public override void PreInitialize()
         {
+            base.PreInitialize();
+            IocManager.Register<ICacheManager, AbpRedisCacheManager>();
+            //如果Redis在本机,并且使用的默认端口,下面的代码可以不要
+            //Configuration.Modules.AbpRedisCacheModule().ConnectionStringKey = "KeyName";
         }
 
         public override void Initialize()

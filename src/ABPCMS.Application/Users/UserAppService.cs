@@ -47,12 +47,14 @@ namespace ABPCMS.Users
             _userrepository = Userrepository;
         }
 
+
         public override async Task<UserDto> Get(EntityDto<long> input)
         {
             var user = await base.Get(input);
             var userRoles = await _userManager.GetRolesAsync(user.Id);
             user.Roles = userRoles.Select(ur => ur).ToArray();
             return user;
+
         }
 
         public List<UserDto> GetAlluser()
