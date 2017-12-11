@@ -377,12 +377,13 @@
             Reference to the <see cref="T:Abp.WebApi.Controllers.Dynamic.Builders.ApiControllerBuilder`1"/> which created this object.
             </summary>
         </member>
-        <member name="M:Abp.WebApi.Controllers.Dynamic.Builders.ApiControllerActionBuilder`1.#ctor(Abp.WebApi.Controllers.Dynamic.Builders.ApiControllerBuilder{`0},System.Reflection.MethodInfo)">
+        <member name="M:Abp.WebApi.Controllers.Dynamic.Builders.ApiControllerActionBuilder`1.#ctor(Abp.WebApi.Controllers.Dynamic.Builders.ApiControllerBuilder{`0},System.Reflection.MethodInfo,Abp.Dependency.IIocResolver)">
             <summary>
             Creates a new <see cref="T:Abp.WebApi.Controllers.Dynamic.Builders.ApiControllerActionBuilder`1"/> object.
             </summary>
             <param name="apiControllerBuilder">Reference to the <see cref="T:Abp.WebApi.Controllers.Dynamic.Builders.ApiControllerBuilder`1"/> which created this object</param>
             <param name="methodInfo">Method</param>
+            <param name="iocResolver"></param>
         </member>
         <member name="M:Abp.WebApi.Controllers.Dynamic.Builders.ApiControllerActionBuilder`1.WithVerb(Abp.Web.HttpVerb)">
             <summary>

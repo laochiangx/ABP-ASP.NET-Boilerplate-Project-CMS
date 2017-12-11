@@ -15,6 +15,12 @@
             </summary>
             <param name="validator">the validation callback</param>
         </member>
+        <member name="P:AutoMapper.AdvancedConfiguration.MaxExecutionPlanDepth">
+            <summary>
+            How many levels deep should AutoMapper try to inline the execution plan for child classes.
+            See <a href="http://automapper.readthedocs.io/en/latest/Understanding-your-mapping.html">the wiki</a> for details.
+            </summary>
+        </member>
         <member name="T:AutoMapper.Configuration.IProfileConfiguration">
             <summary>
             Contains profile-specific configuration
@@ -90,6 +96,23 @@
             <param name="destinationType">Configured destination type</param>
             <returns>Type map configuration</returns>
         </member>
+        <member name="M:AutoMapper.IConfigurationProvider.ResolveTypeMap(System.Type,System.Type,AutoMapper.Configuration.ITypeMapConfiguration)">
+            <summary>
+            Resolve the <see cref="T:AutoMapper.TypeMap"/> for the configured source and destination type, checking parent types
+            </summary>
+            <param name="sourceType">Configured source type</param>
+            <param name="destinationType">Configured destination type</param>
+            <param name="inlineConfiguration">Inline type map configuration if exists</param>
+            <returns>Type map configuration</returns>
+        </member>
+        <member name="M:AutoMapper.IConfigurationProvider.ResolveTypeMap(AutoMapper.TypePair,AutoMapper.Configuration.ITypeMapConfiguration)">
+            <summary>
+            Resolve the <see cref="T:AutoMapper.TypeMap"/> for the configured type pair, checking parent types
+            </summary>
+            <param name="typePair">Type pair</param>
+            <param name="inlineConfiguration">Inline type map configuration if exists</param>
+            <returns>Type map configuration</returns>
+        </member>
         <member name="M:AutoMapper.IConfigurationProvider.ResolveTypeMap(AutoMapper.TypePair)">
             <summary>
             Resolve the <see cref="T:AutoMapper.TypeMap"/> for the configured type pair, checking parent types
@@ -140,7 +163,7 @@
         </member>
         <member name="P:AutoMapper.IConfigurationProvider.EnableNullPropagationForQueryMapping">
             <summary>
-            Allows to enable null-value propagation for query mapping. 
+            Allows to enable null-value propagation for query mapping.
             <remarks>Some providers (such as EntityFrameworkQueryVisitor) do not work with this feature enabled!</remarks>
             </summary>
         </member>
@@ -167,7 +190,7 @@
             <summary>
             Builds the execution plan used to map the source to destination.
             Useful to understand what exactly is happening during mapping.
-            See <a href="https://github.com/AutoMapper/AutoMapper/wiki/Understanding-your-mapping">the wiki</a> for details.
+            See <a href="http://automapper.readthedocs.io/en/latest/Understanding-your-mapping.html">the wiki</a> for details.
             </summary>
             <param name="sourceType">the runtime type of the source object</param>
             <param name="destinationType">the runtime type of the destination object</param>
@@ -177,7 +200,7 @@
             <summary>
             Builds the execution plan used to map the source to destination.
             Useful to understand what exactly is happening during mapping.
-            See <a href="https://github.com/AutoMapper/AutoMapper/wiki/Understanding-your-mapping">the wiki</a> for details.
+            See <a href="http://automapper.readthedocs.io/en/latest/Understanding-your-mapping.html">the wiki</a> for details.
             </summary>
             <param name="mapRequest">The source/destination map request</param>
             <returns>the execution plan</returns>
@@ -587,6 +610,13 @@
             <typeparam name="TMappingAction">Mapping action type instantiated during mapping</typeparam>
             <returns>Itself</returns>
         </member>
+        <member name="M:AutoMapper.IMappingExpression.ValidateMemberList(AutoMapper.MemberList)">
+            <summary>
+            Specify which member list to validate
+            </summary>
+            <param name="memberList">Member list to validate</param>
+            <returns>Itself</returns>
+        </member>
         <member name="T:AutoMapper.IMappingExpression`2">
             <summary>
             Mapping configuration options
@@ -594,7 +624,7 @@
             <typeparam name="TSource">Source type</typeparam>
             <typeparam name="TDestination">Destination type</typeparam>
         </member>
-        <member name="M:AutoMapper.IMappingExpression`2.ForPath``1(System.Linq.Expressions.Expression{System.Func{`1,``0}},System.Action{AutoMapper.IPathConfigurationExpression{`0,`1}})">
+        <member name="M:AutoMapper.IMappingExpression`2.ForPath``1(System.Linq.Expressions.Expression{System.Func{`1,``0}},System.Action{AutoMapper.IPathConfigurationExpression{`0,`1,``0}})">
             <summary>
             Customize configuration for a path inside the destination object.
             </summary>
@@ -835,6 +865,21 @@
             </summary>
             <returns>Itself</returns>
         </member>
+        <member name="M:AutoMapper.IMappingExpression`2.AddTransform``1(System.Linq.Expressions.Expression{System.Func{``0,``0}})">
+            <summary>
+            Apply a transformation function after any resolved destination member value with the given type
+            </summary>
+            <typeparam name="TValue">Value type to match and transform</typeparam>
+            <param name="transformer">Transformation expression</param>
+            <returns>Itself</returns>
+        </member>
+        <member name="M:AutoMapper.IMappingExpression`2.ValidateMemberList(AutoMapper.MemberList)">
+            <summary>
+            Specify which member list to validate
+            </summary>
+            <param name="memberList">Member list to validate</param>
+            <returns>Itself</returns>
+        </member>
         <member name="T:AutoMapper.IMappingOperationOptions">
             <summary>
             Options for a single map operation
@@ -874,6 +919,19 @@
             Execute a custom function to the source and/or destination types after member mapping
             </summary>
             <param name="afterFunction">Callback for the source/destination types</param>
+        </member>
+        <member name="M:AutoMapper.IMappingOperationOptions`2.ConfigureMap">
+            <summary>
+            Configure inline map
+            </summary>
+            <returns>Mapping configuration expression</returns>
+        </member>
+        <member name="M:AutoMapper.IMappingOperationOptions`2.ConfigureMap(AutoMapper.MemberList)">
+            <summary>
+            Configure inline map with member list to validate
+            </summary>
+            <param name="memberList">Member list to validate for the inline map</param>
+            <returns>Mapping configuration expression</returns>
         </member>
         <member name="T:AutoMapper.IMemberConfigurationExpression`3">
             <summary>
@@ -1052,6 +1110,12 @@
             </summary>
             <param name="condition">Condition to evaluate using the current resolution context</param>
         </member>
+        <member name="M:AutoMapper.IMemberConfigurationExpression`3.PreCondition(System.Func{`0,AutoMapper.ResolutionContext,System.Boolean})">
+            <summary>
+            Conditionally map this member, evaluated before accessing the source value
+            </summary>
+            <param name="condition">Condition to evaluate using the source object and the current resolution context</param>
+        </member>
         <member name="M:AutoMapper.IMemberConfigurationExpression`3.ExplicitExpansion">
             <summary>
             Ignore this member for LINQ projections unless explicitly expanded during projection
@@ -1061,6 +1125,12 @@
             <summary>
             The destination member being configured.
             </summary>
+        </member>
+        <member name="M:AutoMapper.IMemberConfigurationExpression`3.AddTransform(System.Linq.Expressions.Expression{System.Func{`2,`2}})">
+            <summary>
+            Apply a transformation function after any resolved destination member value with the given type
+            </summary>
+            <param name="transformer">Transformation expression</param>
         </member>
         <member name="T:AutoMapper.IMemberConfigurationExpression">
             <summary>
@@ -1147,14 +1217,15 @@
             <param name="context">Resolution context</param>
             <returns>Destination object</returns>
         </member>
-        <member name="T:AutoMapper.IPathConfigurationExpression`2">
+        <member name="T:AutoMapper.IPathConfigurationExpression`3">
             <summary>
             Member configuration options
             </summary>
             <typeparam name="TSource">Source type for this member</typeparam>
             <typeparam name="TDestination">Destination type for this map</typeparam>
+            <typeparam name="TMember">Type for this member</typeparam>
         </member>
-        <member name="M:AutoMapper.IPathConfigurationExpression`2.MapFrom``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+        <member name="M:AutoMapper.IPathConfigurationExpression`3.MapFrom``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
             Specify the source member to map from. Can only reference a member on the <typeparamref name="TSource"/> type
             This method can be used in mapping to LINQ query projections, while ResolveUsing cannot.
@@ -1163,7 +1234,7 @@
             <typeparam name="TSourceMember">Member type of the source member to use</typeparam>
             <param name="sourceMember">Expression referencing the source member to map against</param>
         </member>
-        <member name="M:AutoMapper.IPathConfigurationExpression`2.Ignore">
+        <member name="M:AutoMapper.IPathConfigurationExpression`3.Ignore">
             <summary>
             Ignore this member for configuration validation and skip during mapping
             </summary>
@@ -1309,6 +1380,16 @@
             </summary>
             <param name="type">Static type that contains extension methods</param>
         </member>
+        <member name="P:AutoMapper.IProfileExpression.ValueTransformers">
+            <summary>
+            Value transformers. Modify the list directly or use <see cref="M:AutoMapper.ValueTransformerConfigurationExtensions.Add``1(System.Collections.Generic.IList{AutoMapper.ValueTransformerConfiguration},System.Linq.Expressions.Expression{System.Func{``0,``0}})"/>
+            </summary>
+        </member>
+        <member name="P:AutoMapper.IProfileExpression.ValidateInlineMaps">
+            <summary>
+            Validate maps created dynamically/inline on the first map. Defaults to true.
+            </summary>
+        </member>
         <member name="T:AutoMapper.IResolutionExpression`1">
             <summary>
             Custom resolver options
@@ -1430,6 +1511,11 @@
             Initialize static configuration instance
             </summary>
             <param name="config">Configuration action</param>
+        </member>
+        <member name="M:AutoMapper.Mapper.Reset">
+            <summary>
+            Resets the mapper configuration. Not intended for production use, but for testing scenarios.
+            </summary>
         </member>
         <member name="M:AutoMapper.Mapper.Map``1(System.Object)">
             <summary>
@@ -1843,6 +1929,14 @@
             Main configuration object holding all mapping configuration for a source and destination type
             </summary>
         </member>
+        <member name="M:AutoMapper.ValueTransformerConfigurationExtensions.Add``1(System.Collections.Generic.IList{AutoMapper.ValueTransformerConfiguration},System.Linq.Expressions.Expression{System.Func{``0,``0}})">
+            <summary>
+            Apply a transformation function after any resolved destination member value with the given type
+            </summary>
+            <typeparam name="TValue">Value type to match and transform</typeparam>
+            <param name="valueTransformers">Value transformer list</param>
+            <param name="transformer">Transformation expression</param>
+        </member>
         <member name="M:AutoMapper.XpressionMapper.Extensions.MapperExtensions.MapExpression``1(AutoMapper.IMapper,System.Linq.Expressions.LambdaExpression)">
             <summary>
             Maps an expression given a dictionary of types where the source type is the key and the destination type is the value.
@@ -1967,15 +2061,7 @@
             <param name="expression"></param>
             <returns></returns>
         </member>
-        <member name="M:AutoMapper.XpressionMapper.Extensions.VisitorExtensions.BuildExpression(System.Linq.Expressions.ParameterExpression,System.String)">
-            <summary>
-            Builds and new member expression for the given parameter given its Type and fullname
-            </summary>
-            <param name="newParameter"></param>
-            <param name="fullName"></param>
-            <returns></returns>
-        </member>
-        <member name="M:AutoMapper.XpressionMapper.Extensions.VisitorExtensions.AddExpressions(System.Linq.Expressions.Expression,System.Collections.Generic.List{AutoMapper.XpressionMapper.Structures.PropertyMapInfo})">
+        <member name="M:AutoMapper.XpressionMapper.Extensions.VisitorExtensions.MemberAccesses(System.Linq.Expressions.Expression,System.Collections.Generic.List{AutoMapper.XpressionMapper.Structures.PropertyMapInfo})">
             <summary>
             Adds member expressions to an existing expression.
             </summary>
@@ -1999,73 +2085,78 @@
         </member>
         <member name="T:AutoMapper.XpressionMapper.Resource">
             <summary>
-               A strongly-typed resource class, for looking up localized strings, etc.
+              A strongly-typed resource class, for looking up localized strings, etc.
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.ResourceManager">
             <summary>
-               Returns the cached ResourceManager instance used by this class.
+              Returns the cached ResourceManager instance used by this class.
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.Culture">
             <summary>
-               Overrides the current thread's CurrentUICulture property for all
-               resource lookups using this strongly typed resource class.
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.cannotCreateBinaryExpressionFormat">
             <summary>
-               Looks up a localized string similar to Cannot create a binary expression for the following pair.  Node: {0}, Type: {1} and Node: {2}, Type: {3}..
+              Looks up a localized string similar to Cannot create a binary expression for the following pair.  Node: {0}, Type: {1} and Node: {2}, Type: {3}..
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.cantRemapExpression">
             <summary>
-               Looks up a localized string similar to Can&apos;t rempa expression.
+              Looks up a localized string similar to Can&apos;t rempa expression.
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.customResolversNotSupported">
             <summary>
-               Looks up a localized string similar to Custom resolvers are not supported for expression mapping..
+              Looks up a localized string similar to Custom resolvers are not supported for expression mapping..
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.expressionMapValueTypeMustMatchFormat">
             <summary>
-               Looks up a localized string similar to The source and destination types must be the same for expression mapping between value types. Source Type: {0}, Source Description: {1}, Destination Type: {2}, Destination Property: {3}..
+              Looks up a localized string similar to The source and destination types must be the same for expression mapping between value types. Source Type: {0}, Source Description: {1}, Destination Type: {2}, Destination Property: {3}..
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.includeExpressionTooComplex">
             <summary>
-               Looks up a localized string similar to The Include value-type expression uses multiple sibling navigation objects &quot;{0}&quot;, &quot;{1}&quot; and is too complex to translate..
+              Looks up a localized string similar to The Include value-type expression uses multiple sibling navigation objects &quot;{0}&quot;, &quot;{1}&quot; and is too complex to translate..
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.invalidArgumentCount">
             <summary>
-               Looks up a localized string similar to Source and destination must have the same number of arguments..
+              Looks up a localized string similar to Source and destination must have the same number of arguments..
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.invalidExpErr">
             <summary>
-               Looks up a localized string similar to Invalid expression type for this operation..
+              Looks up a localized string similar to Invalid expression type for this operation..
+            </summary>
+        </member>
+        <member name="P:AutoMapper.XpressionMapper.Resource.mappedMemberIsChildOfTheParameterFormat">
+            <summary>
+              Looks up a localized string similar to The mapped member {0} is of type {1} and a child of the parameter type {2}.  No reference type (parent of) {0} is available to map as an include..
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.mapperInfoDictionaryIsNull">
             <summary>
-               Looks up a localized string similar to Mapper Info dictionary cannot be null..
+              Looks up a localized string similar to Mapper Info dictionary cannot be null..
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.mustBeExpressions">
             <summary>
-               Looks up a localized string similar to Arguments must be expressions..
+              Looks up a localized string similar to Arguments must be expressions..
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.srcMemberCannotBeNullFormat">
             <summary>
-               Looks up a localized string similar to SourceMember cannot be null. Source Type: {0}, Destination Type: {1}, Property: {2}..
+              Looks up a localized string similar to SourceMember cannot be null. Source Type: {0}, Destination Type: {1}, Property: {2}..
             </summary>
         </member>
         <member name="P:AutoMapper.XpressionMapper.Resource.typeMappingsDictionaryIsNull">
             <summary>
-               Looks up a localized string similar to Type Mappings dictionary cannot be null..
+              Looks up a localized string similar to Type Mappings dictionary cannot be null..
             </summary>
         </member>
     </members>

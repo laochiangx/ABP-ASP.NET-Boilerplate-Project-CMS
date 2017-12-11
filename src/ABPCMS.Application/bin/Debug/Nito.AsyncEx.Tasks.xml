@@ -30,17 +30,384 @@
             Disposes the cancellation token registration, if any. Note that this may cause <see cref="P:Nito.AsyncEx.CancellationTokenTaskSource`1.Task"/> to never complete.
             </summary>
         </member>
-        <member name="T:Nito.AsyncEx.SingleDisposable`1">
+        <member name="T:Nito.AsyncEx.Interop.ApmAsyncFactory">
             <summary>
-            A base class for disposables that need exactly-once semantics in a threadsafe way.
+            Creation methods for tasks wrapping the Asynchronous Programming Model (APM), and APM wrapper methods around tasks.
             </summary>
-            <typeparam name="T">The type of "context" for the derived disposable.</typeparam>
         </member>
-        <member name="M:Nito.AsyncEx.SingleDisposable`1.#ctor(`0)">
+        <member name="M:Nito.AsyncEx.Interop.ApmAsyncFactory.ToBegin(System.Threading.Tasks.Task,System.AsyncCallback,System.Object)">
             <summary>
-            Creates a disposable for the specified context.
+            Wraps a <see cref="T:System.Threading.Tasks.Task"/> into the Begin method of an APM pattern.
             </summary>
-            <param name="context">The context passed to <see cref="M:Nito.Disposables.SingleDisposable`1.Dispose(`0)"/>. If this is <c>null</c>, then <see cref="M:Nito.Disposables.SingleDisposable`1.Dispose(`0)"/> will never be called.</param>
+            <param name="task">The task to wrap.</param>
+            <param name="callback">The callback method passed into the Begin method of the APM pattern.</param>
+            <param name="state">The state passed into the Begin method of the APM pattern.</param>
+            <returns>The asynchronous operation, to be returned by the Begin method of the APM pattern.</returns>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.ApmAsyncFactory.ToEnd(System.IAsyncResult)">
+            <summary>
+            Wraps a <see cref="T:System.Threading.Tasks.Task"/> into the End method of an APM pattern.
+            </summary>
+            <param name="asyncResult">The asynchronous operation returned by the matching Begin method of this APM pattern.</param>
+            <returns>The result of the asynchronous operation, to be returned by the End method of the APM pattern.</returns>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.ApmAsyncFactory.ToBegin``1(System.Threading.Tasks.Task{``0},System.AsyncCallback,System.Object)">
+            <summary>
+            Wraps a <see cref="T:System.Threading.Tasks.Task`1"/> into the Begin method of an APM pattern.
+            </summary>
+            <param name="task">The task to wrap. May not be <c>null</c>.</param>
+            <param name="callback">The callback method passed into the Begin method of the APM pattern.</param>
+            <param name="state">The state passed into the Begin method of the APM pattern.</param>
+            <returns>The asynchronous operation, to be returned by the Begin method of the APM pattern.</returns>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.ApmAsyncFactory.ToEnd``1(System.IAsyncResult)">
+            <summary>
+            Wraps a <see cref="T:System.Threading.Tasks.Task`1"/> into the End method of an APM pattern.
+            </summary>
+            <param name="asyncResult">The asynchronous operation returned by the matching Begin method of this APM pattern.</param>
+            <returns>The result of the asynchronous operation, to be returned by the End method of the APM pattern.</returns>
+        </member>
+        <member name="T:Nito.AsyncEx.Interop.EventArguments`2">
+            <summary>
+            Arguments passed to a .NET event that follows the standard <c>sender, arguments</c> event pattern.
+            </summary>
+            <typeparam name="TSender">The type of the sender of the event. This is commonly <see cref="T:System.Object"/>.</typeparam>
+            <typeparam name="TEventArgs">The type of the event arguments. This is commonly <see cref="P:Nito.AsyncEx.Interop.EventArguments`2.EventArgs"/> or a derived type.</typeparam>
+        </member>
+        <member name="P:Nito.AsyncEx.Interop.EventArguments`2.Sender">
+            <summary>
+            The sender of the event.
+            </summary>
+        </member>
+        <member name="P:Nito.AsyncEx.Interop.EventArguments`2.EventArgs">
+            <summary>
+            The event arguments.
+            </summary>
+        </member>
+        <member name="T:Nito.AsyncEx.Interop.EventAsyncFactory">
+            <summary>
+            Creation methods for tasks wrapping events.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromAnyEvent``2(System.Func{System.Action{``1},``0},System.Action{``0},System.Action{``0},System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of any type.
+            </summary>
+            <typeparam name="TDelegate">The type of the event delegate.</typeparam>
+            <typeparam name="TEventArguments">A type containing all event arguments.</typeparam>
+            <param name="convert">A conversion delegate that takes an <see cref="T:System.Action`1"/> and converts it to a <typeparamref name="TDelegate"/>. This is generally of the form <c>x => (...) => x(new TEventArguments(...))</c>.</param>
+            <param name="subscribe">A method that takes a <typeparamref name="TDelegate"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <typeparamref name="TDelegate"/> and unsubscribes it from the event. This method is invoked in a captured context if <paramref name="unsubscribeOnCapturedContext"/> is <c>true</c>.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <param name="unsubscribeOnCapturedContext">Whether to invoke <paramref name="unsubscribe"/> on a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromAnyEvent``2(System.Func{System.Action{``1},``0},System.Action{``0},System.Action{``0},System.Threading.CancellationToken)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of any type.
+            </summary>
+            <typeparam name="TDelegate">The type of the event delegate.</typeparam>
+            <typeparam name="TEventArguments">A type containing all event arguments.</typeparam>
+            <param name="convert">A conversion delegate that takes an <see cref="T:System.Action`1"/> and converts it to a <typeparamref name="TDelegate"/>. This is generally of the form <c>x => (...) => x(new TEventArguments(...))</c>.</param>
+            <param name="subscribe">A method that takes a <typeparamref name="TDelegate"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes a <typeparamref name="TDelegate"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromAnyEvent``2(System.Func{System.Action{``1},``0},System.Action{``0},System.Action{``0})">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of any type.
+            </summary>
+            <typeparam name="TDelegate">The type of the event delegate.</typeparam>
+            <typeparam name="TEventArguments">A type containing all event arguments.</typeparam>
+            <param name="convert">A conversion delegate that takes an <see cref="T:System.Action`1"/> and converts it to a <typeparamref name="TDelegate"/>. This is generally of the form <c>x => (...) => x(new TEventArguments(...))</c>.</param>
+            <param name="subscribe">A method that takes a <typeparamref name="TDelegate"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes a <typeparamref name="TDelegate"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromEvent(System.Action{System.EventHandler},System.Action{System.EventHandler},System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.EventHandler"/>.
+            </summary>
+            <param name="subscribe">A method that takes a <see cref="T:System.EventHandler"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <see cref="T:System.EventHandler"/> and unsubscribes it from the event. This method is invoked in a captured context if <paramref name="unsubscribeOnCapturedContext"/> is <c>true</c>.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <param name="unsubscribeOnCapturedContext">Whether to invoke <paramref name="unsubscribe"/> on a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromEvent(System.Action{System.EventHandler},System.Action{System.EventHandler},System.Threading.CancellationToken)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.EventHandler"/>.
+            </summary>
+            <param name="subscribe">A method that takes a <see cref="T:System.EventHandler"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes a <see cref="T:System.EventHandler"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromEvent(System.Action{System.EventHandler},System.Action{System.EventHandler})">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.EventHandler"/>.
+            </summary>
+            <param name="subscribe">A method that takes a <see cref="T:System.EventHandler"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes a <see cref="T:System.EventHandler"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromEvent``1(System.Action{System.EventHandler{``0}},System.Action{System.EventHandler{``0}},System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.EventHandler`1"/>.
+            </summary>
+            <typeparam name="TEventArgs">The type of the "arguments" (the second event argument).</typeparam>
+            <param name="subscribe">A method that takes a <see cref="T:System.EventHandler`1"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <see cref="T:System.EventHandler`1"/> and unsubscribes it from the event. This method is invoked in a captured context if <paramref name="unsubscribeOnCapturedContext"/> is <c>true</c>.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <param name="unsubscribeOnCapturedContext">Whether to invoke <paramref name="unsubscribe"/> on a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromEvent``1(System.Action{System.EventHandler{``0}},System.Action{System.EventHandler{``0}},System.Threading.CancellationToken)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.EventHandler`1"/>.
+            </summary>
+            <typeparam name="TEventArgs">The type of the "arguments" (the second event argument).</typeparam>
+            <param name="subscribe">A method that takes a <see cref="T:System.EventHandler`1"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes a <see cref="T:System.EventHandler`1"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromEvent``1(System.Action{System.EventHandler{``0}},System.Action{System.EventHandler{``0}})">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.EventHandler`1"/>.
+            </summary>
+            <typeparam name="TEventArgs">The type of the "arguments" (the second event argument).</typeparam>
+            <param name="subscribe">A method that takes a <see cref="T:System.EventHandler`1"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes a <see cref="T:System.EventHandler`1"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromEvent``2(System.Func{System.EventHandler{``1},``0},System.Action{``0},System.Action{``0},System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that follow the standard <c>sender, eventArgs</c> pattern but with a custom delegate type.
+            </summary>
+            <typeparam name="TDelegate">The type of the event delegate.</typeparam>
+            <typeparam name="TEventArgs">The type of the "arguments" (the second event argument).</typeparam>
+            <param name="convert">A conversion delegate that takes an <see cref="T:System.EventHandler`1"/> and converts it to a <typeparamref name="TDelegate"/>. If the type parameters are specified explicitly, this should be <c>x => x.Invoke</c>. If the type parameters are inferred, this should be <c>(EventHandler&lt;TEventArgs&gt; x) => new TDelegate(x)</c> with appropriate substitutions for <typeparamref name="TEventArgs"/> and <typeparamref name="TDelegate"/>.</param>
+            <param name="subscribe">A method that takes a <typeparamref name="TDelegate"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <typeparamref name="TDelegate"/> and unsubscribes it from the event. This method is invoked in a captured context if <paramref name="unsubscribeOnCapturedContext"/> is <c>true</c>.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <param name="unsubscribeOnCapturedContext">Whether to invoke <paramref name="unsubscribe"/> on a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromEvent``2(System.Func{System.EventHandler{``1},``0},System.Action{``0},System.Action{``0},System.Threading.CancellationToken)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that follow the standard <c>sender, eventArgs</c> pattern but with a custom delegate type.
+            </summary>
+            <typeparam name="TDelegate">The type of the event delegate.</typeparam>
+            <typeparam name="TEventArgs">The type of the "arguments" (the second event argument).</typeparam>
+            <param name="convert">A conversion delegate that takes an <see cref="T:System.EventHandler`1"/> and converts it to a <typeparamref name="TDelegate"/>. If the type parameters are specified explicitly, this should be <c>x => x.Invoke</c>. If the type parameters are inferred, this should be <c>(EventHandler&lt;TEventArgs&gt; x) => new TDelegate(x)</c> with appropriate substitutions for <typeparamref name="TEventArgs"/> and <typeparamref name="TDelegate"/>.</param>
+            <param name="subscribe">A method that takes a <typeparamref name="TDelegate"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes a <typeparamref name="TDelegate"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromEvent``2(System.Func{System.EventHandler{``1},``0},System.Action{``0},System.Action{``0})">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that follow the standard <c>sender, eventArgs</c> pattern but with a custom delegate type.
+            </summary>
+            <typeparam name="TDelegate">The type of the event delegate.</typeparam>
+            <typeparam name="TEventArgs">The type of the "arguments" (the second event argument).</typeparam>
+            <param name="convert">A conversion delegate that takes an <see cref="T:System.EventHandler`1"/> and converts it to a <typeparamref name="TDelegate"/>. If the type parameters are specified explicitly, this should be <c>x => x.Invoke</c>. If the type parameters are inferred, this should be <c>(EventHandler&lt;TEventArgs&gt; x) => new TDelegate(x)</c> with appropriate substitutions for <typeparamref name="TEventArgs"/> and <typeparamref name="TDelegate"/>.</param>
+            <param name="subscribe">A method that takes a <typeparamref name="TDelegate"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes a <typeparamref name="TDelegate"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromActionEvent``2(System.Action{System.Action{``0,``1}},System.Action{System.Action{``0,``1}},System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.Action`2"/>.
+            </summary>
+            <typeparam name="TSender">The type of the "sender" (the first event argument).</typeparam>
+            <typeparam name="TEventArgs">The type of the "arguments" (the second event argument).</typeparam>
+            <param name="subscribe">A method that takes an <see cref="T:System.Action`2"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <see cref="T:System.Action`2"/> and unsubscribes it from the event. This method is invoked in a captured context if <paramref name="unsubscribeOnCapturedContext"/> is <c>true</c>.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <param name="unsubscribeOnCapturedContext">Whether to invoke <paramref name="unsubscribe"/> on a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromActionEvent``2(System.Action{System.Action{``0,``1}},System.Action{System.Action{``0,``1}},System.Threading.CancellationToken)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.Action`2"/>.
+            </summary>
+            <typeparam name="TSender">The type of the "sender" (the first event argument).</typeparam>
+            <typeparam name="TEventArgs">The type of the "arguments" (the second event argument).</typeparam>
+            <param name="subscribe">A method that takes an <see cref="T:System.Action`2"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <see cref="T:System.Action`2"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromActionEvent``2(System.Action{System.Action{``0,``1}},System.Action{System.Action{``0,``1}})">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.Action`2"/>.
+            </summary>
+            <typeparam name="TSender">The type of the "sender" (the first event argument).</typeparam>
+            <typeparam name="TEventArgs">The type of the "arguments" (the second event argument).</typeparam>
+            <param name="subscribe">A method that takes an <see cref="T:System.Action`2"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <see cref="T:System.Action`2"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromActionEvent``1(System.Action{System.Action{``0}},System.Action{System.Action{``0}},System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.Action`1"/>.
+            </summary>
+            <typeparam name="TEventArgs">The type of the argument passed to the event handler and used to complete the task.</typeparam>
+            <param name="subscribe">A method that takes an <see cref="T:System.Action`1"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <see cref="T:System.Action`1"/> and unsubscribes it from the event. This method is invoked in a captured context if <paramref name="unsubscribeOnCapturedContext"/> is <c>true</c>.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <param name="unsubscribeOnCapturedContext">Whether to invoke <paramref name="unsubscribe"/> on a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromActionEvent``1(System.Action{System.Action{``0}},System.Action{System.Action{``0}},System.Threading.CancellationToken)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.Action`1"/>.
+            </summary>
+            <typeparam name="TEventArgs">The type of the argument passed to the event handler and used to complete the task.</typeparam>
+            <param name="subscribe">A method that takes an <see cref="T:System.Action`1"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <see cref="T:System.Action`1"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromActionEvent``1(System.Action{System.Action{``0}},System.Action{System.Action{``0}})">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task`1"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.Action`1"/>.
+            </summary>
+            <typeparam name="TEventArgs">The type of the argument passed to the event handler and used to complete the task.</typeparam>
+            <param name="subscribe">A method that takes an <see cref="T:System.Action`1"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <see cref="T:System.Action`1"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromActionEvent(System.Action{System.Action},System.Action{System.Action},System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.Action"/>.
+            </summary>
+            <param name="subscribe">A method that takes an <see cref="T:System.Action"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <see cref="T:System.Action"/> and unsubscribes it from the event. This method is invoked in a captured context if <paramref name="unsubscribeOnCapturedContext"/> is <c>true</c>.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <param name="unsubscribeOnCapturedContext">Whether to invoke <paramref name="unsubscribe"/> on a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromActionEvent(System.Action{System.Action},System.Action{System.Action},System.Threading.CancellationToken)">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.Action"/>.
+            </summary>
+            <param name="subscribe">A method that takes an <see cref="T:System.Action"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <see cref="T:System.Action"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the task (and unsubscribe from the event handler).</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.FromActionEvent(System.Action{System.Action},System.Action{System.Action})">
+            <summary>
+            Returns a <see cref="T:System.Threading.Tasks.Task"/> that completes when a specified event next fires. This overload is for events that are of type <see cref="T:System.Action"/>.
+            </summary>
+            <param name="subscribe">A method that takes an <see cref="T:System.Action"/> and subscribes it to the event.</param>
+            <param name="unsubscribe">A method that takes an <see cref="T:System.Action"/> and unsubscribes it from the event. This method is always invoked in a captured context.</param>
+            <remarks>
+            <para>Calling this method in a loop is often an anti-pattern, because the event is only subscribed to when this method is invoked, and is unsubscribed from when the task completes. From the time the task is completed until this method is called again, the event may fire and be "lost". If you find yourself needing a loop around this method, consider using Rx or TPL Dataflow instead.</para>
+            </remarks>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.EventAsyncFactory.CreateEventArguments``2(``0,``1)">
+            <summary>
+            Creates an <see cref="T:Nito.AsyncEx.Interop.EventArguments`2"/> structure.
+            </summary>
+            <typeparam name="TSender">The type of the sender of the event.</typeparam>
+            <typeparam name="TEventArgs">The event arguments.</typeparam>
+            <param name="sender">The sender of the event.</param>
+            <param name="eventArgs">The event arguments.</param>
+        </member>
+        <member name="T:Nito.AsyncEx.SynchronizationContextExtensions">
+            <summary>
+            Provides extension methods for <see cref="T:System.Threading.SynchronizationContext"/>.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.SynchronizationContextExtensions.Send(System.Threading.SynchronizationContext,System.Action)">
+            <summary>
+            Synchronously executes a delegate on this synchronization context.
+            </summary>
+            <param name="this">The synchronization context.</param>
+            <param name="action">The delegate to execute.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.SynchronizationContextExtensions.Send``1(System.Threading.SynchronizationContext,System.Func{``0})">
+            <summary>
+            Synchronously executes a delegate on this synchronization context and returns its result.
+            </summary>
+            <typeparam name="T">The type of the result.</typeparam>
+            <param name="this">The synchronization context.</param>
+            <param name="action">The delegate to execute.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.SynchronizationContextExtensions.PostAsync(System.Threading.SynchronizationContext,System.Action)">
+            <summary>
+            Asynchronously executes a delegate on this synchronization context.
+            </summary>
+            <param name="this">The synchronization context.</param>
+            <param name="action">The delegate to execute.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.SynchronizationContextExtensions.PostAsync``1(System.Threading.SynchronizationContext,System.Func{``0})">
+            <summary>
+            Asynchronously executes a delegate on this synchronization context and returns its result.
+            </summary>
+            <typeparam name="T">The type of the result.</typeparam>
+            <param name="this">The synchronization context.</param>
+            <param name="action">The delegate to execute.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.SynchronizationContextExtensions.PostAsync(System.Threading.SynchronizationContext,System.Func{System.Threading.Tasks.Task})">
+            <summary>
+            Asynchronously executes an asynchronous delegate on this synchronization context.
+            </summary>
+            <param name="this">The synchronization context.</param>
+            <param name="action">The delegate to execute.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.SynchronizationContextExtensions.PostAsync``1(System.Threading.SynchronizationContext,System.Func{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Asynchronously executes an asynchronous delegate on this synchronization context and returns its result.
+            </summary>
+            <typeparam name="T">The type of the result.</typeparam>
+            <param name="this">The synchronization context.</param>
+            <param name="action">The delegate to execute.</param>
         </member>
         <member name="T:Nito.AsyncEx.SynchronizationContextSwitcher">
             <summary>
@@ -63,10 +430,17 @@
             Restores the old <see cref="T:System.Threading.SynchronizationContext"/>.
             </summary>
         </member>
-        <member name="M:Nito.AsyncEx.SynchronizationContextSwitcher.NoContext">
+        <member name="M:Nito.AsyncEx.SynchronizationContextSwitcher.NoContext(System.Action)">
             <summary>
-            Removes the current <see cref="T:System.Threading.SynchronizationContext"/> and restores it when the returned disposable is disposed.
+            Executes a synchronous delegate without the current <see cref="T:System.Threading.SynchronizationContext"/>. The current context is restored when this function returns.
             </summary>
+            <param name="action">The delegate to execute.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.SynchronizationContextSwitcher.NoContext``1(System.Func{``0})">
+            <summary>
+            Executes a synchronous or asynchronous delegate without the current <see cref="T:System.Threading.SynchronizationContext"/>. The current context is restored when this function synchronously returns.
+            </summary>
+            <param name="action">The delegate to execute.</param>
         </member>
         <member name="T:Nito.AsyncEx.Synchronous.TaskExtensions">
             <summary>
@@ -261,6 +635,19 @@
             </summary>
             <typeparam name="TResult">The type of the task results.</typeparam>
             <param name="this">The tasks to wait for. May not be <c>null</c>.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.TaskExtensions.OrderByCompletion``1(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Creates a new collection of tasks that complete in order.
+            </summary>
+            <typeparam name="T">The type of the results of the tasks.</typeparam>
+            <param name="this">The tasks to order by completion. May not be <c>null</c>.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.TaskExtensions.OrderByCompletion(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task})">
+            <summary>
+            Creates a new collection of tasks that complete in order.
+            </summary>
+            <param name="this">The tasks to order by completion. May not be <c>null</c>.</param>
         </member>
         <member name="T:Nito.AsyncEx.TaskFactoryExtensions">
             <summary>

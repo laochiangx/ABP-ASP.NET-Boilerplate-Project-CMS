@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nito.AsyncEx.Oop</name>
+    </assembly>
+    <members>
+        <member name="T:Nito.AsyncEx.IDeferralSource">
+            <summary>
+            A source for deferrals. Event argument types may implement this interface to indicate they understand async event handlers.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.IDeferralSource.GetDeferral">
+            <summary>
+            Requests a deferral. When the deferral is disposed, it is considered complete.
+            </summary>
+        </member>
+        <member name="T:Nito.AsyncEx.DeferralManager">
+            <summary>
+            Manages the deferrals for an event that may have asynchonous handlers and needs to know when they complete. Instances of this type may not be reused.
+            </summary>
+        </member>
+        <member name="F:Nito.AsyncEx.DeferralManager._source">
+            <summary>
+            The deferral source for deferrals managed by this manager.
+            </summary>
+        </member>
+        <member name="F:Nito.AsyncEx.DeferralManager._mutex">
+            <summary>
+            The lock protecting <see cref="F:Nito.AsyncEx.DeferralManager._ce"/>.
+            </summary>
+        </member>
+        <member name="F:Nito.AsyncEx.DeferralManager._ce">
+            <summary>
+            The underlying countdown event. May be <c>null</c> if no deferrals were ever requested.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.DeferralManager.#ctor">
+            <summary>
+            Creates a new deferral manager.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.DeferralManager.IncrementCount">
+            <summary>
+            Increments the count of active deferrals for this manager.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.DeferralManager.DecrementCount">
+            <summary>
+            Decrements the count of active deferrals for this manager. If the count reaches <c>0</c>, then the manager notifies the code raising the event.
+            </summary>
+        </member>
+        <member name="P:Nito.AsyncEx.DeferralManager.DeferralSource">
+            <summary>
+            Gets a source for deferrals managed by this deferral manager. This is generally used to implement <see cref="T:Nito.AsyncEx.IDeferralSource"/> for event argument types.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.DeferralManager.WaitForDeferralsAsync">
+            <summary>
+            Notifies the manager that all deferral requests have been made, and returns a task that is completed when all deferrals have completed.
+            </summary>
+        </member>
+        <member name="T:Nito.AsyncEx.DeferralManager.ManagedDeferralSource">
+            <summary>
+            A source for deferrals.
+            </summary>
+        </member>
+        <member name="F:Nito.AsyncEx.DeferralManager.ManagedDeferralSource._manager">
+            <summary>
+            The deferral manager in charge of this deferral source.
+            </summary>
+        </member>
+        <member name="T:Nito.AsyncEx.DeferralManager.ManagedDeferralSource.Deferral">
+            <summary>
+            A deferral.
+            </summary>
+        </member>
+    </members>
+</doc>

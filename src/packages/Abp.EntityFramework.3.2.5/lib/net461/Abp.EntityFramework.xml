@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abp.EntityFramework</name>
+    </assembly>
+    <members>
+        <member name="T:Abp.EntityFramework.AbpDbContext">
+            <summary>
+            Base class for all DbContext classes in the application.
+            </summary>
+        </member>
+        <member name="P:Abp.EntityFramework.AbpDbContext.AbpSession">
+            <summary>
+            Used to get current session values.
+            </summary>
+        </member>
+        <member name="P:Abp.EntityFramework.AbpDbContext.EntityChangeEventHelper">
+            <summary>
+            Used to trigger entity change events.
+            </summary>
+        </member>
+        <member name="P:Abp.EntityFramework.AbpDbContext.Logger">
+            <summary>
+            Reference to the logger.
+            </summary>
+        </member>
+        <member name="P:Abp.EntityFramework.AbpDbContext.EventBus">
+            <summary>
+            Reference to the event bus.
+            </summary>
+        </member>
+        <member name="P:Abp.EntityFramework.AbpDbContext.GuidGenerator">
+            <summary>
+            Reference to GUID generator.
+            </summary>
+        </member>
+        <member name="P:Abp.EntityFramework.AbpDbContext.CurrentUnitOfWorkProvider">
+            <summary>
+            Reference to the current UOW provider.
+            </summary>
+        </member>
+        <member name="P:Abp.EntityFramework.AbpDbContext.MultiTenancyConfig">
+            <summary>
+            Reference to multi tenancy configuration.
+            </summary>
+        </member>
+        <member name="P:Abp.EntityFramework.AbpDbContext.SuppressAutoSetTenantId">
+            <summary>
+            Can be used to suppress automatically setting TenantId on SaveChanges.
+            Default: false.
+            </summary>
+        </member>
+        <member name="M:Abp.EntityFramework.AbpDbContext.#ctor">
+            <summary>
+            Constructor.
+            Uses <see cref="P:Abp.Configuration.Startup.IAbpStartupConfiguration.DefaultNameOrConnectionString"/> as connection string.
+            </summary>
+        </member>
+        <member name="M:Abp.EntityFramework.AbpDbContext.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Abp.EntityFramework.AbpDbContext.#ctor(System.Data.Entity.Infrastructure.DbCompiledModel)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Abp.EntityFramework.AbpDbContext.#ctor(System.Data.Common.DbConnection,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Abp.EntityFramework.AbpDbContext.#ctor(System.String,System.Data.Entity.Infrastructure.DbCompiledModel)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Abp.EntityFramework.AbpDbContext.#ctor(System.Data.Entity.Core.Objects.ObjectContext,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Abp.EntityFramework.AbpDbContext.#ctor(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.DbCompiledModel,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="T:Abp.EntityFramework.AbpEntityFrameworkModule">
+            <summary>
+            This module is used to implement "Data Access Layer" in EntityFramework.
+            </summary>
+        </member>
+        <member name="T:Abp.EntityFramework.Extensions.QueryableExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.Linq.IQueryable"/> and <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+        </member>
+        <member name="M:Abp.EntityFramework.Extensions.QueryableExtensions.IncludeIf(System.Linq.IQueryable,System.Boolean,System.String)">
+            <summary>
+            Specifies the related objects to include in the query results.
+            </summary>
+            <param name="source">The source <see cref="T:System.Linq.IQueryable"/> on which to call Include.</param>
+            <param name="condition">A boolean value to determine to include <paramref name="path"/> or not.</param>
+            <param name="path">The dot-separated list of related objects to return in the query results.</param>
+        </member>
+        <member name="M:Abp.EntityFramework.Extensions.QueryableExtensions.IncludeIf``1(System.Linq.IQueryable{``0},System.Boolean,System.String)">
+            <summary>
+            Specifies the related objects to include in the query results.
+            </summary>
+            <param name="source">The source <see cref="T:System.Linq.IQueryable`1"/> on which to call Include.</param>
+            <param name="condition">A boolean value to determine to include <paramref name="path"/> or not.</param>
+            <param name="path">The dot-separated list of related objects to return in the query results.</param>
+        </member>
+        <member name="M:Abp.EntityFramework.Extensions.QueryableExtensions.IncludeIf``2(System.Linq.IQueryable{``0},System.Boolean,System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Specifies the related objects to include in the query results.
+            </summary>
+            <param name="source">The source <see cref="T:System.Linq.IQueryable`1"/> on which to call Include.</param>
+            <param name="condition">A boolean value to determine to include <paramref name="path"/> or not.</param>
+            <param name="path">The type of navigation property being included.</param>
+        </member>
+        <member name="M:Abp.EntityFramework.Extensions.QueryableExtensions.Nolocking``2(Abp.Domain.Repositories.IRepository{``0,System.Int32},System.Func{System.Linq.IQueryable{``0},``1})">
+            <summary>
+            Nolockings the specified queryable.
+            </summary>
+            <typeparam name="TEntity">The type of the entity.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="repository">The repository.</param>
+            <param name="queryable">The queryable.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Abp.EntityFramework.Extensions.QueryableExtensions.Nolocking``3(Abp.Domain.Repositories.IRepository{``0,``1},System.Func{System.Linq.IQueryable{``0},``2})">
+            <summary>
+            Nolockings the specified queryable.
+            </summary>
+            <typeparam name="TEntity">The type of the entity.</typeparam>
+            <typeparam name="TPrimaryKey">The type of the primary key.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="repository">The repository.</param>
+            <param name="queryable">The queryable.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Abp.EntityFramework.IDbContextProvider`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="TDbContext"></typeparam>
+        </member>
+        <member name="T:Abp.EntityFramework.Repositories.EfRepositoryBase`3">
+            <summary>
+            Implements IRepository for Entity Framework.
+            </summary>
+            <typeparam name="TDbContext">DbContext which contains <typeparamref name="TEntity"/>.</typeparam>
+            <typeparam name="TEntity">Type of the Entity for this repository</typeparam>
+            <typeparam name="TPrimaryKey">Primary key of the entity</typeparam>
+        </member>
+        <member name="P:Abp.EntityFramework.Repositories.EfRepositoryBase`3.Context">
+            <summary>
+            Gets EF DbContext object.
+            </summary>
+        </member>
+        <member name="P:Abp.EntityFramework.Repositories.EfRepositoryBase`3.Table">
+            <summary>
+            Gets DbSet for given entity.
+            </summary>
+        </member>
+        <member name="M:Abp.EntityFramework.Repositories.EfRepositoryBase`3.#ctor(Abp.EntityFramework.IDbContextProvider{`0})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="dbContextProvider"></param>
+        </member>
+        <member name="T:Abp.EntityFramework.Uow.EfUnitOfWork">
+            <summary>
+            Implements Unit of work for Entity Framework.
+            </summary>
+        </member>
+        <member name="M:Abp.EntityFramework.Uow.EfUnitOfWork.#ctor(Abp.Dependency.IIocResolver,Abp.Domain.Uow.IConnectionStringResolver,Abp.EntityFramework.IDbContextResolver,Abp.EntityFramework.Uow.IEfUnitOfWorkFilterExecuter,Abp.Domain.Uow.IUnitOfWorkDefaultOptions,Abp.EntityFramework.IDbContextTypeMatcher,Abp.EntityFramework.Uow.IEfTransactionStrategy)">
+            <summary>
+            Creates a new <see cref="T:Abp.EntityFramework.Uow.EfUnitOfWork"/>.
+            </summary>
+        </member>
+        <member name="T:Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1">
+            <summary>
+            Implements <see cref="T:Abp.EntityFramework.IDbContextProvider`1"/> that gets DbContext from
+            active unit of work.
+            </summary>
+            <typeparam name="TDbContext">Type of the DbContext</typeparam>
+        </member>
+        <member name="M:Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1.#ctor(Abp.Domain.Uow.ICurrentUnitOfWorkProvider)">
+            <summary>
+            Creates a new <see cref="T:Abp.EntityFramework.Uow.UnitOfWorkDbContextProvider`1"/>.
+            </summary>
+            <param name="currentUnitOfWorkProvider"></param>
+        </member>
+        <member name="T:Abp.EntityFramework.Uow.UnitOfWorkExtensions">
+            <summary>
+            Extension methods for UnitOfWork.
+            </summary>
+        </member>
+        <member name="M:Abp.EntityFramework.Uow.UnitOfWorkExtensions.GetDbContext``1(Abp.Domain.Uow.IActiveUnitOfWork)">
+            <summary>
+            Gets a DbContext as a part of active unit of work.
+            This method can be called when current unit of work is an <see cref="T:Abp.EntityFramework.Uow.EfUnitOfWork"/>.
+            </summary>
+            <typeparam name="TDbContext">Type of the DbContext</typeparam>
+            <param name="unitOfWork">Current (active) unit of work</param>
+        </member>
+        <member name="F:Abp.EntityFramework.Utils.DateTimePropertyInfoHelper.DateTimeProperties">
+            <summary>
+            Key: Entity type
+            Value: DateTime property infos
+            </summary>
+        </member>
+    </members>
+</doc>

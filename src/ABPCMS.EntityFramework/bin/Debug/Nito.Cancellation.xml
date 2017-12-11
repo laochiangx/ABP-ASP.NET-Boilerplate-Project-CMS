@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nito.Cancellation</name>
+    </assembly>
+    <members>
+        <member name="T:Nito.NormalizedCancellationToken">
+            <summary>
+            A cancellation token wrapper that may represent multiple linked cancellation tokens. Instances of this type should always be disposed.
+            </summary>
+        </member>
+        <member name="F:Nito.NormalizedCancellationToken._cts">
+            <summary>
+            The <see cref="T:System.Threading.CancellationTokenSource"/>, if any. If this is not <c>null</c>, then <see cref="F:Nito.NormalizedCancellationToken._token"/> is <c>_cts.Token</c>.
+            </summary>
+        </member>
+        <member name="F:Nito.NormalizedCancellationToken._token">
+            <summary>
+            The <see cref="P:Nito.NormalizedCancellationToken.Token"/>. If <see cref="F:Nito.NormalizedCancellationToken._cts"/> is not <c>null</c>, then this is <c>_cts.Token</c>.
+            </summary>
+        </member>
+        <member name="M:Nito.NormalizedCancellationToken.#ctor">
+            <summary>
+            Creates a normalized cancellation token that can never be canceled.
+            </summary>
+        </member>
+        <member name="M:Nito.NormalizedCancellationToken.#ctor(System.Threading.CancellationTokenSource)">
+            <summary>
+            Creates a normalized cancellation token from a <see cref="T:System.Threading.CancellationTokenSource"/>. <see cref="P:Nito.NormalizedCancellationToken.Token"/> is set to the <see cref="P:System.Threading.CancellationTokenSource.Token"/> property of <paramref name="cts"/>.
+            </summary>
+            <param name="cts">The source for this token. May be <c>null</c> to create a normalized cancellation token that can never be canceled.</param>
+        </member>
+        <member name="M:Nito.NormalizedCancellationToken.#ctor(System.Threading.CancellationToken)">
+            <summary>
+            Creates a normalized cancellation token from a <see cref="T:System.Threading.CancellationToken"/>. <see cref="P:Nito.NormalizedCancellationToken.Token"/> is set to <paramref name="token"/>.
+            </summary>
+            <param name="token">The source for this token.</param>
+        </member>
+        <member name="M:Nito.NormalizedCancellationToken.Dispose(System.Object)">
+            <summary>
+            Releases any resources used by this normalized cancellation token.
+            </summary>
+        </member>
+        <member name="P:Nito.NormalizedCancellationToken.Token">
+            <summary>
+            Gets the <see cref="T:System.Threading.CancellationToken"/> for this normalized cancellation token.
+            </summary>
+        </member>
+        <member name="M:Nito.NormalizedCancellationToken.Timeout(System.TimeSpan)">
+            <summary>
+            Creates a cancellation token that is canceled after the due time.
+            </summary>
+            <param name="dueTime">The due time after which to cancel the token.</param>
+            <returns>A cancellation token that is canceled after the due time.</returns>
+        </member>
+        <member name="M:Nito.NormalizedCancellationToken.Timeout(System.Int32)">
+            <summary>
+            Creates a cancellation token that is canceled after the due time.
+            </summary>
+            <param name="dueTime">The due time after which to cancel the token.</param>
+            <returns>A cancellation token that is canceled after the due time.</returns>
+        </member>
+        <member name="M:Nito.NormalizedCancellationToken.Normalize(System.Threading.CancellationToken[])">
+            <summary>
+            Reduces a set of cancellation tokens by removing any cancellation tokens that cannot be canceled. If any tokens are already canceled, the returned token will be canceled.
+            </summary>
+            <param name="cancellationTokens">The cancellation tokens to reduce. May not be <c>null</c>.</param>
+        </member>
+        <member name="M:Nito.NormalizedCancellationToken.Normalize(System.Collections.Generic.IEnumerable{System.Threading.CancellationToken})">
+            <summary>
+            Reduces a set of cancellation tokens by removing any cancellation tokens that cannot be canceled. If any tokens are already canceled, the returned token will be canceled.
+            </summary>
+            <param name="cancellationTokens">The cancellation tokens to reduce. May not be <c>null</c>.</param>
+        </member>
+    </members>
+</doc>

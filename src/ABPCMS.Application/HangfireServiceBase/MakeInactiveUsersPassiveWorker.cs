@@ -35,7 +35,7 @@ namespace ABPCMS.HangfireServiceBase
 
                 foreach (var inactiveUser in inactiveUsers)
                 {
-                    inactiveUser.CreatorUserId +=1 ;
+                    inactiveUser.LastLoginTime=DateTime.Now.AddMilliseconds(1);
                     Logger.Info(inactiveUser + " made passive since he/she did not login in last 30 days.");
                 }
 

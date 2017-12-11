@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nito.AsyncEx.Interop.WaitHandles</name>
+    </assembly>
+    <members>
+        <member name="T:Nito.AsyncEx.Interop.WaitHandleAsyncFactory">
+            <summary>
+            Provides interop utilities for <see cref="T:System.Threading.WaitHandle"/> types.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.WaitHandleAsyncFactory.FromWaitHandle(System.Threading.WaitHandle)">
+            <summary>
+            Wraps a <see cref="T:System.Threading.WaitHandle"/> with a <see cref="T:System.Threading.Tasks.Task"/>. When the <see cref="T:System.Threading.WaitHandle"/> is signalled, the returned <see cref="T:System.Threading.Tasks.Task"/> is completed. If the handle is already signalled, this method acts synchronously.
+            </summary>
+            <param name="handle">The <see cref="T:System.Threading.WaitHandle"/> to observe.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.WaitHandleAsyncFactory.FromWaitHandle(System.Threading.WaitHandle,System.TimeSpan)">
+            <summary>
+            Wraps a <see cref="T:System.Threading.WaitHandle"/> with a <see cref="T:System.Threading.Tasks.Task`1"/>. If the <see cref="T:System.Threading.WaitHandle"/> is signalled, the returned task is completed with a <c>true</c> result. If the observation times out, the returned task is completed with a <c>false</c> result. If the handle is already signalled or the timeout is zero, this method acts synchronously.
+            </summary>
+            <param name="handle">The <see cref="T:System.Threading.WaitHandle"/> to observe.</param>
+            <param name="timeout">The timeout after which the <see cref="T:System.Threading.WaitHandle"/> is no longer observed.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.WaitHandleAsyncFactory.FromWaitHandle(System.Threading.WaitHandle,System.Threading.CancellationToken)">
+            <summary>
+            Wraps a <see cref="T:System.Threading.WaitHandle"/> with a <see cref="T:System.Threading.Tasks.Task`1"/>. If the <see cref="T:System.Threading.WaitHandle"/> is signalled, the returned task is (successfully) completed. If the observation is cancelled, the returned task is cancelled. If the handle is already signalled or the cancellation token is already cancelled, this method acts synchronously.
+            </summary>
+            <param name="handle">The <see cref="T:System.Threading.WaitHandle"/> to observe.</param>
+            <param name="token">The cancellation token that cancels observing the <see cref="T:System.Threading.WaitHandle"/>.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.Interop.WaitHandleAsyncFactory.FromWaitHandle(System.Threading.WaitHandle,System.TimeSpan,System.Threading.CancellationToken)">
+            <summary>
+            Wraps a <see cref="T:System.Threading.WaitHandle"/> with a <see cref="T:System.Threading.Tasks.Task`1"/>. If the <see cref="T:System.Threading.WaitHandle"/> is signalled, the returned task is completed with a <c>true</c> result. If the observation times out, the returned task is completed with a <c>false</c> result. If the observation is cancelled, the returned task is cancelled. If the handle is already signalled, the timeout is zero, or the cancellation token is already cancelled, then this method acts synchronously.
+            </summary>
+            <param name="handle">The <see cref="T:System.Threading.WaitHandle"/> to observe.</param>
+            <param name="timeout">The timeout after which the <see cref="T:System.Threading.WaitHandle"/> is no longer observed.</param>
+            <param name="token">The cancellation token that cancels observing the <see cref="T:System.Threading.WaitHandle"/>.</param>
+        </member>
+    </members>
+</doc>

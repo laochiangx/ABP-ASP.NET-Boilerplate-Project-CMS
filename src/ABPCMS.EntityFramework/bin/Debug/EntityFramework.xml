@@ -1732,6 +1732,12 @@
             <typeparam name="TContext">The context type for which the factory should be used.</typeparam>
             <param name="factory">The delegate to use to create context instances.</param>
         </member>
+        <member name="M:System.Data.Entity.DbConfiguration.SetModelStore(System.Data.Entity.Infrastructure.DbModelStore)">
+            <summary>
+            Sets a singleton model store implementation (persisted model cache).
+            </summary>
+            <param name="modelStore">The model store implementation.</param>
+        </member>
         <member name="M:System.Data.Entity.DbConfiguration.SetTableExistenceChecker(System.String,System.Data.Entity.Infrastructure.TableExistenceChecker)">
             <summary>
             Call this method from the constructor of a class derived from <see cref="T:System.Data.Entity.DbConfiguration"/> to register
@@ -9626,6 +9632,93 @@
             <returns>The deserialized annotation value.</returns>
             <exception cref="T:System.FormatException">If there is an error reading the serialized value.</exception>
         </member>
+        <member name="T:System.Data.Entity.Infrastructure.DbModelStore">
+            <summary>
+            Base class for persisted model cache.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.DbModelStore.TryLoad(System.Type)">
+            <summary>
+            Loads a model from the store.
+            </summary>
+            <param name="contextType">The type of context representing the model.</param>
+            <returns>The loaded metadata model.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.DbModelStore.TryGetEdmx(System.Type)">
+            <summary>
+            Retrieves an edmx XDocument version of the model from the store.
+            </summary>
+            <param name="contextType">The type of context representing the model.</param>
+            <returns>The loaded XDocument edmx.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.DbModelStore.Save(System.Type,System.Data.Entity.Infrastructure.DbModel)">
+            <summary>
+            Saves a model to the store.
+            </summary>
+            <param name="contextType">The type of context representing the model.</param>
+            <param name="model">The metadata model to save.</param>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.DbModelStore.GetDefaultSchema(System.Type)">
+            <summary>
+            Gets the default database schema used by a model.
+            </summary>
+            <param name="contextType">The type of context representing the model.</param>
+            <returns>The default database schema.</returns>
+        </member>
+        <member name="T:System.Data.Entity.Infrastructure.DefaultDbModelStore">
+            <summary>
+            Loads or saves models from/into .edmx files at a specified location.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.DefaultDbModelStore.#ctor(System.String)">
+            <summary>
+            Initializes a new DefaultDbModelStore instance.
+            </summary>
+            <param name="directory">The parent directory for the .edmx files.</param>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.DefaultDbModelStore.TryLoad(System.Type)">
+            <summary>
+            Loads a model from the store.
+            </summary>
+            <param name="contextType">The type of context representing the model.</param>
+            <returns>The loaded metadata model.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.DefaultDbModelStore.TryGetEdmx(System.Type)">
+            <summary>
+            Retrieves an edmx XDocument version of the model from the store.
+            </summary>
+            <param name="contextType">The type of context representing the model.</param>
+            <returns>The loaded XDocument edmx.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.DefaultDbModelStore.Save(System.Type,System.Data.Entity.Infrastructure.DbModel)">
+            <summary>
+            Saves a model to the store.
+            </summary>
+            <param name="contextType">The type of context representing the model.</param>
+            <param name="model">The metadata model to save.</param>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.DefaultDbModelStore.GetFilePath(System.Type)">
+            <summary>
+            Gets the path of the .edmx file corresponding to the specified context type.
+            </summary>
+            <param name="contextType">A context type.</param>
+            <returns>The .edmx file path.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.DefaultDbModelStore.FileIsValid(System.Type,System.String)">
+            <summary>
+            Validates the model store is valid.
+            The default implementation verifies that the .edmx file was last 
+            written after the context assembly was last written.
+            </summary>
+            <param name="contextType">The type of context representing the model.</param>
+            <param name="filePath">The path of the stored model.</param>
+            <returns>Whether the edmx file should be invalidated.</returns>
+        </member>
+        <member name="P:System.Data.Entity.Infrastructure.DefaultDbModelStore.Directory">
+            <summary>
+            Gets the location of the .edmx files.
+            </summary>
+        </member>
         <member name="T:System.Data.Entity.Infrastructure.DependencyResolution.IDbDependencyResolver">
             <summary>
             This interface is implemented by any object that can resolve a dependency, either directly
@@ -9706,6 +9799,19 @@
         </member>
         <member name="M:System.Data.Entity.Infrastructure.DependencyResolution.TransactionHandlerResolver.GetHashCode">
             <inheritdoc/>
+        </member>
+        <member name="T:System.Data.Entity.Infrastructure.EdmxReader">
+            <summary>
+            Utility class for reading a metadata model from .edmx.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.EdmxReader.Read(System.Xml.XmlReader,System.String)">
+            <summary>
+            Reads a metadata model from .edmx.
+            </summary>
+            <param name="reader">XML reader for the .edmx</param>
+            <param name="defaultSchema">Default database schema used by the model.</param>
+            <returns>The loaded metadata model.</returns>
         </member>
         <member name="T:System.Data.Entity.Infrastructure.Design.AppConfigReader">
             <summary>
@@ -10276,6 +10382,20 @@
             interception context. Also see <see cref="M:System.Data.Entity.Infrastructure.Interception.DbInterceptionContext.Clone"/>
             </summary>
             <param name="copyFrom">The context from which to copy state.</param>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.Interception.MutableInterceptionContext`1.FindUserState(System.String)">
+            <summary>
+            Gets a value containing arbitrary user-specified state information associated with the operation.
+            </summary>
+            <param name="key">A key used to identify the user state.</param>
+            <returns>The user state set, or null if none was found for the given key.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.Interception.MutableInterceptionContext`1.SetUserState(System.String,System.Object)">
+            <summary>
+            Sets a value containing arbitrary user-specified state information associated with the operation.
+            </summary>
+            <param name="key">A key used to identify the user state.</param>
+            <param name="value">The state to set.</param>
         </member>
         <member name="M:System.Data.Entity.Infrastructure.Interception.MutableInterceptionContext`1.SuppressExecution">
             <summary>
@@ -10886,11 +11006,23 @@
             </summary>
             <param name="output">The string to write.</param>
         </member>
+        <member name="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.GetStopwatch(System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext)">
+            <summary>
+            The stopwatch used to time executions. This stopwatch is started at the end of
+            <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.NonQueryExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Int32})"/>, <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.ScalarExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Object})"/>, and <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.ReaderExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Data.Common.DbDataReader})"/>
+            methods and is stopped at the beginning of the <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.NonQueryExecuted(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Int32})"/>, <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.ScalarExecuted(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Object})"/>,
+            and <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.ReaderExecuted(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Data.Common.DbDataReader})"/> methods. If these methods are overridden and the stopwatch is being used
+            then the overrides should either call the base method or start/stop the stopwatch themselves.
+            </summary>
+            <param name="interceptionContext">The interception context for which the stopwatch will be obtained.</param>
+            <returns>The stopwatch.</returns>
+        </member>
         <member name="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.NonQueryExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Int32})">
             <summary>
             This method is called before a call to <see cref="M:System.Data.Common.DbCommand.ExecuteNonQuery"/> or
             one of its async counterparts is made.
-            The default implementation calls <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Executing``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/> and starts <see cref="P:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Stopwatch"/>.
+            The default implementation calls <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Executing``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/> and starts the stopwatch returned from
+            <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.GetStopwatch(System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext)"/>.
             </summary>
             <param name="command">The command being executed.</param>
             <param name="interceptionContext">Contextual information associated with the call.</param>
@@ -10899,7 +11031,8 @@
             <summary>
             This method is called after a call to <see cref="M:System.Data.Common.DbCommand.ExecuteNonQuery"/> or
             one of its async counterparts is made.
-            The default implementation stops <see cref="P:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Stopwatch"/> and calls <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Executed``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/>.
+            The default implementation stopsthe stopwatch returned from <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.GetStopwatch(System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext)"/> and calls
+            <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Executed``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/>.
             </summary>
             <param name="command">The command being executed.</param>
             <param name="interceptionContext">Contextual information associated with the call.</param>
@@ -10908,7 +11041,8 @@
             <summary>
             This method is called before a call to <see cref="M:System.Data.Common.DbCommand.ExecuteReader(System.Data.CommandBehavior)"/> or
             one of its async counterparts is made.
-            The default implementation calls <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Executing``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/> and starts <see cref="P:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Stopwatch"/>.
+            The default implementation calls <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Executing``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/> and starts the stopwatch returned from
+            <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.GetStopwatch(System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext)"/>.
             </summary>
             <param name="command">The command being executed.</param>
             <param name="interceptionContext">Contextual information associated with the call.</param>
@@ -10917,7 +11051,8 @@
             <summary>
             This method is called after a call to <see cref="M:System.Data.Common.DbCommand.ExecuteReader(System.Data.CommandBehavior)"/> or
             one of its async counterparts is made.
-            The default implementation stops <see cref="P:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Stopwatch"/> and calls <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Executed``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/>.
+            The default implementation stopsthe stopwatch returned from <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.GetStopwatch(System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext)"/> and calls
+            <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Executed``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/>.
             </summary>
             <param name="command">The command being executed.</param>
             <param name="interceptionContext">Contextual information associated with the call.</param>
@@ -10926,7 +11061,8 @@
             <summary>
             This method is called before a call to <see cref="M:System.Data.Common.DbCommand.ExecuteScalar"/>  or
             one of its async counterparts is made.
-            The default implementation calls <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Executing``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/> and starts <see cref="P:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Stopwatch"/>.
+            The default implementation calls <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Executing``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/> and starts the stopwatch returned from
+            <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.GetStopwatch(System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext)"/>.
             </summary>
             <param name="command">The command being executed.</param>
             <param name="interceptionContext">Contextual information associated with the call.</param>
@@ -10935,7 +11071,8 @@
             <summary>
             This method is called after a call to <see cref="M:System.Data.Common.DbCommand.ExecuteScalar"/>  or
             one of its async counterparts is made.
-            The default implementation stops <see cref="P:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Stopwatch"/> and calls <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Executed``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/>.
+            The default implementation stopsthe stopwatch returned from <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.GetStopwatch(System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext)"/> and calls
+            <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Executed``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/>.
             </summary>
             <param name="command">The command being executed.</param>
             <param name="interceptionContext">Contextual information associated with the call.</param>
@@ -10955,7 +11092,7 @@
             <summary>
             Called whenever a command has completed executing. The default implementation of this method
             filters by <see cref="T:System.Data.Entity.DbContext"/> set into <see cref="P:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Context"/>, if any, and then calls
-            <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.LogResult``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/>. This method would typically only be overridden to change the context
+            <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.LogResult``1(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{``0})"/>.  This method would typically only be overridden to change the context
             filtering behavior.
             </summary>
             <typeparam name="TResult">The type of the operation's results.</typeparam>
@@ -11262,11 +11399,8 @@
         </member>
         <member name="P:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.Stopwatch">
             <summary>
-            The stop watch used to time executions. This stop watch is started at the end of
-            <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.NonQueryExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Int32})"/>, <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.ScalarExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Object})"/>, and <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.ReaderExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Data.Common.DbDataReader})"/>
-            methods and is stopped at the beginning of the <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.NonQueryExecuted(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Int32})"/>, <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.ScalarExecuted(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Object})"/>,
-            and <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.ReaderExecuted(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Data.Common.DbDataReader})"/> methods. If these methods are overridden and the stop watch is being used
-            then the overrides should either call the base method or start/stop the watch themselves.
+            This property is obsolete. Using it can result in logging incorrect execution times. Call
+            <see cref="M:System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter.GetStopwatch(System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext)"/> instead.
             </summary>
         </member>
         <member name="T:System.Data.Entity.Infrastructure.Interception.DbConnectionInterceptionContext">
@@ -11298,6 +11432,20 @@
             <exception cref="T:System.InvalidOperationException">
             Thrown if this method is called after the operation has already executed.
             </exception>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.Interception.MutableInterceptionContext.FindUserState(System.String)">
+            <summary>
+            Gets a value containing arbitrary user-specified state information associated with the operation.
+            </summary>
+            <param name="key">A key used to identify the user state.</param>
+            <returns>The user state set, or null if none was found for the given key.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.Interception.MutableInterceptionContext.SetUserState(System.String,System.Object)">
+            <summary>
+            Sets a value containing arbitrary user-specified state information associated with the operation.
+            </summary>
+            <param name="key">A key used to identify the user state.</param>
+            <param name="value">The state to set.</param>
         </member>
         <member name="M:System.Data.Entity.Infrastructure.Interception.MutableInterceptionContext.AsAsync">
             <summary>
@@ -11457,6 +11605,20 @@
             interception context. Also see <see cref="M:System.Data.Entity.Infrastructure.Interception.PropertyInterceptionContext`1.Clone"/>
             </summary>
             <param name="copyFrom">The context from which to copy state.</param>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.Interception.PropertyInterceptionContext`1.FindUserState(System.String)">
+            <summary>
+            Gets a value containing arbitrary user-specified state information associated with the operation.
+            </summary>
+            <param name="key">A key used to identify the user state.</param>
+            <returns>The user state set, or null if none was found for the given key.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.Interception.PropertyInterceptionContext`1.SetUserState(System.String,System.Object)">
+            <summary>
+            Sets a value containing arbitrary user-specified state information associated with the operation.
+            </summary>
+            <param name="key">A key used to identify the user state.</param>
+            <param name="value">The state to set.</param>
         </member>
         <member name="M:System.Data.Entity.Infrastructure.Interception.PropertyInterceptionContext`1.WithValue(`0)">
             <summary>
@@ -11848,6 +12010,20 @@
             </summary>
             <param name="copyFrom">The context from which to copy state.</param>
         </member>
+        <member name="M:System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext`1.FindUserState(System.String)">
+            <summary>
+            Gets a value containing arbitrary user-specified state information associated with the operation.
+            </summary>
+            <param name="key">A key used to identify the user state.</param>
+            <returns>The user state set, or null if none was found for the given key.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext`1.SetUserState(System.String,System.Object)">
+            <summary>
+            Sets a value containing arbitrary user-specified state information associated with the operation.
+            </summary>
+            <param name="key">A key used to identify the user state.</param>
+            <param name="value">The state to set.</param>
+        </member>
         <member name="M:System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext`1.SuppressExecution">
             <summary>
             Prevents the operation from being executed if called before the operation has executed.
@@ -12019,6 +12195,20 @@
             interception context. Also see <see cref="M:System.Data.Entity.Infrastructure.Interception.DbCommandTreeInterceptionContext.Clone"/>
             </summary>
             <param name="copyFrom">The context from which to copy state.</param>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.Interception.DbCommandTreeInterceptionContext.FindUserState(System.String)">
+            <summary>
+            Gets a value containing arbitrary user-specified state information associated with the operation.
+            </summary>
+            <param name="key">A key used to identify the user state.</param>
+            <returns>The user state set, or null if none was found for the given key.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.Interception.DbCommandTreeInterceptionContext.SetUserState(System.String,System.Object)">
+            <summary>
+            Sets a value containing arbitrary user-specified state information associated with the operation.
+            </summary>
+            <param name="key">A key used to identify the user state.</param>
+            <param name="value">The state to set.</param>
         </member>
         <member name="M:System.Data.Entity.Infrastructure.Interception.DbCommandTreeInterceptionContext.Clone">
             <inheritdoc />
@@ -13497,7 +13687,7 @@
             <remarks>
             This transaction handler uses <see cref="P:System.Data.Entity.Infrastructure.CommitFailureHandler.TransactionContext"/> to store the transaction information
             the schema used can be configured by creating a class derived from <see cref="P:System.Data.Entity.Infrastructure.CommitFailureHandler.TransactionContext"/>
-            that overrides DbContext.OnModelCreating(DbModelBuilder) and passing it to the constructor of this class.
+            that overrides <see cref="M:System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)"/> and passing it to the constructor of this class.
             </remarks>
         </member>
         <member name="M:System.Data.Entity.Infrastructure.CommitFailureHandler.#ctor">
@@ -13516,6 +13706,13 @@
             <remarks>
             One of the Initialize methods needs to be called before this instance can be used.
             </remarks>
+        </member>
+        <member name="M:System.Data.Entity.Infrastructure.CommitFailureHandler.GetExecutionStrategy">
+            <summary>
+            Creates a new instance of an <see cref="T:System.Data.Entity.Infrastructure.IDbExecutionStrategy"/> to use for quering the transaction log.
+            If null the default will be used.
+            </summary>
+            <returns> An <see cref="T:System.Data.Entity.Infrastructure.IDbExecutionStrategy"/> instance or null. </returns>
         </member>
         <member name="M:System.Data.Entity.Infrastructure.CommitFailureHandler.Initialize(System.Data.Entity.Core.Objects.ObjectContext)">
             <inheritdoc/>
@@ -13663,6 +13860,11 @@
             <value>
             The transaction context.
             </value>
+        </member>
+        <member name="P:System.Data.Entity.Infrastructure.CommitFailureHandler.Transactions">
+            <summary>
+            The map between the store transactions and the transaction tracking objects
+            </summary>
         </member>
         <member name="P:System.Data.Entity.Infrastructure.CommitFailureHandler.PruningLimit">
             <summary>
@@ -14548,6 +14750,69 @@
             <summary>
             Gets a value indicating if this operation may result in data loss. Always returns false.
             </summary>
+        </member>
+        <member name="T:System.Data.Entity.ModelConfiguration.Configuration.IndexConfiguration">
+            <summary>
+            Configures an index.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.IndexConfiguration.IsUnique">
+            <summary>
+            Configures the index to be unique.
+            </summary>
+            <returns> The same IndexConfiguration instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.IndexConfiguration.IsUnique(System.Boolean)">
+            <summary>
+            Configures whether the index will be unique.
+            </summary>
+            <param name="unique"> Value indicating if the index should be unique or not. </param>
+            <returns> The same IndexConfiguration instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.IndexConfiguration.IsClustered">
+            <summary>
+            Configures the index to be clustered.
+            </summary>
+            <returns> The same IndexConfigurationBase instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.IndexConfiguration.IsClustered(System.Boolean)">
+            <summary>
+            Configures whether or not the index will be clustered.
+            </summary>
+            <param name="clustered"> Value indicating if the index should be clustered or not. </param>
+            <returns> The same IndexConfigurationBase instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.IndexConfiguration.HasName(System.String)">
+            <summary>
+            Configures the index to have a specific name.
+            </summary>
+            <param name="name"> Value indicating what the index name should be.</param>
+            <returns> The same IndexConfigurationBase instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="T:System.Data.Entity.ModelConfiguration.Configuration.PrimaryKeyIndexConfiguration">
+            <summary>
+            Configures a primary key index.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.PrimaryKeyIndexConfiguration.IsClustered">
+            <summary>
+            Configures the index to be clustered.
+            </summary>
+            <returns> The same IndexConfigurationBase instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.PrimaryKeyIndexConfiguration.IsClustered(System.Boolean)">
+            <summary>
+            Configures whether or not the index will be clustered.
+            </summary>
+            <param name="clustered"> Value indicating if the index should be clustered or not. </param>
+            <returns> The same IndexConfigurationBase instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.PrimaryKeyIndexConfiguration.HasName(System.String)">
+            <summary>
+            Configures the index to have a specific name.
+            </summary>
+            <param name="name"> Value indicating what the index name should be.</param>
+            <returns> The same IndexConfigurationBase instance so that multiple calls can be chained. </returns>
         </member>
         <member name="T:System.Data.Entity.ModelConfiguration.Configuration.TypeConventionConfiguration">
             <summary>
@@ -21551,6 +21816,31 @@
             <param name="digits"> The number of digits to preserve. </param>
             <returns> The truncated value. </returns>
         </member>
+        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.Like(System.String,System.String)">
+            <summary>
+            When used as part of a LINQ to Entities query, this method invokes the canonical Like EDM operator to match an expression.
+            </summary>
+            <remarks>
+            You cannot call this function directly. This function can only appear within a LINQ to Entities query.
+            This function is translated to a corresponding function in the database.
+            </remarks>
+            <param name="searchString"> The string to search. </param>
+            <param name="likeExpression"> The expression to match against. </param>
+            <returns> True if the searched string matches the expression; otherwise false. </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.Like(System.String,System.String,System.String)">
+            <summary>
+            When used as part of a LINQ to Entities query, this method invokes the canonical Like EDM operator to match an expression.
+            </summary>
+            <remarks>
+            You cannot call this function directly. This function can only appear within a LINQ to Entities query.
+            This function is translated to a corresponding function in the database.
+            </remarks>
+            <param name="searchString"> The string to search. </param>
+            <param name="likeExpression"> The expression to match against. </param>
+            <param name="escapeCharacter"> The string to escape special characters with, must only be a single character. </param>
+            <returns> True if the searched string matches the expression; otherwise false. </returns>
+        </member>
         <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.AsUnicode(System.String)">
             <summary>
             When used as part of a LINQ to Entities query, this method acts as an operator that ensures the input
@@ -21849,6 +22139,14 @@
             <returns>True if this provider supports escaping strings to be used as patterns in a Like expression; otherwise, false.</returns>
             <param name="escapeCharacter">If the provider supports escaping, the character that would be used as the escape character.</param>
         </member>
+        <member name="M:System.Data.Entity.Core.Common.DbProviderManifest.SupportsParameterOptimizationInSchemaQueries">
+            <summary>
+            Indicates if the provider supports the parameter optimization described in EntityFramework6 GitHub issue #195.
+            The default is <c>false</c>. Providers should change this to true only after testing that schema queries (as
+            used in the Database First flow) work correctly with this flag.
+            </summary>
+            <returns><c>True</c> only if the provider supports the parameter optimization.</returns>
+        </member>
         <member name="M:System.Data.Entity.Core.Common.DbProviderManifest.EscapeLikeArgument(System.String)">
             <summary>Provider writers should override this method to return the argument with the wildcards and the escape character escaped. This method is only used if SupportsEscapingLikeArgument returns true.</summary>
             <returns>The argument with the wildcards and the escape character escaped.</returns>
@@ -21937,6 +22235,21 @@
             </summary>
             <param name="fromDbCommand"> the <see cref="T:System.Data.Common.DbCommand" /> object to clone </param>
             <returns >a clone of the <see cref="T:System.Data.Common.DbCommand" /> </returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.DbProviderServices.CloneDbConnection(System.Data.Common.DbConnection)">
+            <summary>
+            Clones the connection.
+            </summary>
+            <param name="connection">The original connection.</param>
+            <returns>Cloned connection</returns>
+        </member>
+        <member name="M:System.Data.Entity.Core.Common.DbProviderServices.CloneDbConnection(System.Data.Common.DbConnection,System.Data.Common.DbProviderFactory)">
+            <summary>
+            Clones the connection.
+            </summary>
+            <param name="connection">The original connection.</param>
+            <param name="factory">The factory to use.</param>
+            <returns>Cloned connection</returns>
         </member>
         <member name="M:System.Data.Entity.Core.Common.DbProviderServices.GetProviderManifestToken(System.Data.Common.DbConnection)">
             <summary>Returns provider manifest token given a connection.</summary>
@@ -22892,6 +23205,12 @@
         <member name="P:System.Data.Entity.Infrastructure.DbExecutionStrategy.RetriesOnFailure">
             <summary>
             Returns <c>true</c> to indicate that <see cref="T:System.Data.Entity.Infrastructure.DbExecutionStrategy"/> might retry the execution after a failure.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Infrastructure.DbExecutionStrategy.Suspended">
+            <summary>
+                Indicates whether the strategy is suspended. The strategy is typically suspending while executing to avoid
+                recursive execution from nested operations.
             </summary>
         </member>
         <member name="T:System.Data.Entity.Infrastructure.ExecutionStrategyKey">
@@ -39344,6 +39663,31 @@
             <param name="digits"> The number of digits to preserve. </param>
             <returns> The truncated value. </returns>
         </member>
+        <member name="M:System.Data.Entity.DbFunctions.Like(System.String,System.String)">
+            <summary>
+            When used as part of a LINQ to Entities query, this method invokes the canonical Like EDM operator to match an expression.
+            </summary>
+            <remarks>
+            You cannot call this function directly. This function can only appear within a LINQ to Entities query.
+            This function is translated to a corresponding function in the database.
+            </remarks>
+            <param name="searchString"> The string to search. </param>
+            <param name="likeExpression"> The expression to match against. </param>
+            <returns> True if the searched string matches the expression; otherwise false. </returns>
+        </member>
+        <member name="M:System.Data.Entity.DbFunctions.Like(System.String,System.String,System.String)">
+            <summary>
+            When used as part of a LINQ to Entities query, this method invokes the canonical Like EDM operator to match an expression.
+            </summary>
+            <remarks>
+            You cannot call this function directly. This function can only appear within a LINQ to Entities query.
+            This function is translated to a corresponding function in the database.
+            </remarks>
+            <param name="searchString"> The string to search. </param>
+            <param name="likeExpression"> The expression to match against. </param>
+            <param name="escapeCharacter"> The string to escape special characters with, must only be a single character. </param>
+            <returns> True if the searched string matches the expression; otherwise false. </returns>
+        </member>
         <member name="M:System.Data.Entity.DbFunctions.AsUnicode(System.String)">
             <summary>
             When used as part of a LINQ to Entities query, this method acts as an operator that ensures the input
@@ -40861,7 +41205,7 @@
             <summary>
             Gets or sets the string used to distinguish migrations belonging to this configuration
             from migrations belonging to other configurations using the same database.
-            This property enables migrations from multiple different models to be applied to applied to a single database.
+            This property enables migrations from multiple different models to be applied to a single database.
             </summary>
         </member>
         <member name="P:System.Data.Entity.Migrations.DbMigrationsConfiguration.AutomaticMigrationDataLossAllowed">
@@ -41583,6 +41927,48 @@
         <member name="P:System.Data.Entity.Migrations.Design.ScaffoldedMigration.IsRescaffold">
             <summary>
             Gets or sets whether the migration was re-scaffolded.
+            </summary>
+        </member>
+        <member name="T:System.Data.Entity.Migrations.Design.ToolingException">
+            <summary>
+                Represents an exception that occurred while running an operation in another AppDomain in the
+                <see cref="T:System.Data.Entity.Migrations.Design.ToolingFacade"/>.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingException.#ctor">
+            <summary>
+                Initializes a new instance of the ToolingException class.
+            </summary>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingException.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:System.Exception" /> class with a specified error message.
+            </summary>
+            <param name="message"> The message that describes the error. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingException.#ctor(System.String,System.String,System.String)">
+            <summary>
+                Initializes a new instance of the ToolingException class.
+            </summary>
+            <param name="message"> Error that explains the reason for the exception. </param>
+            <param name="innerType"> The type of the exception that was thrown. </param>
+            <param name="innerStackTrace"> The stack trace of the exception that was thrown. </param>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Design.ToolingException.#ctor(System.String,System.Exception)">
+            <summary>
+                Initializes a new instance of the <see cref="T:System.Exception" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message"> The error message that explains the reason for the exception. </param>
+            <param name="innerException"> The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified. </param>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.ToolingException.InnerType">
+            <summary>
+                Gets the type of the exception that was thrown.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Migrations.Design.ToolingException.InnerStackTrace">
+            <summary>
+                Gets the stack trace of the exception that was thrown.
             </summary>
         </member>
         <member name="T:System.Data.Entity.Migrations.Design.ToolingFacade">
@@ -42649,6 +43035,11 @@
         <member name="P:System.Data.Entity.Migrations.Model.PrimaryKeyOperation.IsDestructiveChange">
             <inheritdoc />
         </member>
+        <member name="P:System.Data.Entity.Migrations.Model.PrimaryKeyOperation.IsClustered">
+            <summary>
+            Gets or sets whether this is a clustered primary key.
+            </summary>
+        </member>
         <member name="M:System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation.#ctor(System.Object)">
              <summary>
              Initializes a new instance of the AddPrimaryKeyOperation class.
@@ -42663,11 +43054,6 @@
         <member name="P:System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation.Inverse">
             <summary>
             Gets an operation to drop the primary key.
-            </summary>
-        </member>
-        <member name="P:System.Data.Entity.Migrations.Model.AddPrimaryKeyOperation.IsClustered">
-            <summary>
-            Gets or sets whether this is a clustered primary key.
             </summary>
         </member>
         <member name="T:System.Data.Entity.Migrations.Model.AlterColumnOperation">
@@ -43473,6 +43859,13 @@
             <param name="rowsAffectedParameter">The rows affected parameter name.</param>
             <param name="providerManifestToken">The provider manifest token.</param>
             <returns>The SQL body for the stored procedure.</returns>
+        </member>
+        <member name="M:System.Data.Entity.Migrations.Sql.MigrationSqlGenerator.IsPermissionDeniedError(System.Exception)">
+            <summary>
+            Determines if a provider specific exception corresponds to a database-level permission denied error.
+            </summary>
+            <param name="exception">The database exception.</param>
+            <returns> true if the supplied exception corresponds to a database-level permission denied error; otherwise false. </returns>
         </member>
         <member name="M:System.Data.Entity.Migrations.Sql.MigrationSqlGenerator.BuildStoreTypeUsage(System.String,System.Data.Entity.Migrations.Model.PropertyModel)">
             <summary>
@@ -47655,6 +48048,11 @@
             The IQueryable provider.
             </summary>
         </member>
+        <member name="P:System.Data.Entity.Infrastructure.DbQuery.Sql">
+            <summary>
+            Gets a <see cref="T:System.String"/> representation of the underlying query.
+            </summary>
+        </member>
         <member name="M:System.Data.Entity.DbSet.#ctor">
             <summary>
             Creates an instance of a <see cref="T:System.Data.Entity.DbSet"/> when called from the constructor of a derived
@@ -48004,6 +48402,11 @@
         <member name="P:System.Data.Entity.Infrastructure.DbQuery`1.System#Linq#IQueryable#Provider">
             <summary>
             The IQueryable provider.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.Infrastructure.DbQuery`1.Sql">
+            <summary>
+            Gets a <see cref="T:System.String"/> representation of the underlying query.
             </summary>
         </member>
         <member name="T:System.Data.Entity.IDbSet`1">
@@ -52526,6 +52929,23 @@
             <typeparam name="TKey"> The type of the key. </typeparam>
             <param name="keyExpression"> A lambda expression representing the property to be used as the primary key. C#: t => t.Id VB.Net: Function(t) t.Id If the primary key is made up of multiple properties then specify an anonymous type including the properties. C#: t => new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
             <returns> The same EntityTypeConfiguration instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:System.Data.Entity.ModelConfiguration.EntityTypeConfiguration`1.HasKey``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Action{System.Data.Entity.ModelConfiguration.Configuration.PrimaryKeyIndexConfiguration})">
+            <summary>
+            Configures the primary key property(s) for this entity type.
+            </summary>
+            <typeparam name="TKey"> The type of the key. </typeparam>
+            <param name="keyExpression"> A lambda expression representing the property to be used as the primary key. C#: t => t.Id VB.Net: Function(t) t.Id If the primary key is made up of multiple properties then specify an anonymous type including the properties. C#: t => new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
+            <param name="buildAction"> A builder to configure the key. </param>       
+            <returns> The same EntityTypeConfiguration instance so that multiple calls can be chained. </returns>
+        </member>
+        <member name="M:System.Data.Entity.ModelConfiguration.EntityTypeConfiguration`1.HasIndex``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Configures index property(s) for this entity type.
+            </summary>
+            <typeparam name="TIndex"> The type of the index. </typeparam>
+            <param name="indexExpression"> A lambda expression representing the property to apply an index to. C#: t => t.Id VB.Net: Function(t) t.Id If the index is made up of multiple properties then specify an anonymous type including the properties. C#: t => new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
+            <returns> The IndexConfiguration instance so that the index can be further configured. </returns>
         </member>
         <member name="M:System.Data.Entity.ModelConfiguration.EntityTypeConfiguration`1.HasEntitySetName(System.String)">
             <summary>

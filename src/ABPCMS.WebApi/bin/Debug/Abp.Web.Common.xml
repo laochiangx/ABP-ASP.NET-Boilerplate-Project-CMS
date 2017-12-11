@@ -30,6 +30,11 @@
             Used to add/replace proxy script generators. 
             </summary>
         </member>
+        <member name="P:Abp.Web.Api.ProxyScripting.Configuration.IApiProxyScriptingConfiguration.RemoveAsyncPostfixOnProxyGeneration">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
         <member name="F:Abp.Web.Api.ProxyScripting.Generators.JQuery.JQueryProxyScriptGenerator.Name">
             <summary>
             "jquery".

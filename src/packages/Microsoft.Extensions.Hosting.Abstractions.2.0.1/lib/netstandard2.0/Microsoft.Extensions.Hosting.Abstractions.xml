@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Extensions.Hosting.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Extensions.Hosting.IHostedService">
+            <summary>
+            Defines methods for objects that are managed by the host.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Hosting.IHostedService.StartAsync(System.Threading.CancellationToken)">
+            <summary>
+            Triggered when the application host is ready to start the service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.Hosting.IHostedService.StopAsync(System.Threading.CancellationToken)">
+            <summary>
+            Triggered when the application host is performing a graceful shutdown.
+            </summary>
+        </member>
+    </members>
+</doc>

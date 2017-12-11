@@ -31,24 +31,26 @@
             Is this object disposed before?
             </summary>
         </member>
-        <member name="M:Abp.AbpBootstrapper.#ctor(System.Type)">
+        <member name="M:Abp.AbpBootstrapper.#ctor(System.Type,System.Action{Abp.AbpBootstrapperOptions})">
             <summary>
             Creates a new <see cref="T:Abp.AbpBootstrapper"/> instance.
             </summary>
             <param name="startupModule">Startup module of the application which depends on other used modules. Should be derived from <see cref="T:Abp.Modules.AbpModule"/>.</param>
+            <param name="optionsAction">An action to set options</param>
         </member>
-        <member name="M:Abp.AbpBootstrapper.#ctor(System.Type,Abp.Dependency.IIocManager)">
-            <summary>
-            Creates a new <see cref="T:Abp.AbpBootstrapper"/> instance.
-            </summary>
-            <param name="startupModule">Startup module of the application which depends on other used modules. Should be derived from <see cref="T:Abp.Modules.AbpModule"/>.</param>
-            <param name="iocManager">IIocManager that is used to bootstrap the ABP system</param>
-        </member>
-        <member name="M:Abp.AbpBootstrapper.Create``1">
+        <member name="M:Abp.AbpBootstrapper.Create``1(System.Action{Abp.AbpBootstrapperOptions})">
             <summary>
             Creates a new <see cref="T:Abp.AbpBootstrapper"/> instance.
             </summary>
             <typeparam name="TStartupModule">Startup module of the application which depends on other used modules. Should be derived from <see cref="T:Abp.Modules.AbpModule"/>.</typeparam>
+            <param name="optionsAction">An action to set options</param>
+        </member>
+        <member name="M:Abp.AbpBootstrapper.Create(System.Type,System.Action{Abp.AbpBootstrapperOptions})">
+            <summary>
+            Creates a new <see cref="T:Abp.AbpBootstrapper"/> instance.
+            </summary>
+            <param name="startupModule">Startup module of the application which depends on other used modules. Should be derived from <see cref="T:Abp.Modules.AbpModule"/>.</param>
+            <param name="optionsAction">An action to set options</param>
         </member>
         <member name="M:Abp.AbpBootstrapper.Create``1(Abp.Dependency.IIocManager)">
             <summary>
@@ -56,12 +58,6 @@
             </summary>
             <typeparam name="TStartupModule">Startup module of the application which depends on other used modules. Should be derived from <see cref="T:Abp.Modules.AbpModule"/>.</typeparam>
             <param name="iocManager">IIocManager that is used to bootstrap the ABP system</param>
-        </member>
-        <member name="M:Abp.AbpBootstrapper.Create(System.Type)">
-            <summary>
-            Creates a new <see cref="T:Abp.AbpBootstrapper"/> instance.
-            </summary>
-            <param name="startupModule">Startup module of the application which depends on other used modules. Should be derived from <see cref="T:Abp.Modules.AbpModule"/>.</param>
         </member>
         <member name="M:Abp.AbpBootstrapper.Create(System.Type,Abp.Dependency.IIocManager)">
             <summary>
@@ -78,6 +74,21 @@
         <member name="M:Abp.AbpBootstrapper.Dispose">
             <summary>
             Disposes the ABP system.
+            </summary>
+        </member>
+        <member name="P:Abp.AbpBootstrapperOptions.DisableAllInterceptors">
+            <summary>
+            Used to disable all interceptors added by ABP.
+            </summary>
+        </member>
+        <member name="P:Abp.AbpBootstrapperOptions.IocManager">
+            <summary>
+            IIocManager that is used to bootstrap the ABP system. If set to null, uses global <see cref="P:Abp.Dependency.IocManager.Instance"/>
+            </summary>
+        </member>
+        <member name="P:Abp.AbpBootstrapperOptions.PlugInSources">
+            <summary>
+            List of plugin sources.
             </summary>
         </member>
         <member name="T:Abp.AbpConsts">
@@ -2604,11 +2615,26 @@
             <param name="args">Job arguments.</param>
             <param name="priority">Job priority.</param>
             <param name="delay">Job delay (wait duration before first try).</param>
+            <returns>Unique identifier of a background job.</returns>
+        </member>
+        <member name="M:Abp.BackgroundJobs.IBackgroundJobManager.DeleteAsync(System.String)">
+            <summary>
+            Deletes a job with the specified jobId.
+            </summary>
+            <param name="jobId">The Job Unique Identifier.</param>
+            <returns><c>True</c> on a successfull state transition, <c>false</c> otherwise.</returns>
         </member>
         <member name="T:Abp.BackgroundJobs.IBackgroundJobStore">
             <summary>
             Defines interface to store/get background jobs.
             </summary>
+        </member>
+        <member name="M:Abp.BackgroundJobs.IBackgroundJobStore.GetAsync(System.Int64)">
+            <summary>
+            Gets a BackgroundJobInfo based on the given jobId.
+            </summary>
+            <param name="jobId">The Job Unique Identifier.</param>
+            <returns>The BackgroundJobInfo object.</returns>
         </member>
         <member name="M:Abp.BackgroundJobs.IBackgroundJobStore.InsertAsync(Abp.BackgroundJobs.BackgroundJobInfo)">
             <summary>
@@ -11606,6 +11632,12 @@
             <summary>
             Provides some helper methods to work with async methods.
             </summary>
+        </member>
+        <member name="M:Abp.Threading.AsyncHelper.IsAsync(System.Reflection.MethodInfo)">
+            <summary>
+            Checks if given method is an async method.
+            </summary>
+            <param name="method">A method to check</param>
         </member>
         <member name="M:Abp.Threading.AsyncHelper.IsAsyncMethod(System.Reflection.MethodInfo)">
             <summary>

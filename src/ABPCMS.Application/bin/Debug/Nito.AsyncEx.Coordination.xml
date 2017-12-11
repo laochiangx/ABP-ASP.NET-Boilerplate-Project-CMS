@@ -84,6 +84,185 @@
             Sets the event, atomically completing a task returned by <see cref="o:WaitAsync"/>. If the event is already set, this method does nothing.
             </summary>
         </member>
+        <member name="T:Nito.AsyncEx.AsyncCollection`1">
+            <summary>
+            An async-compatible producer/consumer collection.
+            </summary>
+            <typeparam name="T">The type of elements contained in the collection.</typeparam>
+        </member>
+        <member name="F:Nito.AsyncEx.AsyncCollection`1._collection">
+            <summary>
+            The underlying collection.
+            </summary>
+        </member>
+        <member name="F:Nito.AsyncEx.AsyncCollection`1._maxCount">
+            <summary>
+            The maximum number of elements allowed in the collection.
+            </summary>
+        </member>
+        <member name="F:Nito.AsyncEx.AsyncCollection`1._mutex">
+            <summary>
+            The mutual-exclusion lock protecting the collection.
+            </summary>
+        </member>
+        <member name="F:Nito.AsyncEx.AsyncCollection`1._completedOrNotFull">
+            <summary>
+            A condition variable that is signalled when the collection is completed or not full.
+            </summary>
+        </member>
+        <member name="F:Nito.AsyncEx.AsyncCollection`1._completedOrNotEmpty">
+            <summary>
+            A condition variable that is signalled when the collection is completed or not empty.
+            </summary>
+        </member>
+        <member name="F:Nito.AsyncEx.AsyncCollection`1._completed">
+            <summary>
+            Whether the collection has been marked completed for adding.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.#ctor(System.Collections.Concurrent.IProducerConsumerCollection{`0},System.Int32)">
+            <summary>
+            Creates a new async-compatible producer/consumer collection wrapping the specified collection and with a maximum element count.
+            </summary>
+            <param name="collection">The collection to wrap.</param>
+            <param name="maxCount">The maximum element count. This must be greater than zero.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.#ctor(System.Collections.Concurrent.IProducerConsumerCollection{`0})">
+            <summary>
+            Creates a new async-compatible producer/consumer collection wrapping the specified collection.
+            </summary>
+            <param name="collection">The collection to wrap.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.#ctor(System.Int32)">
+            <summary>
+            Creates a new async-compatible producer/consumer collection with a maximum element count.
+            </summary>
+            <param name="maxCount">The maximum element count. This must be greater than zero.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.#ctor">
+            <summary>
+            Creates a new async-compatible producer/consumer collection.
+            </summary>
+        </member>
+        <member name="P:Nito.AsyncEx.AsyncCollection`1.Empty">
+            <summary>
+            Whether the collection is empty.
+            </summary>
+        </member>
+        <member name="P:Nito.AsyncEx.AsyncCollection`1.Full">
+            <summary>
+            Whether the collection is full.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.CompleteAdding">
+            <summary>
+            Synchronously marks the producer/consumer collection as complete for adding.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.DoAddAsync(`0,System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Attempts to add an item.
+            </summary>
+            <param name="item">The item to add.</param>
+            <param name="cancellationToken">A cancellation token that can be used to abort the add operation.</param>
+            <param name="sync">Whether to run this method synchronously.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.AddAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            Adds an item to the producer/consumer collection. Throws <see cref="T:System.InvalidOperationException"/> if the producer/consumer collection has completed adding or if the item was rejected by the underlying collection.
+            </summary>
+            <param name="item">The item to add.</param>
+            <param name="cancellationToken">A cancellation token that can be used to abort the add operation.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.Add(`0,System.Threading.CancellationToken)">
+            <summary>
+            Adds an item to the producer/consumer collection. Throws <see cref="T:System.InvalidOperationException"/> if the producer/consumer collection has completed adding or if the item was rejected by the underlying collection. This method may block the calling thread.
+            </summary>
+            <param name="item">The item to add.</param>
+            <param name="cancellationToken">A cancellation token that can be used to abort the add operation.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.AddAsync(`0)">
+            <summary>
+            Adds an item to the producer/consumer collection. Throws <see cref="T:System.InvalidOperationException"/> if the producer/consumer collection has completed adding or if the item was rejected by the underlying collection.
+            </summary>
+            <param name="item">The item to add.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.Add(`0)">
+            <summary>
+            Adds an item to the producer/consumer collection. Throws <see cref="T:System.InvalidOperationException"/> if the producer/consumer collection has completed adding or if the item was rejected by the underlying collection. This method may block the calling thread.
+            </summary>
+            <param name="item">The item to add.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.DoOutputAvailableAsync(System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Waits until an item is available to take. Returns <c>false</c> if the producer/consumer collection has completed adding and there are no more items.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used to abort the wait.</param>
+            <param name="sync">Whether to run this method synchronously.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.OutputAvailableAsync(System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously waits until an item is available to take. Returns <c>false</c> if the producer/consumer collection has completed adding and there are no more items.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used to abort the asynchronous wait.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.OutputAvailableAsync">
+            <summary>
+            Asynchronously waits until an item is available to take. Returns <c>false</c> if the producer/consumer collection has completed adding and there are no more items.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.OutputAvailable(System.Threading.CancellationToken)">
+            <summary>
+            Synchronously waits until an item is available to take. Returns <c>false</c> if the producer/consumer collection has completed adding and there are no more items.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used to abort the wait.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.OutputAvailable">
+            <summary>
+            Synchronously waits until an item is available to take. Returns <c>false</c> if the producer/consumer collection has completed adding and there are no more items.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.GetConsumingEnumerable(System.Threading.CancellationToken)">
+            <summary>
+            Provides a (synchronous) consuming enumerable for items in the producer/consumer collection.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used to abort the synchronous enumeration.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.GetConsumingEnumerable">
+            <summary>
+            Provides a (synchronous) consuming enumerable for items in the producer/consumer queue.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.DoTakeAsync(System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Attempts to take an item.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used to abort the take operation.</param>
+            <param name="sync">Whether to run this method synchronously.</param>
+            <exception cref="T:System.InvalidOperationException">The collection has been marked complete for adding and is empty.</exception>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.TakeAsync(System.Threading.CancellationToken)">
+            <summary>
+            Takes an item from the producer/consumer collection. Returns the item. Throws <see cref="T:System.InvalidOperationException"/> if the producer/consumer collection has completed adding and is empty, or if the take from the underlying collection failed.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used to abort the take operation.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.Take(System.Threading.CancellationToken)">
+            <summary>
+            Takes an item from the producer/consumer collection. Returns the item. Throws <see cref="T:System.InvalidOperationException"/> if the producer/consumer collection has completed adding and is empty, or if the take from the underlying collection failed. This method may block the calling thread.
+            </summary>
+            <param name="cancellationToken">A cancellation token that can be used to abort the take operation.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.TakeAsync">
+            <summary>
+            Takes an item from the producer/consumer collection. Returns the item. Throws <see cref="T:System.InvalidOperationException"/> if the producer/consumer collection has completed adding and is empty, or if the take from the underlying collection failed.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncCollection`1.Take">
+            <summary>
+            Takes an item from the producer/consumer collection. Returns the item. Throws <see cref="T:System.InvalidOperationException"/> if the producer/consumer collection has completed adding and is empty, or if the take from the underlying collection failed. This method may block the calling thread.
+            </summary>
+        </member>
         <member name="T:Nito.AsyncEx.AsyncConditionVariable">
             <summary>
             An async-compatible condition variable. This type uses Mesa-style semantics (the notifying tasks do not yield).
@@ -328,6 +507,37 @@
             <summary>
             A mutual exclusion lock that is compatible with async. Note that this lock is <b>not</b> recursive!
             </summary>
+            <remarks>
+            <para>This is the <c>async</c>-ready almost-equivalent of the <c>lock</c> keyword or the <see cref="T:System.Threading.Mutex"/> type, similar to <a href="http://blogs.msdn.com/b/pfxteam/archive/2012/02/12/10266988.aspx">Stephen Toub's AsyncLock</a>. It's only <i>almost</i> equivalent because the <c>lock</c> keyword permits reentrancy, which is not currently possible to do with an <c>async</c>-ready lock.</para>
+            <para>An <see cref="T:Nito.AsyncEx.AsyncLock"/> is either taken or not. The lock can be asynchronously acquired by calling <see autoUpgrade="true" cref="M:Nito.AsyncEx.AsyncLock.LockAsync"/>, and it is released by disposing the result of that task. <see cref="M:Nito.AsyncEx.AsyncLock.LockAsync(System.Threading.CancellationToken)"/> takes an optional <see cref="T:System.Threading.CancellationToken"/>, which can be used to cancel the acquiring of the lock.</para>
+            <para>The task returned from <see autoUpgrade="true" cref="M:Nito.AsyncEx.AsyncLock.LockAsync"/> will enter the <c>Completed</c> state when it has acquired the <see cref="T:Nito.AsyncEx.AsyncLock"/>. That same task will enter the <c>Canceled</c> state if the <see cref="T:System.Threading.CancellationToken"/> is signaled before the wait is satisfied; in that case, the <see cref="T:Nito.AsyncEx.AsyncLock"/> is not taken by that task.</para>
+            <para>You can call <see cref="M:Nito.AsyncEx.AsyncLock.Lock(System.Threading.CancellationToken)"/> or <see cref="M:Nito.AsyncEx.AsyncLock.LockAsync(System.Threading.CancellationToken)"/> with an already-cancelled <see cref="T:System.Threading.CancellationToken"/> to attempt to acquire the <see cref="T:Nito.AsyncEx.AsyncLock"/> immediately without actually entering the wait queue.</para>
+            </remarks>
+            <example>
+            <para>The vast majority of use cases are to just replace a <c>lock</c> statement. That is, with the original code looking like this:</para>
+            <code>
+            private readonly object _mutex = new object();
+            public void DoStuff()
+            {
+                lock (_mutex)
+                {
+                    Thread.Sleep(TimeSpan.FromSeconds(1));
+                }
+            }
+            </code>
+            <para>If we want to replace the blocking operation <c>Thread.Sleep</c> with an asynchronous equivalent, it's not directly possible because of the <c>lock</c> block. We cannot <c>await</c> inside of a <c>lock</c>.</para>
+            <para>So, we use the <c>async</c>-compatible <see cref="T:Nito.AsyncEx.AsyncLock"/> instead:</para>
+            <code>
+            private readonly AsyncLock _mutex = new AsyncLock();
+            public async Task DoStuffAsync()
+            {
+                using (await _mutex.LockAsync())
+                {
+                    await Task.Delay(TimeSpan.FromSeconds(1));
+                }
+            }
+            </code>
+            </example>
         </member>
         <member name="F:Nito.AsyncEx.AsyncLock._taken">
             <summary>
@@ -1000,6 +1210,28 @@
             Releases the semaphore.
             </summary>
         </member>
+        <member name="M:Nito.AsyncEx.AsyncSemaphore.LockAsync(System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously waits on the semaphore, and returns a disposable that releases the semaphore when disposed, thus treating this semaphore as a "multi-lock".
+            </summary>
+            <param name="cancellationToken">The cancellation token used to cancel the wait. If this is already set, then this method will attempt to take the slot immediately (succeeding if a slot is currently available).</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncSemaphore.LockAsync">
+            <summary>
+            Asynchronously waits on the semaphore, and returns a disposable that releases the semaphore when disposed, thus treating this semaphore as a "multi-lock".
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncSemaphore.Lock(System.Threading.CancellationToken)">
+            <summary>
+            Synchronously waits on the semaphore, and returns a disposable that releases the semaphore when disposed, thus treating this semaphore as a "multi-lock".
+            </summary>
+            <param name="cancellationToken">The cancellation token used to cancel the wait. If this is already set, then this method will attempt to take the slot immediately (succeeding if a slot is currently available).</param>
+        </member>
+        <member name="M:Nito.AsyncEx.AsyncSemaphore.Lock">
+            <summary>
+            Synchronously waits on the semaphore, and returns a disposable that releases the semaphore when disposed, thus treating this semaphore as a "multi-lock".
+            </summary>
+        </member>
         <member name="T:Nito.AsyncEx.IAsyncWaitQueue`1">
             <summary>
             A collection of cancelable <see cref="T:System.Threading.Tasks.TaskCompletionSource`1"/> instances. Implementations must assume the caller is holding a lock.
@@ -1179,6 +1411,36 @@
             Synchronously waits until the pause token is not paused, or until this wait is canceled by the cancellation token.
             </summary>
             <param name="token">The cancellation token to observe. If the token is already canceled, this method will first check if the pause token is unpaused, and will return without an exception in that case.</param>
+        </member>
+        <member name="T:Nito.AsyncEx.SemaphoreSlimExtensions">
+            <summary>
+            Provides extension methods for <see cref="T:System.Threading.SemaphoreSlim"/>.
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.SemaphoreSlimExtensions.LockAsync(System.Threading.SemaphoreSlim,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously waits on the semaphore, and returns a disposable that releases the semaphore when disposed, thus treating this semaphore as a "multi-lock".
+            </summary>
+            <param name="this">The semaphore to lock.</param>
+            <param name="cancellationToken">The cancellation token used to cancel the wait.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.SemaphoreSlimExtensions.LockAsync(System.Threading.SemaphoreSlim)">
+            <summary>
+            Asynchronously waits on the semaphore, and returns a disposable that releases the semaphore when disposed, thus treating this semaphore as a "multi-lock".
+            </summary>
+        </member>
+        <member name="M:Nito.AsyncEx.SemaphoreSlimExtensions.Lock(System.Threading.SemaphoreSlim,System.Threading.CancellationToken)">
+            <summary>
+            Synchronously waits on the semaphore, and returns a disposable that releases the semaphore when disposed, thus treating this semaphore as a "multi-lock".
+            </summary>
+            <param name="this">The semaphore to lock.</param>
+            <param name="cancellationToken">The cancellation token used to cancel the wait.</param>
+        </member>
+        <member name="M:Nito.AsyncEx.SemaphoreSlimExtensions.Lock(System.Threading.SemaphoreSlim)">
+            <summary>
+            Synchronously waits on the semaphore, and returns a disposable that releases the semaphore when disposed, thus treating this semaphore as a "multi-lock".
+            </summary>
+            <param name="this">The semaphore to lock.</param>
         </member>
     </members>
 </doc>

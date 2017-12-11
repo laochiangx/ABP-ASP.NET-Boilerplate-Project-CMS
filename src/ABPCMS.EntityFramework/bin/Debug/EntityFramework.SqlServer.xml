@@ -194,45 +194,45 @@
         </member>
         <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CharIndex(System.String,System.String)">
             <summary>Returns the starting position of one expression found within another expression.</summary>
-            <returns>The starting position of  target  if it is found in  toSearch .</returns>
+            <returns>The starting position of  toFind  if it is found in  toSearch .</returns>
+            <param name="toFind">The string expression to be found.</param>
             <param name="toSearch">The string expression to be searched.</param>
-            <param name="target">The string expression to be found.</param>
         </member>
         <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CharIndex(System.Byte[],System.Byte[])">
             <summary>Returns the starting position of one expression found within another expression.</summary>
-            <returns>The starting position of  target  if it is found in  toSearch .</returns>
+            <returns>The starting position of  toFind  if it is found in  toSearch .</returns>
+            <param name="toFind">The string expression to be found.</param>
             <param name="toSearch">The string expression to be searched.</param>
-            <param name="target">The string expression to be found.</param>
         </member>
         <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CharIndex(System.String,System.String,System.Nullable{System.Int32})">
             <summary>Returns the starting position of one expression found within another expression.</summary>
-            <returns>The starting position of  target  if it is found in  toSearch .</returns>
+            <returns>The starting position of  toFind  if it is found in  toSearch .</returns>
+            <param name="toFind">The string expression to be found.</param>
             <param name="toSearch">The string expression to be searched.</param>
-            <param name="target">The string expression to be found.</param>
             <param name="startLocation">The character position in  toSearch  where searching begins.</param>
         </member>
         <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CharIndex(System.Byte[],System.Byte[],System.Nullable{System.Int32})">
             <summary>Returns the starting position of one expression found within another expression.</summary>
-            <returns>The starting position of  target  if it is found in  toSearch .</returns>
+            <returns>The starting position of  toFind  if it is found in  toSearch .</returns>
+            <param name="toFind">The string expression to be found.</param>
             <param name="toSearch">The string expression to be searched.</param>
-            <param name="target">The string expression to be found.</param>
             <param name="startLocation">The character position in  toSearch  where searching begins.</param>
         </member>
         <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CharIndex(System.String,System.String,System.Nullable{System.Int64})">
             <summary>Returns the starting position of one expression found within another expression.</summary>
             <returns>
-            A <see cref="T:System.Nullable`1" /> of <see cref="T:System.Int64" /> value that is the starting position of  target  if it is found in  toSearch .
+            A <see cref="T:System.Nullable`1" /> of <see cref="T:System.Int64" /> value that is the starting position of  toFind  if it is found in  toSearch .
             </returns>
+            <param name="toFind">The string expression to be found.</param>
             <param name="toSearch">The string expression to be searched.</param>
-            <param name="target">The string expression to be found.</param>
             <param name="startLocation">The character position in  toSearch  where searching begins.</param>
         </member>
         <member name="M:System.Data.Entity.SqlServer.SqlFunctions.CharIndex(System.Byte[],System.Byte[],System.Nullable{System.Int64})">
             <summary>Returns the starting position of one expression found within another expression.</summary>
-            <returns>The starting position of  target  if it is found in  toSearch .</returns>
+            <returns>The starting position of  toFind  if it is found in  toSearch .</returns>
+            <param name="toFind">The string expression to be found.</param>
             <param name="toSearch">The string expression to be searched.</param>
-            <param name="target">The string expression to be found.</param>
-            <param name="startLocation">The character position in  toSearch  at which searching begins.</param>
+            <param name="startLocation">The character position in  toSearch  where searching begins.</param>
         </member>
         <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Difference(System.String,System.String)">
             <summary>Returns an integer value that indicates the difference between the SOUNDEX values of two character expressions.</summary>
@@ -974,6 +974,13 @@
             that can be run against a Microsoft SQL Server database.
             </summary>
         </member>
+        <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.IsPermissionDeniedError(System.Exception)">
+            <summary>
+            Determines if a provider specific exception corresponds to a database-level permission denied error.
+            </summary>
+            <param name="exception">The database exception.</param>
+            <returns> true if the supplied exception corresponds to a database-level permission denied error; otherwise false. </returns>
+        </member>
         <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Collections.Generic.IEnumerable{System.Data.Entity.Migrations.Model.MigrationOperation},System.String)">
             <summary>
             Converts a set of migration operations into Microsoft SQL Server specific SQL.
@@ -1472,6 +1479,12 @@
             <param name="geometryValue">The geometry value.</param>
             <param name="tolerance">The tolerance to input to the Douglas-Peucker algorithm. tolerance must be a positive number.</param>
         </member>
+        <member name="M:System.Data.Entity.SqlServer.SqlProviderManifest.SupportsParameterOptimizationInSchemaQueries">
+            <summary>
+            Indicates if the provider supports the parameter optimization described in EntityFramework6 GitHub issue #195.
+            </summary>
+            <returns><c>True</c> since this provider supports the parameter optimization.</returns>
+        </member>
         <member name="T:System.Data.Entity.SqlServer.SqlProviderServices">
             <summary>
             The DbProviderServices implementation for the SqlClient provider for SQL Server.
@@ -1595,12 +1608,12 @@
             Determines whether the database for the given connection exists.
             There are three cases:
             1.  Initial Catalog = X, AttachDBFilename = null:   (SELECT Count(*) FROM sys.databases WHERE [name]= X) > 0
-            2.  Initial Catalog = X, AttachDBFilename = F:      if (SELECT Count(*) FROM sys.databases WHERE [name]= X) >  true,
+            2.  Initial Catalog = X, AttachDBFilename = F:      if (SELECT Count(*) FROM sys.databases WHERE [name]= X) > 0 then <c>true</c>,
             if not, try to open the connection and then return (SELECT Count(*) FROM sys.databases WHERE [name]= X) > 0
             3.  Initial Catalog = null, AttachDBFilename = F:   Try to open the connection. If that succeeds the result is true, otherwise
-            if the there are no databases corresponding to the given file return false, otherwise throw.
+            if the there are no databases corresponding to the given file return <c>false</c>, otherwise throw.
             Note: We open the connection to cover the scenario when the mdf exists, but is not attached.
-            Given that opening the connection would auto-attach it, it would not be appropriate to return false in this case.
+            Given that opening the connection would auto-attach it, it would not be appropriate to return <c>false</c> in this case.
             Also note that checking for the existence of the file does not work for a remote server.  (Dev11 #290487)
             For further details on the behavior when AttachDBFilename is specified see Dev10# 188936
             </summary>
@@ -1614,12 +1627,12 @@
             Determines whether the database for the given connection exists.
             There are three cases:
             1.  Initial Catalog = X, AttachDBFilename = null:   (SELECT Count(*) FROM sys.databases WHERE [name]= X) > 0
-            2.  Initial Catalog = X, AttachDBFilename = F:      if (SELECT Count(*) FROM sys.databases WHERE [name]= X) >  true,
+            2.  Initial Catalog = X, AttachDBFilename = F:      if (SELECT Count(*) FROM sys.databases WHERE [name]= X) > 0 then <c>true</c>,
             if not, try to open the connection and then return (SELECT Count(*) FROM sys.databases WHERE [name]= X) > 0
             3.  Initial Catalog = null, AttachDBFilename = F:   Try to open the connection. If that succeeds the result is true, otherwise
-            if the there are no databases corresponding to the given file return false, otherwise throw.
+            if the there are no databases corresponding to the given file return <c>false</c>, otherwise throw.
             Note: We open the connection to cover the scenario when the mdf exists, but is not attached.
-            Given that opening the connection would auto-attach it, it would not be appropriate to return false in this case.
+            Given that opening the connection would auto-attach it, it would not be appropriate to return <c>false</c> in this case.
             Also note that checking for the existence of the file does not work for a remote server.  (Dev11 #290487)
             For further details on the behavior when AttachDBFilename is specified see Dev10# 188936
             </summary>
@@ -1643,6 +1656,14 @@
             <param name="commandTimeout"> Timeout for internal commands. </param>
             <param name="storeItemCollection"> Item Collection. </param>
         </member>
+        <member name="M:System.Data.Entity.SqlServer.SqlProviderServices.CloneDbConnection(System.Data.Common.DbConnection,System.Data.Common.DbProviderFactory)">
+            <summary>
+            Clones the connection.
+            </summary>
+            <param name="connection">The original connection.</param>
+            <param name="factory">The factory to use.</param>
+            <returns>Cloned connection</returns>
+        </member>
         <member name="P:System.Data.Entity.SqlServer.SqlProviderServices.Instance">
             <summary>
             The Singleton instance of the SqlProviderServices type.
@@ -1655,15 +1676,39 @@
         </member>
         <member name="P:System.Data.Entity.SqlServer.SqlProviderServices.TruncateDecimalsToScale">
             <summary>
-            Set this flag to false to prevent <see cref="T:System.Decimal"/> values from being truncated to
-            the scale (number of decimal places) defined for the column. The default value is true,
-            indicating that decimal values will be truncated, in order to prevent breaking existing
-            applications that depend on this behavior.
+            Get or sets a value indicating whether <see cref="T:System.Decimal"/> parameter values are truncated to 
+            the scale (number of decimal places) defined for their corresponding columns when they are sent 
+            to the database. A value of <c>true</c> indicates that <see cref="T:System.Data.SqlClient.SqlParameter"/> objects 
+            created for <see cref="T:System.Decimal"/> columns will have their <see cref="P:System.Data.SqlClient.SqlParameter.Scale"/> 
+            properties set, which will cause the parameter values to be truncated. If set to <c>false</c> 
+            then the <see cref="P:System.Data.SqlClient.SqlParameter.Scale"/> properties will not be set, avoiding the truncation 
+            behavior of <see cref="T:System.Data.SqlClient.SqlParameter"/> and allowing SQL Server to round values if necessary. 
+            The default value is <c>true</c> to prevent breaking existing applications that depend on this 
+            behavior. 
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.SqlServer.SqlProviderServices.UseScopeIdentity">
+            <summary>
+            Gets or sets a value indicating whether to use the SCOPE_IDENTITY() function to retrieve values 
+            generated by the database for numeric columns during an INSERT operation. The default value of 
+            <c>true</c> is recommended and can provide better performance if all numeric values are generated 
+            using IDENTITY columns. If set to <c>false</c>, an OUTPUT clause will be used instead. An OUTPUT 
+            clause makes it possible to retrieve values generated by sequences or other means.
+            </summary>
+        </member>
+        <member name="P:System.Data.Entity.SqlServer.SqlProviderServices.UseRowNumberOrderingInOffsetQueries">
+            <summary>
+            Gets or sets a value indicating whether the ROW_NUMBER() function is used in sort expression 
+            passed to the ORDER BY clause when OFFSET is present in query. The default value of <c>true</c> 
+            is recommended to obtain query results that are stable for paging operations. The value of 
+            <c>false</c> can be used for compatibility with previous versions of EF and will cause the sort 
+            expression to be passed unmodified to the ORDER BY clause, which can lead to unstable results 
+            if the ordering is ambiguous. 
             </summary>
             <remarks>
-            With this flag set to true <see cref="T:System.Data.SqlClient.SqlParameter"/> objects are created with their Scale
-            properties set. When this flag is set to false then the Scale properties are not set, meaning
-            that the truncation behavior of SqlParameter is avoided.
+            This flag only applies to SQL Server 2012 or later. This flag does not affect queries that have 
+            already been translated to SQL and cached, therefore applications that need to set the value to 
+            <c>false</c> for compatibility should do so before executing any queries.
             </remarks>
         </member>
         <member name="T:System.Data.Entity.SqlServer.SqlSpatialServices">

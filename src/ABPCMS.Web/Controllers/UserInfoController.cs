@@ -28,12 +28,10 @@ namespace ABPCMS.Web.Controllers
             _roleManager = roleManager;
             _cacheManager = cacheManager;
         }
-        [OutputCache(Duration = 1200, VaryByParam = "none")]
+       // [OutputCache(Duration = 1200, VaryByParam = "none")]
         public ActionResult Index()
         {
-            var users = _userAppService.GetAll(new PagedResultRequestDto { MaxResultCount = int.MaxValue });
             return View();
-
         }
         [HttpGet]
         [DontWrapResult]

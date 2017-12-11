@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abp.Zero.EntityFramework</name>
+    </assembly>
+    <members>
+        <member name="M:Abp.Data.ConnectionStringHelper.GetConnectionString(System.String)">
+            <summary>
+            Gets connection string from given connection string or name.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.Roles">
+            <summary>
+            Roles.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.Users">
+            <summary>
+            Users.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.UserLogins">
+            <summary>
+            User logins.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.UserLoginAttempts">
+            <summary>
+            User login attempts.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.UserRoles">
+            <summary>
+            User roles.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.UserClaims">
+            <summary>
+            User claims.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.Permissions">
+            <summary>
+            Permissions.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.RolePermissions">
+            <summary>
+            Role permissions.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.UserPermissions">
+            <summary>
+            User permissions.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.Settings">
+            <summary>
+            Settings.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.AuditLogs">
+            <summary>
+            Audit logs.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.Languages">
+            <summary>
+            Languages.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.LanguageTexts">
+            <summary>
+            LanguageTexts.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.OrganizationUnits">
+            <summary>
+            OrganizationUnits.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.UserOrganizationUnits">
+            <summary>
+            UserOrganizationUnits.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.Notifications">
+            <summary>
+            Notifications.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.TenantNotifications">
+            <summary>
+            Tenant notifications.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.UserNotifications">
+            <summary>
+            User notifications.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.NotificationSubscriptions">
+            <summary>
+            Notification subscriptions.
+            </summary>
+        </member>
+        <member name="M:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.#ctor">
+            <summary>
+            Default constructor.
+            Do not directly instantiate this class. Instead, use dependency injection!
+            </summary>
+        </member>
+        <member name="M:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.#ctor(System.String)">
+            <summary>
+            Constructor with connection string parameter.
+            </summary>
+            <param name="nameOrConnectionString">Connection string or a name in connection strings in configuration file</param>
+        </member>
+        <member name="M:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.#ctor(System.Data.Common.DbConnection,System.Boolean)">
+            <summary>
+            This constructor can be used for unit tests.
+            </summary>
+        </member>
+        <member name="M:Abp.Zero.EntityFramework.AbpZeroCommonDbContext`2.#ctor(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.DbCompiledModel,System.Boolean)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="T:Abp.Zero.EntityFramework.AbpZeroDbContext`3">
+            <summary>
+            Base DbContext for ABP zero.
+            Derive your DbContext from this class to have base entities.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroDbContext`3.Tenants">
+            <summary>
+            Tenants
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroDbContext`3.Editions">
+            <summary>
+            Editions.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroDbContext`3.FeatureSettings">
+            <summary>
+            FeatureSettings.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroDbContext`3.TenantFeatureSettings">
+            <summary>
+            TenantFeatureSetting.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroDbContext`3.EditionFeatureSettings">
+            <summary>
+            EditionFeatureSettings.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroDbContext`3.BackgroundJobs">
+            <summary>
+            Background jobs.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroDbContext`3.UserAccounts">
+            <summary>
+            User accounts
+            </summary>
+        </member>
+        <member name="T:Abp.Zero.EntityFramework.AbpZeroDbModelBuilderExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.Data.Entity.DbModelBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:Abp.Zero.EntityFramework.AbpZeroDbModelBuilderExtensions.ChangeAbpTablePrefix``3(System.Data.Entity.DbModelBuilder,System.String,System.String)">
+            <summary>
+            Changes prefix for ABP tables (which is "Abp" by default).
+            Can be null/empty string to clear the prefix.
+            </summary>
+            <typeparam name="TTenant">The type of the tenant entity.</typeparam>
+            <typeparam name="TRole">The type of the role entity.</typeparam>
+            <typeparam name="TUser">The type of the user entity.</typeparam>
+            <param name="modelBuilder">Model builder.</param>
+            <param name="prefix">Table prefix, or null to clear prefix.</param>
+        </member>
+        <member name="T:Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule">
+            <summary>
+            Entity framework integration module for ASP.NET Boilerplate Zero.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroHostDbContext`3.Tenants">
+            <summary>
+            Tenants
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroHostDbContext`3.Editions">
+            <summary>
+            Editions.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroHostDbContext`3.FeatureSettings">
+            <summary>
+            FeatureSettings.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroHostDbContext`3.TenantFeatureSettings">
+            <summary>
+            TenantFeatureSetting.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroHostDbContext`3.EditionFeatureSettings">
+            <summary>
+            EditionFeatureSettings.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroHostDbContext`3.BackgroundJobs">
+            <summary>
+            Background jobs.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.AbpZeroHostDbContext`3.UserAccounts">
+            <summary>
+            User accounts
+            </summary>
+        </member>
+        <member name="M:Abp.Zero.EntityFramework.AbpZeroTenantDbContext`2.#ctor">
+            <summary>
+            Default constructor.
+            Do not directly instantiate this class. Instead, use dependency injection!
+            </summary>
+        </member>
+        <member name="M:Abp.Zero.EntityFramework.AbpZeroTenantDbContext`2.#ctor(System.String)">
+            <summary>
+            Constructor with connection string parameter.
+            </summary>
+            <param name="nameOrConnectionString">Connection string or a name in connection strings in configuration file</param>
+        </member>
+        <member name="M:Abp.Zero.EntityFramework.AbpZeroTenantDbContext`2.#ctor(System.Data.Common.DbConnection,System.Boolean)">
+            <summary>
+            This constructor can be used for unit tests.
+            </summary>
+        </member>
+        <member name="T:Abp.Zero.EntityFramework.DbPerTenantConnectionStringResolver">
+            <summary>
+            Implements <see cref="T:Abp.MultiTenancy.IDbPerTenantConnectionStringResolver"/> to dynamically resolve
+            connection string for a multi tenant application.
+            </summary>
+        </member>
+        <member name="P:Abp.Zero.EntityFramework.DbPerTenantConnectionStringResolver.AbpSession">
+            <summary>
+            Reference to the session.
+            </summary>
+        </member>
+        <member name="M:Abp.Zero.EntityFramework.DbPerTenantConnectionStringResolver.#ctor(Abp.Configuration.Startup.IAbpStartupConfiguration,Abp.Domain.Uow.ICurrentUnitOfWorkProvider,Abp.MultiTenancy.ITenantCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Abp.Zero.EntityFramework.DbPerTenantConnectionStringResolver"/> class.
+            </summary>
+        </member>
+    </members>
+</doc>

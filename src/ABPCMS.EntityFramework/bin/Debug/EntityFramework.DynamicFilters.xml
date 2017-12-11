@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EntityFramework.DynamicFilters</name>
+    </assembly>
+    <members>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterConvention.#ctor(System.String,System.Type,System.Linq.Expressions.LambdaExpression,System.String,System.Func{EntityFramework.DynamicFilters.DynamicFilterConfig,EntityFramework.DynamicFilters.DynamicFilterOptions})">
+            <summary>
+            </summary>
+            <param name="filterName"></param>
+            <param name="entityType"></param>
+            <param name="predicate"></param>
+            <param name="columnName"></param>
+            <param name="config">Options for how and when to apply this filter</param>
+        </member>
+        <member name="P:EntityFramework.DynamicFilters.DynamicFilterDefinition.ID">
+            <summary>
+            Unique ID assigned to each distinct filter.  Used to find unique filters on an entity
+            which may be involved in TPT/TPH (which can cause the same filter to be added to the
+            base class as well as derived classes).
+            </summary>
+        </member>
+        <member name="P:EntityFramework.DynamicFilters.DynamicFilterDefinition.ColumnName">
+            <summary>
+            Set if the filter is a single column equality filter.  Null if filter is a Predicate (LambdaExpression)
+            </summary>
+        </member>
+        <member name="P:EntityFramework.DynamicFilters.DynamicFilterDefinition.Predicate">
+            <summary>
+            Set if the filter is a LambdaExpression.  Null if filter is a single column equality filter.
+            </summary>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterDefinition.GetFilterAndParamFromDBParameter(System.String)">
+            <summary>
+            Reaturns the Filter name and Parameter names associated with the db parameter
+            </summary>
+            <param name="dbParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="F:EntityFramework.DynamicFilters.DynamicFilterExtensions._GlobalParameterValues">
+            <summary>
+            Key: Filter Name
+            Value: The parameters for the filter
+            </summary>
+        </member>
+        <member name="F:EntityFramework.DynamicFilters.DynamicFilterExtensions._ScopedParameterValues">
+            <summary>
+            Key: The DbContext to which the scoped parameter values belong
+            Values: A dictionary defined as _GlobalParameterValues that contains the scoped parameter values for the DbContext
+            </summary>
+        </member>
+        <member name="F:EntityFramework.DynamicFilters.DynamicFilterExtensions._PreventDisabledFilterConditions">
+            <summary>
+            These properties are used to prevent adding conditions to the sql queries to check to see if filters are
+            enabled/disabled.  Once this is set, it cannot be undone because EF only gives us 1 shot at including those
+            conditions.
+            </summary>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.InitializeDynamicFilters(System.Data.Entity.DbContext)">
+            <summary>
+            Initialize the Dynamic Filters.  Adding a Filter now automatically calls this method.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.ResetDynamicFilters(System.Data.Entity.DbModelBuilder)">
+            <summary>
+            Resets all of DynamicFilters internal static lookups.  Only intended to be used in unit tests where multiple
+            DbContexts are being used and we need to make sure everything is reset to an initial state.
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:EntityFramework.DynamicFilters.DynamicFilterExtensions.Filter``1(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.String,System.String,System.Object)" -->
+        <!-- Badly formed XML comment ignored for member "M:EntityFramework.DynamicFilters.DynamicFilterExtensions.Filter``2(System.Data.Entity.ModelConfiguration.EntityTypeConfiguration{``0},System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Func{System.Object})" -->
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.Filter``2(System.Data.Entity.DbModelBuilder,System.String,System.Linq.Expressions.Expression{System.Func{``0,``1,System.Boolean}},System.Func{``1},System.Func{EntityFramework.DynamicFilters.DynamicFilterConfig,EntityFramework.DynamicFilters.DynamicFilterOptions})">
+            <summary>
+            
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="T0"></typeparam>
+            <param name="modelBuilder"></param>
+            <param name="filterName"></param>
+            <param name="predicate"></param>
+            <param name="value0"></param>
+            <param name="options">Options for how and when to apply this filter</param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.Filter``3(System.Data.Entity.DbModelBuilder,System.String,System.Linq.Expressions.Expression{System.Func{``0,``2,System.Boolean}},System.Func{``1,``2},System.Func{EntityFramework.DynamicFilters.DynamicFilterConfig,EntityFramework.DynamicFilters.DynamicFilterOptions})">
+            <summary>
+            
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="TContext"></typeparam>
+            <typeparam name="T0"></typeparam>
+            <param name="modelBuilder"></param>
+            <param name="filterName"></param>
+            <param name="predicate"></param>
+            <param name="value0"></param>
+            <param name="options">Options for how and when to apply this filter</param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.Filter``2(System.Data.Entity.DbModelBuilder,System.String,System.Linq.Expressions.Expression{System.Func{``0,``1,System.Boolean}},``1,System.Func{EntityFramework.DynamicFilters.DynamicFilterConfig,EntityFramework.DynamicFilters.DynamicFilterOptions})">
+            <summary>
+            
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="T0"></typeparam>
+            <param name="modelBuilder"></param>
+            <param name="filterName"></param>
+            <param name="predicate"></param>
+            <param name="value0"></param>
+            <param name="options">Options for how and when to apply this filter</param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.EnableFilter(System.Data.Entity.DbContext,System.String)">
+            <summary>
+            Enable the filter.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.EnableFilter(System.Data.Entity.DbContext,System.String,System.Func{System.Object})">
+            <summary>
+            Enable the filter if the condition evaluates to true
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="condition"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.EnableFilter``1(System.Data.Entity.DbContext,System.String,System.Func{``0,System.Object})">
+            <summary>
+            Enable the filter if the condition evaluates to true
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="condition"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.EnableAllFilters(System.Data.Entity.DbContext)">
+            <summary>
+            Enable all filters.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.DisableFilter(System.Data.Entity.DbContext,System.String)">
+            <summary>
+            Disable the filter within the current DbContext scope.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.DisableAllFilters(System.Data.Entity.DbContext)">
+            <summary>
+            Disable all filters within the current DbContext scope.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.DisableFilterGlobally(System.Data.Entity.DbModelBuilder,System.String)">
+            <summary>
+            Globally disable the filter.  Can be enabled as needed via DbContext.EnableFilter().
+            </summary>
+            <param name="modelBuilder"></param>
+            <param name="filterName"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:EntityFramework.DynamicFilters.DynamicFilterExtensions.PreventAllDisabledFilterConditions(System.Data.Entity.DbModelBuilder)" -->
+        <!-- Badly formed XML comment ignored for member "M:EntityFramework.DynamicFilters.DynamicFilterExtensions.PreventDisabledFilterConditions(System.Data.Entity.DbModelBuilder,System.String)" -->
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.AreFilterDisabledConditionsAllowed(System.String)">
+            <summary>
+            Checks to see if Enable/Disable filter conditions are allowed.  If not allowed, these conditions will not
+            be added to the sql query so filters cannot be enabled/disabled.
+            </summary>
+            <param name="filterName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterScopedParameterValue(System.Data.Entity.DbContext,System.String,System.Func{System.Object})">
+            <summary>
+            Set the parameter for a filter within the current DbContext scope.  Once the DbContext is disposed, this
+            parameter will no longer be in scope and will be removed.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="func">A delegate that returns the value of the parameter.  This will be evaluated each time
+            the parameter value is needed.</param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterScopedParameterValue``1(System.Data.Entity.DbContext,System.String,System.Func{``0,System.Object})">
+            <summary>
+            Set the parameter for a filter within the current DbContext scope.  Once the DbContext is disposed, this
+            parameter will no longer be in scope and will be removed.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="func">A delegate that returns the value of the parameter.  This will be evaluated each time
+            the parameter value is needed.</param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterScopedParameterValue(System.Data.Entity.DbContext,System.String,System.Object)">
+            <summary>
+            Set the parameter for a filter within the current DbContext scope.  Once the DbContext is disposed, this
+            parameter will no longer be in scope and will be removed.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterScopedParameterValue(System.Data.Entity.DbContext,System.String,System.String,System.Func{System.Object})">
+            <summary>
+            Set the parameter for a filter within the current DbContext scope.  Once the DbContext is disposed, this
+            parameter will no longer be in scope and will be removed.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="parameterName"></param>
+            <param name="func"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterScopedParameterValue``1(System.Data.Entity.DbContext,System.String,System.String,System.Func{``0,System.Object})">
+            <summary>
+            Set the parameter for a filter within the current DbContext scope.  Once the DbContext is disposed, this
+            parameter will no longer be in scope and will be removed.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="parameterName"></param>
+            <param name="func"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterScopedParameterValue(System.Data.Entity.DbContext,System.String,System.String,System.Object)">
+            <summary>
+            Set the parameter for a filter within the current DbContext scope.  Once the DbContext is disposed, this
+            parameter will no longer be in scope and will be removed.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="parameterName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterGlobalParameterValue(System.Data.Entity.DbContext,System.String,System.Func{System.Object})">
+            <summary>
+            Set the parameter value for a filter with global scope.  If a scoped parameter value is not found, this
+            value will be used.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="func">A delegate that returns the value of the parameter.  This will be evaluated each time
+            the parameter value is needed.</param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterGlobalParameterValue``1(System.Data.Entity.DbContext,System.String,System.Func{``0,System.Object})">
+            <summary>
+            Set the parameter value for a filter with global scope.  If a scoped parameter value is not found, this
+            value will be used.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="func">A delegate that returns the value of the parameter.  This will be evaluated each time
+            the parameter value is needed.</param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetFilterGlobalParameterValue(System.Data.Entity.DbContext,System.String,System.Object)">
+            <summary>
+            Set the parameter value for a filter with global scope.  If a scoped parameter value is not found, this
+            value will be used.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.GetFilterParameterValue(System.Data.Entity.DbContext,System.String)">
+            <summary>
+            Returns the value for the filter.  If a scoped value exists within this DbContext, that is returned.
+            Otherwise, a global parameter value will be returned.  If the parameter was set with a delegate, the
+            delegate is evaluated and the result is returned.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.GetFilterParameterValue(System.Data.Entity.DbContext,System.String,System.String)">
+            <summary>
+            Returns the value for the filter.  If a scoped value exists within this DbContext, that is returned.
+            Otherwise, a global parameter value will be returned.  If the parameter was set with a delegate, the
+            delegate is evaluated and the result is returned.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <param name="parameterName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.IsFilterEnabled(System.Data.Entity.DbContext,System.String)">
+            <summary>
+            Checks to see if the filter is currently enabled based on the DbContext or global settings.
+            </summary>
+            <param name="context"></param>
+            <param name="filterName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.ClearScopedParameters(System.Data.Entity.DbContext)">
+            <summary>
+            Clear all parameter values within the DbContext scope.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.SetParameterList(System.Collections.IEnumerable,System.Data.Common.DbParameter,System.Data.Common.DbCommand,System.Data.Entity.DbContext)">
+            <summary>
+            Set a collection of parameter values in place of a single parameter.  The '=' condition in the sql
+            command is changed to an 'in' expression.
+            </summary>
+            <param name="paramValueCollection"></param>
+            <param name="param"></param>
+            <param name="command"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.OracleVersion(System.Data.Entity.DbContext)">
+            <summary>
+            Returns the verson of the Oracle server or null if this is not an Oracle server
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.CanChangeSQLCommandText(System.Data.Entity.DbContext)">
+            <summary>
+            Returns true if the database provider allows changing the sql command text.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterExtensions.CanRemoveFilterDisabledConditionFromQuery(System.Data.Entity.DbContext)">
+            <summary>
+            True if we can remove unnecessary disable filter conditions.
+            The Oracle DevArt driver does not allow removing parameters so need to prevent it in this case
+            (see https://github.com/jcachat/EntityFramework.DynamicFilters/issues/114)
+            or if the driver does not support modifying the Command Text (i.e. SQL CE)
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EntityFramework.DynamicFilters.DynamicFilterOptions.SelectEntityTypeCondition">
+            <summary>
+            If not null, this delegate should return true if the filter should be applied to the given entity Type.
+            False if not.  Allows additional logic to be applied to determine if the filter should be applied to an Entity of the type.
+            i.e. To apply the filter to all entities of a particular interface but not if those entities also implement another interface.
+            </summary>
+        </member>
+        <member name="P:EntityFramework.DynamicFilters.DynamicFilterOptions.ApplyToChildProperties">
+            <summary>
+            If false, the filter will only be applied to the main entity of the query.
+            Default = true.
+            </summary>
+        </member>
+        <member name="P:EntityFramework.DynamicFilters.DynamicFilterOptions.ApplyRecursively">
+            <summary>
+            If false, the filter will not be applied if it was already applied to a parent entity.
+            Default = true
+            </summary>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterConfig.SelectEntityTypeCondition(System.Func{System.Type,System.Boolean})">
+            <summary>
+            If not null, this delegate should return true if the filter should be applied to the given entity Type.
+            False if not.  Allows additional logic to be applied to determine if the filter should be applied to an Entity of the type.
+            i.e. To apply the filter to all entities of a particular interface but not if those entities also implement another interface.
+            </summary>
+            <param name="selectForEntityType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterConfig.ApplyToChildProperties(System.Boolean)">
+            <summary>
+            If false, the filter will only be applied to the main entity of the query.
+            Default = true
+            </summary>
+            <param name="applyToChildProperties"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterConfig.ApplyRecursively(System.Boolean)">
+            <summary>
+            If false, the filter will not be applied if it was already applied to a parent entity.
+            Default = true
+            </summary>
+            <param name="applyRecursively"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EntityFramework.DynamicFilters.DynamicFilterParameters.EnableIfCondition">
+            <summary>
+            A delegate function that returns true/false to indicate if the filter is enabled.
+            Can (optionally) take a single parameter for the current DbContext instance.
+            Only evaluated if not null and if Enabled == true.
+            </summary>
+        </member>
+        <member name="T:EntityFramework.DynamicFilters.DynamicFilterQueryVisitorSSpace">
+            <summary>
+            This visitor is only required if the database/EF provider does not support the DbExpression.Element()
+            method that is needed when we are applying filters to child entities in the CSpace visitor.
+            To work around that, we use this visitor to visit the DbScan expressions to apply those filters.
+            If those filters reference child properties/navigation properties, they will fail translation here...
+            </summary>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.DynamicFilterQueryVisitorCSpace.DoesNotSupportElementMethod(System.Data.Entity.DbContext)">
+            <summary>
+            Returns true if the database does not support the DbExpression.Element() method - at least in the
+            context that we try to use it when applying a filter to a child entity.
+            Requires us to do an extra step of processing to apply those filters using SSpace.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.CreateEqualComparisonOfNullablePropToNullableParam(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
+            <summary>
+            Creates an Equal comparison of a nullable property (db column) to a nullable parameter (lambda param)
+            that adds the necessary "is null" checks to support a filter like "e.TenantId = tenantId".
+            Results in sql: (e.TenantID is null and @tenantID is null) or (e.TenantID is not null and e.TenantID = @tenantID)
+            which will support parmeter values that are "null" or a specific value and will correctly filter on columns that
+            are "null" or a specific value.
+            </summary>
+            <param name="propExpression"></param>
+            <param name="paramExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.MapNullComparison(System.Linq.Expressions.Expression,System.Linq.Expressions.ExpressionType)">
+            <summary>
+            Maps a comparison of an expression to a "null" constant.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.VisitMember(System.Linq.Expressions.MemberExpression)">
+            <summary>
+            Visit a Member Expression.  Creates a mapping of the MemberExpression to a DbPropertyExpression
+            which is a reference to the table/column name that matches the MemberExpression.
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.VisitParameter(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            Visit a Parameter Expression.  Creates a mapping from the ParameterExpression to a
+            DbParameterReferenceExpression which is a reference to a SQL Parameter bound to the
+            table being queries (_Binding).
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.SupportsIn">
+            <summary>
+            Returns true if this provider supports the DbInExpression.  Does this by checking to see if the provider
+            is one that is known to NOT to support it will default to assuming it does.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.RemoveConvert(System.Linq.Expressions.Expression)">
+            <summary>An Expression extension method that removes the convert described by @this.</summary>
+            <param name="this">The @this to act on.</param>
+            <returns>An Expression.</returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.PrimitiveTypeForType(System.Type,System.Data.Entity.Core.Metadata.Edm.DataSpace)">
+            <summary>
+            Returns the primitive type of the Type.  If this is a collection type, this is the type of the objects inside the collection.
+            </summary>
+            <param name="type"></param>
+            <param name="dataSpace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.IsNullableExpressionOfType``1(System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
+            <summary>
+            Returns true if the expression is a DbPropertyExpression (i.e. a class property that has been mapped
+            to a database column) and the type is a Nullable type.
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EntityFramework.DynamicFilters.LambdaToDbExpressionVisitor.IsNullConstantExpression(System.Linq.Expressions.Expression)">
+            <summary>
+            Returns true if the expression is for the "null" constant
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

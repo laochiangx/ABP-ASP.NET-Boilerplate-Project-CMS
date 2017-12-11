@@ -66,6 +66,15 @@ namespace ABPCMS.Web
                         requiredPermissionName: PermissionNames.Pages_Users
                     )
                 )
+                 .AddItem(
+                    new MenuItemDefinition(
+                        PageNames.Users,
+                        L("swaggerAPI文档"),
+                        url: "/swagger/ui/index",
+                        icon: "people",
+                        requiredPermissionName: PermissionNames.Pages_Users
+                    )
+                )
                 .AddItem(
                     new MenuItemDefinition(
                         PageNames.About,
