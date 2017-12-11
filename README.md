@@ -10,7 +10,9 @@ ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统
 
 ![3.png](http://upload-images.jianshu.io/upload_images/6855212-db94be8a19ad98d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+![image.png](http://upload-images.jianshu.io/upload_images/6855212-9bd286dec4b39722.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+![image.png](http://upload-images.jianshu.io/upload_images/6855212-3e5b67fa4b0b3364.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
