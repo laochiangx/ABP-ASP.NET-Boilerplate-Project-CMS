@@ -17,6 +17,7 @@ using Microsoft.AspNet.Identity;
 using Abp.Threading;
 using Abp.Runtime.Caching;
 using Abp.AutoMapper;
+using ABPCMS.Job;
 
 namespace ABPCMS.Users
 {
@@ -46,7 +47,6 @@ namespace ABPCMS.Users
             _cacheManager = cacheManager;
             _userrepository = Userrepository;
         }
-
 
         public override async Task<UserDto> Get(EntityDto<long> input)
         {

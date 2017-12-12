@@ -360,3 +360,15 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\obj\D
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\obj\Debug\ABPCMS.Application.csproj.CoreCompileInputs.cache
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\obj\Debug\ABPCMS.Application.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\obj\Debug\ABPCMS.Application.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.Quartz.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Common.Logging.Core.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Common.Logging.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Quartz.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.Quartz.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Abp.Quartz.xml
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Common.Logging.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Common.Logging.xml
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Common.Logging.Core.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Common.Logging.Core.xml
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Quartz.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Application\bin\Debug\Quartz.xml

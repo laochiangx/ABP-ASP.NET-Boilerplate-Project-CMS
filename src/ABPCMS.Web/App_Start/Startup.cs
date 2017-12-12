@@ -56,23 +56,23 @@ namespace ABPCMS.Web
             //    Authorization = new[] { new AbpHangfireAuthorizationFilter() }
             //});
 
-            var jobId = BackgroundJob.Schedule(
-                () => Console.WriteLine("Delayed!"),
-                TimeSpan.FromDays(7));
+            //var jobId = BackgroundJob.Schedule(
+            //    () => Console.WriteLine("Delayed!"),
+            //    TimeSpan.FromDays(7));
 
 
-            RecurringJob.AddOrUpdate(
-                        () => Console.WriteLine("Recurring!"),
-                        Cron.Daily);
+            //RecurringJob.AddOrUpdate(
+            //            () => Console.WriteLine("Recurring!"),
+            //            Cron.Daily);
 
-            BackgroundJob.ContinueWith(
-                            jobId,
-                            () => Console.WriteLine("Continuation!"));
+            //BackgroundJob.ContinueWith(
+            //                jobId,
+            //                () => Console.WriteLine("Continuation!"));
 
 
-            var jobId2 = BackgroundJob.Schedule(
-                        () => Console.WriteLine("Delayed!"),
-                        TimeSpan.FromDays(7));
+            //var jobId2 = BackgroundJob.Schedule(
+            //            () => Console.WriteLine("Delayed!"),
+            //            TimeSpan.FromDays(7));
 
 
 

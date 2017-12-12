@@ -19,6 +19,7 @@ using FastWorkWorkerPxoxyModule.HangFires;
 using ABPCMS.HangfireServiceBase;
 using Abp.Runtime.Caching.Redis;
 using System;
+using Abp.Quartz;
 
 namespace ABPCMS.Web
 {
@@ -30,7 +31,8 @@ namespace ABPCMS.Web
         typeof(AbpWebMvcModule),
           typeof(AbpHangfireModule),
          // typeof(HangFireWorkerModule) //- ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
-          typeof(AbpRedisCacheModule)
+          typeof(AbpRedisCacheModule),
+        typeof(AbpQuartzModule)
         )]
 
     public class ABPCMSWebModule : AbpModule
