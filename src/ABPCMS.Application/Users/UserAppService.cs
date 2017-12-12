@@ -17,7 +17,7 @@ using Microsoft.AspNet.Identity;
 using Abp.Threading;
 using Abp.Runtime.Caching;
 using Abp.AutoMapper;
-using ABPCMS.Job;
+
 
 namespace ABPCMS.Users
 {

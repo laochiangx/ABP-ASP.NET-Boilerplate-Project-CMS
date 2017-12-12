@@ -384,6 +384,7 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Entit
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.EntityFramework.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.HangFire.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Owin.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Quartz.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.RedisCache.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Web.Api.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Web.Common.dll
@@ -402,10 +403,11 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\AutoMappe
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Castle.Core.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Castle.Facilities.Logging.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Castle.Windsor.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Common.Logging.Core.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Common.Logging.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\EntityFramework.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\EntityFramework.DynamicFilters.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\EntityFramework.SqlServer.dll
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\FastWorkWorkerPxoxyModule.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Hangfire.Core.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Hangfire.MemoryStorage.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Hangfire.SqlServer.dll
@@ -441,6 +443,7 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Nito.Canc
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Nito.Collections.Deque.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Nito.Disposables.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Owin.dll
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Quartz.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\StackExchange.Redis.StrongName.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\System.Collections.Immutable.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\System.ComponentModel.Annotations.dll
@@ -471,8 +474,6 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\ABPCMS.En
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\ABPCMS.EntityFramework.dll.config
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\ABPCMS.WebApi.pdb
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\ABPCMS.WebApi.dll.config
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\FastWorkWorkerPxoxyModule.pdb
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\FastWorkWorkerPxoxyModule.dll.config
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.pdb
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.AutoMapper.pdb
@@ -487,6 +488,8 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.HangF
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.HangFire.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Owin.pdb
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Owin.xml
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Quartz.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Quartz.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.RedisCache.pdb
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.RedisCache.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Web.pdb
@@ -510,6 +513,10 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\AutoMappe
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Castle.Core.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Castle.Facilities.Logging.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Castle.Windsor.xml
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Common.Logging.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Common.Logging.xml
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Common.Logging.Core.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Common.Logging.Core.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\EntityFramework.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\EntityFramework.DynamicFilters.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\EntityFramework.SqlServer.xml
@@ -545,6 +552,8 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Nito.Asyn
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Nito.Cancellation.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Nito.Collections.Deque.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Nito.Disposables.xml
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Quartz.pdb
+G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Quartz.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\StackExchange.Redis.StrongName.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\System.Collections.Immutable.xml
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\System.Diagnostics.DiagnosticSource.xml
@@ -566,15 +575,3 @@ G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\es\Hangfi
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\zh\Hangfire.Core.resources.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\obj\Debug\ABPCMS.Web.dll
 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\obj\Debug\ABPCMS.Web.pdb
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Quartz.dll
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Common.Logging.Core.dll
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Common.Logging.dll
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Quartz.dll
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Quartz.pdb
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Abp.Quartz.xml
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Common.Logging.pdb
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Common.Logging.xml
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Common.Logging.Core.pdb
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Common.Logging.Core.xml
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Quartz.pdb
-G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\bin\Quartz.xml

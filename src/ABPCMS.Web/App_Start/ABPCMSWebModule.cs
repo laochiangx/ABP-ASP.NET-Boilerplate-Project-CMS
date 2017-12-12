@@ -14,8 +14,6 @@ using Castle.MicroKernel.Registration;
 using Hangfire;
 using Microsoft.Owin.Security;
 using Abp.Threading.BackgroundWorkers;
-using FastWorkWorkerPxoxyModule;
-using FastWorkWorkerPxoxyModule.HangFires;
 using ABPCMS.HangfireServiceBase;
 using Abp.Runtime.Caching.Redis;
 using System;
@@ -30,7 +28,6 @@ namespace ABPCMS.Web
          typeof(AbpWebSignalRModule),   
         typeof(AbpWebMvcModule),
           typeof(AbpHangfireModule),
-         // typeof(HangFireWorkerModule) //- ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
           typeof(AbpRedisCacheModule),
         typeof(AbpQuartzModule)
         )]

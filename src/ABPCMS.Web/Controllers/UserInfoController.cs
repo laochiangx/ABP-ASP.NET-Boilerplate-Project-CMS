@@ -7,7 +7,6 @@ using Abp.Web.Models;
 using Abp.Web.Security.AntiForgery;
 using ABPCMS.Authorization;
 using ABPCMS.Authorization.Roles;
-using ABPCMS.Job;
 using ABPCMS.Quartz;
 using ABPCMS.Users;
 using ABPCMS.Web.Models.Users;

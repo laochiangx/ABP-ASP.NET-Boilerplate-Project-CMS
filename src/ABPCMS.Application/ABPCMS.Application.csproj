@@ -232,8 +232,6 @@
     <Compile Include="HangfireServiceBase\SimpleSendEmailJob.cs" />
     <Compile Include="HangfireServiceBase\SimpleSendEmailJobArgs.cs" />
     <Compile Include="HangfireServiceBase\TestJob.cs" />
-    <Compile Include="Job\SynchronousData.cs" />
-    <Compile Include="Job\SystemScheduler.cs" />
     <Compile Include="MultiTenancy\Dto\CreateTenantDto.cs" />
     <Compile Include="MultiTenancy\Dto\EditTenantDto.cs" />
     <Compile Include="MultiTenancy\Dto\TenantDto.cs" />

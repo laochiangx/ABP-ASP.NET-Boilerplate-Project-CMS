@@ -12,7 +12,6 @@ using Abp.Hangfire;
 using ABPCMS.Web.App_Start;
 using System;
 using log4net.Repository.Hierarchy;
-using FastWorkWorkerPxoxyModule.HangFires;
 using System.Web.Services.Description;
 using ABPCMS.Users;
 using Abp.Application.Services.Dto;

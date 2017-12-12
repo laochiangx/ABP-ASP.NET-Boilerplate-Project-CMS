@@ -483,3 +483,226 @@ DEBUG 2017-12-12 16:03:27,623 [ker-2] Abp.Quartz.AbpQuartzJobListener          -
 INFO  2017-12-12 16:03:30,943 [55   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
 INFO  2017-12-12 16:03:30,943 [55   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
 INFO  2017-12-12 16:03:30,943 [55   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+DEBUG 2017-12-12 20:52:18,074 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-12-12 20:52:18,115 [1    ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2017-12-12 20:52:18,121 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,130 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,131 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,131 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,131 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,131 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,132 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,132 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,132 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,132 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,133 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,133 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,133 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,133 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,133 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,134 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,134 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,134 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,134 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,134 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:18,138 [1    ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2017-12-12 20:52:18,489 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 20:52:18,489 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 20:52:18,489 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 20:52:18,489 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2017-12-12 20:52:21,905 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2017-12-12 20:52:22,085 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2017-12-12 20:52:22,202 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 20:52:22,972 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-12-12 20:52:22,999 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-12-12 20:52:23,007 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-12-12 20:52:23,009 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-12-12 20:52:23,019 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-12-12 20:52:23,027 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2017-12-12 20:52:23,034 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2017-12-12 20:52:23,039 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: DESKTOP-M6UULM4\SA@cmsabp'
+INFO  2017-12-12 20:52:23,039 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2017-12-12 20:52:23,040 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2017-12-12 20:52:23,040 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2017-12-12 20:52:23,040 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2017-12-12 20:52:23,040 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2017-12-12 20:52:23,040 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2017-12-12 20:52:23,040 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+DEBUG 2017-12-12 20:52:23,059 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2017-12-12 20:52:23,118 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-12-12 20:52:23,118 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-12-12 20:52:23,122 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-12-12 20:52:23,122 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-12-12 20:52:23,122 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-12-12 20:52:23,122 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-12-12 20:52:23,122 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-12-12 20:52:23,122 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-12-12 20:52:23,122 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-12-12 20:52:23,122 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-12-12 20:52:23,122 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-12-12 20:52:23,122 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-12-12 20:52:23,122 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-12-12 20:52:23,123 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-12-12 20:52:23,261 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2017-12-12 20:52:23,267 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2017-12-12 20:52:23,275 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2017-12-12 20:52:23,279 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'AggregatedCounter' table...
+DEBUG 2017-12-12 20:52:23,284 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+INFO  2017-12-12 20:52:23,286 [chdog] Hangfire.Server.ServerWatchdog           - 1 servers were removed due to timeout
+DEBUG 2017-12-12 20:52:23,288 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2017-12-12 20:52:23,290 [c90ae] Hangfire.Server.Worker                   - Background process 'Worker #9eac90ae' started.
+DEBUG 2017-12-12 20:52:23,308 [67a28] Hangfire.Server.Worker                   - Background process 'Worker #3f267a28' started.
+DEBUG 2017-12-12 20:52:23,313 [6dd68] Hangfire.Server.Worker                   - Background process 'Worker #b916dd68' started.
+DEBUG 2017-12-12 20:52:23,321 [6f0b2] Hangfire.Server.Worker                   - Background process 'Worker #6666f0b2' started.
+DEBUG 2017-12-12 20:52:23,348 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2017-12-12 20:52:23,353 [84fcf] Hangfire.Server.Worker                   - Background process 'Worker #53184fcf' started.
+DEBUG 2017-12-12 20:52:23,448 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'AggregatedCounter' table.
+DEBUG 2017-12-12 20:52:23,448 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Job' table...
+DEBUG 2017-12-12 20:52:23,454 [a71ac] Hangfire.Server.Worker                   - Background process 'Worker #312a71ac' started.
+DEBUG 2017-12-12 20:52:23,471 [01a3f] Hangfire.Server.Worker                   - Background process 'Worker #dd301a3f' started.
+DEBUG 2017-12-12 20:52:23,479 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Job' table.
+DEBUG 2017-12-12 20:52:23,479 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'List' table...
+DEBUG 2017-12-12 20:52:23,494 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'List' table.
+DEBUG 2017-12-12 20:52:23,494 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Set' table...
+DEBUG 2017-12-12 20:52:23,513 [9953a] Hangfire.Server.Worker                   - Background process 'Worker #16b9953a' started.
+DEBUG 2017-12-12 20:52:23,530 [e559f] Hangfire.Server.Worker                   - Background process 'Worker #311e559f' started.
+DEBUG 2017-12-12 20:52:23,542 [58823] Hangfire.Server.Worker                   - Background process 'Worker #69358823' started.
+DEBUG 2017-12-12 20:52:23,555 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Set' table.
+DEBUG 2017-12-12 20:52:23,555 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Hash' table...
+DEBUG 2017-12-12 20:52:23,570 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Hash' table.
+DEBUG 2017-12-12 20:52:23,577 [fc5df] Hangfire.Server.Worker                   - Background process 'Worker #2d8fc5df' started.
+DEBUG 2017-12-12 20:52:23,582 [048cd] Hangfire.Server.Worker                   - Background process 'Worker #0e2048cd' started.
+DEBUG 2017-12-12 20:52:23,597 [ddb91] Hangfire.Server.Worker                   - Background process 'Worker #c1cddb91' started.
+DEBUG 2017-12-12 20:52:23,601 [bd4bc] Hangfire.Server.Worker                   - Background process 'Worker #52ebd4bc' started.
+DEBUG 2017-12-12 20:52:23,639 [639de] Hangfire.Server.Worker                   - Background process 'Worker #667639de' started.
+DEBUG 2017-12-12 20:52:23,642 [ff4bb] Hangfire.Server.Worker                   - Background process 'Worker #342ff4bb' started.
+DEBUG 2017-12-12 20:52:23,660 [5b4bd] Hangfire.Server.Worker                   - Background process 'Worker #b6e5b4bd' started.
+DEBUG 2017-12-12 20:52:23,670 [654ae] Hangfire.Server.Worker                   - Background process 'Worker #d24654ae' started.
+DEBUG 2017-12-12 20:52:23,674 [985e2] Hangfire.Server.Worker                   - Background process 'Worker #a2d985e2' started.
+DEBUG 2017-12-12 20:52:23,691 [e01cb] Hangfire.Server.Worker                   - Background process 'Worker #0b3e01cb' started.
+DEBUG 2017-12-12 20:52:23,722 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2017-12-12 20:52:23,724 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2017-12-12 20:52:23,839 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2017-12-12 20:52:23,843 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2017-12-12 20:52:25,496 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-12-12 20:52:25,497 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-12-12 20:52:25,498 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-12-12 20:52:25,499 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Quartz.ISystemSchedulerService' with service name 'app/systemSchedulerService'.
+DEBUG 2017-12-12 20:52:25,499 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-12-12 20:52:25,501 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-12-12 20:52:25,501 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-12-12 20:52:25,541 [1    ] rviceBase.MakeInactiveUsersPassiveWorker - Start background worker: Castle.Proxies.MakeInactiveUsersPassiveWorkerProxy
+WARN  2017-12-12 20:52:30,378 [5    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+INFO  2017-12-12 20:52:30,797 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:30,797 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:30,797 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:36,614 [22   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:36,614 [22   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:36,614 [22   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:41,756 [18   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:41,756 [18   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:41,756 [18   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+WARN  2017-12-12 20:52:45,706 [20   ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:52:45,710 [20   ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:52:45,714 [20   ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+INFO  2017-12-12 20:52:47,040 [19   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:47,040 [19   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:47,040 [19   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+WARN  2017-12-12 20:52:47,527 [18   ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:52:47,530 [18   ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:52:47,535 [18   ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+DEBUG 2017-12-12 20:52:48,366 [21   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"eefe6e2a-b8aa-471b-8c6d-a1e8b9c2d3af","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-12-12T20:52:48.3630336+08:00","Properties":{}}
+DEBUG 2017-12-12 20:52:48,438 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: eefe6e2a-b8aa-471b-8c6d-a1e8b9c2d3af
+DEBUG 2017-12-12 20:52:50,449 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: eefe6e2a-b8aa-471b-8c6d-a1e8b9c2d3af
+INFO  2017-12-12 20:52:52,237 [19   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:52,237 [19   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:52,237 [19   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:57,340 [24   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:57,340 [24   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:52:57,340 [24   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:53:02,500 [19   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:53:02,500 [19   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:53:02,500 [19   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+WARN  2017-12-12 20:53:04,045 [24   ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:53:04,048 [24   ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:53:04,052 [24   ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:53:04,198 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:53:04,201 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:53:04,204 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+DEBUG 2017-12-12 20:53:04,763 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"9569191e-9950-4ea0-b1ce-4f669150ef12","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-12-12T20:53:04.7638165+08:00","Properties":{}}
+DEBUG 2017-12-12 20:53:04,776 [20   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 9569191e-9950-4ea0-b1ce-4f669150ef12
+WARN  2017-12-12 20:53:07,317 [58   ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:53:07,321 [58   ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:53:07,324 [58   ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+DEBUG 2017-12-12 20:53:07,363 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 9569191e-9950-4ea0-b1ce-4f669150ef12
+WARN  2017-12-12 20:53:07,493 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:53:07,496 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2017-12-12 20:53:07,499 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+INFO  2017-12-12 20:53:07,758 [19   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:53:07,758 [19   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 20:53:07,758 [19   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+DEBUG 2017-12-12 20:53:07,876 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"fb63b4c5-a747-4f3b-91dc-d2143d847074","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-12-12T20:53:07.8765636+08:00","Properties":{}}
+DEBUG 2017-12-12 20:53:07,885 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: fb63b4c5-a747-4f3b-91dc-d2143d847074
+DEBUG 2017-12-12 20:53:07,896 [5    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2017-12-12 20:53:07,897 [5    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2017-12-12 20:53:07,922 [ker-1] Abp.Quartz.AbpQuartzJobListener          - Job MyLogJob executing...
+INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 任务开始运行
+INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行0
+INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行1
+INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行2
+INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行3
+INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行4
+INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行5
+INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行6
+INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行7
+INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行8
+INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行9
+INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob任务运行结束
+DEBUG 2017-12-12 20:53:07,924 [ker-1] Abp.Quartz.AbpQuartzJobListener          - Job MyLogJob sucessfully executed.
