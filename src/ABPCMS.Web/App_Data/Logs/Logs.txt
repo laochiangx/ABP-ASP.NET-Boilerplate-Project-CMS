@@ -706,3 +706,869 @@ INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   -
 INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行9
 INFO  2017-12-12 20:53:07,923 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob任务运行结束
 DEBUG 2017-12-12 20:53:07,924 [ker-1] Abp.Quartz.AbpQuartzJobListener          - Job MyLogJob sucessfully executed.
+DEBUG 2017-12-12 22:34:23,835 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-12-12 22:34:23,867 [1    ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2017-12-12 22:34:23,872 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,874 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:23,880 [1    ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2017-12-12 22:34:24,202 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:34:24,202 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:34:24,202 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:34:24,202 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2017-12-12 22:34:27,042 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2017-12-12 22:34:27,395 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2017-12-12 22:34:27,553 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:34:28,378 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-12-12 22:34:28,406 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-12-12 22:34:28,415 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-12-12 22:34:28,417 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-12-12 22:34:28,419 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-12-12 22:34:28,428 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2017-12-12 22:34:28,438 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2017-12-12 22:34:28,445 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: DESKTOP-M6UULM4\SA@cmsabp'
+INFO  2017-12-12 22:34:28,445 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2017-12-12 22:34:28,445 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2017-12-12 22:34:28,445 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2017-12-12 22:34:28,445 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2017-12-12 22:34:28,445 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2017-12-12 22:34:28,445 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2017-12-12 22:34:28,445 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+DEBUG 2017-12-12 22:34:28,466 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2017-12-12 22:34:28,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-12-12 22:34:28,530 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-12-12 22:34:28,535 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-12-12 22:34:28,535 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-12-12 22:34:28,535 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-12-12 22:34:28,535 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-12-12 22:34:28,535 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-12-12 22:34:28,535 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-12-12 22:34:28,535 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-12-12 22:34:28,535 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-12-12 22:34:28,536 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-12-12 22:34:28,536 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-12-12 22:34:28,536 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-12-12 22:34:28,536 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-12-12 22:34:28,717 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2017-12-12 22:34:28,724 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2017-12-12 22:34:28,734 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2017-12-12 22:34:28,754 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'AggregatedCounter' table...
+DEBUG 2017-12-12 22:34:28,758 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+INFO  2017-12-12 22:34:28,760 [chdog] Hangfire.Server.ServerWatchdog           - 1 servers were removed due to timeout
+DEBUG 2017-12-12 22:34:28,762 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2017-12-12 22:34:28,764 [267ef] Hangfire.Server.Worker                   - Background process 'Worker #aba267ef' started.
+DEBUG 2017-12-12 22:34:28,808 [937e2] Hangfire.Server.Worker                   - Background process 'Worker #87a937e2' started.
+DEBUG 2017-12-12 22:34:28,811 [ed52d] Hangfire.Server.Worker                   - Background process 'Worker #7aaed52d' started.
+DEBUG 2017-12-12 22:34:28,815 [23d26] Hangfire.Server.Worker                   - Background process 'Worker #5e123d26' started.
+DEBUG 2017-12-12 22:34:28,827 [7dac7] Hangfire.Server.Worker                   - Background process 'Worker #05c7dac7' started.
+DEBUG 2017-12-12 22:34:28,856 [9136a] Hangfire.Server.Worker                   - Background process 'Worker #d9b9136a' started.
+DEBUG 2017-12-12 22:34:28,979 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'AggregatedCounter' table.
+DEBUG 2017-12-12 22:34:28,979 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Job' table...
+DEBUG 2017-12-12 22:34:28,980 [64c6d] Hangfire.Server.Worker                   - Background process 'Worker #f9864c6d' started.
+DEBUG 2017-12-12 22:34:29,014 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Job' table.
+DEBUG 2017-12-12 22:34:29,014 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'List' table...
+DEBUG 2017-12-12 22:34:29,045 [61bf9] Hangfire.Server.Worker                   - Background process 'Worker #42d61bf9' started.
+DEBUG 2017-12-12 22:34:29,076 [afe9e] Hangfire.Server.Worker                   - Background process 'Worker #03eafe9e' started.
+DEBUG 2017-12-12 22:34:29,102 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2017-12-12 22:34:29,106 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'List' table.
+DEBUG 2017-12-12 22:34:29,106 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Set' table...
+DEBUG 2017-12-12 22:34:29,107 [c1649] Hangfire.Server.Worker                   - Background process 'Worker #32bc1649' started.
+DEBUG 2017-12-12 22:34:29,117 [16d64] Hangfire.Server.Worker                   - Background process 'Worker #7ce16d64' started.
+DEBUG 2017-12-12 22:34:29,157 [25085] Hangfire.Server.Worker                   - Background process 'Worker #8db25085' started.
+DEBUG 2017-12-12 22:34:29,159 [9e03c] Hangfire.Server.Worker                   - Background process 'Worker #e779e03c' started.
+DEBUG 2017-12-12 22:34:29,174 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Set' table.
+DEBUG 2017-12-12 22:34:29,175 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Hash' table...
+DEBUG 2017-12-12 22:34:29,191 [bcaa6] Hangfire.Server.Worker                   - Background process 'Worker #db7bcaa6' started.
+DEBUG 2017-12-12 22:34:29,195 [67afc] Hangfire.Server.Worker                   - Background process 'Worker #75667afc' started.
+DEBUG 2017-12-12 22:34:29,213 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Hash' table.
+DEBUG 2017-12-12 22:34:29,221 [3340a] Hangfire.Server.Worker                   - Background process 'Worker #34a3340a' started.
+DEBUG 2017-12-12 22:34:29,231 [2cc45] Hangfire.Server.Worker                   - Background process 'Worker #f042cc45' started.
+DEBUG 2017-12-12 22:34:29,249 [3e828] Hangfire.Server.Worker                   - Background process 'Worker #32d3e828' started.
+DEBUG 2017-12-12 22:34:29,268 [77a20] Hangfire.Server.Worker                   - Background process 'Worker #2e977a20' started.
+DEBUG 2017-12-12 22:34:29,281 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2017-12-12 22:34:29,283 [160f4] Hangfire.Server.Worker                   - Background process 'Worker #c29160f4' started.
+DEBUG 2017-12-12 22:34:29,322 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2017-12-12 22:34:29,429 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2017-12-12 22:34:29,432 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2017-12-12 22:34:31,170 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-12-12 22:34:31,170 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-12-12 22:34:31,171 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-12-12 22:34:31,172 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Quartz.ISystemSchedulerService' with service name 'app/systemSchedulerService'.
+DEBUG 2017-12-12 22:34:31,173 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-12-12 22:34:31,174 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-12-12 22:34:31,175 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-12-12 22:34:31,207 [1    ] rviceBase.MakeInactiveUsersPassiveWorker - Start background worker: Castle.Proxies.MakeInactiveUsersPassiveWorkerProxy
+FATAL 2017-12-12 22:35:02,873 [1    ] Abp.AbpBootstrapper                      - Shouldly.ShouldAssertException: helloDependency.ExecutionCount
+    should be greater than
+0
+    but was
+0
+   在 Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected, Func`1 customMessage, String shouldlyMethod)
+   在 Shouldly.ShouldBeTestExtensions.ShouldBeGreaterThan[T](T actual, T expected, Func`1 customMessage)
+   在 Shouldly.ShouldBeTestExtensions.ShouldBeGreaterThan[T](T actual, T expected)
+   在 ABPCMS.Web.ABPCMSWebModule.PostInitialize() 位置 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\App_Start\ABPCMSWebModule.cs:行号 98
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules()
+   在 Abp.AbpBootstrapper.Initialize()
+Shouldly.ShouldAssertException: helloDependency.ExecutionCount
+    should be greater than
+0
+    but was
+0
+   在 Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected, Func`1 customMessage, String shouldlyMethod)
+   在 Shouldly.ShouldBeTestExtensions.ShouldBeGreaterThan[T](T actual, T expected, Func`1 customMessage)
+   在 Shouldly.ShouldBeTestExtensions.ShouldBeGreaterThan[T](T actual, T expected)
+   在 ABPCMS.Web.ABPCMSWebModule.PostInitialize() 位置 G:\github合集\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\App_Start\ABPCMSWebModule.cs:行号 98
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules()
+   在 Abp.AbpBootstrapper.Initialize()
+INFO  2017-12-12 22:35:11,212 [8    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:35:11,212 [8    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:35:11,212 [8    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:35:16,733 [10   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:35:16,733 [10   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:35:16,733 [10   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+DEBUG 2017-12-12 22:35:16,947 [60   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-12-12 22:35:16,947 [60   ] bp.Hangfire.HangfireBackgroundJobManager - Stop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2017-12-12 22:35:16,947 [60   ] Abp.Quartz.QuartzScheduleJobManager      - Stop background worker: Abp.Quartz.QuartzScheduleJobManager
+DEBUG 2017-12-12 22:35:16,948 [60   ] rviceBase.MakeInactiveUsersPassiveWorker - Stop background worker: Castle.Proxies.MakeInactiveUsersPassiveWorkerProxy
+DEBUG 2017-12-12 22:35:16,949 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' stopped.
+DEBUG 2017-12-12 22:35:16,957 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' stopped.
+DEBUG 2017-12-12 22:35:16,958 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' stopped.
+DEBUG 2017-12-12 22:35:16,966 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' stopped.
+DEBUG 2017-12-12 22:35:17,087 [67afc] Hangfire.Server.Worker                   - Background process 'Worker #75667afc' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,087 [67afc] Hangfire.Server.Worker                   - Background process 'Worker #75667afc' stopped.
+DEBUG 2017-12-12 22:35:17,100 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' stopped.
+DEBUG 2017-12-12 22:35:17,193 [9136a] Hangfire.Server.Worker                   - Background process 'Worker #d9b9136a' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,193 [2cc45] Hangfire.Server.Worker                   - Background process 'Worker #f042cc45' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,193 [9136a] Hangfire.Server.Worker                   - Background process 'Worker #d9b9136a' stopped.
+DEBUG 2017-12-12 22:35:17,193 [2cc45] Hangfire.Server.Worker                   - Background process 'Worker #f042cc45' stopped.
+DEBUG 2017-12-12 22:35:17,193 [160f4] Hangfire.Server.Worker                   - Background process 'Worker #c29160f4' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,193 [160f4] Hangfire.Server.Worker                   - Background process 'Worker #c29160f4' stopped.
+DEBUG 2017-12-12 22:35:17,193 [bcaa6] Hangfire.Server.Worker                   - Background process 'Worker #db7bcaa6' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,194 [bcaa6] Hangfire.Server.Worker                   - Background process 'Worker #db7bcaa6' stopped.
+DEBUG 2017-12-12 22:35:17,193 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,194 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' stopped.
+DEBUG 2017-12-12 22:35:17,227 [64c6d] Hangfire.Server.Worker                   - Background process 'Worker #f9864c6d' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,227 [64c6d] Hangfire.Server.Worker                   - Background process 'Worker #f9864c6d' stopped.
+DEBUG 2017-12-12 22:35:17,227 [77a20] Hangfire.Server.Worker                   - Background process 'Worker #2e977a20' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,227 [77a20] Hangfire.Server.Worker                   - Background process 'Worker #2e977a20' stopped.
+DEBUG 2017-12-12 22:35:17,456 [9e03c] Hangfire.Server.Worker                   - Background process 'Worker #e779e03c' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,456 [9e03c] Hangfire.Server.Worker                   - Background process 'Worker #e779e03c' stopped.
+DEBUG 2017-12-12 22:35:17,456 [16d64] Hangfire.Server.Worker                   - Background process 'Worker #7ce16d64' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,456 [16d64] Hangfire.Server.Worker                   - Background process 'Worker #7ce16d64' stopped.
+DEBUG 2017-12-12 22:35:17,456 [61bf9] Hangfire.Server.Worker                   - Background process 'Worker #42d61bf9' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,456 [937e2] Hangfire.Server.Worker                   - Background process 'Worker #87a937e2' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,456 [61bf9] Hangfire.Server.Worker                   - Background process 'Worker #42d61bf9' stopped.
+DEBUG 2017-12-12 22:35:17,456 [937e2] Hangfire.Server.Worker                   - Background process 'Worker #87a937e2' stopped.
+DEBUG 2017-12-12 22:35:17,459 [3340a] Hangfire.Server.Worker                   - Background process 'Worker #34a3340a' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,459 [3340a] Hangfire.Server.Worker                   - Background process 'Worker #34a3340a' stopped.
+DEBUG 2017-12-12 22:35:17,462 [3e828] Hangfire.Server.Worker                   - Background process 'Worker #32d3e828' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,462 [3e828] Hangfire.Server.Worker                   - Background process 'Worker #32d3e828' stopped.
+DEBUG 2017-12-12 22:35:17,522 [23d26] Hangfire.Server.Worker                   - Background process 'Worker #5e123d26' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,522 [267ef] Hangfire.Server.Worker                   - Background process 'Worker #aba267ef' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,522 [7dac7] Hangfire.Server.Worker                   - Background process 'Worker #05c7dac7' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,522 [267ef] Hangfire.Server.Worker                   - Background process 'Worker #aba267ef' stopped.
+DEBUG 2017-12-12 22:35:17,522 [c1649] Hangfire.Server.Worker                   - Background process 'Worker #32bc1649' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,522 [23d26] Hangfire.Server.Worker                   - Background process 'Worker #5e123d26' stopped.
+DEBUG 2017-12-12 22:35:17,522 [c1649] Hangfire.Server.Worker                   - Background process 'Worker #32bc1649' stopped.
+DEBUG 2017-12-12 22:35:17,522 [25085] Hangfire.Server.Worker                   - Background process 'Worker #8db25085' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,523 [25085] Hangfire.Server.Worker                   - Background process 'Worker #8db25085' stopped.
+DEBUG 2017-12-12 22:35:17,522 [7dac7] Hangfire.Server.Worker                   - Background process 'Worker #05c7dac7' stopped.
+DEBUG 2017-12-12 22:35:17,522 [afe9e] Hangfire.Server.Worker                   - Background process 'Worker #03eafe9e' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,523 [afe9e] Hangfire.Server.Worker                   - Background process 'Worker #03eafe9e' stopped.
+DEBUG 2017-12-12 22:35:17,587 [ed52d] Hangfire.Server.Worker                   - Background process 'Worker #7aaed52d' was stopped due to a shutdown request.
+DEBUG 2017-12-12 22:35:17,587 [ed52d] Hangfire.Server.Worker                   - Background process 'Worker #7aaed52d' stopped.
+DEBUG 2017-12-12 22:35:17,750 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' stopped.
+INFO  2017-12-12 22:35:17,751 [60   ] Hangfire.BackgroundJobServer             - Hangfire Server stopped.
+DEBUG 2017-12-12 22:35:17,751 [60   ] bp.Hangfire.HangfireBackgroundJobManager - WaitToStop background worker: Abp.Hangfire.HangfireBackgroundJobManager
+DEBUG 2017-12-12 22:35:18,032 [60   ] Abp.Quartz.QuartzScheduleJobManager      - WaitToStop background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2017-12-12 22:35:18,032 [60   ] Abp.Quartz.QuartzScheduleJobManager      - Stopped QuartzScheduleJobManager
+DEBUG 2017-12-12 22:35:18,033 [60   ] rviceBase.MakeInactiveUsersPassiveWorker - WaitToStop background worker: Castle.Proxies.MakeInactiveUsersPassiveWorkerProxy
+DEBUG 2017-12-12 22:35:18,033 [60   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-12-12 22:36:03,543 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-12-12 22:36:03,577 [1    ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2017-12-12 22:36:03,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,590 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,591 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,591 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,591 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,591 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,591 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,591 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,591 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,592 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:03,596 [1    ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2017-12-12 22:36:03,885 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:36:03,885 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:36:03,885 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:36:03,885 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2017-12-12 22:36:06,840 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2017-12-12 22:36:07,149 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2017-12-12 22:36:07,259 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:36:08,078 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-12-12 22:36:08,103 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-12-12 22:36:08,110 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-12-12 22:36:08,112 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-12-12 22:36:08,113 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-12-12 22:36:08,119 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2017-12-12 22:36:08,125 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2017-12-12 22:36:08,129 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: DESKTOP-M6UULM4\SA@cmsabp'
+INFO  2017-12-12 22:36:08,129 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2017-12-12 22:36:08,129 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2017-12-12 22:36:08,129 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2017-12-12 22:36:08,129 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2017-12-12 22:36:08,129 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2017-12-12 22:36:08,129 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2017-12-12 22:36:08,129 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+DEBUG 2017-12-12 22:36:08,145 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2017-12-12 22:36:08,200 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-12-12 22:36:08,200 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-12-12 22:36:08,205 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-12-12 22:36:08,205 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-12-12 22:36:08,206 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-12-12 22:36:08,206 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-12-12 22:36:08,206 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-12-12 22:36:08,206 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-12-12 22:36:08,206 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-12-12 22:36:08,206 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-12-12 22:36:08,206 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-12-12 22:36:08,206 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-12-12 22:36:08,206 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-12-12 22:36:08,206 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-12-12 22:36:08,372 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2017-12-12 22:36:08,379 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2017-12-12 22:36:08,407 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2017-12-12 22:36:08,413 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'AggregatedCounter' table...
+DEBUG 2017-12-12 22:36:08,426 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+DEBUG 2017-12-12 22:36:08,427 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2017-12-12 22:36:08,435 [6ba8a] Hangfire.Server.Worker                   - Background process 'Worker #c0b6ba8a' started.
+DEBUG 2017-12-12 22:36:08,441 [ec476] Hangfire.Server.Worker                   - Background process 'Worker #143ec476' started.
+DEBUG 2017-12-12 22:36:08,446 [90c2b] Hangfire.Server.Worker                   - Background process 'Worker #30390c2b' started.
+DEBUG 2017-12-12 22:36:08,453 [6e004] Hangfire.Server.Worker                   - Background process 'Worker #c366e004' started.
+DEBUG 2017-12-12 22:36:08,466 [0547f] Hangfire.Server.Worker                   - Background process 'Worker #ec10547f' started.
+DEBUG 2017-12-12 22:36:08,474 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'AggregatedCounter' table.
+DEBUG 2017-12-12 22:36:08,474 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Job' table...
+DEBUG 2017-12-12 22:36:08,475 [37a1b] Hangfire.Server.Worker                   - Background process 'Worker #7aa37a1b' started.
+DEBUG 2017-12-12 22:36:08,475 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2017-12-12 22:36:08,492 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Job' table.
+DEBUG 2017-12-12 22:36:08,492 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'List' table...
+DEBUG 2017-12-12 22:36:08,561 [b7423] Hangfire.Server.Worker                   - Background process 'Worker #e5bb7423' started.
+DEBUG 2017-12-12 22:36:08,587 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'List' table.
+DEBUG 2017-12-12 22:36:08,587 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Set' table...
+DEBUG 2017-12-12 22:36:08,651 [8543e] Hangfire.Server.Worker                   - Background process 'Worker #7c58543e' started.
+DEBUG 2017-12-12 22:36:08,691 [f05c1] Hangfire.Server.Worker                   - Background process 'Worker #b2ef05c1' started.
+DEBUG 2017-12-12 22:36:08,734 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Set' table.
+DEBUG 2017-12-12 22:36:08,734 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Hash' table...
+DEBUG 2017-12-12 22:36:08,748 [503c2] Hangfire.Server.Worker                   - Background process 'Worker #324503c2' started.
+DEBUG 2017-12-12 22:36:08,754 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Hash' table.
+DEBUG 2017-12-12 22:36:08,759 [d462f] Hangfire.Server.Worker                   - Background process 'Worker #fe3d462f' started.
+DEBUG 2017-12-12 22:36:08,775 [8af18] Hangfire.Server.Worker                   - Background process 'Worker #5b88af18' started.
+DEBUG 2017-12-12 22:36:08,781 [8227f] Hangfire.Server.Worker                   - Background process 'Worker #4928227f' started.
+DEBUG 2017-12-12 22:36:08,795 [65ec2] Hangfire.Server.Worker                   - Background process 'Worker #b7065ec2' started.
+DEBUG 2017-12-12 22:36:08,798 [df6e6] Hangfire.Server.Worker                   - Background process 'Worker #716df6e6' started.
+DEBUG 2017-12-12 22:36:08,827 [0921f] Hangfire.Server.Worker                   - Background process 'Worker #8790921f' started.
+DEBUG 2017-12-12 22:36:08,838 [5e868] Hangfire.Server.Worker                   - Background process 'Worker #e865e868' started.
+DEBUG 2017-12-12 22:36:08,842 [5efe8] Hangfire.Server.Worker                   - Background process 'Worker #d425efe8' started.
+DEBUG 2017-12-12 22:36:08,858 [fa78e] Hangfire.Server.Worker                   - Background process 'Worker #940fa78e' started.
+DEBUG 2017-12-12 22:36:08,864 [1adf6] Hangfire.Server.Worker                   - Background process 'Worker #2921adf6' started.
+DEBUG 2017-12-12 22:36:08,882 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2017-12-12 22:36:08,915 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2017-12-12 22:36:09,017 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2017-12-12 22:36:09,020 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2017-12-12 22:36:10,655 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-12-12 22:36:10,656 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-12-12 22:36:10,656 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-12-12 22:36:10,657 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Quartz.ISystemSchedulerService' with service name 'app/systemSchedulerService'.
+DEBUG 2017-12-12 22:36:10,658 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-12-12 22:36:10,658 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-12-12 22:36:10,660 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-12-12 22:36:10,695 [1    ] rviceBase.MakeInactiveUsersPassiveWorker - Start background worker: Castle.Proxies.MakeInactiveUsersPassiveWorkerProxy
+WARN  2017-12-12 22:36:14,798 [9    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+INFO  2017-12-12 22:36:19,553 [9    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:36:19,553 [9    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:36:19,553 [9    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:36:25,001 [9    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:36:25,001 [9    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:36:25,001 [9    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:36:30,122 [14   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:36:30,122 [14   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:36:30,122 [14   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+WARN  2017-12-12 22:36:33,996 [13   ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2017-12-12 22:36:34,000 [13   ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2017-12-12 22:36:34,004 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+INFO  2017-12-12 22:36:35,235 [15   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:36:35,235 [15   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:36:35,235 [15   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+WARN  2017-12-12 22:36:36,059 [15   ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2017-12-12 22:36:36,062 [15   ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2017-12-12 22:36:36,065 [15   ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+DEBUG 2017-12-12 22:36:36,903 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"25399e93-d169-46d1-8905-3a070a1b8d03","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-12-12T22:36:36.8984627+08:00","Properties":{}}
+DEBUG 2017-12-12 22:36:36,965 [10   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 25399e93-d169-46d1-8905-3a070a1b8d03
+INFO  2017-12-12 22:36:40,347 [11   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:36:40,347 [11   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:36:40,347 [11   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+WARN  2017-12-12 22:36:41,001 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2017-12-12 22:36:41,005 [5    ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2017-12-12 22:36:41,009 [5    ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+DEBUG 2017-12-12 22:36:41,045 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 25399e93-d169-46d1-8905-3a070a1b8d03
+WARN  2017-12-12 22:36:41,163 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2017-12-12 22:36:41,165 [9    ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2017-12-12 22:36:41,168 [9    ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+DEBUG 2017-12-12 22:36:41,538 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"4d4606e5-5963-4461-ae07-39d28823fd64","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2017-12-12T22:36:41.5385574+08:00","Properties":{}}
+DEBUG 2017-12-12 22:36:41,555 [10   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 4d4606e5-5963-4461-ae07-39d28823fd64
+DEBUG 2017-12-12 22:36:41,562 [11   ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2017-12-12 22:36:41,562 [11   ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2017-12-12 22:36:41,585 [ker-1] Abp.Quartz.AbpQuartzJobListener          - Job MyLogJob executing...
+INFO  2017-12-12 22:36:41,586 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 任务开始运行
+INFO  2017-12-12 22:36:41,586 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行0
+INFO  2017-12-12 22:36:41,586 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行1
+INFO  2017-12-12 22:36:41,586 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行2
+INFO  2017-12-12 22:36:41,586 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行3
+INFO  2017-12-12 22:36:41,586 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行4
+INFO  2017-12-12 22:36:41,586 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行5
+INFO  2017-12-12 22:36:41,586 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行6
+INFO  2017-12-12 22:36:41,586 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行7
+INFO  2017-12-12 22:36:41,586 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行8
+INFO  2017-12-12 22:36:41,586 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob 正在运行9
+INFO  2017-12-12 22:36:41,586 [ker-1] ABPCMS.Quartz.MyLogJob                   - QuartzJob任务运行结束
+DEBUG 2017-12-12 22:36:41,587 [ker-1] Abp.Quartz.AbpQuartzJobListener          - Job MyLogJob sucessfully executed.
+DEBUG 2017-12-12 22:43:53,255 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-12-12 22:43:53,268 [1    ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2017-12-12 22:43:53,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,275 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,275 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,275 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,275 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,275 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,277 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,277 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,277 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,277 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,277 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:53,280 [1    ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2017-12-12 22:43:53,543 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:43:53,543 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:43:53,543 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:43:53,543 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2017-12-12 22:43:56,198 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2017-12-12 22:43:56,511 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2017-12-12 22:43:56,616 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:43:57,289 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-12-12 22:43:57,320 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-12-12 22:43:57,326 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-12-12 22:43:57,328 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-12-12 22:43:57,329 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-12-12 22:43:57,336 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2017-12-12 22:43:57,341 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2017-12-12 22:43:57,350 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: DESKTOP-M6UULM4\SA@cmsabp'
+INFO  2017-12-12 22:43:57,350 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2017-12-12 22:43:57,350 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2017-12-12 22:43:57,350 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2017-12-12 22:43:57,350 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2017-12-12 22:43:57,350 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2017-12-12 22:43:57,350 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2017-12-12 22:43:57,350 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+DEBUG 2017-12-12 22:43:57,366 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2017-12-12 22:43:57,413 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-12-12 22:43:57,413 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-12-12 22:43:57,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-12-12 22:43:57,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-12-12 22:43:57,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-12-12 22:43:57,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-12-12 22:43:57,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-12-12 22:43:57,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-12-12 22:43:57,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-12-12 22:43:57,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-12-12 22:43:57,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-12-12 22:43:57,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-12-12 22:43:57,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-12-12 22:43:57,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-12-12 22:43:57,582 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2017-12-12 22:43:57,590 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2017-12-12 22:43:57,600 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2017-12-12 22:43:57,649 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'AggregatedCounter' table...
+DEBUG 2017-12-12 22:43:57,649 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+INFO  2017-12-12 22:43:57,651 [chdog] Hangfire.Server.ServerWatchdog           - 1 servers were removed due to timeout
+DEBUG 2017-12-12 22:43:57,676 [1f0a3] Hangfire.Server.Worker                   - Background process 'Worker #2ed1f0a3' started.
+DEBUG 2017-12-12 22:43:57,676 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2017-12-12 22:43:57,695 [47969] Hangfire.Server.Worker                   - Background process 'Worker #a7047969' started.
+DEBUG 2017-12-12 22:43:57,707 [508f0] Hangfire.Server.Worker                   - Background process 'Worker #f93508f0' started.
+DEBUG 2017-12-12 22:43:57,730 [b1f5e] Hangfire.Server.Worker                   - Background process 'Worker #00ab1f5e' started.
+DEBUG 2017-12-12 22:43:57,730 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2017-12-12 22:43:57,779 [5448a] Hangfire.Server.Worker                   - Background process 'Worker #4875448a' started.
+DEBUG 2017-12-12 22:43:57,800 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'AggregatedCounter' table.
+DEBUG 2017-12-12 22:43:57,800 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Job' table...
+DEBUG 2017-12-12 22:43:57,801 [a3f4e] Hangfire.Server.Worker                   - Background process 'Worker #8bba3f4e' started.
+DEBUG 2017-12-12 22:43:57,839 [410aa] Hangfire.Server.Worker                   - Background process 'Worker #86a410aa' started.
+DEBUG 2017-12-12 22:43:57,886 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Job' table.
+DEBUG 2017-12-12 22:43:57,886 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'List' table...
+DEBUG 2017-12-12 22:43:57,899 [f29f8] Hangfire.Server.Worker                   - Background process 'Worker #c0bf29f8' started.
+DEBUG 2017-12-12 22:43:57,913 [ea66e] Hangfire.Server.Worker                   - Background process 'Worker #a35ea66e' started.
+DEBUG 2017-12-12 22:43:57,914 [7930b] Hangfire.Server.Worker                   - Background process 'Worker #0617930b' started.
+DEBUG 2017-12-12 22:43:57,923 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'List' table.
+DEBUG 2017-12-12 22:43:57,923 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Set' table...
+DEBUG 2017-12-12 22:43:57,944 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Set' table.
+DEBUG 2017-12-12 22:43:57,944 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Hash' table...
+DEBUG 2017-12-12 22:43:57,963 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Hash' table.
+DEBUG 2017-12-12 22:43:57,972 [d2a93] Hangfire.Server.Worker                   - Background process 'Worker #91bd2a93' started.
+DEBUG 2017-12-12 22:43:57,985 [b14dd] Hangfire.Server.Worker                   - Background process 'Worker #faab14dd' started.
+DEBUG 2017-12-12 22:43:57,998 [c751e] Hangfire.Server.Worker                   - Background process 'Worker #e99c751e' started.
+DEBUG 2017-12-12 22:43:58,012 [3caec] Hangfire.Server.Worker                   - Background process 'Worker #00d3caec' started.
+DEBUG 2017-12-12 22:43:58,018 [a7dab] Hangfire.Server.Worker                   - Background process 'Worker #006a7dab' started.
+DEBUG 2017-12-12 22:43:58,038 [be8fb] Hangfire.Server.Worker                   - Background process 'Worker #578be8fb' started.
+DEBUG 2017-12-12 22:43:58,047 [1aff5] Hangfire.Server.Worker                   - Background process 'Worker #1571aff5' started.
+DEBUG 2017-12-12 22:43:58,051 [9c148] Hangfire.Server.Worker                   - Background process 'Worker #8939c148' started.
+DEBUG 2017-12-12 22:43:58,053 [51f08] Hangfire.Server.Worker                   - Background process 'Worker #90051f08' started.
+DEBUG 2017-12-12 22:43:58,074 [35557] Hangfire.Server.Worker                   - Background process 'Worker #13335557' started.
+DEBUG 2017-12-12 22:43:58,078 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2017-12-12 22:43:58,110 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2017-12-12 22:43:58,197 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2017-12-12 22:43:58,201 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2017-12-12 22:43:59,637 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-12-12 22:43:59,638 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-12-12 22:43:59,639 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-12-12 22:43:59,639 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Quartz.ISystemSchedulerService' with service name 'app/systemSchedulerService'.
+DEBUG 2017-12-12 22:43:59,641 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-12-12 22:43:59,642 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-12-12 22:43:59,642 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-12-12 22:43:59,673 [1    ] rviceBase.MakeInactiveUsersPassiveWorker - Start background worker: Castle.Proxies.MakeInactiveUsersPassiveWorkerProxy
+INFO  2017-12-12 22:44:15,584 [8    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:44:15,585 [8    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:44:15,585 [8    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:44:22,480 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:44:22,480 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:44:22,480 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+DEBUG 2017-12-12 22:46:09,218 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-12-12 22:46:09,234 [1    ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2017-12-12 22:46:09,241 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,243 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,244 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,245 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,245 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,245 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,245 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,245 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,245 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,245 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,246 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,246 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,246 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,246 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,246 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,246 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,246 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:09,250 [1    ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2017-12-12 22:46:09,551 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:46:09,551 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:46:09,551 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:46:09,551 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2017-12-12 22:46:12,151 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2017-12-12 22:46:14,101 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2017-12-12 22:46:14,218 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:46:15,150 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-12-12 22:46:15,176 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-12-12 22:46:15,184 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-12-12 22:46:15,187 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-12-12 22:46:15,194 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-12-12 22:46:15,202 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2017-12-12 22:46:15,210 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2017-12-12 22:46:15,216 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: DESKTOP-M6UULM4\SA@cmsabp'
+INFO  2017-12-12 22:46:15,217 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2017-12-12 22:46:15,217 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2017-12-12 22:46:15,217 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2017-12-12 22:46:15,217 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2017-12-12 22:46:15,217 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2017-12-12 22:46:15,217 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2017-12-12 22:46:15,217 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+DEBUG 2017-12-12 22:46:15,238 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2017-12-12 22:46:15,290 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-12-12 22:46:15,290 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-12-12 22:46:15,295 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-12-12 22:46:15,295 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-12-12 22:46:15,295 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-12-12 22:46:15,295 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-12-12 22:46:15,295 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-12-12 22:46:15,295 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-12-12 22:46:15,295 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-12-12 22:46:15,295 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-12-12 22:46:15,295 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-12-12 22:46:15,295 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-12-12 22:46:15,295 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-12-12 22:46:15,295 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-12-12 22:46:15,430 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2017-12-12 22:46:15,438 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2017-12-12 22:46:15,444 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2017-12-12 22:46:15,448 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'AggregatedCounter' table...
+DEBUG 2017-12-12 22:46:15,449 [925d0] Hangfire.Server.Worker                   - Background process 'Worker #748925d0' started.
+DEBUG 2017-12-12 22:46:15,460 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+DEBUG 2017-12-12 22:46:15,464 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2017-12-12 22:46:15,465 [1c0f4] Hangfire.Server.Worker                   - Background process 'Worker #d7e1c0f4' started.
+DEBUG 2017-12-12 22:46:15,507 [268f0] Hangfire.Server.Worker                   - Background process 'Worker #4b5268f0' started.
+DEBUG 2017-12-12 22:46:15,509 [8dbf2] Hangfire.Server.Worker                   - Background process 'Worker #dd78dbf2' started.
+DEBUG 2017-12-12 22:46:15,509 [32476] Hangfire.Server.Worker                   - Background process 'Worker #3e032476' started.
+DEBUG 2017-12-12 22:46:15,516 [c9273] Hangfire.Server.Worker                   - Background process 'Worker #b0ec9273' started.
+DEBUG 2017-12-12 22:46:15,528 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2017-12-12 22:46:15,573 [32999] Hangfire.Server.Worker                   - Background process 'Worker #b1232999' started.
+DEBUG 2017-12-12 22:46:15,575 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'AggregatedCounter' table.
+DEBUG 2017-12-12 22:46:15,575 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Job' table...
+DEBUG 2017-12-12 22:46:15,618 [607af] Hangfire.Server.Worker                   - Background process 'Worker #860607af' started.
+DEBUG 2017-12-12 22:46:15,618 [37b34] Hangfire.Server.Worker                   - Background process 'Worker #b4737b34' started.
+DEBUG 2017-12-12 22:46:15,662 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Job' table.
+DEBUG 2017-12-12 22:46:15,662 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'List' table...
+DEBUG 2017-12-12 22:46:15,674 [a3f25] Hangfire.Server.Worker                   - Background process 'Worker #135a3f25' started.
+DEBUG 2017-12-12 22:46:15,688 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'List' table.
+DEBUG 2017-12-12 22:46:15,689 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Set' table...
+DEBUG 2017-12-12 22:46:15,710 [d8716] Hangfire.Server.Worker                   - Background process 'Worker #677d8716' started.
+DEBUG 2017-12-12 22:46:15,724 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Set' table.
+DEBUG 2017-12-12 22:46:15,724 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Hash' table...
+DEBUG 2017-12-12 22:46:15,741 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Hash' table.
+DEBUG 2017-12-12 22:46:15,748 [9b0cf] Hangfire.Server.Worker                   - Background process 'Worker #a2c9b0cf' started.
+DEBUG 2017-12-12 22:46:15,752 [17f0d] Hangfire.Server.Worker                   - Background process 'Worker #54217f0d' started.
+DEBUG 2017-12-12 22:46:15,756 [8c54f] Hangfire.Server.Worker                   - Background process 'Worker #dad8c54f' started.
+DEBUG 2017-12-12 22:46:15,779 [3d701] Hangfire.Server.Worker                   - Background process 'Worker #8a33d701' started.
+DEBUG 2017-12-12 22:46:15,784 [9eb9e] Hangfire.Server.Worker                   - Background process 'Worker #3369eb9e' started.
+DEBUG 2017-12-12 22:46:15,798 [c71d6] Hangfire.Server.Worker                   - Background process 'Worker #808c71d6' started.
+DEBUG 2017-12-12 22:46:15,838 [f6eae] Hangfire.Server.Worker                   - Background process 'Worker #5fdf6eae' started.
+DEBUG 2017-12-12 22:46:15,846 [47eb5] Hangfire.Server.Worker                   - Background process 'Worker #5e347eb5' started.
+DEBUG 2017-12-12 22:46:15,857 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2017-12-12 22:46:15,882 [109ba] Hangfire.Server.Worker                   - Background process 'Worker #05e109ba' started.
+DEBUG 2017-12-12 22:46:15,890 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2017-12-12 22:46:16,031 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2017-12-12 22:46:16,034 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2017-12-12 22:46:17,641 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-12-12 22:46:17,642 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-12-12 22:46:17,643 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-12-12 22:46:17,643 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Quartz.ISystemSchedulerService' with service name 'app/systemSchedulerService'.
+DEBUG 2017-12-12 22:46:17,644 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-12-12 22:46:17,645 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-12-12 22:46:17,646 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-12-12 22:46:17,675 [1    ] rviceBase.MakeInactiveUsersPassiveWorker - Start background worker: Castle.Proxies.MakeInactiveUsersPassiveWorkerProxy
+INFO  2017-12-12 22:46:27,399 [9    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:27,399 [9    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:27,399 [9    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+WARN  2017-12-12 22:46:31,561 [5    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+INFO  2017-12-12 22:46:32,939 [8    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:32,940 [8    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:32,941 [8    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:38,082 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:38,082 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:38,082 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:43,188 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:43,188 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:43,188 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:48,282 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:48,282 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:48,282 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:53,373 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:53,373 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:53,373 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:58,504 [9    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:58,504 [9    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:46:58,504 [9    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+DEBUG 2017-12-12 22:48:04,448 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-12-12 22:48:04,476 [1    ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2017-12-12 22:48:04,481 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,486 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,487 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:04,490 [1    ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2017-12-12 22:48:04,785 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:48:04,786 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:48:04,786 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-12-12 22:48:04,786 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2017-12-12 22:48:07,595 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2017-12-12 22:48:07,767 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2017-12-12 22:48:07,885 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-12-12 22:48:08,688 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-12-12 22:48:08,712 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-12-12 22:48:08,724 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-12-12 22:48:08,726 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2017-12-12 22:48:08,728 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-12-12 22:48:08,734 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2017-12-12 22:48:08,742 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2017-12-12 22:48:08,746 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: DESKTOP-M6UULM4\SA@cmsabp'
+INFO  2017-12-12 22:48:08,746 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2017-12-12 22:48:08,746 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2017-12-12 22:48:08,746 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2017-12-12 22:48:08,746 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2017-12-12 22:48:08,747 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2017-12-12 22:48:08,747 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2017-12-12 22:48:08,747 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+DEBUG 2017-12-12 22:48:08,763 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2017-12-12 22:48:08,811 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2017-12-12 22:48:08,811 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2017-12-12 22:48:08,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2017-12-12 22:48:08,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2017-12-12 22:48:08,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2017-12-12 22:48:08,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2017-12-12 22:48:08,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2017-12-12 22:48:08,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2017-12-12 22:48:08,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2017-12-12 22:48:08,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2017-12-12 22:48:08,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2017-12-12 22:48:08,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2017-12-12 22:48:08,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2017-12-12 22:48:08,815 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-12-12 22:48:08,970 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2017-12-12 22:48:08,976 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2017-12-12 22:48:08,989 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2017-12-12 22:48:08,999 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'AggregatedCounter' table...
+DEBUG 2017-12-12 22:48:08,999 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+DEBUG 2017-12-12 22:48:09,001 [23ebd] Hangfire.Server.Worker                   - Background process 'Worker #dc123ebd' started.
+DEBUG 2017-12-12 22:48:09,001 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2017-12-12 22:48:09,030 [d8bf5] Hangfire.Server.Worker                   - Background process 'Worker #351d8bf5' started.
+DEBUG 2017-12-12 22:48:09,035 [b12ba] Hangfire.Server.Worker                   - Background process 'Worker #426b12ba' started.
+DEBUG 2017-12-12 22:48:09,036 [1875a] Hangfire.Server.Worker                   - Background process 'Worker #dd21875a' started.
+DEBUG 2017-12-12 22:48:09,041 [90484] Hangfire.Server.Worker                   - Background process 'Worker #efd90484' started.
+DEBUG 2017-12-12 22:48:09,067 [ef104] Hangfire.Server.Worker                   - Background process 'Worker #081ef104' started.
+DEBUG 2017-12-12 22:48:09,120 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2017-12-12 22:48:09,135 [cbc31] Hangfire.Server.Worker                   - Background process 'Worker #600cbc31' started.
+DEBUG 2017-12-12 22:48:09,170 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'AggregatedCounter' table.
+DEBUG 2017-12-12 22:48:09,171 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Job' table...
+DEBUG 2017-12-12 22:48:09,212 [4c777] Hangfire.Server.Worker                   - Background process 'Worker #ef84c777' started.
+DEBUG 2017-12-12 22:48:09,223 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Job' table.
+DEBUG 2017-12-12 22:48:09,223 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'List' table...
+DEBUG 2017-12-12 22:48:09,229 [71abb] Hangfire.Server.Worker                   - Background process 'Worker #a8c71abb' started.
+DEBUG 2017-12-12 22:48:09,242 [e7f09] Hangfire.Server.Worker                   - Background process 'Worker #6b0e7f09' started.
+DEBUG 2017-12-12 22:48:09,257 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'List' table.
+DEBUG 2017-12-12 22:48:09,257 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Set' table...
+DEBUG 2017-12-12 22:48:09,274 [903a2] Hangfire.Server.Worker                   - Background process 'Worker #222903a2' started.
+DEBUG 2017-12-12 22:48:09,276 [59a54] Hangfire.Server.Worker                   - Background process 'Worker #b1359a54' started.
+DEBUG 2017-12-12 22:48:09,285 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Set' table.
+DEBUG 2017-12-12 22:48:09,285 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Hash' table...
+DEBUG 2017-12-12 22:48:09,300 [76853] Hangfire.Server.Worker                   - Background process 'Worker #e4676853' started.
+DEBUG 2017-12-12 22:48:09,307 [e9eb4] Hangfire.Server.Worker                   - Background process 'Worker #f24e9eb4' started.
+DEBUG 2017-12-12 22:48:09,324 [f3077] Hangfire.Server.Worker                   - Background process 'Worker #a92f3077' started.
+DEBUG 2017-12-12 22:48:09,330 [62037] Hangfire.Server.Worker                   - Background process 'Worker #9e662037' started.
+DEBUG 2017-12-12 22:48:09,347 [3b86b] Hangfire.Server.Worker                   - Background process 'Worker #8143b86b' started.
+DEBUG 2017-12-12 22:48:09,353 [e17a8] Hangfire.Server.Worker                   - Background process 'Worker #94be17a8' started.
+DEBUG 2017-12-12 22:48:09,358 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Hash' table.
+DEBUG 2017-12-12 22:48:09,372 [46a0e] Hangfire.Server.Worker                   - Background process 'Worker #87e46a0e' started.
+DEBUG 2017-12-12 22:48:09,384 [a11de] Hangfire.Server.Worker                   - Background process 'Worker #b78a11de' started.
+DEBUG 2017-12-12 22:48:09,406 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2017-12-12 22:48:09,425 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2017-12-12 22:48:09,567 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2017-12-12 22:48:09,572 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2017-12-12 22:48:11,311 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-12-12 22:48:11,312 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-12-12 22:48:11,313 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-12-12 22:48:11,314 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Quartz.ISystemSchedulerService' with service name 'app/systemSchedulerService'.
+DEBUG 2017-12-12 22:48:11,314 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-12-12 22:48:11,316 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2017-12-12 22:48:11,317 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2017-12-12 22:48:11,351 [1    ] rviceBase.MakeInactiveUsersPassiveWorker - Start background worker: Castle.Proxies.MakeInactiveUsersPassiveWorkerProxy
+WARN  2017-12-12 22:48:12,293 [5    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+INFO  2017-12-12 22:48:17,289 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:17,289 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:17,289 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:22,658 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:22,658 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:22,658 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:27,766 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:27,766 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:27,766 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:32,881 [7    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:32,881 [7    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:32,881 [7    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:38,021 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:38,021 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2017-12-12 22:48:38,021 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.

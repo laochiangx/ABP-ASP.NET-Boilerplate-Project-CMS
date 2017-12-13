@@ -18,6 +18,9 @@ using ABPCMS.HangfireServiceBase;
 using Abp.Runtime.Caching.Redis;
 using System;
 using Abp.Quartz;
+using ABPCMS.Quartz;
+using System.Threading;
+using Shouldly;
 
 namespace ABPCMS.Web
 {
@@ -77,13 +80,19 @@ namespace ABPCMS.Web
             {
                 configuration.GlobalConfiguration.UseSqlServerStorage("Default"); //Set database connection
             });
-    
+
+
+         
+
         }
 
         public override void PostInitialize()
         {
             var workManager = IocManager.Resolve<IBackgroundWorkerManager>();
             workManager.Add(IocManager.Resolve<MakeInactiveUsersPassiveWorker>());
+
+
+            var helloDependency = IocManager.Resolve<IHelloDependency>();
         }
     }
 

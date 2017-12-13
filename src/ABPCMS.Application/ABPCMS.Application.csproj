@@ -238,6 +238,9 @@
     <Compile Include="MultiTenancy\ITenantAppService.cs" />
     <Compile Include="MultiTenancy\TenantAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quartz\HelloDependency.cs" />
+    <Compile Include="Quartz\HelloJob.cs" />
+    <Compile Include="Quartz\IHelloDependency.cs" />
     <Compile Include="Quartz\ISystemSchedulerService.cs" />
     <Compile Include="Quartz\MyLogJob.cs" />
     <Compile Include="Quartz\SystemSchedulerService.cs" />
