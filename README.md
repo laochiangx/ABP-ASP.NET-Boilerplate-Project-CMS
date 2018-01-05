@@ -54,13 +54,13 @@ ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统
 
 **（13）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十三节--RBAC模式及ABP权限管理（附送福利）](http://www.cnblogs.com/anyushengcms/p/7880038.html)**
 
-** **（14）**[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十四节--后台工作者HangFire与ABP框架Abp.Hangfire及扩展](http://www.cnblogs.com/anyushengcms/p/7927314.html)**
+ **（14）**[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十四节--后台工作者HangFire与ABP框架Abp.Hangfire及扩展](http://www.cnblogs.com/anyushengcms/p/7927314.html)**
 
-**** **（15）****[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十五节--缓存小结与ABP框架项目中 Redis Cache的实现](http://www.cnblogs.com/anyushengcms/p/8013201.html)**
+ **（15）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十五节--缓存小结与ABP框架项目中 Redis Cache的实现](http://www.cnblogs.com/anyushengcms/p/8013201.html)**
 
-** ******（16）******[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十六节--SignalR与ABP框架Abp.Web.SignalR及扩展](http://www.cnblogs.com/anyushengcms/p/8035924.html)**
+** （16）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十六节--SignalR与ABP框架Abp.Web.SignalR及扩展](http://www.cnblogs.com/anyushengcms/p/8035924.html)**
 
- ******（17）****[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十七节--Quartz与ABP框架Abp.Quartz及扩展](http://www.cnblogs.com/anyushengcms/p/8037569.html)**
+ **（17）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十七节--Quartz与ABP框架Abp.Quartz及扩展](http://www.cnblogs.com/anyushengcms/p/8037569.html)**
 
 未完待续...
 运用到的服务端技术:
