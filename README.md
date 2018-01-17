@@ -1,5 +1,14 @@
 ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统
 
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://docs.travis-ci.com/user/languages/csharp/)
+[![TeamCity (simple build status)](https://img.shields.io/teamcity/http/teamcity.jetbrains.com/s/bt345.svg)](https://github.com/Jimmey-Jiang/Common.Utility)
+[![Github Releases (by Asset)](https://img.shields.io/github/downloads/atom/atom/latest/atom-amd64.deb.svg)](https://github.com/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS)
+[![NuGet](https://img.shields.io/nuget/v/DotnetSpider2.Extension.svg)](https://www.nuget.org/packages)
+[![Plugin on redmine.org](https://img.shields.io/redmine/plugin/stars/redmine_xlsx_format_issue_exporter.svg)](https://github.com/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS)
+[![Eclipse Marketplace](https://img.shields.io/eclipse-marketplace/last-update/notepad4e.svg)](https://github.com/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS)
+[![JIRA sprint completion](https://img.shields.io/jira/sprint/https/jira.spring.io/94.svg)](https://github.com/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS)
+[![](https://img.shields.io/bitbucket/issues-raw/atlassian/python-bitbucket.svg)](https://github.com/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS)
+
 博客园地址：http://www.cnblogs.com/anyushengcms/p/7325126.html
 
 
