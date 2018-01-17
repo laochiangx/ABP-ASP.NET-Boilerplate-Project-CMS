@@ -27,7 +27,7 @@
 
 ![image.png](http://upload-images.jianshu.io/upload_images/6855212-c418ca1f07e972a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-##初衷
+## 初衷
 
   看懂远不如动手去做,动手做才能发现很多自己不懂的问题,不断的反思和总结,“乐于分享是一种境界的突破”。" 分享是很有意思，也是可以锻炼人的。 分享意味着自我的不断净化提升，不给自己后退的余地。为什么这么说呢？因为：一，分享的就是你所知道的，你所知道的是你投资时间和精力学来的，分享意味着你做到无私地把它分享出更高的价值，这是很伟大的。二，分享意味着你要不断去追寻新知，这很重要。只有用心生活，用心体会，才能不断有新的东西分享。这就是善于借用外力来完善自己的表现。。三，我们在分享的过程中，学会进一步判断，进一步深入思考，从而进一步提升思绪。这很重要，自己要了解自己，这是一个不断学习的过程。"
 
@@ -37,7 +37,7 @@
 
 > "ASP.NET Boilerplate 基于DDD的经典分层架构思想，实现了众多DDD的概念（但没有实现所有DDD的概念）。"
 
-下面是这期文章的目录：
+### 下面是这期文章的目录：
 
 **（1）[ABP+AdminLTE+Bootstrap Table权限管理系统第一节--使用ASP.NET Boilerplate模板创建解决方案](http://www.cnblogs.com/anyushengcms/p/abp.html)**
 
@@ -74,7 +74,9 @@
  **（17）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十七节--Quartz与ABP框架Abp.Quartz及扩展](http://www.cnblogs.com/anyushengcms/p/8037569.html)**
 
 未完待续...
-运用到的服务端技术:
+
+### 运用到的服务端技术:
+
 - [ABP（ASP.NET BolierPlate ProJect）](https://github.com/aspnetboilerplate)
 - [Module-Zero](https://github.com/aspnetboilerplate/module-zero)
 - [ASP.NET MVC](http://www.asp.net/mvc)
@@ -95,7 +97,7 @@
 - [SharpZipLib](http://icsharpcode.github.io/SharpZipLib/)
 - [System.Linq.Dynamic](https://github.com/kahanu/System.Linq.Dynamic)
 
-客户端:(前端是用的AdminLTE,Bootstrap  table.是开源的,不涉及版权)
+### 客户端:(前端是用的AdminLTE,Bootstrap  table.是开源的,不涉及版权)
 - [Twitter Bootstrap](http://getbootstrap.com/)
 - [Bootstrap Hover Dropdown](https://github.com/CWSpear/bootstrap-hover-dropdown)
 - [Bootstrap Date Range Picker](https://github.com/dangrossman/bootstrap-daterangepicker)
