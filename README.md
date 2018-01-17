@@ -65,7 +65,7 @@
 
 **（13）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十三节--RBAC模式及ABP权限管理（附送福利）](http://www.cnblogs.com/anyushengcms/p/7880038.html)**
 
- **（14）**[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十四节--后台工作者HangFire与ABP框架Abp.Hangfire及扩展](http://www.cnblogs.com/anyushengcms/p/7927314.html)**
+ **（14）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十四节--后台工作者HangFire与ABP框架Abp.Hangfire及扩展](http://www.cnblogs.com/anyushengcms/p/7927314.html)**
 
  **（15）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十五节--缓存小结与ABP框架项目中 Redis Cache的实现](http://www.cnblogs.com/anyushengcms/p/8013201.html)**
 
