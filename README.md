@@ -37,6 +37,7 @@
 "ASP.NET Boilerplate 基于DDD的经典分层架构思想，实现了众多DDD的概念（但没有实现所有DDD的概念）。"
 
 下面是这期文章的目录：
+
 **（1）[ABP+AdminLTE+Bootstrap Table权限管理系统第一节--使用ASP.NET Boilerplate模板创建解决方案](http://www.cnblogs.com/anyushengcms/p/abp.html)**
 
 **（2）[ABP+AdminLTE+Bootstrap Table权限管理系统第二节--数据库脚本](http://www.cnblogs.com/anyushengcms/p/7448804.html)**
@@ -57,9 +58,9 @@
 
 **（10）[ABP+AdminLTE+Bootstrap Table权限管理系统第十节--AdminLTE模板菜单处理](http://www.cnblogs.com/anyushengcms/p/7261827.html)**
 
-**（11）****[ABP+AdminLTE+Bootstrap Table权限管理系统第十一节--Bootstrap Table用户管理列表以及Module Zero之用户管理](http://www.cnblogs.com/anyushengcms/p/7261834.html)**
+**（11）[ABP+AdminLTE+Bootstrap Table权限管理系统第十一节--Bootstrap Table用户管理列表以及Module Zero之用户管理](http://www.cnblogs.com/anyushengcms/p/7261834.html)**
 
-**（12）****[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十二节--小结,Bootstrap Table之角色管理以及module-zero角色管理](http://www.cnblogs.com/anyushengcms/p/7435852.html)**
+**（12）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十二节--小结,Bootstrap Table之角色管理以及module-zero角色管理](http://www.cnblogs.com/anyushengcms/p/7435852.html)**
 
 **（13）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十三节--RBAC模式及ABP权限管理（附送福利）](http://www.cnblogs.com/anyushengcms/p/7880038.html)**
 
