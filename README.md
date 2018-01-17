@@ -27,14 +27,15 @@
 
 ![image.png](http://upload-images.jianshu.io/upload_images/6855212-c418ca1f07e972a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+##初衷
 
   看懂远不如动手去做,动手做才能发现很多自己不懂的问题,不断的反思和总结,“乐于分享是一种境界的突破”。" 分享是很有意思，也是可以锻炼人的。 分享意味着自我的不断净化提升，不给自己后退的余地。为什么这么说呢？因为：一，分享的就是你所知道的，你所知道的是你投资时间和精力学来的，分享意味着你做到无私地把它分享出更高的价值，这是很伟大的。二，分享意味着你要不断去追寻新知，这很重要。只有用心生活，用心体会，才能不断有新的东西分享。这就是善于借用外力来完善自己的表现。。三，我们在分享的过程中，学会进一步判断，进一步深入思考，从而进一步提升思绪。这很重要，自己要了解自己，这是一个不断学习的过程。"
 
    这也是算是一种学习的方法和态度吧,经常去学习和总结,在博客园看了很多大神的文章,写下一点对于ABP(ABP是“ASP.NET Boilerplate Project (ASP.NET样板项目)”的简称)框架的理解和运用.能力有限,第一次写技术性的博客写得不好.算是抛砖引玉,希望有问题的地方给予指出. 
 
- "ASP.NET Boilerplate是一个用最佳实践和流行技术开发现代WEB应用程序的新起点，它旨在成为一个通用的WEB应用程序框架和项目模板。"
+ > "ASP.NET Boilerplate是一个用最佳实践和流行技术开发现代WEB应用程序的新起点，它旨在成为一个通用的WEB应用程序框架和项目模板。"
 
-"ASP.NET Boilerplate 基于DDD的经典分层架构思想，实现了众多DDD的概念（但没有实现所有DDD的概念）。"
+> "ASP.NET Boilerplate 基于DDD的经典分层架构思想，实现了众多DDD的概念（但没有实现所有DDD的概念）。"
 
 下面是这期文章的目录：
 
@@ -68,7 +69,7 @@
 
  **（15）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十五节--缓存小结与ABP框架项目中 Redis Cache的实现](http://www.cnblogs.com/anyushengcms/p/8013201.html)**
 
-** （16）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十六节--SignalR与ABP框架Abp.Web.SignalR及扩展](http://www.cnblogs.com/anyushengcms/p/8035924.html)**
+**（16）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十六节--SignalR与ABP框架Abp.Web.SignalR及扩展](http://www.cnblogs.com/anyushengcms/p/8035924.html)**
 
  **（17）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十七节--Quartz与ABP框架Abp.Quartz及扩展](http://www.cnblogs.com/anyushengcms/p/8037569.html)**
 
