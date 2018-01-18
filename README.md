@@ -1,4 +1,4 @@
-## ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统
+# ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统
 
 [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://docs.travis-ci.com/user/languages/csharp/)
 [![TeamCity (simple build status)](https://img.shields.io/teamcity/http/teamcity.jetbrains.com/s/bt345.svg)](https://github.com/Jimmey-Jiang/Common.Utility)
@@ -9,8 +9,19 @@
 [![JIRA sprint completion](https://img.shields.io/jira/sprint/https/jira.spring.io/94.svg)](https://github.com/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS)
 [![](https://img.shields.io/bitbucket/issues-raw/atlassian/python-bitbucket.svg)](https://github.com/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS)
 
+## 打开方式
+
+     visual studio 2017
+
+     sql server 2008以上
+
+     Redis 
+     
+## 博客园地址 
+
 博客园地址：http://www.cnblogs.com/anyushengcms/p/7325126.html
 
+## 效果图
 
  ![1.png](http://upload-images.jianshu.io/upload_images/6855212-8d191ff98c8946f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -72,6 +83,20 @@
 **（16）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十六节--SignalR与ABP框架Abp.Web.SignalR及扩展](http://www.cnblogs.com/anyushengcms/p/8035924.html)**
 
  **（17）[ABP module-zero +AdminLTE+Bootstrap Table+jQuery权限管理系统第十七节--Quartz与ABP框架Abp.Quartz及扩展](http://www.cnblogs.com/anyushengcms/p/8037569.html)**
+ 
+ ## 番外篇--Moddule Zero 
+
+       > 注：番外篇参考自（https://github.com/ABPFrameWorkGroup）
+
+         [番外篇--Moddule Zero介绍](http://www.cnblogs.com/anyushengcms/p/8309115.html)
+
+         [番外篇--Moddule Zero安装](http://www.cnblogs.com/anyushengcms/p/8309136.html)
+
+         [番外篇--Moddule Zero启动模板](http://www.cnblogs.com/anyushengcms/p/8309144.html)
+
+        [番外篇--Moddule Zero多租户管理](http://www.cnblogs.com/anyushengcms/p/8309150.html)
+
+        [番外篇--Moddule Zero 版本管理与组织单位管理](http://www.cnblogs.com/anyushengcms/p/8309167.html)
 
 未完待续...
 
