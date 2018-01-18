@@ -8,7 +8,6 @@
 [![Eclipse Marketplace](https://img.shields.io/eclipse-marketplace/last-update/notepad4e.svg)](https://github.com/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS)
 [![JIRA sprint completion](https://img.shields.io/jira/sprint/https/jira.spring.io/94.svg)](https://github.com/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS)
 [![](https://img.shields.io/bitbucket/issues-raw/atlassian/python-bitbucket.svg)](https://github.com/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS)
-https://travis-ci.org/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS.svg?branch=master
 
 ## 打开方式
 
