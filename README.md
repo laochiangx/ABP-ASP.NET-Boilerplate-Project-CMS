@@ -15,11 +15,11 @@
 
      sql server 2008以上
 
-     Redis 
+     Redis :下载的Redis https://github.com/MicrosoftArchive/redis/releases 
      
 ## 博客园地址 
 
-博客园地址：http://www.cnblogs.com/anyushengcms/p/7325126.html
+如果不知道怎么用，请前往个人博客园看下教程，博客园地址：http://www.cnblogs.com/anyushengcms/p/7325126.html
 
  ## 初衷
 
