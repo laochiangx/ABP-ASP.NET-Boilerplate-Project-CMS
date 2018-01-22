@@ -8,7 +8,7 @@
 [![JIRA sprint completion](https://img.shields.io/jira/sprint/https/jira.spring.io/94.svg)](https://github.com/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS)
 [![](https://img.shields.io/bitbucket/issues-raw/atlassian/python-bitbucket.svg)](https://github.com/Jimmey-Jiang/ABP-ASP.NET-Boilerplate-Project-CMS)
 
-## 打开方式
+## 工具支持
 
      visual studio 2017
 
@@ -16,6 +16,14 @@
 
      Redis :下载的Redis https://github.com/MicrosoftArchive/redis/releases 
      
+ ## 打开方式
+   1. clone项目，然后visual studio 2017打开。
+   2. 包还原
+   3. 新建一个空的数据库，并修改项目中数据库连接，修改成你自己的。
+   4. 工具 -> nuget包管理器-> 程序包管理控制台 下面选中xxxxentityframework,然后输入update database 生成数据库。
+   5. 运行项目 用户名:admin 密码123qwe 即可看到效果。
+  >  abp入门项目。打开方式详细可以参考第一章：http://www.cnblogs.com/anyushengcms/p/abp.html
+     
 ## 博客园地址 
 
 如果不知道怎么用，请前往个人博客园看下教程，博客园地址：http://www.cnblogs.com/anyushengcms/p/7325126.html
