@@ -17,11 +17,12 @@
      Redis :下载的Redis https://github.com/MicrosoftArchive/redis/releases 
      
  ## 打开方式
-   1. clone项目，然后visual studio 2017打开。
-   2. 包还原
-   3. 新建一个空的数据库，并修改项目中数据库连接，修改成你自己的。
-   4. 工具 -> nuget包管理器-> 程序包管理控制台 下面选中xxxxentityframework,然后输入update database 生成数据库。
-   5. 运行项目 用户名:admin 密码123qwe 即可看到效果。
+ 
+  1.  clone项目，然后visual studio 2017打开。
+  2.  包还原
+  3.  新建一个空的数据库，并修改项目中数据库连接，修改成你自己的。
+  4.  工具 -> nuget包管理器-> 程序包管理控制台 下面选中xxxxentityframework,然后输入update database 生成数据库。
+  5.  运行项目 用户名:admin 密码123qwe 即可看到效果。
   >  abp入门项目。打开方式详细可以参考第一章：http://www.cnblogs.com/anyushengcms/p/abp.html
      
 ## 博客园地址 
