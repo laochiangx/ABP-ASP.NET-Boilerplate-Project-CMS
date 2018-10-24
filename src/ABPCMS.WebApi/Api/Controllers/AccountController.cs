@@ -10,7 +10,6 @@ using ABPCMS.Api.Models;
 using ABPCMS.Authorization;
 using ABPCMS.Authorization.Users;
 using ABPCMS.MultiTenancy;
-using ABPCMS.Users;
 using Microsoft.Owin.Infrastructure;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.OAuth;
