@@ -31,6 +31,8 @@
   
   5.  运行项目 用户名:admin 密码123qwe 即可看到效果，不懂地方参考博客园文章。
   
+  6.  已经注释掉AbpRedisCache，保证直接运行不会报错。
+  
    打开方式详细可以参考第一章：http://www.cnblogs.com/anyushengcms/p/abp.html
      
 ## 博客园地址 
