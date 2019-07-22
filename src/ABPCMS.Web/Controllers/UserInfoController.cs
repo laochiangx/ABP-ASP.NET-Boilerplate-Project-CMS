@@ -25,7 +25,7 @@ namespace ABPCMS.Web.Controllers
     {
         private readonly IUserAppService _userAppService;
         private readonly RoleManager _roleManager;
-        private readonly ICacheManager _cacheManager;
+        //private readonly ICacheManager _cacheManager;
         private readonly IQuartzScheduleJobManager _jobManager;
         private IScheduler _scheduler;
 
@@ -34,7 +34,7 @@ namespace ABPCMS.Web.Controllers
         {
             _userAppService = userAppService;
             _roleManager = roleManager;
-            _cacheManager = cacheManager;
+            //_cacheManager = cacheManager;
             _jobManager = jobManager;
             _iSystemSchedulerService = iSystemSchedulerService;
         }
@@ -63,11 +63,11 @@ namespace ABPCMS.Web.Controllers
         public void setCache()
         {
 
-            _cacheManager.GetCache("ControllerCache").Clear();
+            //_cacheManager.GetCache("ControllerCache").Clear();
 
-            var userList = _cacheManager.GetCache("ControllerCache").Get("AllUsers", () => _userAppService.GetAlluser());
+            //var userList = _cacheManager.GetCache("ControllerCache").Get("AllUsers", () => _userAppService.GetAlluser());
 
-            _cacheManager.GetCache("ControllerCache").Set("AllUsers", _userAppService.GetAlluser());
+            //_cacheManager.GetCache("ControllerCache").Set("AllUsers", _userAppService.GetAlluser());
         }
 
 

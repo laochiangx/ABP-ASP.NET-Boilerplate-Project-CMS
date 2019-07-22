@@ -15,7 +15,7 @@ namespace ABPCMS.Api
     {
         public override void Initialize()
         {
-            IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
+            //IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
 
             Configuration.Modules.AbpWebApi().DynamicApiControllerBuilder
                 .ForAll<IApplicationService>(typeof(ABPCMSApplicationModule).Assembly, "app")

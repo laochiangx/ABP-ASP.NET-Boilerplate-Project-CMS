@@ -23,7 +23,7 @@ namespace ABPCMS
     [DependsOn(typeof(ABPCMSCoreModule), typeof(AbpAutoMapperModule),
                   typeof(AbpHangfireModule),
           // typeof(HangFireWorkerModule) //- ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
-          typeof(AbpRedisCacheModule),
+          //typeof(AbpRedisCacheModule),
         typeof(AbpQuartzModule)
 
         )]
@@ -34,7 +34,7 @@ namespace ABPCMS
         public override void PreInitialize()
         {
             base.PreInitialize();
-            IocManager.Register<ICacheManager, AbpRedisCacheManager>();
+            //IocManager.Register<ICacheManager, AbpRedisCacheManager>();
             //如果Redis在本机,并且使用的默认端口,下面的代码可以不要
             //Configuration.Modules.AbpRedisCacheModule().ConnectionStringKey = "KeyName";
 

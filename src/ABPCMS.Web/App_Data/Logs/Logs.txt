@@ -1572,3 +1572,1247 @@ INFO  2017-12-12 22:48:32,881 [7    ] rviceBase.MakeInactiveUsersPassiveWorker -
 INFO  2017-12-12 22:48:38,021 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
 INFO  2017-12-12 22:48:38,021 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
 INFO  2017-12-12 22:48:38,021 [6    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 3] test made passive since he/she did not login in last 30 days.
+DEBUG 2019-07-22 21:14:40,736 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-07-22 21:14:40,752 [1    ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2019-07-22 21:14:40,758 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,759 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,760 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,761 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:14:40,764 [1    ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2019-07-22 21:14:41,060 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-22 21:14:41,061 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-22 21:14:41,061 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-22 21:14:41,061 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2019-07-22 21:14:43,736 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2019-07-22 21:14:44,280 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2019-07-22 21:14:44,392 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+FATAL 2019-07-22 21:14:48,159 [1    ] Abp.AbpBootstrapper                      - Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not proxy Abp.Configuration.SettingManager ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not instantiate Abp.Runtime.Caching.Redis.AbpRedisCache ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s); to create a disconnected multiplexer, disable AbortOnConnectFail. SocketFailure on PING
+   在 StackExchange.Redis.ConnectionMultiplexer.ConnectImpl(Func`1 multiplexerFactory, TextWriter log)
+   在 StackExchange.Redis.ConnectionMultiplexer.Connect(String configuration, TextWriter log)
+   在 Abp.Runtime.Caching.Redis.AbpRedisCacheDatabaseProvider.CreateConnectionMultiplexer()
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Lazy`1.get_Value()
+   在 Abp.Runtime.Caching.Redis.AbpRedisCacheDatabaseProvider.GetDatabase()
+   在 Abp.Runtime.Caching.Redis.AbpRedisCache..ctor(String name, IAbpRedisCacheDatabaseProvider redisCacheDatabaseProvider, IRedisCacheSerializer redisCacheSerializer)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeConstructorInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.FastCreateInstance(Type implType, Object[] arguments, ConstructorCandidate constructor)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   在 Castle.Windsor.WindsorContainer.Resolve[T](Object argumentsAsAnonymousType)
+   在 Abp.Dependency.IocManager.Resolve[T](Object argumentsAsAnonymousType)
+   在 Abp.Runtime.Caching.Redis.AbpRedisCacheManager.CreateCacheImplementation(String name)
+   在 Abp.Runtime.Caching.CacheManagerBase.<GetCache>b__5_0(String cacheName)
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Abp.Runtime.Caching.CacheManagerBase.GetCache(String name)
+   在 Abp.Configuration.SettingManager..ctor(ISettingDefinitionManager settingDefinitionManager, ICacheManager cacheManager)
+   在 Castle.Proxies.SettingManagerProxy..ctor(IInterceptor[] , ISettingDefinitionManager , ICacheManager )
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   在 Castle.DynamicProxy.ProxyGenerator.CreateClassProxy(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, Object[] constructorArguments, IInterceptor[] interceptors)
+   在 Castle.Windsor.Proxy.DefaultProxyFactory.Create(IKernel kernel, Object target, ComponentModel model, CreationContext context, Object[] constructorArguments)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.SingletonLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.SingletonLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.SingletonLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   在 Castle.Windsor.WindsorContainer.Resolve[T]()
+   在 Abp.Dependency.IocManager.Resolve[T]()
+   在 Abp.AbpKernelModule.PostInitialize()
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules()
+   在 Abp.AbpBootstrapper.Initialize()
+Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not proxy Abp.Configuration.SettingManager ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not instantiate Abp.Runtime.Caching.Redis.AbpRedisCache ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s); to create a disconnected multiplexer, disable AbortOnConnectFail. SocketFailure on PING
+   在 StackExchange.Redis.ConnectionMultiplexer.ConnectImpl(Func`1 multiplexerFactory, TextWriter log)
+   在 StackExchange.Redis.ConnectionMultiplexer.Connect(String configuration, TextWriter log)
+   在 Abp.Runtime.Caching.Redis.AbpRedisCacheDatabaseProvider.CreateConnectionMultiplexer()
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Lazy`1.get_Value()
+   在 Abp.Runtime.Caching.Redis.AbpRedisCacheDatabaseProvider.GetDatabase()
+   在 Abp.Runtime.Caching.Redis.AbpRedisCache..ctor(String name, IAbpRedisCacheDatabaseProvider redisCacheDatabaseProvider, IRedisCacheSerializer redisCacheSerializer)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeConstructorInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.FastCreateInstance(Type implType, Object[] arguments, ConstructorCandidate constructor)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   在 Castle.Windsor.WindsorContainer.Resolve[T](Object argumentsAsAnonymousType)
+   在 Abp.Dependency.IocManager.Resolve[T](Object argumentsAsAnonymousType)
+   在 Abp.Runtime.Caching.Redis.AbpRedisCacheManager.CreateCacheImplementation(String name)
+   在 Abp.Runtime.Caching.CacheManagerBase.<GetCache>b__5_0(String cacheName)
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Abp.Runtime.Caching.CacheManagerBase.GetCache(String name)
+   在 Abp.Configuration.SettingManager..ctor(ISettingDefinitionManager settingDefinitionManager, ICacheManager cacheManager)
+   在 Castle.Proxies.SettingManagerProxy..ctor(IInterceptor[] , ISettingDefinitionManager , ICacheManager )
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   在 Castle.DynamicProxy.ProxyGenerator.CreateClassProxy(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, Object[] constructorArguments, IInterceptor[] interceptors)
+   在 Castle.Windsor.Proxy.DefaultProxyFactory.Create(IKernel kernel, Object target, ComponentModel model, CreationContext context, Object[] constructorArguments)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.SingletonLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.SingletonLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.SingletonLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   在 Castle.Windsor.WindsorContainer.Resolve[T]()
+   在 Abp.Dependency.IocManager.Resolve[T]()
+   在 Abp.AbpKernelModule.PostInitialize()
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules()
+   在 Abp.AbpBootstrapper.Initialize()
+DEBUG 2019-07-22 21:21:36,443 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-07-22 21:21:36,457 [1    ] Abp.Modules.AbpModuleManager             - Found 20 ABP modules in total.
+DEBUG 2019-07-22 21:21:36,463 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,465 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,465 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,465 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,466 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,466 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,466 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,466 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,466 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,467 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,467 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,467 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,467 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,467 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,467 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,467 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,467 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,468 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,468 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,468 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:21:36,471 [1    ] Abp.Modules.AbpModuleManager             - 20 modules loaded.
+DEBUG 2019-07-22 21:21:36,758 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-22 21:21:36,758 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-22 21:21:36,758 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-22 21:21:36,758 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2019-07-22 21:21:39,152 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2019-07-22 21:21:39,478 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2019-07-22 21:21:39,596 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+FATAL 2019-07-22 21:21:43,394 [1    ] Abp.AbpBootstrapper                      - Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not proxy Abp.Configuration.SettingManager ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not instantiate Abp.Runtime.Caching.Redis.AbpRedisCache ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s); to create a disconnected multiplexer, disable AbortOnConnectFail. SocketFailure on PING
+   在 StackExchange.Redis.ConnectionMultiplexer.ConnectImpl(Func`1 multiplexerFactory, TextWriter log)
+   在 StackExchange.Redis.ConnectionMultiplexer.Connect(String configuration, TextWriter log)
+   在 Abp.Runtime.Caching.Redis.AbpRedisCacheDatabaseProvider.CreateConnectionMultiplexer()
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Lazy`1.get_Value()
+   在 Abp.Runtime.Caching.Redis.AbpRedisCacheDatabaseProvider.GetDatabase()
+   在 Abp.Runtime.Caching.Redis.AbpRedisCache..ctor(String name, IAbpRedisCacheDatabaseProvider redisCacheDatabaseProvider, IRedisCacheSerializer redisCacheSerializer)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeConstructorInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.FastCreateInstance(Type implType, Object[] arguments, ConstructorCandidate constructor)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   在 Castle.Windsor.WindsorContainer.Resolve[T](Object argumentsAsAnonymousType)
+   在 Abp.Dependency.IocManager.Resolve[T](Object argumentsAsAnonymousType)
+   在 Abp.Runtime.Caching.Redis.AbpRedisCacheManager.CreateCacheImplementation(String name)
+   在 Abp.Runtime.Caching.CacheManagerBase.<GetCache>b__5_0(String cacheName)
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Abp.Runtime.Caching.CacheManagerBase.GetCache(String name)
+   在 Abp.Configuration.SettingManager..ctor(ISettingDefinitionManager settingDefinitionManager, ICacheManager cacheManager)
+   在 Castle.Proxies.SettingManagerProxy..ctor(IInterceptor[] , ISettingDefinitionManager , ICacheManager )
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   在 Castle.DynamicProxy.ProxyGenerator.CreateClassProxy(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, Object[] constructorArguments, IInterceptor[] interceptors)
+   在 Castle.Windsor.Proxy.DefaultProxyFactory.Create(IKernel kernel, Object target, ComponentModel model, CreationContext context, Object[] constructorArguments)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.SingletonLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.SingletonLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.SingletonLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   在 Castle.Windsor.WindsorContainer.Resolve[T]()
+   在 Abp.Dependency.IocManager.Resolve[T]()
+   在 Abp.AbpKernelModule.PostInitialize()
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules()
+   在 Abp.AbpBootstrapper.Initialize()
+Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not proxy Abp.Configuration.SettingManager ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> Castle.MicroKernel.ComponentActivator.ComponentActivatorException: ComponentActivator: could not instantiate Abp.Runtime.Caching.Redis.AbpRedisCache ---> System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s); to create a disconnected multiplexer, disable AbortOnConnectFail. SocketFailure on PING
+   在 StackExchange.Redis.ConnectionMultiplexer.ConnectImpl(Func`1 multiplexerFactory, TextWriter log)
+   在 StackExchange.Redis.ConnectionMultiplexer.Connect(String configuration, TextWriter log)
+   在 Abp.Runtime.Caching.Redis.AbpRedisCacheDatabaseProvider.CreateConnectionMultiplexer()
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Lazy`1.get_Value()
+   在 Abp.Runtime.Caching.Redis.AbpRedisCacheDatabaseProvider.GetDatabase()
+   在 Abp.Runtime.Caching.Redis.AbpRedisCache..ctor(String name, IAbpRedisCacheDatabaseProvider redisCacheDatabaseProvider, IRedisCacheSerializer redisCacheSerializer)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeConstructorInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.FastCreateInstance(Type implType, Object[] arguments, ConstructorCandidate constructor)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstanceCore(ConstructorCandidate constructor, Object[] arguments, Type implType)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   在 Castle.Windsor.WindsorContainer.Resolve[T](Object argumentsAsAnonymousType)
+   在 Abp.Dependency.IocManager.Resolve[T](Object argumentsAsAnonymousType)
+   在 Abp.Runtime.Caching.Redis.AbpRedisCacheManager.CreateCacheImplementation(String name)
+   在 Abp.Runtime.Caching.CacheManagerBase.<GetCache>b__5_0(String cacheName)
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 Abp.Runtime.Caching.CacheManagerBase.GetCache(String name)
+   在 Abp.Configuration.SettingManager..ctor(ISettingDefinitionManager settingDefinitionManager, ICacheManager cacheManager)
+   在 Castle.Proxies.SettingManagerProxy..ctor(IInterceptor[] , ISettingDefinitionManager , ICacheManager )
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture, Object[] activationAttributes)
+   在 System.Activator.CreateInstance(Type type, Object[] args)
+   在 Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   在 Castle.DynamicProxy.ProxyGenerator.CreateClassProxy(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, Object[] constructorArguments, IInterceptor[] interceptors)
+   在 Castle.Windsor.Proxy.DefaultProxyFactory.Create(IKernel kernel, Object target, ComponentModel model, CreationContext context, Object[] constructorArguments)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateInstance(CreationContext context, ConstructorCandidate constructor, Object[] arguments)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.SingletonLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.SingletonLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernelByType(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveFromKernel(CreationContext context, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.ResolveCore(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.Resolvers.DefaultDependencyResolver.Resolve(CreationContext context, ISubDependencyResolver contextHandlerResolver, ComponentModel model, DependencyModel dependency)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.CreateConstructorArguments(ConstructorCandidate constructor, CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.Instantiate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.DefaultComponentActivator.InternalCreate(CreationContext context)
+   在 Castle.MicroKernel.ComponentActivator.AbstractComponentActivator.Create(CreationContext context, Burden burden)
+   在 Castle.MicroKernel.Lifestyle.AbstractLifestyleManager.CreateInstance(CreationContext context, Boolean trackedExternally)
+   在 Castle.MicroKernel.Lifestyle.SingletonLifestyleManager.Resolve(CreationContext context, IReleasePolicy releasePolicy)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.ResolveCore(CreationContext context, Boolean requiresDecommission, Boolean instanceRequired, Burden& burden)
+   在 Castle.MicroKernel.Handlers.DefaultHandler.Resolve(CreationContext context, Boolean instanceRequired)
+   在 Castle.MicroKernel.Handlers.AbstractHandler.Resolve(CreationContext context)
+   在 Castle.MicroKernel.DefaultKernel.ResolveComponent(IHandler handler, Type service, IDictionary additionalArguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   在 Castle.MicroKernel.DefaultKernel.Resolve(Type service, IDictionary arguments)
+   在 Castle.Windsor.WindsorContainer.Resolve[T]()
+   在 Abp.Dependency.IocManager.Resolve[T]()
+   在 Abp.AbpKernelModule.PostInitialize()
+   在 Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   在 System.Collections.Generic.List`1.ForEach(Action`1 action)
+   在 Abp.Modules.AbpModuleManager.StartModules()
+   在 Abp.AbpBootstrapper.Initialize()
+DEBUG 2019-07-22 21:26:33,635 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-07-22 21:26:33,649 [1    ] Abp.Modules.AbpModuleManager             - Found 19 ABP modules in total.
+DEBUG 2019-07-22 21:26:33,657 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Web.ABPCMSWebModule, ABPCMS.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,659 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSDataModule, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,660 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,660 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,660 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,660 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,661 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,661 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,661 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSCoreModule, ABPCMS.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,661 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.ABPCMSApplicationModule, ABPCMS.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,661 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,661 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,662 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Quartz.AbpQuartzModule, Abp.Quartz, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,662 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ABPCMS.Api.ABPCMSWebApiModule, ABPCMS.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,662 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,662 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,662 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,662 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,663 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.2.5.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:33,666 [1    ] Abp.Modules.AbpModuleManager             - 19 modules loaded.
+DEBUG 2019-07-22 21:26:33,943 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-22 21:26:33,943 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-22 21:26:33,943 [1    ] o.Configuration.LanguageManagementConfig - Converted ABPCMS (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-07-22 21:26:33,943 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+INFO  2019-07-22 21:26:36,354 [1    ] Hangfire.SqlServer.SqlServerStorage      - Start installing Hangfire SQL objects...
+INFO  2019-07-22 21:26:36,657 [1    ] Hangfire.SqlServer.SqlServerStorage      - Hangfire SQL objects installed.
+DEBUG 2019-07-22 21:26:36,776 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ABPCMS.EntityFramework.ABPCMSDbContext, ABPCMS.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-07-22 21:26:37,411 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-07-22 21:26:37,456 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-07-22 21:26:37,461 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-07-22 21:26:37,463 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ABPCMS
+DEBUG 2019-07-22 21:26:37,464 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-07-22 21:26:37,469 [1    ] bp.Hangfire.HangfireBackgroundJobManager - Start background worker: Abp.Hangfire.HangfireBackgroundJobManager
+INFO  2019-07-22 21:26:37,475 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server
+INFO  2019-07-22 21:26:37,479 [1    ] Hangfire.BackgroundJobServer             - Using job storage: 'SQL Server: .\mssql@ABSCMS'
+INFO  2019-07-22 21:26:37,479 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage:
+INFO  2019-07-22 21:26:37,479 [1    ] Hangfire.BackgroundJobServer             -     Queue poll interval: 00:00:15.
+INFO  2019-07-22 21:26:37,479 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+INFO  2019-07-22 21:26:37,479 [1    ] Hangfire.BackgroundJobServer             -     Worker count: 20
+INFO  2019-07-22 21:26:37,480 [1    ] Hangfire.BackgroundJobServer             -     Listening queues: 'default'
+INFO  2019-07-22 21:26:37,480 [1    ] Hangfire.BackgroundJobServer             -     Shutdown timeout: 00:00:15
+INFO  2019-07-22 21:26:37,480 [1    ] Hangfire.BackgroundJobServer             -     Schedule polling interval: 00:00:15
+DEBUG 2019-07-22 21:26:37,519 [erver] ngfire.Server.BackgroundProcessingServer - Background process 'BackgroundProcessingServer' started.
+DEBUG 2019-07-22 21:26:37,569 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
+DEBUG 2019-07-22 21:26:37,570 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-07-22 21:26:37,573 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-07-22 21:26:37,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.CreateUserDto
+DEBUG 2019-07-22 21:26:37,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UpdateUserDto
+DEBUG 2019-07-22 21:26:37,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Users.Dto.UserDto
+DEBUG 2019-07-22 21:26:37,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.CreateRoleDto
+DEBUG 2019-07-22 21:26:37,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.PermissionDto
+DEBUG 2019-07-22 21:26:37,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Roles.Dto.RoleDto
+DEBUG 2019-07-22 21:26:37,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2019-07-22 21:26:37,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.EditTenantDto
+DEBUG 2019-07-22 21:26:37,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.MultiTenancy.Dto.TenantDto
+DEBUG 2019-07-22 21:26:37,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantChangeViewModel
+DEBUG 2019-07-22 21:26:37,574 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ABPCMS.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2019-07-22 21:26:37,756 [tbeat] Hangfire.Server.ServerHeartbeat          - Background process 'ServerHeartbeat' started.
+DEBUG 2019-07-22 21:26:37,774 [chdog] Hangfire.Server.ServerWatchdog           - Background process 'ServerWatchdog' started.
+DEBUG 2019-07-22 21:26:37,783 [nager] Hangfire.SqlServer.ExpirationManager     - Background process 'Hangfire.SqlServer.ExpirationManager' started.
+DEBUG 2019-07-22 21:26:37,785 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'AggregatedCounter' table...
+DEBUG 2019-07-22 21:26:37,801 [gator] Hangfire.SqlServer.CountersAggregator    - Background process 'Hangfire.SqlServer.CountersAggregator' started.
+DEBUG 2019-07-22 21:26:37,803 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2019-07-22 21:26:37,832 [2bbf5] Hangfire.Server.Worker                   - Background process 'Worker #a2b2bbf5' started.
+DEBUG 2019-07-22 21:26:37,842 [bcd93] Hangfire.Server.Worker                   - Background process 'Worker #e34bcd93' started.
+DEBUG 2019-07-22 21:26:37,851 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2019-07-22 21:26:37,858 [57a51] Hangfire.Server.Worker                   - Background process 'Worker #a6057a51' started.
+DEBUG 2019-07-22 21:26:37,883 [7d5ed] Hangfire.Server.Worker                   - Background process 'Worker #6247d5ed' started.
+DEBUG 2019-07-22 21:26:37,923 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'AggregatedCounter' table.
+DEBUG 2019-07-22 21:26:37,923 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Job' table...
+DEBUG 2019-07-22 21:26:37,966 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Job' table.
+DEBUG 2019-07-22 21:26:37,966 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'List' table...
+DEBUG 2019-07-22 21:26:37,999 [dc0c3] Hangfire.Server.Worker                   - Background process 'Worker #fdedc0c3' started.
+DEBUG 2019-07-22 21:26:38,051 [ce8f2] Hangfire.Server.Worker                   - Background process 'Worker #f64ce8f2' started.
+DEBUG 2019-07-22 21:26:38,065 [48e2e] Hangfire.Server.Worker                   - Background process 'Worker #dd748e2e' started.
+DEBUG 2019-07-22 21:26:38,073 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'List' table.
+DEBUG 2019-07-22 21:26:38,073 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Set' table...
+DEBUG 2019-07-22 21:26:38,097 [5c5a8] Hangfire.Server.Worker                   - Background process 'Worker #5d55c5a8' started.
+DEBUG 2019-07-22 21:26:38,111 [17bfb] Hangfire.Server.Worker                   - Background process 'Worker #60417bfb' started.
+DEBUG 2019-07-22 21:26:38,130 [312a1] Hangfire.Server.Worker                   - Background process 'Worker #10c312a1' started.
+DEBUG 2019-07-22 21:26:38,158 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Set' table.
+DEBUG 2019-07-22 21:26:38,158 [nager] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Hash' table...
+DEBUG 2019-07-22 21:26:38,182 [5c263] Hangfire.Server.Worker                   - Background process 'Worker #7755c263' started.
+DEBUG 2019-07-22 21:26:38,188 [2bc8a] Hangfire.Server.Worker                   - Background process 'Worker #6bf2bc8a' started.
+DEBUG 2019-07-22 21:26:38,202 [nager] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Hash' table.
+DEBUG 2019-07-22 21:26:38,219 [89efa] Hangfire.Server.Worker                   - Background process 'Worker #a0289efa' started.
+DEBUG 2019-07-22 21:26:38,236 [e3d56] Hangfire.Server.Worker                   - Background process 'Worker #b7fe3d56' started.
+DEBUG 2019-07-22 21:26:38,252 [97f4f] Hangfire.Server.Worker                   - Background process 'Worker #f5497f4f' started.
+DEBUG 2019-07-22 21:26:38,269 [4abf7] Hangfire.Server.Worker                   - Background process 'Worker #2ac4abf7' started.
+DEBUG 2019-07-22 21:26:38,285 [6471d] Hangfire.Server.Worker                   - Background process 'Worker #b776471d' started.
+DEBUG 2019-07-22 21:26:38,301 [508ec] Hangfire.Server.Worker                   - Background process 'Worker #50b508ec' started.
+DEBUG 2019-07-22 21:26:38,318 [50f5c] Hangfire.Server.Worker                   - Background process 'Worker #e7550f5c' started.
+DEBUG 2019-07-22 21:26:38,334 [be7ef] Hangfire.Server.Worker                   - Background process 'Worker #618be7ef' started.
+DEBUG 2019-07-22 21:26:38,352 [duler] Hangfire.Server.DelayedJobScheduler      - Background process 'DelayedJobScheduler' started.
+DEBUG 2019-07-22 21:26:38,361 [duler] Hangfire.Server.RecurringJobScheduler    - Background process 'RecurringJobScheduler' started.
+DEBUG 2019-07-22 21:26:38,414 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Start background worker: Abp.Quartz.QuartzScheduleJobManager
+INFO  2019-07-22 21:26:38,417 [1    ] Abp.Quartz.QuartzScheduleJobManager      - Started QuartzScheduleJobManager
+DEBUG 2019-07-22 21:26:40,890 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2019-07-22 21:26:40,891 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2019-07-22 21:26:40,892 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2019-07-22 21:26:40,893 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Quartz.ISystemSchedulerService' with service name 'app/systemSchedulerService'.
+DEBUG 2019-07-22 21:26:40,894 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2019-07-22 21:26:40,895 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2019-07-22 21:26:40,896 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ABPCMS.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2019-07-22 21:26:40,939 [1    ] rviceBase.MakeInactiveUsersPassiveWorker - Start background worker: Castle.Proxies.MakeInactiveUsersPassiveWorkerProxy
+WARN  2019-07-22 21:26:44,959 [20   ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+INFO  2019-07-22 21:26:46,148 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:26:46,149 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:26:52,128 [53   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:26:52,128 [53   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:26:57,256 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:26:57,256 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:02,349 [53   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:02,349 [53   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:07,494 [53   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:07,494 [53   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:12,610 [49   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:12,610 [49   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:17,715 [51   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:17,715 [51   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:22,822 [50   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:22,822 [50   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:27,976 [54   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:27,977 [54   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+WARN  2019-07-22 21:27:32,112 [20   ] ABPCMS.Web.Controllers.AccountController - Login failed!
+Abp.UI.UserFriendlyException: Login failed!
+   at ABPCMS.Web.Controllers.AccountController.<GetLoginResultAsync>d__15.MoveNext() in F:\Github\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\Controllers\AccountController.cs:line 146
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ABPCMS.Web.Controllers.AccountController.<Login>d__14.MoveNext() in F:\Github\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\Controllers\AccountController.cs:line 112
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeAsynchronousActionMethod>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+INFO  2019-07-22 21:27:33,216 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:33,216 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:38,407 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:38,407 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:43,519 [49   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:43,519 [49   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:48,620 [49   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:48,620 [49   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:53,737 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:53,737 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+WARN  2019-07-22 21:27:54,632 [20   ] ABPCMS.Web.Controllers.AccountController - Login failed!
+Abp.UI.UserFriendlyException: Login failed!
+   at ABPCMS.Web.Controllers.AccountController.<GetLoginResultAsync>d__15.MoveNext() in F:\Github\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\Controllers\AccountController.cs:line 146
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ABPCMS.Web.Controllers.AccountController.<Login>d__14.MoveNext() in F:\Github\ABP-ASP.NET-Boilerplate-Project-CMS\src\ABPCMS.Web\Controllers\AccountController.cs:line 112
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeAsynchronousActionMethod>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+INFO  2019-07-22 21:27:58,856 [51   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:27:58,856 [51   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:03,947 [56   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:03,947 [56   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:09,114 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:09,114 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:14,290 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:14,290 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:19,447 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:19,447 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:24,610 [53   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:24,610 [53   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:29,723 [49   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:29,723 [49   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:34,892 [53   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:34,892 [53   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:40,066 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:40,066 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:45,223 [65   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:45,223 [65   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:50,396 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:50,396 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:55,547 [51   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:28:55,547 [51   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:00,728 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:00,728 [20   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:05,848 [65   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:05,848 [65   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:10,952 [62   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:10,952 [62   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:16,089 [65   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:16,089 [65   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:21,252 [21   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:21,253 [21   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:26,454 [51   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:26,454 [51   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:31,614 [65   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:31,614 [65   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:36,736 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:36,736 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:41,830 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:41,830 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:46,996 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:46,996 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:52,121 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:52,121 [52   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:57,253 [21   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:29:57,253 [21   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:02,383 [65   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:02,383 [65   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:07,567 [51   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:07,567 [51   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:12,800 [63   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:12,800 [63   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:17,973 [68   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:17,973 [68   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:23,120 [57   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:23,120 [57   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:28,285 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:28,285 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:33,417 [57   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:33,417 [57   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:38,674 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:38,674 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:43,781 [57   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:43,781 [57   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:48,916 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:48,916 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:54,015 [66   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:54,015 [66   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:59,174 [66   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:30:59,174 [66   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:04,279 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:04,279 [5    ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:09,413 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:09,413 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:14,529 [79   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:14,529 [79   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:19,685 [57   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:19,685 [57   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:24,853 [69   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:24,853 [69   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:29,976 [66   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:29,976 [66   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:35,078 [82   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:35,078 [82   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+DEBUG 2019-07-22 21:31:37,852 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2019-07-22 21:31:37,884 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+INFO  2019-07-22 21:31:40,222 [79   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:40,222 [79   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:45,344 [82   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:45,344 [82   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:50,486 [79   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:50,486 [79   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:55,680 [83   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:31:55,680 [83   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:00,785 [77   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:00,785 [77   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+WARN  2019-07-22 21:32:02,024 [73   ] nHandling.AbpApiExceptionFilterAttribute - Current user did not login to the application!
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Authorization.AuthorizationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Auditing.AuditingInterceptor.PerformSyncAuditing(IInvocation invocation, AuditInfo auditInfo)
+   at Abp.Auditing.AuditingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.UserAppServiceProxy.GetAlluser()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.GetAlluser()
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+INFO  2019-07-22 21:32:05,903 [83   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:05,903 [83   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:11,034 [81   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:11,034 [81   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:16,255 [82   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:16,255 [82   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:21,401 [81   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:21,401 [81   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+WARN  2019-07-22 21:32:22,479 [73   ] nHandling.AbpApiExceptionFilterAttribute - Current user did not login to the application!
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Authorization.AuthorizationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Auditing.AuditingInterceptor.PerformAsyncAuditing(IInvocation invocation, AuditInfo auditInfo)
+   at Abp.Auditing.AuditingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.UserAppServiceProxy.Get(EntityDto`1 input)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.Get(EntityDto`1 input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+INFO  2019-07-22 21:32:26,595 [88   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:26,595 [88   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:31,697 [84   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:31,697 [84   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:36,796 [90   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:36,796 [90   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:41,945 [89   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:41,945 [89   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:47,081 [84   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:47,081 [84   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+WARN  2019-07-22 21:32:47,769 [73   ] nHandling.AbpApiExceptionFilterAttribute - Current user did not login to the application!
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Authorization.AuthorizationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformAsyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.PerformUow(IInvocation invocation, UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Auditing.AuditingInterceptor.PerformAsyncAuditing(IInvocation invocation, AuditInfo auditInfo)
+   at Abp.Auditing.AuditingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.UserAppServiceProxy.Get(EntityDto`1 input)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Abp.WebApi.Controllers.Dynamic.Interceptors.AbpDynamicApiControllerInterceptor`1.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.DynamicApiController`1Proxy.Get(EntityDto`1 input)
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass12.<GetExecutor>b__8(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Uow.AbpApiUowFilter.<ExecuteActionFilterAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Validation.AbpApiValidationFilter.<ExecuteActionFilterAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Auditing.AbpApiAuditFilter.<ExecuteActionFilterAsync>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Security.AntiForgery.AbpAntiForgeryApiFilter.<ExecuteAuthorizationFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.WebApi.Authorization.AbpApiAuthorizeFilter.<ExecuteAuthorizationFilterAsync>d__7.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext()
+INFO  2019-07-22 21:32:52,225 [80   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:52,225 [80   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:57,364 [85   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:32:57,364 [85   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+WARN  2019-07-22 21:32:58,945 [81   ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
+   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+INFO  2019-07-22 21:33:02,487 [84   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:02,487 [84   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:07,604 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:07,604 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:12,730 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:12,730 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:17,882 [90   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:17,882 [90   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:23,031 [84   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:23,031 [84   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:28,182 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:28,182 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:33,357 [90   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:33,357 [90   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:38,472 [77   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:38,472 [77   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:43,577 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:43,577 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:48,743 [91   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:48,743 [91   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:53,873 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:53,873 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:59,080 [72   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:33:59,080 [72   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:34:04,203 [85   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:34:04,203 [85   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:34:09,318 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:34:09,318 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:34:14,426 [71   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:34:14,426 [71   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:34:33,823 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:34:33,824 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:35:03,495 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:35:03,496 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:35:50,656 [64   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:36:19,293 [64   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+DEBUG 2019-07-22 21:36:38,842 [gator] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2019-07-22 21:36:40,490 [gator] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+WARN  2019-07-22 21:36:51,135 [87   ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2019-07-22 21:36:51,136 [87   ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2019-07-22 21:36:51,137 [87   ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+INFO  2019-07-22 21:36:52,800 [102  ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:36:52,800 [102  ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+WARN  2019-07-22 21:36:52,818 [84   ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2019-07-22 21:36:52,820 [84   ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2019-07-22 21:36:52,824 [84   ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+DEBUG 2019-07-22 21:36:53,638 [87   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"ce1c571b-75a1-47aa-93cb-c2787d47dd0d","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2019-07-22T21:36:53.6342724+08:00","Properties":{}}
+DEBUG 2019-07-22 21:36:53,677 [59   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: ce1c571b-75a1-47aa-93cb-c2787d47dd0d
+INFO  2019-07-22 21:36:58,004 [102  ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:36:58,004 [102  ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:37:08,283 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:37:08,283 [59   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
+WARN  2019-07-22 21:37:10,437 [84   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'ABPCMS'!
+WARN  2019-07-22 21:37:10,512 [84   ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2019-07-22 21:37:10,513 [84   ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2019-07-22 21:37:10,514 [84   ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+DEBUG 2019-07-22 21:37:10,691 [84   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: ce1c571b-75a1-47aa-93cb-c2787d47dd0d
+WARN  2019-07-22 21:37:10,876 [59   ] naries.DictionaryBasedLocalizationSource - Can not find '用户详情' in localization source 'ABPCMS'!
+WARN  2019-07-22 21:37:10,876 [59   ] naries.DictionaryBasedLocalizationSource - Can not find '后台工作者' in localization source 'ABPCMS'!
+WARN  2019-07-22 21:37:10,877 [59   ] naries.DictionaryBasedLocalizationSource - Can not find 'swaggerAPI文档' in localization source 'ABPCMS'!
+DEBUG 2019-07-22 21:37:11,070 [100  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"19c18a59-ce59-4565-8150-609944ffa2ab","IpAddress":"::1","TenantId":null,"UserId":1,"ConnectTime":"2019-07-22T21:37:11.0709935+08:00","Properties":{}}
+DEBUG 2019-07-22 21:37:11,075 [102  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 19c18a59-ce59-4565-8150-609944ffa2ab
+INFO  2019-07-22 21:37:13,413 [99   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 1] admin made passive since he/she did not login in last 30 days.
+INFO  2019-07-22 21:37:13,413 [99   ] rviceBase.MakeInactiveUsersPassiveWorker - [User 2] admin made passive since he/she did not login in last 30 days.
