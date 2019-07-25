@@ -27,9 +27,11 @@
   3.  新建一个空的数据库，并修改项目中数据库连接，指向刚建好的空的数据库。
   
   
-  4.  工具 -> nuget包管理器-> 程序包管理控制台 下面选中xxxxentityframework,然后输入update database 会自动生成数据库。
+  4.  工具 -> nuget包管理器-> 程序包管理控制台 下面选中xxxxentityframework,然后输入update-database 会自动生成数据库。
   
   5.  运行项目 用户名:admin 密码123qwe 即可看到效果，不懂地方参考博客园文章。
+  
+  6.  已经注释掉AbpRedisCache，保证直接运行不会报错。
   
    打开方式详细可以参考第一章：http://www.cnblogs.com/anyushengcms/p/abp.html
      
